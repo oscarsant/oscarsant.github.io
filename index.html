@@ -8,7 +8,7 @@
     <script src="js/jribbble.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-    $(document).ready(function()
+    $(document).ready(function() {
     //Paste your Client Access Token in the line below within quotes - you can build your API from https://dribbble.com/account/applications 
     $.jribbble.setToken('31ab7fc9c25cbe4122efa08d82d5ee0998685a63cd93f0fd763045abb4bbd67d'); $.jribbble.users('gsvineeth').shots({
         per_page: 36
@@ -26,7 +26,7 @@
 
         $('#shots').html(html.join(''));
     });
-    };
+    });
     </script>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -112,7 +112,7 @@
                 </a>
                 <img src="resumeoscarsantamarinaupdate copy-01-01.svg" alt="" width="983" height="2650" class="img-responsive" />
             </header>
-            <div class="row grid-list-wrapper no-gutter-space" id="shots"></div>
+            
         </div>
     </div>
     <footer>
