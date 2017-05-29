@@ -13,23 +13,24 @@ twitter.com/gsvineeth
     <script src="js/bootstrap.js"></script>
     <script>
     $(document).ready(function() {
-    //Paste your Client Access Token in the line below within quotes - you can build your API from https://dribbble.com/account/applications 
-    $.jribbble.setToken('31ab7fc9c25cbe4122efa08d82d5ee0998685a63cd93f0fd763045abb4bbd67d'); $.jribbble.users('gsvineeth').shots({
-        per_page: 36
-    }).then(function(shots) {
-        var html = [];
+        //Paste your Client Access Token in the line below within quotes - you can build your API from https://dribbble.com/account/applications 
+        $.jribbble.setToken('31ab7fc9c25cbe4122efa08d82d5ee0998685a63cd93f0fd763045abb4bbd67d');
+        $.jribbble.users('gsvineeth').shots({
+            per_page: 36
+        }).then(function(shots) {
+            var html = [];
 
-        shots.forEach(function(shot) {
-            html.push('<div class="col-sm-6 col-md-4 col-lg-4"> <div class="grid-list">');
-            html.push('<a href="' + shot.html_url + '" target="_blank">');
-            html.push('<img class="img-responsive" src="' + shot.images.normal + '" alt="' + shot.title + '"><\/a>');
-            html.push('<div class="overlay"><a target="_blank"  href="' + shot.html_url + '">');
-            html.push('<h2>' + shot.title + '<\/h2>');
-            html.push('<\/a> <\/div><\/div><\/div>');
+            shots.forEach(function(shot) {
+                html.push('<div class="col-sm-6 col-md-4 col-lg-4"> <div class="grid-list">');
+                html.push('<a href="' + shot.html_url + '" target="_blank">');
+                html.push('<img class="img-responsive" src="' + shot.images.normal + '" alt="' + shot.title + '"><\/a>');
+                html.push('<div class="overlay"><a target="_blank"  href="' + shot.html_url + '">');
+                html.push('<h2>' + shot.title + '<\/h2>');
+                html.push('<\/a> <\/div><\/div><\/div>');
+            });
+
+            $('#shots').html(html.join(''));
         });
-
-        $('#shots').html(html.join(''));
-    });
     });
     </script>
     <meta charset="utf-8">
@@ -92,7 +93,9 @@ twitter.com/gsvineeth
                     </div>
                     <div class="pull-right"> </div>
                 </div>
-                <img src="Gatorade ads_santamarina.png" alt="" width="819" height="1060" class="img-responsive" /><img src="Gatorade ads_santamarina-2.png" alt="" width="819" height="1060" class="img-responsive" /> </header>
+                <img src="gatorade-mockup.png" width="100%" class="img-responsive" />
+                <img src="gatorade2-mockup.png" width="100%" class="img-responsive" />
+            </header>
         </div>
     </div>
     <footer>
