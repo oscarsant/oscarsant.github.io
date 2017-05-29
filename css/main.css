@@ -257,6 +257,9 @@ footer {
     font-style: italic;
     text-align: right;
 }
+#mobile-resume{
+        display: none;
+    }
 
 .nav-footer a:hover {
     color: #1eadef
@@ -324,10 +327,16 @@ footer {
     #resume-head {
         margin-left: 0px;
         font-size: 34px;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         border-bottom: 5px solid #FFA600;
         text-align: left;
         margin-right: 2%;
+    }
+    #mobile-resume{
+        display: block;
+    }
+    #desktop-resume{
+        display: none;
     }
 }
 
