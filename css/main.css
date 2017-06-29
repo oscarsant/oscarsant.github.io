@@ -45,7 +45,7 @@ p {
     margin-bottom: 0em;
     padding: 0;
     text-align: left;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     color: #999;
 }
@@ -110,7 +110,7 @@ a {
 .navbar-nav>li>a {
     display: block;
     margin: 12px 0;
-    color: #9A9A9A;
+    color: #a7a7a7;
     margin-left: 10px;
     transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
@@ -223,39 +223,40 @@ footer {
 }
 
 #aboutme-img {
-    float: left;
-    width: 50%;
+    width: 23%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #aboutme-head {
     margin-top: 12%;
     margin-right: 0%;
-    margin-left: 42%;
-    /* margin-bottom: 1em; */
+    margin-left: 32px;
+    margin-bottom: 2em;
     padding: 0;
     text-align: left;
-    font-size: 50px;
+    font-size: 28px;
     font-weight: 600;
-    border-bottom: 10px solid #FFA600;
-    color: #000000;
-    letter-spacing: 6px;
+    /* border-bottom: 10px solid #FFA600; */
+    color: #9E9E9E;
+    /* letter-spacing: 3px; */
     font-style: italic;
 }
 
 #resume-head {
     margin-top: 15%;
-    margin-right: 69%;
-    margin-left: 0%;
+    /* margin-right: 69%; */
+    margin-left: 32px;
     margin-bottom: 1em;
     padding: 0;
-    text-align: left;
-    font-size: 50px;
+    /* text-align: left; */
     font-weight: 600;
-    border-bottom: 10px solid #FFA600;
-    color: #000000;
-    letter-spacing: 6px;
+    /* border-bottom: 10px solid #FFA600; */
+    color: #9E9E9E;
+    /* letter-spacing: 6px; */
     font-style: italic;
-    text-align: right;
+    /* text-align: right; */
+    font-size: 28px;
 }
 #mobile-resume{
         display: none;
@@ -263,6 +264,9 @@ footer {
 
 .nav-footer a:hover {
     color: #1eadef
+}
+#quote{
+    color: #000000;
 }
 
 header {
@@ -316,19 +320,19 @@ footer {
     }
     #aboutme-head {
         margin-left: 0px;
-        font-size: 34px;
+        font-size: 20px;
         margin-bottom: 2em;
-        border-bottom: 5px solid #FFA600;
+        
     }
     #aboutme-img {
         float: none;
-        width: 100%;
+        width: 50%;
     }
     #resume-head {
         margin-left: 0px;
-        font-size: 34px;
+        font-size: 20px;
         margin-bottom: 1em;
-        border-bottom: 5px solid #FFA600;
+        
         text-align: left;
         margin-right: 2%;
     }

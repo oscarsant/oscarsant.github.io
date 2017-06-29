@@ -341,7 +341,6 @@ a {
     color: #555;
     text-decoration: underline;
     font-weight: 500;
-
 }
 
 a:hover {
@@ -585,7 +584,7 @@ cite {
     text-align: left;
     color: #808080;
     /* [disabled]margin-right: 2%; */
-    font-size: 24px;
+    font-size: 20px;
     font-weight: lighter;
     margin-left: 8%;
 }
@@ -599,7 +598,7 @@ cite {
     margin-left: 8%;
     font-weight: lighter;
     margin-bottom: 5%;
-    border-top: 8px solid #FFA600;
+    
     padding-top: 15px;
     margin-top: 0;
     line-height: 18px;
@@ -610,21 +609,30 @@ cite {
 }
 
 .text-justify {
-    text-align: left;
     color: #000000;
-    font-size: 24px;
-    margin-bottom: 30PX;
+    font-size: 40px;
+    margin-bottom: 75PX;
+    /* margin-right: auto; */
+    font-family: serif;
+    /* border-top: solid; */
+    width: 56%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    padding-top: 99px;
+    text-align: center;
 }
 
 .text-muted {
     color: #999;
-    font-size: 24px;
-    text-align: left;
+    font-size: 28px;
+    text-align: center;
     margin-right: 10%;
-    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    font-family: serif;
     margin-left: 10%;
-    margin-top: 60px;
+    margin-top: 40px;
     line-height: 35px;
+    font-style: italic;
 }
 
 .text-primary {
@@ -4215,7 +4223,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav>li>a {
     position: relative;
     display: block;
-    padding: 10px 15px
+    padding: 10px 30px
 }
 
 .nav>li>a:hover,
@@ -4634,8 +4642,9 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 @media (min-width:768px) {
     .navbar-nav {
         float: left;
-        margin: 0;
-        letter-spacing: 2px;
+        margin: 15px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
     }
     .navbar-nav>li {
         float: left
