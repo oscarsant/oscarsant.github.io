@@ -581,12 +581,13 @@ cite {
 }
 
 .text-left {
-    text-align: left;
-    color: #808080;
-    /* [disabled]margin-right: 2%; */
-    font-size: 20px;
-    font-weight: lighter;
+    font-weight: 800;
     margin-left: 8%;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: left;
+    font-size: 14px;
+    color: #000000
 }
 
 .text-right {
@@ -598,7 +599,6 @@ cite {
     margin-left: 8%;
     font-weight: lighter;
     margin-bottom: 5%;
-    
     padding-top: 15px;
     margin-top: 0;
     line-height: 18px;
@@ -611,7 +611,7 @@ cite {
 .text-justify {
     color: #000000;
     font-size: 40px;
-    margin-bottom: 75PX;
+    /* margin-bottom: 75PX; */
     /* margin-right: auto; */
     font-family: serif;
     /* border-top: solid; */
@@ -619,8 +619,10 @@ cite {
     margin-left: auto;
     margin-right: auto;
     font-style: italic;
-    padding-top: 99px;
+    padding-top: 30px;
     text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
 .text-muted {
@@ -630,9 +632,10 @@ cite {
     margin-right: 10%;
     font-family: serif;
     margin-left: 10%;
-    margin-top: 40px;
+    margin-top: 25px;
     line-height: 35px;
     font-style: italic;
+    margin-bottom: 100px;
 }
 
 .text-primary {
@@ -6971,4 +6974,10 @@ button.close {
         line-height: 22px;
         margin-top: 10px;
     }
+    .text-justify {
+        width: 100%;
+        font-size: 30px
+    }
 }
+
+@media (max-width:1200px) {}

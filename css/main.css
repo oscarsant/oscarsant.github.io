@@ -50,6 +50,15 @@ p {
     color: #999;
 }
 
+.mini-heads {
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 a {
     cursor: pointer;
     text-decoration: none!important;
@@ -258,14 +267,16 @@ footer {
     /* text-align: right; */
     font-size: 28px;
 }
-#mobile-resume{
-        display: none;
-    }
+
+#mobile-resume {
+    display: none;
+}
 
 .nav-footer a:hover {
     color: #1eadef
 }
-#quote{
+
+#quote {
     color: #000000;
 }
 
@@ -315,14 +326,12 @@ footer {
     h5,
     h6,
     p {
-        ;
         margin-left: 0px;
     }
     #aboutme-head {
         margin-left: 0px;
         font-size: 20px;
         margin-bottom: 2em;
-        
     }
     #aboutme-img {
         float: none;
@@ -332,14 +341,13 @@ footer {
         margin-left: 0px;
         font-size: 20px;
         margin-bottom: 1em;
-        
         text-align: left;
         margin-right: 2%;
     }
-    #mobile-resume{
+    #mobile-resume {
         display: block;
     }
-    #desktop-resume{
+    #desktop-resume {
         display: none;
     }
 }
@@ -465,5 +473,18 @@ footer {
     .wrapper {
         padding: 0 0 5em;
         clear: both
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-left: 0px;
+        text-align: center;
     }
 }
