@@ -61,6 +61,7 @@
   "unisonFriendly": true,
   "dependencies": {
     "node-sass": "^7.0.1",
+    "plyr": "^3.6.12",
     "swiper": "^4.3.3"
   },
   "main": "index.js",

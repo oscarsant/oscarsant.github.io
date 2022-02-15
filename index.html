@@ -4,6 +4,7 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="logofixed.png" />
     <!-- jQuery from CDN -->
+    <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <meta charset="utf-8">
@@ -12,6 +13,7 @@
     <title>Oscar Santamarina Portfolio </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="css/gallery-lightbox.css"> -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -43,7 +45,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/whalers.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/whalers.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Whale Culture</div>
@@ -63,7 +65,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/insurrection.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/insurrection.mp4" type="video/mp4" ></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Washington on Edge</div>
@@ -77,7 +79,7 @@
                             </div>
                         </div>
                         <figure class="gallery__item gallery__item--3">
-                            <h1 class="text-justify">Hi, I'm Oscar Santamarina<span>Multimedia Designer and Storyteller</span></h1>
+                            <h1 class="text-justify">Oscar Santamarina<span>Multimedia Designer and Storyteller</span></h1>
                         </figure>
                         <div class="lightbox--cont gallery__item--4">
                             <figure class="gallery__item">
@@ -86,7 +88,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/notredame.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/notredame.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Rebuilding Notre Dame</div>
@@ -106,7 +108,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/epic-trips.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/epic-trips.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Epic Trips</div>
@@ -126,7 +128,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/kalahari.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/kalahari.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Surviving Kalahari</div>
@@ -146,7 +148,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/aretha.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/aretha.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Queen of Charts</div>
@@ -166,7 +168,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/lastvoiceswwii.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/lastvoiceswwii.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Last Voices of WWII</div>
@@ -186,7 +188,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/worldcup.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/worldcup.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Top Teams World Cup</div>
@@ -208,7 +210,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="horizontal-video">
-                                        <video src="videos/akhenaten.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/akhenaten.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Akhenaten</div>
@@ -228,7 +230,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="vertical-video">
-                                        <video src="videos/women-archive.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/women-archive.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Women Archive</div>
@@ -246,7 +248,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="vertical-video">
-                                        <video src="videos/moon-landing.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/moon-landing.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Moon Landing</div>
@@ -264,7 +266,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="vertical-video">
-                                        <video src="videos/buzz-saw-killer.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/buzz-saw-killer.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Helicoprion</div>
@@ -282,7 +284,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="vertical-video">
-                                        <video src="videos/mongolia-smog.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/mongolia-smog.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Mongolia's Smog</div>
@@ -318,11 +320,11 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="video-series" id="style-4">
-                                        <video src="videos/woi/WOI-1.mp4" type="video/mp4" controls="true"></video>
-                                        <video src="videos/woi/WOI-2.mp4" type="video/mp4" controls="true"></video>
-                                        <video src="videos/woi/WOI-3.mp4" type="video/mp4" controls="true"></video>
-                                        <video src="videos/woi/WOI-4.mp4" type="video/mp4" controls="true"></video>
-                                        <video src="videos/woi/WOI-5.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/woi/WOI-1.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/woi/WOI-2.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/woi/WOI-3.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/woi/WOI-4.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/woi/WOI-5.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Women of Impact Series</div>
@@ -340,7 +342,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="vertical-video">
-                                        <video src="videos/happiest-places.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/happiest-places.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">Happiest Places</div>
@@ -358,7 +360,7 @@
                             <div class="lightbox">
                                 <div class="text-with-element">
                                     <div class="vertical-video">
-                                        <video src="videos/7-summits.mp4" type="video/mp4" controls="true"></video>
+                                        <video class="js-player" playsinline controls src="videos/7-summits.mp4" type="video/mp4" controls="true"></video>
                                     </div>
                                     <div class="text-capt">
                                         <div class="project-hed">7 Summits</div>

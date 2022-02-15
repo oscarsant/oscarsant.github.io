@@ -7,6 +7,44 @@
 $darktone: black;
 $lighttone: #9a9a9a;
 
+.plyr--video {
+    background: #000;
+    background: var(--plyr-video-background, var(--plyr-video-background, #000));
+    overflow: hidden;
+    height: 100%;
+}
+
+.plyr__volume {
+    align-items: center;
+    display: flex;
+    max-width: none;
+    min-width: unset;
+    position: relative;
+    width: unset;
+}
+
+.plyr__control svg {
+    fill: white;
+}
+
+.plyr button {
+    background: black;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+    background: #000000bd;
+}
+
+.plyr--full-ui input[type=range] {
+    color: #fcfcfc;
+
+}
+
+.plyr--video .plyr__progress__buffer {
+    color: #ffffff00;
+}
 
 .row>div,
 .container {
@@ -22,11 +60,11 @@ body {
 }
 
 header {
-    margin: 50px 50px 0;
+    margin: 50px;
     max-width: 100%;
 
     @media screen and (max-width: $medium) {
-        margin: 50px 10px 0;
+        margin: 30px 10px 30px;
 
     }
 }
@@ -71,7 +109,7 @@ header {
     }
 
     @media screen and (max-width: $mobile) {
-        font-size: 20px;
+        font-size: 24px;
 
     }
 
@@ -88,6 +126,11 @@ header {
     font-family: "Oswald", sans-serif;
     color: black;
 
+    @media screen and (max-width: $mobile) {
+        margin: 70px auto;
+
+    }
+
 }
 
 /* -------------------------------------
@@ -103,10 +146,18 @@ header {
     margin-left: 90px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: $mobile) {
+        padding: 30px 0 30px 20px;
+
+    }
+
+
+
 }
 
 #timeline li {
-    margin: 20px 0;
+    margin: 15px 0;
     position: relative;
 }
 
@@ -123,12 +174,13 @@ header {
 }
 
 .date {
-    left: -100px;
-    font-size: 1.95em;
+    left: -90px;
+    font-size: 1.5em;
     line-height: 1;
     position: absolute;
     font-family: "Oswald", sans-serif;
     color: grey;
+    top: 0;
 }
 
 .oscar-timeline {
@@ -138,7 +190,7 @@ header {
 }
 
 .circle {
-    top: 10px;
+    top: 5px;
     left: -28px;
     width: 10px;
     height: 10px;
@@ -155,7 +207,7 @@ header {
     position: relative;
 
     @media screen and (max-width: $mobile) {
-        padding: 10px 0 0 0;
+        padding: 10px 10px 0 0;
     }
 
 
@@ -203,10 +255,11 @@ header {
 }
 
 label {
-    font-size: 1.3em;
+    font-size: 1.6em;
     position: relative;
     z-index: 100;
     cursor: pointer;
+    line-height: 1;
 
 }
 
@@ -254,6 +307,7 @@ a {
 .navbar {
     display: flex;
     align-items: flex-end;
+    line-height: 0;
 
 }
 
@@ -322,11 +376,13 @@ footer p {
 }
 
 .credits {
-    color: #ccc;
-    font-weight: 100;
+    color: #999;
+    font-weight: 200;
     margin: 7px 0;
     font-size: 12px;
     letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .navbar-brand-wrapper {
