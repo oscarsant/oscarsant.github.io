@@ -54,7 +54,7 @@ figure {
 
     @media screen and (max-width: $mobile) {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 7;
     }
@@ -83,12 +83,14 @@ figure {
     grid-row-end: 6;
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 6;
+        grid-column-start: 5;
         grid-column-end: 10;
         grid-row-start: 1;
         grid-row-end: 7;
     }
 }
+
+
 
 .gallery__item--4 {
     grid-column-start: 1;

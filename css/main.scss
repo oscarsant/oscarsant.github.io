@@ -46,6 +46,51 @@ $lighttone: #9a9a9a;
     color: #ffffff00;
 }
 
+.gallery__item .text-justify {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    max-width: 228px;
+    line-height: 1.2;
+    color: $lighttone;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: $medium) {
+        font-size: 32px;
+        max-width: 200px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        font-size: 28px;
+
+    }
+
+}
+
+.head-rule {
+    border: none;
+    border-top: 8px dotted #bdbdbd;
+    width: 43px;
+    margin-top: 10px;
+
+    @media screen and (max-width: $mobile) {
+        border-top: 5px dotted #bdbdbd;
+        width: 25px;
+    }
+}
+
 .row>div,
 .container {
     transition: all .25s ease-in-out;
@@ -73,47 +118,7 @@ header {
     background: #fff
 }
 
-#logo {
-    width: 70px;
-    height: 70px;
-}
 
-#logo:hover {
-    width: 80px;
-    height: 80px;
-}
-
-.gallery__item .text-justify {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: "Oswald", sans-serif;
-    font-weight: 200;
-    font-size: 40px;
-    max-width: 228px;
-    line-height: 1.2;
-    color: $lighttone;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-    flex-direction: column;
-    justify-content: center;
-
-    span {
-        font-weight: 400;
-    }
-
-    @media screen and (max-width: $medium) {
-        font-size: 32px;
-        max-width: 200px;
-    }
-
-    @media screen and (max-width: $mobile) {
-        font-size: 24px;
-
-    }
-
-}
 
 .gallery__item h1 {
     margin: auto;
@@ -122,20 +127,18 @@ header {
 .timeline-wrapper {
     max-width: 510px;
     margin: 100px auto;
-    font-size: 100%;
+    font-size: 16px;
     font-family: "Oswald", sans-serif;
     color: black;
 
     @media screen and (max-width: $mobile) {
         margin: 70px auto;
+        font-size: 14px;
 
     }
 
 }
 
-/* -------------------------------------
- * timeline
- * ------------------------------------- */
 #timeline {
     list-style: none;
     margin: auto;
@@ -164,7 +167,7 @@ header {
 .work.area {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 1em;
     color: grey;
 }
 
@@ -174,8 +177,8 @@ header {
 }
 
 .date {
-    left: -90px;
-    font-size: 1.5em;
+    left: -3.7em;
+    font-size: 1.6em;
     line-height: 1;
     position: absolute;
     font-family: "Oswald", sans-serif;
@@ -190,7 +193,7 @@ header {
 }
 
 .circle {
-    top: 5px;
+    top: 6px;
     left: -28px;
     width: 10px;
     height: 10px;
@@ -308,10 +311,20 @@ a {
     display: flex;
     align-items: flex-end;
     line-height: 0;
+    font-size: 20px;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 13px;
+
+    }
 
 }
 
-.navbar-header {}
+.navbar-header {
+    img {
+        width: 4em;
+    }
+}
 
 .navbar-collapse {
     width: 100%;
@@ -322,6 +335,10 @@ a {
     li {
         list-style: none;
         margin-left: 20px;
+
+        img {
+            width: 2em;
+        }
 
     }
 }
