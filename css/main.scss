@@ -10,7 +10,7 @@ $lighttone: #9a9a9a;
 .plyr--video {
     background: #000;
     background: var(--plyr-video-background, var(--plyr-video-background, #000));
-    overflow: hidden;
+    overflow: unset;
     height: 100%;
 }
 
@@ -22,6 +22,7 @@ $lighttone: #9a9a9a;
     position: relative;
     width: unset;
 }
+
 
 .plyr__control svg {
     fill: white;
@@ -73,7 +74,7 @@ $lighttone: #9a9a9a;
     }
 
     @media screen and (max-width: $mobile) {
-        font-size: 28px;
+        font-size: 26px;
 
     }
 
@@ -144,7 +145,8 @@ header {
     margin: auto;
     padding: 50px 0 50px 20px;
     border-left: 2px solid;
-    border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(32, 32, 32, 1) 90%, rgba(232, 232, 232, 0) 100%) 1;
+    border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, grey 10%, grey 90%, rgba(255, 255, 255, 0) 100%) 1;
+    border-width: 0 0 0 2px;
     height: 100%;
     margin-left: 90px;
     display: flex;
@@ -198,7 +200,7 @@ header {
     width: 10px;
     height: 10px;
     background: #ffffff;
-    border: 2px solid black;
+    border: 2px solid grey;
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -277,6 +279,7 @@ label {
 
 .radio:checked+.relative .circle {
     background: black;
+    border-color: black;
 }
 
 .radio:checked~.content {
@@ -311,10 +314,10 @@ a {
     display: flex;
     align-items: flex-end;
     line-height: 0;
-    font-size: 20px;
+    font-size: 18px;
 
     @media screen and (max-width: $mobile) {
-        font-size: 13px;
+        font-size: 12px;
 
     }
 
@@ -335,6 +338,10 @@ a {
     li {
         list-style: none;
         margin-left: 20px;
+
+        &:hover {
+            opacity: .7;
+        }
 
         img {
             width: 2em;
@@ -394,7 +401,7 @@ footer p {
 
 .credits {
     color: #999;
-    font-weight: 200;
+    font-weight: 300;
     margin: 7px 0;
     font-size: 12px;
     letter-spacing: 1px;
