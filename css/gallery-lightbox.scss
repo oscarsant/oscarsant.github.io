@@ -217,7 +217,7 @@ figure {
     text-align: center;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     background: rgba(0, 0, 0, 1);
     opacity: 0;
     align-items: center;
@@ -250,7 +250,11 @@ figure {
 .lightbox video {
     height: 100%;
     width: 100%;
-    padding-bottom: 50px;
+
+
+    @media screen and (max-width: $mobile) {
+        padding-bottom: 0;
+    }
 }
 
 .lightbox .video-series video {
@@ -262,14 +266,20 @@ figure {
     max-height: 650px;
     height: 100%;
 
-    @media screen and (max-width: $mobile) {}
+    @media screen and (max-width: $mobile) {
+        height: auto;
+        max-height: none;
+    }
 }
 
 .vertical-video {
     height: 90vmin;
 
     @media screen and (max-width: $mobile) {
-        height: 75vmax;
+        min-height: 0;
+        display: flex;
+        height: unset;
+        margin-top: 20px;
     }
 }
 
@@ -279,11 +289,12 @@ figure {
     color: white;
     align-items: center;
     justify-content: center;
-    margin: 50px;
+    padding: 50px;
 
     @media screen and (max-width: $mobile) {
         flex-direction: column;
-        margin: 15px;
+        height: 100%;
+
     }
 }
 
@@ -301,8 +312,8 @@ figure {
     max-width: 159px;
 
     @media screen and (max-width: $mobile) {
-        max-width: 320px;
-        padding: 10px 10px 0;
+        max-width: 280px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;

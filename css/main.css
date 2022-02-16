@@ -214,7 +214,7 @@ figure {
   text-align: center;
   bottom: 0;
   left: 0;
-  display: flex;
+  display: none;
   background: black;
   opacity: 0;
   align-items: center;
@@ -242,7 +242,11 @@ figure {
 .lightbox video {
   height: 100%;
   width: 100%;
-  padding-bottom: 50px;
+}
+@media screen and (max-width: 479px) {
+  .lightbox video {
+    padding-bottom: 0;
+  }
 }
 
 .lightbox .video-series video {
@@ -253,12 +257,22 @@ figure {
   max-height: 650px;
   height: 100%;
 }
+@media screen and (max-width: 479px) {
+  .horizontal-video {
+    height: auto;
+    max-height: none;
+  }
+}
+
 .vertical-video {
   height: 90vmin;
 }
 @media screen and (max-width: 479px) {
   .vertical-video {
-    height: 75vmax;
+    min-height: 0;
+    display: flex;
+    height: unset;
+    margin-top: 20px;
   }
 }
 
@@ -268,12 +282,12 @@ figure {
   color: white;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  padding: 50px;
 }
 @media screen and (max-width: 479px) {
   .text-with-element {
     flex-direction: column;
-    margin: 15px;
+    height: 100%;
   }
 }
 
@@ -288,8 +302,8 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .text-capt {
-    max-width: 320px;
-    padding: 10px 10px 0;
+    max-width: 280px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -462,18 +476,18 @@ a.go-left-hide:hover:after {
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-weight: 200;
-  font-size: 40px;
-  max-width: 228px;
-  line-height: 1.2;
-  color: #9a9a9a;
+  font-size: 32px;
+  max-width: 198px;
+  line-height: 1.1;
+  color: black;
   letter-spacing: 0px;
-  text-transform: uppercase;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .gallery__item .text-justify span {
   font-weight: 400;
+  font-size: 42px;
 }
 @media screen and (max-width: 991px) {
   .gallery__item .text-justify {
@@ -489,13 +503,13 @@ a.go-left-hide:hover:after {
 
 .head-rule {
   border: none;
-  border-top: 8px dotted #bdbdbd;
+  border-top: 2px solid black;
   width: 43px;
-  margin-top: 10px;
+  margin: 20px 0;
 }
 @media screen and (max-width: 479px) {
   .head-rule {
-    border-top: 5px dotted #bdbdbd;
+    border-top: 5px solid black;
     width: 25px;
   }
 }
@@ -514,6 +528,7 @@ body {
   line-height: 1.6;
   font-size: 15px;
   margin: 0;
+  height: 100%;
 }
 
 header {
@@ -576,6 +591,7 @@ header {
   letter-spacing: 2px;
   font-size: 1em;
   color: grey;
+  font-weight: 300;
 }
 
 #timeline p {
@@ -663,11 +679,12 @@ header {
 }
 
 label {
-  font-size: 1.6em;
+  font-size: 1.5em;
   position: relative;
   z-index: 100;
   cursor: pointer;
   line-height: 1;
+  font-weight: 300;
 }
 
 .radio {
@@ -712,7 +729,7 @@ a {
   display: flex;
   align-items: flex-end;
   line-height: 0;
-  font-size: 18px;
+  font-size: 17px;
 }
 @media screen and (max-width: 479px) {
   .navbar {
