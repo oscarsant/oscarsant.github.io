@@ -30,6 +30,7 @@ $(document).ready(function() {
 
         bclick.addEventListener("click", event => {
             lightBox.className = "lightbox open";
+            document.body.style.overflow = "hidden";
 
             // console.log(lightBox)
         });
@@ -43,6 +44,7 @@ $(document).ready(function() {
             if (lightBox.className == "lightbox open") {
                 lightBox.className = "lightbox";
                 videoElement.pause();
+                document.body.style.overflow = "auto";
             }
         });
     });
