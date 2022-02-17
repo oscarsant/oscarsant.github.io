@@ -54,8 +54,8 @@ $lighttone: #9a9a9a;
     text-align: center;
     font-family: "Oswald", sans-serif;
     font-weight: 200;
-    font-size: 32px;
-    max-width: 198px;
+    font-size: 3.2em;
+    max-width: 6.2em;
     line-height: 1.1;
     color: $darktone;
     letter-spacing: 0px;
@@ -65,16 +65,16 @@ $lighttone: #9a9a9a;
 
     span {
         font-weight: 400;
-        font-size: 42px;
+        font-size: 1.3em;
     }
 
     @media screen and (max-width: $medium) {
-        font-size: 32px;
-        max-width: 200px;
+        
+        
     }
 
     @media screen and (max-width: $mobile) {
-        font-size: 26px;
+        
 
     }
 
@@ -82,13 +82,12 @@ $lighttone: #9a9a9a;
 
 .head-rule {
     border: none;
-    border-top: 2px solid black;
-    width: 43px;
-    margin: 20px 0;
+    border-top: .1em solid black;
+    width: 1em;
+    margin: .7em 0;
 
     @media screen and (max-width: $mobile) {
-        border-top: 5px solid black;
-        width: 25px;
+        
     }
 }
 

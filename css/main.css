@@ -86,6 +86,7 @@ figure {
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 7;
+    font-size: 7px;
   }
 }
 
@@ -239,6 +240,11 @@ figure {
 .lightbox img {
   height: 90vmin;
 }
+@media screen and (max-width: 479px) {
+  .lightbox img {
+    height: 70vmax;
+  }
+}
 
 .lightbox video {
   height: 100%;
@@ -283,11 +289,13 @@ figure {
   color: white;
   align-items: center;
   justify-content: center;
+  margin: 0 20px;
 }
 @media screen and (max-width: 479px) {
   .text-with-element {
     flex-direction: column;
     height: 100%;
+    margin: 0 10px;
   }
 }
 
@@ -476,8 +484,8 @@ a.go-left-hide:hover:after {
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-weight: 200;
-  font-size: 32px;
-  max-width: 198px;
+  font-size: 3.2em;
+  max-width: 6.2em;
   line-height: 1.1;
   color: black;
   letter-spacing: 0px;
@@ -487,33 +495,14 @@ a.go-left-hide:hover:after {
 }
 .gallery__item .text-justify span {
   font-weight: 400;
-  font-size: 42px;
+  font-size: 1.3em;
 }
-@media screen and (max-width: 991px) {
-  .gallery__item .text-justify {
-    font-size: 32px;
-    max-width: 200px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .gallery__item .text-justify {
-    font-size: 26px;
-  }
-}
-
 .head-rule {
   border: none;
-  border-top: 2px solid black;
-  width: 43px;
-  margin: 20px 0;
+  border-top: 0.1em solid black;
+  width: 1em;
+  margin: 0.7em 0;
 }
-@media screen and (max-width: 479px) {
-  .head-rule {
-    border-top: 5px solid black;
-    width: 25px;
-  }
-}
-
 .row > div,
 .container {
   transition: all 0.25s ease-in-out;

@@ -84,11 +84,11 @@ figure {
     font-size: 10px;
 
     @media screen and (max-width: $mobile) {
-
         grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 7;
+        font-size: 7px;
     }
 }
 
@@ -246,6 +246,10 @@ figure {
 .lightbox img {
     height: 90vmin;
 
+    @media screen and (max-width: $mobile) {
+        height: 70vmax;
+    }
+
 }
 
 .lightbox video {
@@ -290,11 +294,12 @@ figure {
     color: white;
     align-items: center;
     justify-content: center;
-    
+    margin: 0 20px;
 
     @media screen and (max-width: $mobile) {
         flex-direction: column;
         height: 100%;
+        margin: 0 10px;
 
     }
 }
