@@ -528,7 +528,6 @@ body {
   line-height: 1.6;
   font-size: 15px;
   margin: 0;
-  height: 100%;
 }
 
 header {
@@ -684,7 +683,7 @@ label {
   z-index: 100;
   cursor: pointer;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .radio {
