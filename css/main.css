@@ -256,10 +256,6 @@ figure {
   }
 }
 
-.lightbox .video-series video {
-  margin-bottom: 50px;
-}
-
 .horizontal-video {
   max-height: 650px;
   height: 100%;
@@ -414,11 +410,16 @@ a.go-left-hide:hover:after {
 .video-series {
   display: flex;
   overflow-y: scroll;
-  min-height: min-content;
+  min-height: 0;
   flex-direction: column;
-  height: 90vh;
   direction: rtl;
   cursor: ns-resize;
+  margin-top: 20px;
+}
+
+.plyr--video .plyr__controls {
+  width: fit-content;
+  margin: 0 auto 30px;
 }
 
 #style-4::-webkit-scrollbar-track {
@@ -570,7 +571,7 @@ header {
 }
 
 #timeline li {
-  margin: 15px 0;
+  margin: 15px 15px 15px 0;
   position: relative;
 }
 
