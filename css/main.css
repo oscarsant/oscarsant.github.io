@@ -78,7 +78,7 @@ figure {
   grid-column-end: 9;
   grid-row-start: 1;
   grid-row-end: 6;
-  font-size: 10px;
+  font-size: 11px;
 }
 @media screen and (max-width: 479px) {
   .gallery__item--3 {
@@ -216,9 +216,9 @@ figure {
   text-align: center;
   bottom: 0;
   left: 0;
-  display: none;
   background: black;
   opacity: 0;
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -234,7 +234,6 @@ figure {
   height: 100%;
   opacity: 1 !important;
   visibility: visible;
-  display: flex;
 }
 
 .lightbox img {
@@ -286,6 +285,8 @@ figure {
   align-items: center;
   justify-content: center;
   margin: 0 20px;
+  max-width: 1200px;
+  min-height: 0;
 }
 @media screen and (max-width: 479px) {
   .text-with-element {
@@ -302,7 +303,7 @@ figure {
   line-height: 1.6;
   font-size: 15px;
   color: darkgray;
-  max-width: 159px;
+  max-width: 129px;
 }
 @media screen and (max-width: 479px) {
   .text-capt {
@@ -414,12 +415,18 @@ a.go-left-hide:hover:after {
   flex-direction: column;
   direction: rtl;
   cursor: ns-resize;
-  margin-top: 20px;
+  height: 90vh;
+}
+@media screen and (max-width: 479px) {
+  .video-series {
+    margin-top: 20px;
+    height: unset;
+  }
 }
 
 .plyr--video .plyr__controls {
   width: fit-content;
-  margin: 0 auto 30px;
+  margin: auto;
 }
 
 #style-4::-webkit-scrollbar-track {
@@ -434,10 +441,6 @@ a.go-left-hide:hover:after {
 #style-4::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 4px;
-}
-
-#style-4::-webkit-scrollbar-button {
-  height: 120px;
 }
 
 .plyr--video {
@@ -456,18 +459,24 @@ a.go-left-hide:hover:after {
   width: unset;
 }
 
+.plyr__control--overlaid svg {
+  position: relative;
+  transform: scale(2);
+}
+
 .plyr__control svg {
   fill: white;
 }
 
 .plyr button {
-  background: black;
+  background: transparent;
 }
 
 .plyr--video .plyr__control.plyr__tab-focus,
 .plyr--video .plyr__control:hover,
 .plyr--video .plyr__control[aria-expanded=true] {
-  background: #000000bd;
+  background: transparent;
+  opacity: 0.5;
 }
 
 .plyr--full-ui input[type=range] {
@@ -485,22 +494,24 @@ a.go-left-hide:hover:after {
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-weight: 200;
-  font-size: 3.2em;
+  font-size: 2.8em;
   max-width: 6.2em;
   line-height: 1.1;
-  color: black;
+  color: #9a9a9a;
   letter-spacing: 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  letter-spacing: -1px;
 }
 .gallery__item .text-justify span {
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1.7em;
+  color: black;
 }
 .head-rule {
   border: none;
-  border-top: 0.1em solid black;
+  border-top: 0.1em solid #e78b02;
   width: 1em;
   margin: 0.7em 0;
 }
@@ -716,7 +727,7 @@ a {
 /* Navigation */
 .navbar {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   line-height: 0;
   font-size: 17px;
 }
@@ -726,6 +737,18 @@ a {
   }
 }
 
+.navbar-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.navbar-header span {
+  width: max-content;
+  padding-left: 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: 1.5em;
+}
 .navbar-header img {
   width: 4em;
 }
@@ -744,7 +767,7 @@ a {
   opacity: 0.7;
 }
 .navbar-collapse li img {
-  width: 2em;
+  width: 1.8em;
 }
 
 footer {
@@ -800,7 +823,7 @@ footer p {
   font-weight: 300;
   margin: 7px 0;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   text-align: center;
   font-family: "Inter", sans-serif;
 }
