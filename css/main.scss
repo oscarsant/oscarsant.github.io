@@ -142,7 +142,7 @@ header {
     margin: auto;
     padding: 50px 0 50px 20px;
     border-left: 2px solid;
-    border-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, grey 10%, grey 90%, rgba(255, 255, 255, 0) 100%) 1;
+    border-image: linear-gradient(0deg, #9a9a9a00 0%, $lighttone 10%, $lighttone 90%, #9a9a9a00 100%) 1;
     border-width: 0 0 0 2px;
     height: 100%;
     margin-left: 90px;
@@ -153,9 +153,6 @@ header {
         padding: 30px 0 30px 20px;
 
     }
-
-
-
 }
 
 #timeline li {
@@ -182,7 +179,7 @@ header {
     line-height: 1;
     position: absolute;
     font-family: "Oswald", sans-serif;
-    color: grey;
+    color: $lighttone;
     top: 0;
 }
 
@@ -198,7 +195,7 @@ header {
     width: 10px;
     height: 10px;
     background: #ffffff;
-    border: 2px solid grey;
+    border: 2px solid $lighttone;
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -215,30 +212,6 @@ header {
 
 
 }
-
-/*.content:before,
-.content:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border: solid transparent;
-    position: absolute;
-    pointer-events: none;
-    right: 100%;
-}
-
-.content:before {
-    border-right-color: inherit;
-    border-width: 20px;
-    top: 50%;
-    margin-top: -20px;
-}
-
-.content:after {
-    border-width: 17px;
-    top: 50%;
-    margin-top: -17px;
-}*/
 
 .content p {
     max-height: 0;
@@ -264,6 +237,7 @@ label {
     cursor: pointer;
     line-height: 1;
     font-weight: 400;
+    color: $lighttone;
 
 }
 
@@ -273,6 +247,12 @@ label {
 
 .radio:checked+.relative label {
     cursor: auto;
+    color: black;
+
+}
+.radio:checked+.relative .date {
+    cursor: auto;
+    color: black;
 
 }
 
@@ -336,7 +316,7 @@ a {
     }
 
     img {
-        width: 4em;
+        width: 3.5em;
     }
 }
 
@@ -451,74 +431,8 @@ footer {
 
 }
 
-@media only screen and (min-width: 768px) {
-    .overlay {
-        min-height: 90px;
-    }
-}
-
-/* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-    .overlay {
-        font-size: 120%
-    }
-
-    .overlay h3 {
-        display: block;
-        line-height: 1.5em
-    }
-
-    .overlay h3 span {
-        display: block;
-        opacity: .34
-    }
-
-    .overlay h3 span:hover {
-        opacity: .54
-    }
-
-    .no-gutter-space {
-        margin: 0
-    }
-
-    .no-gutter-space>div {
-        margin: 0;
-        padding: 0
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        transition: opacity .25s ease-in-out;
-        -o-transition: opacity .25s ease-in-out;
-        -moz-transition: opacity .25s ease-in-out;
-        -webkit-transition: opacity .25s ease-in-out;
-        opacity: 0;
-        background: #f5f5f5;
-        background: rgba(0, 0, 0, .5)
-    }
-
-    .grid-list:hover .overlay {
-        opacity: 1
-    }
-
-    .overlay a {
-        font-size: .8em;
-        color: #fff;
-        height: 100%;
-        width: 100%;
-        display: block
-    }
-
-    .grid-list {
-        margin: 0;
-        padding: 0
-    }
-
     .wrapper {
         padding: 0;
         clear: both

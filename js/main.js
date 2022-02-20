@@ -43,8 +43,9 @@ $(document).ready(function() {
         closebtn.addEventListener("click", event => {
             if (lightBox.className == "lightbox open") {
                 lightBox.className = "lightbox";
-                videoElement.pause();
                 document.body.style.overflow = "auto";
+                videoElement.pause();
+
             }
         });
     });
