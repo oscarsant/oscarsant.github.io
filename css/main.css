@@ -80,6 +80,11 @@ figure {
   grid-row-end: 6;
   font-size: 11px;
 }
+@media screen and (max-width: 991px) {
+  .gallery__item--3 {
+    font-size: 8px;
+  }
+}
 @media screen and (max-width: 479px) {
   .gallery__item--3 {
     grid-column-start: 1;
@@ -505,26 +510,33 @@ a.go-left-hide:hover:after {
   font-family: "Oswald", sans-serif;
   font-weight: 200;
   font-size: 2.8em;
-  max-width: 6.2em;
-  line-height: 1.1;
+  max-width: 8em;
+  line-height: 1.2;
   color: #9a9a9a;
   letter-spacing: 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
 }
 .gallery__item .text-justify span {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.7em;
   color: black;
 }
+
 .head-rule {
   border: none;
-  border-top: 0.1em solid #e78b02;
+  border-top: 4px solid #e78b02;
   width: 1em;
   margin: 0.7em 0;
 }
+@media screen and (max-width: 479px) {
+  .head-rule {
+    border-top: 2px solid #e78b02;
+  }
+}
+
 .row > div,
 .container {
   transition: all 0.25s ease-in-out;
@@ -598,10 +610,11 @@ header {
 
 .work.area {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-  color: grey;
-  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 0.9em;
+  color: #9a9a9a;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
 }
 
 #timeline p {
@@ -613,13 +626,26 @@ header {
 }
 
 .date {
-  left: -3.7em;
-  font-size: 1.6em;
-  line-height: 1;
+  left: -2.8em;
+  font-size: 1.3em;
+  line-height: 1.2;
   position: absolute;
   font-family: "Oswald", sans-serif;
   color: #9a9a9a;
   top: 0;
+  font-weight: 300;
+  text-align: right;
+  letter-spacing: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 15px;
+}
+@media screen and (max-width: 479px) {
+  .date {
+    line-height: 1.4;
+    width: 9px;
+  }
 }
 
 .oscar-timeline {
@@ -666,13 +692,18 @@ header {
 }
 
 label {
-  font-size: 1.5em;
+  font-size: 1.6em;
   position: relative;
   z-index: 100;
   cursor: pointer;
-  line-height: 1;
-  font-weight: 400;
+  line-height: 0.9;
+  font-weight: 300;
   color: #9a9a9a;
+}
+@media screen and (max-width: 479px) {
+  label {
+    line-height: 1.1;
+  }
 }
 
 .radio {
@@ -738,13 +769,15 @@ a {
 }
 .navbar-header span {
   width: max-content;
-  padding-left: 10px;
+  padding-left: 20px;
   font-family: "Oswald", sans-serif;
-  font-weight: 200;
-  font-size: 1.5em;
+  font-weight: 400;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 .navbar-header img {
-  width: 3.5em;
+  width: 1.8em;
 }
 
 .navbar-collapse {
@@ -817,7 +850,7 @@ footer p {
   font-weight: 300;
   margin: 7px 0;
   font-size: 12px;
-  letter-spacing: 0;
+  letter-spacing: 1px;
   text-align: center;
   font-family: "Inter", sans-serif;
 }

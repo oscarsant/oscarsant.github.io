@@ -85,6 +85,10 @@ figure {
     grid-row-end: 6;
     font-size: 11px;
 
+    @media screen and (max-width: $medium) {
+        font-size: 8px;
+    }
+
     @media screen and (max-width: $mobile) {
         grid-column-start: 1;
         grid-column-end: 5;
