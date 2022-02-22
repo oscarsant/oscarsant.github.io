@@ -37,7 +37,7 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery {
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(21, 30px);
   }
 }
@@ -50,10 +50,10 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--1 {
-    grid-column-start: 5;
-    grid-column-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 7;
+    grid-row-end: 6;
   }
 }
 
@@ -67,8 +67,8 @@ figure {
 @media screen and (max-width: 479px) {
   .gallery__item--2 {
     grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 7;
+    grid-column-end: 4;
+    grid-row-start: 6;
     grid-row-end: 12;
   }
 }
@@ -87,11 +87,14 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--3 {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 7;
     font-size: 7px;
+  }
+  .gallery__item--3 img {
+    object-position: top;
   }
 }
 
@@ -103,8 +106,8 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--4 {
-    grid-column-start: 5;
-    grid-column-end: 10;
+    grid-column-start: 4;
+    grid-column-end: 7;
     grid-row-start: 7;
     grid-row-end: 12;
   }
@@ -119,7 +122,7 @@ figure {
 @media screen and (max-width: 479px) {
   .gallery__item--5 {
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 4;
     grid-row-start: 12;
     grid-row-end: 17;
   }
@@ -134,7 +137,7 @@ figure {
 @media screen and (max-width: 479px) {
   .gallery__item--6 {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 17;
     grid-row-end: 22;
     background: black;
@@ -153,8 +156,8 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--7 {
-    grid-column-start: 6;
-    grid-column-end: 10;
+    grid-column-start: 4;
+    grid-column-end: 7;
     grid-row-start: 12;
     grid-row-end: 17;
   }
@@ -168,8 +171,8 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--8 {
-    grid-column-start: 4;
-    grid-column-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 17;
     grid-row-end: 22;
   }
@@ -183,8 +186,8 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--9 {
-    grid-column-start: 7;
-    grid-column-end: 10;
+    grid-column-start: 5;
+    grid-column-end: 7;
     grid-row-start: 17;
     grid-row-end: 22;
   }

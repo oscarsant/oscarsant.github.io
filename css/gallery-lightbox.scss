@@ -43,7 +43,7 @@ figure {
     }
 
     @media screen and (max-width: $mobile) {
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(21, 30px);
     }
 }
@@ -55,10 +55,10 @@ figure {
     grid-row-end: 4;
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 5;
-        grid-column-end: 10;
+        grid-column-start: 1;
+        grid-column-end: 4;
         grid-row-start: 1;
-        grid-row-end: 7;
+        grid-row-end: 6;
     }
 }
 
@@ -71,8 +71,8 @@ figure {
 
     @media screen and (max-width: $mobile) {
         grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 7;
+        grid-column-end: 4;
+        grid-row-start: 6;
         grid-row-end: 12;
 
     }
@@ -90,11 +90,15 @@ figure {
     }
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column-start: 4;
+        grid-column-end: 7;
         grid-row-start: 1;
         grid-row-end: 7;
         font-size: 7px;
+
+        img {
+            object-position: top;
+        }
     }
 }
 
@@ -107,8 +111,8 @@ figure {
     grid-row-end: 9;
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 5;
-        grid-column-end: 10;
+        grid-column-start: 4;
+        grid-column-end: 7;
         grid-row-start: 7;
         grid-row-end: 12;
     }
@@ -122,7 +126,7 @@ figure {
 
     @media screen and (max-width: $mobile) {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 4;
         grid-row-start: 12;
         grid-row-end: 17;
     }
@@ -136,7 +140,7 @@ figure {
 
     @media screen and (max-width: $mobile) {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 3;
         grid-row-start: 17;
         grid-row-end: 22;
         background: black;
@@ -155,8 +159,8 @@ figure {
     background: black;
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 6;
-        grid-column-end: 10;
+        grid-column-start: 4;
+        grid-column-end: 7;
         grid-row-start: 12;
         grid-row-end: 17;
     }
@@ -169,8 +173,8 @@ figure {
     grid-row-end: 12;
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 4;
-        grid-column-end: 7;
+        grid-column-start: 3;
+        grid-column-end: 5;
         grid-row-start: 17;
         grid-row-end: 22;
     }
@@ -183,8 +187,8 @@ figure {
     grid-row-end: 12;
 
     @media screen and (max-width: $mobile) {
-        grid-column-start: 7;
-        grid-column-end: 10;
+        grid-column-start: 5;
+        grid-column-end: 7;
         grid-row-start: 17;
         grid-row-end: 22;
     }
