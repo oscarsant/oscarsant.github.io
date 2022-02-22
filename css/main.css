@@ -532,7 +532,7 @@ a.go-left-hide:hover:after {
 }
 @media screen and (max-width: 479px) {
   .head-rule {
-    border-top: 2px solid #e78b02;
+    border-top: 3px solid #e78b02;
   }
 }
 
@@ -757,7 +757,7 @@ a {
 }
 @media screen and (max-width: 479px) {
   .navbar {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

@@ -82,7 +82,7 @@
     margin: .7em 0;
 
     @media screen and (max-width: $mobile) {
-        border-top: 2px solid $color;
+        border-top: 3px solid $color;
     }
 }
 
@@ -312,7 +312,7 @@ a {
     font-size: 17px;
 
     @media screen and (max-width: $mobile) {
-        font-size: 12px;
+        font-size: 13px;
 
     }
 
