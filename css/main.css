@@ -98,6 +98,10 @@ figure {
   }
 }
 
+.gallery__item--3.customgallery {
+  cursor: auto;
+}
+
 .gallery__item--4 {
   grid-column-start: 1;
   grid-column-end: 6;
@@ -613,7 +617,7 @@ header {
 .work.area {
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #9a9a9a;
   font-weight: 400;
   font-family: "Inter", sans-serif;
