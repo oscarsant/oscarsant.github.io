@@ -321,7 +321,7 @@ figure {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 16px;
   color: darkgray;
   max-width: 129px;
 }
@@ -529,9 +529,9 @@ a.go-left-hide:hover:after {
 
 .head-rule {
   border: none;
-  border-top: 4px solid #e78b02;
+  border-top: 5px solid #e78b02;
   width: 1em;
-  margin: 0.7em 0;
+  margin: 1em 0;
 }
 @media screen and (max-width: 479px) {
   .head-rule {
@@ -551,7 +551,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -613,7 +613,7 @@ header {
 .work.area {
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #9a9a9a;
   font-weight: 400;
   font-family: "Inter", sans-serif;
@@ -624,7 +624,7 @@ header {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .date {
@@ -796,7 +796,7 @@ a {
   opacity: 0.7;
 }
 .navbar-collapse li img {
-  width: 1.8em;
+  width: 1.6em;
 }
 
 footer {

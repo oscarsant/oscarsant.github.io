@@ -77,9 +77,9 @@
 
 .head-rule {
     border: none;
-    border-top: 4px solid $color;
+    border-top: 5px solid $color;
     width: 1em;
-    margin: .7em 0;
+    margin: 1em 0;
 
     @media screen and (max-width: $mobile) {
         border-top: 3px solid $color;
@@ -160,7 +160,7 @@ header {
 .work.area {
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: .9em;
+    font-size: .8em;
     color: $lighttone;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
@@ -353,7 +353,7 @@ a {
         }
 
         img {
-            width: 1.8em;
+            width: 1.6em;
         }
 
     }
