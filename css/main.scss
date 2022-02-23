@@ -160,10 +160,24 @@ header {
 .work.area {
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: .9em;
+    font-size: .8em;
     color: $lighttone;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
+}
+
+.work.calltoact {
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: #9a9a9a;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+
+    img {
+        width: 2.5em;
+        margin: 0px 0px -6px 5px;
+    }
 }
 
 #timeline p {
@@ -174,7 +188,7 @@ header {
 .date {
     left: -2.8em;
     font-size: 1.3em;
-    line-height: 1.2;
+    line-height: 1.5;
     position: absolute;
     font-family: "Oswald", sans-serif;
     color: #9a9a9a;
@@ -201,7 +215,7 @@ header {
 }
 
 .circle {
-    top: 6px;
+    top: 10px;
     left: -28px;
     width: 10px;
     height: 10px;
@@ -210,6 +224,11 @@ header {
     border-radius: 50%;
     display: block;
     position: absolute;
+
+    @media screen and (max-width: $mobile) {
+        top: 6px;
+
+    }
 }
 
 .content {
@@ -242,16 +261,19 @@ header {
 }
 
 label {
-    font-size: 1.6em;
+    font-size: 1.5em;
     position: relative;
     z-index: 100;
     cursor: pointer;
-    line-height: .9;
+    line-height: 1.3;
     font-weight: 400;
     color: $lighttone;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     @media screen and (max-width: $mobile) {
-        line-height: 1.1;
+        line-height: 1.2;
     }
 
 }
@@ -260,16 +282,28 @@ label {
     display: none;
 }
 
+.relative label span {
+    color: $lighttone;
+    font-weight: 300;
+    font-size: 1em;
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
 .radio:checked+.relative label {
     cursor: auto;
     color: black;
+}
 
+.radio:checked+.relative label span {
+    transform: rotate(270deg);
+    display: none;
 }
 
 .radio:checked+.relative .date {
     cursor: auto;
     color: black;
-
 }
 
 .radio:checked+.relative .circle {
@@ -280,8 +314,6 @@ label {
 .radio:checked~.content {
     max-height: 500px;
     transition: ease-in-out 1s;
-
-
 }
 
 .radio:checked~.content p {
