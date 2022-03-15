@@ -78,7 +78,7 @@
 .head-rule {
     border: none;
     border-top: 5px solid $color;
-    width: 1em;
+    width: 2em;
     margin: 1em 0;
 
     @media screen and (max-width: $mobile) {
@@ -283,12 +283,13 @@ label {
 }
 
 .relative label span {
-    color: $lighttone;
+    color: $color;
     font-weight: 300;
     font-size: 1em;
     transform: rotate(90deg);
     display: inline-block;
     margin-left: 15px;
+
 }
 
 .radio:checked+.relative label {
@@ -379,13 +380,16 @@ a {
     li {
         list-style: none;
         margin-left: 20px;
+        border: solid 2px $color;
+        border-radius: 20px;
+        padding: 5px;
 
         &:hover {
             opacity: .7;
         }
 
         img {
-            width: 1.6em;
+            width: 1.5em;
         }
 
     }

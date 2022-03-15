@@ -534,7 +534,7 @@ a.go-left-hide:hover:after {
 .head-rule {
   border: none;
   border-top: 5px solid #e78b02;
-  width: 1em;
+  width: 2em;
   margin: 1em 0;
 }
 @media screen and (max-width: 479px) {
@@ -738,7 +738,7 @@ label {
 }
 
 .relative label span {
-  color: #9a9a9a;
+  color: #e78b02;
   font-weight: 300;
   font-size: 1em;
   transform: rotate(90deg);
@@ -830,12 +830,15 @@ a {
 .navbar-collapse li {
   list-style: none;
   margin-left: 20px;
+  border: solid 2px #e78b02;
+  border-radius: 20px;
+  padding: 5px;
 }
 .navbar-collapse li:hover {
   opacity: 0.7;
 }
 .navbar-collapse li img {
-  width: 1.6em;
+  width: 1.5em;
 }
 
 footer {
