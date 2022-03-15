@@ -535,7 +535,7 @@ a.go-left-hide:hover:after {
   border: none;
   border-top: 5px solid #e78b02;
   width: 2em;
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 @media screen and (max-width: 479px) {
   .head-rule {

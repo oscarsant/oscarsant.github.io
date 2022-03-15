@@ -79,7 +79,7 @@
     border: none;
     border-top: 5px solid $color;
     width: 2em;
-    margin: 1em 0;
+    margin: 1em 0 0;
 
     @media screen and (max-width: $mobile) {
         border-top: 3px solid $color;
