@@ -228,7 +228,7 @@ figure {
   text-align: center;
   bottom: 0;
   left: 0;
-  background: black;
+  background: rgb(0, 0, 0);
   opacity: 0;
   display: flex;
   align-items: center;
@@ -506,7 +506,7 @@ a.go-left-hide:hover:after {
 }
 
 .plyr--video .plyr__progress__buffer {
-  color: #ffffff00;
+  color: rgba(255, 255, 255, 0);
 }
 
 .gallery__item .text-justify {
@@ -518,7 +518,7 @@ a.go-left-hide:hover:after {
   font-size: 2.8em;
   max-width: 8em;
   line-height: 1.2;
-  color: #9a9a9a;
+  color: slategrey;
   letter-spacing: 0px;
   flex-direction: column;
   justify-content: center;
@@ -581,7 +581,7 @@ header {
   max-width: 510px;
   margin: 100px auto;
   font-size: 16px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Inter", sans-serif;
   color: black;
 }
 @media screen and (max-width: 479px) {
@@ -596,8 +596,8 @@ header {
   margin: auto;
   padding: 50px 0 50px 20px;
   border-left: 2px solid;
-  border-image: linear-gradient(0deg, #9a9a9a00 0%, #9a9a9a 10%, #9a9a9a 90%, #9a9a9a00 100%) 1;
-  border-width: 0 0 0 2px;
+  border-image: linear-gradient(0deg, rgba(154, 154, 154, 0) 0%, lightgray 10%, lightgray 90%, rgba(154, 154, 154, 0) 100%) 1;
+  border-width: 0 0 0 1px;
   height: 100%;
   margin-left: 90px;
   display: flex;
@@ -618,7 +618,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 0.8em;
-  color: #9a9a9a;
+  color: slategrey;
   font-weight: 400;
   font-family: "Inter", sans-serif;
 }
@@ -645,20 +645,19 @@ header {
 }
 
 .date {
-  left: -2.8em;
-  font-size: 1.3em;
+  left: -5em;
+  top: 0;
+  font-size: 1em;
   line-height: 1.5;
   position: absolute;
-  font-family: "Oswald", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #9a9a9a;
-  top: 0;
   font-weight: 400;
   text-align: right;
   letter-spacing: 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 15px;
 }
 @media screen and (max-width: 479px) {
   .date {
@@ -673,12 +672,12 @@ header {
 }
 
 .circle {
-  top: 10px;
-  left: -28px;
+  top: 0;
+  left: -30px;
   width: 10px;
   height: 10px;
-  background: #ffffff;
-  border: 2px solid #9a9a9a;
+  background: lightgray;
+  border: 5px solid white;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -691,7 +690,7 @@ header {
 
 .content {
   max-height: 20px;
-  padding: 10px 0 0 30px;
+  padding: 10px 0 0;
   position: relative;
 }
 @media screen and (max-width: 479px) {
@@ -711,18 +710,18 @@ header {
 }
 
 .content p span {
-  color: black;
-  font-weight: 600;
+  color: slategray;
+  font-weight: 400;
 }
 
 label {
-  font-size: 1.5em;
+  font-size: 1em;
   position: relative;
   z-index: 100;
   cursor: pointer;
   line-height: 1.3;
   font-weight: 400;
-  color: #9a9a9a;
+  color: slategrey;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -762,8 +761,8 @@ label {
 }
 
 .radio:checked + .relative .circle {
-  background: black;
-  border-color: black;
+  background: slategray;
+  border-color: white;
 }
 
 .radio:checked ~ .content {
@@ -773,7 +772,7 @@ label {
 
 .radio:checked ~ .content p {
   max-height: 500px;
-  color: #9a9a9a;
+  color: slategrey;
   transition: ease-in-out 1s;
 }
 

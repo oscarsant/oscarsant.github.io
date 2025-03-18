@@ -123,7 +123,7 @@ header {
     max-width: 510px;
     margin: 100px auto;
     font-size: 16px;
-    font-family: "Oswald", sans-serif;
+    font-family: "Inter", sans-serif;
     color: black;
 
     @media screen and (max-width: $mobile) {
@@ -139,8 +139,8 @@ header {
     margin: auto;
     padding: 50px 0 50px 20px;
     border-left: 2px solid;
-    border-image: linear-gradient(0deg, #9a9a9a00 0%, $lighttone 10%, $lighttone 90%, #9a9a9a00 100%) 1;
-    border-width: 0 0 0 2px;
+    border-image: linear-gradient(0deg, #9a9a9a00 0%, lightgray 10%, lightgray 90%, #9a9a9a00 100%) 1;
+    border-width: 0 0 0 1px;
     height: 100%;
     margin-left: 90px;
     display: flex;
@@ -186,20 +186,19 @@ header {
 }
 
 .date {
-    left: -2.8em;
-    font-size: 1.3em;
+    left: -5em;
+    top: 0;
+    font-size: 1em;
     line-height: 1.5;
     position: absolute;
-    font-family: "Oswald", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #9a9a9a;
-    top: 0;
     font-weight: 400;
     text-align: right;
     letter-spacing: 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 15px;
 
     @media screen and (max-width: $mobile) {
         line-height: 1.4;
@@ -215,12 +214,12 @@ header {
 }
 
 .circle {
-    top: 10px;
-    left: -28px;
+    top: 0;
+    left: -30px;
     width: 10px;
     height: 10px;
-    background: #ffffff;
-    border: 2px solid $lighttone;
+    background: lightgray;
+    border: 5px solid white;
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -233,7 +232,7 @@ header {
 
 .content {
     max-height: 20px;
-    padding: 10px 0 0 30px;
+    padding: 10px 0 0;
     position: relative;
 
     @media screen and (max-width: $mobile) {
@@ -255,13 +254,13 @@ header {
 }
 
 .content p span {
-    color: black;
-    font-weight: 600;
+    color: slategray;
+    font-weight: 400;
 
 }
 
 label {
-    font-size: 1.5em;
+    font-size: 1em;
     position: relative;
     z-index: 100;
     cursor: pointer;
@@ -308,8 +307,8 @@ label {
 }
 
 .radio:checked+.relative .circle {
-    background: black;
-    border-color: black;
+    background: slategray;
+    border-color: white;
 }
 
 .radio:checked~.content {
