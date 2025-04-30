@@ -6,6 +6,7 @@ $mobile: 479px;
 $medium: 991px;
 $darktone: black;
 $lighttone: slategrey;
+$font: 'Inter', sans-serif;
 
 figure {
     margin: 0;
@@ -329,16 +330,8 @@ figure {
     }
 }
 
-@mixin copy {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
 .text-capt {
     text-align: left;
-    @include copy;
     color: darkgray;
     max-width: 129px;
 
