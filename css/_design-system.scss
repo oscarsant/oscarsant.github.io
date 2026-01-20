@@ -1,0 +1,464 @@
+// ========================================
+// APPLE-INSPIRED DESIGN SYSTEM
+// ========================================
+
+// ----------------------------------------
+// 1. TYPOGRAPHY
+// ----------------------------------------
+
+// Font Families (use Nunito Sans as primary)
+$font-system: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-mono: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
+
+// Font Weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Font Sizes (Apple's scale)
+$font-size-xs: 11px;
+$font-size-sm: 13px;
+$font-size-base: 17px;
+$font-size-lg: 21px;
+$font-size-xl: 28px;
+$font-size-2xl: 34px;
+$font-size-3xl: 48px;
+$font-size-4xl: 64px;
+$font-size-5xl: 80px;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.47;
+$line-height-relaxed: 1.6;
+
+// Letter Spacing (Apple uses tight tracking)
+$letter-spacing-tight: -0.022em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.05em;
+
+// ----------------------------------------
+// 2. COLORS
+// ----------------------------------------
+
+// Neutrals (Apple's grays)
+$color-white: #ffffff;
+$color-gray-50: #f5f5f7;
+$color-gray-100: #f2f2f2;
+$color-gray-200: #e8e8ed;
+$color-gray-300: #d2d2d7;
+$color-gray-400: #b0b0b5;
+$color-gray-500: #86868b;
+$color-gray-600: #6e6e73;
+$color-gray-700: #515154;
+$color-gray-800: #3a3a3c;
+$color-gray-900: #1d1d1f;
+$color-black: #000000;
+
+// Apple Blues
+$color-blue-50: #e5f2ff;
+$color-blue-100: #cce5ff;
+$color-blue-200: #99cbff;
+$color-blue-300: #66b1ff;
+$color-blue-400: #3397ff;
+$color-blue-500: #007aff;
+$color-blue-600: #0062cc;
+$color-blue-700: #004a99;
+$color-blue-800: #003266;
+$color-blue-900: #001a33;
+
+// Accent Colors
+$color-green: #34c759;
+$color-red: #ff3b30;
+$color-orange: #ff9500;
+$color-yellow: #ffcc00;
+$color-purple: #af52de;
+$color-pink: #ff2d55;
+$color-teal: #5ac8fa;
+$color-indigo: #5856d6;
+
+// Semantic Colors
+$color-success: $color-green;
+$color-error: $color-red;
+$color-warning: $color-orange;
+$color-info: $color-blue-500;
+
+// ----------------------------------------
+// 3. SPACING
+// ----------------------------------------
+
+$space-0: 0;
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-7: 28px;
+$space-8: 32px;
+$space-10: 40px;
+$space-12: 48px;
+$space-16: 64px;
+$space-20: 80px;
+$space-24: 96px;
+
+// ----------------------------------------
+// 4. BORDER RADIUS
+// ----------------------------------------
+
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 18px;
+$radius-xl: 24px;
+$radius-full: 9999px;
+
+// ----------------------------------------
+// 5. SHADOWS (Apple's subtle shadows)
+// ----------------------------------------
+
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.12);
+
+// ----------------------------------------
+// 6. TRANSITIONS (Apple's smooth easing)
+// ----------------------------------------
+
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Apple's signature easing
+$ease-in-out-apple: cubic-bezier(0.42, 0, 0.58, 1);
+$ease-out-apple: cubic-bezier(0.16, 1, 0.3, 1);
+
+// ----------------------------------------
+// 7. BREAKPOINTS
+// ----------------------------------------
+
+$breakpoint-xs: 375px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1440px;
+
+// ----------------------------------------
+// 8. Z-INDEX SCALE
+// ----------------------------------------
+
+$z-index-base: 1;
+$z-index-dropdown: 100;
+$z-index-sticky: 200;
+$z-index-fixed: 300;
+$z-index-overlay: 400;
+$z-index-modal: 500;
+$z-index-popover: 600;
+$z-index-tooltip: 700;
+
+// ----------------------------------------
+// 9. GLASSMORPHISM (Apple's blur effect)
+// ----------------------------------------
+
+@mixin glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+@mixin glass-dark {
+  background: rgba(29, 29, 31, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+@mixin glass-medium {
+  background: rgba(142, 142, 147, 0.3);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+// ----------------------------------------
+// 10. BUTTON STYLES
+// ----------------------------------------
+
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-system;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  
+  &:focus-visible {
+    outline: 2px solid $color-blue-500;
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin btn-primary {
+  @include btn-base;
+  background: $color-blue-500;
+  color: $color-white;
+  
+  &:hover:not(:disabled) {
+    background: $color-blue-600;
+    transform: translateY(-1px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+@mixin btn-secondary {
+  @include btn-base;
+  background: $color-gray-200;
+  color: $color-gray-900;
+  
+  &:hover:not(:disabled) {
+    background: $color-gray-300;
+  }
+}
+
+@mixin btn-tertiary {
+  @include btn-base;
+  background: transparent;
+  color: $color-gray-900;
+  border: 1px solid $color-gray-300;
+  
+  &:hover:not(:disabled) {
+    background: $color-gray-100;
+    border-color: $color-gray-400;
+  }
+}
+
+@mixin btn-ghost {
+  @include btn-base;
+  background: transparent;
+  color: $color-blue-500;
+  
+  &:hover:not(:disabled) {
+    background: rgba($color-blue-500, 0.1);
+  }
+}
+
+// Button Sizes
+@mixin btn-sm {
+  padding: $space-2 $space-4;
+  font-size: $font-size-sm;
+  border-radius: $radius-sm;
+  min-height: 28px;
+}
+
+@mixin btn-md {
+  padding: $space-3 $space-6;
+  font-size: $font-size-base;
+  border-radius: $radius-md;
+  min-height: 44px;
+}
+
+@mixin btn-lg {
+  padding: $space-4 $space-8;
+  font-size: $font-size-lg;
+  border-radius: $radius-md;
+  min-height: 56px;
+}
+
+// ----------------------------------------
+// 11. CARD STYLES
+// ----------------------------------------
+
+@mixin card-base {
+  background: $color-white;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: all $transition-base;
+}
+
+@mixin card-elevated {
+  @include card-base;
+  box-shadow: $shadow-lg;
+  
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: translateY(-4px);
+  }
+}
+
+@mixin card-flat {
+  @include card-base;
+  border: 1px solid $color-gray-200;
+}
+
+@mixin card-glass {
+  @include card-base;
+  @include glass-light;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+// ----------------------------------------
+// 12. INPUT STYLES
+// ----------------------------------------
+
+@mixin input-base {
+  width: 100%;
+  padding: $space-3 $space-4;
+  font-family: $font-system;
+  font-size: $font-size-base;
+  color: $color-gray-900;
+  background: $color-white;
+  border: 1px solid $color-gray-300;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  outline: none;
+  
+  &::placeholder {
+    color: $color-gray-400;
+  }
+  
+  &:focus {
+    border-color: $color-blue-500;
+    box-shadow: 0 0 0 3px rgba($color-blue-500, 0.1);
+  }
+  
+  &:disabled {
+    background: $color-gray-100;
+    cursor: not-allowed;
+  }
+}
+
+// ----------------------------------------
+// 13. UTILITY MIXINS
+// ----------------------------------------
+
+@mixin smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin text-gradient($colors...) {
+  background: linear-gradient(135deg, $colors);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ----------------------------------------
+// 14. ANIMATION UTILITIES
+// ----------------------------------------
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// ----------------------------------------
+// 15. RESPONSIVE MIXINS
+// ----------------------------------------
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin max-width($width) {
+  @media (max-width: #{$width - 1px}) {
+    @content;
+  }
+}

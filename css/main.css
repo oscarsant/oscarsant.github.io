@@ -2,9 +2,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 figure {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  background: #F1F4F7;
 }
 
 .gallery {
@@ -14,12 +57,21 @@ figure {
 .container-gallery {
   width: 100%;
   height: 100%;
+  background: white;
+  border-radius: 0 0 80px 80px;
+  padding-bottom: 200px;
+  margin-bottom: -155px;
 }
 
 .wrap {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery {
@@ -27,12 +79,10 @@ figure {
   grid-template-rows: repeat(11, 0.2fr);
   grid-gap: 10px;
   width: 100%;
-  padding-top: 10px;
 }
 @media screen and (max-width: 991px) {
   .gallery {
     grid-gap: 5px;
-    padding-top: 5px;
   }
 }
 @media screen and (max-width: 479px) {
@@ -94,7 +144,8 @@ figure {
     font-size: 7px;
   }
   .gallery__item--3 img {
-    object-position: top;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 
@@ -148,7 +199,8 @@ figure {
   }
 }
 .gallery__item--6 img {
-  object-position: top;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .gallery__item--7 {
@@ -200,7 +252,8 @@ figure {
 .gallery__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: 0.4s linear;
 }
 
@@ -354,7 +407,7 @@ figure {
 .rule-capt {
   width: 20px;
   height: 2px;
-  background: #e78b02;
+  background: #FAB071;
   margin: 15px 0;
 }
 @media screen and (max-width: 479px) {
@@ -386,7 +439,7 @@ figure {
 }
 .explore-link a:after {
   content: "";
-  background: #e78b02;
+  background: #FAB071;
   height: 2px;
   position: absolute;
   bottom: 0;
@@ -462,6 +515,76 @@ a.go-left-hide:hover:after {
   border-radius: 4px;
 }
 
+/* ==========================================
+   TYPOGRAPHY
+   Using design-system tokens only
+   ========================================== */
+body {
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  color: #1d1d1f;
+  line-height: 1.47;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.08;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.12;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+h4 {
+  font-size: 21px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+h5,
+h6 {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+
+p {
+  margin: 0 0 12px;
+  font-size: 17px;
+  color: #515154;
+}
+
+a {
+  color: #007aff;
+  text-decoration: none;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.small-muted {
+  font-size: 13px;
+  color: #6e6e73;
+}
+
+.lead {
+  font-size: 21px;
+  font-weight: 400;
+  color: #3a3a3c;
+  margin-bottom: 12px;
+}
+
 /*.plyr--video {
     background: #000;
     background: var(--plyr-video-background, var(--plyr-video-background, #000));
@@ -514,7 +637,7 @@ a.go-left-hide:hover:after {
   font-size: 2.8em;
   max-width: 8em;
   line-height: 1.2;
-  color: slategrey;
+  color: #515154;
   letter-spacing: 0px;
   flex-direction: column;
   justify-content: center;
@@ -529,13 +652,13 @@ a.go-left-hide:hover:after {
 
 .head-rule {
   border: none;
-  border-top: 5px solid #e78b02;
+  border-top: 5px solid #FAB071;
   width: 2em;
   margin: 1em 0 0;
 }
 @media screen and (max-width: 479px) {
   .head-rule {
-    border-top: 3px solid #e78b02;
+    border-top: 3px solid #FAB071;
   }
 }
 
@@ -552,15 +675,10 @@ body {
 }
 
 header {
-  margin: 50px;
+  padding: 50px;
   max-width: 100%;
+  background-color: white;
 }
-@media screen and (max-width: 991px) {
-  header {
-    margin: 30px 10px 30px;
-  }
-}
-
 .content-inner {
   background: #fff;
 }
@@ -571,57 +689,114 @@ header {
 
 .timeline-wrapper {
   max-width: 510px;
-  margin: 100px auto;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  color: black;
+  margin: 100px auto 0;
+  font-size: 17px;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1d1d1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.47;
+  letter-spacing: 0;
+}
+.timeline-wrapper .timeline-header {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.timeline-wrapper .timeline-header .profile-name {
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.timeline-wrapper .timeline-header .oscar-timeline {
+  display: block;
+  margin: 0 auto;
+  border-radius: 9999px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 479px) {
+  .timeline-wrapper .timeline-header .profile-name {
+    font-size: 13px;
+  }
+  .timeline-wrapper .timeline-header .oscar-timeline {
+    width: 72px;
+    height: 72px;
+  }
 }
 @media screen and (max-width: 479px) {
   .timeline-wrapper {
-    margin: 70px auto;
-    font-size: 14px;
+    font-size: 13px;
   }
+}
+
+.download-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #1d1d1f;
+  border: none;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 8px;
+  cursor: pointer;
+  border: 1.5px solid rgba(188, 197, 210, 0.4);
+  border-radius: 8px;
+}
+.download-resume-btn:hover {
+  font-weight: 500;
+}
+.download-resume-btn .icon {
+  width: 14px;
+  height: 14px;
 }
 
 #timeline {
   list-style: none;
-  margin: auto;
-  padding: 50px 0 50px 20px;
+  padding: 40px 12px 40px 24px;
   border-left: 2px solid;
-  border-image: linear-gradient(0deg, rgba(154, 154, 154, 0) 0%, lightgray 10%, lightgray 90%, rgba(154, 154, 154, 0) 100%) 1;
+  -o-border-image: linear-gradient(0deg, rgba(154, 154, 154, 0) 0%, lightgray 10%, lightgray 90%, rgba(154, 154, 154, 0) 100%) 1;
+     border-image: linear-gradient(0deg, rgba(154, 154, 154, 0) 0%, lightgray 10%, lightgray 90%, rgba(154, 154, 154, 0) 100%) 1;
   border-width: 0 0 0 1px;
   height: 100%;
-  margin-left: 90px;
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  margin-left: 20px;
 }
-@media screen and (max-width: 479px) {
-  #timeline {
-    padding: 30px 0 30px 20px;
-  }
-}
-
 #timeline li {
-  margin: 12px 12px 12px 0;
   position: relative;
-  border: 1px solid lightgray;
-  border-radius: 0 16px 16px;
-  padding: 20px;
   line-height: 20px;
 }
 #timeline li.work.area {
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 0.8em;
-  color: slategrey;
+  letter-spacing: 0.05em;
+  font-size: 11px;
+  color: #86868b;
+  font-weight: 500;
   border: none;
   padding: 0px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .work.calltoact {
   letter-spacing: 1px;
   font-size: 13px;
-  color: #9a9a9a;
+  color: red;
   font-style: italic;
 }
 .work.calltoact img {
@@ -632,50 +807,52 @@ header {
 #timeline p {
   margin: 0;
   font-size: 14px;
+  padding-top: 8px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.body-text {
+  font-size: 14px;
+  color: #1d1d1f;
+  font-weight: 300;
 }
 
 .date {
-  left: -5em;
-  top: 0;
-  font-size: 13px;
+  left: -4.7em;
+  top: -9px;
+  font-size: 14px;
   line-height: 1.5;
   position: absolute;
   text-align: right;
-  letter-spacing: 0px;
+  letter-spacing: 0.1px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  color: lightgray;
+  color: slategray;
+  background: #F1F4F7;
+  padding: 8px 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
 }
-@media screen and (max-width: 479px) {
-  .date {
-    line-height: 1.4;
-    width: 9px;
-  }
-}
-
 .oscar-timeline {
-  margin-left: 45px;
-  max-width: 150px;
+  max-width: 120px;
+  border: solid 1px orange;
+  border-radius: 120px;
+  padding: 4px;
 }
 
 .circle {
   top: 0;
-  left: -31.5px;
+  left: -42.5px;
   width: 10px;
   height: 10px;
   background: lightgray;
-  border: 5px solid white;
+  border: 5px solid #F1F4F7;
   border-radius: 50%;
   display: block;
   position: absolute;
 }
-@media screen and (max-width: 479px) {
-  .circle {
-    top: 6px;
-  }
-}
-
 .content p span {
   color: slategray;
   display: inline-block;
@@ -687,10 +864,11 @@ label {
   position: relative;
   z-index: 100;
   cursor: pointer;
-  color: slategrey;
+  color: #515154;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 8px;
 }
 @media screen and (max-width: 479px) {
   label {
@@ -705,29 +883,165 @@ label {
   gap: 8px;
 }
 
-.label-with-svg {
+.company-wrapper {
+  border: 1.5px solid rgba(188, 197, 210, 0.4);
+  border-radius: 12px;
+  position: relative;
+  padding: 44px 32px 32px 32px;
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.company-wrapper .company-name {
+  position: absolute;
+  top: -18px;
+  left: 24px;
+  padding: 0 8px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  color: slategray;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 200px;
+  background: #f1f4f7;
+  gap: 12px;
+}
+.company-wrapper .company-main {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  /* 12px between logo and company title */
+}
+.company-wrapper .company-location-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  /* 12px between icon and location text */
+}
+
+.company-wrapper:has(.radio:checked) {
+  border-color: #FAB071;
+}
+.company-wrapper:has(.radio:checked) .company-name {
+  color: black;
+  font-weight: 500;
+}
+.company-wrapper:has(.radio:checked) .company-logo-wrapper {
+  border-color: #FAB071;
+}
+
+.company-logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1.5px solid #d2d2d7;
+  padding: 2px;
+  box-sizing: content-box;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* remove margin-right - spacing handled by .company-main gap */
+}
+
+.company-logo {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+  border-radius: 50%;
+  padding: 4px;
+  box-sizing: content-box;
+}
+.company-logo[alt="University of Mount Olive"] {
+  background-color: #2d5f3f;
+}
+.company-logo[alt=POLITICO] {
+  background-color: #be2527;
+}
+.company-logo[alt="National Geographic"] {
+  background-color: #000000;
+}
+.company-logo[alt="Art Institute of Pittsburgh"] {
+  background-color: #ffffff;
+}
+
+.role-separator {
+  width: 100%;
+  height: 1px;
+  background: rgba(188, 197, 210, 0.4);
+  margin: 8px 0;
+}
+
+.role-name {
+  display: flex;
   width: 100%;
   justify-content: space-between;
-  color: #999; /* Control color via text color */
+}
+
+.duration {
+  font-size: 12px;
+  color: slategray;
+  font-weight: 300;
+  white-space: nowrap;
+  display: none;
+}
+
+.expand-arrow {
+  display: block;
+}
+
+.radio:checked + .relative .expand-arrow {
+  display: none;
+}
+
+.radio:checked + .relative .duration {
+  display: block;
+}
+
+.label-with-svg {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  color: #999;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
 .label-text {
-  color: lightgrey; /* Controls the color of the text separately */
+  color: slategrey;
 }
 
 .icon {
-  width: 20px; /* Controls the size */
-  height: 20px;
-  stroke-width: 1.5px; /* Controls the stroke weight */
-  stroke: black; /* Controls the stroke color of the icon separately */
+  width: 16px;
+  height: 16px;
+  display: block;
   flex-shrink: 0;
+}
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+.icon.small {
+  width: 12px;
+  height: 12px;
+}
+.icon.large {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-orange {
+  color: #FDE3D4;
 }
 
 .icon use {
-  fill: currentColor; /* Allows the icon to inherit the current text color */
+  fill: currentColor;
+  stroke: currentColor;
+  /* Allows the icon to inherit the current text color */
 }
 
 .radio {
@@ -740,24 +1054,46 @@ label {
 }
 
 .radio:checked + .relative label span {
-  color: slategrey;
+  color: black;
+}
+
+.date-range {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: slategray;
+}
+
+/* Ensure calendar icon and date sit on one line */
+.date-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.date-wrapper svg#Calendar {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .radio:checked + .relative .date {
   cursor: auto;
-  color: slategrey;
+  color: black;
+  font-weight: 400;
 }
 
 .radio:checked + .relative .circle {
-  background: slategray;
-  border-color: white;
+  background: black;
+  border-color: #F1F4F7;
 }
 
 .radio:checked ~ .content {
   max-height: 500px;
   transition: ease-in-out 1s;
   opacity: 1;
-  color: slategrey;
+  color: black;
 }
 
 .content {
@@ -766,7 +1102,7 @@ label {
   transition: ease-in-out 1.8s;
   transition-delay: -1s;
   opacity: 0;
-  background-color: #ffffff;
+  background-color: #F1F4F7;
 }
 @media screen and (max-width: 479px) {
   .content {
@@ -774,11 +1110,13 @@ label {
   }
 }
 
-/*.radio:checked~.content p {
+/* Commented out old content styles
+.radio:checked~.content p {
     max-height: 500px;
     color: $lighttone;
     transition: ease-in-out 1s;
 }
+
 .content p {
     max-height: 0;
     color: transparent;
@@ -788,7 +1126,8 @@ label {
     overflow: hidden;
     line-height: 1.7;
     transition: ease-in-out .5s;
-}*/
+}
+*/
 a {
   cursor: pointer;
   text-decoration: none;
@@ -821,6 +1160,7 @@ a {
   align-items: center;
 }
 .navbar-header span {
+  width: -moz-max-content;
   width: max-content;
   padding-left: 15px;
   font-family: "Oswald", sans-serif;
@@ -843,8 +1183,13 @@ a {
   list-style: none;
   margin-left: 20px;
   border: solid 2px #e78b02;
-  border-radius: 20px;
-  padding: 5px;
+  border-radius: 40px;
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar-collapse li:hover {
   opacity: 0.7;
@@ -857,11 +1202,10 @@ footer {
   clear: both;
   padding: 2em 0;
   border-top: 1px solid #f1f1f1;
+  background: #F1F4F7;
 }
 
 .nav-footer {
-  margin: 0;
-  padding: 0;
   margin: 0;
   padding: 0;
   display: flex;
@@ -922,10 +1266,6 @@ footer .navbar-brand {
   width: 100%;
 }
 
-footer {
-  background: #fff;
-}
-
 .wrapper footer .container {
   box-shadow: none;
 }
@@ -946,6 +1286,4 @@ footer {
     padding: 0;
     clear: both;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

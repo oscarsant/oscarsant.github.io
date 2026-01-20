@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+	<!-- Iconly - LinkedIn (scaled to 24x24) -->
+	<symbol id="linkedin-icon" viewBox="0 0 24 24">
+		<g transform="scale(1.2) translate(2, 2)">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M2.58537 0.393806C1.15751 0.393806 0 1.54687 0 2.96925C0 4.39163 1.15751 5.5447 2.58537 5.5447C4.01322 5.5447 5.17073 4.39163 5.17073 2.96925C5.17073 1.54687 4.01322 0.393806 2.58537 0.393806ZM2.58537 1.85161C1.96573 1.85161 1.46341 2.35199 1.46341 2.96925C1.46341 3.58651 1.96573 4.0869 2.58537 4.0869C3.205 4.0869 3.70732 3.58651 3.70732 2.96925C3.70732 2.35199 3.205 1.85161 2.58537 1.85161Z" fill="currentColor" fill-opacity="0.4"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7073 5.93345C12.0384 5.93345 10.4378 6.59388 9.25772 7.76946C8.07761 8.94504 7.41463 10.5395 7.41463 12.202V18.6649C7.41463 19.0675 7.74223 19.3938 8.14634 19.3938H11.8537C12.2578 19.3938 12.5854 19.0675 12.5854 18.6649V12.202C12.5854 11.9056 12.7036 11.6213 12.914 11.4117C13.1244 11.2021 13.4098 11.0843 13.7073 11.0843C14.0049 11.0843 14.2902 11.2021 14.5007 11.4117C14.7111 11.6213 14.8293 11.9056 14.8293 12.202V18.6649C14.8293 19.0675 15.1569 19.3938 15.561 19.3938H19.2683C19.6724 19.3938 20 19.0675 20 18.6649V12.202C20 10.5395 19.337 8.94504 18.1569 7.76946C16.9768 6.59388 15.3762 5.93345 13.7073 5.93345ZM13.7073 7.39125C12.4265 7.39125 11.1982 7.89809 10.2925 8.80028C9.38684 9.70247 8.87805 10.9261 8.87805 12.202V17.936H11.122V12.202C11.122 11.5189 11.3943 10.8639 11.8792 10.3809C12.364 9.89788 13.0216 9.62654 13.7073 9.62654C14.393 9.62654 15.0506 9.89788 15.5354 10.3809C16.0203 10.8639 16.2927 11.5189 16.2927 12.202V17.936H18.5366V12.202C18.5366 10.9261 18.0278 9.70247 17.1221 8.80028C16.2165 7.89809 14.9881 7.39125 13.7073 7.39125Z" fill="currentColor"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M0.731707 6.85672C0.327597 6.85672 0 7.18306 0 7.58562V18.6649C0 19.0675 0.327597 19.3938 0.731707 19.3938H4.43902C4.84313 19.3938 5.17073 19.0675 5.17073 18.6649V7.58562C5.17073 7.18306 4.84313 6.85672 4.43902 6.85672H0.731707ZM1.46341 8.31452V17.936H3.70732V8.31452H1.46341Z" fill="currentColor"/>
+			</g>
+	</symbol>
+	
+	<!-- Iconly - Message (scaled to 24x24) -->
+	<symbol id="mail-icon" viewBox="0 0 24 24">
+		<g transform="translate(1, 2)">
+			<path d="M16.6524 6.89688L12.3869 10.3311C11.5797 10.964 10.4482 10.964 9.64094 10.3311L5.33888 6.89688M6.27252 1.33575H15.7004C17.0598 1.351 18.3537 1.92568 19.2806 2.92595C20.2076 3.92623 20.6868 5.26478 20.6066 6.62987V13.1577C20.6868 14.5228 20.2076 15.8614 19.2806 16.8617C18.3537 17.8619 17.0598 18.4366 15.7004 18.4519H6.27252C3.35261 18.4519 1.38464 16.0764 1.38464 13.1577V6.62987C1.38464 3.7112 3.35261 1.33575 6.27252 1.33575Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+			</g>
+	</symbol>
+	
+	<!-- Iconly - Work -->
+	<symbol id="experience-icon" viewBox="0 0 24 24">
+		<path d="M12.25 17.2265V14.6895" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M21.4949 5.87988V12.3799C19.0349 13.8199 15.7849 14.6899 12.2449 14.6899C8.70488 14.6899 5.46488 13.8199 3.00488 12.3799V5.87988H21.4949Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path opacity="0.4" d="M15.75 5.61115L14.7501 3.2998H9.7501L8.75 5.61115" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path opacity="0.4" d="M3.0293 15.1932L3.2183 20.7002H21.2813L21.4703 15.1932" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+	</symbol>
+	
+	<!-- Iconly - Formation (same as work) -->
+	<symbol id="formation-icon" viewBox="0 0 24 24">
+		<path d="M12.25 17.2265V14.6895" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M21.4949 5.87988V12.3799C19.0349 13.8199 15.7849 14.6899 12.2449 14.6899C8.70488 14.6899 5.46488 13.8199 3.00488 12.3799V5.87988H21.4949Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path opacity="0.4" d="M15.75 5.61115L14.7501 3.2998H9.7501L8.75 5.61115" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path opacity="0.4" d="M3.0293 15.1932L3.2183 20.7002H21.2813L21.4703 15.1932" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+	</symbol>
+	
+	<!-- Iconly - Location -->
+	<symbol id="location-icon" viewBox="0 0 24 24">
+		<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M14.7368 10.8064C14.7368 9.43255 13.6236 8.31934 12.2507 8.31934C10.8769 8.31934 9.76367 9.43255 9.76367 10.8064C9.76367 12.1792 10.8769 13.2924 12.2507 13.2924C13.6236 13.2924 14.7368 12.1792 14.7368 10.8064Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2498 21.25C12.2498 21.25 4.97391 16.5108 4.79058 10.5973C4.66185 6.4451 8.12963 2.75008 12.2498 2.75008C16.3699 2.75008 19.8368 6.44504 19.7099 10.5973C19.5255 16.632 12.2498 21.25 12.2498 21.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+	</symbol>
+	
+	<!-- Iconly - Arrow Down Circle -->
+	<symbol id="expand-icon" viewBox="0 0 24 24">
+		<path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 17.108 7.141 21.25 12.25 21.25C17.358 21.25 21.5 17.108 21.5 12C21.5 6.892 17.358 2.75 12.25 2.75C7.141 2.75 3 6.892 3 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path d="M8.77881 10.5576L12.2498 14.0436L15.7208 10.5576" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+	</symbol>
+	
+	<!-- Download Icon -->
+	<symbol id="download-icon" viewBox="0 0 24 24">
+		<path opacity="0.4" d="M16.875 9.19287H21.5V20.6217H3V9.19287H7.625" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path d="M12.25 17.5952L12.25 3.65594" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path d="M7.65449 12.9995C10.017 12.9995 12.25 15.0801 12.25 17.595" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+		<path d="M16.8455 12.9995C14.483 12.9995 12.25 15.0801 12.25 17.595" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" fill="none"/>
+	</symbol>
+
+	<!-- Calendar icon -->
+	<symbol id="calendar-icon" viewBox="0 0 24 24">
+		<path d="M4.00995 10.1336H20.4972" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M16.358 13.7462H16.3665" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M12.2537 13.7462H12.2623" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M8.14043 13.7462H8.14899" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M16.358 17.3412H16.3665" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M12.2537 17.3412H12.2623" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M8.14043 17.3412H8.14899" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M15.9902 3.28467V6.32865" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path d="M8.51776 3.28467V6.32865" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M20.575 4.74536H3.92499V21.7847H20.575V4.74536Z" stroke="currentColor" stroke-width="1" stroke-linecap="square" fill="none"/>
+	</symbol>
+</svg>
+<!-- icons.svg intentionally left empty. Sprite has been inlined into index.html for a single source of truth. -->
