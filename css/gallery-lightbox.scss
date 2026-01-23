@@ -200,11 +200,6 @@ figure {
 	grid-column-end: 9;
 	grid-row-start: 1;
 	grid-row-end: 6;
-	font-size: 11px;
-
-	@media screen and (max-width: $medium) {
-		font-size: 8px;
-	}
 
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 4;
@@ -507,7 +502,6 @@ figure {
 	justify-content: center;
 	margin: 0 20px;
 	min-height: 0;
-	flex-wrap: wrap; // allow caption to wrap beneath video on small widths without changing overall flow
 	gap: 20px;
 
 	@media screen and (max-width: $mobile) {
@@ -542,7 +536,7 @@ figure {
 	justify-content: center;
 
 	@media screen and (max-width: $mobile) {
-		height: 100%;
+		height: auto;
 		min-height: 0;
 		margin-top: 20px;
 	}

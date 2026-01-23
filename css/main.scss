@@ -158,8 +158,11 @@ a {
 }
 
 .quotes-gallery {
-	transform: scale(.7);
-	height: 45px;
+
+	@media screen and (max-width: $mobile) {
+		transform: scale(.7);
+		height: 45px;
+	}
 }
 
 
