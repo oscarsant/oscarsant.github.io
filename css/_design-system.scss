@@ -57,6 +57,9 @@ $color-gray-800: #3a3a3c;
 $color-gray-900: #1d1d1f;
 $color-black: #000000;
 
+// convenience token used in main.scss
+$lighttone: $color-gray-600;
+
 // Apple Blues
 $color-blue-50: #e5f2ff;
 $color-blue-100: #cce5ff;
@@ -201,12 +204,12 @@ $z-index-tooltip: 700;
   outline: none;
   white-space: nowrap;
   user-select: none;
-  
+
   &:focus-visible {
     outline: 2px solid $color-blue-500;
     outline-offset: 2px;
   }
-  
+
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -217,12 +220,12 @@ $z-index-tooltip: 700;
   @include btn-base;
   background: $color-blue-500;
   color: $color-white;
-  
+
   &:hover:not(:disabled) {
     background: $color-blue-600;
     transform: translateY(-1px);
   }
-  
+
   &:active:not(:disabled) {
     transform: translateY(0);
   }
@@ -232,7 +235,7 @@ $z-index-tooltip: 700;
   @include btn-base;
   background: $color-gray-200;
   color: $color-gray-900;
-  
+
   &:hover:not(:disabled) {
     background: $color-gray-300;
   }
@@ -243,7 +246,7 @@ $z-index-tooltip: 700;
   background: transparent;
   color: $color-gray-900;
   border: 1px solid $color-gray-300;
-  
+
   &:hover:not(:disabled) {
     background: $color-gray-100;
     border-color: $color-gray-400;
@@ -254,7 +257,7 @@ $z-index-tooltip: 700;
   @include btn-base;
   background: transparent;
   color: $color-blue-500;
-  
+
   &:hover:not(:disabled) {
     background: rgba($color-blue-500, 0.1);
   }
@@ -296,7 +299,7 @@ $z-index-tooltip: 700;
 @mixin card-elevated {
   @include card-base;
   box-shadow: $shadow-lg;
-  
+
   &:hover {
     box-shadow: $shadow-xl;
     transform: translateY(-4px);
@@ -329,16 +332,16 @@ $z-index-tooltip: 700;
   border-radius: $radius-md;
   transition: all $transition-base;
   outline: none;
-  
+
   &::placeholder {
     color: $color-gray-400;
   }
-  
+
   &:focus {
     border-color: $color-blue-500;
     box-shadow: 0 0 0 3px rgba($color-blue-500, 0.1);
   }
-  
+
   &:disabled {
     background: $color-gray-100;
     cursor: not-allowed;
@@ -357,7 +360,7 @@ $z-index-tooltip: 700;
 @mixin hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -391,6 +394,7 @@ $z-index-tooltip: 700;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -401,6 +405,7 @@ $z-index-tooltip: 700;
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -412,6 +417,7 @@ $z-index-tooltip: 700;
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -423,6 +429,7 @@ $z-index-tooltip: 700;
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

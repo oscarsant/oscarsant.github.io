@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Oscar Santamarina Portfolio</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
-	<!-- <link rel="stylesheet" href="css/gallery-lightbox.css"> -->
+	<!-- gallery-lightbox stylesheet enabled -->
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
 	<link rel="stylesheet" href="css/main.css" />
 </head>
@@ -19,29 +19,24 @@
 <body>
 	<!-- Inline SVG sprite for icons (inlined from images/icons.svg) -->
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-		<!-- Iconly - LinkedIn (scaled to 24x24) -->
-		<symbol id="linkedin-icon" viewBox="0 0 24 24">
-			<g transform="scale(1.2) translate(2, 2)">
-				<path fill-rule="evenodd" clip-rule="evenodd"
-					d="M2.58537 0.393806C1.15751 0.393806 0 1.54687 0 2.96925C0 4.39163 1.15751 5.5447 2.58537 5.5447C4.01322 5.5447 5.17073 4.39163 5.17073 2.96925C5.17073 1.54687 4.01322 0.393806 2.58537 0.393806ZM2.58537 1.85161C1.96573 1.85161 1.46341 2.35199 1.46341 2.96925C1.46341 3.58651 1.96573 4.0869 2.58537 4.0869C3.205 4.0869 3.70732 3.58651 3.70732 2.96925C3.70732 2.35199 3.205 1.85161 2.58537 1.85161Z"
-					fill="currentColor" fill-opacity="0.4" />
-				<path fill-rule="evenodd" clip-rule="evenodd"
-					d="M13.7073 5.93345C12.0384 5.93345 10.4378 6.59388 9.25772 7.76946C8.07761 8.94504 7.41463 10.5395 7.41463 12.202V18.6649C7.41463 19.0675 7.74223 19.3938 8.14634 19.3938H11.8537C12.2578 19.3938 12.5854 19.0675 12.5854 18.6649V12.202C12.5854 11.9056 12.7036 11.6213 12.914 11.4117C13.1244 11.2021 13.4098 11.0843 13.7073 11.0843C14.0049 11.0843 14.2902 11.2021 14.5007 11.4117C14.7111 11.6213 14.8293 11.9056 14.8293 12.202V18.6649C14.8293 19.0675 15.1569 19.3938 15.561 19.3938H19.2683C19.6724 19.3938 20 19.0675 20 18.6649V12.202C20 10.5395 19.337 8.94504 18.1569 7.76946C16.9768 6.59388 15.3762 5.93345 13.7073 5.93345ZM13.7073 7.39125C12.4265 7.39125 11.1982 7.89809 10.2925 8.80028C9.38684 9.70247 8.87805 10.9261 8.87805 12.202V17.936H11.122V12.202C11.122 11.5189 11.3943 10.8639 11.8792 10.3809C12.364 9.89788 13.0216 9.62654 13.7073 9.62654C14.393 9.62654 15.0506 9.89788 15.5354 10.3809C16.0203 10.8639 16.2927 11.5189 16.2927 12.202V17.936H18.5366V12.202C18.5366 10.9261 18.0278 9.70247 17.1221 8.80028C16.2165 7.89809 14.9881 7.39125 13.7073 7.39125Z"
-					fill="currentColor" />
-				<path fill-rule="evenodd" clip-rule="evenodd"
-					d="M0.731707 6.85672C0.327597 6.85672 0 7.18306 0 7.58562V18.6649C0 19.0675 0.327597 19.3938 0.731707 19.3938H4.43902C4.84313 19.3938 5.17073 19.0675 5.17073 18.6649V7.58562C5.17073 7.18306 4.84313 6.85672 4.43902 6.85672H0.731707ZM1.46341 8.31452V17.936H3.70732V8.31452H1.46341Z"
-					fill="currentColor" />
-			</g>
+		<!-- Iconly - LinkedIn -->
+		<symbol id="linkedin-icon" viewBox="0 0 20 20">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.58537 0.393806C1.15751 0.393806 0 1.54687 0 2.96925C0 4.39163 1.15751 5.5447 2.58537 5.5447C4.01322 5.5447 5.17073 4.39163 5.17073 2.96925C5.17073 1.54687 4.01322 0.393806 2.58537 0.393806ZM2.58537 1.85161C1.96573 1.85161 1.46341 2.35199 1.46341 2.96925C1.46341 3.58651 1.96573 4.0869 2.58537 4.0869C3.205 4.0869 3.70732 3.58651 3.70732 2.96925C3.70732 2.35199 3.205 1.85161 2.58537 1.85161Z"
+				fill="currentColor" fill-opacity="0.4" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M13.7073 5.93345C12.0384 5.93345 10.4378 6.59388 9.25772 7.76946C8.07761 8.94504 7.41463 10.5395 7.41463 12.202V18.6649C7.41463 19.0675 7.74223 19.3938 8.14634 19.3938H11.8537C12.2578 19.3938 12.5854 19.0675 12.5854 18.6649V12.202C12.5854 11.9056 12.7036 11.6213 12.914 11.4117C13.1244 11.2021 13.4098 11.0843 13.7073 11.0843C14.0049 11.0843 14.2902 11.2021 14.5007 11.4117C14.7111 11.6213 14.8293 11.9056 14.8293 12.202V18.6649C14.8293 19.0675 15.1569 19.3938 15.561 19.3938H19.2683C19.6724 19.3938 20 19.0675 20 18.6649V12.202C20 10.5395 19.337 8.94504 18.1569 7.76946C16.9768 6.59388 15.3762 5.93345 13.7073 5.93345ZM13.7073 7.39125C12.4265 7.39125 11.1982 7.89809 10.2925 8.80028C9.38684 9.70247 8.87805 10.9261 8.87805 12.202V17.936H11.122V12.202C11.122 11.5189 11.3943 10.8639 11.8792 10.3809C12.364 9.89788 13.0216 9.62654 13.7073 9.62654C14.393 9.62654 15.0506 9.89788 15.5354 10.3809C16.0203 10.8639 16.2927 11.5189 16.2927 12.202V17.936H18.5366V12.202C18.5366 10.9261 18.0278 9.70247 17.1221 8.80028C16.2165 7.89809 14.9881 7.39125 13.7073 7.39125Z"
+				fill="currentColor" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M0.731707 6.85672C0.327597 6.85672 0 7.18306 0 7.58562V18.6649C0 19.0675 0.327597 19.3938 0.731707 19.3938H4.43902C4.84313 19.3938 5.17073 19.0675 5.17073 18.6649V7.58562C5.17073 7.18306 4.84313 6.85672 4.43902 6.85672H0.731707ZM1.46341 8.31452V17.936H3.70732V8.31452H1.46341Z"
+				fill="currentColor" />
 		</symbol>
 
-		<!-- Iconly - Message (scaled to 24x24) -->
-		<symbol id="mail-icon" viewBox="0 0 24 24">
-			<g transform="translate(1, 2)">
-				<path
-					d="M16.6524 6.89688L12.3869 10.3311C11.5797 10.964 10.4482 10.964 9.64094 10.3311L5.33888 6.89688M6.27252 1.33575H15.7004C17.0598 1.351 18.3537 1.92568 19.2806 2.92595C20.2076 3.92623 20.6868 5.26478 20.6066 6.62987V13.1577C20.6868 14.5228 20.2076 15.8614 19.2806 16.8617C18.3537 17.8619 17.0598 18.4366 15.7004 18.4519H6.27252C3.35261 18.4519 1.38464 16.0764 1.38464 13.1577V6.62987C1.38464 3.7112 3.35261 1.33575 6.27252 1.33575Z"
-					stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-					fill="none" />
-			</g>
+		<!-- Iconly - Mail -->
+		<symbol id="mail-icon" viewBox="0 0 17 15">
+			<path
+				d="M12.6771 5.13836L9.3447 7.84815C8.71508 8.34765 7.82917 8.34765 7.19955 7.84815L3.83899 5.13836M15.75 7.125V4.92751C15.75 2.62412 14.2126 0.75 11.9317 0.75H4.56835C2.28734 0.75 0.75 2.62412 0.75 4.92751V10.0788C0.75 12.3821 2.28734 14.2563 4.56835 14.25H11.9317C14.2126 14.2563 15.75 12.3821 15.75 10.0788V9.75"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
 		</symbol>
 
 		<!-- Iconly - Work -->
@@ -139,14 +134,18 @@
 					</div>
 					<div class="collapse navbar-collapse">
 						<li>
-							<svg class="icon large">
-								<use href="#linkedin-icon" xlink:href="#linkedin-icon"></use>
-							</svg>
+							<a href="https://www.linkedin.com/in/oscar-alejandro-santamarina-abb437b7/">
+								<svg class="icon large">
+									<use href="#linkedin-icon" xlink:href="#linkedin-icon"></use>
+								</svg>
+							</a>
 						</li>
 						<li>
-							<svg class="icon large">
-								<use href="#mail-icon" xlink:href="#mail-icon"></use>
-							</svg>
+							<a href="mailto:oscar.a.santamarina@gmail.com">
+								<svg class="icon large">
+									<use href="#mail-icon" xlink:href="#mail-icon"></use>
+								</svg>
+							</a>
 						</li>
 					</div>
 				</div>
@@ -166,8 +165,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/whalers.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/whalers.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Whale Culture</div>
@@ -193,7 +192,7 @@
 								<div class="text-with-element">
 									<div class="horizontal-video">
 										<video class="js-player" playsinline controls
-											src="videos/insurrection.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/insurrection.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Washington on Edge</div>
@@ -211,9 +210,22 @@
 						<!-- ORDER: 3 -->
 						<figure class="gallery__item gallery__item--3 customgallery">
 							<h1 class="text-justify">
-								<!-- <div class="head-rule"></div> -->
-								<span>Multimedia designer and storyteller</span>
+								<div class="quotes-gallery">
+									<svg width="68" height="51" viewBox="0 0 68 51" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0 26.45C0 24.85 0 23.25 0 21.6501C0 19.9834 0 18.3501 0 16.75C0 11.6167 0.733334 7.58338 2.2 4.65005C3.66667 1.71672 6.23333 0.183384 9.9 0.0500488L11.8 3.95005C9.73333 4.15005 8.3 5.15005 7.5 6.95005C6.76667 8.68338 6.4 11.4501 6.4 15.25H11.7V26.45H0ZM17.6 26.45C17.6 24.85 17.6 23.25 17.6 21.6501C17.6 19.9834 17.6 18.3501 17.6 16.75C17.6 11.6167 18.3333 7.58338 19.8 4.65005C21.2667 1.71672 23.8333 0.183384 27.5 0.0500488L29.4 3.95005C27.3333 4.15005 25.9 5.15005 25.1 6.95005C24.3667 8.68338 24 11.4501 24 15.25H29.3V26.45H17.6Z"
+											fill="#FAB071" />
+										<path
+											d="M43.2999 26.5L41.3999 22.5C43.4666 22.3667 44.8666 21.4 45.5999 19.6C46.3999 17.8 46.7999 15.0333 46.7999 11.3H41.4999V0H53.1999C53.1999 1.6 53.1999 3.23334 53.1999 4.9C53.1999 6.5 53.1999 8.1 53.1999 9.7C53.1999 14.9 52.4666 18.9667 50.9999 21.9C49.5332 24.7667 46.9666 26.3 43.2999 26.5ZM57.9999 26.5L56.0999 22.5C58.1666 22.3667 59.5666 21.4 60.2999 19.6C61.0999 17.8 61.4999 15.0333 61.4999 11.3H56.1999V0H67.8999C67.8999 1.6 67.8999 3.23334 67.8999 4.9C67.8999 6.5 67.8999 8.1 67.8999 9.7C67.8999 14.9 67.1666 18.9667 65.6999 21.9C64.2332 24.7667 61.6666 26.3 57.9999 26.5Z"
+											fill="#FAB071" />
+									</svg>
+								</div>
 								<div class="head-rule"></div>
+								<span>I believe in minimalism—clean, intentional design that enhances usability. As a
+									product designer with experience in media, front-end development, and some back-end
+									work, I create seamless digital experiences where design and technology work in
+									harmony.</span>
 							</h1>
 						</figure>
 						<!-- ORDER: 4 -->
@@ -224,8 +236,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/notredame.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/notredame.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Rebuilding Notre Dame</div>
@@ -248,8 +260,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/epic-trips.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/epic-trips.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Epic Trips</div>
@@ -272,8 +284,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/kalahari.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/kalahari.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Surviving Kalahari</div>
@@ -296,8 +308,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/aretha.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/aretha.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Queen of Charts</div>
@@ -321,7 +333,7 @@
 								<div class="text-with-element">
 									<div class="horizontal-video">
 										<video class="js-player" playsinline controls
-											src="videos/lastvoiceswwii.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/lastvoiceswwii.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Last Voices of WWII</div>
@@ -344,8 +356,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/worldcup.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/worldcup.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Top Teams World Cup</div>
@@ -365,7 +377,376 @@
 					<!-- GALLERY 2: Change the ORDER number to reorder items -->
 					<!-- Lower numbers appear first -->
 					<!-- ============================================ -->
-					<div class="gallery">
+					<!-- NEW: separate gallery for items 10-14 -->
+					<div class="gallery gallery--new">
+						<!-- ORDER: 19 - NEW ITEM 1 (PLACEHOLDER) -->
+						<div class="lightbox--cont gallery__item--10">
+							<figure class="gallery__item">
+								<img src="images/Settings-aiq.png" alt="" class="gallery__img" />
+							</figure>
+							<div class="lightbox">
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Settings Experience</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A comprehensive settings management interface designed to streamline
+												configuration and control. The interface features intuitive navigation,
+												organized sections, and clear visual hierarchy that allows users to
+												efficiently manage system preferences and entitlements.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">UX Design, UI Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2024</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Settings Image -->
+										<div class="project-media-item">
+											<img src="images/settings/Chemicals-Entitlement.png"
+												alt="Settings Chemicals Entitlement" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>The settings interface showcases organized entitlement management with
+												clear visual grouping and intuitive controls.</p>
+										</div>
+
+										<!-- Settings Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/settings.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Interactive demonstration of the live production interface showing the
+												complete user flow through settings configuration and management.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn-close">&times;</div>
+							</div>
+						</div>
+
+						<!-- ORDER: 20 - NEW ITEM 2 (PLACEHOLDER) -->
+						<div class="lightbox--cont gallery__item--11">
+							<figure class="gallery__item">
+								<img src="images/bio-pages.png" alt="" class="gallery__img" />
+							</figure>
+							<div class="lightbox">
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Reporter BioPages</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												Reporter bio pages that showcase biography, recent stories, and direct
+												contact options, with the ability for users to follow reporters and
+												receive alerts for new coverage. A core feature for Politico, where
+												reporters are central to the brand’s credibility and prestige.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">UX Design, UI Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2022</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- BioPages Lightbox Image -->
+										<div class="project-media-item">
+											<img src="images/BioPages-lightbox.png" alt="BioPages" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Main design</p>
+										</div>
+
+										<!-- First Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/BioPages-PRO.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Live production interface showing user entering from reporter byline.
+											</p>
+										</div>
+
+										<!-- Second Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/BioPages2-PRO.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Live production interface showing user entering from list of reporters
+												that belong to the same vertical.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn-close">&times;</div>
+							</div>
+						</div>
+
+						<!-- ORDER: 21 - NEW ITEM 3 -->
+						<div class="lightbox--cont gallery__item--12">
+							<figure class="gallery__item">
+								<img src="images/topic-ex.png" alt="" class="gallery__img" />
+							</figure>
+							<div class="lightbox">
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Topic Explorer</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An intuitive content discovery platform that enables users to explore
+												and navigate
+												through interconnected topics seamlessly. The interface combines smart
+												categorization,
+												visual hierarchy, and fluid interactions to help users discover related
+												content
+												and dive deeper into subjects of interest.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">UX Design, UI Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2024</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Topic Explorer Image -->
+										<div class="project-media-item">
+											<img src="images/topic-explorer/main-page.png"
+												alt="Topic Explorer Main Page" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Static design showing topics and their parent-child relationship.</p>
+										</div>
+
+										<!-- Topic Explorer Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/topic-explorer.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Live production demonstration showing the complete user flow
+												through topic discovery and navigation - to following that topic.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn-close">&times;</div>
+							</div>
+						</div>
+
+						<!-- ORDER: 22 - NEW ITEM 4 (PLACEHOLDER) -->
+						<div class="lightbox--cont gallery__item--13">
+							<figure class="gallery__item">
+								<img src="images/insp-nav.png" alt="" class="gallery__img" />
+							</figure>
+							<div class="lightbox">
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Inspector Navigator</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A comprehensive inspection management platform designed to streamline
+												workflow
+												and enhance search capabilities. The interface features intuitive
+												navigation,
+												advanced filtering options, and a clean dashboard that allows users
+												to
+												efficiently manage and track inspections across multiple properties and
+												timeframes.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">UX Design, UI Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2025</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Third Image - Days Interval with Mid Hover -->
+										<div class="project-media-item">
+											<img src="images/inspector-navigator/Dashboard - Days interval with Mid Hover.png"
+												alt="Inspector Navigator Days Interval" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Interactive date range controls allow users to filter inspections by
+												specific time intervals with hover states for enhanced usability.</p>
+										</div>
+
+										<!-- Second Image - Inspection Specific Active Search -->
+										<div class="project-media-item">
+											<img src="images/inspector-navigator/Dashaboard - Inspection Specific Active Search.png"
+												alt="Inspector Navigator Active Search" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Active search states show inspection-specific details with contextual
+												information and action buttons.</p>
+										</div>
+
+										<!-- Fourth Image - Search Results Default -->
+										<div class="project-media-item">
+											<img src="images/inspector-navigator/Search Results - Default.png"
+												alt="Inspector Navigator Search Results" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Search results display comprehensive inspection data in an organized,
+												scannable format with clear visual hierarchy.</p>
+										</div>
+
+										<!-- Prototype Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/insp-nav-proto.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Interactive demonstration of the live production interface showcasing the
+												complete user flow
+												from search to inspection details.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn-close">&times;</div>
+							</div>
+						</div>
+
+						<!-- ORDER: 23 - NEW ITEM 5 (PLACEHOLDER) -->
+						<div class="lightbox--cont gallery__item--14">
+							<figure class="gallery__item">
+								<img src="images/search-pro.png" alt="" class="gallery__img" />
+							</figure>
+							<div class="lightbox">
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Search Enhacement Experience</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												Redesigned the search experience to introduce multiple interaction
+												modes—default, direct, and KWIC (Key Word in Context)—addressing
+												limitations in the previous UX that prevented direct querying and
+												produced less predictable, algorithm-driven outcomes.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">UX Design, UI Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2023</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Search Interface Image -->
+										<div class="project-media-item">
+											<img src="images/search/search-old.png" alt="Search Interface" />
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>In the previous UX, users were forced to select a specific product before
+												they could perform a keyword search.</p>
+										</div>
+
+										<!-- Default Search Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/search-default.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Default search prioritizes News Stories while surfacing relevant product
+												results in a secondary component, supported by smart filtering and
+												relevance ranking.</p>
+										</div>
+
+										<!-- Direct Search Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/search-direct.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>Direct search enables quick access to specific content with streamlined
+												navigation and instant results.</p>
+										</div>
+
+										<!-- KWIC Search Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/search-directwithKWIC.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Caption Text -->
+										<div class="media-caption">
+											<p>KWIC (Key Word In Context) search displays results with surrounding
+												context, helping users quickly evaluate relevance.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn-close">&times;</div>
+							</div>
+						</div>
+					</div> <!-- end .gallery--new -->
+
+					<div class="gallery gallery--reverse">
 						<!-- ORDER: 10 -->
 						<div class="lightbox--cont gallery__item--1">
 							<figure class="gallery__item">
@@ -374,8 +755,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="horizontal-video">
-										<video class="js-player" playsinline controls src="videos/akhenaten.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/akhenaten.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Akhenaten</div>
@@ -396,15 +777,50 @@
 								<img src="images/womenarchive.png" alt="" class="gallery__img" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls
-											src="videos/women-archive.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Women Archive</div>
-										<div class="rule-capt"></div>
-										<div>Video editing-production</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- BioPages Lightbox Image -->
+										<div class="project-media-item">
+											<img src="images/BioPages-lightbox.png" alt="BioPages" />
+										</div>
+
+										<!-- First Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/BioPages-PRO.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
+										<!-- Second Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls
+												src="videos/compressed/BioPages2-PRO.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
+										<!-- Project Description -->
+										<div class="project-description">
+											<div class="project-hed">BioPages</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A comprehensive digital biography platform that combines rich media,
+												interactive timelines,
+												and engaging storytelling. The design focuses on creating an immersive
+												user experience
+												that brings historical figures and their stories to life through
+												carefully crafted
+												visual narratives and intuitive navigation.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Design, Development, UX</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2024</span>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="btn-close">&times;</div>
@@ -419,7 +835,7 @@
 								<div class="text-with-element">
 									<div class="vertical-video">
 										<video class="js-player" playsinline controls
-											src="videos/moon-landing.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/moon-landing.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Moon Landing</div>
@@ -439,7 +855,7 @@
 								<div class="text-with-element">
 									<div class="vertical-video">
 										<video class="js-player" playsinline controls
-											src="videos/buzz-saw-killer.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/buzz-saw-killer.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Helicoprion</div>
@@ -459,7 +875,7 @@
 								<div class="text-with-element">
 									<div class="vertical-video">
 										<video class="js-player" playsinline controls
-											src="videos/mongolia-smog.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/mongolia-smog.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Mongolia's Smog</div>
@@ -498,7 +914,7 @@
 								<div class="text-with-element">
 									<div class="vertical-video">
 										<video class="js-player" playsinline controls
-											src="videos/WOI-together.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/WOI-together.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Women of Impact Series</div>
@@ -518,7 +934,7 @@
 								<div class="text-with-element">
 									<div class="vertical-video">
 										<video class="js-player" playsinline controls
-											src="videos/happiest-places.mp4#t=0.1" type="video/mp4"></video>
+											src="videos/compressed/happiest-places.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">Happiest Places</div>
@@ -537,8 +953,8 @@
 							<div class="lightbox">
 								<div class="text-with-element">
 									<div class="vertical-video">
-										<video class="js-player" playsinline controls src="videos/7-summits.mp4#t=0.1"
-											type="video/mp4"></video>
+										<video class="js-player" playsinline controls
+											src="videos/compressed/7-summits.mp4#t=0.1" type="video/mp4"></video>
 									</div>
 									<div class="text-capt">
 										<div class="project-hed">7 Summits</div>
@@ -549,130 +965,8 @@
 								<div class="btn-close">&times;</div>
 							</div>
 						</div>
+					</div> <!-- end of second .gallery -->
 
-						<!-- ============================================ -->
-						<!-- NEW PLACEHOLDER ITEMS -->
-						<!-- Replace images and content when assets are ready -->
-						<!-- ============================================ -->
-
-						<!-- ORDER: 19 - NEW ITEM 1 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--10">
-							<figure class="gallery__item">
-								<img src="images/placeholder-1.png" alt="" class="gallery__img" />
-							</figure>
-							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls
-											src="videos/placeholder-1.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">New Project 1</div>
-										<div class="rule-capt"></div>
-										<div>Replace with your project details</div>
-										<div class="explore-link">
-											<a class="go-left-hide" href="#" target="_blank"><span>></span>Explore</a>
-										</div>
-									</div>
-								</div>
-								<div class="btn-close">&times;</div>
-							</div>
-						</div>
-
-						<!-- ORDER: 20 - NEW ITEM 2 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--11">
-							<figure class="gallery__item">
-								<img src="images/placeholder-2.png" alt="" class="gallery__img" />
-							</figure>
-							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls
-											src="videos/placeholder-2.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">New Project 2</div>
-										<div class="rule-capt"></div>
-										<div>Replace with your project details</div>
-										<div class="explore-link">
-											<a class="go-left-hide" href="#" target="_blank"><span>></span>Explore</a>
-										</div>
-									</div>
-								</div>
-								<div class="btn-close">&times;</div>
-							</div>
-						</div>
-
-						<!-- ORDER: 21 - NEW ITEM 3 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--12">
-							<figure class="gallery__item">
-								<img src="images/placeholder-3.png" alt="" class="gallery__img" />
-							</figure>
-							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls
-											src="videos/placeholder-3.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">New Project 3</div>
-										<div class="description">
-											Replace with your project details
-										</div>
-										<div class="explore-link">
-											<a class="go-left-hide" href="#" target="_blank"><span>></span>Explore</a>
-										</div>
-									</div>
-								</div>
-								<div class="btn-close">&times;</div>
-							</div>
-						</div>
-
-						<!-- ORDER: 22 - NEW ITEM 4 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--13">
-							<figure class="gallery__item">
-								<img src="images/placeholder-4.png" alt="" class="gallery__img" />
-							</figure>
-							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-image">
-										<img src="images/placeholder-4-full.png" alt="" />
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">New Project 4</div>
-										<div class="rule-capt"></div>
-										<div>Replace with your project details</div>
-									</div>
-								</div>
-								<div class="btn-close">&times;</div>
-							</div>
-						</div>
-
-						<!-- ORDER: 23 - NEW ITEM 5 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--14">
-							<figure class="gallery__item">
-								<img src="images/placeholder-5.png" alt="" class="gallery__img" />
-							</figure>
-							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls
-											src="videos/placeholder-5.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">New Project 5</div>
-										<div class="description">
-											Replace with your project details
-										</div>
-										<div class="explore-link">
-											<a class="go-left-hide" href="#" target="_blank"><span>></span>Explore</a>
-										</div>
-									</div>
-								</div>
-								<div class="btn-close">&times;</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="timeline-wrapper">
@@ -680,7 +974,7 @@
 					<img src="oscar2.png" class="oscar-timeline" />
 					<div class="profile-name">Oscar A. Santamarina</div>
 					<div class="body-text">English | Spanish — References upon request.</div>
-					<a href="#" class="download-resume-btn" download>
+					<a href="Resume.docx" class="download-resume-btn" download>
 						<svg class="icon small">
 							<use href="#download-icon" xlink:href="#download-icon"></use>
 						</svg>
@@ -929,7 +1223,7 @@
 							</div>
 							<div class="content">
 								<p>
-									<br />Dean's List | 3.76 GPA
+									Dean's List | 3.76 GPA
 									2014 <br />• Academic Achievement Grant | 2014
 								</p>
 							</div>
@@ -990,22 +1284,22 @@
 			<nav class="nav-footer">
 				<ul>
 					<li>
-						<a href="#"> <i class="fa fa-twitter"></i> </a>
-					</li>
-					<li>
-						<a
-							href="https://www.linkedin.com/in/oscar-alejandro-santamarina-abb437b7?trk=prof-samename-name">
-							<i class="fa fa-linkedin"></i>
+						<a href="https://www.linkedin.com/in/oscar-alejandro-santamarina-abb437b7/">
+							<svg class="icon small">
+								<use href="#linkedin-icon" xlink:href="#linkedin-icon"></use>
+							</svg>
 						</a>
 					</li>
 					<li>
 						<a href="mailto:oscar.a.santamarina@gmail.com">
-							<i class="fa fa-envelope"></i>
+							<svg class="icon small">
+								<use href="#mail-icon" xlink:href="#mail-icon"></use>
+							</svg>
 						</a>
 					</li>
 				</ul>
 				<p class="credits text-center">
-					&copy; 2022 OSCAR SANTAMARINA ALL RIGHTS RESERVED
+					| Designed and developed by Oscar A. Santamarina | Updated January 2026 |
 				</p>
 			</nav>
 		</div>
