@@ -6,7 +6,6 @@ $padding: 10px;
 $mobile: 479px;
 $medium: 991px;
 $darktone: black;
-$lighttone: $color-gray-700;
 $lightestone: #F1F4F7;
 $font: "Inter", sans-serif;
 $fontweightlight: 300;
@@ -29,6 +28,24 @@ figure {
 
 .gallery {
 	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(11, 1fr);
+	grid-gap: 10px;
+	width: 100%;
+	/* Make the grid 1.5x taller than wide (12 rows / 8 columns = 1.5) */
+	aspect-ratio: 8 / 12;
+
+	@media screen and (max-width: $medium) {
+		grid-gap: 6px;
+	}
+
+	@media screen and (max-width: $mobile) {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(30, 5vw); // Use viewport-based sizing for mobile
+		grid-gap: 5px;
+		aspect-ratio: auto; // Let it flow naturally on mobile
+		height: auto !important;
+	}
 }
 
 .container-gallery {
@@ -46,26 +63,108 @@ figure {
 	margin: 0 auto;
 	border-radius: 20px;
 	overflow: hidden;
-	gap: 4px;
+	gap: 10px;
 	display: flex;
 	flex-direction: column;
+
+	@media screen and (max-width: $mobile) {
+		gap: 6px;
+	}
 }
 
-.gallery {
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(11, 0.2fr);
-	grid-gap: 10px;
-	width: 100%;
-
-	@media screen and (max-width: $medium) {
-		grid-gap: 5px;
-	}
+// New gallery MUST have identical row sizing to the main gallery
+.gallery.gallery--new {
+	/* CRITICAL: Use the exact same grid structure as main gallery */
+	grid-template-rows: repeat(8, 1fr);
+	/* Same aspect ratio as main gallery so row heights match exactly */
+	aspect-ratio: 8 / 12;
 
 	@media screen and (max-width: $mobile) {
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(21, 30px);
+		grid-template-rows: repeat(16, 5vw); // Use viewport-based sizing for mobile
+		grid-gap: 5px;
+		aspect-ratio: auto; // Let it flow naturally on mobile
+	}
+
+	img {
+		background: #F1F4F7;
 	}
 }
+
+/* Grid reordering for reversed gallery */
+// .gallery.gallery--reverse {
+// 	/* Same grid structure */
+// 	grid-template-rows: repeat(11, 1fr);
+// 	aspect-ratio: 8 / 12;
+
+// 	@media screen and (max-width: $mobile) {
+// 		grid-template-rows: repeat(22, 5vw); // Use viewport-based sizing for mobile
+// 		aspect-ratio: auto; // Let it flow naturally on mobile
+// 	}
+
+// 	.gallery__item--1 {
+// 		grid-column-start: 6;
+// 		grid-column-end: 9;
+// 		grid-row-start: 1;
+// 		grid-row-end: 4;
+// 	}
+
+// 	.gallery__item--2 {
+// 		grid-column-start: 4;
+// 		grid-column-end: 6;
+// 		grid-row-start: 1;
+// 		grid-row-end: 4;
+// 	}
+
+// 	.gallery__item--3 {
+// 		grid-column-start: 1;
+// 		grid-column-end: 4;
+// 		grid-row-start: 1;
+// 		grid-row-end: 6;
+// 	}
+
+// 	.gallery__item--4 {
+// 		grid-column-start: 4;
+// 		grid-column-end: 9;
+// 		grid-row-start: 4;
+// 		grid-row-end: 9;
+// 	}
+
+// 	.gallery__item--5 {
+// 		grid-column-start: 1;
+// 		grid-column-end: 4;
+// 		grid-row-start: 6;
+// 		grid-row-end: 9;
+// 	}
+
+// 	.gallery__item--6 {
+// 		grid-column-start: 7;
+// 		grid-column-end: 9;
+// 		grid-row-start: 9;
+// 		grid-row-end: 12;
+// 	}
+
+// 	.gallery__item--7 {
+// 		grid-column-start: 5;
+// 		grid-column-end: 7;
+// 		grid-row-start: 9;
+// 		grid-row-end: 12;
+// 	}
+
+// 	.gallery__item--8 {
+// 		grid-column-start: 3;
+// 		grid-column-end: 5;
+// 		grid-row-start: 9;
+// 		grid-row-end: 12;
+// 	}
+
+// 	.gallery__item--9 {
+// 		grid-column-start: 1;
+// 		grid-column-end: 3;
+// 		grid-row-start: 9;
+// 		grid-row-end: 12;
+// 	}
+// }
 
 .gallery__item--1 {
 	grid-column-start: 1;
@@ -77,7 +176,7 @@ figure {
 		grid-column-start: 1;
 		grid-column-end: 4;
 		grid-row-start: 1;
-		grid-row-end: 6;
+		grid-row-end: 11;
 	}
 }
 
@@ -91,8 +190,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 6;
-		grid-row-end: 12;
+		grid-row-start: 11;
+		grid-row-end: 19;
 	}
 }
 
@@ -111,8 +210,7 @@ figure {
 		grid-column-start: 4;
 		grid-column-end: 7;
 		grid-row-start: 1;
-		grid-row-end: 7;
-		font-size: 7px;
+		grid-row-end: 13;
 
 		img {
 			object-position: top;
@@ -133,8 +231,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 4;
 		grid-column-end: 7;
-		grid-row-start: 7;
-		grid-row-end: 12;
+		grid-row-start: 13;
+		grid-row-end: 19;
 	}
 }
 
@@ -147,8 +245,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 12;
-		grid-row-end: 17;
+		grid-row-start: 19;
+		grid-row-end: 25;
 	}
 }
 
@@ -161,8 +259,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 3;
-		grid-row-start: 17;
-		grid-row-end: 22;
+		grid-row-start: 25;
+		grid-row-end: 31;
 		background: black;
 	}
 
@@ -181,8 +279,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 4;
 		grid-column-end: 7;
-		grid-row-start: 12;
-		grid-row-end: 17;
+		grid-row-start: 19;
+		grid-row-end: 25;
 	}
 }
 
@@ -195,8 +293,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 3;
 		grid-column-end: 5;
-		grid-row-start: 17;
-		grid-row-end: 22;
+		grid-row-start: 25;
+		grid-row-end: 31;
 	}
 }
 
@@ -209,27 +307,149 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 5;
 		grid-column-end: 7;
-		grid-row-start: 17;
-		grid-row-end: 22;
+		grid-row-start: 25;
+		grid-row-end: 31;
+	}
+}
+
+/* Duplicate grid positions for the newer gallery items (10-14) to match items 1-5 */
+.gallery__item--10 {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 4;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 10;
+
+		img {
+			object-position: left !important;
+		}
+	}
+}
+
+.gallery__item--11 {
+	grid-column-start: 4;
+	grid-column-end: 6;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	background: black;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 3;
+		grid-column-end: 5;
+		grid-row-start: 10;
+		grid-row-end: 17;
+	}
+}
+
+.gallery__item--12 {
+	grid-column-start: 6;
+	grid-column-end: 9;
+	grid-row-start: 1;
+	grid-row-end: 6;
+
+	img {
+		object-position: top !important;
+	}
+
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 5;
+		grid-column-end: 7;
+		grid-row-start: 10;
+		grid-row-end: 17;
+
+	}
+}
+
+.gallery__item--13 {
+	grid-column-start: 1;
+	grid-column-end: 6;
+	grid-row-start: 4;
+	grid-row-end: 9;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 4;
+		grid-column-end: 7;
+		grid-row-start: 1;
+		grid-row-end: 10;
+
+		img {
+			object-position: left !important;
+		}
+	}
+}
+
+.gallery__item--14 {
+	grid-column-start: 6;
+	grid-column-end: 9;
+	grid-row-start: 6;
+	grid-row-end: 9;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 10;
+		grid-row-end: 17;
+
+		img {
+			object-position: left !important;
+		}
 	}
 }
 
 .gallery__img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	display: block;
 	object-fit: cover;
+	object-position: center;
 	transition: 0.4s linear;
 }
 
 .gallery__item {
-	overflow: hidden;
-}
-
-.gallery__item {
+	/* keep a positioned box so images can be absolutely positioned to fill the grid cell */
+	position: relative;
 	display: block;
 	width: 100%;
-	height: 100%;
+	/* stretch to fill the assigned grid area (both columns and rows) */
+	align-self: stretch;
+	justify-self: stretch;
+	overflow: hidden;
 	cursor: pointer;
+	/* grid will control the height via row tracks */
+	height: 100%;
+
+	// Fallback for very old browsers that don't support calc-based grid sizing: preserve square using padding trick
+	@supports not (grid-auto-rows: calc((100% - (7 * 10px)) / 8)) {
+
+		/* create a square by using padding-bottom trick for single-span cells */
+		& {
+			padding-bottom: 100%;
+		}
+
+		/* multi-row items will not be perfect with this fallback but modern browsers will follow the grid-auto-rows rule */
+	}
+}
+
+/* Ensure the image always fills the .gallery__item grid-area */
+.gallery__item>.gallery__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* already set, but reinforce */
+	object-position: center;
+	transition: 0.4s linear;
 }
 
 .gallery__img:hover {
@@ -237,8 +457,13 @@ figure {
 	transform: scale(1.2);
 }
 
+.gallery__item .text-justify {
+	position: relative; // allow absolutely positioned children
+}
+
 .lightbox {
 	position: fixed;
+	top: 0;
 	z-index: 999;
 	width: 100%;
 	height: 0;
@@ -273,13 +498,35 @@ figure {
 	}
 }
 
+// Make the inner layout responsive so video doesn't push the caption down on narrow screens
+.text-with-element {
+	display: flex;
+	flex-direction: row;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	margin: 0 20px;
+	min-height: 0;
+	flex-wrap: wrap; // allow caption to wrap beneath video on small widths without changing overall flow
+	gap: 20px;
+
+	@media screen and (max-width: $mobile) {
+		flex-direction: column;
+		height: 100%;
+		margin: 0 10px;
+	}
+}
+
 .horizontal-video {
 	max-width: 1100px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 
 	video {
 		max-height: 90vmin;
 		max-width: 100%;
-		width: auto;
+		width: 100%;
 		height: auto;
 
 		@media screen and (max-width: $mobile) {
@@ -291,6 +538,8 @@ figure {
 
 .vertical-video {
 	max-width: 450px;
+	display: flex;
+	justify-content: center;
 
 	@media screen and (max-width: $mobile) {
 		height: 100%;
@@ -316,22 +565,6 @@ figure {
 
 .plyr--video {
 	height: 100%;
-}
-
-.text-with-element {
-	display: flex;
-	flex-direction: row;
-	color: white;
-	align-items: center;
-	justify-content: center;
-	margin: 0 20px;
-	min-height: 0;
-
-	@media screen and (max-width: $mobile) {
-		flex-direction: column;
-		height: 100%;
-		margin: 0 10px;
-	}
 }
 
 .text-capt {
@@ -475,3 +708,168 @@ a.go-left-hide:hover:after {
 }
 
 // #style-4::-webkit-scrollbar-button {}
+
+/* Dribbble-style vertical scroll lightbox */
+.lightbox-scroll-container {
+	width: 100%;
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 60px 20px 40px;
+
+	/* Custom scrollbar styling */
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.3);
+		border-radius: 4px;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	@media screen and (max-width: $mobile) {
+		padding: 80px 15px 40px;
+	}
+}
+
+.project-content-scroll {
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media screen and (max-width: $mobile) {
+		gap: 30px;
+	}
+}
+
+.project-media-item {
+	width: 100%;
+	background: #1a1a1a;
+	border-radius: 8px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	video {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+.project-description {
+	color: white;
+	padding: 40px 20px;
+	text-align: left;
+
+	@media screen and (max-width: $mobile) {
+		padding: 20px 10px;
+	}
+
+	.project-hed {
+		font-family: $oswald;
+		font-size: 30px;
+		letter-spacing: 0;
+		line-height: 1.2;
+		color: white;
+		font-weight: 400;
+		margin-bottom: 20px;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 22px;
+		}
+	}
+
+	.rule-capt {
+		width: 60px;
+		height: $height-border;
+		background: $orange;
+		margin: 20px 0 30px;
+
+		@media screen and (max-width: $mobile) {
+			margin: 15px 0 20px;
+		}
+	}
+}
+
+.project-text {
+	font-family: $font;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #d4d4d4;
+	margin-bottom: 40px;
+	font-weight: $fontweightlight;
+
+	@media screen and (max-width: $mobile) {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+}
+
+.project-details {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	.detail-item {
+		display: flex;
+		gap: 10px;
+		font-family: $font;
+		font-size: 16px;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 14px;
+		}
+	}
+
+	.detail-label {
+		color: #888;
+		font-weight: $fontweightmedium;
+		min-width: 60px;
+	}
+
+	.detail-value {
+		color: white;
+		font-weight: $fontweightlight;
+	}
+}
+
+.media-caption {
+	color: white;
+	padding: 0 20px;
+	text-align: center;
+	margin-top: -20px;
+
+	@media screen and (max-width: $mobile) {
+		padding: 0 10px;
+		margin-top: -10px;
+	}
+
+	p {
+		font-family: $font;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #a8a8a8;
+		font-weight: $fontweightlight;
+		font-style: italic;
+		margin: 0;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 14px;
+		}
+	}
+}
