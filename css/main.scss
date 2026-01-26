@@ -234,19 +234,16 @@ header {
 
 		@media screen and (max-width: $mobile) {
 			.profile-name {
-				font-size: $font-size-sm;
+				font-size: 17px;
 			}
 
 			.oscar-timeline {
-				width: 72px;
-				height: 72px;
+				width: 80px;
+				height: 80px;
 			}
 		}
 	}
 
-	@media screen and (max-width: $mobile) {
-		font-size: $font-size-sm;
-	}
 }
 
 .download-resume-btn {
@@ -273,8 +270,8 @@ header {
 	}
 
 	.icon {
-		width: 14px;
-		height: 14px;
+		width: 16px;
+		height: 16px;
 	}
 }
 
@@ -292,10 +289,10 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-	margin-left: 20px;
+	margin-left: 16px;
 
 	@media screen and (max-width: $mobile) {
-		// padding: 30px 0 30px 20px;
+		padding: 20px 12px 20px 16px;
 	}
 }
 
@@ -305,7 +302,7 @@ header {
 
 	&.work.area {
 		text-transform: uppercase;
-		letter-spacing: $letter-spacing-wide;
+		letter-spacing: 0.2em;
 		font-size: $font-size-xs;
 		color: $color-gray-500;
 		font-weight: $font-weight-medium;
@@ -331,10 +328,10 @@ header {
 
 #timeline p {
 	margin: 0;
-	font-size: 14px;
-	padding-top: 8px;
-	font-weight: $fontweightlight;
-	line-height: 22px;
+	font-size: 16px;
+	padding-top: 16px;
+	font-weight: 300;
+	line-height: 24px;
 }
 
 .body-text {
@@ -360,12 +357,15 @@ header {
 	font-family: "Oswald", sans-serif;
 	font-weight: 300;
 
-	@media screen and (max-width: $mobile) {}
+	@media screen and (max-width: $mobile) {
+		left: -50px;
+		top: -9px;
+	}
 }
 
 .oscar-timeline {
 	max-width: 120px;
-	border: solid 1px orange;
+	border: solid 1.5px $orange;
 	border-radius: 120px;
 	padding: 4px;
 }
@@ -381,7 +381,9 @@ header {
 	display: block;
 	position: absolute;
 
-	@media screen and (max-width: $mobile) {}
+	@media screen and (max-width: $mobile) {
+		left: -34px;
+	}
 }
 
 .content p span {
@@ -391,7 +393,7 @@ header {
 }
 
 label {
-	font-size: 1em;
+	font-size: 17px;
 	position: relative;
 	z-index: 100;
 	cursor: pointer;
@@ -403,6 +405,8 @@ label {
 
 	@media screen and (max-width: $mobile) {
 		line-height: 1.2;
+		font-size: 16px;
+
 	}
 }
 
@@ -423,6 +427,10 @@ label {
 	gap: 8px;
 	transition: all $transition-base;
 
+	@media screen and (max-width: $mobile) {
+		padding: 32px 24px 24px 24px;
+	}
+
 	.company-name {
 		position: absolute;
 		top: -18px;
@@ -436,23 +444,45 @@ label {
 		gap: 0;
 		color: slategray;
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-		min-width: 200px;
 		background: #f1f4f7;
 		gap: 12px;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 13px;
+			top: -14px;
+			left: 8px;
+			padding: 0 4px;
+		}
+
+	}
+
+	.company-location {
+		@media screen and (max-width: $mobile) {
+			font-size: 12px;
+
+		}
 	}
 
 	.company-main {
 		display: inline-flex;
 		align-items: center;
 		gap: $space-2;
-		/* 12px between logo and company title */
+
+		@media screen and (max-width: $mobile) {
+			gap: 4px;
+
+		}
 	}
 
 	.company-location-group {
 		display: inline-flex;
 		align-items: center;
 		gap: $space-2;
-		/* 12px between icon and location text */
+
+		@media screen and (max-width: $mobile) {
+			gap: 4px;
+
+		}
 	}
 }
 
@@ -491,6 +521,11 @@ label {
 	padding: 4px;
 	box-sizing: content-box;
 
+	@media screen and (max-width: $mobile) {
+		width: 12px;
+		height: 12px;
+	}
+
 	&[alt="University of Mount Olive"] {
 		background-color: #2d5f3f;
 	}
@@ -520,6 +555,7 @@ label {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
+	gap: 8px;
 }
 
 .duration {
@@ -604,6 +640,7 @@ label {
 
 .radio:checked+.relative label span {
 	color: black;
+	font-weight: 600;
 }
 
 .date-range {
@@ -655,7 +692,7 @@ label {
 	background-color: $lightestone;
 
 	@media screen and (max-width: $mobile) {
-		padding: 10px 10px 0 0;
+		// padding: 10px 10px 0 0;
 	}
 }
 

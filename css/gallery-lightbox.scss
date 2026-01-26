@@ -1,5 +1,5 @@
 $orange: #FAB071;
-$orangelight: #FDE3D4;
+$orangelight: #FAB071;
 $duration: 0.5s;
 $height-border: 2px;
 $padding: 10px;
@@ -7,7 +7,7 @@ $mobile: 479px;
 $medium: 991px;
 $darktone: black;
 $lightestone: #F1F4F7;
-$font: "Inter", sans-serif;
+$font: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $fontweightlight: 300;
 $fontweightmedium: 500;
 $fontweightbold: 700;
@@ -507,7 +507,7 @@ figure {
 	@media screen and (max-width: $mobile) {
 		flex-direction: column;
 		height: 100%;
-		margin: 0 10px;
+		margin: 0 16px;
 	}
 }
 
@@ -537,7 +537,6 @@ figure {
 
 	@media screen and (max-width: $mobile) {
 		height: auto;
-		min-height: 0;
 		margin-top: 20px;
 	}
 
@@ -568,7 +567,6 @@ figure {
 
 	@media screen and (max-width: $mobile) {
 		max-width: 258px;
-		padding: 20px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -646,25 +644,39 @@ a.go-left-hide:hover:after {
 }
 
 .btn-close {
-	font-size: 45px;
 	color: white;
 	position: fixed;
 	top: 20px;
 	right: 20px;
 	z-index: 10000;
 	cursor: pointer;
-	font-weight: 100;
-	line-height: 1;
+	background: transparent;
+	border: 1.5px solid $orange;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	width: 36px;
+	height: 36px;
+
+	svg {
+		width: 13px;
+		height: 13px;
+	}
+
 
 	@media screen and (max-width: $mobile) {
 		top: 10px;
 		right: 10px;
+
 	}
 }
 
 .btn-close:hover {
-	opacity: 0.5;
-	transition: 0.5s;
+	opacity: 0.6;
+	transform: translateY(-2px);
+
 }
 
 .video-series {

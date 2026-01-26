@@ -136,11 +136,11 @@ $(document).ready(function () {
 		// Format output
 		let duration = "";
 		if (years > 0) {
-			duration += years + (years === 1 ? " yr" : " yrs");
+			duration += years + (years === 1 ? "yr" : "yrs");
 		}
 		if (remainingMonths > 0) {
 			if (duration) duration += " ";
-			duration += remainingMonths + (remainingMonths === 1 ? " mo" : " mos");
+			duration += remainingMonths + (remainingMonths === 1 ? "mo" : "mos");
 		}
 
 		return duration || "0 mos";

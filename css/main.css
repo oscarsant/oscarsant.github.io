@@ -474,7 +474,7 @@ figure {
   .text-with-element {
     flex-direction: column;
     height: 100%;
-    margin: 0 10px;
+    margin: 0 16px;
   }
 }
 
@@ -505,7 +505,6 @@ figure {
 @media screen and (max-width: 479px) {
   .vertical-video {
     height: auto;
-    min-height: 0;
     margin-top: 20px;
   }
 }
@@ -537,7 +536,6 @@ figure {
 @media screen and (max-width: 479px) {
   .text-capt {
     max-width: 258px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -615,15 +613,25 @@ a.go-left-hide:hover:after {
 }
 
 .btn-close {
-  font-size: 45px;
   color: white;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 10000;
   cursor: pointer;
-  font-weight: 100;
-  line-height: 1;
+  background: transparent;
+  border: 1.5px solid #FAB071;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+}
+.btn-close svg {
+  width: 13px;
+  height: 13px;
 }
 @media screen and (max-width: 479px) {
   .btn-close {
@@ -633,8 +641,8 @@ a.go-left-hide:hover:after {
 }
 
 .btn-close:hover {
-  opacity: 0.5;
-  transition: 0.5s;
+  opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 .video-series {
@@ -766,7 +774,7 @@ a.go-left-hide:hover:after {
 }
 
 .project-text {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #d4d4d4;
@@ -788,7 +796,7 @@ a.go-left-hide:hover:after {
 .project-details .detail-item {
   display: flex;
   gap: 10px;
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
 }
 @media screen and (max-width: 479px) {
@@ -819,7 +827,7 @@ a.go-left-hide:hover:after {
   }
 }
 .media-caption p {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #a8a8a8;
@@ -1054,16 +1062,11 @@ header {
 }
 @media screen and (max-width: 479px) {
   .timeline-wrapper .timeline-header .profile-name {
-    font-size: 13px;
+    font-size: 17px;
   }
   .timeline-wrapper .timeline-header .oscar-timeline {
-    width: 72px;
-    height: 72px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .timeline-wrapper {
-    font-size: 13px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -1089,8 +1092,8 @@ header {
   font-weight: 500;
 }
 .download-resume-btn .icon {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 
 #timeline {
@@ -1104,15 +1107,21 @@ header {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-left: 20px;
+  margin-left: 16px;
 }
+@media screen and (max-width: 479px) {
+  #timeline {
+    padding: 20px 12px 20px 16px;
+  }
+}
+
 #timeline li {
   position: relative;
   line-height: 20px;
 }
 #timeline li.work.area {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.2em;
   font-size: 11px;
   color: #86868b;
   font-weight: 500;
@@ -1136,10 +1145,10 @@ header {
 
 #timeline p {
   margin: 0;
-  font-size: 14px;
-  padding-top: 8px;
+  font-size: 16px;
+  padding-top: 16px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 24px;
 }
 
 .body-text {
@@ -1165,9 +1174,16 @@ header {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
 }
+@media screen and (max-width: 479px) {
+  .date {
+    left: -50px;
+    top: -9px;
+  }
+}
+
 .oscar-timeline {
   max-width: 120px;
-  border: solid 1px orange;
+  border: solid 1.5px #FAB071;
   border-radius: 120px;
   padding: 4px;
 }
@@ -1183,6 +1199,12 @@ header {
   display: block;
   position: absolute;
 }
+@media screen and (max-width: 479px) {
+  .circle {
+    left: -34px;
+  }
+}
+
 .content p span {
   color: slategray;
   display: inline-block;
@@ -1190,7 +1212,7 @@ header {
 }
 
 label {
-  font-size: 1em;
+  font-size: 17px;
   position: relative;
   z-index: 100;
   cursor: pointer;
@@ -1203,6 +1225,7 @@ label {
 @media screen and (max-width: 479px) {
   label {
     line-height: 1.2;
+    font-size: 16px;
   }
 }
 
@@ -1223,6 +1246,11 @@ label {
   gap: 8px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 479px) {
+  .company-wrapper {
+    padding: 32px 24px 24px 24px;
+  }
+}
 .company-wrapper .company-name {
   position: absolute;
   top: -18px;
@@ -1236,21 +1264,41 @@ label {
   gap: 0;
   color: slategray;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 200px;
   background: #f1f4f7;
   gap: 12px;
+}
+@media screen and (max-width: 479px) {
+  .company-wrapper .company-name {
+    font-size: 13px;
+    top: -14px;
+    left: 8px;
+    padding: 0 4px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .company-wrapper .company-location {
+    font-size: 12px;
+  }
 }
 .company-wrapper .company-main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  /* 12px between logo and company title */
+}
+@media screen and (max-width: 479px) {
+  .company-wrapper .company-main {
+    gap: 4px;
+  }
 }
 .company-wrapper .company-location-group {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  /* 12px between icon and location text */
+}
+@media screen and (max-width: 479px) {
+  .company-wrapper .company-location-group {
+    gap: 4px;
+  }
 }
 
 .company-wrapper:has(.radio:checked) {
@@ -1286,6 +1334,12 @@ label {
   padding: 4px;
   box-sizing: content-box;
 }
+@media screen and (max-width: 479px) {
+  .company-logo {
+    width: 12px;
+    height: 12px;
+  }
+}
 .company-logo[alt="University of Mount Olive"] {
   background-color: #2d5f3f;
 }
@@ -1310,6 +1364,7 @@ label {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .duration {
@@ -1371,7 +1426,7 @@ label {
 }
 
 .icon-orange {
-  color: #FDE3D4;
+  color: #FAB071;
 }
 
 .radio {
@@ -1385,6 +1440,7 @@ label {
 
 .radio:checked + .relative label span {
   color: black;
+  font-weight: 600;
 }
 
 .date-range {
@@ -1434,12 +1490,6 @@ label {
   opacity: 0;
   background-color: #F1F4F7;
 }
-@media screen and (max-width: 479px) {
-  .content {
-    padding: 10px 10px 0 0;
-  }
-}
-
 /* Commented out old content styles
 .radio:checked~.content p {
     max-height: 500px;

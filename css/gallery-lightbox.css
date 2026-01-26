@@ -431,7 +431,7 @@ figure {
   .text-with-element {
     flex-direction: column;
     height: 100%;
-    margin: 0 10px;
+    margin: 0 16px;
   }
 }
 
@@ -462,7 +462,6 @@ figure {
 @media screen and (max-width: 479px) {
   .vertical-video {
     height: auto;
-    min-height: 0;
     margin-top: 20px;
   }
 }
@@ -494,7 +493,6 @@ figure {
 @media screen and (max-width: 479px) {
   .text-capt {
     max-width: 258px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -572,15 +570,25 @@ a.go-left-hide:hover:after {
 }
 
 .btn-close {
-  font-size: 45px;
   color: white;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 10000;
   cursor: pointer;
-  font-weight: 100;
-  line-height: 1;
+  background: transparent;
+  border: 1.5px solid #FAB071;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 36px;
+  height: 36px;
+}
+.btn-close svg {
+  width: 13px;
+  height: 13px;
 }
 @media screen and (max-width: 479px) {
   .btn-close {
@@ -590,8 +598,8 @@ a.go-left-hide:hover:after {
 }
 
 .btn-close:hover {
-  opacity: 0.5;
-  transition: 0.5s;
+  opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 .video-series {
@@ -723,7 +731,7 @@ a.go-left-hide:hover:after {
 }
 
 .project-text {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #d4d4d4;
@@ -745,7 +753,7 @@ a.go-left-hide:hover:after {
 .project-details .detail-item {
   display: flex;
   gap: 10px;
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
 }
 @media screen and (max-width: 479px) {
@@ -776,7 +784,7 @@ a.go-left-hide:hover:after {
   }
 }
 .media-caption p {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #a8a8a8;
