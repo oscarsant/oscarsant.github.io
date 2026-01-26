@@ -430,8 +430,7 @@ figure {
 @media screen and (max-width: 479px) {
   .text-with-element {
     flex-direction: column;
-    height: 100%;
-    margin: 0 16px;
+    margin: 40px 16px;
   }
 }
 
