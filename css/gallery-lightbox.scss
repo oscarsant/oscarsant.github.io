@@ -537,6 +537,7 @@ figure {
 
 	@media screen and (max-width: $mobile) {
 		height: auto;
+		min-height: 0;
 		margin-top: 20px;
 	}
 
