@@ -24,7 +24,7 @@ figure {
 @media screen and (max-width: 479px) {
   .gallery {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(30, 5vw);
+    grid-template-rows: repeat(31, 5vw);
     grid-gap: 5px;
     aspect-ratio: auto;
     height: auto !important;
@@ -38,6 +38,14 @@ figure {
   border-radius: 0 0 80px 80px;
   padding-bottom: 200px;
   margin-bottom: -155px;
+}
+@media screen and (max-width: 479px) {
+  .container-gallery {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: auto;
+    border-radius: 0 0 40px 40px;
+  }
 }
 
 .wrap {
@@ -74,7 +82,6 @@ figure {
   background: #F1F4F7;
 }
 
-/* Grid reordering for reversed gallery */
 .gallery__item--1 {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -170,7 +177,7 @@ figure {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 25;
-    grid-row-end: 31;
+    grid-row-end: 32;
     background: black;
   }
 }
@@ -206,7 +213,7 @@ figure {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 25;
-    grid-row-end: 31;
+    grid-row-end: 32;
   }
 }
 
@@ -221,7 +228,7 @@ figure {
     grid-column-start: 5;
     grid-column-end: 7;
     grid-row-start: 25;
-    grid-row-end: 31;
+    grid-row-end: 32;
   }
 }
 
