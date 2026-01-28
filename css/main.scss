@@ -437,7 +437,7 @@ label {
 	padding: 44px 32px 32px 32px;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 12px;
 	transition: all $transition-base;
 
 	@media screen and (max-width: $mobile) {
