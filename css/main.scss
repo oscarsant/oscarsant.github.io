@@ -156,6 +156,8 @@ a {
 		@media screen and (max-width: $mobile) {
 			font-size: 3.9vw;
 			padding: 12px 20px 0 20px;
+			line-height: 1.4;
+
 		}
 	}
 }
@@ -361,7 +363,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	color: #b0b0b5;
+	color: $color-gray-600;
 	background: #F1F4F7;
 	padding: 8px 0;
 	font-family: "Oswald", sans-serif;

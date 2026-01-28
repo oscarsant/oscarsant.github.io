@@ -420,9 +420,11 @@ figure {
   transition: 0.4s linear;
 }
 
-.gallery__img:hover {
-  transition: 0.4s ease-in-out;
-  transform: scale(1.2);
+@media (hover: hover) and (pointer: fine) {
+  .gallery__img:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.2);
+  }
 }
 
 .gallery__item .text-justify {
@@ -997,6 +999,7 @@ a {
   .gallery__item .text-justify span {
     font-size: 3.9vw;
     padding: 12px 20px 0 20px;
+    line-height: 1.4;
   }
 }
 
@@ -1187,7 +1190,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  color: #b0b0b5;
+  color: #6e6e73;
   background: #F1F4F7;
   padding: 8px 0;
   font-family: "Oswald", sans-serif;

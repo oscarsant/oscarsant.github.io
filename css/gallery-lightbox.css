@@ -377,9 +377,11 @@ figure {
   transition: 0.4s linear;
 }
 
-.gallery__img:hover {
-  transition: 0.4s ease-in-out;
-  transform: scale(1.2);
+@media (hover: hover) and (pointer: fine) {
+  .gallery__img:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.2);
+  }
 }
 
 .gallery__item .text-justify {
