@@ -632,6 +632,7 @@ a.go-left-hide:hover:after {
 .btn-close svg {
   width: 13px;
   height: 13px;
+  stroke-width: 1.5;
 }
 @media screen and (max-width: 479px) {
   .btn-close {
@@ -1032,7 +1033,7 @@ header {
 }
 
 .timeline-wrapper {
-  max-width: 510px;
+  max-width: 550px;
   margin: 100px auto 0;
   font-size: 17px;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -1152,7 +1153,7 @@ header {
 #timeline p {
   margin: 0;
   font-size: 16px;
-  padding-top: 16px;
+  padding-top: 12px;
   font-weight: 300;
   line-height: 24px;
 }
@@ -1290,6 +1291,7 @@ label {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-weight: 600;
 }
 @media screen and (max-width: 479px) {
   .company-wrapper .company-main {
@@ -1311,7 +1313,7 @@ label {
   border-color: #FAB071;
 }
 .company-wrapper:has(.radio:checked) .company-name {
-  color: black;
+  color: #1d1d1f;
   font-weight: 500;
 }
 .company-wrapper:has(.radio:checked) .company-logo-wrapper {
@@ -1371,6 +1373,8 @@ label {
   width: 100%;
   justify-content: space-between;
   gap: 8px;
+  text-transform: capitalize;
+  align-items: center;
 }
 
 .duration {
@@ -1389,11 +1393,19 @@ label {
   display: none;
 }
 
+.radio:checked + .relative .date-range {
+  color: #1d1d1f;
+  font-weight: 700;
+}
+
 .radio:checked + .relative .duration {
   display: block;
-  color: #86868b;
   font-weight: 500;
   letter-spacing: 0.3px;
+  background: hsla(27.59, 93.2003469211%, 71.175%, 0.19);
+  padding: 0px 4px;
+  border-radius: 4px;
+  color: hsl(27.59, 42.7753544166%, 36.68%);
 }
 
 .label-with-svg {
@@ -1414,23 +1426,37 @@ label {
   height: 16px;
   display: block;
   flex-shrink: 0;
+  stroke-width: 0.8;
 }
 .icon svg {
   width: 100%;
   height: 100%;
+  stroke-width: inherit;
+}
+.icon path,
+.icon line,
+.icon circle,
+.icon rect,
+.icon polyline,
+.icon polygon {
+  stroke: currentColor;
+  fill: none;
 }
 .icon.small {
   width: 12px;
   height: 12px;
+  stroke-width: 1;
 }
 .icon.large {
   width: 20px;
   height: 20px;
+  stroke-width: 1.25;
 }
 @media screen and (max-width: 479px) {
   .icon.large {
     width: 16px;
     height: 16px;
+    stroke-width: 1.25;
   }
 }
 
@@ -1448,14 +1474,19 @@ label {
 }
 
 .radio:checked + .relative label span {
-  color: black;
-  font-weight: 600;
+  color: #1d1d1f;
+  font-weight: 700;
+}
+
+.radio:checked + .relative .date-wrapper .icon {
+  color: #1d1d1f;
 }
 
 .date-range {
-  font-size: 11px;
-  letter-spacing: 1.5px;
+  font-size: 12px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* Ensure calendar icon and date sit on one line */
@@ -1465,12 +1496,8 @@ label {
   gap: 12px;
   white-space: nowrap;
 }
-
-.date-wrapper svg#Calendar {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  display: block;
+.date-wrapper .icon {
+  color: #86868b;
 }
 
 .radio:checked + .relative .date {
@@ -1600,7 +1627,6 @@ footer {
   clear: both;
   padding: 2em 0;
   border-top: 1px solid rgba(35, 40, 47, 0.1);
-  background: #F1F4F7;
 }
 
 .nav-footer {
@@ -1609,6 +1635,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: white;
 }
 
 .nav-footer ul {
