@@ -41,7 +41,7 @@ figure {
 
 	@media screen and (max-width: $mobile) {
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(31, 5vw); // Use viewport-based sizing for mobile
+		grid-template-rows: repeat(32, 5vw); // Use viewport-based sizing for mobile
 		grid-gap: 5px;
 		aspect-ratio: auto; // Let it flow naturally on mobile
 		height: auto !important;
@@ -110,7 +110,7 @@ figure {
 		grid-column-start: 1;
 		grid-column-end: 4;
 		grid-row-start: 1;
-		grid-row-end: 11;
+		grid-row-end: 10;
 	}
 }
 
@@ -119,12 +119,11 @@ figure {
 	grid-column-end: 6;
 	grid-row-start: 1;
 	grid-row-end: 4;
-	background: black;
 
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 11;
+		grid-row-start: 10;
 		grid-row-end: 19;
 	}
 }
@@ -160,8 +159,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 4;
 		grid-column-end: 7;
-		grid-row-start: 13;
-		grid-row-end: 19;
+		grid-row-start: 19;
+		grid-row-end: 26;
 	}
 }
 
@@ -175,7 +174,7 @@ figure {
 		grid-column-start: 1;
 		grid-column-end: 4;
 		grid-row-start: 19;
-		grid-row-end: 25;
+		grid-row-end: 26;
 	}
 }
 
@@ -188,9 +187,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 3;
-		grid-row-start: 25;
-		grid-row-end: 32;
-		background: black;
+		grid-row-start: 26;
+		grid-row-end: 33;
 	}
 
 	img {
@@ -203,13 +201,12 @@ figure {
 	grid-column-end: 5;
 	grid-row-start: 9;
 	grid-row-end: 12;
-	background: black;
 
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 4;
 		grid-column-end: 7;
-		grid-row-start: 19;
-		grid-row-end: 25;
+		grid-row-start: 13;
+		grid-row-end: 19;
 	}
 }
 
@@ -222,8 +219,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 3;
 		grid-column-end: 5;
-		grid-row-start: 25;
-		grid-row-end: 32;
+		grid-row-start: 26;
+		grid-row-end: 33;
 	}
 }
 
@@ -236,8 +233,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 5;
 		grid-column-end: 7;
-		grid-row-start: 25;
-		grid-row-end: 32;
+		grid-row-start: 26;
+		grid-row-end: 33;
 	}
 }
 
@@ -265,7 +262,6 @@ figure {
 	grid-column-end: 6;
 	grid-row-start: 1;
 	grid-row-end: 4;
-	background: black;
 
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 3;
@@ -397,7 +393,7 @@ figure {
 	top: 0;
 	z-index: 999;
 	width: 100%;
-	height: 0;
+	height: 100%;
 	text-align: center;
 	bottom: 0;
 	left: 0;
@@ -408,25 +404,22 @@ figure {
 	flex-direction: column;
 	justify-content: center;
 	visibility: hidden;
-	transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out;
+	pointer-events: none;
+
+	&.closing {
+		animation: fadeOutToBottom .8s cubic-bezier(0, 0, 0, 0.99);
+		visibility: visible;
+		pointer-events: none;
+	}
 }
 
 .open {
 	outline: none;
 	height: 100%;
-	opacity: 1 !important;
+	opacity: 1;
 	visibility: visible;
-}
-
-.lightbox img {
-	height: 90vmin;
-
-	@media screen and (max-width: $mobile) {
-		height: 70vmax;
-	}
+	animation: fadeInFromTop .8s cubic-bezier(0, 0, 0, 0.99);
+	pointer-events: all;
 }
 
 // Make the inner layout responsive so video doesn't push the caption down on narrow screens
@@ -817,5 +810,29 @@ a.go-left-hide:hover:after {
 		@media screen and (max-width: $mobile) {
 			font-size: 14px;
 		}
+	}
+}
+
+@keyframes fadeInFromTop {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOutToBottom {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(30px);
 	}
 }

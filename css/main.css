@@ -67,7 +67,7 @@ figure {
 @media screen and (max-width: 479px) {
   .gallery {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(31, 5vw);
+    grid-template-rows: repeat(32, 5vw);
     grid-gap: 5px;
     aspect-ratio: auto;
     height: auto !important;
@@ -136,7 +136,7 @@ figure {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 11;
+    grid-row-end: 10;
   }
 }
 
@@ -145,13 +145,12 @@ figure {
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 4;
-  background: black;
 }
 @media screen and (max-width: 479px) {
   .gallery__item--2 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 11;
+    grid-row-start: 10;
     grid-row-end: 19;
   }
 }
@@ -189,8 +188,8 @@ figure {
   .gallery__item--4 {
     grid-column-start: 4;
     grid-column-end: 7;
-    grid-row-start: 13;
-    grid-row-end: 19;
+    grid-row-start: 19;
+    grid-row-end: 26;
   }
 }
 
@@ -205,7 +204,7 @@ figure {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 19;
-    grid-row-end: 25;
+    grid-row-end: 26;
   }
 }
 
@@ -219,9 +218,8 @@ figure {
   .gallery__item--6 {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 25;
-    grid-row-end: 32;
-    background: black;
+    grid-row-start: 26;
+    grid-row-end: 33;
   }
 }
 .gallery__item--6 img {
@@ -234,14 +232,13 @@ figure {
   grid-column-end: 5;
   grid-row-start: 9;
   grid-row-end: 12;
-  background: black;
 }
 @media screen and (max-width: 479px) {
   .gallery__item--7 {
     grid-column-start: 4;
     grid-column-end: 7;
-    grid-row-start: 19;
-    grid-row-end: 25;
+    grid-row-start: 13;
+    grid-row-end: 19;
   }
 }
 
@@ -255,8 +252,8 @@ figure {
   .gallery__item--8 {
     grid-column-start: 3;
     grid-column-end: 5;
-    grid-row-start: 25;
-    grid-row-end: 32;
+    grid-row-start: 26;
+    grid-row-end: 33;
   }
 }
 
@@ -270,8 +267,8 @@ figure {
   .gallery__item--9 {
     grid-column-start: 5;
     grid-column-end: 7;
-    grid-row-start: 25;
-    grid-row-end: 32;
+    grid-row-start: 26;
+    grid-row-end: 33;
   }
 }
 
@@ -300,7 +297,6 @@ figure {
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 4;
-  background: black;
 }
 @media screen and (max-width: 479px) {
   .gallery__item--11 {
@@ -436,7 +432,7 @@ figure {
   top: 0;
   z-index: 999;
   width: 100%;
-  height: 0;
+  height: 100%;
   text-align: center;
   bottom: 0;
   left: 0;
@@ -447,26 +443,21 @@ figure {
   flex-direction: column;
   justify-content: center;
   visibility: hidden;
-  transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+.lightbox.closing {
+  animation: fadeOutToBottom 0.8s cubic-bezier(0, 0, 0, 0.99);
+  visibility: visible;
+  pointer-events: none;
 }
 
 .open {
   outline: none;
   height: 100%;
-  opacity: 1 !important;
+  opacity: 1;
   visibility: visible;
-}
-
-.lightbox img {
-  height: 90vmin;
-}
-@media screen and (max-width: 479px) {
-  .lightbox img {
-    height: 70vmax;
-  }
+  animation: fadeInFromTop 0.8s cubic-bezier(0, 0, 0, 0.99);
+  pointer-events: all;
 }
 
 .text-with-element {
@@ -855,6 +846,126 @@ a.go-left-hide:hover:after {
   }
 }
 
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutToBottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutToBottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(250, 176, 113);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(250, 176, 113, 0);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes expandHint {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+}
+/* Scroll-triggered animations - smoother, less jumpy */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ==========================================
    TYPOGRAPHY
    Using design-system tokens only
@@ -1115,7 +1226,8 @@ header {
   border-radius: 8px;
 }
 .download-resume-btn:hover {
-  font-weight: 500;
+  opacity: 0.6;
+  transform: translateY(-2px);
 }
 .download-resume-btn .icon {
   width: 16px;
@@ -1216,19 +1328,19 @@ header {
 }
 
 .circle {
-  top: 0;
-  left: -42px;
+  top: 2px;
+  left: -39.5px;
   width: 8px;
   height: 8px;
   background: lightgray;
-  border: 5px solid #F1F4F7;
+  border: 3px solid #F1F4F7;
   border-radius: 50%;
   display: block;
   position: absolute;
 }
 @media screen and (max-width: 479px) {
   .circle {
-    left: -34px;
+    left: -31.5px;
   }
 }
 
@@ -1262,12 +1374,17 @@ label {
   justify-content: space-between;
   gap: 8px;
 }
+@media (hover: hover) and (pointer: fine) {
+  .label-container:hover .expand-arrow {
+    animation: bounce 0.4s ease;
+  }
+}
 
 .company-wrapper {
   border: 1.5px solid rgba(188, 197, 210, 0.4);
   border-radius: 12px;
   position: relative;
-  padding: 44px 32px 32px 32px;
+  padding: 52px 32px 32px 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1282,7 +1399,7 @@ label {
 .company-wrapper .company-name {
   position: absolute;
   top: -18px;
-  left: 24px;
+  left: 22px;
   padding: 0 8px;
   font-size: 15px;
   display: flex;
@@ -1407,6 +1524,7 @@ label {
 
 .expand-arrow {
   display: block;
+  color: #86868b;
 }
 
 .radio:checked + .relative .expand-arrow {
@@ -1534,6 +1652,8 @@ label {
 .radio:checked + .relative .circle {
   background: black;
   border-color: #F1F4F7;
+  animation: pulse 0.5s ease-out;
+  box-shadow: 0 0 0px 1.5px #FAB071;
 }
 
 .radio:checked ~ .content {
@@ -1640,9 +1760,11 @@ a {
 .navbar-collapse li a svg {
   fill: #000;
 }
-.navbar-collapse li:hover {
-  opacity: 0.6;
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .navbar-collapse li:hover {
+    opacity: 0.6;
+    transform: translateY(-2px);
+  }
 }
 .navbar-collapse li img {
   width: 1.5em;
@@ -1702,7 +1824,7 @@ footer p {
   font-size: 12px;
   letter-spacing: 1px;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  padding: 0 12px;
 }
 
 .navbar-brand-wrapper {

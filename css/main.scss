@@ -8,6 +8,133 @@
 
 
 /* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInFromTop {
+	from {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOutToBottom {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.98);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes pulse {
+
+	0%,
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(250, 176, 113, 1);
+	}
+
+	50% {
+		transform: scale(1.2);
+		box-shadow: 0 0 0 4px rgba(250, 176, 113, 0);
+	}
+}
+
+@keyframes bounce {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-6px);
+	}
+}
+
+@keyframes expandHint {
+
+	0%,
+	100% {
+		transform: translateY(0);
+		opacity: 0.6;
+	}
+
+	50% {
+		transform: translateY(3px);
+		opacity: 1;
+	}
+}
+
+/* Scroll-triggered animations - smoother, less jumpy */
+.animate-on-scroll {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+		transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+	&.is-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ==========================================
    TYPOGRAPHY
    Using design-system tokens only
    ========================================== */
@@ -276,9 +403,9 @@ header {
 	border: 1.5px solid rgba(188, 197, 210, 0.4);
 	border-radius: 8px;
 
-
 	&:hover {
-		font-weight: $font-weight-medium;
+		opacity: 0.6;
+		transform: translateY(-2px);
 	}
 
 	.icon {
@@ -385,18 +512,18 @@ header {
 }
 
 .circle {
-	top: 0;
-	left: -42px;
+	top: 2px;
+	left: -39.5px;
 	width: 8px;
 	height: 8px;
 	background: lightgray;
-	border: 5px solid #F1F4F7;
+	border: 3px solid #F1F4F7;
 	border-radius: 50%;
 	display: block;
 	position: absolute;
 
 	@media screen and (max-width: $mobile) {
-		left: -34px;
+		left: -31.5px;
 	}
 }
 
@@ -430,13 +557,19 @@ label {
 	align-items: center;
 	justify-content: space-between;
 	gap: 8px;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover .expand-arrow {
+			animation: bounce 0.4s ease;
+		}
+	}
 }
 
 .company-wrapper {
 	border: 1.5px solid rgba(188, 197, 210, 0.4);
 	border-radius: 12px;
 	position: relative;
-	padding: 44px 32px 32px 32px;
+	padding: 52px 32px 32px 32px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -451,7 +584,7 @@ label {
 	.company-name {
 		position: absolute;
 		top: -18px;
-		left: 24px;
+		left: 22px;
 		padding: 0 8px;
 		font-size: 15px;
 		display: flex;
@@ -586,6 +719,7 @@ label {
 
 .expand-arrow {
 	display: block;
+	color: $color-gray-500;
 }
 
 .radio:checked+.relative .expand-arrow {
@@ -733,7 +867,9 @@ label {
 
 .radio:checked+.relative .circle {
 	background: black;
-	border-color: $lightestone;
+	border-color: #F1F4F7;
+	animation: pulse 0.5s ease-out;
+	box-shadow: 0 0 0px 1.5px #FAB071;
 }
 
 .radio:checked~.content {
@@ -849,9 +985,11 @@ a {
 			}
 		}
 
-		&:hover {
-			opacity: 0.6;
-			transform: translateY(-2px);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				opacity: 0.6;
+				transform: translateY(-2px);
+			}
 		}
 
 		img {
@@ -914,7 +1052,7 @@ footer p {
 	font-size: 12px;
 	letter-spacing: 1px;
 	text-align: center;
-	font-family: "Inter", sans-serif;
+	padding: 0 12px;
 }
 
 .navbar-brand-wrapper {

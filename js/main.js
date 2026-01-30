@@ -94,22 +94,25 @@ $(document).ready(function () {
 		const bclick = el.querySelector(".gallery__item");
 
 		bclick.addEventListener("click", (event) => {
+			lightBox.classList.remove("closing");
 			lightBox.className = "lightbox open";
 			document.body.style.overflow = "hidden";
 
 			// console.log(lightBox)
 		});
 
-		// closebtn.addEventListener("click", event => {
-		//     lightBox.className = "lightbox";
-		//     videoElement.pause();
-		// });
-
 		closebtn.addEventListener("click", (event) => {
-			if (lightBox.className == "lightbox open") {
-				lightBox.className = "lightbox";
-				document.body.style.overflow = "auto";
-				videoElement.pause();
+			if (lightBox.classList.contains("open")) {
+				lightBox.classList.add("closing");
+				lightBox.classList.remove("open");
+
+				// Wait for animation to finish before hiding
+				setTimeout(() => {
+					lightBox.classList.remove("closing");
+					lightBox.className = "lightbox";
+					document.body.style.overflow = "auto";
+					videoElement.pause();
+				}, 400); // Match the animation duration (0.4s)
 			}
 		});
 	});
@@ -188,4 +191,40 @@ $(document).ready(function () {
 			if (duration) durationEl.textContent = duration;
 		}
 	});
+
+	// Scroll-triggered animations
+	const observerOptions = {
+		threshold: 0.15,
+		rootMargin: "0px 0px -50px 0px",
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("is-visible");
+				observer.unobserve(entry.target);
+			}
+		});
+	}, observerOptions);
+
+	// Observe gallery items with subtle stagger
+	document.querySelectorAll(".gallery__item").forEach((item, index) => {
+		item.classList.add("animate-on-scroll");
+		item.style.transitionDelay = `${index * 0.04}s`;
+		observer.observe(item);
+	});
+
+	// Observe timeline items
+	document.querySelectorAll(".company-wrapper").forEach((item, index) => {
+		item.classList.add("animate-on-scroll");
+		item.style.transitionDelay = `${index * 0.08}s`;
+		observer.observe(item);
+	});
+
+	// Observe timeline header
+	const timelineHeader = document.querySelector(".timeline-header");
+	if (timelineHeader) {
+		timelineHeader.classList.add("animate-on-scroll");
+		observer.observe(timelineHeader);
+	}
 });
