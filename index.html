@@ -3,21 +3,41 @@
 
 <head>
 	<link rel="shortcut icon" type="image/x-icon" href="mylogo.svg" />
-	<script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/lazy-video.js"></script>
 	<meta charset="utf-8" />
 	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Oscar Santamarina Portfolio</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
-	<!-- gallery-lightbox stylesheet enabled -->
-	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+	<!-- Preconnect to external domains for faster loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.plyr.io">
+	<link rel="preconnect" href="https://ajax.googleapis.com">
+	<!-- Critical CSS - inline if possible for production -->
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css">
+	</noscript>
 	<link rel="stylesheet" href="css/main.css" />
+	<!-- Optimize font loading - only load what's needed -->
+	<link rel="preload"
+		href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+		as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap">
+	</noscript>
 </head>
 
 <body>
+	<!-- Page Loader -->
+	<div class="page-loader" id="pageLoader">
+		<div class="loader-dots">
+			<div class="loader-dot"></div>
+			<div class="loader-dot"></div>
+			<div class="loader-dot"></div>
+		</div>
+	</div>
+
 	<!-- Inline SVG sprite for icons (inlined from images/icons.svg) -->
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
 		<!-- Iconly - LinkedIn -->
@@ -1114,9 +1134,9 @@
 							<div class="content">
 								<p>
 									I led creative UX/UI design projects across our three primary revenue-driving
-									platforms,
-									improving existing experiences and launching new products in close partnership with
-									PMs, engineers, and stakeholders, all while evolving a scalable design system.
+									platforms, improving existing experiences and launching new products in close
+									partnership with PMs, engineers, and stakeholders, while evolving a scalable design
+									system.
 								</p>
 							</div>
 						</li>
@@ -1159,10 +1179,10 @@
 							</div>
 							<div class="content">
 								<p>
-									Design and develop visual stories and data graphics. Manage
-									digital projects throughout all phases from conception to
-									publication. Collaborate with designers, editors, product
-									owners, and developers.
+									Designed and developed visual stories and data graphics for digital products.
+									Managed product design projects throughout all phases, from conception to
+									publication. Collaborated with designers, editors, product owners, and developers to
+									deliver cohesive, user-centered product experiences.
 								</p>
 							</div>
 						</li>
@@ -1392,6 +1412,10 @@
 			</nav>
 		</div>
 	</footer>
+	<script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/lazy-video.js"></script>
 </body>
 
 </html>

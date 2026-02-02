@@ -227,4 +227,14 @@ $(document).ready(function () {
 		timelineHeader.classList.add("animate-on-scroll");
 		observer.observe(timelineHeader);
 	}
+
+	// Hide page loader once everything is loaded
+	window.addEventListener("load", function () {
+		const loader = document.getElementById("pageLoader");
+		if (loader) {
+			setTimeout(() => {
+				loader.classList.add("loaded");
+			}, 300); // Small delay to ensure smooth transition
+		}
+	});
 });
