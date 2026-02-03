@@ -572,12 +572,12 @@ header {
 }
 
 .circle {
-	top: 3px;
+	top: 4px;
 	left: -38.5px;
 	width: 8px;
 	height: 8px;
 	background: lightgray;
-	border: 3px solid #F1F4F7;
+	border: 2px solid #F1F4F7;
 	border-radius: 50%;
 	display: block;
 	position: absolute;
@@ -795,7 +795,7 @@ label {
 
 .radio:checked+.relative .duration {
 	display: block;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 0.3px;
 	background: hwb(27.59deg 44.31% 1.96% / 19%);
 	padding: 0px 4px;

@@ -145,6 +145,13 @@
 		<symbol id="close-icon" viewBox="0 0 16 16">
 			<path d="M15.25 0.755742L0.75 15.2406M15.25 15.25L0.75 0.75" stroke="currentColor" stroke-linecap="round" />
 		</symbol>
+
+		<!-- Share icon -->
+		<symbol id="share-icon" viewBox="0 0 16 16">
+			<path
+				d="M13.8186 5.03147L14.7077 2.02833C14.9309 1.27453 14.2345 0.572043 13.4831 0.792262L1.46222 4.3126C0.641709 4.55255 0.490805 5.65443 1.21623 6.10828L3.74773 7.69163M10.7307 4.77592L6.27921 9.27502M6.27688 9.2758L9.36247 14.2808C9.81203 15.0093 10.9076 14.8626 11.1512 14.0408L12.9294 8.03463"
+				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
 	</svg>
 	<div class="wrapper">
 		<div class="container">
@@ -182,7 +189,7 @@
 					<!-- ============================================ -->
 					<div class="gallery">
 						<!-- ORDER: 1 -->
-						<div class="lightbox--cont gallery__item--1">
+						<div class="lightbox--cont gallery__item--1" data-project="whale-culture">
 							<figure class="gallery__item">
 								<img src="images/teaserwhalers2.jpg" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -205,15 +212,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 2 -->
-						<div class="lightbox--cont gallery__item--2">
+						<div class="lightbox--cont gallery__item--2" data-project="washington-on-edge">
 							<figure class="gallery__item">
 								<img src="images/NGD-83469-20_210106_000039.JPG" alt="" class="gallery__img"
 									loading="lazy" />
@@ -235,10 +249,17 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -264,7 +285,7 @@
 							</h1>
 						</figure>
 						<!-- ORDER: 4 -->
-						<div class="lightbox--cont gallery__item--4">
+						<div class="lightbox--cont gallery__item--4" data-project="notre-dame">
 							<figure class="gallery__item">
 								<img src="images/NotreDame-Thumbnail.jpg" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -285,15 +306,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 5 -->
-						<div class="lightbox--cont gallery__item--5">
+						<div class="lightbox--cont gallery__item--5" data-project="epic-trips">
 							<figure class="gallery__item">
 								<img src="images/epictrips-1.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -314,15 +342,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 6 -->
-						<div class="lightbox--cont gallery__item--6">
+						<div class="lightbox--cont gallery__item--6" data-project="kalahari">
 							<figure class="gallery__item">
 								<img src="images/kalahari.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -343,15 +378,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 7 -->
-						<div class="lightbox--cont gallery__item--7">
+						<div class="lightbox--cont gallery__item--7" data-project="aretha">
 							<figure class="gallery__item">
 								<img src="images/Aretha.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -372,15 +414,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 8 -->
-						<div class="lightbox--cont gallery__item--8">
+						<div class="lightbox--cont gallery__item--8" data-project="wwii">
 							<figure class="gallery__item">
 								<img src="images/last-voices.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -401,15 +450,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 9 -->
-						<div class="lightbox--cont gallery__item--9">
+						<div class="lightbox--cont gallery__item--9" data-project="world-cup">
 							<figure class="gallery__item">
 								<img src="images/world-cup.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -430,10 +486,17 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -445,7 +508,7 @@
 					<!-- NEW: separate gallery for items 10-14 -->
 					<div class="gallery gallery--new">
 						<!-- ORDER: 19 - NEW ITEM 1 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--10">
+						<div class="lightbox--cont gallery__item--10" data-project="settings">
 							<figure class="gallery__item">
 								<img src="images/Settings-aiq.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -501,16 +564,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<!-- ORDER: 20 - NEW ITEM 2 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--11">
+						<div class="lightbox--cont gallery__item--11" data-project="biopages">
 							<figure class="gallery__item">
 								<img src="images/bio-pages.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -577,16 +647,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<!-- ORDER: 21 - NEW ITEM 3 -->
-						<div class="lightbox--cont gallery__item--12">
+						<div class="lightbox--cont gallery__item--12" data-project="topic-explorer">
 							<figure class="gallery__item">
 								<img src="images/topic-ex.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -644,16 +721,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<!-- ORDER: 22 - NEW ITEM 4 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--13">
+						<div class="lightbox--cont gallery__item--13" data-project="inspector-navigator">
 							<figure class="gallery__item">
 								<img src="images/insp-nav.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -738,16 +822,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 
 						<!-- ORDER: 23 - NEW ITEM 5 (PLACEHOLDER) -->
-						<div class="lightbox--cont gallery__item--14">
+						<div class="lightbox--cont gallery__item--14" data-project="search">
 							<figure class="gallery__item">
 								<img src="images/search-pro.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -832,10 +923,17 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -843,7 +941,7 @@
 
 					<div class="gallery gallery--reverse">
 						<!-- ORDER: 10 -->
-						<div class="lightbox--cont gallery__item--1">
+						<div class="lightbox--cont gallery__item--1" data-project="akhenaten">
 							<figure class="gallery__item">
 								<img src="images/akhenaten.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -864,15 +962,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 11 -->
-						<div class="lightbox--cont gallery__item--2">
+						<div class="lightbox--cont gallery__item--2" data-project="women-archive">
 							<figure class="gallery__item">
 								<img src="images/womenarchive.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -889,15 +994,22 @@
 										<div>Video editing, animation</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 12 -->
-						<div class="lightbox--cont gallery__item--3">
+						<div class="lightbox--cont gallery__item--3" data-project="moon-landing">
 							<figure class="gallery__item">
 								<img src="images/moon-landing.jpg" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -914,15 +1026,22 @@
 										<div>Video editing, animation</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 13 -->
-						<div class="lightbox--cont gallery__item--4">
+						<div class="lightbox--cont gallery__item--4" data-project="helicoprion">
 							<figure class="gallery__item">
 								<img src="images/helicoprion-buzz-saw-shark-og3_3x2.jpg" alt="" class="gallery__img"
 									loading="lazy" />
@@ -940,15 +1059,22 @@
 										<div>Video editing-production, animation, graphics</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 14 -->
-						<div class="lightbox--cont gallery__item--5">
+						<div class="lightbox--cont gallery__item--5" data-project="mongolia">
 							<figure class="gallery__item">
 								<img src="images/mongolia-air-pollution.jpg" alt="" class="gallery__img"
 									loading="lazy" />
@@ -966,15 +1092,22 @@
 										<div>Video editing, graphics</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 15 -->
-						<div class="lightbox--cont gallery__item--6">
+						<div class="lightbox--cont gallery__item--6" data-project="explorer-junko">
 							<figure class="gallery__item">
 								<img src="images/Explorersprofiles_Junko_WOI.jpg" alt="" class="gallery__img"
 									loading="lazy" />
@@ -990,15 +1123,22 @@
 										<div>Graphics, design</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 16 -->
-						<div class="lightbox--cont gallery__item--7">
+						<div class="lightbox--cont gallery__item--7" data-project="women-of-impact">
 							<figure class="gallery__item">
 								<img src="images/woi-1.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -1015,15 +1155,22 @@
 										<div>Graphics, design, animation</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 17 -->
-						<div class="lightbox--cont gallery__item--8">
+						<div class="lightbox--cont gallery__item--8" data-project="happiest-places">
 							<figure class="gallery__item">
 								<img src="images/happiest-places.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -1040,15 +1187,22 @@
 										<div>Graphics, design, animation</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 						<!-- ORDER: 18 -->
-						<div class="lightbox--cont gallery__item--9">
+						<div class="lightbox--cont gallery__item--9" data-project="7-summits">
 							<figure class="gallery__item">
 								<img src="images/7-summit-2.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
@@ -1065,10 +1219,17 @@
 										<div>Graphics, design, animation</div>
 									</div>
 								</div>
-								<div class="btn-close">
-									<svg class="icon">
-										<use href="#close-icon" xlink:href="#close-icon"></use>
-									</svg>
+								<div class="lightbox-controls">
+									<button class="btn-share" aria-label="Share project">
+										<svg class="icon">
+											<use href="#share-icon" xlink:href="#share-icon"></use>
+										</svg>
+									</button>
+									<button class="btn-close" aria-label="Close lightbox">
+										<svg class="icon">
+											<use href="#close-icon" xlink:href="#close-icon"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1416,6 +1577,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/lazy-video.js"></script>
+	<script src="js/share.js"></script>
 </body>
 
 </html>
