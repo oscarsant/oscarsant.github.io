@@ -470,6 +470,9 @@ figure {
   min-height: 0;
   gap: 20px;
 }
+.text-with-element img {
+  max-height: 90vh;
+}
 @media screen and (max-width: 479px) {
   .text-with-element {
     flex-direction: column;
@@ -563,45 +566,47 @@ figure {
 }
 
 .rule-capt {
-  width: 20px;
-  height: 2px;
+  width: 60px;
+  height: 1.5px;
   background: #FAB071;
-  margin: 15px 0;
+  margin: 20px 0 28px;
 }
 @media screen and (max-width: 479px) {
   .rule-capt {
-    margin: 10px 0;
+    margin: 12px 0 20px;
   }
 }
 
 .explore-link {
   font-family: "Oswald", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   line-height: 1.2;
-  margin-top: 20px;
   font-weight: 400;
+  margin: 0;
 }
-.explore-link span {
-  font-size: 20px;
-  margin-right: 5px;
-}
-
 .explore-link a {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: transparent;
   color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
-.explore-link a:after {
-  content: "";
-  background: #FAB071;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  margin-right: 4px;
+.explore-link a:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.explore-link a .icon {
+  width: 16px;
+  height: 16px;
 }
 
 a.go-left-hide:after {
@@ -630,9 +635,9 @@ a.go-left-hide:hover:after {
   height: 36px;
 }
 .btn-close svg {
-  width: 13px;
-  height: 13px;
-  stroke-width: 1.5;
+  width: 11px;
+  height: 11px;
+  stroke-width: 2;
 }
 .btn-close:not(.lightbox-controls .btn-close) {
   position: fixed;
@@ -692,7 +697,7 @@ a.go-left-hide:hover:after {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 60px 20px 40px;
+  padding: 60px 0 40px;
   /* Custom scrollbar styling */
 }
 .lightbox-scroll-container::-webkit-scrollbar {
@@ -710,20 +715,24 @@ a.go-left-hide:hover:after {
 }
 @media screen and (max-width: 479px) {
   .lightbox-scroll-container {
-    padding: 80px 15px 40px;
+    padding: 80px 0 40px;
+    scrollbar-width: none;
   }
 }
 
 .project-content-scroll {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
 }
 @media screen and (max-width: 479px) {
   .project-content-scroll {
     gap: 30px;
+    padding: 0 12px;
   }
 }
 
@@ -743,16 +752,28 @@ a.go-left-hide:hover:after {
   height: auto;
   display: block;
 }
+.project-media-item.vertical-video {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .project-description {
   color: white;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: left;
 }
 @media screen and (max-width: 479px) {
   .project-description {
-    padding: 20px 10px;
+    padding: 12px 12px;
   }
+}
+.project-description .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 .project-description .project-hed {
   font-family: "Oswald", sans-serif;
@@ -761,28 +782,59 @@ a.go-left-hide:hover:after {
   line-height: 1.2;
   color: white;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin: 0;
 }
 @media screen and (max-width: 479px) {
   .project-description .project-hed {
     font-size: 22px;
   }
 }
+.project-description .explore-link {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0;
+}
+.project-description .explore-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.project-description .explore-link a:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.project-description .explore-link a .icon {
+  width: 16px;
+  height: 16px;
+}
 .project-description .rule-capt {
   width: 60px;
-  height: 2px;
+  height: 1.5px;
   background: #FAB071;
-  margin: 20px 0 30px;
+  margin: 20px 0 28px;
 }
 @media screen and (max-width: 479px) {
   .project-description .rule-capt {
-    margin: 15px 0 20px;
+    margin: 12px 0 20px;
   }
 }
 
 .project-text {
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   color: #d4d4d4;
   margin-bottom: 40px;
@@ -829,8 +881,7 @@ a.go-left-hide:hover:after {
 }
 @media screen and (max-width: 479px) {
   .media-caption {
-    padding: 0 10px;
-    margin-top: -10px;
+    padding: 0 12px;
   }
 }
 .media-caption p {
@@ -871,17 +922,20 @@ a.go-left-hide:hover:after {
 /* Lightbox controls */
 .lightbox-controls {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  right: 0;
   display: flex;
   gap: 12px;
   z-index: 10000;
+  padding: 20px;
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 479px) {
   .lightbox-controls {
-    top: 10px;
-    right: 10px;
-    gap: 8px;
+    padding: 12px;
   }
 }
 
@@ -904,14 +958,6 @@ a.go-left-hide:hover:after {
   opacity: 0.6;
   transform: translateY(-2px);
 }
-@media screen and (max-width: 479px) {
-  .btn-close,
-  .btn-share {
-    width: 32px;
-    height: 32px;
-  }
-}
-
 /* Remove old btn-close positioning that was conflicting */
 .btn-close:not(.lightbox-controls .btn-close) {
   position: fixed;
@@ -925,8 +971,8 @@ a.go-left-hide:hover:after {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   z-index: 99999;
   display: flex;
   align-items: center;
@@ -938,6 +984,7 @@ a.go-left-hide:hover:after {
 .share-modal.active {
   opacity: 1;
   visibility: visible;
+  padding: 0 12px;
 }
 .share-modal.active .share-modal-content {
   transform: scale(1);
@@ -1057,9 +1104,9 @@ a.go-left-hide:hover:after {
 
 .share-link-input {
   flex: 1;
-  padding: 14px 16px;
+  padding: 8px 12px;
   border: 1.5px solid #e5e5e5;
-  border-radius: 12px;
+  border-radius: 8px;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   color: #1a1a1a;
@@ -1079,11 +1126,11 @@ a.go-left-hide:hover:after {
 }
 
 .share-copy-btn {
-  padding: 14px 24px;
+  padding: 8px 12px;
   background: #FAB071;
   border: none;
-  border-radius: 12px;
-  font-size: 15px;
+  border-radius: 8px;
+  font-size: 14px;
   font-weight: 500;
   color: white;
   cursor: pointer;
@@ -1570,7 +1617,7 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 48px;
   margin-left: 16px;
 }
 @media screen and (max-width: 479px) {
@@ -1866,10 +1913,10 @@ label {
   display: block;
   font-weight: 600;
   letter-spacing: 0.3px;
-  background: hsla(27.59, 93.2003469211%, 71.175%, 0.19);
+  background: rgba(250, 176, 113, 0.2);
   padding: 0px 4px;
   border-radius: 4px;
-  color: hsl(27.59, 42.7753544166%, 36.68%);
+  color: hsl(33, 88%, 46%);
 }
 
 .label-with-svg {

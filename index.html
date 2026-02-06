@@ -54,11 +54,12 @@
 		</symbol>
 
 		<!-- Iconly - Mail -->
-		<symbol id="mail-icon" viewBox="0 0 17 15">
+		<symbol id="mail-icon" viewBox="0 0 16 15">
 			<path
-				d="M12.6771 5.13836L9.3447 7.84815C8.71508 8.34765 7.82917 8.34765 7.19955 7.84815L3.83899 5.13836M15.75 7.125V4.92751C15.75 2.62412 14.2126 0.75 11.9317 0.75H4.56835C2.28734 0.75 0.75 2.62412 0.75 4.92751V10.0788C0.75 12.3821 2.28734 14.2563 4.56835 14.25H11.9317C14.2126 14.2563 15.75 12.3821 15.75 10.0788V9.75"
+				d="M12.2795 4.99208L9.05821 7.61154C8.44957 8.09439 7.5932 8.09439 6.98456 7.61154L3.73602 4.99208M15.25 6.9125V4.78826C15.25 2.56165 13.7639 0.75 11.559 0.75H4.44108C2.2361 0.75 0.75 2.56165 0.75 4.78826V9.76784C0.75 11.9944 2.2361 13.8061 4.44108 13.8H11.559C13.7639 13.8061 15.25 11.9944 15.25 9.76784V9.45"
 				stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" />
 		</symbol>
+
 
 		<!-- Iconly - Work -->
 		<symbol id="experience-icon" viewBox="0 0 12 12">
@@ -152,6 +153,12 @@
 				d="M13.8186 5.03147L14.7077 2.02833C14.9309 1.27453 14.2345 0.572043 13.4831 0.792262L1.46222 4.3126C0.641709 4.55255 0.490805 5.65443 1.21623 6.10828L3.74773 7.69163M10.7307 4.77592L6.27921 9.27502M6.27688 9.2758L9.36247 14.2808C9.81203 15.0093 10.9076 14.8626 11.1512 14.0408L12.9294 8.03463"
 				stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 		</symbol>
+
+		<!-- Arrow Right icon for Explore button -->
+		<symbol id="arrow-right-icon" viewBox="0 0 15 12">
+			<path d="M0.5 5.9999H14.1941L8.67099 11.5M8.67099 0.5L12.123 3.93721" stroke="currentColor"
+				stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
 	</svg>
 	<div class="wrapper">
 		<div class="container">
@@ -194,22 +201,50 @@
 								<img src="images/teaserwhalers2.jpg" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/whalers.jpg"
-											src="videos/compressed/whalers.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Whale Culture</div>
-										<div class="description">
-											Development, animation, design
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Whale Culture</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/culture/graphics/this-digital-graphic-novel-takes-you-on-an-indonesian-whale-hunt"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An immersive digital graphic novel experience that takes readers on an
+												Indonesian whale hunt, combining interactive storytelling with rich
+												animations and cultural narrative. This project blends development,
+												design, and motion graphics to create an engaging multimedia experience.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Development, Animation, Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2021</span>
+												</div>
+											</div>
 										</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/culture/graphics/this-digital-graphic-novel-takes-you-on-an-indonesian-whale-hunt"
-												target="_blank"><span>></span>Explore</a>
+
+										<!-- Whale Culture Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/whalers.jpg"
+												src="videos/compressed/whalers.mp4#t=0.1" type="video/mp4"></video>
 										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -233,19 +268,48 @@
 									loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/insurrection.jpg"
-											src="videos/compressed/insurrection.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Washington on Edge</div>
-										<div>Design, development</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/photography/graphics/documenting-washington-on-edge?loggedin=true"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Washington on Edge</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/photography/graphics/documenting-washington-on-edge?loggedin=true"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A powerful photographic narrative documenting the tense atmosphere in
+												Washington, D.C. during a pivotal moment in American history. This
+												project combines thoughtful design and development to present an
+												immersive visual story.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Design, Development</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2021</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Washington on Edge Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/insurrection.jpg"
+												src="videos/compressed/insurrection.mp4#t=0.1" type="video/mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -290,20 +354,50 @@
 								<img src="images/NotreDame-Thumbnail.jpg" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/notredame.jpg"
-											src="videos/compressed/notredame.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Rebuilding Notre Dame</div>
-										<div>Development, design, graphics</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/magazine/graphics/notre-dame-after-the-fire-feature"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Rebuilding Notre Dame</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/magazine/graphics/notre-dame-after-the-fire-feature"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An in-depth exploration of the restoration efforts following the
+												devastating fire at Notre Dame Cathedral. This interactive experience
+												combines technical graphics, 3D visualizations, and thoughtful
+												storytelling to document the historic reconstruction.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Development, Design, Graphics</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2020</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- Notre Dame Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/notredame.jpg"
+												src="videos/compressed/notredame.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -326,20 +420,50 @@
 								<img src="images/epictrips-1.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/epic-trips.jpg"
-											src="videos/compressed/epic-trips.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Epic Trips</div>
-										<div>Graphics, development, design</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/travel/graphics/summer-drive-tips-guy-cant-stop-road-tripping?loggedin=true#credits"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Epic Trips</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/travel/graphics/summer-drive-tips-guy-cant-stop-road-tripping?loggedin=true#credits"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An engaging visual journey exploring the ultimate road trip experiences
+												across America. This project combines interactive graphics, thoughtful
+												design, and compelling storytelling to inspire travelers and showcase
+												the art of the great American road trip.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Graphics, Development, Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2020</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- Epic Trips Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/epic-trips.jpg"
+												src="videos/compressed/epic-trips.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -362,20 +486,50 @@
 								<img src="images/kalahari.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/kalahari.jpg"
-											src="videos/compressed/kalahari.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Surviving Kalahari</div>
-										<div>Development, design, art direction</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/magazine/graphics/surviving-the-extremes-of-the-kalahari-feature"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Surviving Kalahari</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/magazine/graphics/surviving-the-extremes-of-the-kalahari-feature"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A compelling exploration of survival in one of Earth's most extreme
+												environments. This project combines interactive storytelling,
+												environmental data visualization, and immersive design to document life
+												in the Kalahari Desert.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Development, Design, Art Direction</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2020</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- Kalahari Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/kalahari.jpg"
+												src="videos/compressed/kalahari.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -398,20 +552,50 @@
 								<img src="images/Aretha.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/aretha.jpg" src="videos/compressed/aretha.mp4#t=0.1"
-											type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Queen of Charts</div>
-										<div>Development, design</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/magazine/graphics/the-songs-that-defined-aretha-franklins-record-breaking-career-feature?loggedin=true"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Queen of Charts</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/magazine/graphics/the-songs-that-defined-aretha-franklins-record-breaking-career-feature?loggedin=true"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A data-driven tribute to Aretha Franklin's legendary music career,
+												visualizing the songs that defined her record-breaking journey. This
+												project combines music data visualization, interactive charts, and
+												elegant design to celebrate the Queen of Soul's lasting impact.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Development, Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2019</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- Aretha Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/aretha.jpg"
+												src="videos/compressed/aretha.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -434,20 +618,52 @@
 								<img src="images/last-voices.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/lastvoiceswwii.jpg"
-											src="videos/compressed/lastvoiceswwii.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Last Voices of WWII</div>
-										<div>Development, design, video editing</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/magazine/graphics/world-war-ii-survivors-share-stories-75-years-later-feature"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Last Voices of WWII</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/magazine/graphics/world-war-ii-survivors-share-stories-75-years-later-feature"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A powerful oral history project documenting World War II survivors
+												sharing their stories 75 years later. This project combines video
+												editing, thoughtful design, and compelling storytelling to preserve the
+												voices and memories of those who lived through history's defining
+												conflict.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Development, Design, Video Editing</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2020</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- WWII Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/lastvoiceswwii.jpg"
+												src="videos/compressed/lastvoiceswwii.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -470,20 +686,50 @@
 								<img src="images/world-cup.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/worldcup.jpg"
-											src="videos/compressed/worldcup.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Top Teams World Cup</div>
-										<div>Graphics, development, design</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/culture/graphics/top-teams-countries-world-cup-graphic-interactive-culture#intro"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Top Teams World Cup</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/culture/graphics/top-teams-countries-world-cup-graphic-interactive-culture#intro"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An interactive exploration of the world's top football teams and their
+												World Cup legacies. This project combines sports data visualization,
+												interactive graphics, and compelling design to celebrate the global
+												passion for the beautiful game.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Graphics, Development, Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2018</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- World Cup Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/worldcup.jpg"
+												src="videos/compressed/worldcup.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -539,9 +785,8 @@
 
 										<!-- Settings Image -->
 										<div class="project-media-item">
-											<video class="js-player" playsinline controls preload="none" loading="lazy"
-												poster="images/posters/settings.jpg"
-												src="videos/compressed/settings.mp4#t=0.1" type="video/mp4"></video>
+											<img src="images/settings/Chemicals-Entitlement.png"
+												alt="Settings Interface" loading="lazy" />
 										</div>
 
 										<!-- Caption Text -->
@@ -595,7 +840,7 @@
 												Reporter bio pages that showcase biography, recent stories, and direct
 												contact options, with the ability for users to follow reporters and
 												receive alerts for new coverage. A core feature for Politico, where
-												reporters are central to the brand’s credibility and prestige.
+												reporters are central to the brand's credibility and prestige.
 											</p>
 											<div class="project-details">
 												<div class="detail-item">
@@ -741,7 +986,7 @@
 							<figure class="gallery__item">
 								<img src="images/insp-nav.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
-							<div class="lightbox">
+							<div class="lightbox vertical-video">
 								<div class="lightbox-scroll-container">
 									<div class="project-content-scroll">
 										<!-- Project Description at Top -->
@@ -946,20 +1191,50 @@
 								<img src="images/akhenaten.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="horizontal-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/akhenaten.jpg"
-											src="videos/compressed/akhenaten.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Akhenaten</div>
-										<div>Development, design, animation</div>
-										<div class="explore-link">
-											<a class="go-left-hide"
-												href="https://www.nationalgeographic.com/magazine/graphics/akhenaten-revolutionary-egypt-king-art-architecture"
-												target="_blank"><span>></span>Explore</a>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-header">
+												<div class="project-hed">Akhenaten</div>
+												<div class="explore-link">
+													<a class="go-left-hide"
+														href="https://www.nationalgeographic.com/magazine/graphics/akhenaten-revolutionary-egypt-king-art-architecture"
+														target="_blank">
+														<svg class="icon arrow-icon">
+															<use href="#arrow-right-icon"
+																xlink:href="#arrow-right-icon"></use>
+														</svg>
+														Explore
+													</a>
+												</div>
+											</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An interactive exploration of Egypt's revolutionary pharaoh Akhenaten
+												and his radical transformation of art and architecture. This project
+												combines historical storytelling with dynamic animations and elegant
+												design to bring ancient Egyptian history to life through digital media.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Development, Design, Animation</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2019</span>
+												</div>
+											</div>
 										</div>
+
+										<!-- Akhenaten Video -->
+										<div class="project-media-item">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/akhenaten.jpg"
+												src="videos/compressed/akhenaten.mp4#t=0.1" type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -982,16 +1257,38 @@
 								<img src="images/womenarchive.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/women-archive.jpg"
-											src="videos/compressed/women-archive.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Women Archive</div>
-										<div class="rule-capt"></div>
-										<div>Video editing, animation</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Women Archive</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A visual tribute celebrating the achievements and stories of remarkable
+												women throughout history. This project combines archival imagery with
+												motion graphics and thoughtful editing to create an engaging narrative
+												that honors their lasting impact and contributions.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Video Editing, Animation</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2019</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Women Archive Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/women-archive.jpg"
+												src="videos/compressed/women-archive.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
+
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1014,16 +1311,36 @@
 								<img src="images/moon-landing.jpg" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/moon-landing.jpg"
-											src="videos/compressed/moon-landing.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Moon Landing</div>
-										<div class="rule-capt"></div>
-										<div>Video editing, animation</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Moon Landing</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A commemorative visual story celebrating humanity's historic first steps
+												on the lunar surface. This project combines archival NASA footage with
+												dynamic animations and editorial design to capture the wonder and
+												achievement of the Apollo 11 mission.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Video Editing, Animation</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2019</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Moon Landing Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/moon-landing.jpg"
+												src="videos/compressed/moon-landing.mp4#t=0.1" type="video/mp4"></video>
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1047,16 +1364,38 @@
 									loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/buzz-saw-killer.jpg"
-											src="videos/compressed/buzz-saw-killer.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Helicoprion</div>
-										<div class="rule-capt"></div>
-										<div>Video editing-production, animation, graphics</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Helicoprion: The Buzz Saw Shark</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An educational video exploring the prehistoric Helicoprion, an ancient
+												shark with a distinctive spiral-toothed jaw. This production combines
+												scientific illustration, 3D animation, and compelling narration to bring
+												this extinct creature to life for modern audiences.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Video Editing, Production, Animation,
+														Graphics</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2018</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Helicoprion Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/buzz-saw-killer.jpg"
+												src="videos/compressed/buzz-saw-killer.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1080,16 +1419,38 @@
 									loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/mongolia-smog.jpg"
-											src="videos/compressed/mongolia-smog.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Mongolia's Smog</div>
-										<div class="rule-capt"></div>
-										<div>Video editing, graphics</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Mongolia's Smog Crisis</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An environmental documentary piece examining the severe air pollution
+												crisis affecting Mongolia's capital. This project combines data
+												visualization, editorial footage, and informational graphics to
+												highlight the environmental and health challenges facing Ulaanbaatar's
+												residents.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Video Editing, Graphics</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2019</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Mongolia Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/mongolia-smog.jpg"
+												src="videos/compressed/mongolia-smog.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1113,14 +1474,34 @@
 									loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-image">
-										<img src="images/junkotabei.png" alt="" loading="lazy" />
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Explorer Junko</div>
-										<div class="rule-capt"></div>
-										<div>Graphics, design</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Explorer Profile: Junko Tabei</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A visual profile honoring Junko Tabei, the first woman to reach the
+												summit of Mount Everest. This graphic design piece combines portrait
+												illustration, typography, and mountaineering iconography to celebrate
+												her groundbreaking achievement and pioneering spirit in exploration.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Graphics, Design</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2018</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Explorer Junko Image -->
+										<div class="project-media-item vertical-video">
+											<img src="images/junkotabei.png" alt="Explorer Junko" loading="lazy" />
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1143,16 +1524,37 @@
 								<img src="images/woi-1.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/WOI-together.jpg"
-											src="videos/compressed/WOI-together.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Women of Impact Series</div>
-										<div class="rule-capt"></div>
-										<div>Graphics, design, animation</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Women of Impact Series</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A visual series celebrating influential women who shaped history and
+												society. This project combines graphic design, animation, and editorial
+												illustration to create cohesive profile pieces that honor their
+												achievements and inspire future generations through compelling visual
+												storytelling.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Graphics, Design, Animation</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2018</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Women of Impact Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/WOI-together.jpg"
+												src="videos/compressed/WOI-together.mp4#t=0.1" type="video/mp4"></video>
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1175,16 +1577,37 @@
 								<img src="images/happiest-places.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/happiest-places.jpg"
-											src="videos/compressed/happiest-places.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">Happiest Places</div>
-										<div class="rule-capt"></div>
-										<div>Graphics, design, animation</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">World's Happiest Places</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												An uplifting visual journey exploring the world's happiest destinations
+												and what makes them special. This project combines colorful graphics,
+												animated maps, and data visualization to showcase the cultural and
+												environmental factors that contribute to happiness around the globe.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Graphics, Design, Animation</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2018</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Happiest Places Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/happiest-places.jpg"
+												src="videos/compressed/happiest-places.mp4#t=0.1"
+												type="video/mp4"></video>
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1207,16 +1630,36 @@
 								<img src="images/7-summit-2.png" alt="" class="gallery__img" loading="lazy" />
 							</figure>
 							<div class="lightbox">
-								<div class="text-with-element">
-									<div class="vertical-video">
-										<video class="js-player" playsinline controls preload="none" loading="lazy"
-											poster="images/posters/7-summits.jpg"
-											src="videos/compressed/7-summits.mp4#t=0.1" type="video/mp4"></video>
-									</div>
-									<div class="text-capt">
-										<div class="project-hed">7 Summits</div>
-										<div class="rule-capt"></div>
-										<div>Graphics, design, animation</div>
+								<div class="lightbox-scroll-container">
+									<div class="project-content-scroll">
+										<!-- Project Description at Top -->
+										<div class="project-description">
+											<div class="project-hed">Seven Summits Challenge</div>
+											<div class="rule-capt"></div>
+											<p class="project-text">
+												A visual exploration of the Seven Summits, the highest peaks on each
+												continent that mountaineers aspire to conquer. This project combines
+												topographic design, elevation graphics, and animated sequences to
+												showcase the scale and challenge of these iconic mountains.
+											</p>
+											<div class="project-details">
+												<div class="detail-item">
+													<span class="detail-label">Role:</span>
+													<span class="detail-value">Graphics, Design, Animation</span>
+												</div>
+												<div class="detail-item">
+													<span class="detail-label">Year:</span>
+													<span class="detail-value">2018</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- 7 Summits Video -->
+										<div class="project-media-item vertical-video">
+											<video class="js-player" playsinline controls preload="none" loading="lazy"
+												poster="images/posters/7-summits.jpg"
+												src="videos/compressed/7-summits.mp4#t=0.1" type="video/mp4"></video>
+										</div>
 									</div>
 								</div>
 								<div class="lightbox-controls">
@@ -1276,7 +1719,7 @@
 							<div class="relative label-container">
 								<label for="work7" class="label-with-svg">
 									<div class="role-name">
-										<span class="label-text">Senior product designer</span>
+										<span class="label-text">Senior Product Designer</span>
 										<svg class="icon large expand-arrow">
 											<use href="#expand-icon" xlink:href="#expand-icon"></use>
 										</svg>

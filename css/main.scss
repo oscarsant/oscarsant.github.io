@@ -487,7 +487,7 @@ header {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
+	gap: 48px;
 	margin-left: 16px;
 
 	@media screen and (max-width: $mobile) {
@@ -797,10 +797,10 @@ label {
 	display: block;
 	font-weight: 600;
 	letter-spacing: 0.3px;
-	background: hwb(27.59deg 44.31% 1.96% / 19%);
+	background: rgb(250 176 113 / 20%);
 	padding: 0px 4px;
 	border-radius: 4px;
-	color: hwb(27.59deg 20.99% 47.63%);
+	color: hsl(33 88% 46% / 1);
 }
 
 .label-with-svg {
