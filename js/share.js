@@ -121,6 +121,19 @@ document.addEventListener("DOMContentLoaded", function () {
 		navigator.clipboard
 			.writeText(input.value)
 			.then(() => {
+				// Track share event in Google Analytics
+				const projectId = new URLSearchParams(input.value.split("?")[1]).get(
+					"project"
+				);
+				if (typeof gtag !== "undefined" && projectId) {
+					gtag("event", "share", {
+						event_category: "Engagement",
+						event_label: projectId,
+						method: "copy_link",
+						project_name: projectId,
+					});
+				}
+
 				// Show success state
 				const copyIcon = copyBtn.querySelector(".copy-icon");
 				const checkIcon = copyBtn.querySelector(".check-icon");

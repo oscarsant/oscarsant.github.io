@@ -98,6 +98,16 @@ $(document).ready(function () {
 			lightBox.className = "lightbox open";
 			document.body.style.overflow = "hidden";
 
+			// Track project view in Google Analytics
+			const projectName = el.getAttribute("data-project") || "unknown";
+			if (typeof gtag !== "undefined") {
+				gtag("event", "project_view", {
+					event_category: "Portfolio",
+					event_label: projectName,
+					project_name: projectName,
+				});
+			}
+
 			// console.log(lightBox)
 		});
 
@@ -236,5 +246,37 @@ $(document).ready(function () {
 				loader.classList.add("loaded");
 			}, 300); // Small delay to ensure smooth transition
 		}
+	});
+
+	// Track Resume Downloads
+	const resumeBtn = document.querySelector(".download-resume-btn");
+	if (resumeBtn) {
+		resumeBtn.addEventListener("click", function () {
+			if (typeof gtag !== "undefined") {
+				gtag("event", "resume_download", {
+					event_category: "Engagement",
+					event_label: "Resume PDF",
+				});
+			}
+		});
+	}
+
+	// Track Explore Link Clicks
+	document.querySelectorAll(".explore-link a").forEach((link) => {
+		link.addEventListener("click", function (e) {
+			const projectName =
+				this.closest(".lightbox--cont")?.getAttribute("data-project") ||
+				"unknown";
+			const destination = this.getAttribute("href");
+
+			if (typeof gtag !== "undefined") {
+				gtag("event", "explore_click", {
+					event_category: "Outbound",
+					event_label: projectName,
+					project_name: projectName,
+					destination_url: destination,
+				});
+			}
+		});
 	});
 });
