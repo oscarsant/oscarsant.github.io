@@ -540,7 +540,6 @@ figure {
 .explore-link {
 	font-family: "Oswald", sans-serif;
 	font-size: 13px;
-	text-transform: uppercase;
 	letter-spacing: 2px;
 	line-height: 1.2;
 	font-weight: 400;
@@ -549,7 +548,7 @@ figure {
 	a {
 		display: inline-flex;
 		align-items: center;
-		gap: 8px;
+		gap: 6px;
 		padding: 8px 12px;
 		background: transparent;
 		color: white;
@@ -766,18 +765,17 @@ a.go-left-hide:hover:after {
 	}
 
 	.explore-link {
-		font-family: "Oswald", sans-serif;
-		font-size: 12px;
-		text-transform: uppercase;
-		letter-spacing: 3px;
-		line-height: 1.2;
-		font-weight: 400;
+		font-size: 14px;
+		font-weight: 500;
+		font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+		text-decoration: none;
+		letter-spacing: normal;
 		margin: 0;
 
 		a {
 			display: inline-flex;
 			align-items: center;
-			gap: 8px;
+			gap: 6px;
 			padding: 8px 12px;
 			background: transparent;
 			color: white;
