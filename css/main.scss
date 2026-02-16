@@ -584,7 +584,7 @@ header {
 }
 
 .circle {
-	top: 84px;
+	top: 85px;
 	left: -32.5px;
 	width: 0;
 	height: 0;
@@ -598,7 +598,7 @@ header {
 
 	@media screen and (max-width: $mobile) {
 		left: -24px;
-		top: 79px;
+		top: 80px;
 
 	}
 }
@@ -651,7 +651,7 @@ label {
 }
 
 .company-wrapper {
-	border: 1.5px solid rgba(188, 197, 210, 0.4);
+	border: .5px solid rgba(188, 197, 210, 0.4);
 	border-radius: 12px;
 	position: relative;
 	padding: 52px 32px 32px 32px;
@@ -659,6 +659,7 @@ label {
 	flex-direction: column;
 	gap: 16px;
 	transition: all $transition-base;
+	box-shadow: $shadow-lg;
 
 	@media screen and (max-width: $mobile) {
 		padding: 44px 24px 24px 24px;
@@ -722,7 +723,7 @@ label {
 
 // Active state when any radio inside is checked
 .company-wrapper:has(.radio:checked) {
-	border-color: $orange;
+	border: 1px solid $orange;
 
 	.company-name {
 		color: $color-gray-900;

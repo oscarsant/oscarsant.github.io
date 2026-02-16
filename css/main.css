@@ -1710,7 +1710,7 @@ header {
 }
 
 .circle {
-  top: 84px;
+  top: 85px;
   left: -32.5px;
   width: 0;
   height: 0;
@@ -1725,7 +1725,7 @@ header {
 @media screen and (max-width: 479px) {
   .circle {
     left: -24px;
-    top: 79px;
+    top: 80px;
   }
 }
 
@@ -1775,7 +1775,7 @@ label {
 }
 
 .company-wrapper {
-  border: 1.5px solid rgba(188, 197, 210, 0.4);
+  border: 0.5px solid rgba(188, 197, 210, 0.4);
   border-radius: 12px;
   position: relative;
   padding: 52px 32px 32px 32px;
@@ -1783,6 +1783,7 @@ label {
   flex-direction: column;
   gap: 16px;
   transition: all 0.3s ease;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 479px) {
   .company-wrapper {
@@ -1841,7 +1842,7 @@ label {
 }
 
 .company-wrapper:has(.radio:checked) {
-  border-color: #FAB071;
+  border: 1px solid #FAB071;
 }
 .company-wrapper:has(.radio:checked) .company-name {
   color: #1d1d1f;
