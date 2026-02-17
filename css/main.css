@@ -1775,7 +1775,6 @@ label {
 }
 
 .company-wrapper {
-  border: 0.5px solid rgba(188, 197, 210, 0.4);
   border-radius: 12px;
   position: relative;
   padding: 52px 32px 32px 32px;
@@ -1841,9 +1840,6 @@ label {
   }
 }
 
-.company-wrapper:has(.radio:checked) {
-  border: 1px solid #FAB071;
-}
 .company-wrapper:has(.radio:checked) .company-name {
   color: #1d1d1f;
   font-weight: 500;
