@@ -122,6 +122,11 @@ figure {
 	grid-row-start: 1;
 	grid-row-end: 4;
 
+	img {
+		object-position: top !important;
+
+	}
+
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
@@ -172,6 +177,11 @@ figure {
 	grid-row-start: 6;
 	grid-row-end: 9;
 
+	img {
+		object-position: top !important;
+
+	}
+
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
@@ -217,6 +227,11 @@ figure {
 	grid-column-end: 7;
 	grid-row-start: 9;
 	grid-row-end: 12;
+
+	img {
+		object-position: top !important;
+
+	}
 
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 3;
