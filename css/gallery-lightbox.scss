@@ -103,6 +103,11 @@ figure {
 
 
 .gallery__item--1 {
+	video.gallery__img {
+		object-fit: contain;
+		background: #e9e9e9;
+	}
+
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 1;
@@ -158,6 +163,11 @@ figure {
 }
 
 .gallery__item--4 {
+	video.gallery__img {
+		object-fit: contain;
+		background: #e9e9e9;
+	}
+
 	grid-column-start: 1;
 	grid-column-end: 6;
 	grid-row-start: 4;
