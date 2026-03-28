@@ -123,7 +123,7 @@ figure {
 		grid-column-start: 1;
 		grid-column-end: 4;
 		grid-row-start: 1;
-		grid-row-end: 7;
+		grid-row-end: 8;
 	}
 }
 
@@ -141,7 +141,7 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 7;
+		grid-row-start: 8;
 		grid-row-end: 19;
 	}
 }
