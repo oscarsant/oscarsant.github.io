@@ -49,7 +49,7 @@ $(document).ready(function () {
 					"Rows:",
 					rows,
 					"Height:",
-					height
+					height,
 				);
 
 				gallery.style.height = height + "px";
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
 				// fullscreen: { enabled: false, fallback: false, iosNative: false, container: null }
 			});
-		}
+		},
 	);
 
 	const lightBoxCont = document.querySelectorAll(".lightbox--cont");
@@ -278,5 +278,56 @@ $(document).ready(function () {
 				});
 			}
 		});
+	});
+
+	// Image expand/collapse in lightbox
+	document.querySelectorAll(".project-media-item").forEach((item) => {
+		const img = item.querySelector("img");
+		if (!img) return;
+
+		const btn = document.createElement("button");
+		btn.className = "btn-expand-image";
+		btn.setAttribute("aria-label", "Expand image");
+		btn.innerHTML =
+			'<svg class="icon icon-expand"><use href="#fullscreen-expand-icon" xlink:href="#fullscreen-expand-icon"></use></svg>' +
+			'<svg class="icon icon-collapse"><use href="#fullscreen-collapse-icon" xlink:href="#fullscreen-collapse-icon"></use></svg>';
+		item.appendChild(btn);
+
+		btn.addEventListener("click", function (e) {
+			e.stopPropagation();
+			const isExpanded = item.classList.toggle("expanded");
+			btn.setAttribute(
+				"aria-label",
+				isExpanded ? "Collapse image" : "Expand image",
+			);
+			// Prevent background scroll when expanded
+			if (isExpanded) {
+				item._scrollParent = item.closest(".lightbox-scroll-container");
+				if (item._scrollParent) {
+					item._scrollParent.style.overflow = "hidden";
+				}
+			} else {
+				if (item._scrollParent) {
+					item._scrollParent.style.overflow = "";
+					item._scrollParent = null;
+				}
+			}
+		});
+	});
+
+	// Close expanded image on Escape key
+	document.addEventListener("keydown", function (e) {
+		if (e.key === "Escape") {
+			const expanded = document.querySelector(".project-media-item.expanded");
+			if (expanded) {
+				expanded.classList.remove("expanded");
+				const btn = expanded.querySelector(".btn-expand-image");
+				if (btn) btn.setAttribute("aria-label", "Expand image");
+				if (expanded._scrollParent) {
+					expanded._scrollParent.style.overflow = "";
+					expanded._scrollParent = null;
+				}
+			}
+		}
 	});
 });

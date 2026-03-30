@@ -1173,4 +1173,93 @@ a.go-left-hide:hover:after {
 .share-notification.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* Image expand/collapse button */
+.btn-expand-image {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(4px);
+  padding: 0;
+}
+.btn-expand-image svg {
+  width: 14px;
+  height: 14px;
+}
+.btn-expand-image .icon-collapse {
+  display: none;
+}
+.btn-expand-image:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: scale(1.05);
+}
+
+.project-media-item {
+  position: relative;
+}
+.project-media-item:hover .btn-expand-image {
+  opacity: 1;
+}
+
+/* Expanded image state */
+.project-media-item.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  max-width: none;
+  animation: expandImageIn 0.3s ease forwards;
+}
+.project-media-item.expanded img {
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0;
+}
+.project-media-item.expanded .btn-expand-image {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 1;
+  z-index: 10002;
+}
+.project-media-item.expanded .btn-expand-image .icon-expand {
+  display: none;
+}
+.project-media-item.expanded .btn-expand-image .icon-collapse {
+  display: block;
+}
+
+@keyframes expandImageIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=gallery-lightbox.css.map */
