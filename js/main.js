@@ -34,9 +34,9 @@ $(document).ready(function () {
 				// Determine row count for this specific gallery
 				// Reduced from 12/9 to make galleries less vertical
 				if (gallery.classList.contains("gallery--new")) {
-					rows = isMobile ? 12 : 6; // gallery--new: reduced from 9 to 6 rows
+					rows = isMobile ? 12 : 6;
 				} else {
-					rows = isMobile ? 22 : 8; // standard gallery: reduced from 12 to 8 rows
+					rows = isMobile ? 22 : 8;
 				}
 
 				// Calculate height for this gallery
