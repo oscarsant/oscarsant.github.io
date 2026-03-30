@@ -13,7 +13,7 @@
 
 		lightBoxContainers.forEach((container) => {
 			const lightBox = container.querySelector(".lightbox");
-			const videoElement = container.querySelector("video");
+			const videoElement = container.querySelector("video:not([autoplay])");
 			const galleryItem = container.querySelector(".gallery__item");
 
 			if (!videoElement || !galleryItem || !lightBox) return;
