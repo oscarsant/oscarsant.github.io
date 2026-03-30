@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 		const lightBox = el.querySelector(".lightbox");
 		const closebtn = el.querySelector(".btn-close");
-		const videoElement = el.querySelector("video");
+		const videoElement = el.querySelector("video.js-player");
 		const bclick = el.querySelector(".gallery__item");
 
 		bclick.addEventListener("click", (event) => {
