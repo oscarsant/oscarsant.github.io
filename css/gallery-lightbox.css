@@ -80,8 +80,6 @@ figure {
 }
 .gallery.gallery--new img {
   background: #F1F4F7;
-  -o-object-position: left;
-     object-position: left;
 }
 
 .gallery__item--1 video.gallery__img {
@@ -99,8 +97,8 @@ figure {
   .gallery__item--1 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 8;
+    grid-row-start: 13;
+    grid-row-end: 18;
   }
 }
 
@@ -118,8 +116,8 @@ figure {
   .gallery__item--2 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 19;
+    grid-row-start: 1;
+    grid-row-end: 13;
   }
 }
 
@@ -180,7 +178,7 @@ figure {
   .gallery__item--5 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 19;
+    grid-row-start: 18;
     grid-row-end: 26;
   }
 }
@@ -263,13 +261,13 @@ figure {
 @media screen and (max-width: 479px) {
   .gallery__item--10 {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 10;
+    grid-row-end: 9;
   }
   .gallery__item--10 img {
-    -o-object-position: left !important;
-       object-position: left !important;
+    -o-object-position: 10% !important;
+       object-position: 10% !important;
   }
 }
 
@@ -283,8 +281,12 @@ figure {
   .gallery__item--11 {
     grid-column-start: 3;
     grid-column-end: 5;
-    grid-row-start: 10;
+    grid-row-start: 9;
     grid-row-end: 17;
+  }
+  .gallery__item--11 img {
+    -o-object-position: left !important;
+       object-position: left !important;
   }
 }
 
@@ -302,7 +304,7 @@ figure {
   .gallery__item--12 {
     grid-column-start: 5;
     grid-column-end: 7;
-    grid-row-start: 10;
+    grid-row-start: 9;
     grid-row-end: 17;
   }
 }
@@ -315,10 +317,10 @@ figure {
 }
 @media screen and (max-width: 479px) {
   .gallery__item--13 {
-    grid-column-start: 4;
+    grid-column-start: 3;
     grid-column-end: 7;
     grid-row-start: 1;
-    grid-row-end: 10;
+    grid-row-end: 9;
   }
   .gallery__item--13 img {
     -o-object-position: left !important;
@@ -336,7 +338,7 @@ figure {
   .gallery__item--14 {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 10;
+    grid-row-start: 9;
     grid-row-end: 17;
   }
   .gallery__item--14 img {

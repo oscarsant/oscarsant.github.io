@@ -98,7 +98,7 @@ figure {
 
 	img {
 		background: #F1F4F7;
-		object-position: left;
+		// object-position: left;
 	}
 }
 
@@ -117,8 +117,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 1;
-		grid-row-end: 8;
+		grid-row-start: 13;
+		grid-row-end: 18;
 	}
 }
 
@@ -136,8 +136,8 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 8;
-		grid-row-end: 19;
+		grid-row-start: 1;
+		grid-row-end: 13;
 	}
 }
 
@@ -196,7 +196,7 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 4;
-		grid-row-start: 19;
+		grid-row-start: 18;
 		grid-row-end: 26;
 	}
 }
@@ -275,12 +275,12 @@ figure {
 
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
-		grid-column-end: 4;
+		grid-column-end: 3;
 		grid-row-start: 1;
-		grid-row-end: 10;
+		grid-row-end: 9;
 
 		img {
-			object-position: left !important;
+			object-position: 10% !important;
 		}
 	}
 }
@@ -294,8 +294,12 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 3;
 		grid-column-end: 5;
-		grid-row-start: 10;
+		grid-row-start: 9;
 		grid-row-end: 17;
+
+		img {
+			object-position: left !important;
+		}
 	}
 }
 
@@ -313,7 +317,7 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 5;
 		grid-column-end: 7;
-		grid-row-start: 10;
+		grid-row-start: 9;
 		grid-row-end: 17;
 
 	}
@@ -326,10 +330,10 @@ figure {
 	grid-row-end: 9;
 
 	@media screen and (max-width: $mobile) {
-		grid-column-start: 4;
+		grid-column-start: 3;
 		grid-column-end: 7;
 		grid-row-start: 1;
-		grid-row-end: 10;
+		grid-row-end: 9;
 
 		img {
 			object-position: left !important;
@@ -346,7 +350,7 @@ figure {
 	@media screen and (max-width: $mobile) {
 		grid-column-start: 1;
 		grid-column-end: 3;
-		grid-row-start: 10;
+		grid-row-start: 9;
 		grid-row-end: 17;
 
 		img {
