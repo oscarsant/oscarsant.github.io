@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="mylogo.svg" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Make Numbers</title>
+    <meta name="description"
+        content="A mobile-first finance app concept for shaping better numbers around income, investing, future projections, and different portfolio styles." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/make-numbers.css" />
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap">
+    </noscript>
+</head>
+
+<body class="numbers-page">
+    <nav class="numbers-nav" aria-label="Site navigation">
+        <a class="numbers-nav__back" href="index.html" aria-label="Back to home" title="Back to home">
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" focusable="false">
+                <path d="M15.75 6.77461H0.75L6.7998 0.75M6.7998 12.799L3.01855 9.03401" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+        <a class="numbers-nav__logo" href="index.html" aria-label="Oscar Santamariña home">
+            <img src="mylogo.svg" alt="Oscar Santamariña" />
+        </a>
+    </nav>
+
+    <!-- Income sources sheet -->
+    <div class="numbers-sheet" id="incomeSheet" role="dialog" aria-modal="true" aria-label="Add income source">
+        <div class="numbers-sheet__backdrop" id="incomeSheetBackdrop"></div>
+        <div class="numbers-sheet__drawer">
+            <div class="numbers-sheet__handle"></div>
+            <div class="numbers-sheet__head">
+                <span class="numbers-sheet__title">What kind of income?</span>
+                <button class="numbers-sheet__close" id="incomeSheetClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="numbers-sheet__grid" id="incomeSheetGrid">
+                <button class="numbers-cat-btn" type="button" data-type="employment">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="9" width="20" height="12" rx="2" />
+                            <path fill="currentColor" d="M16 9V7a2 2 0 00-2-2h-4a2 2 0 00-2 2v2h8z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Job</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="freelance">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="4" width="20" height="12" rx="2" />
+                            <path fill="currentColor" d="M0 18h24v1.5a1.5 1.5 0 01-1.5 1.5h-21A1.5 1.5 0 010 19.5z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Freelance</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="rental">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="4" y="2.5" width="13.5" height="19"
+                                rx="1" />
+                            <rect fill="currentColor" x="7.5" y="6" width="2.5" height="3" rx=".5" />
+                            <rect fill="currentColor" x="12" y="6" width="2.5" height="3" rx=".5" />
+                            <rect fill="currentColor" x="7.5" y="12" width="2.5" height="3" rx=".5" />
+                            <rect fill="currentColor" x="12" y="12" width="2.5" height="3" rx=".5" />
+                            <rect fill="currentColor" x="10" y="17.5" width="3.5" height="4" rx=".5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Rental</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="pension">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="3" y="6" width="18" height="15" rx="2" />
+                            <rect fill="currentColor" x="3" y="10" width="18" height="2.5" />
+                            <circle fill="currentColor" cx="8" cy="15.5" r="1.5" />
+                            <circle fill="currentColor" cx="12" cy="15.5" r="1.5" />
+                            <circle fill="currentColor" cx="16" cy="15.5" r="1.5" />
+                            <rect fill="currentColor" x="8" y="3.5" width="2" height="4" rx="1" />
+                            <rect fill="currentColor" x="14" y="3.5" width="2" height="4" rx="1" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Pension</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="withdrawal401k">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">401(k) Withdrawal</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="withdrawalIra">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">IRA Withdrawal</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="withdrawalRoth">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Roth Withdrawal</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="withdrawalBrokerage">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Brokerage Dist.</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="unemployment">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" fill-opacity=".35" cx="12" cy="7" r="5" />
+                            <path fill="currentColor" d="M3 21a9 9 0 1118 0H3z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Unemploy&shy;ment</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="ssdi">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M12 2L4 5.5v5.5c0 4.6 3.4 8.8 8 10.2 4.6-1.4 8-5.6 8-10.2V5.5z" />
+                            <circle fill="currentColor" cx="12" cy="9.5" r="2.5" />
+                            <path fill="currentColor" d="M8 17c0-2.2 1.8-4 4-4s4 1.8 4 4H8z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">SSDI</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="ssi">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M12 2L4 5.5v5.5c0 4.6 3.4 8.8 8 10.2 4.6-1.4 8-5.6 8-10.2V5.5z" />
+                            <path fill="currentColor"
+                                d="M12 16.5l-3.5-3.5c-.9-.9-.9-2.3 0-3.2.9-.9 2.3-.9 3.2 0l.3.3.3-.3c.9-.9 2.3-.9 3.2 0 .9.9.9 2.3 0 3.2z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">SSI</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="other">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" cx="5" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="12" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="19" cy="12" r="2.5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Other</span>
+                </button>
+            </div>
+            <div class="numbers-sheet__name-prompt" id="incomeNamePrompt" hidden>
+                <label class="numbers-sheet__name-label">What would you call it?</label>
+                <div class="numbers-sheet__name-row">
+                    <input class="numbers-sheet__name-input" id="incomeNameInput" type="text"
+                        placeholder="e.g. Side gig" maxlength="40" autocomplete="off" />
+                    <button class="numbers-sheet__name-confirm" id="incomeNameConfirm" type="button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spending sheet -->
+    <div class="numbers-sheet" id="spendingSheet" role="dialog" aria-modal="true" aria-label="Add spending category">
+        <div class="numbers-sheet__backdrop" id="spendingSheetBackdrop"></div>
+        <div class="numbers-sheet__drawer">
+            <div class="numbers-sheet__handle"></div>
+            <div class="numbers-sheet__head">
+                <span class="numbers-sheet__title">What do you spend on?</span>
+                <button class="numbers-sheet__close" id="spendingSheetClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="numbers-sheet__grid" id="spendingSheetGrid">
+                <button class="numbers-cat-btn" type="button" data-type="rent">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M20.5 10.5 12 4 3.5 10.5H5V21h5.5v-7h3v7H19V10.5z" />
+                            <rect fill="currentColor" x="9.5" y="14" width="5" height="7" rx=".5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Rent</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="food">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M6.5 9h11l-1.5 10H8L6.5 9z" />
+                            <path fill="currentColor" d="M9.5 9V7a2.5 2.5 0 015 0v2z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Food</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="transport">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M5 11l2-5.5h10L19 11z" />
+                            <path fill="currentColor" d="M2 11h20v6.5a1 1 0 01-1 1H3a1 1 0 01-1-1V11z" />
+                            <circle fill="currentColor" cx="7" cy="20.5" r="2" />
+                            <circle fill="currentColor" cx="17" cy="20.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Transport</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="utilities">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M14 2 5 14h7.5L10 22 21 10h-7.5z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Utilities</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="subscriptions">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" fill-opacity=".35" cx="12" cy="12" r="10" />
+                            <path fill="currentColor" d="M10 8.5l7.5 3.5-7.5 3.5z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Subscriptions</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="medical">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" fill-opacity=".35" cx="12" cy="12" r="10" />
+                            <rect fill="currentColor" x="10.5" y="7.5" width="3" height="9" />
+                            <rect fill="currentColor" x="7.5" y="10.5" width="9" height="3" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Medical</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="other">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" cx="5" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="12" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="19" cy="12" r="2.5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Other</span>
+                </button>
+            </div>
+            <div class="numbers-sheet__name-prompt" id="spendingNamePrompt" hidden>
+                <label class="numbers-sheet__name-label">What would you call it?</label>
+                <div class="numbers-sheet__name-row">
+                    <input class="numbers-sheet__name-input" id="spendingNameInput" type="text"
+                        placeholder="e.g. Gym membership" maxlength="40" autocomplete="off" />
+                    <button class="numbers-sheet__name-confirm" id="spendingNameConfirm" type="button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Debt sheet -->
+    <div class="numbers-sheet" id="debtSheet" role="dialog" aria-modal="true" aria-label="Add debt">
+        <div class="numbers-sheet__backdrop" id="debtSheetBackdrop"></div>
+        <div class="numbers-sheet__drawer">
+            <div class="numbers-sheet__handle"></div>
+            <div class="numbers-sheet__head">
+                <span class="numbers-sheet__title">What kind of debt?</span>
+                <button class="numbers-sheet__close" id="debtSheetClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="numbers-sheet__grid" id="debtSheetGrid">
+                <button class="numbers-cat-btn" type="button" data-type="creditcard">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="6" width="20" height="12" rx="2" />
+                            <rect fill="currentColor" x="2" y="10" width="20" height="3.5" />
+                            <rect fill="currentColor" x="5" y="15.5" width="5" height="1.5" rx=".75" />
+                            <rect fill="currentColor" x="15" y="15.5" width="4" height="1.5" rx=".75" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Credit Card</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="carloan">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M5 11l2-5.5h10L19 11z" />
+                            <path fill="currentColor" d="M2 11h20v6.5a1 1 0 01-1 1H3a1 1 0 01-1-1V11z" />
+                            <circle fill="currentColor" cx="7" cy="20.5" r="2" />
+                            <circle fill="currentColor" cx="17" cy="20.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Car Loan</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="studentloan">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M2.5 12 12 7.5 21.5 12 12 16.5z" />
+                            <path fill="currentColor" d="M7.5 14.5v4.5l4.5 2.5 4.5-2.5v-4.5l-4.5 2.5z" />
+                            <rect fill="currentColor" x="20" y="12" width="2" height="4.5" rx="1" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Student Loan</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="personalloan">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" fill-opacity=".35" cx="9" cy="7.5" r="4" />
+                            <path fill="currentColor" fill-opacity=".35" d="M3 21a6 6 0 0112 0H3z" />
+                            <rect fill="currentColor" x="16.5" y="11" width="6" height="9" rx="1" />
+                            <circle fill="currentColor" cx="19.5" cy="16" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Personal Loan</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="medical">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" fill-opacity=".35" cx="12" cy="12" r="10" />
+                            <rect fill="currentColor" x="10.5" y="7.5" width="3" height="9" />
+                            <rect fill="currentColor" x="7.5" y="10.5" width="9" height="3" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Medical Debt</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="heloc">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M20.5 10.5 12 4 3.5 10.5H5V21h5.5v-7h3v7H19V10.5z" />
+                            <rect fill="currentColor" x="9.5" y="14" width="5" height="7" rx=".5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">HELOC</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="bnpl">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="6" width="20" height="12" rx="2" />
+                            <rect fill="currentColor" x="2" y="10" width="20" height="3.5" />
+                            <rect fill="currentColor" x="5" y="15.5" width="5" height="1.5" rx=".75" />
+                            <rect fill="currentColor" x="15" y="15.5" width="4" height="1.5" rx=".75" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Buy Now Pay Later</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="other">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" cx="5" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="12" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="19" cy="12" r="2.5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Other</span>
+                </button>
+            </div>
+            <div class="numbers-sheet__name-prompt" id="debtNamePrompt" hidden>
+                <label class="numbers-sheet__name-label">What would you call it?</label>
+                <div class="numbers-sheet__name-row">
+                    <input class="numbers-sheet__name-input" id="debtNameInput" type="text"
+                        placeholder="e.g. Family loan" maxlength="40" autocomplete="off" />
+                    <button class="numbers-sheet__name-confirm" id="debtNameConfirm" type="button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assets sheet -->
+    <div class="numbers-sheet" id="assetsSheet" role="dialog" aria-modal="true" aria-label="Add asset">
+        <div class="numbers-sheet__backdrop" id="assetsSheetBackdrop"></div>
+        <div class="numbers-sheet__drawer">
+            <div class="numbers-sheet__handle"></div>
+            <div class="numbers-sheet__head">
+                <span class="numbers-sheet__title">What type of asset?</span>
+                <button class="numbers-sheet__close" id="assetsSheetClose" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="numbers-sheet__grid" id="assetsSheetGrid">
+                <button class="numbers-cat-btn" type="button" data-type="savings">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <ellipse fill="currentColor" fill-opacity=".35" cx="12" cy="8" rx="7.5" ry="2.5" />
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M4.5 8v3.5c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5V8" />
+                            <path fill="currentColor"
+                                d="M4.5 11.5v3.5c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-3.5c0 1.4-3.4 2.5-7.5 2.5S4.5 12.9 4.5 11.5z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Savings</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="k401">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">401(k)</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="realestate">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M20.5 10.5 12 4 3.5 10.5H5V21h5.5v-7h3v7H19V10.5z" />
+                            <rect fill="currentColor" x="9.5" y="14" width="5" height="7" rx=".5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Real Estate</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="brokerage">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Brokerage</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="roth">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Roth IRA</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="ira">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6" />
+                            <rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10" />
+                            <rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14" />
+                            <circle fill="currentColor" cx="4" cy="13" r="2" />
+                            <circle fill="currentColor" cx="12" cy="9" r="2" />
+                            <circle fill="currentColor" cx="19.5" cy="5.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">IRA</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="auto">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M5 11l2-5.5h10L19 11z" />
+                            <path fill="currentColor" d="M2 11h20v6.5a1 1 0 01-1 1H3a1 1 0 01-1-1V11z" />
+                            <circle fill="currentColor" cx="7" cy="20.5" r="2" />
+                            <circle fill="currentColor" cx="17" cy="20.5" r="2" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Vehicle</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="emergency">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35"
+                                d="M12 2L4 5.5v5.5c0 4.6 3.4 8.8 8 10.2 4.6-1.4 8-5.6 8-10.2V5.5z" />
+                            <rect fill="currentColor" x="10.5" y="8" width="3" height="6" rx="1.5" />
+                            <circle fill="currentColor" cx="12" cy="16.5" r="1.5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Emergency Fund</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="crypto">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M12 3 22 10.5 12 21 2 10.5z" />
+                            <path fill="currentColor" d="M12 3 22 10.5H2z" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Crypto</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="hsa">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" fill-opacity=".35" cx="12" cy="12" r="10" />
+                            <rect fill="currentColor" x="10.5" y="7.5" width="3" height="9" />
+                            <rect fill="currentColor" x="7.5" y="10.5" width="9" height="3" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">HSA</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="k529">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <path fill="currentColor" fill-opacity=".35" d="M2.5 12 12 7.5 21.5 12 12 16.5z" />
+                            <path fill="currentColor" d="M7.5 14.5v4.5l4.5 2.5 4.5-2.5v-4.5l-4.5 2.5z" />
+                            <rect fill="currentColor" x="20" y="12" width="2" height="4.5" rx="1" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">529 Plan</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="pension">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <rect fill="currentColor" fill-opacity=".35" x="3" y="6" width="18" height="15" rx="2" />
+                            <rect fill="currentColor" x="3" y="10" width="18" height="2.5" />
+                            <circle fill="currentColor" cx="8" cy="15.5" r="1.5" />
+                            <circle fill="currentColor" cx="12" cy="15.5" r="1.5" />
+                            <circle fill="currentColor" cx="16" cy="15.5" r="1.5" />
+                            <rect fill="currentColor" x="8" y="3.5" width="2" height="4" rx="1" />
+                            <rect fill="currentColor" x="14" y="3.5" width="2" height="4" rx="1" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Pension</span>
+                </button>
+                <button class="numbers-cat-btn" type="button" data-type="other">
+                    <span class="numbers-cat-btn__icon"><svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20"
+                            height="20" aria-hidden="true">
+                            <circle fill="currentColor" cx="5" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="12" cy="12" r="2.5" />
+                            <circle fill="currentColor" cx="19" cy="12" r="2.5" />
+                        </svg></span>
+                    <span class="numbers-cat-btn__label">Other</span>
+                </button>
+            </div>
+            <div class="numbers-sheet__name-prompt" id="assetsNamePrompt" hidden>
+                <label class="numbers-sheet__name-label">What would you call it?</label>
+                <div class="numbers-sheet__name-row">
+                    <input class="numbers-sheet__name-input" id="assetsNameInput" type="text"
+                        placeholder="e.g. Collectibles" maxlength="40" autocomplete="off" />
+                    <button class="numbers-sheet__name-confirm" id="assetsNameConfirm" type="button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="numbers-app" aria-label="Make Numbers">
+        <div class="numbers-app__layout">
+            <div class="numbers-phone-wrap">
+                <div class="numbers-phone">
+                    <!-- ── Shared hero (always visible) ── -->
+                    <div class="numbers-card numbers-card--hero">
+                        <div class="numbers-hero-split">
+                            <div class="numbers-hero-col">
+                                <div class="numbers-section-label">Net worth today</div>
+                                <div class="numbers-hero-value" id="netWorthHeroValue"></div>
+                            </div>
+                            <div class="numbers-hero-divider"></div>
+                            <div class="numbers-hero-col">
+                                <div class="numbers-section-label">Projected <span id="projectionYearsLabel">10
+                                        yrs</span></div>
+                                <div class="numbers-hero-value numbers-hero-value--projected" id="projectedValue"></div>
+                            </div>
+                        </div>
+                        <div class="numbers-hero-cashflow">
+                            <div class="numbers-cashflow-row">
+                                <div class="numbers-cashflow-item">
+                                    <div class="numbers-section-label">Income</div>
+                                    <div class="numbers-cashflow-value" id="totalIncomeValue"></div>
+                                </div>
+                                <div class="numbers-cashflow-item">
+                                    <div class="numbers-section-label">Costs</div>
+                                    <div class="numbers-cashflow-value numbers-cashflow-value--costs"
+                                        id="expensesDisplayValue"></div>
+                                </div>
+                                <div class="numbers-cashflow-divider"></div>
+                                <div class="numbers-cashflow-item numbers-cashflow-item--free">
+                                    <div class="numbers-section-label">Free / mo</div>
+                                    <div class="numbers-cashflow-value numbers-cashflow-value--free" id="freeCashValue">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Tab nav + year picker (shared) ── -->
+                    <div class="numbers-bottom-nav numbers-bottom-nav--top">
+                        <button class="numbers-nav-btn is-active" data-tab="tabInvest">Invest</button>
+                        <button class="numbers-nav-btn" data-tab="tabIncome">Income</button>
+                        <div class="numbers-year-picker" id="yearPicker">
+                            <button class="numbers-year-btn" data-years="1">1Y</button>
+                            <button class="numbers-year-btn" data-years="5">5Y</button>
+                            <button class="numbers-year-btn is-active" data-years="10">10Y</button>
+                            <button class="numbers-year-btn" data-years="20">20Y</button>
+                            <button class="numbers-year-btn" data-years="30">30Y</button>
+                        </div>
+                    </div>
+
+                    <!-- ── Tab: Invest ── -->
+                    <div class="numbers-tab-view is-active" id="tabInvest">
+                        <div class="numbers-card">
+                            <div class="numbers-bars" id="projectionBars"></div>
+                            <div class="numbers-proj-detail" id="projectionDetail"></div>
+                        </div>
+                    </div>
+
+                    <!-- ── Tab: Income vs Spending ── -->
+                    <div class="numbers-tab-view" id="tabIncome">
+                        <div id="planAnalysis"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="numbers-panels">
+                <div class="numbers-panel">
+                    <div class="numbers-panel__head">
+                        <div class="numbers-panel__title">Income</div>
+                        <div class="numbers-panel__total" id="incomePanelTotal"></div>
+                    </div>
+                    <div id="sourcesList" class="numbers-sources"></div>
+                    <button class="numbers-panel-add-btn" id="openIncomeSheet" type="button">+ Add income
+                        source</button>
+                </div>
+
+                <div class="numbers-panel">
+                    <div class="numbers-panel__head">
+                        <div class="numbers-panel__title">Spending</div>
+                        <div class="numbers-panel__total" id="spendingPanelTotal"></div>
+                    </div>
+                    <div id="expensesList" class="numbers-sources"></div>
+                    <button class="numbers-panel-add-btn" id="openSpendingSheet" type="button">+ Add spending
+                        category</button>
+                </div>
+
+                <div class="numbers-panel">
+                    <div class="numbers-panel__head">
+                        <div class="numbers-panel__title">Assets</div>
+                        <div class="numbers-panel__total" id="assetsPanelTotal"></div>
+                    </div>
+                    <div id="assetsList" class="numbers-sources"></div>
+                    <button class="numbers-panel-add-btn" id="openAssetsSheet" type="button">+ Add asset</button>
+                </div>
+
+                <div class="numbers-panel">
+                    <div class="numbers-panel__head">
+                        <div class="numbers-panel__title">Debt</div>
+                        <div class="numbers-panel__total numbers-panel__total--debt" id="debtPanelTotal"></div>
+                    </div>
+                    <div id="debtList" class="numbers-sources"></div>
+                    <button class="numbers-panel-add-btn" id="openDebtSheet" type="button">+ Add debt</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="numbers-footer">
+        <p class="numbers-footer__credits">| Make Numbers | Mobile-first concept | Built May 2026 |</p>
+    </footer>
+    <script src="js/make-numbers.js"></script>
+</body>
+
+</html>
