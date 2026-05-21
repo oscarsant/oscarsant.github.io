@@ -14,7 +14,7 @@
 	--numbers-accent: #111111;
 	--numbers-accent-deep: #444444;
 	--numbers-warm: #555555;
-	padding: 72px 12px 72px;
+	padding: 20px 20px 72px;
 	background: transparent;
 	color: var(--numbers-ink);
 }
@@ -24,11 +24,6 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 16px 24px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
 	background: rgba(255, 255, 255, 0.92);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	backdrop-filter: blur(12px);
@@ -166,7 +161,7 @@
 
 .numbers-phone {
 	width: min(100%, 390px);
-	padding: 24px;
+	padding: 0;
 	background: none;
 	border: none;
 	box-shadow: none;
@@ -1894,13 +1889,14 @@
 
 
 @media screen and (min-width: 768px) {
-	.numbers-app {
-		padding: 84px 20px 84px;
-	}
 
 	.numbers-app__layout {
 		grid-template-columns: minmax(340px, 410px) minmax(0, 1fr);
 		align-items: start;
+	}
+
+	.numbers-phone {
+		padding: 24px;
 	}
 
 	.numbers-phone-wrap {
@@ -1918,9 +1914,6 @@
 }
 
 @media screen and (min-width: 1080px) {
-	.numbers-app {
-		padding: 88px 24px 88px;
-	}
 
 	.numbers-panel {
 		padding: 28px;
