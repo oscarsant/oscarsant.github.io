@@ -45,12 +45,8 @@
   --numbers-muted: rgba(20, 20, 20, 0.56);
   --numbers-border: rgba(0, 0, 0, 0.08);
   --numbers-panel: #ffffff;
-  --numbers-panel-soft: #ffffff;
-  --numbers-phone: #111111;
   --numbers-accent: #111111;
-  --numbers-accent-deep: #444444;
-  --numbers-warm: #555555;
-  padding: 20px 20px 72px;
+  padding: 20px 16px 72px;
   background: transparent;
   color: var(--numbers-ink);
 }
@@ -71,7 +67,7 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
-  border: 1.5px solid rgba(0, 0, 0, 0.14);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
   border-radius: 999px;
   color: #111111;
   line-height: 0;
@@ -86,7 +82,7 @@
 .numbers-nav__back:hover {
   opacity: 0.72;
   transform: translateY(-2px);
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .numbers-nav__logo {
@@ -115,7 +111,7 @@
 .numbers-app__intro,
 .numbers-app__hero-card,
 .numbers-panel {
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
@@ -127,9 +123,23 @@
 .numbers-app__intro,
 .numbers-app__hero-card,
 .numbers-panel {
-  padding: 20px;
-  border-radius: 24px;
+  position: relative;
+  padding: 16px;
+  border-radius: 16px;
   background: var(--numbers-panel);
+}
+
+body.is-reordering::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.numbers-panel.is-reordering {
+  z-index: 11;
 }
 
 .numbers-app__kicker,
@@ -141,8 +151,8 @@
   flex-wrap: wrap;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
   color: rgba(0, 0, 0, 0.45);
 }
 
@@ -150,7 +160,7 @@
   padding: 7px 11px;
   margin-bottom: 18px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.08);
   color: #111111;
   box-shadow: none;
 }
@@ -224,7 +234,7 @@
 
 .numbers-hero-divider {
   width: 1px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.08);
   margin: 4px 16px;
   flex-shrink: 0;
 }
@@ -232,12 +242,13 @@
 .numbers-hero-col {
   flex: 1;
   min-width: 0;
+  text-align: center;
 }
 
 .numbers-hero-value {
   margin-top: 8px;
-  font-size: clamp(16px, 5.5vw, 32px);
-  font-weight: 800;
+  font-size: clamp(16px, 7vw, 32px);
+  font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.03em;
   word-break: break-all;
@@ -246,6 +257,9 @@
 
 .numbers-hero-value--projected {
   color: #1a7a4a;
+}
+.numbers-hero-value--projected.is-negative {
+  color: #dc2626;
 }
 
 .numbers-hero-cashflow {
@@ -280,18 +294,9 @@
 .numbers-card__title {
   margin-top: 6px;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   color: #111111;
-}
-
-.numbers-cashflow-card {
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  border-radius: 22px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  padding: 14px 16px;
-  margin: 12px 0;
 }
 
 .numbers-cashflow-row {
@@ -303,35 +308,44 @@
 .numbers-cashflow-item {
   flex: 1;
   min-width: 0;
+  text-align: center;
 }
 
 .numbers-cashflow-item--free {
-  flex: 1.1;
+  flex: 1;
 }
 
 .numbers-cashflow-divider {
   width: 1px;
   height: 36px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.08);
   margin: 0 14px;
   flex-shrink: 0;
 }
 
 .numbers-cashflow-value {
   margin-top: 5px;
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1.15;
-  color: #111;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.numbers-cashflow-value--income {
+  color: #1a7a4a;
+}
 .numbers-cashflow-value--costs {
-  color: rgba(0, 0, 0, 0.55);
+  color: #dc2626;
 }
 .numbers-cashflow-value--free {
-  font-size: 19px;
+  color: #111;
+}
+.numbers-cashflow-value--free.is-positive {
+  color: #1a7a4a;
+}
+.numbers-cashflow-value--free.is-negative {
+  color: #dc2626;
 }
 
 .numbers-bars {
@@ -361,7 +375,7 @@
 }
 
 .numbers-chart-label {
-  font-size: 11px;
+  font-size: 10px;
   fill: rgba(0, 0, 0, 0.45);
 }
 
@@ -372,7 +386,7 @@
 .numbers-proj-detail {
   margin-top: 16px;
   padding-top: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .numbers-detail-header {
@@ -380,7 +394,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.45);
   margin-bottom: 10px;
 }
 
@@ -390,7 +404,7 @@
   padding: 8px 0;
 }
 .numbers-detail-row + .numbers-detail-row {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .numbers-detail-top {
@@ -415,11 +429,11 @@
 
 .numbers-detail-meta {
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-detail-draw {
-  color: #c0392b;
+  color: #dc2626;
 }
 
 .numbers-detail-paydown {
@@ -435,18 +449,18 @@
 }
 
 .numbers-detail-projected {
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
   color: #111;
 }
 
 .numbers-detail-delta {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 400;
   color: #1a7a4a;
 }
 .numbers-detail-delta--neg {
-  color: #c0392b;
+  color: #dc2626;
 }
 
 .numbers-detail-debt-row {
@@ -454,27 +468,42 @@
   justify-content: space-between;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
   padding-top: 8px;
   margin-top: 4px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .numbers-detail-empty {
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.45);
   padding: 4px 0;
 }
 
 .numbers-year-picker {
+  position: relative;
   display: flex;
   gap: 2px;
-  background: rgba(0, 0, 0, 0.06);
+  background: #e8e8e8;
   border-radius: 10px;
   padding: 3px;
 }
 
+.numbers-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), width 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .numbers-year-btn {
+  position: relative;
+  z-index: 1;
   border: none;
   background: transparent;
   border-radius: 7px;
@@ -483,12 +512,10 @@
   color: rgba(0, 0, 0, 0.45);
   padding: 4px 7px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition: color 0.15s;
 }
 .numbers-year-btn.is-active {
-  background: #fff;
   color: #111;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 .numbers-year-btn:hover:not(.is-active) {
   color: #111;
@@ -510,6 +537,9 @@
 }
 .numbers-tab-view.is-active {
   display: block;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .numbers-plan-hint {
@@ -517,39 +547,47 @@
   padding: 8px;
   text-align: center;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.32);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-bottom-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
   padding: 10px 0 6px;
 }
 
 .numbers-bottom-nav--top {
-  padding: 8px 0 4px;
+  padding: 0 12px 0;
+  margin-bottom: -14px;
+  margin-top: 16px;
 }
-.numbers-bottom-nav--top .numbers-year-picker {
+.numbers-bottom-nav--top .numbers-year-picker:first-child {
+  flex: 1;
+}
+.numbers-bottom-nav--top .numbers-year-picker:last-child {
   margin-left: auto;
 }
 
 .numbers-nav-btn {
-  padding: 7px 14px;
-  border-radius: 10px;
+  position: relative;
+  z-index: 1;
   border: none;
   background: transparent;
-  color: rgba(0, 0, 0, 0.38);
-  font-size: 13px;
+  border-radius: 7px;
+  font-size: 11px;
   font-weight: 700;
+  color: rgba(0, 0, 0, 0.45);
+  padding: 4px 7px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-  flex-shrink: 0;
+  transition: color 0.15s;
+  flex: 1;
 }
 .numbers-nav-btn.is-active {
-  background: #fff;
   color: #111111;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.numbers-nav-btn:hover:not(.is-active) {
+  color: #111;
 }
 
 .numbers-future-card {
@@ -557,7 +595,7 @@
   align-items: center;
   gap: 12px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .numbers-future-card:last-child {
   border-bottom: none;
@@ -577,14 +615,14 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   gap: 6px;
 }
 .numbers-future-card .numbers-future-sub {
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(0, 0, 0, 0.45);
   margin-top: 2px;
 }
 .numbers-future-card .numbers-future-when {
@@ -599,10 +637,10 @@
   display: inline-block;
   padding: 1px 6px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.08);
   font-size: 11px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.45);
 }
 .numbers-future-badge--done {
   background: #d4f7e4;
@@ -628,7 +666,7 @@
   padding: 24px 0;
   text-align: center;
   font-size: 13px;
-  color: rgba(0, 0, 0, 0.32);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-analysis {
@@ -647,7 +685,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-analysis__legend {
@@ -655,7 +693,7 @@
   align-items: center;
   gap: 8px;
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-dot {
@@ -687,12 +725,12 @@
   grid-template-columns: 36px 1fr 1fr 1fr;
   gap: 4px;
   padding: 4px 0 2px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.45);
   text-align: right;
 }
 .numbers-plan-yr-hdr span:first-child {
@@ -704,13 +742,13 @@
   grid-template-columns: 36px 1fr 1fr 1fr;
   gap: 4px;
   padding: 5px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 12px;
   text-align: right;
 }
 
 .numbers-plan-yr-label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.45);
   text-align: left;
@@ -718,7 +756,7 @@
 
 .numbers-plan-yr-inc {
   color: rgba(22, 163, 74, 0.9);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .numbers-plan-yr-exp {
@@ -726,7 +764,7 @@
 }
 
 .numbers-plan-yr-free {
-  font-weight: 700;
+  font-weight: 400;
 }
 .numbers-plan-yr-free.is-pos {
   color: rgba(22, 163, 74, 0.9);
@@ -740,7 +778,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.45);
   margin: 14px 0 6px;
   padding-top: 12px;
   display: flex;
@@ -761,12 +799,12 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-freecash__val {
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 400;
   color: #0a8a4d;
   line-height: 1.1;
   margin: 2px 0;
@@ -774,7 +812,7 @@
 
 .numbers-plan-freecash__sub {
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-srcs {
@@ -797,17 +835,17 @@
 .numbers-plan-src-name {
   font-size: 11px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-src-pct {
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-src-bar-wrap {
   height: 4px;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 4px;
@@ -829,7 +867,7 @@
 
 .numbers-plan-src-detail {
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(0, 0, 0, 0.45);
 }
 .numbers-plan-src-detail strong {
   color: #111;
@@ -860,7 +898,7 @@
 .numbers-plan-exp-name {
   font-size: 11px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-plan-exp-bar {
@@ -883,9 +921,9 @@
   display: grid;
   grid-template-columns: 42px 1fr 1fr 1fr;
   gap: 4px;
-  padding: 5px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-  font-size: 12px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 11px;
   text-align: center;
 }
 .numbers-plan-amort-row.is-payoff {
@@ -914,55 +952,21 @@
   font-weight: 600;
 }
 
-.numbers-future-sparkline {
-  display: block;
-  width: 100%;
-  height: 36px;
-  color: rgba(0, 0, 0, 0.22);
-  margin: 6px 0 6px;
-  overflow: visible;
-}
-
-.numbers-future-ssdi-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.numbers-future-ssdi-cell {
-  flex: 1;
-  text-align: center;
-}
-
-.numbers-future-ssdi-yr {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: rgba(0, 0, 0, 0.32);
-}
-
-.numbers-future-ssdi-val {
-  font-size: 12px;
-  font-weight: 800;
-  color: #111;
-  margin-top: 2px;
-}
-
 .numbers-future-amort-chart {
   display: block;
   width: 100%;
   height: 84px;
-  margin: 8px 0 4px;
+  margin: 12px 0 8px;
   overflow: visible;
 }
 
 .numbers-future-amort-legend {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.38);
-  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 12px;
 }
 
 .numbers-future-amort-dot {
@@ -989,55 +993,21 @@
   display: grid;
   grid-template-columns: 42px 1fr 1fr 1fr;
   gap: 4px;
-  padding: 4px 0 2px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 11px;
-  font-weight: 700;
+  padding: 4px 0 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 10px;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.45);
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1;
+  background: #f4f4f4;
 }
 .numbers-future-amort-hdr span:first-child {
   text-align: left;
-}
-
-.numbers-future-amort-row {
-  display: grid;
-  grid-template-columns: 42px 1fr 1fr 1fr;
-  gap: 4px;
-  padding: 5px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-  font-size: 12px;
-  text-align: right;
-}
-.numbers-future-amort-row--payoff {
-  color: #0a8a4d;
-}
-
-.numbers-future-amort-yr {
-  font-size: 11px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.45);
-  text-align: left;
-}
-
-.numbers-future-amort-int {
-  color: rgba(220, 38, 38, 0.85);
-  font-weight: 600;
-}
-
-.numbers-future-amort-princ {
-  color: rgba(22, 163, 74, 0.9);
-  font-weight: 600;
-}
-
-.numbers-future-amort-val {
-  color: rgb(59, 130, 246);
-  font-weight: 600;
 }
 
 .numbers-panel__title {
@@ -1051,9 +1021,6 @@
 .numbers-range {
   width: 100%;
   margin-top: 8px;
-}
-
-.numbers-range {
   accent-color: var(--numbers-accent);
 }
 
@@ -1095,11 +1062,11 @@
 }
 
 .numbers-split-bar__label {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-split-bar__amount {
@@ -1141,11 +1108,11 @@
 }
 
 .numbers-split-precise__label {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
   white-space: nowrap;
 }
 
@@ -1165,11 +1132,11 @@
 
 .numbers-panel__total {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.45);
 }
 .numbers-panel__total--debt {
-  color: #c0392b;
+  color: #dc2626;
 }
 
 .numbers-panel-add-btn {
@@ -1180,7 +1147,7 @@
   margin-top: 14px;
   padding: 14px;
   border-radius: 16px;
-  border: 1.5px dashed rgba(0, 0, 0, 0.15);
+  border: 1.5px dashed rgba(0, 0, 0, 0.08);
   background: transparent;
   color: rgba(0, 0, 0, 0.45);
   font-family: inherit;
@@ -1190,9 +1157,39 @@
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
 }
 .numbers-panel-add-btn:hover {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.28);
   color: #111111;
+}
+
+.numbers-reorder-btn {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.45);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-align: center;
+  transition: color 150ms ease, background 150ms ease;
+}
+.numbers-reorder-btn:hover {
+  color: #111;
+}
+.numbers-reorder-btn.is-active {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.numbers-sources:not(:empty) ~ .numbers-reorder-btn {
+  display: block;
+}
+
+.numbers-sources.is-reordering ~ .numbers-panel-add-btn {
+  display: none;
 }
 
 .numbers-sheet {
@@ -1242,7 +1239,7 @@
 .numbers-sheet__handle {
   width: 36px;
   height: 4px;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 999px;
   margin: 0 auto 18px;
 }
@@ -1273,7 +1270,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background: transparent;
   color: rgba(0, 0, 0, 0.45);
   font-size: 18px;
@@ -1282,7 +1279,7 @@
   transition: background 150ms ease;
 }
 .numbers-sheet__close:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.08);
   color: #111111;
 }
 
@@ -1295,13 +1292,13 @@
 .numbers-sheet__name-prompt {
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .numbers-sheet__name-label {
   display: block;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.45);
@@ -1317,7 +1314,7 @@
 .numbers-sheet__name-input {
   flex: 1;
   height: 44px;
-  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   padding: 0 14px;
   font-size: 15px;
@@ -1328,10 +1325,10 @@
   transition: border-color 150ms ease;
 }
 .numbers-sheet__name-input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.45);
 }
 .numbers-sheet__name-input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.45);
 }
 .numbers-sheet__name-input:focus {
   border-color: #111111;
@@ -1362,7 +1359,7 @@
   gap: 8px;
   padding: 16px 8px 14px;
   border-radius: 20px;
-  border: 1.5px solid rgba(0, 0, 0, 0.07);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
   background: #f7f7f7;
   cursor: pointer;
   transition: background 140ms ease, border-color 140ms ease, transform 120ms ease;
@@ -1370,7 +1367,7 @@
 }
 .numbers-cat-btn:hover, .numbers-cat-btn:active {
   background: #eeeeee;
-  border-color: rgba(0, 0, 0, 0.14);
+  border-color: rgba(0, 0, 0, 0.08);
   transform: scale(0.97);
 }
 
@@ -1378,7 +1375,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.45);
 }
 .numbers-cat-btn__icon .numbers-cat-icon {
   width: 24px;
@@ -1386,9 +1383,9 @@
 }
 
 .numbers-cat-btn__label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(0, 0, 0, 0.45);
   text-align: center;
   line-height: 1.3;
   letter-spacing: 0.01em;
@@ -1424,13 +1421,12 @@
   display: grid;
   gap: 8px;
   margin-top: 12px;
-  padding-left: 20px;
 }
 
 .numbers-source-item {
-  padding: 12px 14px;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background: #fafafa;
   cursor: pointer;
   transition: border-color 150ms ease;
@@ -1445,7 +1441,7 @@
   display: none;
 }
 .numbers-source-item.is-unlocked {
-  border-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.08);
   cursor: default;
 }
 .numbers-source-item.is-unlocked .numbers-range {
@@ -1475,6 +1471,10 @@
   pointer-events: none;
 }
 
+.numbers-source-item__body {
+  transition: height 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .numbers-source-item__header {
   display: flex;
   align-items: center;
@@ -1482,21 +1482,46 @@
 }
 
 .numbers-drag-handle {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: -22px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 24px;
   cursor: grab;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.45);
   touch-action: none;
+  border-right: 1px solid #e9e9e9;
+  margin-right: 12px;
+  width: 32px;
+  height: 20px;
+  position: relative;
+}
+.numbers-drag-handle::after {
+  content: "";
+  position: absolute;
+  inset: -12px -8px;
 }
 .numbers-drag-handle:active {
   cursor: grabbing;
+}
+
+.numbers-sources.is-reordering .numbers-drag-handle {
+  display: flex;
+}
+.numbers-sources.is-reordering .numbers-source-item {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+.numbers-sources.is-reordering .numbers-drag-handle {
+  pointer-events: auto;
+  filter: none;
+}
+.numbers-sources.is-reordering .numbers-source-item__chevron {
+  display: none;
+}
+.numbers-sources.is-reordering .numbers-cat-icon {
+  display: none;
 }
 
 .numbers-source-item {
@@ -1527,7 +1552,7 @@
 .numbers-source-item__header-right {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
@@ -1539,8 +1564,8 @@
 
 .numbers-item-input-prefix {
   font-size: 12px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.45);
+  font-weight: 400;
+  color: black;
   line-height: 1;
 }
 .numbers-item-input-prefix--owed {
@@ -1550,7 +1575,7 @@
 .numbers-item-input {
   border: none;
   background: transparent;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: #111111;
   text-align: right;
@@ -1566,29 +1591,29 @@
   margin: 0;
 }
 .numbers-item-input:focus {
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
 }
 .numbers-item-input--owed {
-  color: #c0392b;
+  color: #dc2626;
 }
 
 .numbers-source-item__label {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 12px;
   flex: 1;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.45);
   min-width: 0;
   overflow: hidden;
 }
 
 .numbers-cat-icon {
   flex-shrink: 0;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
   display: block;
   width: 20px;
   height: 20px;
@@ -1601,9 +1626,9 @@
   width: 28px;
   height: 28px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background: transparent;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.45);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 150ms ease, color 150ms ease;
@@ -1612,7 +1637,6 @@
   transition: transform 200ms ease;
 }
 .numbers-source-item__chevron:hover {
-  background: rgba(0, 0, 0, 0.06);
   color: #111111;
 }
 
@@ -1626,7 +1650,7 @@
   border-radius: 10px;
   border: none;
   background: transparent;
-  color: #c0392b;
+  color: #dc2626;
   font-family: inherit;
   font-size: 13px;
   font-weight: 700;
@@ -1638,17 +1662,14 @@
 }
 
 .numbers-sources-empty {
+  display: none;
   margin: 12px 0 0;
   padding: 16px;
   text-align: center;
   font-size: 13px;
-  color: rgba(0, 0, 0, 0.35);
-  border: 1.5px dashed rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.45);
+  border: 1.5px dashed rgba(0, 0, 0, 0.08);
   border-radius: 16px;
-}
-
-.numbers-sources-empty {
-  display: none;
 }
 
 .numbers-source-item--equity {
@@ -1663,11 +1684,11 @@
 }
 
 .numbers-equity-row__label {
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 10px;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-equity-row__value {
@@ -1676,7 +1697,7 @@
   color: #111111;
 }
 .numbers-equity-row__value--owed {
-  color: #c0392b;
+  color: #dc2626;
 }
 
 .numbers-equity-summary {
@@ -1685,17 +1706,17 @@
   justify-content: space-between;
   margin-top: 12px;
   padding-top: 10px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-equity-badge {
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 400;
   color: #111111;
   letter-spacing: 0;
   text-transform: none;
@@ -1744,8 +1765,8 @@
   font-size: 12px;
   font-weight: 600;
   color: #111;
-  background: rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 6px;
   padding: 3px 6px;
   outline: none;
@@ -1753,43 +1774,13 @@
   cursor: pointer;
 }
 .numbers-link-select:focus {
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .numbers-range--growth {
   height: 2px;
   opacity: 0.5;
   margin-top: 4px;
-}
-
-.numbers-source-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 9px 0;
-  font-size: 13px;
-  color: var(--numbers-muted);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-.numbers-source-row:last-child {
-  border-bottom: none;
-}
-.numbers-source-row--empty {
-  color: rgba(0, 0, 0, 0.35);
-  font-style: italic;
-}
-
-.numbers-portfolio-params {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.38);
 }
 
 .numbers-footer {
@@ -1801,13 +1792,13 @@
 .numbers-footer__credits {
   margin: 0;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .numbers-version {
   margin: 4px 0 0;
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.45);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1817,7 +1808,7 @@
     align-items: start;
   }
   .numbers-phone {
-    padding: 24px;
+    padding: 20px;
   }
   .numbers-phone-wrap {
     position: sticky;
@@ -1827,12 +1818,12 @@
     gap: 20px;
   }
   .numbers-panel {
-    padding: 24px;
+    padding: 20px;
   }
 }
 @media screen and (min-width: 1080px) {
   .numbers-panel {
-    padding: 28px;
+    padding: 20px;
   }
   .numbers-panel__body {
     font-size: 16px;

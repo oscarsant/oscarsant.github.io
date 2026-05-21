@@ -265,12 +265,9 @@
 	const totalIncomeValueEl = document.getElementById("totalIncomeValue");
 	const expensesDisplayEl = document.getElementById("expensesDisplayValue");
 	const freeCashEl = document.getElementById("freeCashValue");
-	const netWorthEl = null; // removed from mini-grid; now in hero
-	const projectionBarsEl = document.getElementById("projectionBars");
-	const projectionDetailEl = document.getElementById("projectionDetail");
-	const yearPickerEl = document.getElementById("yearPicker");
-	const futureMilestonesEl = document.getElementById("futureMilestones");
-	const planAnalysisEl = document.getElementById("planAnalysis");
+		const projectionBarsEl = document.getElementById("projectionBars");
+		const projectionDetailEl = document.getElementById("projectionDetail");
+		const yearPickerEl = document.getElementById("yearPicker");
 
 	// ─── Panel DOM refs ──────────────────────────────────────────────────────
 
@@ -463,16 +460,32 @@
 		}, 0);
 	}
 
+	// ─── Scroll lock ─────────────────────────────────────────────────────────
+
+	function _blockScroll(e) {
+		e.preventDefault();
+	}
+
+	function lockScroll() {
+		window.addEventListener("wheel", _blockScroll, { passive: false });
+		window.addEventListener("touchmove", _blockScroll, { passive: false });
+	}
+
+	function unlockScroll() {
+		window.removeEventListener("wheel", _blockScroll);
+		window.removeEventListener("touchmove", _blockScroll);
+	}
+
 	// ─── Sheet control ───────────────────────────────────────────────────────
 
 	function openSheet(sheet) {
 		sheet.classList.add("is-open");
-		document.body.style.overflow = "hidden";
+		lockScroll();
 	}
 
 	function closeSheet(sheet) {
 		sheet.classList.remove("is-open");
-		document.body.style.overflow = "";
+		unlockScroll();
 		// Reset any visible name prompt inside this sheet
 		var prompt = sheet.querySelector(".numbers-sheet__name-prompt");
 		var input = sheet.querySelector(".numbers-sheet__name-input");
@@ -616,7 +629,7 @@
 	// ─── Render helpers ──────────────────────────────────────────────────────
 
 	var DRAG_HANDLE_SVG =
-		'<span class="numbers-drag-handle" draggable="true" aria-label="Drag to reorder">' +
+		'<span class="numbers-drag-handle" aria-label="Drag to reorder">' +
 		'<svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true">' +
 		'<circle cx="3" cy="3" r="1.5" fill="currentColor"/>' +
 		'<circle cx="3" cy="8" r="1.5" fill="currentColor"/>' +
@@ -715,6 +728,7 @@
 			'" aria-label="Expand"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
 			"</div>" +
 			"</div>" +
+			'<div class="numbers-source-item__body">' +
 			'<input class="numbers-range" type="range" min="0" max="' +
 			cfg.max +
 			'" step="' +
@@ -729,6 +743,7 @@
 			'<button class="numbers-source-item__delete" type="button" data-remove="' +
 			item.id +
 			'" aria-label="Delete">Delete</button>' +
+			"</div>" +
 			"</div>"
 		);
 	}
@@ -772,6 +787,7 @@
 			'" aria-label="Expand"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
 			"</div>" +
 			"</div>" +
+			'<div class="numbers-source-item__body">' +
 			'<input class="numbers-range" type="range" min="0" max="' +
 			cfg.max +
 			'" step="' +
@@ -854,6 +870,7 @@
 			'<button class="numbers-source-item__delete" type="button" data-remove="' +
 			item.id +
 			'" aria-label="Delete">Delete</button>' +
+			"</div>" +
 			"</div>"
 		);
 	}
@@ -887,6 +904,7 @@
 			'" aria-label="Expand"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
 			"</div>" +
 			"</div>" +
+			'<div class="numbers-source-item__body">' +
 			// Value row
 			'<div class="numbers-equity-row">' +
 			'<span class="numbers-equity-row__label">Value</span>' +
@@ -966,6 +984,7 @@
 			'<button class="numbers-source-item__delete" type="button" data-remove="' +
 			item.id +
 			'" aria-label="Delete">Delete</button>' +
+			"</div>" +
 			"</div>"
 		);
 	}
@@ -989,13 +1008,53 @@
 				btn.addEventListener("click", function (e) {
 					e.stopPropagation();
 					var card = btn.closest(".numbers-source-item");
-					card.classList.toggle("is-unlocked");
+					var body = card.querySelector(".numbers-source-item__body");
+					var isOpen = card.classList.contains("is-unlocked");
+					if (!isOpen) {
+						// Opening: add class first so children get display:block/flex,
+						// then animate height from 0 → scrollHeight
+						card.classList.add("is-unlocked");
+						body.style.overflow = "hidden";
+						body.style.height = "0px";
+						body.offsetHeight; // force reflow
+						body.style.height = body.scrollHeight + "px";
+						body.addEventListener(
+							"transitionend",
+							function fin() {
+								body.style.height = "";
+								body.style.overflow = "";
+								body.removeEventListener("transitionend", fin);
+							},
+							{ once: true },
+						);
+					} else {
+						// Closing: capture height before removing class so display:none
+						// doesn't collapse children ahead of the transition
+						var h = body.scrollHeight;
+						body.style.overflow = "hidden";
+						body.style.height = h + "px";
+						body.offsetHeight; // force reflow
+						card.classList.remove("is-unlocked");
+						body.style.height = "0px";
+						body.addEventListener(
+							"transitionend",
+							function fin() {
+								body.style.height = "";
+								body.style.overflow = "";
+								body.removeEventListener("transitionend", fin);
+							},
+							{ once: true },
+						);
+					}
 				});
 			});
 	}
 
 	function attachDragReorder(container, arr, onReorder) {
 		var draggingId = null;
+
+		var _lastIndTarget = null;
+		var _lastIndClass = null;
 
 		function clearIndicators() {
 			container.querySelectorAll(".numbers-source-item").forEach(function (c) {
@@ -1005,69 +1064,149 @@
 					"drag-line-after",
 				);
 			});
+			_lastIndTarget = null;
+			_lastIndClass = null;
 		}
 
+		// Threshold at gap midpoint — threshold is in empty space, no border artifacts
+		var GAP_PX = 8;
+		function getInsertIdx(clientY) {
+			var cards = container.querySelectorAll(".numbers-source-item");
+			var idx = 0;
+			for (var i = 0; i < cards.length; i++) {
+				if (clientY > cards[i].getBoundingClientRect().bottom + GAP_PX / 2) {
+					idx = i + 1;
+				}
+			}
+			return idx;
+		}
+
+		function showIndicator(clientY) {
+			var cards = Array.from(
+				container.querySelectorAll(".numbers-source-item"),
+			);
+			if (!cards.length) {
+				return;
+			}
+			var insertIdx = getInsertIdx(clientY);
+			var targetCard, cls;
+			if (insertIdx === 0) {
+				targetCard = cards[0];
+				cls = "drag-line-before";
+			} else {
+				targetCard = cards[insertIdx - 1];
+				cls = "drag-line-after";
+			}
+			// Redirect if indicator lands on the dragging card itself
+			if (Number(targetCard.dataset.id) === draggingId) {
+				if (cls === "drag-line-after" && insertIdx < cards.length) {
+					targetCard = cards[insertIdx];
+					cls = "drag-line-before";
+				} else if (cls === "drag-line-before" && insertIdx > 0) {
+					targetCard = cards[insertIdx - 2];
+					cls = "drag-line-after";
+				} else {
+					return;
+				}
+			}
+			if (!targetCard) {
+				return;
+			}
+			if (_lastIndTarget === targetCard && _lastIndClass === cls) {
+				return;
+			}
+			if (_lastIndTarget) {
+				_lastIndTarget.classList.remove("drag-line-before", "drag-line-after");
+			}
+			targetCard.classList.add(cls);
+			_lastIndTarget = targetCard;
+			_lastIndClass = cls;
+		}
+
+		function doReorder(clientY) {
+			if (draggingId === null) {
+				return;
+			}
+			var insertIdx = getInsertIdx(clientY);
+			var fromIdx = arr.findIndex(function (x) {
+				return x.id === draggingId;
+			});
+			if (fromIdx === -1) {
+				clearIndicators();
+				draggingId = null;
+				return;
+			}
+			var moved = arr.splice(fromIdx, 1)[0];
+			var targetIdx = insertIdx > fromIdx ? insertIdx - 1 : insertIdx;
+			targetIdx = Math.max(0, Math.min(arr.length, targetIdx));
+			arr.splice(targetIdx, 0, moved);
+			onReorder();
+		}
+
+		// ── Mouse drag (desktop) ──────────────────────────────────────────────
+		// Use mousedown/mousemove/mouseup (not HTML5 DnD) to avoid the browser
+		// ghost-image snap-back animation entirely.
 		container
 			.querySelectorAll(".numbers-drag-handle")
 			.forEach(function (handle) {
-				handle.addEventListener("dragstart", function (e) {
+				handle.addEventListener("mousedown", function (e) {
+					e.preventDefault(); // prevent text selection
 					var card = handle.closest(".numbers-source-item");
 					draggingId = Number(card.dataset.id);
 					card.classList.add("is-dragging");
-					e.dataTransfer.effectAllowed = "move";
-				});
-				handle.addEventListener("dragend", function () {
-					clearIndicators();
-					draggingId = null;
+
+					function onMouseMove(ev) {
+						showIndicator(ev.clientY);
+					}
+					function onMouseUp(ev) {
+						document.removeEventListener("mousemove", onMouseMove);
+						document.removeEventListener("mouseup", onMouseUp);
+						doReorder(ev.clientY);
+					}
+					document.addEventListener("mousemove", onMouseMove);
+					document.addEventListener("mouseup", onMouseUp);
 				});
 			});
 
-		container.querySelectorAll(".numbers-source-item").forEach(function (card) {
-			card.addEventListener("dragover", function (e) {
-				e.preventDefault();
-				e.dataTransfer.dropEffect = "move";
-				var rect = card.getBoundingClientRect();
-				var midY = rect.top + rect.height / 2;
-				var isAfter = e.clientY > midY;
-				container
-					.querySelectorAll(".numbers-source-item")
-					.forEach(function (c) {
-						c.classList.remove("drag-line-before", "drag-line-after");
-					});
-				card.classList.add(isAfter ? "drag-line-after" : "drag-line-before");
+		// ── Touch drag (mobile) ───────────────────────────────────────────────
+		container
+			.querySelectorAll(".numbers-drag-handle")
+			.forEach(function (handle) {
+				handle.addEventListener(
+					"touchstart",
+					function (e) {
+						var card = handle.closest(".numbers-source-item");
+						draggingId = Number(card.dataset.id);
+						card.classList.add("is-dragging");
+					},
+					{ passive: true },
+				);
+
+				handle.addEventListener(
+					"touchmove",
+					function (e) {
+						if (draggingId === null) {
+							return;
+						}
+						e.preventDefault();
+						var touch = e.touches[0];
+						showIndicator(touch.clientY);
+					},
+					{ passive: false },
+				);
+
+				handle.addEventListener(
+					"touchend",
+					function (e) {
+						if (draggingId === null) {
+							return;
+						}
+						var touch = e.changedTouches[0];
+						doReorder(touch.clientY);
+					},
+					{ passive: true },
+				);
 			});
-			card.addEventListener("dragleave", function (e) {
-				if (!card.contains(e.relatedTarget)) {
-					card.classList.remove("drag-line-before", "drag-line-after");
-				}
-			});
-			card.addEventListener("drop", function (e) {
-				e.preventDefault();
-				var targetId = Number(card.dataset.id);
-				if (draggingId === null || draggingId === targetId) {
-					clearIndicators();
-					return;
-				}
-				var rect = card.getBoundingClientRect();
-				var isAfter = e.clientY > rect.top + rect.height / 2;
-				var fromIdx = arr.findIndex(function (x) {
-					return x.id === draggingId;
-				});
-				var toIdx = arr.findIndex(function (x) {
-					return x.id === targetId;
-				});
-				if (fromIdx === -1 || toIdx === -1) {
-					return;
-				}
-				var moved = arr.splice(fromIdx, 1)[0];
-				var insertAt = isAfter
-					? toIdx + (fromIdx < toIdx ? 0 : 1)
-					: toIdx - (fromIdx > toIdx ? 0 : 1);
-				insertAt = Math.max(0, Math.min(arr.length, insertAt));
-				arr.splice(insertAt, 0, moved);
-				onReorder();
-			});
-		});
 	}
 
 	function attachSimpleListeners(container, arr, onRemove) {
@@ -1730,7 +1869,6 @@
 				: assetDefaults[asset.type].defaultGrowth) /
 			100 /
 			12;
-		var assetLabel = asset.customLabel || assetDefaults[asset.type].label;
 		var yearData = [],
 			balance = owed0,
 			value = asset.amount;
@@ -1766,11 +1904,8 @@
 		var asvgW = 260,
 			bH = 70,
 			lblH = 14;
-		var gap = chartData.length > 15 ? 1 : 3;
-		var bW = Math.max(
-			2,
-			Math.floor((asvgW - gap * (chartData.length - 1)) / chartData.length),
-		);
+		var bW = 5;
+		var bN = chartData.length;
 		// milestone labels: yr 1, ~midpoint, payoff year
 		var midY = Math.ceil(chartData.length / 2);
 		var labelYrs = new Set([1, midY, chartData[chartData.length - 1].year]);
@@ -1782,7 +1917,7 @@
 				}
 				var intH = Math.round((d.interest / tot) * bH);
 				var prH = bH - intH;
-				var bx = i * (bW + gap);
+				var bx = bN > 1 ? (i / (bN - 1)) * (asvgW - bW) : 0;
 				var isPO = payoffEntry && d.year === payoffEntry.year;
 				return (
 					'<rect x="' +
@@ -1830,7 +1965,7 @@
 		var valRange = Math.max(1, valMax - valMin);
 		var valueLine = chartData
 			.map(function (d, i) {
-				var vx = i * (bW + gap) + bW / 2;
+				var vx = (bN > 1 ? (i / (bN - 1)) * (asvgW - bW) : 0) + bW / 2;
 				var vy =
 					bH - 4 - Math.round(((d.value - valMin) / valRange) * (bH - 8));
 				return vx + "," + vy;
@@ -1864,7 +1999,6 @@
 			})
 			.join("");
 		return (
-			'<div class="numbers-plan-section-hdr">Interest vs. principal</div>' +
 			'<div class="numbers-plan-amort">' +
 			'<svg class="numbers-future-amort-chart" viewBox="0 0 ' +
 			asvgW +
@@ -2133,18 +2267,32 @@
 
 			netWorthHeroValueEl.textContent = formatCurrency(netWorth);
 			projectedValueEl.textContent = formatCurrency(projectedNet);
+			projectedValueEl.classList.toggle("is-negative", projectedNet < 0);
 			if (projectionYearsLabelEl) {
 				projectionYearsLabelEl.textContent = YEARS + " yrs";
 			}
 			totalIncomeValueEl.textContent = formatCurrency(totalIncome);
 			expensesDisplayEl.textContent = formatCurrency(totalExpenses);
 			freeCashEl.textContent = formatCurrency(freeCash);
+			freeCashEl.classList.toggle("is-positive", freeCash > 0);
+			freeCashEl.classList.toggle("is-negative", freeCash < 0);
 
 			var nowVal =
 				netWorth > 0 ? netWorth : totalEquity > 0 ? totalEquity : 100;
+			scheduleChartUpdate(nowVal, totalDebt);
+			persistState();
+		});
+	}
+
+	var _chartRafId = null;
+	function scheduleChartUpdate(nowVal, totalDebt) {
+		if (_chartRafId !== null) {
+			cancelAnimationFrame(_chartRafId);
+		}
+		_chartRafId = requestAnimationFrame(function () {
+			_chartRafId = null;
 			renderBars(nowVal, totalDebt);
 			renderPlanAnalysis();
-			persistState();
 		});
 	}
 
@@ -2172,19 +2320,20 @@
 		// Phone: hero
 		netWorthHeroValueEl.textContent = formatCurrency(netWorth);
 		projectedValueEl.textContent = formatCurrency(projectedNet);
+		projectedValueEl.classList.toggle("is-negative", projectedNet < 0);
 		if (projectionYearsLabelEl) {
 			projectionYearsLabelEl.textContent = YEARS + " yrs";
 		}
 
-		// Phone: stats grid
 		totalIncomeValueEl.textContent = formatCurrency(totalIncome);
 		expensesDisplayEl.textContent = formatCurrency(totalExpenses);
 		freeCashEl.textContent = formatCurrency(freeCash);
+		freeCashEl.classList.toggle("is-positive", freeCash > 0);
+		freeCashEl.classList.toggle("is-negative", freeCash < 0);
 
-		// Phone: chart — show net worth growth
+		// Charts deferred to next animation frame so UI updates paint first
 		var nowVal = netWorth > 0 ? netWorth : totalEquity > 0 ? totalEquity : 100;
-		renderBars(nowVal, totalDebt);
-		renderPlanAnalysis();
+		scheduleChartUpdate(nowVal, totalDebt);
 		persistState();
 	}
 
@@ -2479,6 +2628,45 @@
 		} catch (e) {}
 	}
 
+	// ─── Picker sliding indicator ─────────────────────────────────────────────
+
+	function initPickerIndicator(picker) {
+		var ind = document.createElement("span");
+		ind.className = "numbers-picker-indicator";
+		picker.insertBefore(ind, picker.firstChild);
+
+		function snap(btn, animate) {
+			if (!animate) {
+				ind.style.transition = "none";
+			}
+			ind.style.width = btn.offsetWidth + "px";
+			ind.style.height = btn.offsetHeight + "px";
+			ind.style.transform =
+				"translate(" + btn.offsetLeft + "px, " + btn.offsetTop + "px)";
+			if (!animate) {
+				ind.offsetHeight; // force reflow to apply no-transition snap
+				ind.style.transition = "";
+			}
+		}
+
+		var active = picker.querySelector(".is-active");
+		if (active) {
+			snap(active, false);
+		}
+
+		picker.addEventListener("click", function (e) {
+			var btn = e.target.closest("button");
+			if (!btn || !picker.contains(btn)) {
+				return;
+			}
+			snap(btn, true);
+		});
+	}
+
+	document
+		.querySelectorAll(".numbers-year-picker")
+		.forEach(initPickerIndicator);
+
 	// ─── Year picker ─────────────────────────────────────────────────────────
 
 	if (yearPickerEl) {
@@ -2587,7 +2775,6 @@
 		// income/expense value labels at endpoints
 		var endLblY0 = toY(incomeByYear[0]);
 		var endLblYN = toY(incomeByYear[PLAN_YRS]);
-		var endLblExpY = expY;
 
 		var svgHTML =
 			'<svg class="numbers-plan-chart" viewBox="0 0 ' +
@@ -2811,6 +2998,30 @@
 		planAnalysisEl.innerHTML = html;
 	}
 
+	// ─── Reorder mode ────────────────────────────────────────────────────────
+
+	document.querySelectorAll(".numbers-reorder-btn").forEach(function (btn) {
+		btn.addEventListener("click", function () {
+			var list = document.getElementById(btn.dataset.reorderList);
+			if (!list) {
+				return;
+			}
+			var isOn = list.classList.toggle("is-reordering");
+			btn.classList.toggle("is-active", isOn);
+			btn.textContent = isOn ? "Done" : "Reorder";
+			var panel = btn.closest(".numbers-panel");
+			if (panel) {
+				panel.classList.toggle("is-reordering", isOn);
+			}
+			document.body.classList.toggle("is-reordering", isOn);
+			if (isOn) {
+				lockScroll();
+			} else {
+				unlockScroll();
+			}
+		});
+	});
+
 	// ─── Tab navigation ──────────────────────────────────────────────────────
 
 	var activeTab = "tabInvest";
@@ -2838,179 +3049,6 @@
 				switchTab(btn.dataset.tab);
 			});
 		});
-
-	// ─── Future tab ──────────────────────────────────────────────────────────
-
-	function renderFuture() {
-		if (!futureMilestonesEl) {
-			return;
-		}
-		var cards = [];
-		var totalDebt = getTotalDebt();
-		var netWorth = getTotalAssetEquity() - totalDebt;
-		var freeCash = getTotalIncome() - getTotalExpenses();
-
-		// ── Mortgage payoff ──
-		state.expenses.forEach(function (e) {
-			if (e.type !== "rent" || !e.linkedAssetId) {
-				return;
-			}
-			var asset = state.assets.find(function (a) {
-				return a.id === e.linkedAssetId;
-			});
-			if (!asset) {
-				return;
-			}
-			var owed = asset.owed || 0;
-			var interest =
-				e.interest !== undefined ? e.interest : Math.round(e.amount * 0.8);
-			var principal = Math.max(0, e.amount - interest);
-			if (principal <= 0 || owed <= 0) {
-				return;
-			}
-			// Simple straight-line estimate (conservative — interest shrinks over time so actual is faster)
-			var monthsLeft = Math.ceil(owed / principal);
-			var yrsLeft = monthsLeft / 12;
-			var label = asset.customLabel || assetDefaults[asset.type].label;
-			var when = yrsLeft < 1 ? "Less than 1 yr" : yrsLeft.toFixed(1) + " yrs";
-			cards.push(
-				'<div class="numbers-future-card">' +
-					'<div class="numbers-future-icon">🏠</div>' +
-					'<div class="numbers-future-body">' +
-					'<div class="numbers-future-title">Mortgage paid off</div>' +
-					'<div class="numbers-future-sub">' +
-					label +
-					" · " +
-					formatCompactCurrency(owed) +
-					" remaining</div>" +
-					"</div>" +
-					'<div class="numbers-future-when">' +
-					when +
-					"</div>" +
-					"</div>",
-			);
-		});
-
-		// ── Debt free ──
-		if (totalDebt > 0 && freeCash > 0) {
-			var debtMonths = Math.ceil(totalDebt / freeCash);
-			var debtYrs = debtMonths / 12;
-			var debtWhen =
-				debtYrs < 1 ? "Less than 1 yr" : debtYrs.toFixed(1) + " yrs";
-			cards.push(
-				'<div class="numbers-future-card">' +
-					'<div class="numbers-future-icon">💳</div>' +
-					'<div class="numbers-future-body">' +
-					'<div class="numbers-future-title">Debt free</div>' +
-					'<div class="numbers-future-sub">' +
-					formatCompactCurrency(totalDebt) +
-					" total · " +
-					formatCurrency(freeCash) +
-					"/mo free cash</div>" +
-					"</div>" +
-					'<div class="numbers-future-when">' +
-					debtWhen +
-					"</div>" +
-					"</div>",
-			);
-		}
-
-		// ── Net worth milestones ──
-		var milestones = [100000, 250000, 500000, 1000000, 2000000, 5000000];
-		milestones.forEach(function (target) {
-			if (netWorth >= target) {
-				return;
-			} // already passed
-			// Binary search: find the first year where projected net worth >= target
-			var found = null;
-			for (var yr = 1; yr <= 50; yr++) {
-				var proj = projectAllAssets(yr) - totalDebt;
-				if (proj >= target) {
-					found = yr;
-					break;
-				}
-			}
-			if (!found) {
-				return;
-			}
-			var targetStr =
-				target >= 1000000
-					? "$" + target / 1000000 + "M"
-					: "$" + target / 1000 + "K";
-			cards.push(
-				'<div class="numbers-future-card">' +
-					'<div class="numbers-future-icon">📈</div>' +
-					'<div class="numbers-future-body">' +
-					'<div class="numbers-future-title">' +
-					targetStr +
-					" net worth</div>" +
-					'<div class="numbers-future-sub">At current growth rates</div>' +
-					"</div>" +
-					'<div class="numbers-future-when">' +
-					found +
-					" yr" +
-					(found === 1 ? "" : "s") +
-					"</div>" +
-					"</div>",
-			);
-		});
-
-		// ── Retirement readiness (25× annual expenses rule) ──
-		var annualExpenses = getTotalExpenses() * 12;
-		var retirementTarget = annualExpenses * 25;
-		var currentAssets = getTotalAssetEquity();
-		if (retirementTarget > 0 && currentAssets < retirementTarget) {
-			var retFound = null;
-			for (var yr2 = 1; yr2 <= 50; yr2++) {
-				if (projectAllAssets(yr2) >= retirementTarget) {
-					retFound = yr2;
-					break;
-				}
-			}
-			var pct = Math.min(
-				100,
-				Math.round((currentAssets / retirementTarget) * 100),
-			);
-			cards.push(
-				'<div class="numbers-future-card numbers-future-card--retirement">' +
-					'<div class="numbers-future-icon">🌴</div>' +
-					'<div class="numbers-future-body">' +
-					'<div class="numbers-future-title">Retirement ready <span class="numbers-future-badge">' +
-					pct +
-					"%</span></div>" +
-					'<div class="numbers-future-sub">25× annual expenses · target ' +
-					formatCompactCurrency(retirementTarget) +
-					"</div>" +
-					'<div class="numbers-future-progress"><div class="numbers-future-bar" style="width:' +
-					pct +
-					'%"></div></div>' +
-					"</div>" +
-					(retFound
-						? '<div class="numbers-future-when">' + retFound + " yrs</div>"
-						: "") +
-					"</div>",
-			);
-		} else if (retirementTarget > 0 && currentAssets >= retirementTarget) {
-			cards.push(
-				'<div class="numbers-future-card numbers-future-card--retirement">' +
-					'<div class="numbers-future-icon">🌴</div>' +
-					'<div class="numbers-future-body">' +
-					'<div class="numbers-future-title">Retirement ready <span class="numbers-future-badge numbers-future-badge--done">✓</span></div>' +
-					'<div class="numbers-future-sub">25× annual expenses · ' +
-					formatCompactCurrency(currentAssets) +
-					" in assets</div>" +
-					"</div>" +
-					"</div>",
-			);
-		}
-
-		if (!cards.length) {
-			futureMilestonesEl.innerHTML =
-				'<div class="numbers-future-empty">Add assets and income to see your milestones.</div>';
-			return;
-		}
-		futureMilestonesEl.innerHTML = cards.join("");
-	}
 
 	document.addEventListener("keydown", function (e) {
 		if (e.key === "Escape") {

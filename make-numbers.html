@@ -3,9 +3,16 @@
 
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="mylogo.svg" />
+    <link rel="manifest" href="make-numbers.webmanifest" />
+    <link rel="apple-touch-icon" href="make-numbers-icon.svg" />
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Numbers" />
+    <meta name="theme-color" content="#111111" />
     <title>Make Numbers</title>
     <meta name="description"
         content="A mobile-first finance app concept for shaping better numbers around income, investing, future projections, and different portfolio styles." />
@@ -545,7 +552,8 @@
                             <div class="numbers-cashflow-row">
                                 <div class="numbers-cashflow-item">
                                     <div class="numbers-section-label">Income</div>
-                                    <div class="numbers-cashflow-value" id="totalIncomeValue"></div>
+                                    <div class="numbers-cashflow-value numbers-cashflow-value--income"
+                                        id="totalIncomeValue"></div>
                                 </div>
                                 <div class="numbers-cashflow-item">
                                     <div class="numbers-section-label">Costs</div>
@@ -564,8 +572,10 @@
 
                     <!-- ── Tab nav + year picker (shared) ── -->
                     <div class="numbers-bottom-nav numbers-bottom-nav--top">
-                        <button class="numbers-nav-btn is-active" data-tab="tabInvest">Invest</button>
-                        <button class="numbers-nav-btn" data-tab="tabIncome">Income</button>
+                        <div class="numbers-year-picker">
+                            <button class="numbers-nav-btn is-active" data-tab="tabInvest">Invest</button>
+                            <button class="numbers-nav-btn" data-tab="tabIncome">Income</button>
+                        </div>
                         <div class="numbers-year-picker" id="yearPicker">
                             <button class="numbers-year-btn" data-years="1">1Y</button>
                             <button class="numbers-year-btn" data-years="5">5Y</button>
@@ -598,6 +608,7 @@
                         <div class="numbers-panel__total" id="incomePanelTotal"></div>
                     </div>
                     <div id="sourcesList" class="numbers-sources"></div>
+                    <button class="numbers-reorder-btn" data-reorder-list="sourcesList" type="button">Reorder</button>
                     <button class="numbers-panel-add-btn" id="openIncomeSheet" type="button">+ Add income
                         source</button>
                 </div>
@@ -608,6 +619,7 @@
                         <div class="numbers-panel__total" id="spendingPanelTotal"></div>
                     </div>
                     <div id="expensesList" class="numbers-sources"></div>
+                    <button class="numbers-reorder-btn" data-reorder-list="expensesList" type="button">Reorder</button>
                     <button class="numbers-panel-add-btn" id="openSpendingSheet" type="button">+ Add spending
                         category</button>
                 </div>
@@ -618,6 +630,7 @@
                         <div class="numbers-panel__total" id="assetsPanelTotal"></div>
                     </div>
                     <div id="assetsList" class="numbers-sources"></div>
+                    <button class="numbers-reorder-btn" data-reorder-list="assetsList" type="button">Reorder</button>
                     <button class="numbers-panel-add-btn" id="openAssetsSheet" type="button">+ Add asset</button>
                 </div>
 
@@ -627,6 +640,7 @@
                         <div class="numbers-panel__total numbers-panel__total--debt" id="debtPanelTotal"></div>
                     </div>
                     <div id="debtList" class="numbers-sources"></div>
+                    <button class="numbers-reorder-btn" data-reorder-list="debtList" type="button">Reorder</button>
                     <button class="numbers-panel-add-btn" id="openDebtSheet" type="button">+ Add debt</button>
                 </div>
 
@@ -639,6 +653,11 @@
         <p class="numbers-version">v1.0.1 &middot; 2026-05-20</p>
     </footer>
     <script src="js/make-numbers.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/make-numbers-sw.js');
+        }
+    </script>
 </body>
 
 </html>
