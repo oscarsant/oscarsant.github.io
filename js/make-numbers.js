@@ -2334,6 +2334,9 @@
 		// Charts deferred to next animation frame so UI updates paint first
 		var nowVal = netWorth > 0 ? netWorth : totalEquity > 0 ? totalEquity : 100;
 		scheduleChartUpdate(nowVal, totalDebt);
+		if (activeTab === 'tabIncome') {
+			renderPlanAnalysis();
+		}
 		persistState();
 	}
 
@@ -2687,6 +2690,11 @@
 
 	function renderPlanAnalysis() {
 		if (!planAnalysisEl) {
+			return;
+		}
+		if (!state.sources.length && !state.expenses.length) {
+			planAnalysisEl.innerHTML =
+				'<div class="numbers-plan-hint">Add income sources and spending categories to see your plan.</div>';
 			return;
 		}
 		var PLAN_YRS = YEARS;
