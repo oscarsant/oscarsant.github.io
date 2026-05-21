@@ -268,6 +268,7 @@
 		const projectionBarsEl = document.getElementById("projectionBars");
 		const projectionDetailEl = document.getElementById("projectionDetail");
 		const yearPickerEl = document.getElementById("yearPicker");
+		const planAnalysisEl = document.getElementById("planAnalysis");
 
 	// ─── Panel DOM refs ──────────────────────────────────────────────────────
 
