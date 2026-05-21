@@ -34,8 +34,9 @@ self.addEventListener('activate', function (e) {
 });
 
 self.addEventListener('fetch', function (e) {
-	// Only handle GET requests for same-origin or the precached assets
+	// Only handle GET requests with http/https scheme
 	if (e.request.method !== 'GET') return;
+	if (!e.request.url.startsWith('http')) return;
 	e.respondWith(
 		fetch(e.request)
 			.then(function (response) {
