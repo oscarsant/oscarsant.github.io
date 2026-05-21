@@ -243,16 +243,13 @@
 	// Equity = amount - owed; this is what feeds the projection
 
 	const state = {
-		sources: [{ id: 1, type: "ssdi", amount: 1100 }],
-		expenses: [
-			{ id: 1, type: "rent", amount: 1200, interest: 960 },
-			{ id: 2, type: "food", amount: 500 },
-		],
-		assets: [{ id: 1, type: "savings", amount: 5000, growthRate: 2 }],
+		sources: [],
+		expenses: [],
+		assets: [],
 		debts: [],
-		nextSourceId: 2,
-		nextExpenseId: 3,
-		nextAssetId: 2,
+		nextSourceId: 1,
+		nextExpenseId: 1,
+		nextAssetId: 1,
 		nextDebtId: 1,
 	};
 
@@ -2457,7 +2454,7 @@
 
 	// ─── Auto-persist ────────────────────────────────────────────────────────
 
-	var STORAGE_KEY = "makeNumbers_state_v1";
+	var STORAGE_KEY = "makeNumbers_state_v2";
 
 	function persistState() {
 		try {

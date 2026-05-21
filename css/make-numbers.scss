@@ -1884,6 +1884,13 @@
 	color: rgba(0, 0, 0, 0.38);
 }
 
+.numbers-version {
+	margin: 4px 0 0;
+	font-size: 11px;
+	color: rgba(0, 0, 0, 0.2);
+	font-variant-numeric: tabular-nums;
+}
+
 
 
 @media screen and (min-width: 768px) {
