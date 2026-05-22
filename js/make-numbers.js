@@ -271,6 +271,7 @@
 	const totalIncomeValueEl = document.getElementById("totalIncomeValue");
 	const expensesDisplayEl = document.getElementById("expensesDisplayValue");
 	const freeCashEl = document.getElementById("freeCashValue");
+	const debtHeroMetaEl = document.getElementById("debtHeroMeta");
 		const projectionBarsEl = document.getElementById("projectionBars");
 		const projectionDetailEl = document.getElementById("projectionDetail");
 		const yearPickerEl = document.getElementById("yearPicker");
@@ -409,11 +410,60 @@
 		var payment = debt.payment !== undefined ? debt.payment : defaultPmt;
 		if (payment <= 0) return null;
 		if (debt.amount <= 0) return 0;
+		if (r <= 0) return debt.amount / payment;
 		var interest = debt.amount * r;
 		if (payment <= interest) return null;
 		// ln(payment / (payment - balance*r)) / ln(1+r)
 		var months = Math.log(payment / (payment - debt.amount * r)) / Math.log(1 + r);
 		return months / 12;
+	}
+
+	function formatPayoffDate(years) {
+		var months = Math.max(0, Math.ceil(years * 12));
+		var dt = new Date();
+		dt.setMonth(dt.getMonth() + months);
+		return dt.toLocaleDateString(undefined, { month: "short", year: "numeric" });
+	}
+
+	function buildDebtHeroSummary() {
+		if (!state.debts.length) {
+			return "";
+		}
+		var totalBalance = 0;
+		var weightedRate = 0;
+		var totalPayment = 0;
+		var latestPayoff = 0;
+		var hasNoPayoff = false;
+
+		state.debts.forEach(function (d) {
+			var cfg = debtDefaults[d.type];
+			var amount = Math.max(0, Number(d.amount) || 0);
+			var rate = d.rate !== undefined ? d.rate : cfg.defaultRate;
+			var payment = d.payment !== undefined ? d.payment : computeDefaultPayment(amount, rate);
+			var yrs = debtPayoffYears(d);
+			totalBalance += amount;
+			weightedRate += amount * rate;
+			totalPayment += payment;
+			if (yrs === null) {
+				hasNoPayoff = true;
+			} else {
+				latestPayoff = Math.max(latestPayoff, yrs);
+			}
+		});
+
+		var blendedApr = totalBalance > 0 ? weightedRate / totalBalance : 0;
+		var payoffText = hasNoPayoff
+			? "no payoff at current payment"
+			: "payoff ~ " + formatPayoffDate(latestPayoff);
+
+		return (
+			"Debt plan: " +
+			formatCurrency(Math.round(totalPayment)) +
+			"/mo @ " +
+			blendedApr.toFixed(1) +
+			"% APR · " +
+			payoffText
+		);
 	}
 
 	function getNetWorth() {
@@ -2480,7 +2530,7 @@
 			var netWorth = totalEquity - totalDebt;
 			var totalCosts = totalExpenses + monthlyDebtCost;
 			var freeCash = totalIncome - totalCosts;
-			var projectedNet = projectAllAssets(YEARS) - totalDebt;
+			var projectedNet = projectAllAssets(YEARS) - getTotalProjectedDebt(YEARS);
 
 			incomePanelTotal.textContent = formatCurrency(totalIncome) + "/mo";
 			spendingPanelTotal.textContent = formatCurrency(totalExpenses) + "/mo";
@@ -2499,6 +2549,11 @@
 			freeCashEl.textContent = formatCurrency(freeCash);
 			freeCashEl.classList.toggle("is-positive", freeCash > 0);
 			freeCashEl.classList.toggle("is-negative", freeCash < 0);
+			if (debtHeroMetaEl) {
+				var heroDebtSummary = buildDebtHeroSummary();
+				debtHeroMetaEl.textContent = heroDebtSummary;
+				debtHeroMetaEl.hidden = !heroDebtSummary;
+			}
 
 			var nowVal =
 				netWorth > 0 ? netWorth : totalEquity > 0 ? totalEquity : 100;
@@ -2531,7 +2586,7 @@
 
 		// Project each asset at its own growth rate — debt assumed to stay flat (conservative)
 		var projectedEquity = projectAllAssets(YEARS);
-		var projectedNet = projectedEquity - totalDebt;
+		var projectedNet = projectedEquity - getTotalProjectedDebt(YEARS);
 
 		// Panel totals
 		incomePanelTotal.textContent = formatCurrency(totalIncome) + "/mo";
@@ -2555,6 +2610,11 @@
 		freeCashEl.textContent = formatCurrency(freeCash);
 		freeCashEl.classList.toggle("is-positive", freeCash > 0);
 		freeCashEl.classList.toggle("is-negative", freeCash < 0);
+		if (debtHeroMetaEl) {
+			var heroDebtSummary = buildDebtHeroSummary();
+			debtHeroMetaEl.textContent = heroDebtSummary;
+			debtHeroMetaEl.hidden = !heroDebtSummary;
+		}
 
 		// Charts deferred to next animation frame so UI updates paint first
 		var nowVal = netWorth > 0 ? netWorth : totalEquity > 0 ? totalEquity : 100;
