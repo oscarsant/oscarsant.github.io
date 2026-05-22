@@ -364,6 +364,13 @@
 		}, 0);
 	}
 
+	function getMonthlyDebtInterest() {
+		return state.debts.reduce(function (sum, d) {
+			var rate = d.rate !== undefined ? d.rate : debtDefaults[d.type].defaultRate;
+			return sum + d.amount * (rate / 100) / 12;
+		}, 0);
+	}
+
 	function getNetWorth() {
 		return getTotalAssetEquity() - getTotalDebt();
 	}
@@ -2355,10 +2362,12 @@
 			_statsRafId = null;
 			var totalIncome = getTotalIncome();
 			var totalExpenses = getTotalExpenses();
+			var monthlyDebtCost = Math.round(getMonthlyDebtInterest());
 			var totalEquity = getTotalAssetEquity();
 			var totalDebt = getTotalDebt();
 			var netWorth = totalEquity - totalDebt;
-			var freeCash = totalIncome - totalExpenses;
+			var totalCosts = totalExpenses + monthlyDebtCost;
+			var freeCash = totalIncome - totalCosts;
 			var projectedNet = projectAllAssets(YEARS) - totalDebt;
 
 			incomePanelTotal.textContent = formatCurrency(totalIncome) + "/mo";
@@ -2374,7 +2383,7 @@
 				projectionYearsLabelEl.textContent = YEARS + " yrs";
 			}
 			totalIncomeValueEl.textContent = formatCurrency(totalIncome);
-			expensesDisplayEl.textContent = formatCurrency(totalExpenses);
+			expensesDisplayEl.textContent = formatCurrency(totalCosts);
 			freeCashEl.textContent = formatCurrency(freeCash);
 			freeCashEl.classList.toggle("is-positive", freeCash > 0);
 			freeCashEl.classList.toggle("is-negative", freeCash < 0);
@@ -2401,10 +2410,12 @@
 	function updateView() {
 		var totalIncome = getTotalIncome();
 		var totalExpenses = getTotalExpenses();
+		var monthlyDebtCost = Math.round(getMonthlyDebtInterest());
 		var totalEquity = getTotalAssetEquity();
 		var totalDebt = getTotalDebt();
 		var netWorth = totalEquity - totalDebt;
-		var freeCash = totalIncome - totalExpenses;
+		var totalCosts = totalExpenses + monthlyDebtCost;
+		var freeCash = totalIncome - totalCosts;
 
 		// Project each asset at its own growth rate — debt assumed to stay flat (conservative)
 		var projectedEquity = projectAllAssets(YEARS);
@@ -2428,7 +2439,7 @@
 		}
 
 		totalIncomeValueEl.textContent = formatCurrency(totalIncome);
-		expensesDisplayEl.textContent = formatCurrency(totalExpenses);
+		expensesDisplayEl.textContent = formatCurrency(totalCosts);
 		freeCashEl.textContent = formatCurrency(freeCash);
 		freeCashEl.classList.toggle("is-positive", freeCash > 0);
 		freeCashEl.classList.toggle("is-negative", freeCash < 0);
