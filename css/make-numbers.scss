@@ -163,7 +163,7 @@ body.is-reordering::before {
 .numbers-app__layout,
 .numbers-panels {
 	display: grid;
-	gap: 18px;
+	gap: 12px;
 }
 
 .numbers-phone-wrap {
@@ -454,6 +454,17 @@ body.is-reordering::before {
 	padding-top: 8px;
 	margin-top: 4px;
 	border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+	& + & {
+		border-top: none;
+		margin-top: 0;
+		padding-top: 4px;
+	}
+}
+
+.numbers-detail-debt-note {
+	font-weight: 400;
+	opacity: 0.75;
 }
 
 .numbers-detail-empty {

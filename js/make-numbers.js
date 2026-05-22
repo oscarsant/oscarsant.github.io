@@ -371,6 +371,51 @@
 		}, 0);
 	}
 
+	function computeDefaultPayment(amount, rate) {
+		var r = (rate / 100) / 12;
+		if (r <= 0 || amount <= 0) return Math.max(25, Math.ceil(amount / 60));
+		var n = 60; // 5-year default term
+		return Math.ceil(amount * r / (1 - Math.pow(1 + r, -n)));
+	}
+
+	function projectDebtBalance(debt, years) {
+		var annualRate = debt.rate !== undefined ? debt.rate : debtDefaults[debt.type].defaultRate;
+		var r = annualRate / 100 / 12;
+		var defaultPmt = computeDefaultPayment(debt.amount, annualRate);
+		var payment = debt.payment !== undefined ? debt.payment : defaultPmt;
+		if (payment <= 0) return debt.amount;
+		var balance = debt.amount;
+		for (var m = 0; m < years * 12; m++) {
+			var interest = balance * r;
+			var principal = payment - interest;
+			if (principal <= 0) return balance; // payment doesn't cover interest
+			balance = Math.max(0, balance - principal);
+			if (balance <= 0) break;
+		}
+		return balance;
+	}
+
+	function getTotalProjectedDebt(years) {
+		return state.debts.reduce(function (sum, d) {
+			return sum + projectDebtBalance(d, years);
+		}, 0);
+	}
+
+	// Returns years to payoff, or null if payment doesn't cover interest
+	function debtPayoffYears(debt) {
+		var annualRate = debt.rate !== undefined ? debt.rate : debtDefaults[debt.type].defaultRate;
+		var r = annualRate / 100 / 12;
+		var defaultPmt = computeDefaultPayment(debt.amount, annualRate);
+		var payment = debt.payment !== undefined ? debt.payment : defaultPmt;
+		if (payment <= 0) return null;
+		if (debt.amount <= 0) return 0;
+		var interest = debt.amount * r;
+		if (payment <= interest) return null;
+		// ln(payment / (payment - balance*r)) / ln(1+r)
+		var months = Math.log(payment / (payment - debt.amount * r)) / Math.log(1 + r);
+		return months / 12;
+	}
+
 	function getNetWorth() {
 		return getTotalAssetEquity() - getTotalDebt();
 	}
@@ -765,6 +810,8 @@
 	function buildDebtItemHTML(item) {
 		var cfg = debtDefaults[item.type];
 		var rate = item.rate !== undefined ? item.rate : cfg.defaultRate;
+		var payment = item.payment !== undefined ? item.payment : computeDefaultPayment(item.amount, rate);
+		var maxPayment = Math.max(500, Math.ceil(item.amount / 6));
 		return (
 			'<div class="numbers-source-item" data-id="' +
 			item.id +
@@ -819,6 +866,24 @@
 			'" data-item-id="' +
 			item.id +
 			'" data-field="rate" />' +
+			'<div class="numbers-equity-row numbers-equity-row--growth">' +
+			'<span class="numbers-equity-row__label">Monthly payment</span>' +
+			'<div class="numbers-item-input-wrap">' +
+			'<span class="numbers-item-input-prefix">$</span>' +
+			'<input class="numbers-item-input" type="number" min="0" max="99999" step="25" value="' +
+			payment +
+			'" data-payment-input="' +
+			item.id +
+			'" />' +
+			'</div>' +
+			'</div>' +
+			'<input class="numbers-range" type="range" min="0" max="' +
+			maxPayment +
+			'" step="25" value="' +
+			payment +
+			'" data-item-id="' +
+			item.id +
+			'" data-field="payment" />' +
 			'<button class="numbers-source-item__delete" type="button" data-remove="' +
 			item.id +
 			'" aria-label="Delete">Delete</button>' +
@@ -1355,7 +1420,7 @@
 					item.rate = Number(this.value);
 					var numIn = container.querySelector('[data-rate-input="' + id + '"]');
 					if (numIn) numIn.value = item.rate;
-					persistState();
+					updateView();
 				});
 			});
 		container.querySelectorAll("[data-rate-input]").forEach(function (input) {
@@ -1368,7 +1433,33 @@
 				this.value = val;
 				var rangeIn = container.querySelector('.numbers-range[data-item-id="' + id + '"][data-field="rate"]');
 				if (rangeIn) rangeIn.value = val;
-				persistState();
+				updateView();
+			});
+		});
+		container
+			.querySelectorAll('.numbers-range[data-field="payment"]')
+			.forEach(function (input) {
+				input.addEventListener("input", function () {
+					var id = Number(this.dataset.itemId);
+					var item = state.debts.find(function (x) { return x.id === id; });
+					if (!item) return;
+					item.payment = Number(this.value);
+					var numIn = container.querySelector('[data-payment-input="' + id + '"]');
+					if (numIn) numIn.value = item.payment;
+					updateView();
+				});
+			});
+		container.querySelectorAll("[data-payment-input]").forEach(function (input) {
+			input.addEventListener("change", function () {
+				var id = Number(this.dataset.paymentInput);
+				var item = state.debts.find(function (x) { return x.id === id; });
+				if (!item) return;
+				var val = Math.max(0, Math.min(99999, Number(this.value) || 0));
+				item.payment = val;
+				this.value = val;
+				var rangeIn = container.querySelector('.numbers-range[data-item-id="' + id + '"][data-field="payment"]');
+				if (rangeIn) rangeIn.value = Math.min(val, Number(rangeIn.max));
+				updateView();
 			});
 		});
 	}
@@ -2141,7 +2232,7 @@
 		var step = YEARS <= 5 ? 1 : YEARS <= 15 ? 2 : 5;
 		var checkpoints = [{ label: "Now", value: nowVal }];
 		for (var yr = step; yr <= YEARS; yr += step) {
-			var v = projectAllAssets(yr) - totalDebt;
+			var v = projectAllAssets(yr) - getTotalProjectedDebt(yr);
 			checkpoints.push({ label: "Y" + yr, value: Math.max(v, 1) });
 		}
 		// Ensure the final year always appears
@@ -2149,7 +2240,7 @@
 		if (last.label !== "Y" + YEARS) {
 			checkpoints.push({
 				label: "Y" + YEARS,
-				value: Math.max(projectAllAssets(YEARS) - totalDebt, 1),
+				value: Math.max(projectAllAssets(YEARS) - getTotalProjectedDebt(YEARS), 1),
 			});
 		}
 
@@ -2334,12 +2425,33 @@
 			})
 			.join("");
 
-		var debtNote =
-			totalDebt > 0
-				? '<div class="numbers-detail-debt-row"><span>Debt (held flat)</span><span>−' +
-					formatCompactCurrency(totalDebt) +
-					"</span></div>"
-				: "";
+		var debtNote = "";
+		if (state.debts.length > 0) {
+			var debtRows = state.debts.map(function (d) {
+				var cfg = debtDefaults[d.type];
+				var label = d.customLabel || cfg.label;
+				var payoffYrs = debtPayoffYears(d);
+				var annualRate = d.rate !== undefined ? d.rate : cfg.defaultRate;
+				var defaultPmt = computeDefaultPayment(d.amount, annualRate);
+				var payment = d.payment !== undefined ? d.payment : defaultPmt;
+				var note;
+				if (payment <= 0) {
+					note = "no payment set";
+				} else if (payoffYrs === null) {
+					note = "payment doesn't cover interest";
+				} else if (payoffYrs <= YEARS) {
+					note = "paid off in " + (payoffYrs < 1 ? Math.ceil(payoffYrs * 12) + " mo" : payoffYrs.toFixed(1) + " yrs");
+				} else {
+					var remaining = projectDebtBalance(d, YEARS);
+					note = "−" + formatCompactCurrency(remaining) + " remaining after " + YEARS + " yrs";
+				}
+				return '<div class="numbers-detail-debt-row">' +
+					'<span>' + label + ' <span class="numbers-detail-debt-note">' + note + '</span></span>' +
+					'<span>−' + formatCompactCurrency(d.amount) + '</span>' +
+					'</div>';
+			}).join("");
+			debtNote = debtRows;
+		}
 
 		projectionDetailEl.innerHTML =
 			'<div class="numbers-detail-header">What\'s included · ' +
