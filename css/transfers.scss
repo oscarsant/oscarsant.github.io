@@ -1,0 +1,1757 @@
+@use "design-system" as *;
+@use "gallery-lightbox" as lightbox;
+
+$mobile: lightbox.$mobile;
+$medium: lightbox.$medium;
+
+.transfers-section {
+	--tr-bg-top: #4e5f92;
+	--tr-bg-bottom: #5267a0;
+	--tr-surface: #3a4a74;
+	--tr-surface-2: #41527f;
+	--tr-border: #5b6c9d;
+	--tr-border-soft: rgba(174, 192, 244, 0.22);
+	--tr-text: #eef3ff;
+	--tr-muted: #c4d0eb;
+	--tr-subtle: #9fb1de;
+	--tr-positive: #7be8b0;
+	--tr-positive-rgb: 123, 232, 176;
+	--tr-negative: #ff9a92;
+	--tr-negative-rgb: 255, 154, 146;
+	--tr-positive-ink: #1f7f4c;
+	--tr-positive-ink-rgb: 31, 127, 76;
+	--tr-negative-ink: #b13d34;
+	--tr-negative-ink-rgb: 177, 61, 52;
+	--tr-key-gradient: linear-gradient(90deg,
+			rgba(47, 128, 237, 0.24),
+			rgba(155, 81, 224, 0.24),
+			rgba(242, 153, 74, 0.24));
+	--tr-board-pad: 20px;
+	--tr-board-title-size: 12px;
+	--tr-board-title-spacing: 0.18em;
+	--tr-board-subhead-size: 14px;
+	--tr-board-coordinate-size: 11px;
+	--tr-highlight-size-1: clamp(22px, 2.1vw, 28px);
+	--tr-highlight-size-2: clamp(16px, 1.45vw, 20px);
+	--tr-highlight-size-3: 14px;
+	--tr-donut-center-number-size: var(--tr-highlight-size-2);
+	--tr-card: #4a5b8a;
+	--tr-donut-svg-size: 170px;
+	--tr-donut-outer-radius-scale: 0.48;
+	--tr-donut-ring-thickness: 10px;
+	--tr-donut-color-ring-thickness: var(--tr-donut-ring-thickness);
+	--tr-donut-remainder-ring-thickness: var(--tr-donut-ring-thickness);
+	--tr-donut-track-stroke: rgba(205, 219, 255, 0.28);
+	padding: 112px 24px 88px;
+	background: linear-gradient(180deg, var(--tr-bg-top), var(--tr-bg-bottom));
+}
+
+header {
+	padding: 20px 24px;
+
+	.navbar {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.transfers-back-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	border: solid 1.5px #fab071;
+	border-radius: 40px;
+	color: #000;
+	line-height: 0;
+	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.transfers-back-link:hover {
+		opacity: 0.6;
+		transform: translateY(-2px);
+	}
+}
+
+.transfers-logo-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 32px;
+		height: 32px;
+		display: block;
+	}
+}
+
+.transfers-intro {
+	max-width: 1100px;
+	margin: 0 auto 24px;
+	min-width: 0;
+}
+
+.transfers-shell {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 32px;
+	min-width: 0;
+	border-radius: 12px;
+	background: #41527f;
+	box-shadow: 0 14px 34px rgba(12, 18, 36, 0.1);
+}
+
+.transfers-kicker {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: $radius-full;
+	background: rgba(124, 147, 222, 0.24);
+	color: #dfebff;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
+.transfers-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 24px;
+	margin-bottom: 28px;
+
+	h2 {
+		margin: 0 0 8px;
+		font-family: "Oswald", sans-serif;
+		font-size: 42px;
+		font-weight: 500;
+		letter-spacing: 0.03em;
+		line-height: 1;
+		color: var(--tr-text);
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 0;
+		max-width: 620px;
+		font-size: 17px;
+		line-height: 1.6;
+		color: var(--tr-muted);
+	}
+}
+
+.transfers-panel {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	min-width: 0;
+}
+
+.transfers-visuals {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	min-width: 0;
+}
+
+.transfers-sticky-key {
+	position: sticky;
+	top: 0;
+	z-index: 14;
+	display: grid;
+	grid-template-columns: 1fr;
+	-moz-column-gap: 0;
+	column-gap: 0;
+	row-gap: 8px;
+	padding: 12px 0;
+	background: #41527f;
+}
+
+.transfers-sticky-key-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 8px;
+	align-content: flex-start;
+}
+
+.transfers-sticky-key-group.is-teams {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 8px;
+}
+
+.transfers-sticky-key-group.is-teams .transfers-sticky-key-title {
+	grid-column: 1 / -1;
+}
+
+.transfers-sticky-key-group.is-teams .transfers-sticky-chip {
+	justify-content: center;
+}
+
+.transfers-sticky-key-title {
+	display: block;
+	flex-basis: 100%;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: rgba(206, 220, 255, 0.86);
+	margin-right: 0;
+}
+
+.transfers-sticky-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 8px;
+	background: rgba(77, 94, 148, 0.82);
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	color: #d5e1ff;
+	white-space: nowrap;
+
+	i {
+		width: 8px;
+		height: 8px;
+		display: inline-block;
+		border-radius: 50%;
+	}
+
+	&.is-team i.is-atletico {
+		background: #2F80ED;
+	}
+
+	&.is-team i.is-barcelona {
+		background: #9B51E0;
+	}
+
+	&.is-team i.is-real {
+		background: #F2994A;
+	}
+
+	&.is-team {
+		justify-content: flex-start;
+		gap: 8px;
+		padding: 8px;
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		border-top: 2px solid var(--team-color, rgb(141, 149, 161));
+		background: linear-gradient(360deg,
+				color-mix(in srgb, var(--team-color, rgba(255, 255, 255, 0)) 21%, rgba(255, 255, 255, 0)), rgba(188, 206, 255, 0));
+	}
+
+	&.is-team.is-atletico {
+		--team-color: #2F80ED;
+	}
+
+	&.is-team.is-barcelona {
+		--team-color: #9B51E0;
+	}
+
+	&.is-team.is-real {
+		--team-color: #F2994A;
+	}
+
+	&.is-out {
+		color: var(--tr-negative);
+	}
+
+	&.is-in {
+		color: var(--tr-positive);
+	}
+
+	&.is-range i {
+		width: 18px;
+		height: 6px;
+		border-radius: 999px;
+		background: rgba(222, 225, 231, 0.96);
+	}
+
+	&.is-link i {
+		width: 18px;
+		height: 6px;
+		border-radius: 999px;
+		background: rgba(29, 29, 31, 0.8);
+	}
+}
+
+.transfers-team-shield {
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	display: block;
+	opacity: 0.96;
+}
+
+.transfers-team-name {
+	font-size: 13px;
+	line-height: 1;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	color: #d4dfff;
+}
+
+.transfers-chart-wrap {
+	display: flex;
+	flex-direction: column;
+	padding: var(--tr-board-pad);
+	border-radius: 8px;
+	border: 1px solid var(--tr-border-soft);
+	min-width: 0;
+}
+
+.transfers-chart-wrap .transfers-sticky-key {
+	order: 2;
+}
+
+.transfers-chart-wrap #transfersChart {
+	order: 4;
+}
+
+.transfers-chart-wrap .transfers-club-grid {
+	order: 5;
+	margin-top: 16px;
+}
+
+.transfers-chart-wrap #transfersClubGrid .transfers-bullet-board {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+.transfers-chart-meta {
+	display: grid;
+	gap: 12px;
+	padding-bottom: 20px;
+}
+
+.transfers-board-header,
+.transfers-salary-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.transfers-board-head-copy,
+.transfers-salary-head-copy {
+	display: grid;
+	gap: 4px;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.transfers-metric-label {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--tr-subtle);
+}
+
+.transfers-metric-caption {
+	max-width: 560px;
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--tr-muted);
+}
+
+.transfers-chart {
+	position: relative;
+	width: 100%;
+
+	svg {
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow: visible;
+	}
+}
+
+.transfers-tooltip {
+	pointer-events: none;
+	transition: opacity 0.1s ease;
+	color: #edf3ff;
+}
+
+.transfers-tooltip--docked {
+	position: static;
+	top: auto;
+	left: auto;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 0;
+	box-shadow: none;
+	z-index: 10;
+}
+
+.transfers-chart-detail-panel {
+	margin-bottom: 16px;
+}
+
+.transfers-tt-header {
+	display: grid;
+	gap: 4px;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+}
+
+.transfers-tt-clubs {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 8px;
+	align-items: start;
+}
+
+.transfers-tt-season {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #afc2f6;
+}
+
+.transfers-tt-caption {
+	font-size: 11px;
+	line-height: 1.45;
+	color: rgba(221, 231, 255, 0.74);
+}
+
+.transfers-tt-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 0;
+	font-size: 12px;
+	color: var(--tr-text);
+	margin: 0;
+
+	strong {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 1.1;
+		margin-left: 0;
+
+		&.is-purchase {
+			color: var(--tr-negative);
+		}
+
+		&.is-sale {
+			color: var(--tr-positive);
+		}
+	}
+}
+
+.transfers-direction-arrow {
+	flex: 0 0 auto;
+	display: block;
+}
+
+.transfers-direction-arrow--sm {
+	width: 12px;
+	height: 12px;
+}
+
+.transfers-direction-arrow--lg {
+	width: 20px;
+	height: 20px;
+}
+
+.transfers-tt-club {
+	padding: 8px 12px;
+	border-top: 1px solid rgba(188, 197, 210, 0.2);
+	position: relative;
+	background: linear-gradient(180deg,
+			color-mix(in srgb, var(--tt-club-color) 14%, rgba(255, 255, 255, 0)) 0%,
+			rgba(255, 255, 255, 0) 72%);
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: color-mix(in srgb, var(--tt-club-color) 78%, #d7e4ff 22%);
+	}
+
+	&:last-of-type {
+		padding-right: 0;
+	}
+}
+
+.transfers-tt-club-head {
+	display: grid;
+	gap: 8px;
+	margin-bottom: 8px;
+	padding-top: 8px;
+}
+
+.transfers-tt-club-name {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #cedbf9;
+}
+
+.transfers-tt-total {
+	font-size: 22px;
+	color: #edf3ff;
+}
+
+.transfers-tt-kicker {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(184, 201, 244, 0.72);
+	margin-bottom: 4px;
+}
+
+.transfers-tt-bar-row {
+	display: grid;
+	gap: 4px;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 8px 0 0;
+	opacity: 0.8;
+
+	.is-purchase {
+		color: var(--tr-negative);
+	}
+
+	.is-sale {
+		color: var(--tr-positive);
+	}
+}
+
+.transfers-axis-grid text,
+.transfers-axis-y text,
+.transfers-bar-value,
+.transfers-bar-subtitle {
+	font-size: 12px;
+	fill: $color-gray-600;
+}
+
+.transfers-club-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	min-width: 0;
+	overflow-x: clip;
+}
+
+.transfers-vs-board {
+	padding: var(--tr-board-pad);
+	border: 1px solid var(--tr-border-soft);
+	box-shadow: none;
+	border-radius: 8px;
+	min-width: 0;
+	max-width: 100%;
+}
+
+.transfers-board-title,
+.transfers-vs-title {
+	margin: 0;
+	font-size: var(--tr-board-title-size);
+	letter-spacing: var(--tr-board-title-spacing);
+	text-transform: uppercase;
+	color: var(--tr-subtle);
+	font-weight: 700;
+}
+
+.transfers-board-subhead {
+	margin: 0;
+	font-size: var(--tr-board-subhead-size);
+	line-height: 1.5;
+	color: var(--tr-muted);
+}
+
+.transfers-board-coordinates {
+	font-size: var(--tr-board-coordinate-size);
+	color: var(--tr-subtle);
+}
+
+.transfers-board-coordinate-label {
+	font-size: var(--tr-board-coordinate-size);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	fill: #9fb1de;
+}
+
+.transfers-board-coordinate-tick {
+	font-size: var(--tr-board-coordinate-size);
+	font-weight: 700;
+	fill: var(--tr-subtle);
+}
+
+.transfers-highlight-number {
+	font-family: "Oswald", sans-serif;
+	font-size: var(--tr-highlight-size-3);
+	font-weight: 500;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: 0.02em;
+	line-height: 1;
+}
+
+text.transfers-highlight-number,
+.transfers-bullet-net-chip.transfers-highlight-number,
+.transfers-salary-club-label.transfers-highlight-number,
+.transfers-salary-club-total-label.transfers-highlight-number,
+.transfers-salary-player-total-right.transfers-highlight-number,
+.transfers-salary-intro .transfers-highlight-number {
+	font-family: "Oswald", sans-serif;
+	font-size: var(--tr-highlight-size-3);
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	line-height: 1;
+}
+
+.transfers-highlight-number.transfers-highlight-number--primary {
+	font-size: var(--tr-highlight-size-1);
+	font-weight: 400;
+	letter-spacing: 0.01em;
+}
+
+.transfers-highlight-number.transfers-highlight-number--secondary {
+	font-size: var(--tr-highlight-size-2);
+	font-weight: 400;
+}
+
+.transfers-highlight-number.transfers-highlight-number--tertiary {
+	font-size: var(--tr-highlight-size-3);
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+
+.transfers-donut-center .transfers-highlight-number {
+	font-size: var(--tr-donut-center-number-size);
+	font-weight: 400;
+	letter-spacing: 0.01em;
+}
+
+// ── Bullet chart ─────────────────────────────────────────────────────────────
+.transfers-bullet-board {
+	padding: var(--tr-board-pad);
+}
+
+.transfers-detail-stack {
+	display: grid;
+	gap: 24px;
+	min-width: 0;
+}
+
+.transfers-bullet-axis {
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--tr-board-coordinate-size);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin: 12px 0 4px 0;
+	padding: 0 0 8px;
+}
+
+.transfers-bullet-row {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	padding: 24px 0px 16px;
+	border-top: 2px solid color-mix(in srgb, var(--club-color, #b7c3e6) 62%, transparent);
+	background: linear-gradient(180deg,
+			color-mix(in srgb, var(--club-color, #ffffff) 15%, transparent) 0%, transparent 82%);
+	min-width: 0;
+
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}
+
+.transfers-bullet-track-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+}
+
+.transfers-bullet-track {
+	position: relative;
+	height: 4px;
+	background: rgba(205, 219, 255, 0.12);
+	border-radius: 4px;
+	overflow: visible;
+	// extra top space for the net chip to float above
+	margin-top: 26px;
+}
+
+// Expenditure bar: anchored at center going left
+.transfers-bullet-spend {
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	right: 50%;
+	background: rgba(var(--tr-negative-rgb), 0.6);
+	border-radius: 4px 0 0 4px;
+}
+
+// Income bar: anchored at center going right
+.transfers-bullet-income {
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	left: 50%;
+	background: rgba(var(--tr-positive-rgb), 0.6);
+	border-radius: 0 4px 4px 0;
+}
+
+// Center zero line
+.transfers-bullet-zero {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	background: rgba(199, 214, 255, 0.46);
+	transform: translateX(-50%);
+}
+
+// Net balance marker tick — wide, full height, chip label above
+.transfers-bullet-net {
+	position: absolute;
+	top: -4px;
+	bottom: -6px;
+	width: 2px;
+	border-radius: 2px;
+	transform: translateX(-50%);
+
+	&.is-sale {
+		background: var(--tr-positive);
+	}
+
+	&.is-purchase {
+		background: var(--tr-negative);
+	}
+}
+
+.transfers-bullet-net-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	position: absolute;
+	bottom: calc(100% + 4px);
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	font-size: 10px;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	line-height: 1.5;
+	padding: 0;
+
+	.transfers-bullet-net.is-sale & {
+		color: var(--tr-positive);
+	}
+
+	.transfers-bullet-net.is-purchase & {
+		color: var(--tr-negative);
+	}
+}
+
+// Bar-end labels sit below the track
+.transfers-bullet-underlabels {
+	position: relative;
+	height: 16px;
+	padding-top: 8px;
+}
+
+.transfers-bullet-lbl {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	position: absolute;
+	font-size: 10px;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+	transform: translateX(-50%);
+
+	&.is-purchase {
+		color: var(--tr-negative);
+	}
+
+	&.is-sale {
+		color: var(--tr-positive);
+	}
+}
+
+.transfers-season-board {
+	max-width: 100%;
+}
+
+.transfers-season-scroll {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	overscroll-behavior-x: contain;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 2px;
+}
+
+.transfers-season-grid {
+	width: 100%;
+	min-width: 0;
+}
+
+.transfers-season-head,
+.transfers-season-row {
+	display: grid;
+	grid-template-columns: repeat(14, minmax(0, 1fr));
+	gap: 8px;
+}
+
+.transfers-season-head {
+	margin-bottom: 6px;
+}
+
+.transfers-season-axis-cell {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 0;
+	font-size: var(--tr-board-coordinate-size);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: inherit;
+}
+
+.transfers-season-row {
+	align-items: stretch;
+	padding: 8px;
+	border-top: 2px solid color-mix(in srgb, var(--club-color, #b7c3e6) 62%, transparent);
+	background: linear-gradient(180deg,
+			color-mix(in srgb, var(--club-color, #ffffff) 14%, transparent) 0%,
+			transparent 52%);
+
+	&:first-of-type {
+		border-top: 0;
+	}
+}
+
+.transfers-season-cell {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 8px 4px;
+	border: 0;
+	border-radius: 8px;
+	min-height: 56px;
+	min-width: 0;
+	cursor: default;
+}
+
+.transfers-season-cell-net {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 32px;
+	padding: 0 8px;
+	border-radius: 999px;
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 0.02em;
+	line-height: 1;
+
+	&.is-positive {
+		color: var(--tr-positive);
+		// background: rgba(var(--tr-positive-rgb), 0.14);
+	}
+
+	&.is-negative {
+		color: var(--tr-negative);
+		// background: rgba(var(--tr-negative-rgb), 0.14);
+	}
+
+	&.is-neutral {
+		color: #e4ebff;
+		// background: rgba(173, 187, 228, 0.24);
+	}
+}
+
+.transfers-season-cell-track {
+	position: relative;
+	width: 100%;
+	height: 32px;
+
+}
+
+.transfers-season-cell-zero {
+	position: absolute;
+	left: 50%;
+	top: 2px;
+	bottom: 2px;
+	width: 1px;
+	transform: translateX(-0.5px);
+	background: rgba(199, 214, 255, 0.5);
+}
+
+.transfers-season-cell-half {
+	position: absolute;
+	top: 2px;
+	bottom: 2px;
+	display: flex;
+	align-items: stretch;
+	gap: 1px;
+	overflow: hidden;
+
+	&.is-out {
+		width: calc(50% - 1px);
+		right: 50%;
+		justify-content: flex-end;
+	}
+
+	&.is-in {
+		width: calc(50% - 1px);
+		left: 50%;
+		justify-content: flex-start;
+	}
+}
+
+.transfers-season-tick {
+	width: 2px;
+	height: 100%;
+	display: inline-block;
+	border-radius: 1px;
+	flex: 0 0 auto;
+
+	&.is-out {
+		background: rgba(var(--tr-negative-rgb), 0.9);
+	}
+
+	&.is-in {
+		background: rgba(var(--tr-positive-rgb), 0.9);
+	}
+}
+
+.transfers-season-hover {
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 8px);
+	transform: translateX(-50%) translateY(4px);
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 8px;
+	border-radius: 999px;
+	background: rgba(31, 41, 73, 0.96);
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	white-space: nowrap;
+	box-shadow: 0 8px 20px rgba(15, 23, 36, 0.2);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.14s ease, transform 0.14s ease;
+	z-index: 4;
+
+	.is-out {
+		color: var(--tr-negative);
+	}
+
+	.is-in {
+		color: var(--tr-positive);
+	}
+
+	.is-net.is-positive {
+		color: var(--tr-positive);
+	}
+
+	.is-net.is-negative {
+		color: var(--tr-negative);
+	}
+
+	.is-net.is-neutral {
+		color: #d6d8de;
+	}
+}
+
+.transfers-season-cell:hover .transfers-season-hover,
+.transfers-season-cell:focus-visible .transfers-season-hover {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+.transfers-season-test-block {
+	margin-top: 12px;
+	padding-top: 10px;
+}
+
+.transfers-vs-title-test {
+	margin-bottom: 6px;
+}
+
+.transfers-donut-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	align-items: stretch;
+	overflow: hidden;
+	gap: 8px;
+}
+
+.transfers-donut-card {
+	--donut-size: 132px;
+	position: relative;
+	min-width: 0;
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	border-top: 2px solid color-mix(in srgb, var(--club-color, #b7c3e6) 62%, transparent);
+	background: linear-gradient(180deg,
+			color-mix(in srgb, var(--club-color, #ffffff) 13%, transparent) 0%,
+			transparent 72%);
+}
+
+.transfers-donut-chart {
+	width: var(--donut-size);
+	height: var(--donut-size);
+	position: relative;
+	display: grid;
+	place-items: center;
+	margin-top: 20px;
+}
+
+.transfers-donut-svg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.transfers-donut-out {
+	fill: none;
+	stroke: var(--tr-negative);
+	stroke-linecap: round;
+}
+
+.transfers-donut-in {
+	fill: none;
+	stroke: var(--tr-positive);
+	stroke-linecap: round;
+}
+
+.transfers-donut-gray {
+	fill: none;
+	stroke: var(--tr-donut-track-stroke);
+	stroke-linecap: round;
+}
+
+.transfers-donut-center {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	justify-items: center;
+	gap: 4px;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+
+	.is-out {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+		font-size: var(--tr-donut-center-number-size);
+		color: var(--tr-negative);
+	}
+
+	.is-in {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+		font-size: var(--tr-donut-center-number-size);
+		color: var(--tr-positive);
+	}
+}
+
+.transfers-salary-board {
+	max-width: 100%;
+}
+
+.transfers-salary-intro {
+	margin: 0;
+	color: inherit;
+}
+
+.transfers-salary-header {
+	margin-bottom: 12px;
+}
+
+.transfers-board-download,
+.transfers-salary-download {
+	display: inline-flex;
+	align-items: flex-start;
+	justify-content: center;
+	align-self: stretch;
+	border-radius: 0;
+	border: none;
+	background: transparent;
+	color: var(--tr-text);
+	cursor: pointer;
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: wait;
+	}
+
+	&.is-loading {
+		opacity: 0.75;
+	}
+
+	&:hover {
+		transform: none;
+		box-shadow: none;
+	}
+}
+
+.transfers-board-download-icon,
+.transfers-salary-download-icon {
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+
+.transfers-salary-layout {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	align-items: start;
+}
+
+.transfers-salary-compare-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.transfers-salary-chart-wrap {
+	min-width: 0;
+}
+
+.transfers-salary-chart {
+	position: relative;
+	min-height: 760px;
+	padding: 0;
+	border-radius: 0;
+	border: 0;
+	background: transparent;
+	overflow: hidden;
+
+	svg {
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow: visible;
+	}
+}
+
+.transfers-salary-link {
+	transition: opacity 0.09s linear, stroke-opacity 0.09s linear;
+	pointer-events: visibleStroke;
+	cursor: pointer;
+}
+
+.transfers-salary-link.is-bonus-wedge {
+	pointer-events: visiblePainted;
+}
+
+.transfers-salary-link.is-dim {
+	opacity: 0.3;
+}
+
+.transfers-salary-link.is-hover {
+	opacity: 1;
+}
+
+.transfers-salary-tooltip {
+	position: absolute;
+	z-index: 14;
+	min-width: 192px;
+	padding: 12px;
+	border-radius: 12px;
+	border: 1px solid rgba(151, 168, 221, 0.4);
+	background: rgba(25, 33, 59, 0.94);
+	box-shadow: 0 10px 26px rgba(10, 16, 32, 0.34);
+	color: #eef3ff;
+	font-variant-numeric: tabular-nums;
+	pointer-events: none;
+	transition: opacity 0.12s ease;
+}
+
+.transfers-salary-tooltip-player {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 8px;
+	color: #ffffff;
+}
+
+.transfers-salary-tooltip-row {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 16px;
+	font-size: 11px;
+	line-height: 1.3;
+	color: rgba(232, 238, 255, 0.84);
+}
+
+.transfers-salary-tooltip-row+.transfers-salary-tooltip-row {
+	margin-top: 3px;
+}
+
+.transfers-salary-tooltip-row strong {
+	font-size: 12px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.transfers-salary-player-label,
+.transfers-salary-club-label,
+.transfers-salary-club-total-label,
+.transfers-salary-column-label {
+	pointer-events: none;
+}
+
+.transfers-salary-node rect {
+	shape-rendering: geometricPrecision;
+}
+
+.transfers-salary-club-label {
+	font-size: 18px;
+	font-weight: 500;
+	fill: #fff;
+	transform: translateX(72px);
+}
+
+.transfers-salary-club-total-label {
+	font-size: 18px;
+	font-weight: 500;
+	fill: rgba(255, 255, 255, 0.9);
+}
+
+.transfers-salary-club-name {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	fill: var(--tr-text);
+}
+
+.transfers-salary-club-total {
+	font-size: 10px;
+	font-weight: 400;
+	fill: var(--tr-text);
+	opacity: 0.7;
+}
+
+.transfers-salary-node.is-player-gross rect {
+	opacity: 0.7;
+}
+
+.transfers-salary-node.is-player-total rect {
+	opacity: 0.92;
+}
+
+.transfers-salary-column-label {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	fill: #9fb1de;
+}
+
+.transfers-salary-player-label {
+	font-size: 10px;
+	font-weight: 700;
+	fill: #fff;
+	letter-spacing: .4px;
+}
+
+.transfers-salary-player-salary {
+	font-weight: 700;
+	fill: #fff;
+}
+
+.transfers-salary-player-name {
+	font-size: 10px;
+	font-weight: 500;
+	fill: #e9e9e9;
+}
+
+.transfers-salary-fallback {
+	margin: 0;
+	padding: 16px;
+	font-size: 13px;
+	color: var(--tr-muted);
+}
+
+@media screen and (max-width: $medium) {
+	.transfers-detail-stack {
+		gap: 16px;
+	}
+
+	.transfers-bullet-row {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+
+	.transfers-bullet-net-chip {
+		font-size: 9px;
+	}
+
+	.transfers-bullet-underlabels {
+		height: 24px;
+	}
+
+	.transfers-bullet-lbl {
+		font-size: 8.5px;
+		max-width: 80px;
+		white-space: normal;
+		line-height: 1.15;
+		text-align: center;
+	}
+
+	.transfers-season-grid {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.transfers-season-head,
+	.transfers-season-row {
+		grid-template-columns: repeat(14, minmax(0, 1fr));
+		gap: 4px;
+	}
+
+	.transfers-season-axis-cell {
+		font-size: 10px;
+		padding-bottom: 4px;
+	}
+
+	.transfers-sticky-key {
+		grid-template-columns: 1fr;
+	}
+
+	.transfers-season-cell-track {
+		height: 20px;
+	}
+
+	.transfers-donut-grid {
+		overflow: hidden;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 16px;
+	}
+
+	.transfers-salary-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.transfers-salary-compare-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.transfers-salary-chart {
+		min-height: 560px;
+	}
+
+	.transfers-salary-player-label {
+		font-size: 10px;
+	}
+
+	.transfers-salary-head-copy {
+		width: 100%;
+	}
+
+	.transfers-donut-chart {
+		width: var(--donut-size);
+		height: var(--donut-size);
+	}
+
+	.transfers-donut-card {
+		--donut-size: 156px;
+	}
+}
+
+.transfers-footnote {
+	margin: 16px 0 0;
+	font-size: 13px;
+	color: var(--tr-muted);
+}
+
+/* Composition refinement pass: keep dark app shell + readable medium cards */
+.transfers-sticky-chip {
+	background: rgba(78, 95, 147, 0.8);
+	color: #d9e4ff;
+}
+
+.transfers-metric-caption,
+.transfers-board-subhead,
+.transfers-salary-intro,
+.transfers-footnote,
+.transfers-season-axis-cell {
+	color: #c7d3ef;
+}
+
+.transfers-season-hover {
+	background: rgba(30, 41, 72, 0.96);
+	border: 1px solid rgba(145, 164, 221, 0.38);
+	color: #edf3ff;
+}
+
+.transfers-tt-season {
+	color: #b8c9f4;
+}
+
+.transfers-tt-row span:last-of-type {
+	color: #d5e1fb;
+}
+
+.transfers-board-download,
+.transfers-salary-download {
+	color: #e6eeff;
+	border-color: rgba(165, 184, 240, 0.34);
+}
+
+@media screen and (max-width: $medium) {
+	.transfers-section {
+		padding: 88px 20px 72px;
+	}
+
+	.transfers-shell {
+		padding: 28px;
+	}
+
+	.transfers-intro {
+		margin-bottom: 16px;
+	}
+
+	.transfers-header {
+		flex-direction: column;
+
+		h2 {
+			font-size: 36px;
+		}
+	}
+
+	.transfers-visuals {
+		gap: 20px;
+	}
+
+	.transfers-club-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	header {
+		padding: 12px;
+	}
+
+	.transfers-back-link {
+		padding: 8px;
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	.transfers-logo-link img {
+		width: 28px;
+		height: 28px;
+	}
+
+	.transfers-section {
+		--tr-board-pad: 0;
+		padding: 40px 0px 0px;
+	}
+
+	.transfers-shell {
+		padding: 20px;
+		border-radius: 0;
+	}
+
+	.transfers-intro {
+		margin-bottom: 0;
+		padding: 20px;
+	}
+
+	.transfers-header {
+		h2 {
+			font-size: 30px;
+		}
+
+		p {
+			font-size: 15px;
+		}
+	}
+
+	.transfers-chart-wrap {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.transfers-chart-wrap .transfers-sticky-key {
+		order: 2;
+	}
+
+	.transfers-chart-wrap #transfersChart {
+		order: 4;
+	}
+
+	.transfers-tooltip--docked {
+		margin-top: 0;
+	}
+
+	.transfers-chart-detail-panel {
+		margin-bottom: 12px;
+	}
+
+	.transfers-tt-header {
+		margin-bottom: 8px;
+		padding-bottom: 6px;
+	}
+
+	.transfers-tt-row {
+		font-size: 11px;
+
+		strong {
+			font-size: 13px;
+		}
+	}
+
+	.transfers-tt-club {
+		padding: 8px 8px 4px;
+	}
+
+	.transfers-tt-club-head {
+		gap: 4px;
+		margin-bottom: 6px;
+	}
+
+	.transfers-tt-total {
+		font-size: 17px;
+	}
+
+	.transfers-tt-kicker {
+		font-size: 9px;
+		margin-bottom: 3px;
+	}
+
+	.transfers-tt-bar-row {
+		gap: 4px;
+		font-size: 10px;
+		padding-top: 6px;
+	}
+
+	.transfers-vs-board {
+		padding: 0;
+		border: 0;
+	}
+
+	.transfers-chart-meta {
+		gap: 8px;
+		margin-bottom: 12px;
+		padding-bottom: 8px;
+	}
+
+	.transfers-board-header {
+		gap: 8px;
+	}
+
+	.transfers-club-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.transfers-detail-stack {
+		gap: 16px;
+	}
+
+	.transfers-bullet-axis {
+		font-size: 8px;
+		padding-bottom: 4px;
+		margin-bottom: 8px;
+	}
+
+	.transfers-bullet-row {
+		grid-template-columns: 1fr;
+		gap: 8px;
+		padding: 12px 8px;
+	}
+
+	.transfers-bullet-net {
+		width: 3px;
+	}
+
+	.transfers-bullet-net-chip {
+		font-size: 8px;
+	}
+
+	.transfers-bullet-underlabels {
+		height: 24px;
+	}
+
+	.transfers-bullet-lbl {
+		font-size: 8px;
+		max-width: 64px;
+	}
+
+	.transfers-sticky-key {
+		gap: 8px;
+		padding: 8px 0;
+	}
+
+	.transfers-sticky-key-group.is-teams {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.transfers-sticky-key-group {
+		gap: 8px;
+	}
+
+	.transfers-sticky-chip.is-team {
+		padding: 8px;
+		justify-content: center;
+	}
+
+	.transfers-team-shield {
+		display: none;
+	}
+
+	.transfers-team-name {
+		font-size: 0;
+		line-height: 1;
+	}
+
+	.transfers-sticky-chip.is-team.is-atletico .transfers-team-name::after,
+	.transfers-sticky-chip.is-team.is-barcelona .transfers-team-name::after,
+	.transfers-sticky-chip.is-team.is-real .transfers-team-name::after {
+		font-size: 10px;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+	}
+
+	.transfers-sticky-chip.is-team.is-atletico .transfers-team-name::after {
+		content: "ATL";
+	}
+
+	.transfers-sticky-chip.is-team.is-barcelona .transfers-team-name::after {
+		content: "BAR";
+	}
+
+	.transfers-sticky-chip.is-team.is-real .transfers-team-name::after {
+		content: "MAD";
+	}
+
+	.transfers-sticky-key-title,
+	.transfers-sticky-chip {
+		font-size: 9px;
+	}
+
+	.transfers-season-grid {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.transfers-season-head,
+	.transfers-season-row {
+		grid-template-columns: repeat(14, minmax(0, 1fr));
+		gap: 2px;
+	}
+
+	.transfers-season-axis-cell {
+		font-size: 10px;
+		padding: 1px 0 4px;
+		letter-spacing: 0.02em;
+
+		&:nth-child(even) {
+			opacity: 0;
+		}
+	}
+
+	.transfers-season-cell {
+		padding: 4px 0;
+		min-height: 48px;
+		border-radius: 8px;
+	}
+
+	.transfers-season-cell-track {
+		height: 16px;
+	}
+
+	.transfers-donut-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		overflow: hidden;
+		gap: 8px;
+		padding-bottom: 0;
+	}
+
+	.transfers-donut-card {
+		--donut-size: clamp(72px, calc((100vw - 88px) / 3), 136px);
+		min-width: 0;
+		width: 100%;
+		padding: 8px 4px;
+	}
+
+	.transfers-donut-center {
+		gap: 0;
+	}
+
+	.transfers-donut-center .is-out,
+	.transfers-donut-center .is-in {
+		font-size: 12px;
+	}
+
+	.transfers-salary-chart {
+		min-height: 0;
+		padding: 0;
+	}
+
+	.transfers-salary-player-label {
+		font-size: 9px;
+	}
+
+	.transfers-donut-chart {
+		width: var(--donut-size);
+		height: var(--donut-size);
+	}
+}

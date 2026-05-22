@@ -1,10 +1,18 @@
+@use "design-system" as *;
+@use "gallery-lightbox" as lightbox;
+
+$orange: lightbox.$orange;
+$orangelight: lightbox.$orangelight;
+$mobile: lightbox.$mobile;
+$medium: lightbox.$medium;
+$lightestone: lightbox.$lightestone;
+$fontweightlight: lightbox.$fontweightlight;
+
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
-@import "design-system";
-@import "gallery-lightbox";
 
 
 /* ==========================================
@@ -389,6 +397,128 @@ header {
 	background: #fff;
 }
 
+.personal-projects {
+	max-width: 1000px;
+	margin: 96px auto 0;
+	padding: 0 20px;
+
+	&-shell {
+		padding: 28px;
+		border-radius: 24px;
+		background:
+			radial-gradient(circle at top right, rgba(0, 77, 152, 0.07), transparent 28%),
+			linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+		border: 1px solid rgba(188, 197, 210, 0.42);
+		box-shadow: 0 18px 34px rgba(15, 23, 36, 0.05);
+	}
+
+	&-header {
+		margin-bottom: 18px;
+
+		h2 {
+			margin: 0 0 8px;
+			color: $color-gray-900;
+			font-family: "Oswald", sans-serif;
+			font-size: 30px;
+			font-weight: 500;
+			line-height: 1;
+			letter-spacing: 0.03em;
+			text-transform: uppercase;
+		}
+
+		p {
+			margin: 0;
+			max-width: 520px;
+			color: #4a5565;
+			font-size: 15px;
+			line-height: 1.4;
+		}
+	}
+
+	&-kicker {
+		display: inline-flex;
+		margin-bottom: 10px;
+		padding: 7px 11px;
+		border-radius: $radius-full;
+		background: rgba(250, 176, 113, 0.16);
+		color: #8e4f1d;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 700;
+	}
+
+	&-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 14px;
+	}
+}
+
+
+.personal-project-thumb {
+	display: flex;
+	flex-direction: column;
+	min-height: 220px;
+	overflow: hidden;
+	border-radius: 18px;
+	border: 1px solid rgba(188, 197, 210, 0.42);
+	background: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+	transition: transform $transition-base, box-shadow $transition-base;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 12px 24px rgba(15, 23, 36, 0.11);
+	}
+
+	&--transfers .personal-project-thumb-media {
+		background:
+			linear-gradient(130deg, rgba(165, 0, 68, 0.92) 0%, rgba(0, 77, 152, 0.92) 100%);
+	}
+
+	&--partnership .personal-project-thumb-media {
+		background:
+			radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 36%),
+			linear-gradient(135deg, rgba(5, 5, 5, 0.98) 0%, rgba(38, 38, 38, 0.94) 56%, rgba(112, 112, 112, 0.88) 100%);
+	}
+
+	&--placeholder .personal-project-thumb-media {
+		background: linear-gradient(130deg, #adb7c4 0%, #8b96a5 100%);
+	}
+}
+
+.personal-project-thumb-media {
+	height: 120px;
+	display: flex;
+	align-items: flex-end;
+	padding: 14px;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+
+.personal-project-thumb-body {
+	padding: 14px;
+
+	h3 {
+		margin: 0 0 6px;
+		color: $color-gray-900;
+		font-size: 20px;
+		line-height: 1.15;
+	}
+
+	p {
+		margin: 0;
+		color: #4a5565;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+}
+
 .gallery__item h1 {
 	margin: auto;
 }
@@ -443,6 +573,60 @@ header {
 
 }
 
+@media screen and (max-width: $medium) {
+	.personal-projects {
+		padding: 0 16px;
+
+		&-shell {
+			padding: 22px;
+		}
+
+		&-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.personal-projects {
+		margin-top: 72px;
+		padding: 0 12px;
+
+		&-shell {
+			padding: 16px;
+			border-radius: 18px;
+		}
+
+		&-header {
+			h2 {
+				font-size: 26px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.personal-project-thumb {
+		min-height: 200px;
+
+		&-media {
+			height: 104px;
+		}
+
+		&-body {
+			h3 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+}
+
 .download-resume-btn {
 	display: inline-flex;
 	align-items: center;
@@ -494,16 +678,16 @@ header {
 	line-height: 20px;
 
 	&.work.area {
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		font-size: $font-size-xs;
-		color: $color-gray-500;
-		font-weight: $font-weight-medium;
+		color: #86868b;
 		border: none;
 		padding: 0px;
 		display: flex;
 		gap: 12px;
 		align-items: center;
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
 	}
 }
 
@@ -920,10 +1104,10 @@ label {
 }
 
 .date-range {
-	font-size: 12px;
-	letter-spacing: 2px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.16em;
 	text-transform: uppercase;
-	font-weight: 600;
 
 	@media screen and (max-width: $mobile) {
 		font-size: 11px;
@@ -1064,6 +1248,17 @@ a {
 			}
 		}
 
+		&.nav-pill-link {
+			padding: 8px 14px;
+
+			a {
+				font-family: "Oswald", sans-serif;
+				font-size: 12px;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+		}
+
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				opacity: 0.6;
@@ -1166,3 +1361,4 @@ footer .navbar-brand {
 		clear: both;
 	}
 }
+

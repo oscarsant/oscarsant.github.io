@@ -465,7 +465,7 @@ body.is-reordering::before {
 	margin-top: 4px;
 	border-top: 1px solid rgba(0, 0, 0, 0.08);
 
-	& + & {
+	&+& {
 		border-top: none;
 		margin-top: 0;
 		padding-top: 4px;
@@ -1066,9 +1066,52 @@ body.is-reordering::before {
 }
 
 .numbers-range {
+	-webkit-appearance: none;
+	appearance: none;
 	width: 100%;
+	height: 4px;
 	margin-top: 8px;
-	accent-color: var(--numbers-accent);
+	border-radius: 2px;
+	cursor: pointer;
+	outline: none;
+	background: linear-gradient(to right,
+			var(--numbers-accent) var(--fill, 0%),
+			rgba(0, 0, 0, 0.12) var(--fill, 0%));
+
+	&::-webkit-slider-runnable-track {
+		height: 4px;
+		border-radius: 2px;
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 18px;
+		height: 18px;
+		margin-top: -7px;
+		border-radius: 50%;
+		background: #ffffff;
+		box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.16);
+		cursor: pointer;
+	}
+
+	&::-moz-range-track {
+		height: 4px;
+		border-radius: 2px;
+		background: linear-gradient(to right,
+				var(--numbers-accent) var(--fill, 0%),
+				rgba(0, 0, 0, 0.12) var(--fill, 0%));
+	}
+
+	&::-moz-range-thumb {
+		appearance: none;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		background: #ffffff;
+		border: none;
+		box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.16);
+		cursor: pointer;
+	}
 }
 
 // ── Interest / Principal split bar ────────────────────────────────────────
@@ -1082,8 +1125,8 @@ body.is-reordering::before {
 .numbers-split-bar {
 	display: flex;
 	align-items: stretch;
-	height: 48px;
-	border-radius: 14px;
+	height: 32px;
+	border-radius: 8px;
 	overflow: hidden;
 	user-select: none;
 }
@@ -1545,6 +1588,17 @@ body.is-reordering::before {
 		input {
 			pointer-events: auto;
 		}
+
+		// Show a border on the number input so it looks editable
+		.numbers-item-input-wrap {
+			border: 1px solid rgba(0, 0, 0, 0.14);
+			border-radius: 6px;
+			padding: 2px 4px;
+		}
+
+		.numbers-item-input {
+			border-color: transparent;
+		}
 	}
 
 	// Always keep inputs readable (just not interactive when locked)
@@ -1672,7 +1726,8 @@ body.is-reordering::before {
 }
 
 .numbers-item-input {
-	border: none;
+	border: 1px solid transparent;
+	border-radius: 6px;
 	background: transparent;
 	font-size: 14px;
 	font-weight: 700;
@@ -1692,7 +1747,8 @@ body.is-reordering::before {
 	}
 
 	&:focus {
-		border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+		border-color: rgba(0, 0, 0, 0.28);
+		outline: none;
 	}
 
 	&--owed {
@@ -1761,10 +1817,6 @@ body.is-reordering::before {
 	font-weight: 700;
 	cursor: pointer;
 	transition: background 150ms ease;
-
-	&:hover {
-		background: rgba(192, 57, 43, 0.07);
-	}
 }
 
 .numbers-sources-empty {
@@ -1786,8 +1838,9 @@ body.is-reordering::before {
 .numbers-equity-row {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	margin-top: 10px;
+	justify-content: flex-end;
+	gap: 8px;
 }
 
 .numbers-equity-row__label {
@@ -1875,12 +1928,11 @@ body.is-reordering::before {
 
 .numbers-link-select {
 	font-size: 12px;
-	font-weight: 600;
-	color: #111;
-	background: rgba(0, 0, 0, 0.08);
+	font-weight: 400;
+	color: #86868b;
 	border: 1px solid rgba(0, 0, 0, 0.08);
-	border-radius: 6px;
-	padding: 3px 6px;
+	border-radius: 4px;
+	padding: 6px 8px;
 	outline: none;
 	max-width: 180px;
 	cursor: pointer;
@@ -1890,13 +1942,7 @@ body.is-reordering::before {
 	}
 }
 
-// Thinner, more subtle slider track for growth rate
-.numbers-range--growth {
-	height: 2px;
-	opacity: 0.5;
-	margin-top: 4px;
-}
-
+// Subtle growth rate slider — same size as main, just dimmed
 .numbers-footer {
 	padding: 24px;
 	text-align: center;

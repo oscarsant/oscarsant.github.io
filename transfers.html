@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="mylogo.svg" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LaLiga Transfers Comparison</title>
+    <meta name="description"
+        content="D3 comparison of Barcelona, Atletico de Madrid, and Real Madrid transfers using Transfermarkt LaLiga data." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/transfers.css" />
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap">
+    </noscript>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <div class="navbar">
+                    <a class="transfers-back-link" href="index.html" aria-label="Back to home" title="Back to home">
+                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" focusable="false">
+                            <path d="M15.75 6.77461H0.75L6.7998 0.75M6.7998 12.799L3.01855 9.03401" stroke="black"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a class="transfers-logo-link" href="index.html" aria-label="Oscar Santamariña home">
+                        <img src="mylogo.svg" alt="Oscar Santamariña" />
+                    </a>
+                </div>
+            </header>
+            <section class="transfers-section" id="transfers-comparison" aria-labelledby="transfers-heading">
+                <div class="transfers-intro">
+                    <div class="transfers-kicker">Data Viz</div>
+                    <div class="transfers-header">
+                        <div>
+                            <h2 id="transfers-heading">LaLiga transfer comparison</h2>
+                            <p>
+                                Barcelona, Atletico de Madrid, and Real Madrid across every season
+                                from 12/13 to 25/26. Switch metrics to see the full picture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="transfers-shell">
+                    <div class="transfers-panel">
+                        <div class="transfers-visuals">
+                            <div class="transfers-chart-wrap" id="transfersChartGraphic">
+                                <div class="transfers-chart-meta transfers-board-header">
+                                    <div class="transfers-board-head-copy">
+                                        <div class="transfers-metric-label transfers-vs-title transfers-board-title"
+                                            id="transfersMetricLabel">
+                                            Cumulative net outlay,
+                                            2012–2026</div>
+                                        <div class="transfers-metric-caption transfers-board-subhead"
+                                            id="transfersMetricCaption">Running total of
+                                            transfer expenditure minus income each season. Atletico consistently offsets
+                                            spending with sales — Madrid and Barcelona simply spend.</div>
+                                    </div>
+                                    <button class="transfers-export-control transfers-board-download"
+                                        id="transfersChartDownloadBtn" type="button"
+                                        aria-label="Download cumulative net outlay graphic"
+                                        title="Download cumulative net outlay graphic">
+                                        <svg class="transfers-board-download-icon" width="20" height="20"
+                                            viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            aria-hidden="true" focusable="false">
+                                            <path
+                                                d="M9.99982 0.75V12.791L7.08381 9.8633M12.9158 9.8633L12.1868 10.5953M5.367 5.48289H4.42501C2.39601 5.48289 0.75 7.12789 0.75 9.1569V14.0419C0.75 16.0769 2.40001 17.7269 4.43501 17.7269H6.22001M14.6328 5.48289H15.5658C17.6008 5.48289 19.2498 7.13189 19.2498 9.1679V14.0519C19.2498 16.0819 17.6048 17.7269 15.5748 17.7269H10.0048"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="transfers-chart" id="transfersChart" aria-live="polite"></div>
+                                <div class="transfers-sticky-key" aria-label="Transfers legend">
+                                    <div class="transfers-sticky-key-group is-teams">
+                                        <span class="transfers-sticky-chip is-team is-atletico"
+                                            data-club-key="atletico">
+                                            <svg class="transfers-team-shield" viewBox="0 0 550 705"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="m549.01.00000763h-548.9999902l.1699832 450.30999237c-.023766 14.341 3.250107 28.496 9.568607 41.371 6.3185 12.874 15.5124 24.124 26.8714 32.879l.81.64 237.31 179.8 237.23-180.07c11.531-8.783 20.885-20.104 27.338-33.084 6.453-12.979 9.831-27.271 9.872-41.766z"
+                                                    fill="none" stroke="#2F80ED" stroke-width="34"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="transfers-team-name">Atletico Madrid</span>
+                                        </span>
+                                        <span class="transfers-sticky-chip is-team is-barcelona"
+                                            data-club-key="barcelona">
+                                            <svg class="transfers-team-shield" viewBox="0 0 745 900"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M 74.6435,174.44821 C 124.7253,196.43128 206.9224,193.82841 262.0544,152.22012 C 339.14427,208.70411 413.33871,202.90565 484.08109,152.22012 C 531.2457,186.31197 603.86063,200.86803 671.99683,175.16368 L 702.542,217.60323 C 622.89313,324.04748 652.37631,425.79403 734.52965,515.33515 L 700.03211,550.31438 C 707.84694,779.89493 530.03406,834.70757 427.92962,840.39844 L 373.03309,885.31318 L 318.54631,841.06766 C 136.2595,825.32542 40.0155,729.15858 45.9697,550.90381 L 10.5,515.06777 C 79.804395,440.10464 131.8824,337.67107 42.855,217.5801 L 74.6435,174.44821 z"
+                                                    fill="none" stroke="#9B51E0" stroke-width="40"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="transfers-team-name">Barcelona</span>
+                                        </span>
+                                        <span class="transfers-sticky-chip is-team is-real" data-club-key="realMadrid">
+                                            <svg class="transfers-team-shield" viewBox="0 0 32 43"
+                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path
+                                                    d="M22.319 12.464c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323c.01.177-.146.323-.333.323zM2.446 27.559c0-7.214 6.1-13.075 13.554-13.075s13.554 5.871 13.554 13.075c0 7.193-6.1 13.085-13.554 13.085-7.453-.01-13.554-5.892-13.554-13.085zM21.319 7.592c.323.083.52.396.437.708s-.416.5-.739.416-.52-.396-.437-.708.416-.5.739-.416zm.552-1.145c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323c-.01-.187.146-.323.333-.323zm-.281-1.166c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323c-.01-.177.146-.323.333-.323zm4.164 3.061c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-.281-1.155c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-.5-1.02c.187 0 .333.146.333.323s-.156.323-.333.323c-.187 0-.333-.146-.333-.323-.01-.177.146-.323.333-.323zm-.802-.906c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-.979-.687c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-1.062-.406c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.156-.323.333-.323zm-1.072.094c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-.791-.885c.187 0 .333.146.333.323s-.156.323-.333.323c-.187 0-.333-.146-.333-.323s.146-.323.333-.323zm-1.031-.656c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-1.072-.385c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323.146-.323.333-.323zm-1.093-.187c.187 0 .333.146.333.323s-.146.323-.333.323-.333-.146-.333-.323c-.01-.177.146-.323.333-.323zM6.673 10.695a.62.62 0 0 1-.822-.229.568.568 0 0 1 .239-.791.62.62 0 0 1 .822.229c.156.281.052.635-.239.791zm4.31-1.978c-.323.083-.656-.104-.739-.416s.115-.635.437-.708c.323-.083.656.104.739.416s-.115.635-.437.708zM16 8.103a.593.593 0 0 1-.604-.583c0-.323.271-.583.604-.583s.604.26.604.583-.271.583-.604.583zm-5.861-1.01c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323-.156.323-.333.323zm.281-1.166c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323-.156.323-.333.323zM6.246 8.998c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323c.01.177-.146.323-.333.323zm.281-1.166c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323.01.177-.146.323-.333.323zm.5-1.02c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323c.01.177-.146.323-.333.323zm.802-.906c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323-.146.323-.333.323zm.979-.687c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323c.01.177-.146.323-.333.323zm1.062-.396c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323-.146.323-.333.323zm1.072.083c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323c.01.177-.146.323-.333.323zm.791-.874c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323zm1.031-.666c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323-.146.323-.333.323zm1.072-.385c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323zM16 6.166c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323zm0-1.176c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323zm0-1.176c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323zm-1.062-1.02c-.187 0-.344-.146-.344-.323s.156-.323.344-.323.333.146.333.323c0 .187-.156.323-.333.323zM25.91 9.674c.291.156.396.51.239.791s-.531.385-.822.229a.578.578 0 0 1-.239-.791.62.62 0 0 1 .822-.229zm-7.755 1.707c-.187 0-.333-.146-.333-.323s.146-.323.333-.323.333.146.333.323c.01.177-.146.323-.333.323zm-8.474 1.083c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323zm4.164-1.083c-.187 0-.333-.146-.333-.323s.156-.323.333-.323c.187 0 .333.146.333.323s-.146.323-.333.323z"
+                                                    fill="none" stroke="#F2994A" stroke-width="1.05"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="transfers-team-name">Real Madrid</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="transfers-tooltip transfers-tooltip--docked" id="transfersChartDetail">
+                                    <div class="transfers-chart-detail-panel" id="transfersChartDetailPanel"></div>
+                                </div>
+                                <div class="transfers-club-grid" id="transfersClubGrid"></div>
+                            </div>
+                            <div class="transfers-club-grid" id="transfersClubGridSecondary"></div>
+                        </div>
+                    </div>
+                    <p class="transfers-footnote">
+                        Fees, loans, and free moves reflect how Transfermarkt lists them on the linked page snapshot.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <nav class="nav-footer">
+                <p class="credits text-center">
+                    | Transfer comparison page | Updated April 2026 |
+                </p>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+    <script src="js/transfers-comparison.js"></script>
+</body>
+
+</html>
