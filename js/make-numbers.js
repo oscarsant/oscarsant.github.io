@@ -203,39 +203,45 @@
 			defaultAmount: 3000,
 			max: 50000,
 			step: 100,
+			defaultRate: 24,
 		},
 		studentloan: {
 			label: "Student Loan",
 			defaultAmount: 20000,
 			max: 200000,
 			step: 500,
+			defaultRate: 7,
 		},
 		carloan: {
 			label: "Car Loan",
 			defaultAmount: 15000,
 			max: 100000,
 			step: 500,
+			defaultRate: 7,
 		},
 		medical: {
 			label: "Medical Debt",
 			defaultAmount: 2000,
 			max: 50000,
 			step: 100,
+			defaultRate: 0,
 		},
 		personalloan: {
 			label: "Personal Loan",
 			defaultAmount: 5000,
 			max: 100000,
 			step: 250,
+			defaultRate: 11,
 		},
-		heloc: { label: "HELOC", defaultAmount: 30000, max: 500000, step: 1000 },
+		heloc: { label: "HELOC", defaultAmount: 30000, max: 500000, step: 1000, defaultRate: 9 },
 		bnpl: {
 			label: "Buy Now Pay Later",
 			defaultAmount: 500,
 			max: 10000,
 			step: 50,
+			defaultRate: 0,
 		},
-		other: { label: "Other Debt", defaultAmount: 1000, max: 100000, step: 250 },
+		other: { label: "Other Debt", defaultAmount: 1000, max: 100000, step: 250, defaultRate: 10 },
 	};
 
 	// ─── State ───────────────────────────────────────────────────────────────
@@ -746,6 +752,71 @@
 			'" aria-label="Delete">Delete</button>' +
 			"</div>" +
 			"</div>"
+		);
+	}
+
+	function buildDebtItemHTML(item) {
+		var cfg = debtDefaults[item.type];
+		var rate = item.rate !== undefined ? item.rate : cfg.defaultRate;
+		return (
+			'<div class="numbers-source-item" data-id="' +
+			item.id +
+			'">' +
+			'<div class="numbers-source-item__header">' +
+			DRAG_HANDLE_SVG +
+			'<span class="numbers-source-item__label">' +
+			getCategoryIcon(item.type) +
+			(item.customLabel || cfg.label) +
+			'</span>' +
+			'<div class="numbers-source-item__header-right">' +
+			'<div class="numbers-item-input-wrap">' +
+			'<span class="numbers-item-input-prefix">$</span>' +
+			'<input class="numbers-item-input" type="number" min="0" max="' +
+			cfg.max +
+			'" step="' +
+			cfg.step +
+			'" value="' +
+			item.amount +
+			'" data-amount-input="' +
+			item.id +
+			'" />' +
+			'</div>' +
+			'<button class="numbers-source-item__chevron" type="button" data-toggle="' +
+			item.id +
+			'" aria-label="Expand"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+			'</div>' +
+			'</div>' +
+			'<div class="numbers-source-item__body">' +
+			'<input class="numbers-range" type="range" min="0" max="' +
+			cfg.max +
+			'" step="' +
+			cfg.step +
+			'" value="' +
+			item.amount +
+			'" data-item-id="' +
+			item.id +
+			'" />' +
+			'<div class="numbers-equity-row numbers-equity-row--growth">' +
+			'<span class="numbers-equity-row__label">Interest rate (APR)</span>' +
+			'<div class="numbers-growth-wrap">' +
+			'<input class="numbers-growth-input" type="number" min="0" max="50" step="0.25" value="' +
+			rate +
+			'" data-rate-input="' +
+			item.id +
+			'" />' +
+			'<span class="numbers-growth-pct">%</span>' +
+			'</div>' +
+			'</div>' +
+			'<input class="numbers-range numbers-range--growth" type="range" min="0" max="50" step="0.25" value="' +
+			rate +
+			'" data-item-id="' +
+			item.id +
+			'" data-field="rate" />' +
+			'<button class="numbers-source-item__delete" type="button" data-remove="' +
+			item.id +
+			'" aria-label="Delete">Delete</button>' +
+			'</div>' +
+			'</div>'
 		);
 	}
 
@@ -1262,6 +1333,35 @@
 		container.querySelectorAll("[data-remove]").forEach(function (btn) {
 			btn.addEventListener("click", function () {
 				onRemove(Number(this.dataset.remove));
+			});
+		});
+	}
+
+	function attachDebtRateListeners(container) {
+		container
+			.querySelectorAll('.numbers-range[data-field="rate"]')
+			.forEach(function (input) {
+				input.addEventListener("input", function () {
+					var id = Number(this.dataset.itemId);
+					var item = state.debts.find(function (x) { return x.id === id; });
+					if (!item) return;
+					item.rate = Number(this.value);
+					var numIn = container.querySelector('[data-rate-input="' + id + '"]');
+					if (numIn) numIn.value = item.rate;
+					persistState();
+				});
+			});
+		container.querySelectorAll("[data-rate-input]").forEach(function (input) {
+			input.addEventListener("change", function () {
+				var id = Number(this.dataset.rateInput);
+				var item = state.debts.find(function (x) { return x.id === id; });
+				if (!item) return;
+				var val = Math.max(0, Math.min(50, Number(this.value) || 0));
+				item.rate = val;
+				this.value = val;
+				var rangeIn = container.querySelector('.numbers-range[data-item-id="' + id + '"][data-field="rate"]');
+				if (rangeIn) rangeIn.value = val;
+				persistState();
 			});
 		});
 	}
@@ -1833,7 +1933,7 @@
 		} else {
 			debtList.innerHTML = state.debts
 				.map(function (d) {
-					return buildSimpleItemHTML(d, debtDefaults);
+					return buildDebtItemHTML(d);
 				})
 				.join("");
 			attachSimpleListeners(debtList, state.debts, function (id) {
@@ -1843,6 +1943,7 @@
 				renderDebts();
 				updateView();
 			});
+			attachDebtRateListeners(debtList);
 			attachLockToggle(debtList);
 		}
 		debtPanelTotal.textContent = state.debts.length
@@ -2411,6 +2512,11 @@
 		input.value = "";
 	}
 
+	function openNewCard(container, id) {
+		var card = container.querySelector('[data-id="' + id + '"]');
+		if (card) card.classList.add("is-unlocked");
+	}
+
 	incomeSheetGrid.addEventListener("click", function (e) {
 		var btn = e.target.closest("[data-type]");
 		if (!btn) {
@@ -2430,6 +2536,7 @@
 		state.nextSourceId += 1;
 		closeSheet(incomeSheet);
 		renderSources();
+		openNewCard(sourcesList, state.nextSourceId - 1);
 		updateView();
 	});
 
@@ -2449,6 +2556,7 @@
 		hideNamePrompt(incomeNamePrompt, incomeNameInput);
 		closeSheet(incomeSheet);
 		renderSources();
+		openNewCard(sourcesList, state.nextSourceId - 1);
 		updateView();
 	}
 	incomeNameConfirm.addEventListener("click", confirmIncomeName);
@@ -2480,6 +2588,7 @@
 		state.nextExpenseId += 1;
 		closeSheet(spendingSheet);
 		renderExpenses();
+		openNewCard(expensesList, state.nextExpenseId - 1);
 		updateView();
 	});
 
@@ -2498,6 +2607,7 @@
 		hideNamePrompt(spendingNamePrompt, spendingNameInput);
 		closeSheet(spendingSheet);
 		renderExpenses();
+		openNewCard(expensesList, state.nextExpenseId - 1);
 		updateView();
 	}
 	spendingNameConfirm.addEventListener("click", confirmSpendingName);
@@ -2531,6 +2641,7 @@
 		state.nextAssetId += 1;
 		closeSheet(assetsSheet);
 		renderAssets();
+		openNewCard(assetsList, state.nextAssetId - 1);
 		updateView();
 	});
 
@@ -2551,6 +2662,7 @@
 		hideNamePrompt(assetsNamePrompt, assetsNameInput);
 		closeSheet(assetsSheet);
 		renderAssets();
+		openNewCard(assetsList, state.nextAssetId - 1);
 		updateView();
 	}
 	assetsNameConfirm.addEventListener("click", confirmAssetsName);
@@ -2574,10 +2686,12 @@
 			id: state.nextDebtId,
 			type: type,
 			amount: debtDefaults[type].defaultAmount,
+			rate: debtDefaults[type].defaultRate,
 		});
 		state.nextDebtId += 1;
 		closeSheet(debtSheet);
 		renderDebts();
+		openNewCard(debtList, state.nextDebtId - 1);
 		updateView();
 	});
 
@@ -2587,6 +2701,7 @@
 			id: state.nextDebtId,
 			type: "other",
 			amount: debtDefaults.other.defaultAmount,
+			rate: debtDefaults.other.defaultRate,
 		};
 		if (label) {
 			item.customLabel = label;
@@ -2596,6 +2711,7 @@
 		hideNamePrompt(debtNamePrompt, debtNameInput);
 		closeSheet(debtSheet);
 		renderDebts();
+		openNewCard(debtList, state.nextDebtId - 1);
 		updateView();
 	}
 	debtNameConfirm.addEventListener("click", confirmDebtName);
