@@ -13,6 +13,8 @@
 	padding: 20px 16px 72px;
 	background: transparent;
 	color: var(--numbers-ink);
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .numbers-nav {
@@ -1074,6 +1076,10 @@ body.is-reordering::before {
 	border-radius: 2px;
 	cursor: pointer;
 	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	touch-action: pan-y;
+	user-select: none;
+	-webkit-user-select: none;
 	background: linear-gradient(to right,
 			var(--numbers-accent) var(--fill, 0%),
 			rgba(0, 0, 0, 0.12) var(--fill, 0%));
@@ -1085,9 +1091,9 @@ body.is-reordering::before {
 
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		width: 18px;
-		height: 18px;
-		margin-top: -7px;
+		width: 22px;
+		height: 22px;
+		margin-top: -9px;
 		border-radius: 50%;
 		background: #ffffff;
 		box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.16);
@@ -1104,8 +1110,8 @@ body.is-reordering::before {
 
 	&::-moz-range-thumb {
 		appearance: none;
-		width: 18px;
-		height: 18px;
+		width: 22px;
+		height: 22px;
 		border-radius: 50%;
 		background: #ffffff;
 		border: none;
@@ -1259,9 +1265,9 @@ body.is-reordering::before {
 
 .numbers-reorder-btn {
 	display: none;
-	width: 100%;
-	margin-top: 10px;
-	padding: 10px;
+	width: fit-content;
+	margin: 10px auto 0;
+	padding: 10px 20px;
 	border-radius: 12px;
 	border: none;
 	background: transparent;
@@ -1738,6 +1744,8 @@ body.is-reordering::before {
 	max-width: 120px;
 	outline: none;
 	padding: 0;
+	user-select: text;
+	-webkit-user-select: text;
 	-moz-appearance: textfield;
 
 	&::-webkit-outer-spin-button,
@@ -1805,9 +1813,10 @@ body.is-reordering::before {
 	display: none;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
+	width: fit-content;
+	align-self: center;
 	margin-top: 14px;
-	padding: 10px;
+	padding: 10px 24px;
 	border-radius: 10px;
 	border: none;
 	background: transparent;
@@ -1911,6 +1920,8 @@ body.is-reordering::before {
 	width: 34px;
 	outline: none;
 	padding: 0;
+	user-select: text;
+	-webkit-user-select: text;
 	-moz-appearance: textfield;
 
 	&::-webkit-outer-spin-button,
