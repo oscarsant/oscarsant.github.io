@@ -1091,10 +1091,10 @@ body.is-reordering::before {
 
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		width: 22px;
-		height: 22px;
-		margin-top: -9px;
-		border-radius: 50%;
+		width: 28px;
+		height: 14px;
+		margin-top: -5px;
+		border-radius: 99px;
 		background: #ffffff;
 		box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.16);
 		cursor: pointer;
@@ -1110,9 +1110,9 @@ body.is-reordering::before {
 
 	&::-moz-range-thumb {
 		appearance: none;
-		width: 22px;
-		height: 22px;
-		border-radius: 50%;
+		width: 28px;
+		height: 14px;
+		border-radius: 99px;
 		background: #ffffff;
 		border: none;
 		box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.14), 0 2px 5px rgba(0, 0, 0, 0.16);
@@ -1489,8 +1489,8 @@ body.is-reordering::before {
 	color: rgba(0, 0, 0, 0.45);
 
 	.numbers-cat-icon {
-		width: 24px;
-		height: 24px;
+		font-size: 24px;
+		line-height: 1;
 	}
 }
 
@@ -1544,8 +1544,8 @@ body.is-reordering::before {
 .numbers-source-item {
 	padding: 8px 12px;
 	border-radius: 12px;
-	border: 1px solid rgba(0, 0, 0, 0.08);
-	background: #fafafa;
+	border: 1px solid var(--numbers-border);
+	background: #f4f4f4;
 	cursor: pointer;
 	transition: border-color 150ms ease;
 
@@ -1780,10 +1780,9 @@ body.is-reordering::before {
 
 .numbers-cat-icon {
 	flex-shrink: 0;
-	color: rgba(0, 0, 0, 0.45);
-	display: block;
-	width: 20px;
-	height: 20px;
+	color: var(--numbers-muted);
+	font-size: 20px;
+	line-height: 1;
 }
 
 .numbers-source-item__chevron {
@@ -1792,10 +1791,9 @@ body.is-reordering::before {
 	justify-content: center;
 	width: 28px;
 	height: 28px;
-	border-radius: 999px;
-	border: 1px solid rgba(0, 0, 0, 0.08);
-	background: transparent;
-	color: rgba(0, 0, 0, 0.45);
+	border: none;
+	background: none;
+	color: rgb(138 138 138);
 	cursor: pointer;
 	flex-shrink: 0;
 	transition: background 150ms ease, color 150ms ease;
@@ -1814,8 +1812,7 @@ body.is-reordering::before {
 	align-items: center;
 	justify-content: center;
 	width: fit-content;
-	align-self: center;
-	margin-top: 14px;
+	margin: 14px auto 0;
 	padding: 10px 24px;
 	border-radius: 10px;
 	border: none;
@@ -1847,8 +1844,8 @@ body.is-reordering::before {
 .numbers-equity-row {
 	display: flex;
 	align-items: center;
-	margin-top: 10px;
-	justify-content: flex-end;
+	margin-top: 12px;
+	justify-content: space-between;
 	gap: 8px;
 }
 
@@ -1877,7 +1874,6 @@ body.is-reordering::before {
 	justify-content: space-between;
 	margin-top: 12px;
 	padding-top: 10px;
-	border-top: 1px solid rgba(0, 0, 0, 0.08);
 	font-size: 11px;
 	font-weight: 800;
 	letter-spacing: 0.1em;
@@ -1897,7 +1893,6 @@ body.is-reordering::before {
 .numbers-equity-row--growth {
 	margin-top: 12px;
 	padding-top: 10px;
-	border-top: 1.5px dashed rgba(0, 0, 0, 0.08);
 	align-items: center;
 }
 

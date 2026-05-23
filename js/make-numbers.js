@@ -628,132 +628,56 @@
 		}
 	}
 
-	// ─── Category icons (Iconly Bulk-inspired two-tone inline SVGs) ───────────
-	var _ico = (function () {
-		var chart =
-			'<rect fill="currentColor" fill-opacity=".35" x="2" y="15" width="4" height="6"/>' +
-			'<rect fill="currentColor" fill-opacity=".35" x="9.5" y="11" width="5" height="10"/>' +
-			'<rect fill="currentColor" fill-opacity=".35" x="17" y="7" width="5" height="14"/>' +
-			'<circle fill="currentColor" cx="4" cy="13" r="2"/>' +
-			'<circle fill="currentColor" cx="12" cy="9" r="2"/>' +
-			'<circle fill="currentColor" cx="19.5" cy="5.5" r="2"/>';
-		var house =
-			'<path fill="currentColor" fill-opacity=".35" d="M20.5 10.5 12 4 3.5 10.5H5V21h5.5v-7h3v7H19V10.5z"/>' +
-			'<rect fill="currentColor" x="9.5" y="14" width="5" height="7" rx=".5"/>';
-		var car =
-			'<path fill="currentColor" fill-opacity=".35" d="M5 11l2-5.5h10L19 11z"/>' +
-			'<path fill="currentColor" d="M2 11h20v6.5a1 1 0 01-1 1H3a1 1 0 01-1-1V11z"/>' +
-			'<circle fill="currentColor" cx="7" cy="20.5" r="2"/>' +
-			'<circle fill="currentColor" cx="17" cy="20.5" r="2"/>';
-		var shield =
-			'<path fill="currentColor" fill-opacity=".35" d="M12 2L4 5.5v5.5c0 4.6 3.4 8.8 8 10.2 4.6-1.4 8-5.6 8-10.2V5.5z"/>';
-		var crossCircle =
-			'<circle fill="currentColor" fill-opacity=".35" cx="12" cy="12" r="10"/>' +
-			'<rect fill="currentColor" x="10.5" y="7.5" width="3" height="9"/>' +
-			'<rect fill="currentColor" x="7.5" y="10.5" width="9" height="3"/>';
-		var gradCap =
-			'<path fill="currentColor" fill-opacity=".35" d="M2.5 12 12 7.5 21.5 12 12 16.5z"/>' +
-			'<path fill="currentColor" d="M7.5 14.5v4.5l4.5 2.5 4.5-2.5v-4.5l-4.5 2.5z"/>' +
-			'<rect fill="currentColor" x="20" y="12" width="2" height="4.5" rx="1"/>';
-		return {
-			// ── expenses ──────────────────────────────────────────────────────
-			rent: house,
-			food:
-				'<path fill="currentColor" fill-opacity=".35" d="M6.5 9h11l-1.5 10H8L6.5 9z"/>' +
-				'<path fill="currentColor" d="M9.5 9V7a2.5 2.5 0 015 0v2z"/>',
-			transport: car,
-			utilities:
-				'<path fill="currentColor" fill-opacity=".35" d="M14 2 5 14h7.5L10 22 21 10h-7.5z"/>',
-			subscriptions:
-				'<circle fill="currentColor" fill-opacity=".35" cx="12" cy="12" r="10"/>' +
-				'<path fill="currentColor" d="M10 8.5l7.5 3.5-7.5 3.5z"/>',
-			medical: crossCircle,
-			childcare:
-				'<circle fill="currentColor" fill-opacity=".35" cx="12" cy="7" r="4.5"/>' +
-				'<path fill="currentColor" fill-opacity=".35" d="M4 21a8 8 0 1116 0H4z"/>' +
-				'<path fill="currentColor" d="M8.5 21a3.5 3.5 0 017 0H8.5z"/>',
-			// ── sources ───────────────────────────────────────────────────────
-			ssdi:
-				shield +
-				'<circle fill="currentColor" cx="12" cy="9.5" r="2.5"/>' +
-				'<path fill="currentColor" d="M8 17c0-2.2 1.8-4 4-4s4 1.8 4 4H8z"/>',
-			ssi:
-				shield +
-				'<path fill="currentColor" d="M12 16.5l-3.5-3.5c-.9-.9-.9-2.3 0-3.2.9-.9 2.3-.9 3.2 0l.3.3.3-.3c.9-.9 2.3-.9 3.2 0 .9.9.9 2.3 0 3.2z"/>',
-			employment:
-				'<rect fill="currentColor" fill-opacity=".35" x="2" y="9" width="20" height="12" rx="2"/>' +
-				'<path fill="currentColor" d="M16 9V7a2 2 0 00-2-2h-4a2 2 0 00-2 2v2h8z"/>',
-			freelance:
-				'<rect fill="currentColor" fill-opacity=".35" x="2" y="4" width="20" height="12" rx="2"/>' +
-				'<path fill="currentColor" d="M0 18h24v1.5a1.5 1.5 0 01-1.5 1.5h-21A1.5 1.5 0 010 19.5z"/>',
-			unemployment:
-				'<circle fill="currentColor" fill-opacity=".35" cx="12" cy="7" r="5"/>' +
-				'<path fill="currentColor" d="M3 21a9 9 0 1118 0H3z"/>',
-			pension:
-				'<rect fill="currentColor" fill-opacity=".35" x="3" y="6" width="18" height="15" rx="2"/>' +
-				'<rect fill="currentColor" x="3" y="10" width="18" height="2.5"/>' +
-				'<circle fill="currentColor" cx="8" cy="15.5" r="1.5"/>' +
-				'<circle fill="currentColor" cx="12" cy="15.5" r="1.5"/>' +
-				'<circle fill="currentColor" cx="16" cy="15.5" r="1.5"/>' +
-				'<rect fill="currentColor" x="8" y="3.5" width="2" height="4" rx="1"/>' +
-				'<rect fill="currentColor" x="14" y="3.5" width="2" height="4" rx="1"/>',
-			rental:
-				'<rect fill="currentColor" fill-opacity=".35" x="4" y="2.5" width="13.5" height="19" rx="1"/>' +
-				'<rect fill="currentColor" x="7.5" y="6" width="2.5" height="3" rx=".5"/>' +
-				'<rect fill="currentColor" x="12" y="6" width="2.5" height="3" rx=".5"/>' +
-				'<rect fill="currentColor" x="7.5" y="12" width="2.5" height="3" rx=".5"/>' +
-				'<rect fill="currentColor" x="12" y="12" width="2.5" height="3" rx=".5"/>' +
-				'<rect fill="currentColor" x="10" y="17.5" width="3.5" height="4" rx=".5"/>',
-			withdrawal401k: chart,
-			withdrawalIra: chart,
-			withdrawalRoth: chart,
-			withdrawalBrokerage: chart,
-			// ── assets ────────────────────────────────────────────────────────
-			k401: chart,
-			ira: chart,
-			roth: chart,
-			brokerage: chart,
-			savings:
-				'<ellipse fill="currentColor" fill-opacity=".35" cx="12" cy="8" rx="7.5" ry="2.5"/>' +
-				'<path fill="currentColor" fill-opacity=".35" d="M4.5 8v3.5c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5V8"/>' +
-				'<path fill="currentColor" d="M4.5 11.5v3.5c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-3.5c0 1.4-3.4 2.5-7.5 2.5S4.5 12.9 4.5 11.5z"/>',
-			realestate: house,
-			auto: car,
-			hsa: crossCircle,
-			crypto:
-				'<path fill="currentColor" fill-opacity=".35" d="M12 3 22 10.5 12 21 2 10.5z"/>' +
-				'<path fill="currentColor" d="M12 3 22 10.5H2z"/>',
-			k529: gradCap,
-			emergency:
-				shield +
-				'<rect fill="currentColor" x="10.5" y="8" width="3" height="6" rx="1.5"/>' +
-				'<circle fill="currentColor" cx="12" cy="16.5" r="1.5"/>',
-			// ── debts ─────────────────────────────────────────────────────────
-			creditcard:
-				'<rect fill="currentColor" fill-opacity=".35" x="2" y="6" width="20" height="12" rx="2"/>' +
-				'<rect fill="currentColor" x="2" y="10" width="20" height="3.5"/>' +
-				'<rect fill="currentColor" x="5" y="15.5" width="5" height="1.5" rx=".75"/>' +
-				'<rect fill="currentColor" x="15" y="15.5" width="4" height="1.5" rx=".75"/>',
-			studentloan: gradCap,
-			carloan: car,
-			personalloan:
-				'<circle fill="currentColor" fill-opacity=".35" cx="9" cy="7.5" r="4"/>' +
-				'<path fill="currentColor" fill-opacity=".35" d="M3 21a6 6 0 0112 0H3z"/>' +
-				'<rect fill="currentColor" x="16.5" y="11" width="6" height="9" rx="1"/>' +
-				'<circle fill="currentColor" cx="19.5" cy="16" r="2"/>',
-			other:
-				'<circle fill="currentColor" cx="5" cy="12" r="2.5"/>' +
-				'<circle fill="currentColor" cx="12" cy="12" r="2.5"/>' +
-				'<circle fill="currentColor" cx="19" cy="12" r="2.5"/>',
-		};
-	})();
+	// ─── Category icons (Material Symbols Outlined) ─────────────────────────
+	var ICON_MAP = {
+		// income
+		employment: "work",
+		freelance: "laptop_mac",
+		rental: "apartment",
+		pension: "elderly",
+		withdrawal401k: "account_balance",
+		withdrawalIra: "savings",
+		withdrawalRoth: "account_balance_wallet",
+		withdrawalBrokerage: "candlestick_chart",
+		unemployment: "person_off",
+		ssdi: "health_and_safety",
+		ssi: "volunteer_activism",
+		// expenses
+		rent: "home",
+		food: "restaurant",
+		transport: "directions_car",
+		utilities: "bolt",
+		subscriptions: "subscriptions",
+		medical: "medical_services",
+		childcare: "child_care",
+		// debts
+		creditcard: "credit_card",
+		carloan: "directions_car",
+		studentloan: "school",
+		personalloan: "person",
+		heloc: "home",
+		bnpl: "payments",
+		// assets
+		savings: "savings",
+		k401: "account_balance",
+		realestate: "real_estate_agent",
+		brokerage: "candlestick_chart",
+		roth: "account_balance_wallet",
+		ira: "savings",
+		auto: "directions_car",
+		emergency: "health_and_safety",
+		crypto: "currency_bitcoin",
+		hsa: "healing",
+		k529: "school",
+		other: "more_horiz",
+	};
 
 	function getCategoryIcon(type) {
-		var paths = _ico[type] || _ico.other;
+		var name = ICON_MAP[type] || "more_horiz";
 		return (
-			'<svg class="numbers-cat-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">' +
-			paths +
-			"</svg>"
+			'<span class="material-symbols-outlined numbers-cat-icon" aria-hidden="true">' +
+			name +
+			"</span>"
 		);
 	}
 
