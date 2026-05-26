@@ -362,25 +362,72 @@ figure {
 }
 
 
-// gallery--reverse: only items 6-9 visible, collapsed to 3 rows
+// gallery--reverse: only items 6-9 visible, 2x2 layout filling the full grid
 .gallery.gallery--reverse {
-	grid-template-rows: repeat(3, 1fr);
-	aspect-ratio: 22 / 9;
+	// inherits aspect-ratio: 8/12 and grid-template-rows: repeat(11, 1fr) from .gallery
 
 	@media screen and (max-width: $mobile) {
-		grid-template-rows: repeat(32, 5vw);
+		grid-template-rows: repeat(18, 5vw);
 		aspect-ratio: auto;
 		height: auto !important;
 	}
 }
 
-// Remap items 6-9 to row 1 within gallery--reverse
-.gallery.gallery--reverse .gallery__item--6,
-.gallery.gallery--reverse .gallery__item--7,
-.gallery.gallery--reverse .gallery__item--8,
-.gallery.gallery--reverse .gallery__item--9 {
+// 2x2 desktop layout: items 6+7 fill top half, items 8+9 fill bottom half
+.gallery.gallery--reverse .gallery__item--6 {
+	grid-column-start: 1;
+	grid-column-end: 5;
 	grid-row-start: 1;
-	grid-row-end: 4;
+	grid-row-end: 7;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 9;
+	}
+}
+
+.gallery.gallery--reverse .gallery__item--7 {
+	grid-column-start: 5;
+	grid-column-end: 9;
+	grid-row-start: 1;
+	grid-row-end: 7;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 4;
+		grid-column-end: 7;
+		grid-row-start: 1;
+		grid-row-end: 9;
+	}
+}
+
+.gallery.gallery--reverse .gallery__item--8 {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 7;
+	grid-row-end: 12;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 9;
+		grid-row-end: 19;
+	}
+}
+
+.gallery.gallery--reverse .gallery__item--9 {
+	grid-column-start: 5;
+	grid-column-end: 9;
+	grid-row-start: 7;
+	grid-row-end: 12;
+
+	@media screen and (max-width: $mobile) {
+		grid-column-start: 4;
+		grid-column-end: 7;
+		grid-row-start: 9;
+		grid-row-end: 19;
+	}
 }
 
 .gallery.gallery--reverse .gallery__item--1,
