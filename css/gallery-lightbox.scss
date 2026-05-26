@@ -39,6 +39,7 @@ figure {
 	aspect-ratio: 8 / 12;
 	border-radius: 20px;
 	overflow: hidden;
+	box-shadow: 0 12px 24px rgba(15, 23, 36, 0.11);
 
 	@media screen and (max-width: $medium) {
 		grid-gap: 6px;

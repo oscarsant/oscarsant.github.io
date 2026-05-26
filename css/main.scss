@@ -426,21 +426,21 @@ header {
 
 	&-kicker {
 		display: inline-flex;
-		margin-bottom: 10px;
-		padding: 7px 11px;
-		border-radius: $radius-full;
+		margin-bottom: 4px;
+		padding: 6px 12px;
+		border-radius: 9999px;
 		background: rgba(250, 176, 113, 0.16);
 		color: #8e4f1d;
 		letter-spacing: 0.16em;
 		text-transform: uppercase;
-		font-size: 11px;
+		font-size: 10px;
 		font-weight: 700;
 	}
 
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 10px;
+		gap: 5px;
 	}
 
 	&-grid--motion {
@@ -461,7 +461,7 @@ header {
 .personal-project-thumb {
 	display: flex;
 	flex-direction: column;
-	min-height: 220px;
+	aspect-ratio: 4 / 3;
 	overflow: hidden;
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0.9);
@@ -492,7 +492,8 @@ header {
 }
 
 .personal-project-thumb-media {
-	height: 120px;
+	flex: 1;
+	height: 100%;
 	display: flex;
 	align-items: flex-end;
 	padding: 14px;
@@ -505,10 +506,10 @@ header {
 
 
 .personal-project-thumb-body {
-	padding: 14px;
+	padding: 12px;
 
 	h3 {
-		margin: 0 0 6px;
+		margin: 0;
 		color: $color-gray-900;
 		font-size: 20px;
 		line-height: 1.15;
@@ -619,20 +620,9 @@ header {
 	}
 
 	.personal-project-thumb {
-		min-height: 200px;
 
 		&-media {
-			height: 104px;
-		}
-
-		&-body {
-			h3 {
-				font-size: 18px;
-			}
-
-			p {
-				font-size: 13px;
-			}
+			height: 100%;
 		}
 	}
 }
