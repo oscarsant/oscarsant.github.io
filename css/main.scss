@@ -399,10 +399,9 @@ header {
 
 .personal-projects {
 	max-width: 1000px;
-	margin-top: 24px;
 
 	&-header {
-		margin-bottom: 12px;
+		margin: 10px 0;
 
 		h2 {
 			margin: 0 0 8px;
@@ -427,33 +426,35 @@ header {
 	&-header--chips {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		gap: 8px;
+		gap: 10px;
+		justify-content: center;
 	}
 
 	&-kicker {
 		display: inline-flex;
 		align-items: center;
-		gap: 6px;
-		padding: 6px 12px;
+		gap: 8px;
 		border-radius: 9999px;
-		color: hsl(33, 88%, 46%);
+		color: $color-gray-400;
 		letter-spacing: 0.16em;
 		text-transform: uppercase;
-		font-size: 10px;
+		font-size: 11px;
 		font-weight: 700;
-		background: rgba(250, 176, 113, 0.2);
 
 		&--down::after {
 			content: '↓';
 			letter-spacing: 0;
-			font-size: 11px;
+			font-size: 13px;
+			font-weight: 500;
+
 		}
 
 		&--up::before {
 			content: '↑';
 			letter-spacing: 0;
-			font-size: 11px;
+			font-size: 13px;
+			font-weight: 500;
+
 		}
 	}
 
@@ -479,9 +480,6 @@ header {
 		}
 	}
 
-	&-header--motion {
-		margin-top: 36px;
-	}
 }
 
 
@@ -525,6 +523,7 @@ header {
 	font-weight: 700;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
+	justify-content: flex-end;
 }
 
 
@@ -623,7 +622,6 @@ header {
 
 @media screen and (max-width: $mobile) {
 	.personal-projects {
-		margin-top: 32px;
 		padding: 0;
 
 		&-shell {
@@ -1007,7 +1005,7 @@ label {
 }
 
 .duration {
-	font-size: 12px;
+	font-size: 10px;
 	color: #6e6e73;
 	font-weight: $fontweightlight;
 	white-space: nowrap;
@@ -1035,8 +1033,8 @@ label {
 	font-weight: 600;
 	letter-spacing: 0.3px;
 	background: rgb(250 176 113 / 20%);
-	padding: 0px 4px;
-	border-radius: 4px;
+	padding: 4px 8px;
+	border-radius: 12px;
 	color: hsl(33 88% 46% / 1);
 }
 
@@ -1351,7 +1349,7 @@ footer p {
 	font-weight: 300;
 	margin: 7px 0;
 	font-size: 12px;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 	text-align: center;
 	padding: 0 12px;
 }
