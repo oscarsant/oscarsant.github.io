@@ -29,6 +29,9 @@ $(document).ready(function () {
 
 			// Apply height to each gallery based on its specific row count
 			galleries.forEach((gallery) => {
+				// gallery--reverse uses CSS aspect-ratio, skip JS height
+				if (gallery.classList.contains("gallery--reverse")) return;
+
 				let rows;
 
 				// Determine row count for this specific gallery
