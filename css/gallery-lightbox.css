@@ -349,7 +349,7 @@ figure {
 
 .gallery.gallery--reverse {
   grid-template-rows: repeat(3, 1fr);
-  aspect-ratio: 22/9;
+  aspect-ratio: 60/16;
 }
 @media screen and (max-width: 479px) {
   .gallery.gallery--reverse {

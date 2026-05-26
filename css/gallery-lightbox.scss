@@ -365,7 +365,7 @@ figure {
 // gallery--reverse: 4 items in a row, same size as gallery 1 bottom row
 .gallery.gallery--reverse {
 	grid-template-rows: repeat(3, 1fr);
-	aspect-ratio: 22 / 9;
+	aspect-ratio: 60 / 16;
 
 	@media screen and (max-width: $mobile) {
 		grid-template-rows: repeat(32, 5vw);
