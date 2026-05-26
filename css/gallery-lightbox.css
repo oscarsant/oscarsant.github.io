@@ -355,7 +355,12 @@ figure {
   }
 }
 
-.gallery.gallery--reverse .gallery__item--1 {
+.gallery.gallery--reverse .gallery__item--1,
+.gallery.gallery--reverse .gallery__item--2,
+.gallery.gallery--reverse .gallery__item--3,
+.gallery.gallery--reverse .gallery__item--4,
+.gallery.gallery--reverse .gallery__item--5,
+.gallery.gallery--reverse .gallery__item--6 {
   display: none;
 }
 
