@@ -347,10 +347,6 @@ figure {
   }
 }
 
-.gallery.gallery--reverse {
-  display: none;
-}
-
 .gallery__img {
   position: absolute;
   top: 0;
