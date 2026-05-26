@@ -362,9 +362,9 @@ figure {
 }
 
 
-// gallery--reverse: collapse empty rows 1–8 to 0, keep items 6–9 at native row positions
+// gallery--reverse: 4 items in a row, same size as gallery 1 bottom row
 .gallery.gallery--reverse {
-	grid-template-rows: 0 0 0 0 0 0 0 0 1fr 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
 	aspect-ratio: 22 / 9;
 
 	@media screen and (max-width: $mobile) {
@@ -372,6 +372,15 @@ figure {
 		aspect-ratio: auto;
 		height: auto !important;
 	}
+}
+
+// Keep original column positions, remap all to row 1–4
+.gallery.gallery--reverse .gallery__item--6,
+.gallery.gallery--reverse .gallery__item--7,
+.gallery.gallery--reverse .gallery__item--8,
+.gallery.gallery--reverse .gallery__item--9 {
+	grid-row-start: 1;
+	grid-row-end: 4;
 }
 
 .gallery.gallery--reverse .gallery__item--1,
