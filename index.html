@@ -3,6 +3,12 @@
 
 <head>
 	<link rel="shortcut icon" type="image/x-icon" href="mylogo.svg" />
+	<link rel="apple-touch-icon" href="icon-180.png" />
+	<link rel="manifest" href="manifest.json" />
+	<meta name="theme-color" content="#0f1724" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-title" content="OAS" />
 	<meta charset="utf-8" />
 	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -1872,6 +1878,21 @@
 			</button>
 		</div>
 	</div>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js').then(function (reg) {
+				reg.addEventListener('updatefound', function () {
+					var newSW = reg.installing;
+					newSW.addEventListener('statechange', function () {
+						if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+							// New version ready — reload to pick up latest assets
+							window.location.reload();
+						}
+					});
+				});
+			});
+		}
+	</script>
 </body>
 
 </html>
