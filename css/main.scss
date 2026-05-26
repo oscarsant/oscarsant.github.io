@@ -450,7 +450,7 @@ header {
 	flex-direction: column;
 	min-height: 220px;
 	overflow: hidden;
-	border-radius: 18px;
+	border-radius: 20px;
 	border: 1px solid rgba(188, 197, 210, 0.42);
 	background: rgba(255, 255, 255, 0.9);
 	text-decoration: none;
@@ -463,13 +463,13 @@ header {
 
 	&--transfers .personal-project-thumb-media {
 		background:
-			linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%),
+			linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 60%),
 			url('../images/laliga-thumb.png') center top / cover no-repeat;
 	}
 
 	&--partnership .personal-project-thumb-media {
 		background:
-			linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 60%),
+			linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 60%),
 			url('../images/numbers-thumb.png') center top / cover no-repeat;
 	}
 

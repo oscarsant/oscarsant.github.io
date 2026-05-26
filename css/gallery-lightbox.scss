@@ -364,6 +364,7 @@ figure {
 
 // gallery--reverse needs its own mobile row sizing
 .gallery.gallery--reverse {
+	display: none;
 	@media screen and (max-width: $mobile) {
 		grid-template-rows: repeat(32, 5vw);
 		aspect-ratio: auto;
