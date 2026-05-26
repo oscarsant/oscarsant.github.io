@@ -40,11 +40,13 @@ self.addEventListener('fetch', function (e) {
 	e.respondWith(
 		fetch(e.request)
 			.then(function (response) {
-				// Cache a fresh copy on every successful network response
-				var clone = response.clone();
-				caches.open(CACHE).then(function (cache) {
-					cache.put(e.request, clone);
-				});
+				// Only cache full responses (status 200); skip partial/range responses (206)
+				if (response.status === 200) {
+					var clone = response.clone();
+					caches.open(CACHE).then(function (cache) {
+						cache.put(e.request, clone);
+					});
+				}
 				return response;
 			})
 			.catch(function () {

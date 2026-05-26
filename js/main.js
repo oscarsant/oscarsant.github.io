@@ -94,7 +94,7 @@ $(document).ready(function () {
 		const lightBox = el.querySelector(".lightbox");
 		const closebtn = el.querySelector(".btn-close");
 		const videoElement = el.querySelector("video.js-player");
-		const bclick = el.querySelector(".gallery__item");
+		const bclick = el.querySelector(".gallery__item") || el;
 
 		bclick.addEventListener("click", (event) => {
 			lightBox.classList.remove("closing");
@@ -115,6 +115,7 @@ $(document).ready(function () {
 		});
 
 		closebtn.addEventListener("click", (event) => {
+			event.stopPropagation();
 			if (lightBox.classList.contains("open")) {
 				lightBox.classList.add("closing");
 				lightBox.classList.remove("open");
@@ -124,7 +125,7 @@ $(document).ready(function () {
 					lightBox.classList.remove("closing");
 					lightBox.className = "lightbox";
 					document.body.style.overflow = "auto";
-					videoElement.pause();
+					if (videoElement) videoElement.pause();
 				}, 400); // Match the animation duration (0.4s)
 			}
 		});
