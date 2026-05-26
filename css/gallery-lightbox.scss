@@ -362,32 +362,8 @@ figure {
 }
 
 
-// gallery--reverse: 4 items in a row, same size as gallery 1 bottom row
+// gallery--reverse: hidden (projects moved to Motion Graphics section)
 .gallery.gallery--reverse {
-	grid-template-rows: repeat(3, 1fr);
-	aspect-ratio: 60 / 16;
-
-	@media screen and (max-width: $mobile) {
-		grid-template-rows: repeat(32, 5vw);
-		aspect-ratio: auto;
-		height: auto !important;
-	}
-}
-
-// Keep original column positions, remap all to row 1–4
-.gallery.gallery--reverse .gallery__item--6,
-.gallery.gallery--reverse .gallery__item--7,
-.gallery.gallery--reverse .gallery__item--8,
-.gallery.gallery--reverse .gallery__item--9 {
-	grid-row-start: 1;
-	grid-row-end: 4;
-}
-
-.gallery.gallery--reverse .gallery__item--1,
-.gallery.gallery--reverse .gallery__item--2,
-.gallery.gallery--reverse .gallery__item--3,
-.gallery.gallery--reverse .gallery__item--4,
-.gallery.gallery--reverse .gallery__item--5 {
 	display: none;
 }
 

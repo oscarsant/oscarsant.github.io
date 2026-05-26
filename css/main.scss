@@ -442,6 +442,15 @@ header {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 14px;
 	}
+
+	&-grid--motion {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin-top: 8px;
+	}
+
+	&-header--motion {
+		margin-top: 36px;
+	}
 }
 
 
@@ -574,6 +583,10 @@ header {
 		&-grid {
 			grid-template-columns: 1fr;
 		}
+
+		&-grid--motion {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
 	}
 }
 
@@ -595,6 +608,10 @@ header {
 			p {
 				font-size: 14px;
 			}
+		}
+
+		&-grid--motion {
+			grid-template-columns: 1fr;
 		}
 	}
 

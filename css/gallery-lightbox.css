@@ -348,30 +348,6 @@ figure {
 }
 
 .gallery.gallery--reverse {
-  grid-template-rows: repeat(3, 1fr);
-  aspect-ratio: 60/16;
-}
-@media screen and (max-width: 479px) {
-  .gallery.gallery--reverse {
-    grid-template-rows: repeat(32, 5vw);
-    aspect-ratio: auto;
-    height: auto !important;
-  }
-}
-
-.gallery.gallery--reverse .gallery__item--6,
-.gallery.gallery--reverse .gallery__item--7,
-.gallery.gallery--reverse .gallery__item--8,
-.gallery.gallery--reverse .gallery__item--9 {
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-
-.gallery.gallery--reverse .gallery__item--1,
-.gallery.gallery--reverse .gallery__item--2,
-.gallery.gallery--reverse .gallery__item--3,
-.gallery.gallery--reverse .gallery__item--4,
-.gallery.gallery--reverse .gallery__item--5 {
   display: none;
 }
 
