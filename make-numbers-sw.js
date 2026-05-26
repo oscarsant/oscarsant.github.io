@@ -3,15 +3,15 @@
 // skipWaiting + clients.claim ensures a new SW activates immediately on install,
 // so pushing code changes takes effect as soon as the user reopens the app.
 
-var CACHE = 'make-numbers-v2';
+var CACHE = "make-numbers-v2";
 var PRECACHE = [
-	'/make-numbers.html',
-	'/css/make-numbers.css',
-	'/css/main.css',
-	'/js/make-numbers.js',
+	"/make-numbers.html",
+	"/css/make-numbers.css",
+	"/css/main.css",
+	"/js/make-numbers.js",
 ];
 
-self.addEventListener('install', function (e) {
+self.addEventListener("install", function (e) {
 	self.skipWaiting();
 	e.waitUntil(
 		caches.open(CACHE).then(function (cache) {
@@ -20,23 +20,31 @@ self.addEventListener('install', function (e) {
 	);
 });
 
-self.addEventListener('activate', function (e) {
+self.addEventListener("activate", function (e) {
 	e.waitUntil(
-		caches.keys().then(function (keys) {
-			return Promise.all(
-				keys.filter(function (k) { return k !== CACHE; })
-					.map(function (k) { return caches.delete(k); }),
-			);
-		}).then(function () {
-			return self.clients.claim();
-		}),
+		caches
+			.keys()
+			.then(function (keys) {
+				return Promise.all(
+					keys
+						.filter(function (k) {
+							return k !== CACHE;
+						})
+						.map(function (k) {
+							return caches.delete(k);
+						}),
+				);
+			})
+			.then(function () {
+				return self.clients.claim();
+			}),
 	);
 });
 
-self.addEventListener('fetch', function (e) {
+self.addEventListener("fetch", function (e) {
 	// Only handle GET requests with http/https scheme
-	if (e.request.method !== 'GET') return;
-	if (!e.request.url.startsWith('http')) return;
+	if (e.request.method !== "GET") return;
+	if (!e.request.url.startsWith("http")) return;
 	e.respondWith(
 		fetch(e.request)
 			.then(function (response) {

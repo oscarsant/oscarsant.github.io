@@ -14,14 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
 	// Also map standalone lightbox panels (personal project motion graphics cards)
-	document
-		.querySelectorAll(".lightbox[data-project]")
-		.forEach((lb) => {
-			const projectId = lb.getAttribute("data-project");
-			if (projectId) {
-				projectMap.set(projectId, lb);
-			}
-		});
+	document.querySelectorAll(".lightbox[data-project]").forEach((lb) => {
+		const projectId = lb.getAttribute("data-project");
+		if (projectId) {
+			projectMap.set(projectId, lb);
+		}
+	});
 
 	// Create share modal HTML
 	function createShareModal() {
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			.then(() => {
 				// Track share event in Google Analytics
 				const projectId = new URLSearchParams(input.value.split("?")[1]).get(
-					"project"
+					"project",
 				);
 				if (typeof gtag !== "undefined" && projectId) {
 					gtag("event", "share", {
@@ -187,7 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		button.addEventListener("click", function (e) {
 			e.stopPropagation();
 			// Support both gallery items (.lightbox--cont) and standalone lightbox panels (.lightbox)
-			const lightboxContainer = this.closest(".lightbox--cont") || this.closest(".lightbox");
+			const lightboxContainer =
+				this.closest(".lightbox--cont") || this.closest(".lightbox");
 			const projectId = lightboxContainer?.getAttribute("data-project");
 
 			if (projectId) {

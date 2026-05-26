@@ -13,8 +13,9 @@ figure {
   grid-template-rows: repeat(11, 1fr);
   grid-gap: 10px;
   width: 100%;
-  /* Make the grid 1.5x taller than wide (12 rows / 8 columns = 1.5) */
   aspect-ratio: 8/12;
+  border-radius: 20px;
+  overflow: hidden;
 }
 @media screen and (max-width: 991px) {
   .gallery {
