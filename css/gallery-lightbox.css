@@ -347,15 +347,16 @@ figure {
   }
 }
 
-.gallery.gallery--reverse {
-  display: none;
-}
 @media screen and (max-width: 479px) {
   .gallery.gallery--reverse {
     grid-template-rows: repeat(32, 5vw);
     aspect-ratio: auto;
     height: auto !important;
   }
+}
+
+.gallery.gallery--reverse .gallery__item--1 {
+  display: none;
 }
 
 .gallery__img {

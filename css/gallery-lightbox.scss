@@ -364,12 +364,15 @@ figure {
 
 // gallery--reverse needs its own mobile row sizing
 .gallery.gallery--reverse {
-	display: none;
 	@media screen and (max-width: $mobile) {
 		grid-template-rows: repeat(32, 5vw);
 		aspect-ratio: auto;
 		height: auto !important;
 	}
+}
+
+.gallery.gallery--reverse .gallery__item--1 {
+	display: none;
 }
 
 .gallery__img {
