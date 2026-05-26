@@ -1961,7 +1961,7 @@
 		// ── Per-season bars embedded in chart (same y-axis) ──────────────────
 		if (showSeasonBars) {
 			const xStep = innerW / CHART_SEASONS.length;
-			const groupW = xStep * (isNarrow ? 0 : 0.3);
+			const groupW = xStep * (isNarrow ? 0 : 0.4);
 			const clubBarW = groupW / clubs.length;
 
 			const barsGroup = chart
@@ -1976,7 +1976,7 @@
 					const d = chartSeasonData[s][club.key];
 					const bx = cx - groupW / 2 + ci * clubBarW;
 
-					const barW = Math.max(clubBarW * 0.7, 2);
+					const barW = Math.max(clubBarW * 0.8, 2);
 					const barOffset = (clubBarW - barW) / 2;
 
 					// Expenditure bar — down from zero (team color)
@@ -2470,7 +2470,7 @@
 					<div class="transfers-salary-head-copy">
 						<div class="transfers-vs-title transfers-board-title">2025/26 wages</div>
 						<div class="transfers-salary-intro transfers-board-subhead">
-							<span>Across the top 15 earners, most Atlético de Madrid players fall below their counterparts at Real Madrid and FC Barcelona, with only a few exceptions at the top.</span>
+							<span>Top 15 earners, most Atlético de Madrid players fall below their counterparts at Real Madrid and FC Barcelona, with only a few exceptions at the top.</span>
 						</div>
 					</div>
 					${getDownloadButtonHTML("transfersSalaryDownloadBtn", "Download salary comparison graphic")}
@@ -2494,7 +2494,7 @@
 				<div class="transfers-chart-meta transfers-board-header">
 					<div class="transfers-board-head-copy">
 						<div class="transfers-vs-title transfers-board-title">Player movement</div>
-						<div class="transfers-board-subhead">Fee-based arrivals and departures per season. Squads change constantly — no club can simply keep the same team year after year.</div>
+						<div class="transfers-board-subhead">All player arrivals and departures by season, showing year-to-year squad turnover.</div>
 					</div>
 					${getDownloadButtonHTML("transfersSeasonDownloadBtn", "Download player movement graphic")}
 				</div>
