@@ -131,6 +131,43 @@ $(document).ready(function () {
 		});
 	});
 
+	// Handle personal project motion graphics cards — lightbox panels are standalone
+	// (decoupled because CSS transform on :hover breaks position:fixed inside the card)
+	document.querySelectorAll(".lightbox-trigger").forEach((trigger) => {
+		const targetId = trigger.getAttribute("data-target");
+		const lightBox = document.getElementById(targetId);
+		if (!lightBox) return;
+		const closebtn = lightBox.querySelector(".btn-close");
+		const videoElement = lightBox.querySelector("video.js-player");
+
+		trigger.addEventListener("click", () => {
+			lightBox.classList.remove("closing");
+			lightBox.className = "lightbox open";
+			document.body.style.overflow = "hidden";
+			const projectName = lightBox.getAttribute("data-project") || "unknown";
+			if (typeof gtag !== "undefined") {
+				gtag("event", "project_view", {
+					event_category: "Portfolio",
+					event_label: projectName,
+					project_name: projectName,
+				});
+			}
+		});
+
+		closebtn.addEventListener("click", () => {
+			if (lightBox.classList.contains("open")) {
+				lightBox.classList.add("closing");
+				lightBox.classList.remove("open");
+				setTimeout(() => {
+					lightBox.classList.remove("closing");
+					lightBox.className = "lightbox";
+					document.body.style.overflow = "auto";
+					if (videoElement) videoElement.pause();
+				}, 400);
+			}
+		});
+	});
+
 	// Calculate duration from date ranges
 	function calculateDuration(dateRangeText) {
 		// Extract dates from text like "Feb 2020 – May 2022" or "May 2022 – Current"
