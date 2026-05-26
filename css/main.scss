@@ -399,10 +399,10 @@ header {
 
 .personal-projects {
 	max-width: 1000px;
-	margin: 60px auto 0;
+	margin-top: 24px;
 
 	&-header {
-		margin-bottom: 18px;
+		margin-bottom: 12px;
 
 		h2 {
 			margin: 0 0 8px;
@@ -424,23 +424,50 @@ header {
 		}
 	}
 
+	&-header--chips {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+	}
+
 	&-kicker {
 		display: inline-flex;
-		margin-bottom: 4px;
+		align-items: center;
+		gap: 6px;
 		padding: 6px 12px;
 		border-radius: 9999px;
-		background: rgba(250, 176, 113, 0.16);
-		color: #8e4f1d;
+		color: hsl(33, 88%, 46%);
 		letter-spacing: 0.16em;
 		text-transform: uppercase;
 		font-size: 10px;
 		font-weight: 700;
+		background: rgba(250, 176, 113, 0.2);
+
+		&--down::after {
+			content: '↓';
+			letter-spacing: 0;
+			font-size: 11px;
+		}
+
+		&--up::before {
+			content: '↑';
+			letter-spacing: 0;
+			font-size: 11px;
+		}
 	}
 
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 5px;
+		gap: 10px;
+		border-radius: 20px;
+		overflow: hidden;
+
+		@media screen and (max-width: $medium) {
+			gap: 5px;
+
+		}
 	}
 
 	&-grid--motion {
@@ -462,11 +489,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	aspect-ratio: 4 / 3;
-	overflow: hidden;
-	border-radius: 20px;
-	background: rgba(255, 255, 255, 0.9);
 	text-decoration: none;
-	box-shadow: 0 12px 24px rgba(15, 23, 36, 0.11);
 	transition: transform $transition-base, box-shadow $transition-base;
 
 	&:hover {
@@ -496,7 +519,7 @@ header {
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
-	padding: 14px;
+	padding: 12px;
 	color: #fff;
 	font-size: 11px;
 	font-weight: 700;
@@ -587,17 +610,20 @@ header {
 
 		&-grid {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+			border-radius: 20px;
+			overflow: hidden;
 		}
 
 		&-grid--motion {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+
 		}
 	}
 }
 
 @media screen and (max-width: $mobile) {
 	.personal-projects {
-		margin-top: 64px;
+		margin-top: 32px;
 		padding: 0;
 
 		&-shell {
@@ -616,6 +642,7 @@ header {
 
 		&-grid--motion {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+
 		}
 	}
 
