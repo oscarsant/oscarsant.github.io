@@ -399,18 +399,7 @@ header {
 
 .personal-projects {
 	max-width: 1000px;
-	margin: 96px auto 0;
-	padding: 0 20px;
-
-	&-shell {
-		padding: 28px;
-		border-radius: 24px;
-		background:
-			radial-gradient(circle at top right, rgba(0, 77, 152, 0.07), transparent 28%),
-			linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
-		border: 1px solid rgba(188, 197, 210, 0.42);
-		box-shadow: 0 18px 34px rgba(15, 23, 36, 0.05);
-	}
+	margin: 60px auto 0;
 
 	&-header {
 		margin-bottom: 18px;
@@ -474,13 +463,14 @@ header {
 
 	&--transfers .personal-project-thumb-media {
 		background:
-			linear-gradient(130deg, rgba(165, 0, 68, 0.92) 0%, rgba(0, 77, 152, 0.92) 100%);
+			linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%),
+			url('../images/thumb-transfers.jpg') center top / cover no-repeat;
 	}
 
 	&--partnership .personal-project-thumb-media {
 		background:
-			radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 36%),
-			linear-gradient(135deg, rgba(5, 5, 5, 0.98) 0%, rgba(38, 38, 38, 0.94) 56%, rgba(112, 112, 112, 0.88) 100%);
+			linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 60%),
+			url('../images/thumb-make-numbers.jpg') center top / cover no-repeat;
 	}
 
 	&--placeholder .personal-project-thumb-media {
@@ -1361,4 +1351,3 @@ footer .navbar-brand {
 		clear: both;
 	}
 }
-
