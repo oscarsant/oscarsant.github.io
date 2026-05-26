@@ -296,6 +296,727 @@
 		},
 	};
 
+	// Historical comparison data for the first chart only (02/03 onward).
+	const chartSeasonData = {
+		"02/03": {
+			atletico: { expenditure: 35, income: 8.1, arrivals: 20, departures: 19 },
+			barcelona: {
+				expenditure: 20,
+				income: 11.55,
+				arrivals: 11,
+				departures: 10,
+			},
+			realMadrid: {
+				expenditure: 45,
+				income: 5.2,
+				arrivals: 14,
+				departures: 13,
+			},
+			villarreal: {
+				expenditure: 6.85,
+				income: 0.06,
+				arrivals: 12,
+				departures: 15,
+			},
+			valencia: { expenditure: 0, income: 1.5, arrivals: 9, departures: 11 },
+			sevilla: { expenditure: 2.83, income: 0, arrivals: 8, departures: 13 },
+		},
+		"03/04": {
+			atletico: {
+				expenditure: 12.8,
+				income: 0.25,
+				arrivals: 23,
+				departures: 24,
+			},
+			barcelona: {
+				expenditure: 43.85,
+				income: 2.9,
+				arrivals: 13,
+				departures: 13,
+			},
+			realMadrid: {
+				expenditure: 37.5,
+				income: 35.8,
+				arrivals: 12,
+				departures: 16,
+			},
+			villarreal: {
+				expenditure: 12.05,
+				income: 4,
+				arrivals: 12,
+				departures: 12,
+			},
+			valencia: { expenditure: 8.5, income: 4.5, arrivals: 11, departures: 10 },
+			sevilla: { expenditure: 8.2, income: 20, arrivals: 13, departures: 9 },
+		},
+		"04/05": {
+			atletico: { expenditure: 17.6, income: 0, arrivals: 21, departures: 22 },
+			barcelona: {
+				expenditure: 78.5,
+				income: 14.75,
+				arrivals: 15,
+				departures: 16,
+			},
+			realMadrid: {
+				expenditure: 58.7,
+				income: 9.25,
+				arrivals: 10,
+				departures: 11,
+			},
+			villarreal: {
+				expenditure: 15.8,
+				income: 9.73,
+				arrivals: 12,
+				departures: 10,
+			},
+			valencia: { expenditure: 40, income: 8, arrivals: 16, departures: 19 },
+			sevilla: { expenditure: 11.53, income: 0, arrivals: 14, departures: 12 },
+		},
+		"05/06": {
+			atletico: { expenditure: 25, income: 5.3, arrivals: 18, departures: 18 },
+			barcelona: { expenditure: 0, income: 11, arrivals: 8, departures: 9 },
+			realMadrid: {
+				expenditure: 89.5,
+				income: 43.1,
+				arrivals: 16,
+				departures: 10,
+			},
+			villarreal: {
+				expenditure: 19.9,
+				income: 13.35,
+				arrivals: 10,
+				departures: 8,
+			},
+			valencia: {
+				expenditure: 24.81,
+				income: 13.9,
+				arrivals: 24,
+				departures: 19,
+			},
+			sevilla: { expenditure: 23, income: 48.2, arrivals: 9, departures: 14 },
+		},
+		"06/07": {
+			atletico: { expenditure: 58.43, income: 7, arrivals: 20, departures: 20 },
+			barcelona: { expenditure: 31, income: 13.2, arrivals: 8, departures: 8 },
+			realMadrid: {
+				expenditure: 103,
+				income: 15.35,
+				arrivals: 13,
+				departures: 17,
+			},
+			villarreal: {
+				expenditure: 31.04,
+				income: 5.3,
+				arrivals: 14,
+				departures: 11,
+			},
+			valencia: {
+				expenditure: 49.8,
+				income: 20.83,
+				arrivals: 18,
+				departures: 17,
+			},
+			sevilla: { expenditure: 18.7, income: 1.5, arrivals: 13, departures: 13 },
+		},
+		"07/08": {
+			atletico: {
+				expenditure: 80.5,
+				income: 52.1,
+				arrivals: 17,
+				departures: 16,
+			},
+			barcelona: { expenditure: 68.5, income: 14, arrivals: 11, departures: 8 },
+			realMadrid: {
+				expenditure: 118,
+				income: 42.4,
+				arrivals: 18,
+				departures: 18,
+			},
+			villarreal: {
+				expenditure: 40,
+				income: 50.45,
+				arrivals: 21,
+				departures: 24,
+			},
+			valencia: {
+				expenditure: 72.15,
+				income: 7.6,
+				arrivals: 21,
+				departures: 20,
+			},
+			sevilla: { expenditure: 29, income: 21.1, arrivals: 19, departures: 15 },
+		},
+		"08/09": {
+			atletico: {
+				expenditure: 26.5,
+				income: 3.45,
+				arrivals: 13,
+				departures: 15,
+			},
+			barcelona: {
+				expenditure: 96,
+				income: 54.59,
+				arrivals: 9,
+				departures: 11,
+			},
+			realMadrid: {
+				expenditure: 82.2,
+				income: 71,
+				arrivals: 12,
+				departures: 11,
+			},
+			villarreal: {
+				expenditure: 26.17,
+				income: 24.5,
+				arrivals: 16,
+				departures: 17,
+			},
+			valencia: {
+				expenditure: 6.6,
+				income: 11.3,
+				arrivals: 22,
+				departures: 21,
+			},
+			sevilla: {
+				expenditure: 37.7,
+				income: 60.55,
+				arrivals: 14,
+				departures: 15,
+			},
+		},
+		"09/10": {
+			atletico: {
+				expenditure: 17.25,
+				income: 17.9,
+				arrivals: 15,
+				departures: 15,
+			},
+			barcelona: {
+				expenditure: 113.5,
+				income: 24.5,
+				arrivals: 7,
+				departures: 9,
+			},
+			realMadrid: {
+				expenditure: 258.5,
+				income: 88.5,
+				arrivals: 10,
+				departures: 14,
+			},
+			villarreal: {
+				expenditure: 22.9,
+				income: 11.75,
+				arrivals: 11,
+				departures: 15,
+			},
+			valencia: { expenditure: 5, income: 20.63, arrivals: 16, departures: 17 },
+			sevilla: {
+				expenditure: 27.5,
+				income: 12.8,
+				arrivals: 11,
+				departures: 11,
+			},
+		},
+		"10/11": {
+			atletico: {
+				expenditure: 34.05,
+				income: 23.9,
+				arrivals: 10,
+				departures: 12,
+			},
+			barcelona: {
+				expenditure: 72.5,
+				income: 52.7,
+				arrivals: 9,
+				departures: 9,
+			},
+			realMadrid: { expenditure: 93, income: 10.5, arrivals: 7, departures: 6 },
+			villarreal: {
+				expenditure: 4.25,
+				income: 15.82,
+				arrivals: 18,
+				departures: 14,
+			},
+			valencia: {
+				expenditure: 27.85,
+				income: 84.35,
+				arrivals: 16,
+				departures: 16,
+			},
+			sevilla: {
+				expenditure: 17.1,
+				income: 29.6,
+				arrivals: 16,
+				departures: 16,
+			},
+		},
+		"11/12": {
+			atletico: {
+				expenditure: 85.2,
+				income: 85.35,
+				arrivals: 20,
+				departures: 20,
+			},
+			barcelona: {
+				expenditure: 60,
+				income: 46.95,
+				arrivals: 12,
+				departures: 10,
+			},
+			realMadrid: { expenditure: 56, income: 8, arrivals: 6, departures: 7 },
+			villarreal: {
+				expenditure: 31.3,
+				income: 26.85,
+				arrivals: 16,
+				departures: 14,
+			},
+			valencia: { expenditure: 34, income: 32.9, arrivals: 15, departures: 15 },
+			sevilla: { expenditure: 19, income: 15.7, arrivals: 18, departures: 20 },
+		},
+		"12/13": {
+			atletico: {
+				expenditure: 4.5,
+				income: 21.35,
+				arrivals: 14,
+				departures: 16,
+			},
+			barcelona: { expenditure: 33, income: 0.5, arrivals: 7, departures: 5 },
+			realMadrid: {
+				expenditure: 38.5,
+				income: 33.5,
+				arrivals: 8,
+				departures: 7,
+			},
+			villarreal: {
+				expenditure: 2.1,
+				income: 49.88,
+				arrivals: 26,
+				departures: 25,
+			},
+			valencia: { expenditure: 23.2, income: 30, arrivals: 10, departures: 14 },
+			sevilla: { expenditure: 14, income: 12.2, arrivals: 15, departures: 15 },
+		},
+		"13/14": {
+			atletico: {
+				expenditure: 36.1,
+				income: 70.7,
+				arrivals: 21,
+				departures: 18,
+			},
+			barcelona: { expenditure: 101, income: 28.1, arrivals: 9, departures: 7 },
+			realMadrid: {
+				expenditure: 175.5,
+				income: 113.5,
+				arrivals: 10,
+				departures: 10,
+			},
+			villarreal: {
+				expenditure: 17.45,
+				income: 10.5,
+				arrivals: 14,
+				departures: 17,
+			},
+			valencia: {
+				expenditure: 22.47,
+				income: 47.1,
+				arrivals: 15,
+				departures: 14,
+			},
+			sevilla: {
+				expenditure: 35.3,
+				income: 90.98,
+				arrivals: 27,
+				departures: 26,
+			},
+		},
+		"14/15": {
+			atletico: {
+				expenditure: 144.35,
+				income: 89.3,
+				arrivals: 24,
+				departures: 23,
+			},
+			barcelona: {
+				expenditure: 166.72,
+				income: 81.8,
+				arrivals: 13,
+				departures: 15,
+			},
+			realMadrid: {
+				expenditure: 126,
+				income: 112.1,
+				arrivals: 8,
+				departures: 8,
+			},
+			villarreal: {
+				expenditure: 18.7,
+				income: 22.5,
+				arrivals: 14,
+				departures: 14,
+			},
+			valencia: {
+				expenditure: 55.05,
+				income: 55.45,
+				arrivals: 23,
+				departures: 24,
+			},
+			sevilla: {
+				expenditure: 20.95,
+				income: 50.55,
+				arrivals: 25,
+				departures: 21,
+			},
+		},
+		"15/16": {
+			atletico: { expenditure: 119, income: 152, arrivals: 21, departures: 23 },
+			barcelona: { expenditure: 51, income: 38.3, arrivals: 11, departures: 9 },
+			realMadrid: {
+				expenditure: 100.4,
+				income: 24.15,
+				arrivals: 12,
+				departures: 12,
+			},
+			villarreal: {
+				expenditure: 47.2,
+				income: 37.56,
+				arrivals: 19,
+				departures: 18,
+			},
+			valencia: {
+				expenditure: 143.9,
+				income: 50,
+				arrivals: 20,
+				departures: 15,
+			},
+			sevilla: { expenditure: 44, income: 61.45, arrivals: 22, departures: 20 },
+		},
+		"16/17": {
+			atletico: { expenditure: 78.8, income: 44, arrivals: 22, departures: 21 },
+			barcelona: {
+				expenditure: 124.75,
+				income: 33.8,
+				arrivals: 11,
+				departures: 13,
+			},
+			realMadrid: {
+				expenditure: 30,
+				income: 37.5,
+				arrivals: 14,
+				departures: 12,
+			},
+			villarreal: {
+				expenditure: 55.95,
+				income: 67.25,
+				arrivals: 21,
+				departures: 19,
+			},
+			valencia: {
+				expenditure: 36,
+				income: 121.9,
+				arrivals: 16,
+				departures: 18,
+			},
+			sevilla: {
+				expenditure: 81.7,
+				income: 93.45,
+				arrivals: 17,
+				departures: 18,
+			},
+		},
+		"17/18": {
+			atletico: {
+				expenditure: 95.6,
+				income: 104,
+				arrivals: 16,
+				departures: 20,
+			},
+			barcelona: {
+				expenditure: 388.1,
+				income: 232.5,
+				arrivals: 13,
+				departures: 12,
+			},
+			realMadrid: {
+				expenditure: 40.5,
+				income: 132.5,
+				arrivals: 9,
+				departures: 10,
+			},
+			villarreal: {
+				expenditure: 46.1,
+				income: 68,
+				arrivals: 16,
+				departures: 14,
+			},
+			valencia: {
+				expenditure: 55,
+				income: 16.55,
+				arrivals: 23,
+				departures: 22,
+			},
+			sevilla: {
+				expenditure: 78.05,
+				income: 81.6,
+				arrivals: 17,
+				departures: 15,
+			},
+		},
+		"18/19": {
+			atletico: {
+				expenditure: 168,
+				income: 57.9,
+				arrivals: 20,
+				departures: 15,
+			},
+			barcelona: {
+				expenditure: 141.1,
+				income: 146.05,
+				arrivals: 19,
+				departures: 18,
+			},
+			realMadrid: {
+				expenditure: 164.75,
+				income: 136.1,
+				arrivals: 16,
+				departures: 14,
+			},
+			villarreal: {
+				expenditure: 92.9,
+				income: 54.8,
+				arrivals: 23,
+				departures: 21,
+			},
+			valencia: {
+				expenditure: 129.2,
+				income: 68.8,
+				arrivals: 22,
+				departures: 22,
+			},
+			sevilla: {
+				expenditure: 81.05,
+				income: 93.8,
+				arrivals: 20,
+				departures: 21,
+			},
+		},
+		"19/20": {
+			atletico: {
+				expenditure: 247.35,
+				income: 316.3,
+				arrivals: 19,
+				departures: 19,
+			},
+			barcelona: {
+				expenditure: 304,
+				income: 154.4,
+				arrivals: 20,
+				departures: 22,
+			},
+			realMadrid: {
+				expenditure: 361.3,
+				income: 136.8,
+				arrivals: 22,
+				departures: 19,
+			},
+			villarreal: {
+				expenditure: 45.8,
+				income: 69.3,
+				arrivals: 19,
+				departures: 20,
+			},
+			valencia: { expenditure: 75, income: 56.3, arrivals: 24, departures: 19 },
+			sevilla: {
+				expenditure: 188.73,
+				income: 131.4,
+				arrivals: 30,
+				departures: 29,
+			},
+		},
+		"20/21": {
+			atletico: { expenditure: 92, income: 83.3, arrivals: 14, departures: 14 },
+			barcelona: {
+				expenditure: 111.94,
+				income: 154.4,
+				arrivals: 18,
+				departures: 14,
+			},
+			realMadrid: {
+				expenditure: 0,
+				income: 108.2,
+				arrivals: 14,
+				departures: 18,
+			},
+			villarreal: {
+				expenditure: 37.84,
+				income: 26.65,
+				arrivals: 24,
+				departures: 20,
+			},
+			valencia: {
+				expenditure: 0.05,
+				income: 88.85,
+				arrivals: 14,
+				departures: 13,
+			},
+			sevilla: {
+				expenditure: 74.35,
+				income: 19.68,
+				arrivals: 22,
+				departures: 19,
+			},
+		},
+		"21/22": {
+			atletico: {
+				expenditure: 85.7,
+				income: 22.75,
+				arrivals: 19,
+				departures: 19,
+			},
+			barcelona: {
+				expenditure: 69.5,
+				income: 95.36,
+				arrivals: 20,
+				departures: 18,
+			},
+			realMadrid: { expenditure: 31, income: 78, arrivals: 10, departures: 7 },
+			villarreal: {
+				expenditure: 54.5,
+				income: 15.34,
+				arrivals: 20,
+				departures: 18,
+			},
+			valencia: {
+				expenditure: 16.35,
+				income: 2.7,
+				arrivals: 15,
+				departures: 15,
+			},
+			sevilla: {
+				expenditure: 41.5,
+				income: 28.5,
+				arrivals: 17,
+				departures: 17,
+			},
+		},
+		"22/23": {
+			atletico: {
+				expenditure: 29.5,
+				income: 28.25,
+				arrivals: 22,
+				departures: 21,
+			},
+			barcelona: {
+				expenditure: 159,
+				income: 39.5,
+				arrivals: 16,
+				departures: 22,
+			},
+			realMadrid: {
+				expenditure: 80,
+				income: 99.15,
+				arrivals: 11,
+				departures: 12,
+			},
+			villarreal: {
+				expenditure: 6.48,
+				income: 31.6,
+				arrivals: 16,
+				departures: 17,
+			},
+			valencia: {
+				expenditure: 12.5,
+				income: 54.6,
+				arrivals: 14,
+				departures: 15,
+			},
+			sevilla: {
+				expenditure: 30.4,
+				income: 91.5,
+				arrivals: 23,
+				departures: 23,
+			},
+		},
+		"23/24": {
+			atletico: {
+				expenditure: 56.5,
+				income: 103.1,
+				arrivals: 25,
+				departures: 22,
+			},
+			barcelona: {
+				expenditure: 33.4,
+				income: 131.7,
+				arrivals: 22,
+				departures: 19,
+			},
+			realMadrid: { expenditure: 161.5, income: 7, arrivals: 8, departures: 9 },
+			villarreal: {
+				expenditure: 12.5,
+				income: 113,
+				arrivals: 17,
+				departures: 14,
+			},
+			valencia: {
+				expenditure: 10.4,
+				income: 28.9,
+				arrivals: 16,
+				departures: 17,
+			},
+			sevilla: { expenditure: 32, income: 26.6, arrivals: 25, departures: 21 },
+		},
+		"24/25": {
+			atletico: {
+				expenditure: 188,
+				income: 114.98,
+				arrivals: 18,
+				departures: 19,
+			},
+			barcelona: {
+				expenditure: 66.5,
+				income: 66.8,
+				arrivals: 19,
+				departures: 15,
+			},
+			realMadrid: { expenditure: 49, income: 16, arrivals: 10, departures: 10 },
+			villarreal: {
+				expenditure: 69,
+				income: 74.5,
+				arrivals: 22,
+				departures: 25,
+			},
+			valencia: { expenditure: 2.87, income: 30, arrivals: 15, departures: 12 },
+			sevilla: { expenditure: 20, income: 32.85, arrivals: 19, departures: 25 },
+		},
+		"25/26": {
+			atletico: {
+				expenditure: 230.95,
+				income: 145.5,
+				arrivals: 19,
+				departures: 18,
+			},
+			barcelona: {
+				expenditure: 27.5,
+				income: 31.2,
+				arrivals: 10,
+				departures: 13,
+			},
+			realMadrid: { expenditure: 167.5, income: 2, arrivals: 8, departures: 7 },
+			villarreal: {
+				expenditure: 105.5,
+				income: 108,
+				arrivals: 21,
+				departures: 19,
+			},
+			valencia: {
+				expenditure: 16.5,
+				income: 26.13,
+				arrivals: 19,
+				departures: 18,
+			},
+			sevilla: { expenditure: 0.25, income: 55, arrivals: 18, departures: 12 },
+		},
+	};
+
 	// Fee-only movement counts from Transfermarkt transfer tables (paid transfers only)
 	const seasonFeeMovementData = {
 		"12/13": {
@@ -384,6 +1105,33 @@
 			color: "#F2994A",
 		},
 	];
+
+	const referenceClubs = [
+		{
+			id: "villarreal",
+			key: "villarreal",
+			name: "Villarreal",
+			color: "#F2C94C",
+			isReference: true,
+		},
+		{
+			id: "valencia",
+			key: "valencia",
+			name: "Valencia",
+			color: "#56CCF2",
+			isReference: true,
+		},
+		{
+			id: "sevilla",
+			key: "sevilla",
+			name: "Sevilla",
+			color: "#EB5757",
+			isReference: true,
+		},
+	];
+
+	const chartClubs = clubs.concat(referenceClubs);
+	const CHART_SEASONS = Object.keys(chartSeasonData);
 
 	const salaryData = [
 		{
@@ -837,7 +1585,9 @@
 
 	function getMovementStats(season, clubKey) {
 		return (
-			seasonFeeMovementData[season]?.[clubKey] ?? seasonData[season][clubKey]
+			seasonFeeMovementData[season]?.[clubKey] ??
+			seasonData[season]?.[clubKey] ??
+			chartSeasonData[season]?.[clubKey]
 		);
 	}
 
@@ -848,14 +1598,15 @@
 				totalInc = 0,
 				totalArr = 0,
 				totalDep = 0;
-			let peakExpSeason = SEASONS[0],
+			let peakExpSeason = CHART_SEASONS[0],
 				peakExpVal = -Infinity;
-			let peakIncSeason = SEASONS[0],
+			let peakIncSeason = CHART_SEASONS[0],
 				peakIncVal = -Infinity;
 
-			SEASONS.forEach((s) => {
-				const d = seasonData[s][club.key];
-				const movement = getMovementStats(s, club.key);
+			CHART_SEASONS.forEach((s) => {
+				const d = chartSeasonData[s][club.key];
+				if (!d) return;
+				const movement = seasonFeeMovementData[s]?.[club.key] ?? d;
 				totalExp += d.expenditure;
 				totalInc += d.income;
 				totalArr += movement.arrivals;
@@ -886,11 +1637,15 @@
 	}
 
 	// Build cumulative net balance per club: running sum of (income - expenditure)
-	function buildCumulativeSeries() {
-		return clubs.map((club) => {
+	function buildCumulativeSeries(
+		clubList = clubs,
+		data = seasonData,
+		seasons = SEASONS,
+	) {
+		return clubList.map((club) => {
 			let running = 0;
-			const values = SEASONS.map((s) => {
-				const d = seasonData[s][club.key];
+			const values = seasons.map((s) => {
+				const d = data[s][club.key];
 				running += d.income - d.expenditure;
 				return { season: s, value: running };
 			});
@@ -899,6 +1654,8 @@
 	}
 
 	let resizeFrame = null;
+	let lastRenderWidth = 0;
+	let salaryTopN = null; // null = All
 
 	function init() {
 		if (!window.d3) return;
@@ -906,6 +1663,7 @@
 		if (!section) return;
 
 		window.addEventListener("resize", () => {
+			if (window.innerWidth === lastRenderWidth) return;
 			if (resizeFrame) window.cancelAnimationFrame(resizeFrame);
 			resizeFrame = window.requestAnimationFrame(render);
 		});
@@ -914,6 +1672,7 @@
 	}
 
 	function render() {
+		lastRenderWidth = window.innerWidth;
 		renderChart();
 		renderCards();
 		renderSalarySankey();
@@ -1022,26 +1781,26 @@
 			visuals.insertBefore(stickyKey, chartWrap);
 		}
 
-		const series = buildCumulativeSeries();
+		const series = buildCumulativeSeries(
+			chartClubs,
+			chartSeasonData,
+			CHART_SEASONS,
+		);
 		const width = Math.max(container.clientWidth, 320);
 		const isNarrow = width < 560;
 		const isVeryNarrow = width < 390;
 		const margin = isNarrow
-			? {
-					top: 22,
-					right: isVeryNarrow ? 14 : 16,
-					bottom: 18,
-					left: isVeryNarrow ? 44 : 50,
-				}
-			: { top: 24, right: 20, bottom: 22, left: 62 };
+			? { top: 22, right: 0, bottom: 18, left: 0 }
+			: { top: 24, right: 0, bottom: 22, left: 0 };
+		const chartHeightBoost = 100;
 		const height = isNarrow
-			? Math.max(280, Math.round(width * 0.72))
-			: Math.max(320, Math.round(width * 0.44));
+			? Math.max(280, Math.round(width * 0.72)) + chartHeightBoost
+			: Math.max(320, Math.round(width * 0.44)) + chartHeightBoost;
 		const innerW = width - margin.left - margin.right;
 		const innerH = height - margin.top - margin.bottom;
 		const xAxisHeadroom = isNarrow ? 20 : 28;
 		const maxXTicks = isVeryNarrow ? 4 : isNarrow ? 5 : 8;
-		const tickStep = Math.max(1, Math.ceil(SEASONS.length / maxXTicks));
+		const tickStep = Math.max(1, Math.ceil(CHART_SEASONS.length / maxXTicks));
 		const showSeasonBars = width >= 480;
 		const scope =
 			container.closest(".transfers-section") || document.documentElement;
@@ -1063,7 +1822,7 @@
 			.append("svg")
 			.attr("viewBox", `0 0 ${width} ${height}`)
 			.attr("role", "img")
-			.attr("aria-label", "Cumulative net transfer balance 2012-2026");
+			.attr("aria-label", "Cumulative net transfer balance 2002-2026");
 
 		const chart = svg
 			.append("g")
@@ -1071,16 +1830,16 @@
 
 		const x = d3
 			.scalePoint()
-			.domain(SEASONS)
+			.domain(CHART_SEASONS)
 			.range([0, innerW])
 			.padding(isNarrow ? 0.15 : 0.3);
 
 		const cumulativeValues = series.flatMap((c) =>
 			c.values.map((v) => v.value),
 		);
-		const barExtremes = SEASONS.flatMap((season) =>
+		const barExtremes = CHART_SEASONS.flatMap((season) =>
 			clubs.flatMap((club) => {
-				const d = seasonData[season][club.key];
+				const d = chartSeasonData[season][club.key];
 				return [d.income, -d.expenditure];
 			}),
 		);
@@ -1122,7 +1881,7 @@
 			.append("g")
 			.attr("class", "transfers-grid")
 			.selectAll("line")
-			.data(visibleYTicks)
+			.data(visibleYTicks.filter((t) => t !== 0))
 			.join("line")
 			.attr("x1", 0)
 			.attr("x2", innerW)
@@ -1133,16 +1892,7 @@
 			.attr("stroke-dasharray", "4 4")
 			.attr("stroke-width", 1.2);
 
-		const zeroLine = chart
-			.append("line")
-			.attr("x1", 0)
-			.attr("x2", innerW)
-			.attr("y1", y(0))
-			.attr("y2", y(0))
-			.attr("stroke", coordinateColor)
-			.attr("stroke-width", 1.5)
-			.attr("stroke-opacity", 0.38)
-			.attr("stroke-dasharray", "4 4");
+		const zeroLine = { lower: () => {} };
 
 		const seasonAxis = d3.axisBottom(x);
 		chart
@@ -1153,7 +1903,7 @@
 					.tickSize(0)
 					.tickPadding(isNarrow ? 6 : 8)
 					.tickFormat((s, i) => {
-						if (i === SEASONS.length - 1) return "";
+						if (i === CHART_SEASONS.length - 1) return "";
 						if (i === 0) return s;
 						return i % tickStep === 0 ? s : "";
 					}),
@@ -1180,7 +1930,9 @@
 				ax
 					.selectAll("text")
 					.attr("class", "transfers-board-coordinate-tick")
-					.attr("dx", "-8px")
+					.attr("text-anchor", "start")
+					.attr("dx", "4px")
+					.attr("dy", "-3px")
 					.style("font-size", isNarrow ? "9px" : null),
 			);
 
@@ -1198,7 +1950,9 @@
 				.attr("data-club-key", club.key)
 				.attr("fill", "none")
 				.attr("stroke", club.color)
-				.attr("stroke-width", isNarrow ? 2.2 : 2.5)
+				.attr("stroke-width", club.isReference ? 1 : 2.5)
+				.attr("stroke-dasharray", club.isReference ? "6 4" : null)
+				.attr("stroke-opacity", club.isReference ? 1 : 1)
 				.attr("stroke-linejoin", "round")
 				.attr("stroke-linecap", "round")
 				.attr("d", lineGen);
@@ -1206,26 +1960,23 @@
 
 		// ── Per-season bars embedded in chart (same y-axis) ──────────────────
 		if (showSeasonBars) {
-			const xStep = innerW / SEASONS.length;
-			const groupW = xStep * (isNarrow ? 0.33 : 0.38);
+			const xStep = innerW / CHART_SEASONS.length;
+			const groupW = xStep * (isNarrow ? 0 : 0.3);
 			const clubBarW = groupW / clubs.length;
 
 			const barsGroup = chart
 				.append("g")
 				.attr("class", "transfers-bars-bg")
-				.attr("clip-path", `url(#${clipId})`);
+				.attr("clip-path", `url(#${clipId})`)
+				.attr("pointer-events", "none");
 
-			SEASONS.forEach((s) => {
+			CHART_SEASONS.forEach((s) => {
 				const cx = x(s) ?? 0;
 				clubs.forEach((club, ci) => {
-					const d = seasonData[s][club.key];
+					const d = chartSeasonData[s][club.key];
 					const bx = cx - groupW / 2 + ci * clubBarW;
-					const hex = club.color.replace("#", "");
-					const r = parseInt(hex.slice(0, 2), 16);
-					const g = parseInt(hex.slice(2, 4), 16);
-					const b = parseInt(hex.slice(4, 6), 16);
 
-					const barW = Math.max(clubBarW * 0.82, 2);
+					const barW = Math.max(clubBarW * 0.7, 2);
 					const barOffset = (clubBarW - barW) / 2;
 
 					// Expenditure bar — down from zero (team color)
@@ -1236,7 +1987,7 @@
 						.attr("y", y(0))
 						.attr("width", barW)
 						.attr("height", y(-d.expenditure) - y(0))
-						.attr("fill", `rgba(${r},${g},${b},0.35)`);
+						.attr("fill", club.color);
 
 					// Income bar — up from zero (team color, lighter)
 					barsGroup
@@ -1246,7 +1997,7 @@
 						.attr("y", y(d.income))
 						.attr("width", barW)
 						.attr("height", y(0) - y(d.income))
-						.attr("fill", `rgba(${r},${g},${b},0.35)`);
+						.attr("fill", club.color);
 				});
 			});
 		}
@@ -1324,6 +2075,8 @@
 		}
 
 		background.raise();
+		chart.selectAll(".transfers-net-series").raise();
+		chart.select(".transfers-bars-bg").raise();
 
 		const hoverGroup = chart.append("g");
 		const hoverLine = hoverGroup
@@ -1351,7 +2104,7 @@
 		const setHoverCaretX = (cx) =>
 			hoverCaret.attr("transform", `translate(${cx - caretSize},${caretY})`);
 
-		const defaultGuideSeason = SEASONS[SEASONS.length - 1];
+		const defaultGuideSeason = CHART_SEASONS[CHART_SEASONS.length - 1];
 		const defaultGuideX = x(defaultGuideSeason) ?? 0;
 		hoverLine.attr("x1", defaultGuideX).attr("x2", defaultGuideX);
 		setHoverCaretX(defaultGuideX);
@@ -1392,9 +2145,11 @@
 				.style("opacity", isActive ? 1 : 0.35);
 			setHoverCaretX(sx).style("opacity", isActive ? 0.9 : 0.35);
 
-			const rows = series
+			const primarySeries = series.filter((club) => !club.isReference);
+
+			const rows = primarySeries
 				.map((club) => {
-					const sd = seasonData[season][club.key];
+					const sd = chartSeasonData[season][club.key];
 					const cumulative =
 						club.values.find((d) => d.season === season)?.value ?? 0;
 					const transferRecord = sd.income - sd.expenditure;
@@ -1423,7 +2178,12 @@
 			detailBody.html(rows);
 
 			hoverDots.forEach((dot, i) => {
-				const v = series[i].values.find((d) => d.season === season);
+				const club = series[i];
+				if (club.isReference) {
+					dot.style("opacity", 0);
+					return;
+				}
+				const v = club.values.find((d) => d.season === season);
 				if (v == null) return;
 				dot
 					.attr("cx", sx)
@@ -1444,9 +2204,9 @@
 			const svgRect = svgEl.getBoundingClientRect();
 			const scaleX = width / svgRect.width;
 			const mx = (clientX - svgRect.left) * scaleX - margin.left;
-			let closest = SEASONS[0],
+			let closest = CHART_SEASONS[0],
 				minDist = Infinity;
-			SEASONS.forEach((s) => {
+			CHART_SEASONS.forEach((s) => {
 				const dist = Math.abs((x(s) ?? 0) - mx);
 				if (dist < minDist) {
 					minDist = dist;
@@ -1536,8 +2296,7 @@
 		const cardsMount = primaryContainer ?? secondaryContainer;
 		if (!cardsMount) return;
 		const cardsWidth = Math.max(cardsMount.clientWidth, 320);
-		const salaryLimitPerClub =
-			cardsWidth < 420 ? 8 : cardsWidth < 560 ? 10 : 15;
+		const salaryLimitPerClub = 15;
 
 		const totals = buildTotals();
 		const salaryLeaders = buildSalaryLeaders(salaryLimitPerClub);
@@ -1547,88 +2306,68 @@
 			totals.find((c) => c.id === "real-madrid"),
 		];
 
-		// Scale: each half of the track represents this value
-		const maxHalf = Math.max(
-			...allClubs.map((c) => Math.max(c.totalExp, c.totalInc)),
+		// ── Waffle chart: net balance per club as % of largest net ──────────────
+		const waffleMax = Math.max(
+			...allClubs.map((c) => Math.abs(c.netBalance)),
 			1,
 		);
-		const moneyRowsHTML = allClubs
-			.map((club) => {
-				const spendPct = Math.min((club.totalExp / maxHalf) * 50, 50);
-				const incPct = Math.min((club.totalInc / maxHalf) * 50, 50);
-				// net marker position: clamped within track
-				const netPct = Math.max(
-					3,
-					Math.min(97, 50 + (club.netBalance / maxHalf) * 50),
-				);
-				const netTone = club.netBalance >= 0 ? "is-sale" : "is-purchase";
-				const netArrow = getDirectionArrowSVG(
-					club.netBalance >= 0 ? "up" : "down",
-					"sm",
-				);
-				const spendArrow = getDirectionArrowSVG("down", "sm");
-				const incomeArrow = getDirectionArrowSVG("up", "sm");
-				// tip positions for bar-end labels
-				const spendTip = (50 - spendPct).toFixed(2);
-				const incTip = (50 + incPct).toFixed(2);
-
-				return `
-					<div class="transfers-bullet-row" data-club-key="${club.key}" style="--club-color:${club.color}">
-						<div class="transfers-bullet-track-wrap">
-							<div class="transfers-bullet-track">
-								<div class="transfers-bullet-spend" style="width:${spendPct.toFixed(2)}%"></div>
-								<div class="transfers-bullet-income" style="width:${incPct.toFixed(2)}%"></div>
-								<div class="transfers-bullet-zero"></div>
-								<div class="transfers-bullet-net ${netTone}" style="left:${netPct.toFixed(2)}%">
-									<span class="transfers-bullet-net-chip transfers-highlight-number transfers-highlight-number--secondary ${netTone}">${netArrow}${formatMillions(club.netBalance)}</span>
+		const WAFFLE_CELLS = 100;
+		const makeWaffleCells = (value, toneClass) => {
+			const filled = Math.round((value / waffleMax) * WAFFLE_CELLS);
+			return Array.from({ length: WAFFLE_CELLS }, (_, i) => {
+				const flippedIdx = (9 - Math.floor(i / 10)) * 10 + (i % 10);
+				return `<span class="transfers-waffle-cell ${flippedIdx < filled ? toneClass : "is-empty"}"></span>`;
+			}).join("");
+		};
+		const waffleBoardHTML = `
+			<div class="transfers-waffle-cols">
+				${allClubs
+					.map((club) => {
+						const tone = club.netBalance >= 0 ? "is-in" : "is-out";
+						const pct = Math.round(
+							(Math.abs(club.netBalance) / waffleMax) * 100,
+						);
+						return `
+							<div class="transfers-waffle-unit" data-club-key="${club.key}" style="--club-color:${club.color}">
+								<div class="transfers-waffle-stats">
+									<div class="transfers-waffle-figure transfers-highlight-number transfers-highlight-number--secondary">${pct}%</div>
+									<div class="transfers-waffle-value">${formatMillions(Math.abs(club.netBalance))}</div>
 								</div>
-							</div>
-							<div class="transfers-bullet-underlabels">
-								<span class="transfers-bullet-lbl is-purchase" style="left:${spendTip}%">${spendArrow}${formatMillions(club.totalExp)}</span>
-								<span class="transfers-bullet-lbl is-sale" style="left:${incTip}%">${incomeArrow}${formatMillions(club.totalInc)}</span>
-							</div>
-						</div>
-					</div>
-				`;
-			})
-			.join("");
+								<div class="transfers-waffle-grid" aria-hidden="true">${makeWaffleCells(Math.abs(club.netBalance), tone)}</div>
+							</div>`;
+					})
+					.join("")}
+			</div>
+		`;
 
-		const seasonHeadHTML = SEASONS.map(
+		const seasonHeadHTML = CHART_SEASONS.map(
 			(season) =>
-				`<div class="transfers-season-axis-cell transfers-board-coordinates">${season}</div>`,
+				`<div class="transfers-season-axis-cell transfers-board-coordinates">'${season.slice(0, 2)}</div>`,
 		).join("");
-
-		const renderTransferTicks = (count, toneClass) =>
-			Array.from(
-				{ length: count },
-				() => `<span class="transfers-season-tick ${toneClass}"></span>`,
-			).join("");
 
 		const seasonRowsHTML = allClubs
 			.map((club) => {
-				const seasonCells = SEASONS.map((season) => {
-					const seasonStats = getMovementStats(season, club.key);
-					const netMoves = seasonStats.arrivals - seasonStats.departures;
+				const seasonCells = CHART_SEASONS.map((season) => {
+					const stats = getMovementStats(season, club.key);
+					if (!stats)
+						return `<div class="transfers-season-cell" style="--club-color:${club.color}"></div>`;
+					const arrivals = stats.arrivals ?? 0;
+					const departures = stats.departures ?? 0;
+					const net = arrivals - departures;
 					const netTone =
-						netMoves > 0
-							? "is-positive"
-							: netMoves < 0
-								? "is-negative"
-								: "is-neutral";
-					const netLabel = netMoves > 0 ? `+${netMoves}` : `${netMoves}`;
-
+						net > 0 ? "is-positive" : net < 0 ? "is-negative" : "is-neutral";
+					const netLabel = net > 0 ? `+${net}` : `${net}`;
 					return `
-						<div class="transfers-season-cell" style="--club-color:${club.color}" tabindex="0" aria-label="${club.name} ${season}: out ${seasonStats.departures}, in ${seasonStats.arrivals}, net ${netLabel}">
+						<div class="transfers-season-cell" style="--club-color:${club.color};--arr:${arrivals};--dep:${departures}" tabindex="0" aria-label="${club.name} ${season}: out ${departures}, in ${arrivals}, net ${netLabel}">
 							<div class="transfers-season-cell-net ${netTone}">${netLabel}</div>
-							<div class="transfers-season-cell-track">
-								<div class="transfers-season-cell-half is-out">${renderTransferTicks(seasonStats.departures, "is-out")}</div>
-								<div class="transfers-season-cell-half is-in">${renderTransferTicks(seasonStats.arrivals, "is-in")}</div>
-								<div class="transfers-season-cell-zero"></div>
+							<div class="transfers-season-cell-bars">
+								<div class="transfers-season-bars-up"></div>
+								<div class="transfers-season-bars-mid"></div>
+								<div class="transfers-season-bars-down"></div>
 							</div>
 							<div class="transfers-season-hover" aria-hidden="true">
-								<span class="is-out">−${seasonStats.departures}</span>
-								<span class="is-net ${netTone}">${netLabel}</span>
-								<span class="is-in">+${seasonStats.arrivals}</span>
+								<span class="is-out">−${departures}</span>
+								<span class="is-in">+${arrivals}</span>
 							</div>
 						</div>
 					`;
@@ -1719,22 +2458,43 @@
 
 		const netBalanceBoardHTML = `
 			<article class="transfers-vs-board transfers-bullet-board">
-				<div class="transfers-vs-title transfers-board-title">Net balance · Spent vs Received</div>
-				<div class="transfers-bullet-axis transfers-board-coordinates">
-					<span>← Spent</span>
-					<span>0</span>
-					<span>Received →</span>
-				</div>
-				${moneyRowsHTML}
+				<div class="transfers-waffle-board">${waffleBoardHTML}</div>
+				<div class="transfers-rank-caption transfers-board-coordinates">Net balance · ${CHART_SEASONS[0]}–${CHART_SEASONS[CHART_SEASONS.length - 1]} · 100% = ${formatMillions(waffleMax)}</div>
 			</article>
 		`;
 
 		const remainingBoardsHTML = `
+			<hr class="transfers-rule">
+			<article class="transfers-vs-board transfers-salary-board" id="transfersSalaryBoard">
+				<div class="transfers-salary-header">
+					<div class="transfers-salary-head-copy">
+						<div class="transfers-vs-title transfers-board-title">2025/26 wages</div>
+						<div class="transfers-salary-intro transfers-board-subhead">
+							<span>Across the top 15 earners, most Atlético de Madrid players fall below their counterparts at Real Madrid and FC Barcelona, with only a few exceptions at the top.</span>
+						</div>
+					</div>
+					${getDownloadButtonHTML("transfersSalaryDownloadBtn", "Download salary comparison graphic")}
+				</div>
+				<div class="transfers-salary-tabs" role="tablist" aria-label="Players per club">
+					<button class="transfers-salary-tab${salaryTopN === null ? " is-active" : ""}" role="tab" aria-selected="${salaryTopN === null}" data-top="all">All</button>
+					<button class="transfers-salary-tab${salaryTopN === 3 ? " is-active" : ""}" role="tab" aria-selected="${salaryTopN === 3}" data-top="3">Top 3</button>
+					<button class="transfers-salary-tab${salaryTopN === 5 ? " is-active" : ""}" role="tab" aria-selected="${salaryTopN === 5}" data-top="5">Top 5</button>
+					<button class="transfers-salary-tab${salaryTopN === 10 ? " is-active" : ""}" role="tab" aria-selected="${salaryTopN === 10}" data-top="10">Top 10</button>
+				</div>
+				<div class="transfers-salary-layout">
+					<div class="transfers-salary-compare-grid">
+						<div class="transfers-salary-chart-wrap">
+							<div class="transfers-salary-chart" id="transfersSalarySankey" aria-live="polite"></div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<hr class="transfers-rule">
 			<article class="transfers-vs-board transfers-season-board" id="transfersSeasonBoard">
 				<div class="transfers-chart-meta transfers-board-header">
 					<div class="transfers-board-head-copy">
-						<div class="transfers-vs-title transfers-board-title">Player movement by season · fee transfers only</div>
-						<div class="transfers-board-subhead">Paid arrivals and departures by season, excluding loans, free transfers, and undisclosed deals.</div>
+						<div class="transfers-vs-title transfers-board-title">Player movement</div>
+						<div class="transfers-board-subhead">Fee-based arrivals and departures per season. Squads change constantly — no club can simply keep the same team year after year.</div>
 					</div>
 					${getDownloadButtonHTML("transfersSeasonDownloadBtn", "Download player movement graphic")}
 				</div>
@@ -1747,28 +2507,10 @@
 					</div>
 				</div>
 				<div class="transfers-season-test-block">
-					<div class="transfers-vs-title transfers-vs-title-test transfers-board-title">Totals · all seasons (donut test)</div>
 					<div class="transfers-donut-grid">
 						${donutTotalsHTML}
 					</div>
-				</div>
-			</article>
-			<article class="transfers-vs-board transfers-salary-board" id="transfersSalaryBoard">
-				<div class="transfers-salary-header">
-					<div class="transfers-salary-head-copy">
-						<div class="transfers-vs-title transfers-board-title">Salary comparison · Top 15 per club</div>
-						<div class="transfers-salary-intro transfers-board-subhead">
-							<span>Estimated gross fixed salary + bonus for 2025/26, using Capology club payroll tables. Top ${salaryLimitPerClub} per team (${salaryLeaders.length} players). Combined total comp: <span class="transfers-highlight-number transfers-highlight-number--tertiary">${salarySummaryText}</span></span>
-						</div>
-					</div>
-					${getDownloadButtonHTML("transfersSalaryDownloadBtn", "Download salary comparison graphic")}
-				</div>
-				<div class="transfers-salary-layout">
-					<div class="transfers-salary-compare-grid">
-						<div class="transfers-salary-chart-wrap">
-							<div class="transfers-salary-chart" id="transfersSalarySankey" aria-live="polite"></div>
-						</div>
-					</div>
+					<div class="transfers-rank-caption transfers-board-coordinates">Total transfer activity (in &amp; out) since 02/03 · 0% = pure spending, ≥100% = fully self-funded</div>
 				</div>
 			</article>
 		`;
@@ -1797,34 +2539,34 @@
 		}
 
 		const containerWidth = Math.max(container.clientWidth, 320);
-		const salaryLimitPerClub =
-			containerWidth < 420 ? 8 : containerWidth < 560 ? 10 : 15;
+		const salaryLimitPerClub = 15;
 		const leaders = buildSalaryLeaders(salaryLimitPerClub);
+
 		const width = Math.max(container.clientWidth, 320);
 		const isNarrow = width < 700;
 		const isMobile = width < 560;
 		const isTiny = width < 420;
-		const minChartHeight = isTiny ? 360 : isMobile ? 430 : isNarrow ? 520 : 680;
+		const minChartHeight = Math.round(window.innerHeight * 0.697);
 		const chartTop = isMobile ? 34 : 42;
 		const chartBottomPad = isMobile ? 32 : 44;
-		const clubGap = isMobile ? 0.75 : isNarrow ? 1 : 3;
-		const rowGap = isMobile ? 0.75 : isNarrow ? 1 : 3;
-		const clubNodeWidth = 20;
+		const rowGap = isMobile ? 2.5 : isNarrow ? 1 : 3;
+		const clubGap = rowGap;
+		const clubNodeWidth = 10;
 		const grossNodeWidth = 10;
 		const totalNodeWidth = 10;
-		const rightLabelSpace = isMobile ? (isTiny ? 36 : 42) : isNarrow ? 48 : 56;
-		const leftX = 16;
+		const rightLabelSpace = 4;
+		const leftX = 0;
 		const middleX =
 			Math.round(width * (isMobile ? 0.35 : 0.39)) + (isNarrow ? 6 : 8);
 		const rightX = Math.max(
 			middleX + grossNodeWidth + (isTiny ? 30 : 42),
-			width - totalNodeWidth - rightLabelSpace - 16,
+			width - totalNodeWidth - rightLabelSpace,
 		);
 		const totalLabelGap = 8;
 		const salaryRightInset = leftX;
 		const scale = isMobile ? 0.31 : isNarrow ? 0.34 : 0.38;
 		const minNodeHeight = 2;
-		const extraBarPixels = isMobile ? 130 : 250;
+		const targetChartHeight = Math.round(window.innerHeight * 0.697);
 		const clubGrossTotal = new Map(
 			clubs.map((club) => [
 				club.key,
@@ -1859,10 +2601,18 @@
 			(sum, row) => sum + row.totalBaseHeight,
 			0,
 		);
+		const totalGrossBaseHeight = baseRows.reduce(
+			(s, r) => s + r.grossBaseHeight,
+			0,
+		);
+		const fixedHeight =
+			chartTop + Math.max(0, baseRows.length - 1) * rowGap + chartBottomPad;
+		const availableForBars = Math.max(
+			targetChartHeight - fixedHeight,
+			totalBaseBarHeight, // ensure multiplier >= 1
+		);
 		const barHeightMultiplier =
-			totalBaseBarHeight > 0
-				? (totalBaseBarHeight + extraBarPixels) / totalBaseBarHeight
-				: 1;
+			totalGrossBaseHeight > 0 ? availableForBars / totalGrossBaseHeight : 1;
 
 		const rows = baseRows.map((row) => {
 			const grossHeight = row.grossBaseHeight * barHeightMultiplier;
@@ -1930,8 +2680,13 @@
 			const clubRows = rows
 				.filter((row) => row.clubKey === club.key)
 				.sort(
-					(a, b) => b.salary - a.salary || a.player.localeCompare(b.player),
+					(a, b) =>
+						b.salary + b.bonus - (a.salary + a.bonus) ||
+						a.player.localeCompare(b.player),
 				);
+			clubRows.forEach((row, i) => {
+				row.clubRank = i + 1;
+			});
 			const grossSpan =
 				clubRows.reduce((sum, row) => sum + row.grossHeight, 0) +
 				Math.max(0, clubRows.length - 1) * rowGap;
@@ -2049,8 +2804,8 @@
 			salaryTooltip
 				.html(
 					`<div class="transfers-salary-tooltip-player">${row.player}</div>
-					<div class="transfers-salary-tooltip-row"><span>Gross</span><strong>${formatSalaryMillions(row.salary)}</strong></div>
-					<div class="transfers-salary-tooltip-row"><span>Gross + bonus</span><strong>${formatSalaryMillions(row.salary + row.bonus)}</strong></div>`,
+					<div class="transfers-salary-tooltip-row"><span>Gross</span><strong>${formatSalaryMillions(row.salary, 2)}</strong></div>
+					<div class="transfers-salary-tooltip-row"><span>Gross + bonus</span><strong>${formatSalaryMillions(row.salary + row.bonus, 2)}</strong></div>`,
 				)
 				.style("opacity", 1);
 			updateTooltipSize();
@@ -2096,6 +2851,7 @@
 				.selectAll(".transfers-salary-link")
 				.classed("is-dim", false)
 				.classed("is-hover", false);
+			applyTabHighlight();
 			salaryTooltip.style("opacity", 0);
 		};
 
@@ -2128,7 +2884,7 @@
 				.on("mouseleave touchend touchcancel", clearActiveArm);
 		};
 
-		if (!isTiny) {
+		if (true) {
 			headerLayer
 				.append("text")
 				.attr(
@@ -2153,7 +2909,7 @@
 		}
 
 		layout.forEach((block) => {
-			block.rows.forEach((row) => {
+			block.rows.forEach((row, rowIndex) => {
 				const clubGrossThickness = Math.max(
 					1,
 					row.clubSourceY1 - row.clubSourceY0,
@@ -2177,6 +2933,7 @@
 					.attr("stroke-opacity", 0.3)
 					.attr("stroke-linecap", "butt")
 					.attr("data-salary-arm-id", row.id)
+					.attr("data-salary-club-rank", rowIndex + 1)
 					.attr("stroke-width", clubGrossThickness);
 				bindLinkHover(clubGrossLink, row);
 
@@ -2196,7 +2953,8 @@
 					)
 					.attr("fill", row.club.color)
 					.attr("data-salary-arm-id", row.id)
-					.attr("fill-opacity", row.bonus > 0 ? 0.42 : 0);
+					.attr("data-salary-club-rank", rowIndex + 1)
+					.attr("fill-opacity", row.bonus > 0 ? 0.65 : 0);
 				bindLinkHover(bonusWedgeLink, row);
 
 				const grossToTotalLink = ribbonLayer
@@ -2216,16 +2974,62 @@
 					.attr("stroke-opacity", 0.5)
 					.attr("stroke-linecap", "butt")
 					.attr("data-salary-arm-id", row.id)
+					.attr("data-salary-club-rank", rowIndex + 1)
 					.attr("stroke-width", grossTotalThickness);
 				bindLinkHover(grossToTotalLink, row);
 			});
 		});
 
-		const labelsPerClub = isTiny ? 2 : isMobile ? 3 : 5;
-		const showGrossValueLabels = !isTiny;
-		const showPlayerNameLabels = width >= 480;
-		const showClubCenterLabels = !isTiny;
-		const showMiddleTotalLabels = width >= 520;
+		const applyTabHighlight = () => {
+			svg.selectAll(".transfers-salary-link").each(function () {
+				const rank = parseInt(this.dataset.salaryClubRank) || 0;
+				d3.select(this).classed(
+					"is-tab-dim",
+					salaryTopN !== null && rank > salaryTopN,
+				);
+			});
+			svg
+				.selectAll(".transfers-salary-player-label[data-salary-club-rank]")
+				.each(function () {
+					const rank = parseInt(this.dataset.salaryClubRank) || 0;
+					d3.select(this).classed(
+						"is-tab-dim",
+						salaryTopN !== null && rank > salaryTopN,
+					);
+				});
+			svg.selectAll(".transfers-salary-club-label").each(function (d) {
+				const limit = salaryTopN ?? Infinity;
+				const sum = rows
+					.filter((r) => r.clubKey === d.club.key && r.clubRank <= limit)
+					.reduce((s, r) => s + r.salary, 0);
+				d3.select(this).text(formatSalaryMillions(sum));
+			});
+			svg.selectAll(".transfers-salary-club-total-label").each(function (d) {
+				const limit = salaryTopN ?? Infinity;
+				const sum = rows
+					.filter((r) => r.clubKey === d.club.key && r.clubRank <= limit)
+					.reduce((s, r) => s + r.salary + r.bonus, 0);
+				d3.select(this).text(formatSalaryMillions(sum));
+			});
+		};
+
+		document.querySelectorAll(".transfers-salary-tab").forEach((btn) => {
+			btn.addEventListener("click", () => {
+				const top = btn.dataset.top;
+				salaryTopN = top === "all" ? null : Number(top);
+				document.querySelectorAll(".transfers-salary-tab").forEach((b) => {
+					b.classList.toggle("is-active", b === btn);
+					b.setAttribute("aria-selected", b === btn ? "true" : "false");
+				});
+				applyTabHighlight();
+			});
+		});
+
+		const labelsPerClub = 5;
+		const showGrossValueLabels = false;
+		const showPlayerNameLabels = true;
+		const showClubCenterLabels = true;
+		const showMiddleTotalLabels = true;
 
 		const visibleLabelIds = new Set(
 			clubs.flatMap((club) =>
@@ -2301,10 +3105,10 @@
 				.join("text")
 				.attr(
 					"class",
-					"transfers-salary-club-label transfers-highlight-number transfers-highlight-number--tertiary",
+					"transfers-salary-club-label transfers-highlight-number transfers-highlight-number--secondary",
 				)
 				.attr("text-anchor", "middle")
-				.attr("x", leftX + clubNodeWidth / 2)
+				.attr("x", grossDivisionCenterX)
 				.attr("y", (d) => (d.clubY0 + d.clubY1) / 2)
 				.attr("dy", "0.35em")
 				.text((d) => formatSalaryMillions(clubGrossTotal.get(d.club.key) ?? 0));
@@ -2320,10 +3124,10 @@
 					"class",
 					"transfers-salary-club-total-label transfers-highlight-number transfers-highlight-number--secondary",
 				)
-				.attr("x", middleClubTotalX)
+				.attr("x", totalDivisionCenterX)
 				.attr("y", (d) => (d.clubY0 + d.clubY1) / 2)
 				.attr("dy", "0.35em")
-				.attr("text-anchor", "start")
+				.attr("text-anchor", "middle")
 				.text((d) => formatSalaryMillions(clubTotalComp.get(d.club.key) ?? 0));
 		}
 
@@ -2334,10 +3138,10 @@
 				.data(visibleLabelRows)
 				.join("text")
 				.attr("class", "transfers-salary-player-label")
-				.attr("x", middleX - 8)
+				.attr("x", middleX + grossNodeWidth + 4)
 				.attr("y", (d) => d.grossCenterY)
 				.attr("dy", "0.35em")
-				.attr("text-anchor", "end")
+				.attr("text-anchor", "start")
 				.text((d) => formatSalaryMillions(d.salary));
 		}
 
@@ -2351,11 +3155,12 @@
 					"class",
 					"transfers-salary-player-label transfers-salary-player-name-left",
 				)
-				.attr("x", rightX - totalLabelGap)
-				.attr("y", (d) => d.totalCenterY)
+				.attr("x", middleX + grossNodeWidth + 4)
+				.attr("y", (d) => d.grossCenterY)
 				.attr("dy", "0.35em")
-				.attr("text-anchor", "end")
-				.text((d) => formatSalaryPlayerLabel(d.player, width, true));
+				.attr("data-salary-club-rank", (d) => d.clubRank)
+				.attr("text-anchor", "start")
+				.text((d) => formatSalaryPlayerLabel(d.player));
 		}
 
 		totalLabelLayer
@@ -2366,11 +3171,13 @@
 				"class",
 				"transfers-salary-player-label transfers-salary-player-total-right transfers-highlight-number transfers-highlight-number--tertiary",
 			)
-			.attr("x", width - salaryRightInset)
+			.attr("x", rightX - 4)
 			.attr("y", (d) => d.totalCenterY)
 			.attr("dy", "0.35em")
+			.attr("data-salary-club-rank", (d) => d.clubRank)
 			.attr("text-anchor", "end")
 			.text((d) => formatSalaryMillions(d.salary + d.bonus));
+		applyTabHighlight();
 	}
 
 	function buildRibbonPath(x0, y0Top, y0Bottom, x1, y1Top, y1Bottom) {
@@ -2403,20 +3210,13 @@
 		return `${prefix}€${absolute.toFixed(digits)}m`;
 	}
 
-	function formatSalaryMillions(value) {
-		return `€${value.toFixed(2)}`;
+	function formatSalaryMillions(value, decimals = 0) {
+		return `€${value.toFixed(decimals)}`;
 	}
 
-	function formatSalaryPlayerLabel(name, width, preferFull = false) {
-		const parts = name.split(" ");
-		if (parts.length === 1) return name;
-		if (preferFull && width >= 820) return name;
-		if (width >= 920) {
-			return name.length <= 18
-				? name
-				: `${parts[0].charAt(0)}. ${parts[parts.length - 1]}`;
-		}
-		return `${parts[0].charAt(0)}. ${parts[parts.length - 1]}`;
+	function formatSalaryPlayerLabel(name) {
+		const parts = name.trim().split(" ");
+		return parts[parts.length - 1];
 	}
 
 	document.addEventListener("DOMContentLoaded", init);
