@@ -440,12 +440,16 @@ header {
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 14px;
+		gap: 10px;
 	}
 
 	&-grid--motion {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		margin-top: 8px;
+
+		.personal-project-thumb {
+			cursor: pointer;
+		}
 	}
 
 	&-header--motion {
@@ -588,12 +592,11 @@ header {
 
 @media screen and (max-width: $mobile) {
 	.personal-projects {
-		margin-top: 72px;
-		padding: 0 12px;
+		margin-top: 64px;
+		padding: 0;
 
 		&-shell {
-			padding: 16px;
-			border-radius: 18px;
+			padding: 0;
 		}
 
 		&-header {
