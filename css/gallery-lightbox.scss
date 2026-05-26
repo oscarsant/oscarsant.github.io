@@ -362,8 +362,11 @@ figure {
 }
 
 
-// gallery--reverse needs its own mobile row sizing
+// gallery--reverse: only items 6-9 visible, collapsed to 3 rows
 .gallery.gallery--reverse {
+	grid-template-rows: repeat(3, 1fr);
+	aspect-ratio: 22 / 9;
+
 	@media screen and (max-width: $mobile) {
 		grid-template-rows: repeat(32, 5vw);
 		aspect-ratio: auto;
@@ -371,12 +374,20 @@ figure {
 	}
 }
 
+// Remap items 6-9 to row 1 within gallery--reverse
+.gallery.gallery--reverse .gallery__item--6,
+.gallery.gallery--reverse .gallery__item--7,
+.gallery.gallery--reverse .gallery__item--8,
+.gallery.gallery--reverse .gallery__item--9 {
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+
 .gallery.gallery--reverse .gallery__item--1,
 .gallery.gallery--reverse .gallery__item--2,
 .gallery.gallery--reverse .gallery__item--3,
 .gallery.gallery--reverse .gallery__item--4,
-.gallery.gallery--reverse .gallery__item--5,
-.gallery.gallery--reverse .gallery__item--6 {
+.gallery.gallery--reverse .gallery__item--5 {
 	display: none;
 }
 
