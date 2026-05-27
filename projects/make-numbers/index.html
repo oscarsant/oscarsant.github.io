@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="mylogo.svg" />
-    <link rel="manifest" href="make-numbers.webmanifest" />
-    <link rel="apple-touch-icon" href="make-numbers-icon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="/mylogo.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.svg" />
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/make-numbers.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="make-numbers.css" />
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -32,15 +32,15 @@
 
 <body class="numbers-page">
     <nav class="numbers-nav" aria-label="Site navigation">
-        <a class="numbers-nav__back" href="index.html" aria-label="Back to home" title="Back to home">
+        <a class="numbers-nav__back" href="/" aria-label="Back to home" title="Back to home">
             <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true" focusable="false">
                 <path d="M15.75 6.77461H0.75L6.7998 0.75M6.7998 12.799L3.01855 9.03401" stroke="currentColor"
                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
-        <a class="numbers-nav__logo" href="index.html" aria-label="Oscar Santamariña home">
-            <img src="mylogo.svg" alt="Oscar Santamariña" />
+        <a class="numbers-nav__logo" href="/" aria-label="Oscar Santamariña home">
+            <img src="/mylogo.svg" alt="Oscar Santamariña" />
         </a>
     </nav>
 
@@ -455,10 +455,10 @@
         <p class="numbers-footer__credits">Designed and developed by Oscar Santamarina | May 2026</p>
         <p class="numbers-version">v1.0.4 &middot; 2026-05-23</p>
     </footer>
-    <script src="js/make-numbers.js"></script>
+    <script src="make-numbers.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/make-numbers-sw.js');
+            navigator.serviceWorker.register('/projects/make-numbers/sw.js');
         }
     </script>
 </body>

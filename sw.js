@@ -3,7 +3,7 @@
 // skipWaiting + clients.claim ensures a new SW activates immediately after deploy,
 // so users always get the latest version automatically on next visit.
 
-var CACHE = "oas-v1";
+var CACHE = "oas-v2";
 var PRECACHE = [
 	"/",
 	"/index.html",
@@ -11,8 +11,8 @@ var PRECACHE = [
 	"/js/main.js",
 	"/js/share.js",
 	"/mylogo.svg",
-	"/icon-192.png",
-	"/icon-512.png"
+	"/icons/icon-192.png",
+	"/icons/icon-512.png",
 ];
 
 self.addEventListener("install", function (e) {
@@ -20,7 +20,7 @@ self.addEventListener("install", function (e) {
 	e.waitUntil(
 		caches.open(CACHE).then(function (cache) {
 			return cache.addAll(PRECACHE);
-		})
+		}),
 	);
 });
 
@@ -31,13 +31,17 @@ self.addEventListener("activate", function (e) {
 			.then(function (keys) {
 				return Promise.all(
 					keys
-						.filter(function (k) { return k !== CACHE; })
-						.map(function (k) { return caches.delete(k); })
+						.filter(function (k) {
+							return k !== CACHE;
+						})
+						.map(function (k) {
+							return caches.delete(k);
+						}),
 				);
 			})
 			.then(function () {
 				return self.clients.claim();
-			})
+			}),
 	);
 });
 
@@ -59,6 +63,6 @@ self.addEventListener("fetch", function (e) {
 			})
 			.catch(function () {
 				return caches.match(e.request);
-			})
+			}),
 	);
 });

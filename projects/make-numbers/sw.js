@@ -3,12 +3,12 @@
 // skipWaiting + clients.claim ensures a new SW activates immediately on install,
 // so pushing code changes takes effect as soon as the user reopens the app.
 
-var CACHE = "make-numbers-v2";
+var CACHE = "make-numbers-v3";
 var PRECACHE = [
-	"/make-numbers.html",
-	"/css/make-numbers.css",
+	"/projects/make-numbers/",
+	"/projects/make-numbers/make-numbers.css",
 	"/css/main.css",
-	"/js/make-numbers.js",
+	"/projects/make-numbers/make-numbers.js",
 ];
 
 self.addEventListener("install", function (e) {

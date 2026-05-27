@@ -2,14 +2,14 @@
 	"name": "Make Numbers",
 	"short_name": "Numbers",
 	"description": "A mobile-first personal finance tool",
-	"start_url": "/make-numbers.html",
-	"scope": "/",
+	"start_url": "/projects/make-numbers/",
+	"scope": "/projects/make-numbers/",
 	"display": "standalone",
 	"background_color": "#f4f4f4",
 	"theme_color": "#111111",
 	"icons": [
 		{
-			"src": "make-numbers-icon.svg",
+			"src": "icon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
 			"purpose": "any maskable"
