@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brazil — World Cup History</title>
+  <script src="review-gate.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lucaburgio/iconoir@main/css/iconoir.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+
+<body class="team-view-body">
+  <div class="team-view-container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="nav-right">
+        <a href="index.html" class="back-btn"><i class="iconoir-nav-arrow-left"></i> Back</a>
+        <label class="select-wrap">
+          <select id="team-select">
+            <!-- populated by team-view.js -->
+          </select>
+          <i class="iconoir-nav-arrow-down" aria-hidden="true"></i>
+        </label>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="team-main">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <span>TEAM VIEW</span>
+        <span class="breadcrumb-separator">/</span>
+        <span id="team-name-breadcrumb">Brazil</span>
+        <span class="team-rank-badge" id="rank-badge">Rank #1</span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="timeline">
+          <i class="iconoir-graph-up"></i>
+          Timeline
+        </button>
+        <button class="tab" data-tab="players">
+          <i class="iconoir-user"></i>
+          Players
+        </button>
+        <button class="tab" data-tab="all-players">
+          <i class="iconoir-community"></i>
+          All Players
+        </button>
+        <button class="tab" data-tab="head-to-head">
+          <i class="iconoir-group"></i>
+          Head-to-Head
+        </button>
+        <span class="tabs-divider" aria-hidden="true"></span>
+        <button class="tab" data-tab="compare">
+          <i class="iconoir-stats-up-square"></i>
+          Compare
+        </button>
+      </div>
+
+      <!-- Team Info Header (shown on timeline + players tabs) -->
+      <div class="team-info-header" id="team-info-header">
+        <div class="team-info-left">
+          <div class="team-header-row">
+            <span class="team-flag" id="team-flag"></span>
+            <h1 id="team-name-title">Brazil</h1>
+          </div>
+          <div class="team-meta-row">
+            <span class="meta-item"><strong>RANK</strong> <span id="team-rank">1</span></span>
+            <span class="meta-item"><strong>POINTS</strong> <span id="team-points">237</span></span>
+            <span class="meta-item"><strong>APPEARANCES</strong> <span id="team-appearances">22</span></span>
+          </div>
+        </div>
+        <div class="team-info-right">
+          <img id="team-badge" class="team-badge-img" src="https://a.espncdn.com/i/teamlogos/countries/500/bra.png"
+            alt="Team badge">
+        </div>
+      </div>
+
+      <!-- Tab Panels -->
+      <div class="tab-panel active" data-panel="timeline">
+        <!-- Stats Visualizations -->
+        <div class="stats-viz-container">
+          <!-- Games Statistics -->
+          <div class="stats-section-wrapper">
+            <h3 class="stats-section-title">GAMES</h3>
+            <div class="stats-section-content">
+              <div class="stat-item">
+                <div class="stat-number" id="stat-gp">114</div>
+                <div class="stat-label">GP</div>
+              </div>
+              <div class="stat-item stat-success">
+                <div class="stat-number" id="stat-w">76</div>
+                <div class="stat-label">W</div>
+              </div>
+              <div class="stat-item stat-draw">
+                <div class="stat-number" id="stat-d">19</div>
+                <div class="stat-label">D</div>
+              </div>
+              <div class="stat-item stat-loss">
+                <div class="stat-number" id="stat-l">19</div>
+                <div class="stat-label">L</div>
+              </div>
+            </div>
+            <div class="stats-bar-chart" id="games-bar-chart"></div>
+          </div>
+
+          <!-- Goals Statistics -->
+          <div class="stats-section-wrapper">
+            <h3 class="stats-section-title">GOALS</h3>
+            <div class="stats-section-content">
+              <div class="stat-item stat-scored">
+                <div class="stat-number" id="stat-gs">237</div>
+                <div class="stat-label">GS</div>
+              </div>
+              <div class="stat-item stat-against">
+                <div class="stat-number" id="stat-ga">108</div>
+                <div class="stat-label">GA</div>
+              </div>
+              <div class="stat-item stat-diff">
+                <div class="stat-number" id="stat-gd">+129</div>
+                <div class="stat-label">GD</div>
+              </div>
+            </div>
+            <div class="stats-bar-chart" id="goals-bar-chart"></div>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="timeline-legend">
+          <div class="legend-item">
+            <span class="legend-dot group-stage"></span>
+            <span>Group Stage</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot knockout"></span>
+            <span>Knockout Stages</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot champion"></span>
+            <span>Champion</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-label">Year</span>
+            <span>Host Nation</span>
+          </div>
+        </div>
+
+        <!-- Timeline Table/Grid -->
+        <div class="timeline-grid-container" id="timeline-container">
+          <!-- Skeleton shown while data loads -->
+          <div class="timeline-skeleton" aria-hidden="true">
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="players">
+        <div class="players-controls">
+          <div class="pos-filters">
+            <!-- <span class="control-label"><i class="iconoir-filter-list"></i></span> -->
+            <button class="pos-filter active" data-pos="all">All</button>
+            <button class="pos-filter" data-pos="FW">FW</button>
+            <button class="pos-filter" data-pos="MF">MF</button>
+            <button class="pos-filter" data-pos="DF">DF</button>
+            <button class="pos-filter" data-pos="GK">GK</button>
+          </div>
+          <div class="sort-controls">
+            <!-- <span class="control-label"><i class="iconoir-sort-down"></i></span> -->
+            <button class="sort-btn active" data-sort="goals"><i class="iconoir-football"></i> Goals</button>
+            <button class="sort-btn" data-sort="apps"><i class="iconoir-user"></i> Apps</button>
+          </div>
+        </div>
+        <div id="players-chart"></div>
+      </div>
+
+      <div class="tab-panel" data-panel="all-players">
+        <div class="all-players-controls">
+          <div class="all-players-search-wrap">
+            <i class="iconoir-search all-players-search-icon"></i>
+            <input id="all-players-search" class="all-players-search" type="search" placeholder="Search player or team…"
+              autocomplete="off" />
+          </div>
+          <div class="all-players-filters">
+            <span class="control-label"><i class="iconoir-filter-list"></i></span>
+            <button class="ap-filter active" data-ap-pos="all">All</button>
+            <button class="ap-filter" data-ap-pos="FW">FW</button>
+            <button class="ap-filter" data-ap-pos="MF">MF</button>
+            <button class="ap-filter" data-ap-pos="DF">DF</button>
+            <button class="ap-filter" data-ap-pos="GK">GK</button>
+          </div>
+          <div class="sort-controls">
+            <span class="control-label"><i class="iconoir-sort-down"></i></span>
+            <button class="ap-sort active" data-ap-sort="goals"><i class="iconoir-football"></i> Goals</button>
+            <button class="ap-sort" data-ap-sort="apps"><i class="iconoir-user"></i> Apps</button>
+            <button class="ap-sort" data-ap-sort="name"><i class="iconoir-sort-alphabetically"></i> A–Z</button>
+          </div>
+        </div>
+        <div id="all-players-list"></div>
+      </div>
+
+      <div class="tab-panel" data-panel="head-to-head">
+        <div class="h2h-opponent-row">
+          <div class="h2h-team-side h2h-team-a">
+            <span class="h2h-team-label" id="h2h-label-a">Brazil</span>
+            <span class="h2h-team-flag" id="h2h-flag-a"></span>
+          </div>
+          <span class="h2h-vs">VS</span>
+          <div class="h2h-team-side h2h-team-b">
+            <span class="h2h-team-flag" id="h2h-flag-b"></span>
+            <label class="select-wrap">
+              <select id="h2h-select">
+                <!-- populated by team-view.js -->
+              </select>
+              <i class="iconoir-nav-arrow-down" aria-hidden="true"></i>
+            </label>
+          </div>
+        </div>
+        <div id="h2h-content"></div>
+      </div>
+
+      <!-- COMPARE panel -->
+      <div class="tab-panel" data-panel="compare">
+        <div id="compare-container" class="compare-container"></div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="team-footer">
+      <p>Data includes FIFA World Cup tournaments from 1930 to 2022 - inspired by FiveThirtyEight. The Pudding, Dots,
+        and modern sports analytics.</p>
+    </footer>
+  </div>
+
+  <div class="tooltip" id="tt"></div>
+
+  <script src="utils.js"></script>
+  <script src="team-view.js"></script>
+</body>
+
+</html>

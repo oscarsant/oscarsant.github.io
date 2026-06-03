@@ -1,0 +1,90 @@
+[
+  {
+    "year": 1930,
+    "stage": "DNE"
+  },
+  {
+    "year": 1934,
+    "stage": "QF"
+  },
+  {
+    "year": 1938,
+    "stage": "QF"
+  },
+  {
+    "year": 1950,
+    "stage": "GS"
+  },
+  {
+    "year": 1954,
+    "stage": "QF"
+  },
+  {
+    "year": 1958,
+    "stage": "GS"
+  },
+  {
+    "year": 1962,
+    "stage": "GS"
+  },
+  {
+    "year": 1966,
+    "stage": "GS"
+  },
+  {
+    "year": 1970,
+    "stage": "DNQ"
+  },
+  {
+    "year": 1974,
+    "stage": "GS"
+  },
+  {
+    "year": 1978,
+    "stage": "DNQ"
+  },
+  {
+    "year": 1982,
+    "stage": "DNQ"
+  },
+  {
+    "year": 1986,
+    "stage": "DNQ"
+  },
+  {
+    "year": 1990,
+    "stage": "R16"
+  },
+  {
+    "year": 1994,
+    "stage": "R16"
+  },
+  {
+    "year": 1998,
+    "stage": "DNQ"
+  },
+  {
+    "year": 2002,
+    "stage": "DNQ"
+  },
+  {
+    "year": 2006,
+    "stage": "R16"
+  },
+  {
+    "year": 2010,
+    "stage": "R16"
+  },
+  {
+    "year": 2014,
+    "stage": "R16"
+  },
+  {
+    "year": 2018,
+    "stage": "R16"
+  },
+  {
+    "year": 2022,
+    "stage": "QF"
+  }
+]

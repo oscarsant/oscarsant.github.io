@@ -1,0 +1,1293 @@
+[
+  {
+    "year": 1930,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to Yugoslavia 1-2",
+    "position": 6,
+    "group_record": "1W-0D-1L",
+    "group_goals": "5-2",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1930-07-14",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Pocitos, Montevideo"
+      },
+      {
+        "stage": "GS",
+        "date": "1930-07-17",
+        "opponent": "BOL",
+        "opponent_full": "Bolivia",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Pocitos, Montevideo"
+      }
+    ]
+  },
+  {
+    "year": 1934,
+    "stage": "R16",
+    "round": "Round of 16",
+    "host": false,
+    "result": "1-3 vs Spain",
+    "position": 14,
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1934-05-27",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "1-3",
+        "result": "L",
+        "venue": "Stadio Littoriale, Genoa"
+      }
+    ]
+  },
+  {
+    "year": 1938,
+    "stage": "3P",
+    "round": "Third place",
+    "host": false,
+    "result": "4-2 vs Sweden",
+    "position": 3,
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1938-06-05",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "6-5",
+        "result": "W",
+        "venue": "Stade de la Meinau, Strasbourg"
+      },
+      {
+        "stage": "QF",
+        "date": "1938-06-12",
+        "opponent": "TCH",
+        "opponent_full": "Czechoslovakia",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Parc des Princes, Paris"
+      },
+      {
+        "stage": "QF",
+        "date": "1938-06-14",
+        "opponent": "TCH",
+        "opponent_full": "Czechoslovakia",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Parc des Princes, Paris"
+      },
+      {
+        "stage": "SF",
+        "date": "1938-06-16",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Vélodrome, Marseille"
+      },
+      {
+        "stage": "3P",
+        "date": "1938-06-19",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "4-2",
+        "result": "W",
+        "venue": "Parc des Princes, Paris"
+      }
+    ]
+  },
+  {
+    "year": 1950,
+    "stage": "RU",
+    "round": "Runners-up",
+    "host": true,
+    "result": "1-2 vs Uruguay",
+    "position": 2,
+    "group_record": "2W-1D-0L",
+    "group_goals": "8-2",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1950-06-24",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Maracanã, Rio de Janeiro"
+      },
+      {
+        "stage": "GS",
+        "date": "1950-06-28",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "2-2",
+        "result": "D",
+        "venue": "Pacaembu, São Paulo"
+      },
+      {
+        "stage": "GS",
+        "date": "1950-07-01",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Maracanã, Rio de Janeiro"
+      },
+      {
+        "stage": "F",
+        "date": "1950-07-09",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "7-1",
+        "result": "W",
+        "venue": "Maracanã, Rio de Janeiro"
+      },
+      {
+        "stage": "F",
+        "date": "1950-07-13",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "6-1",
+        "result": "W",
+        "venue": "Maracanã, Rio de Janeiro"
+      },
+      {
+        "stage": "F",
+        "date": "1950-07-16",
+        "opponent": "URU",
+        "opponent_full": "Uruguay",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Maracanã, Rio de Janeiro"
+      }
+    ]
+  },
+  {
+    "year": 1954,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "2-4 vs Hungary",
+    "position": 5,
+    "group_record": "1W-1D-0L",
+    "group_goals": "6-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1954-06-16",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "5-0",
+        "result": "W",
+        "venue": "Charmilles, Geneva"
+      },
+      {
+        "stage": "GS",
+        "date": "1954-06-19",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Olympique de la Pontaise, Lausanne"
+      },
+      {
+        "stage": "QF",
+        "date": "1954-06-27",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "2-4",
+        "result": "L",
+        "venue": "Wankdorf, Bern"
+      }
+    ]
+  },
+  {
+    "year": 1958,
+    "stage": "W",
+    "round": "Champions",
+    "host": false,
+    "result": "5-2 vs Sweden",
+    "position": 1,
+    "group_record": "2W-1D-0L",
+    "group_goals": "5-0",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1958-06-08",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Rimnersvallen, Uddevalla"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-11",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Ullevi, Gothenburg"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-15",
+        "opponent": "URS",
+        "opponent_full": "Soviet Union",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Ullevi, Gothenburg"
+      },
+      {
+        "stage": "QF",
+        "date": "1958-06-19",
+        "opponent": "WAL",
+        "opponent_full": "Wales",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Råsunda, Stockholm"
+      },
+      {
+        "stage": "SF",
+        "date": "1958-06-24",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "5-2",
+        "result": "W",
+        "venue": "Råsunda, Stockholm"
+      },
+      {
+        "stage": "F",
+        "date": "1958-06-29",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "5-2",
+        "result": "W",
+        "venue": "Råsunda, Stockholm"
+      }
+    ]
+  },
+  {
+    "year": 1962,
+    "stage": "W",
+    "round": "Champions",
+    "host": false,
+    "result": "3-1 vs Czechoslovakia",
+    "position": 1,
+    "group_record": "2W-1D-0L",
+    "group_goals": "4-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1962-05-30",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Sausalito, Viña del Mar"
+      },
+      {
+        "stage": "GS",
+        "date": "1962-06-02",
+        "opponent": "TCH",
+        "opponent_full": "Czechoslovakia",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Sausalito, Viña del Mar"
+      },
+      {
+        "stage": "GS",
+        "date": "1962-06-06",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Sausalito, Viña del Mar"
+      },
+      {
+        "stage": "QF",
+        "date": "1962-06-10",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Sausalito, Viña del Mar"
+      },
+      {
+        "stage": "SF",
+        "date": "1962-06-13",
+        "opponent": "CHI",
+        "opponent_full": "Chile",
+        "score": "4-2",
+        "result": "W",
+        "venue": "Nacional, Santiago"
+      },
+      {
+        "stage": "F",
+        "date": "1962-06-17",
+        "opponent": "TCH",
+        "opponent_full": "Czechoslovakia",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Nacional, Santiago"
+      }
+    ]
+  },
+  {
+    "year": 1966,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to Hungary 1-3",
+    "position": 11,
+    "group_record": "1W-0D-2L",
+    "group_goals": "4-6",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1966-07-12",
+        "opponent": "BUL",
+        "opponent_full": "Bulgaria",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Goodison Park, Liverpool"
+      },
+      {
+        "stage": "GS",
+        "date": "1966-07-15",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "1-3",
+        "result": "L",
+        "venue": "Goodison Park, Liverpool"
+      },
+      {
+        "stage": "GS",
+        "date": "1966-07-19",
+        "opponent": "POR",
+        "opponent_full": "Portugal",
+        "score": "1-3",
+        "result": "L",
+        "venue": "Goodison Park, Liverpool"
+      }
+    ]
+  },
+  {
+    "year": 1970,
+    "stage": "W",
+    "round": "Champions",
+    "host": false,
+    "result": "4-1 vs Italy",
+    "position": 1,
+    "group_record": "3W-0D-0L",
+    "group_goals": "8-3",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1970-06-03",
+        "opponent": "TCH",
+        "opponent_full": "Czechoslovakia",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-07",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-10",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "3-2",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "QF",
+        "date": "1970-06-14",
+        "opponent": "PER",
+        "opponent_full": "Peru",
+        "score": "4-2",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "SF",
+        "date": "1970-06-17",
+        "opponent": "URU",
+        "opponent_full": "Uruguay",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "F",
+        "date": "1970-06-21",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Azteca, Mexico City"
+      }
+    ]
+  },
+  {
+    "year": 1974,
+    "stage": "4P",
+    "round": "Fourth place",
+    "host": false,
+    "result": "0-1 vs Poland",
+    "position": 4,
+    "group_record": "1W-2D-0L",
+    "group_goals": "3-0",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1974-06-13",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Waldstadion, Frankfurt"
+      },
+      {
+        "stage": "GS",
+        "date": "1974-06-18",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Waldstadion, Frankfurt"
+      },
+      {
+        "stage": "GS",
+        "date": "1974-06-22",
+        "opponent": "ZAI",
+        "opponent_full": "Zaire",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Parkstadion, Gelsenkirchen"
+      },
+      {
+        "stage": "2GS",
+        "date": "1974-06-26",
+        "opponent": "GDR",
+        "opponent_full": "East Germany",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Niedersachsenstadion, Hanover"
+      },
+      {
+        "stage": "2GS",
+        "date": "1974-06-30",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Niedersachsenstadion, Hanover"
+      },
+      {
+        "stage": "2GS",
+        "date": "1974-07-03",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "0-2",
+        "result": "L",
+        "venue": "Westfalenstadion, Dortmund"
+      },
+      {
+        "stage": "3P",
+        "date": "1974-07-06",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Olympiastadion, Munich"
+      }
+    ]
+  },
+  {
+    "year": 1978,
+    "stage": "3P",
+    "round": "Third place",
+    "host": false,
+    "result": "2-1 vs Italy",
+    "position": 3,
+    "group_record": "1W-2D-0L",
+    "group_goals": "2-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1978-06-03",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Mar del Plata"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-07",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Mar del Plata"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-11",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Mar del Plata"
+      },
+      {
+        "stage": "2GS",
+        "date": "1978-06-14",
+        "opponent": "PER",
+        "opponent_full": "Peru",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Mendoza"
+      },
+      {
+        "stage": "2GS",
+        "date": "1978-06-18",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Rosario"
+      },
+      {
+        "stage": "2GS",
+        "date": "1978-06-21",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Mendoza"
+      },
+      {
+        "stage": "3P",
+        "date": "1978-06-24",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Monumental, Buenos Aires"
+      }
+    ]
+  },
+  {
+    "year": 1982,
+    "stage": "2GS",
+    "round": "Second group stage",
+    "host": false,
+    "result": "Lost to Italy 2-3",
+    "position": 5,
+    "group_record": "3W-0D-0L",
+    "group_goals": "10-2",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1982-06-14",
+        "opponent": "URS",
+        "opponent_full": "Soviet Union",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Sánchez Pizjuán, Seville"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-18",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Benito Villamarín, Seville"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-23",
+        "opponent": "NZL",
+        "opponent_full": "New Zealand",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Benito Villamarín, Seville"
+      },
+      {
+        "stage": "2GS",
+        "date": "1982-07-02",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Sarrià, Barcelona"
+      },
+      {
+        "stage": "2GS",
+        "date": "1982-07-05",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "2-3",
+        "result": "L",
+        "venue": "Sarrià, Barcelona"
+      }
+    ]
+  },
+  {
+    "year": 1986,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "1-1 vs France (3-4 pen)",
+    "position": 5,
+    "group_record": "3W-0D-0L",
+    "group_goals": "5-0",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1986-06-01",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-06",
+        "opponent": "ALG",
+        "opponent_full": "Algeria",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-12",
+        "opponent": "NIR",
+        "opponent_full": "Northern Ireland",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "R16",
+        "date": "1986-06-16",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Jalisco, Guadalajara"
+      },
+      {
+        "stage": "QF",
+        "date": "1986-06-21",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "1-1",
+        "result": "L",
+        "penalties": "3-4",
+        "venue": "Jalisco, Guadalajara"
+      }
+    ]
+  },
+  {
+    "year": 1990,
+    "stage": "R16",
+    "round": "Round of 16",
+    "host": false,
+    "result": "0-1 vs Argentina",
+    "position": 9,
+    "group_record": "3W-0D-0L",
+    "group_goals": "4-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-10",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Delle Alpi, Turin"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-16",
+        "opponent": "CRC",
+        "opponent_full": "Costa Rica",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Delle Alpi, Turin"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-20",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Delle Alpi, Turin"
+      },
+      {
+        "stage": "R16",
+        "date": "1990-06-24",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Delle Alpi, Turin"
+      }
+    ]
+  },
+  {
+    "year": 1994,
+    "stage": "W",
+    "round": "Champions",
+    "host": false,
+    "result": "0-0 vs Italy (3-2 pen)",
+    "position": 1,
+    "group_record": "2W-1D-0L",
+    "group_goals": "6-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-20",
+        "opponent": "RUS",
+        "opponent_full": "Russia",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Stanford Stadium, San Francisco"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-24",
+        "opponent": "CMR",
+        "opponent_full": "Cameroon",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Stanford Stadium, San Francisco"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-28",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Silverdome, Detroit"
+      },
+      {
+        "stage": "R16",
+        "date": "1994-07-04",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Stanford Stadium, San Francisco"
+      },
+      {
+        "stage": "QF",
+        "date": "1994-07-09",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "3-2",
+        "result": "W",
+        "venue": "Cotton Bowl, Dallas"
+      },
+      {
+        "stage": "SF",
+        "date": "1994-07-13",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Rose Bowl, Los Angeles"
+      },
+      {
+        "stage": "F",
+        "date": "1994-07-17",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-0",
+        "result": "W",
+        "penalties": "3-2",
+        "venue": "Rose Bowl, Los Angeles"
+      }
+    ]
+  },
+  {
+    "year": 1998,
+    "stage": "RU",
+    "round": "Runners-up",
+    "host": false,
+    "result": "0-3 vs France",
+    "position": 2,
+    "group_record": "2W-0D-1L",
+    "group_goals": "6-3",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-10",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Stade de France, Paris"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-16",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Stade de la Beaujoire, Nantes"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-23",
+        "opponent": "NOR",
+        "opponent_full": "Norway",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Vélodrome, Marseille"
+      },
+      {
+        "stage": "R16",
+        "date": "1998-06-27",
+        "opponent": "CHI",
+        "opponent_full": "Chile",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Parc des Princes, Paris"
+      },
+      {
+        "stage": "QF",
+        "date": "1998-07-03",
+        "opponent": "DEN",
+        "opponent_full": "Denmark",
+        "score": "3-2",
+        "result": "W",
+        "venue": "Stade de la Beaujoire, Nantes"
+      },
+      {
+        "stage": "SF",
+        "date": "1998-07-07",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "1-1",
+        "result": "W",
+        "penalties": "4-2",
+        "venue": "Vélodrome, Marseille"
+      },
+      {
+        "stage": "F",
+        "date": "1998-07-12",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-3",
+        "result": "L",
+        "venue": "Stade de France, Paris"
+      }
+    ]
+  },
+  {
+    "year": 2002,
+    "stage": "W",
+    "round": "Champions",
+    "host": false,
+    "result": "2-0 vs Germany",
+    "position": 1,
+    "group_record": "3W-0D-0L",
+    "group_goals": "11-3",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-03",
+        "opponent": "TUR",
+        "opponent_full": "Turkey",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Ulsan Munsu Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-08",
+        "opponent": "CHN",
+        "opponent_full": "China",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Seoul World Cup Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-13",
+        "opponent": "CRC",
+        "opponent_full": "Costa Rica",
+        "score": "5-2",
+        "result": "W",
+        "venue": "Suwon World Cup Stadium"
+      },
+      {
+        "stage": "R16",
+        "date": "2002-06-17",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Kobe Wing Stadium"
+      },
+      {
+        "stage": "QF",
+        "date": "2002-06-21",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Shizuoka Stadium Ecopa"
+      },
+      {
+        "stage": "SF",
+        "date": "2002-06-26",
+        "opponent": "TUR",
+        "opponent_full": "Turkey",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Saitama Stadium"
+      },
+      {
+        "stage": "F",
+        "date": "2002-06-30",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "2-0",
+        "result": "W",
+        "venue": "International Stadium Yokohama"
+      }
+    ]
+  },
+  {
+    "year": 2006,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "0-1 vs France",
+    "position": 5,
+    "group_record": "3W-0D-0L",
+    "group_goals": "7-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-13",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Olympiastadion, Berlin"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-18",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Allianz Arena, Munich"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-22",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Westfalenstadion, Dortmund"
+      },
+      {
+        "stage": "R16",
+        "date": "2006-06-27",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "3-0",
+        "result": "W",
+        "venue": "AWD-Arena, Hanover"
+      },
+      {
+        "stage": "QF",
+        "date": "2006-07-01",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Waldstadion, Frankfurt"
+      }
+    ]
+  },
+  {
+    "year": 2010,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "1-2 vs Netherlands",
+    "position": 6,
+    "group_record": "2W-1D-0L",
+    "group_goals": "5-2",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-15",
+        "opponent": "PRK",
+        "opponent_full": "North Korea",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Ellis Park, Johannesburg"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-20",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Soccer City, Johannesburg"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-25",
+        "opponent": "POR",
+        "opponent_full": "Portugal",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Moses Mabhida, Durban"
+      },
+      {
+        "stage": "R16",
+        "date": "2010-06-28",
+        "opponent": "CHI",
+        "opponent_full": "Chile",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Ellis Park, Johannesburg"
+      },
+      {
+        "stage": "QF",
+        "date": "2010-07-02",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Nelson Mandela Bay, Port Elizabeth"
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "stage": "4P",
+    "round": "Fourth place",
+    "host": true,
+    "result": "0-3 vs Netherlands",
+    "position": 4,
+    "group_record": "2W-1D-0L",
+    "group_goals": "7-2",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-12",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Arena Corinthians, São Paulo"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-17",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Castelão, Fortaleza"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-23",
+        "opponent": "CMR",
+        "opponent_full": "Cameroon",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Mané Garrincha, Brasília"
+      },
+      {
+        "stage": "R16",
+        "date": "2014-06-28",
+        "opponent": "CHI",
+        "opponent_full": "Chile",
+        "score": "1-1",
+        "result": "W",
+        "penalties": "3-2",
+        "venue": "Mineirão, Belo Horizonte"
+      },
+      {
+        "stage": "QF",
+        "date": "2014-07-04",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Castelão, Fortaleza"
+      },
+      {
+        "stage": "SF",
+        "date": "2014-07-08",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "1-7",
+        "result": "L",
+        "venue": "Mineirão, Belo Horizonte"
+      },
+      {
+        "stage": "3P",
+        "date": "2014-07-12",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "0-3",
+        "result": "L",
+        "venue": "Mané Garrincha, Brasília"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "1-2 vs Belgium",
+    "position": 6,
+    "group_record": "2W-1D-0L",
+    "group_goals": "5-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-17",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Rostov Arena"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-22",
+        "opponent": "CRC",
+        "opponent_full": "Costa Rica",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Krestovsky Stadium, Saint Petersburg"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-27",
+        "opponent": "SRB",
+        "opponent_full": "Serbia",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Spartak Stadium, Moscow"
+      },
+      {
+        "stage": "R16",
+        "date": "2018-07-02",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Samara Arena"
+      },
+      {
+        "stage": "QF",
+        "date": "2018-07-06",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Kazan Arena"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "1-1 vs Croatia (2-4 pen)",
+    "position": 7,
+    "group_record": "2W-0D-1L",
+    "group_goals": "3-1",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-24",
+        "opponent": "SRB",
+        "opponent_full": "Serbia",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Lusail Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-28",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Stadium 974"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-12-02",
+        "opponent": "CMR",
+        "opponent_full": "Cameroon",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Lusail Stadium"
+      },
+      {
+        "stage": "R16",
+        "date": "2022-12-05",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Stadium 974"
+      },
+      {
+        "stage": "QF",
+        "date": "2022-12-09",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "1-1",
+        "result": "L",
+        "penalties": "2-4",
+        "venue": "Education City Stadium"
+      }
+    ]
+  }
+]

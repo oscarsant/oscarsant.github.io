@@ -1,0 +1,464 @@
+{
+  "brazil": [
+    { "name": "Ronaldo Nazário", "pos": "FW", "goals": 15, "apps": 19, "years": [1994, 1998, 2002, 2006] },
+    { "name": "Pelé", "pos": "FW", "goals": 12, "apps": 14, "years": [1958, 1962, 1966, 1970] },
+    { "name": "Jairzinho", "pos": "FW", "goals": 9, "apps": 16, "years": [1966, 1970, 1974] },
+    { "name": "Ademir", "pos": "FW", "goals": 9, "apps": 6, "years": [1950] },
+    { "name": "Vavá", "pos": "FW", "goals": 9, "apps": 10, "years": [1954, 1958, 1962] },
+    { "name": "Leônidas", "pos": "FW", "goals": 8, "apps": 7, "years": [1934, 1938] },
+    { "name": "Rivaldo", "pos": "MF", "goals": 8, "apps": 11, "years": [1998, 2002, 2006] },
+    { "name": "Neymar Jr.", "pos": "FW", "goals": 8, "apps": 14, "years": [2014, 2018, 2022] },
+    { "name": "Careca", "pos": "FW", "goals": 7, "apps": 9, "years": [1982, 1986, 1990] },
+    { "name": "Bebeto", "pos": "FW", "goals": 6, "apps": 13, "years": [1990, 1994, 1998] },
+    { "name": "Zico", "pos": "MF", "goals": 5, "apps": 11, "years": [1978, 1982, 1986] },
+    { "name": "Cafú", "pos": "DF", "goals": 2, "apps": 20, "years": [1994, 1998, 2002, 2006] },
+    { "name": "Roberto Carlos", "pos": "DF", "goals": 1, "apps": 15, "years": [1994, 1998, 2002, 2006] },
+    { "name": "Taffarel", "pos": "GK", "goals": 0, "apps": 18, "years": [1990, 1994, 1998, 2002] },
+    { "name": "Dunga", "pos": "MF", "goals": 0, "apps": 18, "years": [1986, 1990, 1994, 1998] }
+  ],
+  "argentina": [
+    { "name": "Messi", "pos": "FW", "goals": 13, "apps": 26, "years": [2006, 2010, 2014, 2018, 2022] },
+    { "name": "Batistuta", "pos": "FW", "goals": 10, "apps": 12, "years": [1994, 1998, 2002] },
+    { "name": "Stábile", "pos": "FW", "goals": 8, "apps": 4, "years": [1930] },
+    { "name": "Maradona", "pos": "MF", "goals": 8, "apps": 21, "years": [1982, 1986, 1990, 1994] },
+    { "name": "Kempes", "pos": "FW", "goals": 6, "apps": 18, "years": [1974, 1978, 1982] },
+    { "name": "Higuaín", "pos": "FW", "goals": 5, "apps": 12, "years": [2010, 2014, 2018] },
+    { "name": "Mascherano", "pos": "MF", "goals": 0, "apps": 20, "years": [2006, 2010, 2014, 2018] },
+    { "name": "Zanetti", "pos": "DF", "goals": 1, "apps": 16, "years": [1994, 1998, 2002, 2006, 2010] }
+  ],
+  "uruguay": [
+    { "name": "Míguez", "pos": "FW", "goals": 8, "apps": 7, "years": [1950, 1954] },
+    { "name": "Suárez", "pos": "FW", "goals": 7, "apps": 16, "years": [2010, 2014, 2018, 2022] },
+    { "name": "Forlán", "pos": "FW", "goals": 6, "apps": 10, "years": [2002, 2010, 2014] },
+    { "name": "Cea", "pos": "FW", "goals": 5, "apps": 5, "years": [1930] },
+    { "name": "Schiaffino", "pos": "MF", "goals": 5, "apps": 9, "years": [1950, 1954] },
+    { "name": "Cavani", "pos": "FW", "goals": 5, "apps": 17, "years": [2010, 2014, 2018, 2022] },
+    { "name": "Muslera", "pos": "GK", "goals": 0, "apps": 16, "years": [2010, 2014, 2018, 2022] },
+    { "name": "Godín", "pos": "DF", "goals": 1, "apps": 16, "years": [2010, 2014, 2018, 2022] }
+  ],
+  "chile": [
+    { "name": "Caszely", "pos": "FW", "goals": 4, "apps": 8, "years": [1974, 1982] },
+    { "name": "Letelier", "pos": "FW", "goals": 3, "apps": 6, "years": [1962] },
+    { "name": "Alexis Sánchez", "pos": "FW", "goals": 3, "apps": 8, "years": [2010, 2014] },
+    { "name": "Vargas", "pos": "FW", "goals": 3, "apps": 8, "years": [2010, 2014] },
+    { "name": "Medel", "pos": "DF", "goals": 1, "apps": 10, "years": [2010, 2014] }
+  ],
+  "colombia": [
+    { "name": "James Rodríguez", "pos": "MF", "goals": 6, "apps": 12, "years": [2014, 2018] },
+    { "name": "Asprilla", "pos": "FW", "goals": 3, "apps": 6, "years": [1994] },
+    { "name": "Falcao", "pos": "FW", "goals": 3, "apps": 10, "years": [2014, 2018] },
+    { "name": "Valderrama", "pos": "MF", "goals": 0, "apps": 16, "years": [1990, 1994, 1998] },
+    { "name": "Ospina", "pos": "GK", "goals": 0, "apps": 9, "years": [2014, 2018] }
+  ],
+  "peru": [
+    { "name": "Cubillas", "pos": "MF", "goals": 10, "apps": 13, "years": [1970, 1978, 1982] },
+    { "name": "La Rosa", "pos": "FW", "goals": 5, "apps": 6, "years": [1978] },
+    { "name": "Cueto", "pos": "MF", "goals": 4, "apps": 9, "years": [1978, 1982] },
+    { "name": "Guerrero", "pos": "FW", "goals": 2, "apps": 5, "years": [2018] }
+  ],
+  "paraguay": [
+    { "name": "Chilavert", "pos": "GK", "goals": 2, "apps": 13, "years": [1986, 1998, 2002, 2006] },
+    { "name": "Santa Cruz", "pos": "FW", "goals": 2, "apps": 9, "years": [1998, 2002, 2006, 2010] },
+    { "name": "Acuña", "pos": "MF", "goals": 2, "apps": 7, "years": [1986, 1998] },
+    { "name": "Caballero", "pos": "GK", "goals": 0, "apps": 7, "years": [2006, 2010] }
+  ],
+  "ecuador": [
+    { "name": "Delgado", "pos": "MF", "goals": 3, "apps": 9, "years": [2002, 2006] },
+    { "name": "Tenorio", "pos": "FW", "goals": 3, "apps": 7, "years": [2002, 2006] },
+    { "name": "Valencia E.", "pos": "FW", "goals": 3, "apps": 9, "years": [2006, 2014, 2022] },
+    { "name": "Caicedo", "pos": "MF", "goals": 2, "apps": 4, "years": [2022] }
+  ],
+  "bolivia": [
+    { "name": "Ugarte", "pos": "MF", "goals": 2, "apps": 4, "years": [1950] },
+    { "name": "Soria", "pos": "FW", "goals": 1, "apps": 3, "years": [1994] }
+  ],
+  "germany": [
+    { "name": "Klose", "pos": "FW", "goals": 16, "apps": 24, "years": [2002, 2006, 2010, 2014] },
+    { "name": "G. Müller", "pos": "FW", "goals": 14, "apps": 13, "years": [1966, 1970, 1974] },
+    { "name": "Klinsmann", "pos": "FW", "goals": 11, "apps": 17, "years": [1990, 1994, 1998] },
+    { "name": "T. Müller", "pos": "FW", "goals": 10, "apps": 20, "years": [2010, 2014, 2018, 2022] },
+    { "name": "Rahn", "pos": "FW", "goals": 10, "apps": 10, "years": [1954, 1958] },
+    { "name": "Rummenigge", "pos": "FW", "goals": 9, "apps": 19, "years": [1978, 1982, 1986] },
+    { "name": "Seeler", "pos": "FW", "goals": 9, "apps": 21, "years": [1958, 1962, 1966, 1970] },
+    { "name": "Völler", "pos": "FW", "goals": 8, "apps": 14, "years": [1982, 1986, 1990, 1994] },
+    { "name": "Matthäus", "pos": "MF", "goals": 6, "apps": 25, "years": [1982, 1986, 1990, 1994, 1998, 2002] },
+    { "name": "Lahm", "pos": "DF", "goals": 1, "apps": 20, "years": [2006, 2010, 2014] }
+  ],
+  "italy": [
+    { "name": "Rossi", "pos": "FW", "goals": 9, "apps": 14, "years": [1978, 1982] },
+    { "name": "R. Baggio", "pos": "FW", "goals": 9, "apps": 16, "years": [1990, 1994, 1998] },
+    { "name": "Vieri", "pos": "FW", "goals": 9, "apps": 14, "years": [1998, 2002] },
+    { "name": "Schillaci", "pos": "FW", "goals": 6, "apps": 7, "years": [1990] },
+    { "name": "Piola", "pos": "FW", "goals": 5, "apps": 5, "years": [1938] },
+    { "name": "Altobelli", "pos": "FW", "goals": 5, "apps": 6, "years": [1982, 1986] },
+    { "name": "Maldini", "pos": "DF", "goals": 1, "apps": 23, "years": [1990, 1994, 1998, 2002] },
+    { "name": "Cannavaro", "pos": "DF", "goals": 1, "apps": 18, "years": [1998, 2002, 2006, 2010] },
+    { "name": "Cabrini", "pos": "DF", "goals": 1, "apps": 18, "years": [1978, 1982, 1986] },
+    { "name": "Scirea", "pos": "DF", "goals": 0, "apps": 18, "years": [1978, 1982, 1986] },
+    { "name": "Zoff", "pos": "GK", "goals": 0, "apps": 17, "years": [1974, 1978, 1982] }
+  ],
+  "france": [
+    { "name": "Fontaine", "pos": "FW", "goals": 13, "apps": 6, "years": [1958] },
+    { "name": "Mbappé", "pos": "FW", "goals": 12, "apps": 14, "years": [2018, 2022] },
+    { "name": "Henry", "pos": "FW", "goals": 6, "apps": 17, "years": [1998, 2002, 2006, 2010] },
+    { "name": "Giroud", "pos": "FW", "goals": 5, "apps": 18, "years": [2014, 2018, 2022] },
+    { "name": "Platini", "pos": "MF", "goals": 5, "apps": 8, "years": [1978, 1982, 1986] },
+    { "name": "Zidane", "pos": "MF", "goals": 5, "apps": 12, "years": [1998, 2002, 2006] },
+    { "name": "Griezmann", "pos": "FW", "goals": 4, "apps": 19, "years": [2014, 2018, 2022] },
+    { "name": "Lloris", "pos": "GK", "goals": 0, "apps": 20, "years": [2010, 2014, 2018, 2022] },
+    { "name": "Varane", "pos": "DF", "goals": 1, "apps": 18, "years": [2014, 2018, 2022] }
+  ],
+  "spain": [
+    { "name": "Villa", "pos": "FW", "goals": 9, "apps": 12, "years": [2006, 2010, 2014] },
+    { "name": "Butragueño", "pos": "FW", "goals": 5, "apps": 9, "years": [1986, 1990] },
+    { "name": "Morientes", "pos": "FW", "goals": 5, "apps": 9, "years": [1998, 2002] },
+    { "name": "Raúl", "pos": "FW", "goals": 5, "apps": 10, "years": [1998, 2002, 2006] },
+    { "name": "Torres", "pos": "FW", "goals": 4, "apps": 14, "years": [2006, 2010, 2014] },
+    { "name": "Casillas", "pos": "GK", "goals": 0, "apps": 17, "years": [2002, 2006, 2010, 2014] },
+    { "name": "Ramos", "pos": "DF", "goals": 2, "apps": 17, "years": [2006, 2010, 2014, 2018] },
+    { "name": "Zubizarreta", "pos": "GK", "goals": 0, "apps": 16, "years": [1986, 1990, 1994, 1998] },
+    { "name": "Busquets", "pos": "MF", "goals": 0, "apps": 16, "years": [2010, 2014, 2018, 2022] },
+    { "name": "Xavi", "pos": "MF", "goals": 1, "apps": 15, "years": [2002, 2006, 2010, 2014] },
+    { "name": "Iniesta", "pos": "MF", "goals": 2, "apps": 14, "years": [2006, 2010, 2014, 2018] }
+  ],
+  "england": [
+    { "name": "Lineker", "pos": "FW", "goals": 10, "apps": 12, "years": [1986, 1990] },
+    { "name": "Kane", "pos": "FW", "goals": 8, "apps": 12, "years": [2018, 2022] },
+    { "name": "Hurst", "pos": "FW", "goals": 5, "apps": 8, "years": [1966, 1970] },
+    { "name": "Charlton", "pos": "MF", "goals": 4, "apps": 14, "years": [1962, 1966, 1970] },
+    { "name": "Owen", "pos": "FW", "goals": 4, "apps": 12, "years": [1998, 2002, 2006] },
+    { "name": "Shilton", "pos": "GK", "goals": 0, "apps": 17, "years": [1982, 1986, 1990] },
+    { "name": "Butcher", "pos": "DF", "goals": 0, "apps": 14, "years": [1982, 1986, 1990] },
+    { "name": "Moore", "pos": "DF", "goals": 0, "apps": 14, "years": [1962, 1966, 1970] },
+    { "name": "Beckham", "pos": "MF", "goals": 3, "apps": 13, "years": [1998, 2002, 2006] }
+  ],
+  "netherlands": [
+    { "name": "Rep", "pos": "FW", "goals": 7, "apps": 14, "years": [1974, 1978] },
+    { "name": "Rensenbrink", "pos": "FW", "goals": 6, "apps": 13, "years": [1974, 1978] },
+    { "name": "Bergkamp", "pos": "FW", "goals": 6, "apps": 12, "years": [1994, 1998] },
+    { "name": "Robben", "pos": "FW", "goals": 6, "apps": 14, "years": [2006, 2010, 2014] },
+    { "name": "van Persie", "pos": "FW", "goals": 6, "apps": 16, "years": [2006, 2010, 2014] },
+    { "name": "Sneijder", "pos": "MF", "goals": 6, "apps": 17, "years": [2006, 2010, 2014] },
+    { "name": "Neeskens", "pos": "MF", "goals": 5, "apps": 12, "years": [1974, 1978] },
+    { "name": "Cruyff", "pos": "FW", "goals": 3, "apps": 9, "years": [1974] },
+    { "name": "van der Sar", "pos": "GK", "goals": 0, "apps": 14, "years": [1994, 1998, 2006] }
+  ],
+  "portugal": [
+    { "name": "Eusébio", "pos": "FW", "goals": 9, "apps": 6, "years": [1966] },
+    { "name": "Ronaldo", "pos": "FW", "goals": 8, "apps": 22, "years": [2006, 2010, 2014, 2018, 2022] },
+    { "name": "Pauleta", "pos": "FW", "goals": 4, "apps": 9, "years": [2002, 2006] },
+    { "name": "G. Ramos", "pos": "FW", "goals": 3, "apps": 5, "years": [2022] },
+    { "name": "Figo", "pos": "MF", "goals": 1, "apps": 13, "years": [1998, 2002, 2006] },
+    { "name": "Pepe", "pos": "DF", "goals": 2, "apps": 11, "years": [2010, 2014, 2018, 2022] }
+  ],
+  "belgium": [
+    { "name": "Wilmots", "pos": "FW", "goals": 5, "apps": 17, "years": [1990, 1994, 1998, 2002] },
+    { "name": "Lukaku", "pos": "FW", "goals": 5, "apps": 13, "years": [2014, 2018, 2022] },
+    { "name": "Ceulemans", "pos": "MF", "goals": 4, "apps": 16, "years": [1982, 1986, 1990] },
+    { "name": "Scifo", "pos": "MF", "goals": 3, "apps": 17, "years": [1986, 1990, 1994, 1998] },
+    { "name": "Hazard", "pos": "MF", "goals": 3, "apps": 14, "years": [2014, 2018, 2022] },
+    { "name": "Courtois", "pos": "GK", "goals": 0, "apps": 15, "years": [2014, 2018, 2022] },
+    { "name": "Kompany", "pos": "DF", "goals": 0, "apps": 10, "years": [2014, 2018] }
+  ],
+  "sweden": [
+    { "name": "Zlatan Ibrahimović", "pos": "FW", "goals": 4, "apps": 15, "years": [2002, 2006, 2018] },
+    { "name": "Larsson", "pos": "FW", "goals": 5, "apps": 14, "years": [1994, 2002, 2006] },
+    { "name": "Nordahl", "pos": "FW", "goals": 6, "apps": 7, "years": [1950] },
+    { "name": "Allbäck", "pos": "FW", "goals": 4, "apps": 9, "years": [2002, 2006] },
+    { "name": "Mellberg", "pos": "DF", "goals": 1, "apps": 11, "years": [2002, 2006] }
+  ],
+  "poland": [
+    { "name": "Lato", "pos": "FW", "goals": 10, "apps": 20, "years": [1974, 1978, 1982, 1986] },
+    { "name": "Szarmach", "pos": "FW", "goals": 7, "apps": 12, "years": [1974, 1978, 1982] },
+    { "name": "Lubański", "pos": "FW", "goals": 6, "apps": 13, "years": [1974, 1978, 1982, 1986] },
+    { "name": "Lewandowski", "pos": "FW", "goals": 5, "apps": 10, "years": [2018, 2022] },
+    { "name": "Boniek", "pos": "MF", "goals": 4, "apps": 14, "years": [1978, 1982, 1986] }
+  ],
+  "croatia": [
+    { "name": "Davor Šuker", "pos": "FW", "goals": 6, "apps": 7, "years": [1998] },
+    { "name": "Modrić", "pos": "MF", "goals": 3, "apps": 21, "years": [2006, 2014, 2018, 2022] },
+    { "name": "Mandžukić", "pos": "FW", "goals": 3, "apps": 14, "years": [2014, 2018] },
+    { "name": "Perišić", "pos": "MF", "goals": 3, "apps": 19, "years": [2014, 2018, 2022] },
+    { "name": "Subašić", "pos": "GK", "goals": 0, "apps": 10, "years": [2018] }
+  ],
+  "russia": [
+    { "name": "Salenko", "pos": "FW", "goals": 6, "apps": 6, "years": [1994] },
+    { "name": "Cheryshev", "pos": "FW", "goals": 4, "apps": 6, "years": [2018] },
+    { "name": "Beschastnykh", "pos": "FW", "goals": 3, "apps": 6, "years": [1994, 2002] },
+    { "name": "Pavlyuchenko", "pos": "FW", "goals": 3, "apps": 6, "years": [2014] },
+    { "name": "Akinfeev", "pos": "GK", "goals": 0, "apps": 9, "years": [2014, 2018] }
+  ],
+  "denmark": [
+    { "name": "Elkjær", "pos": "FW", "goals": 5, "apps": 9, "years": [1986] },
+    { "name": "Laudrup M.", "pos": "FW", "goals": 4, "apps": 14, "years": [1986, 1998, 2002] },
+    { "name": "Laudrup B.", "pos": "FW", "goals": 4, "apps": 9, "years": [1986, 1998] },
+    { "name": "Eriksen", "pos": "MF", "goals": 4, "apps": 14, "years": [2010, 2018, 2022] }
+  ],
+  "switzerland": [
+    { "name": "Shaqiri", "pos": "FW", "goals": 5, "apps": 16, "years": [2014, 2018, 2022] },
+    { "name": "Seferovic", "pos": "FW", "goals": 3, "apps": 10, "years": [2014, 2018, 2022] },
+    { "name": "Xhaka", "pos": "MF", "goals": 2, "apps": 16, "years": [2014, 2018, 2022] },
+    { "name": "Senderos", "pos": "DF", "goals": 0, "apps": 9, "years": [2006, 2010, 2014] },
+    { "name": "Sommer", "pos": "GK", "goals": 0, "apps": 12, "years": [2014, 2018, 2022] }
+  ],
+  "austria": [
+    { "name": "Krankl", "pos": "FW", "goals": 8, "apps": 8, "years": [1978, 1982] },
+    { "name": "Binder", "pos": "FW", "goals": 4, "apps": 4, "years": [1954] },
+    { "name": "Stielike", "pos": "MF", "goals": 2, "apps": 8, "years": [1978, 1982] }
+  ],
+  "hungary": [
+    { "name": "Kocsis", "pos": "FW", "goals": 11, "apps": 8, "years": [1954] },
+    { "name": "Tichy", "pos": "FW", "goals": 7, "apps": 7, "years": [1958, 1962, 1966] },
+    { "name": "Puskas", "pos": "FW", "goals": 5, "apps": 10, "years": [1954, 1958, 1962] },
+    { "name": "Albert", "pos": "FW", "goals": 4, "apps": 7, "years": [1958, 1962, 1966] }
+  ],
+  "czech-republic": [
+    { "name": "Koller", "pos": "FW", "goals": 4, "apps": 11, "years": [1994, 1998, 2006] },
+    { "name": "Nedvěd", "pos": "MF", "goals": 3, "apps": 12, "years": [1994, 1998, 2006] },
+    { "name": "Poborský", "pos": "MF", "goals": 2, "apps": 9, "years": [1990, 1994, 1998, 2006] }
+  ],
+  "romania": [
+    { "name": "Dumitrescu", "pos": "FW", "goals": 4, "apps": 9, "years": [1994, 1998] },
+    { "name": "Raducioiu", "pos": "FW", "goals": 4, "apps": 8, "years": [1990, 1994] },
+    { "name": "Hagi", "pos": "MF", "goals": 3, "apps": 19, "years": [1990, 1994, 1998] }
+  ],
+  "turkey": [
+    { "name": "Mansız", "pos": "FW", "goals": 5, "apps": 6, "years": [2002] },
+    { "name": "Şükür", "pos": "FW", "goals": 3, "apps": 10, "years": [1998, 2002] },
+    { "name": "Basturk", "pos": "MF", "goals": 1, "apps": 6, "years": [2002] }
+  ],
+  "greece": [
+    { "name": "Samaras", "pos": "FW", "goals": 1, "apps": 6, "years": [2010, 2014] },
+    { "name": "Karagounis", "pos": "MF", "goals": 0, "apps": 6, "years": [2010, 2014] }
+  ],
+  "norway": [
+    { "name": "Flo", "pos": "FW", "goals": 2, "apps": 7, "years": [1994, 1998] },
+    { "name": "Rekdal", "pos": "MF", "goals": 2, "apps": 7, "years": [1994, 1998] },
+    { "name": "Solskjaer", "pos": "FW", "goals": 1, "apps": 7, "years": [1994, 1998] }
+  ],
+  "scotland": [
+    { "name": "Jordan", "pos": "FW", "goals": 4, "apps": 7, "years": [1974, 1978, 1982] },
+    { "name": "Macari", "pos": "FW", "goals": 1, "apps": 3, "years": [1974] }
+  ],
+  "ireland": [
+    { "name": "Keane R.", "pos": "FW", "goals": 3, "apps": 8, "years": [1994, 2002] },
+    { "name": "Aldridge", "pos": "FW", "goals": 2, "apps": 7, "years": [1990, 1994] },
+    { "name": "Cascarino", "pos": "FW", "goals": 1, "apps": 8, "years": [1990, 1994] }
+  ],
+  "wales": [
+    { "name": "Allchurch", "pos": "MF", "goals": 2, "apps": 5, "years": [1958] },
+    { "name": "Charles", "pos": "FW", "goals": 0, "apps": 5, "years": [1958] },
+    { "name": "Bale", "pos": "FW", "goals": 1, "apps": 4, "years": [2022] }
+  ],
+  "serbia": [
+    { "name": "Milosević", "pos": "FW", "goals": 4, "apps": 6, "years": [1998] },
+    { "name": "Tadić", "pos": "FW", "goals": 2, "apps": 7, "years": [2018, 2022] },
+    { "name": "Šavić", "pos": "DF", "goals": 1, "apps": 10, "years": [2010, 2018, 2022] }
+  ],
+  "ukraine": [
+    { "name": "Shevchenko", "pos": "FW", "goals": 4, "apps": 7, "years": [2006] },
+    { "name": "Voronin", "pos": "FW", "goals": 1, "apps": 5, "years": [2006] },
+    { "name": "Rebrov", "pos": "FW", "goals": 0, "apps": 5, "years": [2006] }
+  ],
+  "slovakia": [
+    { "name": "Vittek", "pos": "FW", "goals": 4, "apps": 4, "years": [2010] },
+    { "name": "Hamšík", "pos": "MF", "goals": 1, "apps": 4, "years": [2010] }
+  ],
+  "slovenia": [
+    { "name": "Zahović", "pos": "MF", "goals": 2, "apps": 3, "years": [2002] },
+    { "name": "Handanović", "pos": "GK", "goals": 0, "apps": 3, "years": [2010] }
+  ],
+  "bosnia": [
+    { "name": "Džeko", "pos": "FW", "goals": 3, "apps": 4, "years": [2014] },
+    { "name": "Ibišević", "pos": "FW", "goals": 1, "apps": 3, "years": [2014] }
+  ],
+  "iceland": [
+    { "name": "Sigurdsson", "pos": "MF", "goals": 1, "apps": 4, "years": [2018] },
+    { "name": "Finnbogason", "pos": "FW", "goals": 1, "apps": 4, "years": [2018] }
+  ],
+  "north-ireland": [
+    { "name": "Armstrong", "pos": "FW", "goals": 2, "apps": 7, "years": [1982, 1986] },
+    { "name": "McIlroy", "pos": "MF", "goals": 1, "apps": 7, "years": [1982, 1986] }
+  ],
+  "bulgaria": [
+    { "name": "Stoichkov", "pos": "FW", "goals": 6, "apps": 11, "years": [1994, 1998] },
+    { "name": "Kostadinov", "pos": "FW", "goals": 3, "apps": 11, "years": [1986, 1994, 1998] },
+    { "name": "Balakov", "pos": "MF", "goals": 2, "apps": 7, "years": [1994, 1998] }
+  ],
+  "east-germany": [
+    { "name": "Sparwasser", "pos": "FW", "goals": 1, "apps": 4, "years": [1974] },
+    { "name": "Streich", "pos": "FW", "goals": 1, "apps": 4, "years": [1974] }
+  ],
+  "israel": [
+    { "name": "Spiegel", "pos": "FW", "goals": 1, "apps": 3, "years": [1970] }
+  ],
+  "mexico": [
+    { "name": "Márquez", "pos": "DF", "goals": 3, "apps": 19, "years": [2002, 2006, 2010, 2014, 2018] },
+    { "name": "L. Hernández", "pos": "FW", "goals": 4, "apps": 7, "years": [1998] },
+    { "name": "J. Hernández", "pos": "FW", "goals": 4, "apps": 12, "years": [2010, 2014, 2018] },
+    { "name": "Blanco", "pos": "MF", "goals": 3, "apps": 11, "years": [1998, 2002, 2010] },
+    { "name": "Guardado", "pos": "MF", "goals": 1, "apps": 13, "years": [2006, 2010, 2014, 2018, 2022] },
+    { "name": "Sanchez G.", "pos": "GK", "goals": 0, "apps": 13, "years": [2006, 2010, 2014, 2018] }
+  ],
+  "usa": [
+    { "name": "McBride", "pos": "FW", "goals": 5, "apps": 19, "years": [1994, 1998, 2002, 2006] },
+    { "name": "Donovan", "pos": "MF", "goals": 5, "apps": 19, "years": [2002, 2006, 2010] },
+    { "name": "Dempsey", "pos": "MF", "goals": 5, "apps": 14, "years": [2006, 2010, 2014] },
+    { "name": "Stewart", "pos": "DF", "goals": 0, "apps": 11, "years": [1990, 1994, 1998] },
+    { "name": "Pulisic", "pos": "FW", "goals": 1, "apps": 4, "years": [2022] }
+  ],
+  "costa-rica": [
+    { "name": "Campbell", "pos": "FW", "goals": 4, "apps": 12, "years": [2014, 2018, 2022] },
+    { "name": "Gómez", "pos": "MF", "goals": 2, "apps": 12, "years": [1990, 2002, 2006, 2014] },
+    { "name": "Navas", "pos": "GK", "goals": 0, "apps": 13, "years": [2014, 2018, 2022] }
+  ],
+  "honduras": [
+    { "name": "Pavón", "pos": "FW", "goals": 2, "apps": 3, "years": [1982] },
+    { "name": "Costly", "pos": "FW", "goals": 1, "apps": 6, "years": [2010, 2014] }
+  ],
+  "trinidad": [
+    { "name": "Yorke", "pos": "FW", "goals": 0, "apps": 3, "years": [2006] },
+    { "name": "Stern John", "pos": "FW", "goals": 0, "apps": 3, "years": [2006] }
+  ],
+  "jamaica": [
+    { "name": "Earle", "pos": "MF", "goals": 2, "apps": 3, "years": [1998] },
+    { "name": "Burton", "pos": "FW", "goals": 2, "apps": 3, "years": [1998] }
+  ],
+  "el-salvador": [
+    { "name": "Cabezas", "pos": "FW", "goals": 1, "apps": 3, "years": [1970] }
+  ],
+  "haiti": [
+    { "name": "Sanon", "pos": "FW", "goals": 2, "apps": 4, "years": [1974] }
+  ],
+  "cuba": [
+    { "name": "Socorro", "pos": "FW", "goals": 2, "apps": 4, "years": [1938] }
+  ],
+  "canada": [
+    { "name": "David", "pos": "FW", "goals": 1, "apps": 3, "years": [2022] },
+    { "name": "Davies", "pos": "MF", "goals": 1, "apps": 3, "years": [2022] }
+  ],
+  "panama": [
+    { "name": "Baloy", "pos": "DF", "goals": 1, "apps": 3, "years": [2018] }
+  ],
+  "morocco": [
+    { "name": "En-Nesyri", "pos": "FW", "goals": 5, "apps": 7, "years": [2018, 2022] },
+    { "name": "Hakimi", "pos": "DF", "goals": 1, "apps": 7, "years": [2018, 2022] },
+    { "name": "Belhanda", "pos": "MF", "goals": 1, "apps": 7, "years": [2018, 2022] },
+    { "name": "Boufal", "pos": "FW", "goals": 1, "apps": 7, "years": [2018, 2022] }
+  ],
+  "nigeria": [
+    { "name": "Musa", "pos": "FW", "goals": 4, "apps": 10, "years": [2010, 2014, 2018] },
+    { "name": "Yekini", "pos": "FW", "goals": 3, "apps": 6, "years": [1994] },
+    { "name": "Okocha", "pos": "MF", "goals": 2, "apps": 9, "years": [1994, 1998, 2002] },
+    { "name": "Amokachi", "pos": "FW", "goals": 2, "apps": 7, "years": [1994, 1998] }
+  ],
+  "cameroon": [
+    { "name": "Milla", "pos": "FW", "goals": 5, "apps": 14, "years": [1982, 1990, 1994] },
+    { "name": "Eto'o", "pos": "FW", "goals": 4, "apps": 14, "years": [1998, 2002, 2010, 2014] },
+    { "name": "Mboma", "pos": "FW", "goals": 3, "apps": 6, "years": [1998] },
+    { "name": "Song R.", "pos": "MF", "goals": 0, "apps": 14, "years": [2002, 2010, 2014] }
+  ],
+  "ghana": [
+    { "name": "A. Gyan", "pos": "FW", "goals": 6, "apps": 13, "years": [2006, 2010, 2014] },
+    { "name": "A. Ayew", "pos": "FW", "goals": 2, "apps": 9, "years": [2010, 2014, 2022] },
+    { "name": "Essien", "pos": "MF", "goals": 1, "apps": 9, "years": [2006, 2010, 2014] }
+  ],
+  "senegal": [
+    { "name": "Diop", "pos": "DF", "goals": 3, "apps": 5, "years": [2002] },
+    { "name": "El Hadji Diouf", "pos": "FW", "goals": 1, "apps": 5, "years": [2002] },
+    { "name": "Mané", "pos": "FW", "goals": 1, "apps": 3, "years": [2022] },
+    { "name": "Kouyaté", "pos": "MF", "goals": 0, "apps": 7, "years": [2018, 2022] }
+  ],
+  "ivory-coast": [
+    { "name": "Kalou", "pos": "FW", "goals": 3, "apps": 9, "years": [2006, 2010, 2014] },
+    { "name": "Drogba", "pos": "FW", "goals": 2, "apps": 9, "years": [2006, 2010, 2014] },
+    { "name": "Yaya Touré", "pos": "MF", "goals": 2, "apps": 9, "years": [2006, 2010, 2014] }
+  ],
+  "south-africa": [
+    { "name": "Tshabalala", "pos": "FW", "goals": 1, "apps": 3, "years": [2010] },
+    { "name": "Mphela", "pos": "FW", "goals": 1, "apps": 3, "years": [2010] },
+    { "name": "Pienaar", "pos": "MF", "goals": 0, "apps": 3, "years": [2010] }
+  ],
+  "algeria": [
+    { "name": "Assad", "pos": "FW", "goals": 3, "apps": 3, "years": [1982] },
+    { "name": "Slimani", "pos": "FW", "goals": 3, "apps": 8, "years": [2010, 2014, 2022] },
+    { "name": "Brahimi", "pos": "MF", "goals": 1, "apps": 4, "years": [2014] },
+    { "name": "Lacen", "pos": "MF", "goals": 0, "apps": 5, "years": [2010, 2014] }
+  ],
+  "tunisia": [
+    { "name": "Badra", "pos": "FW", "goals": 3, "apps": 3, "years": [1978] },
+    { "name": "Khazri", "pos": "MF", "goals": 3, "apps": 8, "years": [2018, 2022] },
+    { "name": "Skhiri", "pos": "MF", "goals": 1, "apps": 8, "years": [2018, 2022] }
+  ],
+  "egypt": [
+    { "name": "Hassan", "pos": "MF", "goals": 2, "apps": 3, "years": [1934] },
+    { "name": "Salah", "pos": "FW", "goals": 2, "apps": 3, "years": [2018] }
+  ],
+  "angola": [
+    { "name": "Flávio", "pos": "FW", "goals": 1, "apps": 3, "years": [2006] }
+  ],
+  "togo": [
+    { "name": "Adebayor", "pos": "FW", "goals": 1, "apps": 3, "years": [2006] }
+  ],
+  "zaire": [
+    { "name": "Kembo Uba", "pos": "FW", "goals": 0, "apps": 3, "years": [1974] }
+  ],
+  "japan": [
+    { "name": "Kamamoto", "pos": "FW", "goals": 4, "apps": 6, "years": [1966, 1970] },
+    { "name": "Nakata", "pos": "MF", "goals": 2, "apps": 9, "years": [1998, 2002, 2006] },
+    { "name": "Inamoto", "pos": "MF", "goals": 2, "apps": 7, "years": [2002, 2006] },
+    { "name": "Nakamura", "pos": "MF", "goals": 2, "apps": 10, "years": [1998, 2002, 2006, 2010] },
+    { "name": "Hasebe", "pos": "MF", "goals": 0, "apps": 13, "years": [2006, 2010, 2014, 2018, 2022] },
+    { "name": "Doan", "pos": "FW", "goals": 2, "apps": 4, "years": [2022] }
+  ],
+  "south-korea": [
+    { "name": "Hwang Sun-hong", "pos": "FW", "goals": 5, "apps": 13, "years": [1990, 1994, 1998, 2002] },
+    { "name": "Son Heung-min", "pos": "FW", "goals": 4, "apps": 14, "years": [2014, 2018, 2022] },
+    { "name": "Cha Bum-kun", "pos": "FW", "goals": 2, "apps": 8, "years": [1986, 1990] },
+    { "name": "Ahn Jung-hwan", "pos": "FW", "goals": 2, "apps": 7, "years": [2002] },
+    { "name": "Park Ji-sung", "pos": "MF", "goals": 2, "apps": 18, "years": [2002, 2006, 2010] },
+    { "name": "Hong Myung-bo", "pos": "DF", "goals": 0, "apps": 18, "years": [1990, 1994, 1998, 2002] }
+  ],
+  "iran": [
+    { "name": "Taremi", "pos": "FW", "goals": 4, "apps": 7, "years": [2018, 2022] },
+    { "name": "Daei", "pos": "FW", "goals": 3, "apps": 8, "years": [1998, 2006] },
+    { "name": "Madanchi", "pos": "FW", "goals": 2, "apps": 3, "years": [1978] }
+  ],
+  "saudi-arabia": [
+    { "name": "Al-Jaber", "pos": "FW", "goals": 4, "apps": 17, "years": [1994, 1998, 2002, 2006] },
+    { "name": "Saleh Al-Dawoud", "pos": "FW", "goals": 2, "apps": 3, "years": [1994] },
+    { "name": "Al-Deayea", "pos": "GK", "goals": 0, "apps": 13, "years": [1994, 1998, 2002] }
+  ],
+  "australia": [
+    { "name": "Cahill", "pos": "FW", "goals": 5, "apps": 11, "years": [2006, 2010, 2014] },
+    { "name": "Kewell", "pos": "FW", "goals": 3, "apps": 10, "years": [2006, 2010] },
+    { "name": "Leckie", "pos": "FW", "goals": 2, "apps": 10, "years": [2014, 2018, 2022] },
+    { "name": "Schwarzer", "pos": "GK", "goals": 0, "apps": 10, "years": [2006, 2010, 2014] }
+  ],
+  "north-korea": [
+    { "name": "Pak Doo-ik", "pos": "MF", "goals": 1, "apps": 4, "years": [1966] },
+    { "name": "Ji Yun-nam", "pos": "FW", "goals": 1, "apps": 4, "years": [2010] }
+  ],
+  "iraq": [
+    { "name": "Radhi", "pos": "FW", "goals": 1, "apps": 3, "years": [1986] }
+  ],
+  "china": [
+    { "name": "Yang Chen", "pos": "FW", "goals": 0, "apps": 3, "years": [2002] }
+  ],
+  "uae": [
+    { "name": "Jameel", "pos": "FW", "goals": 2, "apps": 3, "years": [1990] }
+  ],
+  "kuwait": [
+    { "name": "Al-Anbari", "pos": "FW", "goals": 1, "apps": 3, "years": [1982] }
+  ],
+  "qatar": [
+    { "name": "Al Moez Ali", "pos": "FW", "goals": 1, "apps": 3, "years": [2022] }
+  ],
+  "dutch-east-indies": [
+    { "name": "Sommers", "pos": "FW", "goals": 0, "apps": 1, "years": [1938] }
+  ],
+  "new-zealand": [
+    { "name": "Turner", "pos": "FW", "goals": 2, "apps": 4, "years": [1982] },
+    { "name": "Fallon", "pos": "FW", "goals": 1, "apps": 3, "years": [2010] }
+  ]
+}

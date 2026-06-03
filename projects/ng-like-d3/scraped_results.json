@@ -1,0 +1,18 @@
+{
+  "2022": {
+    "year": 2022,
+    "error": "403 Client Error: Forbidden for url: https://www.thesoccerworldcups.com/world_cups/2022_results.php"
+  },
+  "2018": {
+    "year": 2018,
+    "error": "403 Client Error: Forbidden for url: https://www.thesoccerworldcups.com/world_cups/2018_results.php"
+  },
+  "2014": {
+    "year": 2014,
+    "error": "403 Client Error: Forbidden for url: https://www.thesoccerworldcups.com/world_cups/2014_results.php"
+  },
+  "2010": {
+    "year": 2010,
+    "error": "403 Client Error: Forbidden for url: https://www.thesoccerworldcups.com/world_cups/2010_results.php"
+  }
+}

@@ -1,0 +1,145 @@
+[
+  {
+    "year": 1930,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to ARG 0-1"
+  },
+  {
+    "year": 1934,
+    "stage": "R16",
+    "round": "Round of 16",
+    "host": false,
+    "result": "2-3 vs AUT (aet)"
+  },
+  {
+    "year": 1938,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": true,
+    "result": "1-3 vs ITA"
+  },
+  { "year": 1950, "stage": "WD", "round": "Withdrew", "host": false },
+  {
+    "year": 1954,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to YUG 0-1"
+  },
+  {
+    "year": 1958,
+    "stage": "3P",
+    "round": "Third place",
+    "host": false,
+    "result": "6-3 vs GER"
+  },
+  {
+    "year": 1962,
+    "stage": "DNQ",
+    "round": "Did not qualify",
+    "host": false
+  },
+  {
+    "year": 1966,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to URU 1-2"
+  },
+  {
+    "year": 1970,
+    "stage": "DNQ",
+    "round": "Did not qualify",
+    "host": false
+  },
+  {
+    "year": 1974,
+    "stage": "DNQ",
+    "round": "Did not qualify",
+    "host": false
+  },
+  {
+    "year": 1978,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to ARG 1-2"
+  },
+  {
+    "year": 1982,
+    "stage": "4P",
+    "round": "Fourth place",
+    "host": false,
+    "result": "2-3 vs POL"
+  },
+  {
+    "year": 1986,
+    "stage": "3P",
+    "round": "Third place",
+    "host": false,
+    "result": "4-2 vs BEL (aet)"
+  },
+  {
+    "year": 1990,
+    "stage": "DNQ",
+    "round": "Did not qualify",
+    "host": false
+  },
+  {
+    "year": 1994,
+    "stage": "DNQ",
+    "round": "Did not qualify",
+    "host": false
+  },
+  {
+    "year": 1998,
+    "stage": "W",
+    "round": "Champions",
+    "host": true,
+    "result": "3-0 vs BRA"
+  },
+  {
+    "year": 2002,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to DEN 0-2"
+  },
+  {
+    "year": 2006,
+    "stage": "RU",
+    "round": "Runners-up",
+    "host": false,
+    "result": "1-1 vs ITA (2-5 pen)"
+  },
+  {
+    "year": 2010,
+    "stage": "GS",
+    "round": "Group stage",
+    "host": false,
+    "result": "Lost to RSA 1-2"
+  },
+  {
+    "year": 2014,
+    "stage": "QF",
+    "round": "Quarter-finals",
+    "host": false,
+    "result": "0-1 vs GER"
+  },
+  {
+    "year": 2018,
+    "stage": "W",
+    "round": "Champions",
+    "host": false,
+    "result": "4-2 vs CRO"
+  },
+  {
+    "year": 2022,
+    "stage": "RU",
+    "round": "Runners-up",
+    "host": false,
+    "result": "3-3 vs ARG (2-4 pen)"
+  }
+]
