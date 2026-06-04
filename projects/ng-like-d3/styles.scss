@@ -13,7 +13,9 @@ body {
 }
 
 // Allow selection inside text inputs/textareas
-input, textarea, [contenteditable] {
+input,
+textarea,
+[contenteditable] {
   -webkit-user-select: text;
   user-select: text;
   // iOS zooms in when font-size < 16px — lock it to prevent that
@@ -452,11 +454,16 @@ body.landing-body::after {
     white-space: nowrap;
     display: flex;
     align-items: center;
+    gap: 0.15rem;
 
     .trophy-icon {
-      width: 1rem; // 16px
-      height: 1rem; // 16px
+      width: 0.875rem;
+      height: 0.875rem;
       flex-shrink: 0;
+    }
+
+    .result-apps {
+      margin-left: 0.375rem;
     }
   }
 }

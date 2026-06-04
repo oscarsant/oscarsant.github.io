@@ -18,7 +18,7 @@
 	// ── State ─────────────────────────────────────────────────────────────────
 	let open = false;
 	let active = -1;
-	let filtered = [...teams];
+	let filtered = [...teams].sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
 	let selected = null;
 	let selectedKey = null;
 	let confFilter = "ALL";
@@ -77,7 +77,9 @@
 	const renderTeamGrid = () => {
 		const grid = document.getElementById("team-grid");
 		if (!grid) return;
-		const visible = (confFilter === "ALL" ? teams : teams.filter((t) => t.conf === confFilter))
+		const visible = (
+			confFilter === "ALL" ? teams : teams.filter((t) => t.conf === confFilter)
+		)
 			.slice()
 			.sort((a, b) => a.name.localeCompare(b.name));
 		grid.innerHTML = visible.map(buildTeamCard).join("");
@@ -101,10 +103,13 @@
 			if (active === i) d.setAttribute("data-active", "true");
 
 			const countryCode = getCountryCode(team.abbr);
+			const trophies = team.titles > 0
+				? Array.from({ length: team.titles }, () => '<img src="WC-Trophy.svg" class="trophy-icon" alt="" />').join("")
+				: "";
 			d.innerHTML = `
         <span class="result-crest fi fi-${countryCode}"></span>
         <span class="result-name">${team.name}</span>
-        <span class="result-meta"><img src="WC-Trophy.svg" class="trophy-icon" alt="" /> ${team.titles} &bull; ${team.appearances} Apps</span>
+        <span class="result-meta">${trophies}<span class="result-apps">${team.appearances} Apps</span></span>
       `;
 			d.onclick = () => choose(i);
 			listbox.appendChild(d);
