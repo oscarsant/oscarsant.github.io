@@ -18,7 +18,7 @@
 	// ── State ─────────────────────────────────────────────────────────────────
 	let open = false;
 	let active = -1;
-	let filtered = [...teams].sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
+	let filtered = [...teams].sort((a, b) => (b.points || 0) - (a.points || 0));
 	let selected = null;
 	let selectedKey = null;
 	let confFilter = "ALL";
@@ -175,7 +175,7 @@
 					o.name.toLowerCase().includes(q) || o.abbr.toLowerCase().includes(q);
 				return matchConf && matchText;
 			})
-			.sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
+			.sort((a, b) => (b.points || 0) - (a.points || 0));
 		active = -1;
 		render();
 	};
