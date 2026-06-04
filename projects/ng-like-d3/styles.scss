@@ -9,6 +9,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  touch-action: pan-x pan-y; // disables pinch-zoom (Android/Chrome)
 }
 
 // Allow selection inside text inputs/textareas
