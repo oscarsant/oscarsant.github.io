@@ -9,19 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lucaburgio/iconoir@main/css/iconoir.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
 </head>
 
-<body>
+<body class="landing-body">
   <div class="wrap">
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-badge">FIFA WORLD CUP ANALYTICS</div>
-      <h1 class="hero-title">World Cup History</h1>
-      <p class="hero-subtitle">Explore 92 years of tournament data through clean, minimal visualizations. From
-        1930 to present day.</p>
+      <h1 class="hero-title">World Cup Atlas</h1>
+      <p class="hero-subtitle">Access and explore comprehensive World Cup data from every tournament since 1930.</p>
     </section>
 
     <!-- Choose Your Team Section -->
@@ -33,11 +33,11 @@
         <label for="team-search" class="sr-only">Team</label>
         <div class="search-wrapper">
           <div class="search-input-wrapper">
-            <i class="iconoir-search search-icon"></i>
+            <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
             <input type="text" id="team-search" class="search-input" role="combobox" aria-expanded="false"
               aria-controls="search-dropdown" aria-autocomplete="list" placeholder="Select team" autocomplete="off" />
             <button id="toggle-dropdown" class="toggle-btn" aria-label="Toggle options">
-              <i class="iconoir-nav-arrow-down"></i>
+              <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
             </button>
           </div>
         </div>
@@ -47,6 +47,10 @@
 
     </section>
 
+    <div class="divider" aria-hidden="true">
+      <span>OR</span>
+    </div>
+
     <!-- Explore the Data Section -->
     <section class="explore-data">
       <h2 class="section-title">Explore the Data</h2>
@@ -55,7 +59,7 @@
       <div class="viz-modes">
         <div class="viz-card" data-target-tab="timeline">
           <div class="viz-icon">
-            <i class="iconoir-graph-up"></i>
+            <span class="material-symbols-outlined" aria-hidden="true">query_stats</span>
           </div>
           <h3>Team Timelines</h3>
           <p>Timelines showing tournament results</p>
@@ -63,7 +67,7 @@
 
         <div class="viz-card" data-target-tab="players">
           <div class="viz-icon">
-            <i class="iconoir-trophy"></i>
+            <span class="material-symbols-outlined" aria-hidden="true">emoji_events</span>
           </div>
           <h3>Top Scorers</h3>
           <p>All-time leading goal scorers</p>
@@ -71,7 +75,7 @@
 
         <div class="viz-card" data-target-tab="head-to-head">
           <div class="viz-icon">
-            <i class="iconoir-group"></i>
+            <span class="material-symbols-outlined" aria-hidden="true">groups</span>
           </div>
           <h3>Head-to-Head</h3>
           <p>Compare team matchups</p>
@@ -79,7 +83,7 @@
 
         <div class="viz-card" data-target-tab="all-players">
           <div class="viz-icon">
-            <i class="iconoir-stats-up-square"></i>
+            <span class="material-symbols-outlined" aria-hidden="true">analytics</span>
           </div>
           <h3>All-Time Rankings</h3>
           <p>Historical performance stats</p>
@@ -87,7 +91,7 @@
 
         <div class="viz-card" data-target-tab="compare">
           <div class="viz-icon">
-            <i class="iconoir-star"></i>
+            <span class="material-symbols-outlined" aria-hidden="true">star</span>
           </div>
           <h3>Team Comparison</h3>
           <p>Side-by-side team head to head</p>

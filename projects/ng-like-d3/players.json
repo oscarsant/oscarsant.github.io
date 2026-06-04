@@ -1,464 +1,6479 @@
 {
   "brazil": [
-    { "name": "Ronaldo Nazário", "pos": "FW", "goals": 15, "apps": 19, "years": [1994, 1998, 2002, 2006] },
-    { "name": "Pelé", "pos": "FW", "goals": 12, "apps": 14, "years": [1958, 1962, 1966, 1970] },
-    { "name": "Jairzinho", "pos": "FW", "goals": 9, "apps": 16, "years": [1966, 1970, 1974] },
-    { "name": "Ademir", "pos": "FW", "goals": 9, "apps": 6, "years": [1950] },
-    { "name": "Vavá", "pos": "FW", "goals": 9, "apps": 10, "years": [1954, 1958, 1962] },
-    { "name": "Leônidas", "pos": "FW", "goals": 8, "apps": 7, "years": [1934, 1938] },
-    { "name": "Rivaldo", "pos": "MF", "goals": 8, "apps": 11, "years": [1998, 2002, 2006] },
-    { "name": "Neymar Jr.", "pos": "FW", "goals": 8, "apps": 14, "years": [2014, 2018, 2022] },
-    { "name": "Careca", "pos": "FW", "goals": 7, "apps": 9, "years": [1982, 1986, 1990] },
-    { "name": "Bebeto", "pos": "FW", "goals": 6, "apps": 13, "years": [1990, 1994, 1998] },
-    { "name": "Zico", "pos": "MF", "goals": 5, "apps": 11, "years": [1978, 1982, 1986] },
-    { "name": "Cafú", "pos": "DF", "goals": 2, "apps": 20, "years": [1994, 1998, 2002, 2006] },
-    { "name": "Roberto Carlos", "pos": "DF", "goals": 1, "apps": 15, "years": [1994, 1998, 2002, 2006] },
-    { "name": "Taffarel", "pos": "GK", "goals": 0, "apps": 18, "years": [1990, 1994, 1998, 2002] },
-    { "name": "Dunga", "pos": "MF", "goals": 0, "apps": 18, "years": [1986, 1990, 1994, 1998] }
+    {
+      "name": "Ronaldo Nazário",
+      "pos": "FW",
+      "goals": 15,
+      "apps": 19,
+      "years": [
+        1994,
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 7,
+          "goals": 4
+        },
+        "2002": {
+          "apps": 7,
+          "goals": 8
+        },
+        "2006": {
+          "apps": 5,
+          "goals": 3
+        }
+      },
+      "given": "not applicable",
+      "family": "Ronaldo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ronaldo_Lu%C3%ADs_Naz%C3%A1rio_de_Lima_2019_%283x4_cropped%29.jpg/330px-Ronaldo_Lu%C3%ADs_Naz%C3%A1rio_de_Lima_2019_%283x4_cropped%29.jpg"
+    },
+    {
+      "name": "Pelé",
+      "pos": "FW",
+      "goals": 12,
+      "apps": 14,
+      "years": [
+        1958,
+        1962,
+        1966,
+        1970
+      ],
+      "byYear": {
+        "1958": {
+          "apps": 0,
+          "goals": 6
+        },
+        "1962": {
+          "apps": 0,
+          "goals": 1
+        },
+        "1966": {
+          "apps": 0,
+          "goals": 1
+        },
+        "1970": {
+          "apps": 6,
+          "goals": 4
+        }
+      },
+      "given": "not applicable",
+      "family": "Pelé",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Pele_con_brasil_%28cropped%29.jpg/330px-Pele_con_brasil_%28cropped%29.jpg"
+    },
+    {
+      "name": "Jairzinho",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 16,
+      "years": [
+        1966,
+        1970,
+        1974
+      ],
+      "byYear": {
+        "1970": {
+          "apps": 6,
+          "goals": 7
+        },
+        "1974": {
+          "apps": 7,
+          "goals": 2
+        }
+      },
+      "given": "not applicable",
+      "family": "Jairzinho",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Jairzinho_1970s.jpg/330px-Jairzinho_1970s.jpg"
+    },
+    {
+      "name": "Ademir",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 6,
+      "years": [
+        1950
+      ]
+    },
+    {
+      "name": "Vavá",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 10,
+      "years": [
+        1954,
+        1958,
+        1962
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Vav%C3%A1_en_1962.jpg"
+    },
+    {
+      "name": "Leônidas",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 7,
+      "years": [
+        1934,
+        1938
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Helmed_Hoplite_Sparta.JPG/330px-Helmed_Hoplite_Sparta.JPG"
+    },
+    {
+      "name": "Rivaldo",
+      "pos": "MF",
+      "goals": 8,
+      "apps": 11,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 7,
+          "goals": 3
+        },
+        "2002": {
+          "apps": 7,
+          "goals": 5
+        }
+      },
+      "given": "not applicable",
+      "family": "Rivaldo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Rivaldo.jpg"
+    },
+    {
+      "name": "Neymar Jr.",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 14,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 4
+        },
+        "2018": {
+          "apps": 5,
+          "goals": 2
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 2
+        }
+      },
+      "given": "not applicable",
+      "family": "Neymar",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Neymar_Jr._with_Al_Hilal%2C_3_October_2023_-_03_%28cropped%29.jpg/330px-Neymar_Jr._with_Al_Hilal%2C_3_October_2023_-_03_%28cropped%29.jpg"
+    },
+    {
+      "name": "Careca",
+      "pos": "FW",
+      "goals": 7,
+      "apps": 9,
+      "years": [
+        1982,
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 5,
+          "goals": 5
+        },
+        "1990": {
+          "apps": 4,
+          "goals": 2
+        }
+      },
+      "given": "not applicable",
+      "family": "Careca",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Antonio_de_Oliveira_Filho_%28Careca%29_01.jpg/330px-Antonio_de_Oliveira_Filho_%28Careca%29_01.jpg"
+    },
+    {
+      "name": "Bebeto",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 13,
+      "years": [
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 1,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 7,
+          "goals": 3
+        },
+        "1998": {
+          "apps": 7,
+          "goals": 3
+        }
+      },
+      "given": "not applicable",
+      "family": "Bebeto",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/68/Bebeto_brazil_%28cropped%29.jpg"
+    },
+    {
+      "name": "Zico",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 11,
+      "years": [
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 6,
+          "goals": 1
+        },
+        "1982": {
+          "apps": 5,
+          "goals": 4
+        },
+        "1986": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "not applicable",
+      "family": "Zico",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Zico_2012_3.jpg/330px-Zico_2012_3.jpg"
+    },
+    {
+      "name": "Cafú",
+      "pos": "DF",
+      "goals": 2,
+      "apps": 20,
+      "years": [
+        1994,
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 6,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "not applicable",
+      "family": "Cafu",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/14_06_2019_Abertura_da_Copa_Am%C3%A9rica_Brasil_2019_%2848064408836%29_%28cropped%29.jpg/330px-14_06_2019_Abertura_da_Copa_Am%C3%A9rica_Brasil_2019_%2848064408836%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Roberto Carlos",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 15,
+      "years": [
+        1994,
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 6,
+          "goals": 1
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Roberto",
+      "family": "Carlos",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/LS3_1288_%2853332367864%29_%28cropped%29.jpg/330px-LS3_1288_%2853332367864%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Taffarel",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 18,
+      "years": [
+        1990,
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Cláudio",
+      "family": "Taffarel",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Taffarel_2018.png/330px-Taffarel_2018.png"
+    },
+    {
+      "name": "Dunga",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 18,
+      "years": [
+        1986,
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "not applicable",
+      "family": "Dunga",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Aecio_Neves_e_Dunga_-_17-06-2008_%288368243127%29_%28cropped%29.jpg/330px-Aecio_Neves_e_Dunga_-_17-06-2008_%288368243127%29_%28cropped%29.jpg"
+    }
   ],
   "argentina": [
-    { "name": "Messi", "pos": "FW", "goals": 13, "apps": 26, "years": [2006, 2010, 2014, 2018, 2022] },
-    { "name": "Batistuta", "pos": "FW", "goals": 10, "apps": 12, "years": [1994, 1998, 2002] },
-    { "name": "Stábile", "pos": "FW", "goals": 8, "apps": 4, "years": [1930] },
-    { "name": "Maradona", "pos": "MF", "goals": 8, "apps": 21, "years": [1982, 1986, 1990, 1994] },
-    { "name": "Kempes", "pos": "FW", "goals": 6, "apps": 18, "years": [1974, 1978, 1982] },
-    { "name": "Higuaín", "pos": "FW", "goals": 5, "apps": 12, "years": [2010, 2014, 2018] },
-    { "name": "Mascherano", "pos": "MF", "goals": 0, "apps": 20, "years": [2006, 2010, 2014, 2018] },
-    { "name": "Zanetti", "pos": "DF", "goals": 1, "apps": 16, "years": [1994, 1998, 2002, 2006, 2010] }
+    {
+      "name": "Messi",
+      "pos": "FW",
+      "goals": 13,
+      "apps": 26,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 7,
+          "goals": 4
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 7
+        }
+      },
+      "given": "Lionel",
+      "family": "Messi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lionel_Messi_White_House_2026_%283x4_cropped%29.jpg/330px-Lionel_Messi_White_House_2026_%283x4_cropped%29.jpg"
+    },
+    {
+      "name": "Batistuta",
+      "pos": "FW",
+      "goals": 10,
+      "apps": 12,
+      "years": [
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 4,
+          "goals": 4
+        },
+        "1998": {
+          "apps": 5,
+          "goals": 5
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Gabriel",
+      "family": "Batistuta",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Omar_Batistuta_%282%29.jpg/330px-Omar_Batistuta_%282%29.jpg"
+    },
+    {
+      "name": "Stábile",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 4,
+      "years": [
+        1930
+      ]
+    },
+    {
+      "name": "Maradona",
+      "pos": "MF",
+      "goals": 8,
+      "apps": 21,
+      "years": [
+        1982,
+        1986,
+        1990,
+        1994
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 5,
+          "goals": 2
+        },
+        "1986": {
+          "apps": 7,
+          "goals": 5
+        },
+        "1990": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 2,
+          "goals": 1
+        }
+      },
+      "given": "Diego",
+      "family": "Maradona",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Argentina_celebrando_copa_%28cropped%29.jpg/330px-Argentina_celebrando_copa_%28cropped%29.jpg"
+    },
+    {
+      "name": "Kempes",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 18,
+      "years": [
+        1974,
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 6,
+          "goals": 0
+        },
+        "1978": {
+          "apps": 7,
+          "goals": 6
+        },
+        "1982": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Mario",
+      "family": "Kempes",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Kempes_Valencia_CF.jpg"
+    },
+    {
+      "name": "Higuaín",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 12,
+      "years": [
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 4,
+          "goals": 4
+        },
+        "2014": {
+          "apps": 7,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Gonzalo",
+      "family": "Higuaín",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/7/72/Gonzalo_Higua%C3%ADn_2019.jpg"
+    },
+    {
+      "name": "Mascherano",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 20,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Javier",
+      "family": "Mascherano",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Javier_Mascherano_NE_Revolution_Inter_Miami_7.9.25-040_%28cropped%29.jpg/330px-Javier_Mascherano_NE_Revolution_Inter_Miami_7.9.25-040_%28cropped%29.jpg"
+    },
+    {
+      "name": "Zanetti",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 16,
+      "years": [
+        1994,
+        1998,
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 5,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Javier",
+      "family": "Zanetti",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Metalist-Inter_%282%29.jpg/330px-Metalist-Inter_%282%29.jpg"
+    }
   ],
   "uruguay": [
-    { "name": "Míguez", "pos": "FW", "goals": 8, "apps": 7, "years": [1950, 1954] },
-    { "name": "Suárez", "pos": "FW", "goals": 7, "apps": 16, "years": [2010, 2014, 2018, 2022] },
-    { "name": "Forlán", "pos": "FW", "goals": 6, "apps": 10, "years": [2002, 2010, 2014] },
-    { "name": "Cea", "pos": "FW", "goals": 5, "apps": 5, "years": [1930] },
-    { "name": "Schiaffino", "pos": "MF", "goals": 5, "apps": 9, "years": [1950, 1954] },
-    { "name": "Cavani", "pos": "FW", "goals": 5, "apps": 17, "years": [2010, 2014, 2018, 2022] },
-    { "name": "Muslera", "pos": "GK", "goals": 0, "apps": 16, "years": [2010, 2014, 2018, 2022] },
-    { "name": "Godín", "pos": "DF", "goals": 1, "apps": 16, "years": [2010, 2014, 2018, 2022] }
+    {
+      "name": "Míguez",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 7,
+      "years": [
+        1950,
+        1954
+      ]
+    },
+    {
+      "name": "Suárez",
+      "pos": "FW",
+      "goals": 7,
+      "apps": 16,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Arms_of_House_of_Su%C3%A1rez.svg/330px-Arms_of_House_of_Su%C3%A1rez.svg.png"
+    },
+    {
+      "name": "Forlán",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 10,
+      "years": [
+        2002,
+        2010,
+        2014
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/U10_Diego_Forl%C3%A1n_7524.jpg/330px-U10_Diego_Forl%C3%A1n_7524.jpg"
+    },
+    {
+      "name": "Cea",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 5,
+      "years": [
+        1930
+      ]
+    },
+    {
+      "name": "Schiaffino",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 9,
+      "years": [
+        1950,
+        1954
+      ]
+    },
+    {
+      "name": "Cavani",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 17,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ]
+    },
+    {
+      "name": "Muslera",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 16,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Fernando_Muslera_in_2021.jpg/330px-Fernando_Muslera_in_2021.jpg"
+    },
+    {
+      "name": "Godín",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 16,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ]
+    }
   ],
   "chile": [
-    { "name": "Caszely", "pos": "FW", "goals": 4, "apps": 8, "years": [1974, 1982] },
-    { "name": "Letelier", "pos": "FW", "goals": 3, "apps": 6, "years": [1962] },
-    { "name": "Alexis Sánchez", "pos": "FW", "goals": 3, "apps": 8, "years": [2010, 2014] },
-    { "name": "Vargas", "pos": "FW", "goals": 3, "apps": 8, "years": [2010, 2014] },
-    { "name": "Medel", "pos": "DF", "goals": 1, "apps": 10, "years": [2010, 2014] }
+    {
+      "name": "Caszely",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 8,
+      "years": [
+        1974,
+        1982
+      ]
+    },
+    {
+      "name": "Letelier",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 6,
+      "years": [
+        1962
+      ]
+    },
+    {
+      "name": "Alexis Sánchez",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 8,
+      "years": [
+        2010,
+        2014
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Alexis_S%C3%A1nchez_2017.jpg/330px-Alexis_S%C3%A1nchez_2017.jpg"
+    },
+    {
+      "name": "Vargas",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 8,
+      "years": [
+        2010,
+        2014
+      ]
+    },
+    {
+      "name": "Medel",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 10,
+      "years": [
+        2010,
+        2014
+      ]
+    }
   ],
   "colombia": [
-    { "name": "James Rodríguez", "pos": "MF", "goals": 6, "apps": 12, "years": [2014, 2018] },
-    { "name": "Asprilla", "pos": "FW", "goals": 3, "apps": 6, "years": [1994] },
-    { "name": "Falcao", "pos": "FW", "goals": 3, "apps": 10, "years": [2014, 2018] },
-    { "name": "Valderrama", "pos": "MF", "goals": 0, "apps": 16, "years": [1990, 1994, 1998] },
-    { "name": "Ospina", "pos": "GK", "goals": 0, "apps": 9, "years": [2014, 2018] }
+    {
+      "name": "James Rodríguez",
+      "pos": "MF",
+      "goals": 6,
+      "apps": 12,
+      "years": [
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 6
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "James",
+      "family": "Rodríguez",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/James_Rodriguez_2018.jpg/330px-James_Rodriguez_2018.jpg"
+    },
+    {
+      "name": "Asprilla",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 6,
+      "years": [
+        1994
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Faustino",
+      "family": "Asprilla",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Tino_Asprilla_en_2019_02.jpg/330px-Tino_Asprilla_en_2019_02.jpg"
+    },
+    {
+      "name": "Falcao",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 10,
+      "years": [
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Radamel",
+      "family": "Falcao",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Radamel_Falcao_Garc%C3%ADa_%28cropped%29.jpg/330px-Radamel_Falcao_Garc%C3%ADa_%28cropped%29.jpg"
+    },
+    {
+      "name": "Valderrama",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 16,
+      "years": [
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 4,
+          "goals": 1
+        },
+        "1994": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Carlos",
+      "family": "Valderrama",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Pibe_Valderrama_2022.jpg/330px-Pibe_Valderrama_2022.jpg"
+    },
+    {
+      "name": "Ospina",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 9,
+      "years": [
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "David",
+      "family": "Ospina",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/David_Ospina%2C_2015-05-31.JPG/330px-David_Ospina%2C_2015-05-31.JPG"
+    }
   ],
   "peru": [
-    { "name": "Cubillas", "pos": "MF", "goals": 10, "apps": 13, "years": [1970, 1978, 1982] },
-    { "name": "La Rosa", "pos": "FW", "goals": 5, "apps": 6, "years": [1978] },
-    { "name": "Cueto", "pos": "MF", "goals": 4, "apps": 9, "years": [1978, 1982] },
-    { "name": "Guerrero", "pos": "FW", "goals": 2, "apps": 5, "years": [2018] }
+    {
+      "name": "Cubillas",
+      "pos": "MF",
+      "goals": 10,
+      "apps": 13,
+      "years": [
+        1970,
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1970": {
+          "apps": 4,
+          "goals": 5
+        },
+        "1978": {
+          "apps": 6,
+          "goals": 5
+        },
+        "1982": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Teófilo",
+      "family": "Cubillas",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Te%C3%B3filo_Cubillas_1978.jpg/330px-Te%C3%B3filo_Cubillas_1978.jpg"
+    },
+    {
+      "name": "La Rosa",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 6,
+      "years": [
+        1978
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Guillermo",
+      "family": "La Rosa",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/4/44/Guillermo_La_Rosa.jpg"
+    },
+    {
+      "name": "Cueto",
+      "pos": "MF",
+      "goals": 4,
+      "apps": 9,
+      "years": [
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 6,
+          "goals": 1
+        },
+        "1982": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "César",
+      "family": "Cueto",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Cesar_Cueto.jpg/330px-Cesar_Cueto.jpg"
+    },
+    {
+      "name": "Guerrero",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 5,
+      "years": [
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Paolo",
+      "family": "Guerrero",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Paolo_Guerrero_Mundial_2018.jpg/330px-Paolo_Guerrero_Mundial_2018.jpg"
+    }
   ],
   "paraguay": [
-    { "name": "Chilavert", "pos": "GK", "goals": 2, "apps": 13, "years": [1986, 1998, 2002, 2006] },
-    { "name": "Santa Cruz", "pos": "FW", "goals": 2, "apps": 9, "years": [1998, 2002, 2006, 2010] },
-    { "name": "Acuña", "pos": "MF", "goals": 2, "apps": 7, "years": [1986, 1998] },
-    { "name": "Caballero", "pos": "GK", "goals": 0, "apps": 7, "years": [2006, 2010] }
+    {
+      "name": "Chilavert",
+      "pos": "GK",
+      "goals": 2,
+      "apps": 13,
+      "years": [
+        1986,
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "José Luis",
+      "family": "Chilavert",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Chilavert_sanlorenzo.jpg"
+    },
+    {
+      "name": "Santa Cruz",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        1998,
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Roque",
+      "family": "Santa Cruz",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Roque_Santa_Cruz_2025_%28cropped%29.jpg/330px-Roque_Santa_Cruz_2025_%28cropped%29.jpg"
+    },
+    {
+      "name": "Acuña",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1986,
+        1998
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Roberto",
+      "family": "Acuña",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/ROBERTO_ACU%C3%91A_%2817008374197%2C_cropped%29.jpg/330px-ROBERTO_ACU%C3%91A_%2817008374197%2C_cropped%29.jpg"
+    },
+    {
+      "name": "Caballero",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 7,
+      "years": [
+        2006,
+        2010
+      ]
+    }
   ],
   "ecuador": [
-    { "name": "Delgado", "pos": "MF", "goals": 3, "apps": 9, "years": [2002, 2006] },
-    { "name": "Tenorio", "pos": "FW", "goals": 3, "apps": 7, "years": [2002, 2006] },
-    { "name": "Valencia E.", "pos": "FW", "goals": 3, "apps": 9, "years": [2006, 2014, 2022] },
-    { "name": "Caicedo", "pos": "MF", "goals": 2, "apps": 4, "years": [2022] }
+    {
+      "name": "Delgado",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 9,
+      "years": [
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 2
+        }
+      },
+      "given": "Agustín",
+      "family": "Delgado",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Agust%C3%ADn_Delgado_2016.jpg"
+    },
+    {
+      "name": "Tenorio",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 7,
+      "years": [
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Edwin",
+      "family": "Tenorio"
+    },
+    {
+      "name": "Valencia E.",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 9,
+      "years": [
+        2006,
+        2014,
+        2022
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Antonio",
+      "family": "Valencia",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/AntonioValencia2022.jpg/330px-AntonioValencia2022.jpg"
+    },
+    {
+      "name": "Caicedo",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 4,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Moisés",
+      "family": "Caicedo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Moises_Caicedo_2022_%28cropped%29.jpg/330px-Moises_Caicedo_2022_%28cropped%29.jpg"
+    }
   ],
   "bolivia": [
-    { "name": "Ugarte", "pos": "MF", "goals": 2, "apps": 4, "years": [1950] },
-    { "name": "Soria", "pos": "FW", "goals": 1, "apps": 3, "years": [1994] }
+    {
+      "name": "Ugarte",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 4,
+      "years": [
+        1950
+      ]
+    },
+    {
+      "name": "Soria",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        1994
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Vladimir",
+      "family": "Soria",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Soria_-_P7234619_edited.jpg/330px-Soria_-_P7234619_edited.jpg"
+    }
   ],
   "germany": [
-    { "name": "Klose", "pos": "FW", "goals": 16, "apps": 24, "years": [2002, 2006, 2010, 2014] },
-    { "name": "G. Müller", "pos": "FW", "goals": 14, "apps": 13, "years": [1966, 1970, 1974] },
-    { "name": "Klinsmann", "pos": "FW", "goals": 11, "apps": 17, "years": [1990, 1994, 1998] },
-    { "name": "T. Müller", "pos": "FW", "goals": 10, "apps": 20, "years": [2010, 2014, 2018, 2022] },
-    { "name": "Rahn", "pos": "FW", "goals": 10, "apps": 10, "years": [1954, 1958] },
-    { "name": "Rummenigge", "pos": "FW", "goals": 9, "apps": 19, "years": [1978, 1982, 1986] },
-    { "name": "Seeler", "pos": "FW", "goals": 9, "apps": 21, "years": [1958, 1962, 1966, 1970] },
-    { "name": "Völler", "pos": "FW", "goals": 8, "apps": 14, "years": [1982, 1986, 1990, 1994] },
-    { "name": "Matthäus", "pos": "MF", "goals": 6, "apps": 25, "years": [1982, 1986, 1990, 1994, 1998, 2002] },
-    { "name": "Lahm", "pos": "DF", "goals": 1, "apps": 20, "years": [2006, 2010, 2014] }
+    {
+      "name": "Klose",
+      "pos": "FW",
+      "goals": 16,
+      "apps": 24,
+      "years": [
+        2002,
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 7,
+          "goals": 5
+        },
+        "2006": {
+          "apps": 7,
+          "goals": 5
+        },
+        "2010": {
+          "apps": 5,
+          "goals": 4
+        },
+        "2014": {
+          "apps": 5,
+          "goals": 2
+        }
+      },
+      "given": "Miroslav",
+      "family": "Klose",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/2016209185719_2016-07-27_Champions_for_Charity_-_Sven_-_1D_X_-_0149_-_DV3P4742_mod.jpg/330px-2016209185719_2016-07-27_Champions_for_Charity_-_Sven_-_1D_X_-_0149_-_DV3P4742_mod.jpg"
+    },
+    {
+      "name": "G. Müller",
+      "pos": "FW",
+      "goals": 14,
+      "apps": 13,
+      "years": [
+        1966,
+        1970,
+        1974
+      ],
+      "byYear": {
+        "1970": {
+          "apps": 6,
+          "goals": 10
+        },
+        "1974": {
+          "apps": 7,
+          "goals": 4
+        }
+      },
+      "given": "Gerd",
+      "family": "Müller",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gerd_M%C3%BCller_c1973_%28cropped%29.jpg/330px-Gerd_M%C3%BCller_c1973_%28cropped%29.jpg"
+    },
+    {
+      "name": "Klinsmann",
+      "pos": "FW",
+      "goals": 11,
+      "apps": 17,
+      "years": [
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 7,
+          "goals": 3
+        },
+        "1994": {
+          "apps": 5,
+          "goals": 5
+        },
+        "1998": {
+          "apps": 5,
+          "goals": 3
+        }
+      },
+      "given": "Jürgen",
+      "family": "Klinsmann",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/J%C3%BCrgen_Klinsmann_14021113000678638425063004371092_64131.jpg/330px-J%C3%BCrgen_Klinsmann_14021113000678638425063004371092_64131.jpg"
+    },
+    {
+      "name": "T. Müller",
+      "pos": "FW",
+      "goals": 10,
+      "apps": 20,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 6,
+          "goals": 5
+        },
+        "2014": {
+          "apps": 7,
+          "goals": 5
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Thomas",
+      "family": "Müller",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FC_Red_Bull_Salzburg_gegen_Bayern_M%C3%BCnchen_%282025-01-06_Testspiel%29_19.jpg/330px-FC_Red_Bull_Salzburg_gegen_Bayern_M%C3%BCnchen_%282025-01-06_Testspiel%29_19.jpg"
+    },
+    {
+      "name": "Rahn",
+      "pos": "FW",
+      "goals": 10,
+      "apps": 10,
+      "years": [
+        1954,
+        1958
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Helmut_Rahn.jpg/330px-Helmut_Rahn.jpg"
+    },
+    {
+      "name": "Rummenigge",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 19,
+      "years": [
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 5,
+          "goals": 3
+        },
+        "1982": {
+          "apps": 7,
+          "goals": 5
+        },
+        "1986": {
+          "apps": 7,
+          "goals": 1
+        }
+      },
+      "given": "Karl-Heinz",
+      "family": "Rummenigge",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/2015-02-06_Rummenigge_0370_%28cropped%29.JPG/330px-2015-02-06_Rummenigge_0370_%28cropped%29.JPG"
+    },
+    {
+      "name": "Seeler",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 21,
+      "years": [
+        1958,
+        1962,
+        1966,
+        1970
+      ],
+      "byYear": {
+        "1958": {
+          "apps": 0,
+          "goals": 2
+        },
+        "1962": {
+          "apps": 0,
+          "goals": 2
+        },
+        "1966": {
+          "apps": 0,
+          "goals": 2
+        },
+        "1970": {
+          "apps": 6,
+          "goals": 3
+        }
+      },
+      "given": "Uwe",
+      "family": "Seeler",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Uwe_Seeler_1966_%28cropped%29.jpg/330px-Uwe_Seeler_1966_%28cropped%29.jpg"
+    },
+    {
+      "name": "Völler",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 14,
+      "years": [
+        1982,
+        1986,
+        1990,
+        1994
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 6,
+          "goals": 3
+        },
+        "1990": {
+          "apps": 6,
+          "goals": 3
+        },
+        "1994": {
+          "apps": 3,
+          "goals": 2
+        }
+      },
+      "given": "Rudi",
+      "family": "Völler",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Rudi_V%C3%B6ller_B%C3%BChne_%28cropped%29.jpg/330px-Rudi_V%C3%B6ller_B%C3%BChne_%28cropped%29.jpg"
+    },
+    {
+      "name": "Matthäus",
+      "pos": "MF",
+      "goals": 6,
+      "apps": 25,
+      "years": [
+        1982,
+        1986,
+        1990,
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 2,
+          "goals": 0
+        },
+        "1986": {
+          "apps": 7,
+          "goals": 1
+        },
+        "1990": {
+          "apps": 7,
+          "goals": 4
+        },
+        "1994": {
+          "apps": 5,
+          "goals": 1
+        },
+        "1998": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Lothar",
+      "family": "Matthäus",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/2019_Lothar_Matth%C3%A4us.jpg/330px-2019_Lothar_Matth%C3%A4us.jpg"
+    },
+    {
+      "name": "Lahm",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 20,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 7,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 6,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Philipp",
+      "family": "Lahm",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Philipp_Lahm_auf_der_Berlinale_2024%2C_Ausschnitt.jpg/330px-Philipp_Lahm_auf_der_Berlinale_2024%2C_Ausschnitt.jpg"
+    }
   ],
   "italy": [
-    { "name": "Rossi", "pos": "FW", "goals": 9, "apps": 14, "years": [1978, 1982] },
-    { "name": "R. Baggio", "pos": "FW", "goals": 9, "apps": 16, "years": [1990, 1994, 1998] },
-    { "name": "Vieri", "pos": "FW", "goals": 9, "apps": 14, "years": [1998, 2002] },
-    { "name": "Schillaci", "pos": "FW", "goals": 6, "apps": 7, "years": [1990] },
-    { "name": "Piola", "pos": "FW", "goals": 5, "apps": 5, "years": [1938] },
-    { "name": "Altobelli", "pos": "FW", "goals": 5, "apps": 6, "years": [1982, 1986] },
-    { "name": "Maldini", "pos": "DF", "goals": 1, "apps": 23, "years": [1990, 1994, 1998, 2002] },
-    { "name": "Cannavaro", "pos": "DF", "goals": 1, "apps": 18, "years": [1998, 2002, 2006, 2010] },
-    { "name": "Cabrini", "pos": "DF", "goals": 1, "apps": 18, "years": [1978, 1982, 1986] },
-    { "name": "Scirea", "pos": "DF", "goals": 0, "apps": 18, "years": [1978, 1982, 1986] },
-    { "name": "Zoff", "pos": "GK", "goals": 0, "apps": 17, "years": [1974, 1978, 1982] }
+    {
+      "name": "Rossi",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 14,
+      "years": [
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 7,
+          "goals": 3
+        },
+        "1982": {
+          "apps": 7,
+          "goals": 6
+        }
+      },
+      "given": "Paolo",
+      "family": "Rossi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Paolo_Rossi_Vicenza_%28cropped%29.jpg/330px-Paolo_Rossi_Vicenza_%28cropped%29.jpg"
+    },
+    {
+      "name": "R. Baggio",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 16,
+      "years": [
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 5,
+          "goals": 2
+        },
+        "1994": {
+          "apps": 7,
+          "goals": 5
+        },
+        "1998": {
+          "apps": 4,
+          "goals": 2
+        }
+      },
+      "given": "Roberto",
+      "family": "Baggio"
+    },
+    {
+      "name": "Vieri",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 14,
+      "years": [
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 5,
+          "goals": 5
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 4
+        }
+      },
+      "given": "Christian",
+      "family": "Vieri",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Christian_Vieri_%28cropped%29.jpg/330px-Christian_Vieri_%28cropped%29.jpg"
+    },
+    {
+      "name": "Schillaci",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 7,
+      "years": [
+        1990
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 7,
+          "goals": 6
+        }
+      },
+      "given": "Salvatore",
+      "family": "Schillaci",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/1/10/Salvatore_Schillaci.jpg"
+    },
+    {
+      "name": "Piola",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 5,
+      "years": [
+        1938
+      ]
+    },
+    {
+      "name": "Altobelli",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 6,
+      "years": [
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 3,
+          "goals": 1
+        },
+        "1986": {
+          "apps": 4,
+          "goals": 4
+        }
+      },
+      "given": "Alessandro",
+      "family": "Altobelli",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Alessandro_altobelli.jpg/330px-Alessandro_altobelli.jpg"
+    },
+    {
+      "name": "Maldini",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 23,
+      "years": [
+        1990,
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Paolo",
+      "family": "Maldini",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Paolo_Maldini_AC_Milan_Technical_director_2018.jpg/330px-Paolo_Maldini_AC_Milan_Technical_director_2018.jpg"
+    },
+    {
+      "name": "Cannavaro",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 18,
+      "years": [
+        1998,
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Fabio",
+      "family": "Cannavaro",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Fabio_Cannavaro_2011.jpg/330px-Fabio_Cannavaro_2011.jpg"
+    },
+    {
+      "name": "Cabrini",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 18,
+      "years": [
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1982": {
+          "apps": 7,
+          "goals": 1
+        },
+        "1986": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Antonio",
+      "family": "Cabrini",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Cabrini_sez.JPG"
+    },
+    {
+      "name": "Scirea",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 18,
+      "years": [
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1982": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1986": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Gaetano",
+      "family": "Scirea",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/1975%E2%80%9376_Juventus_FC_-_Gaetano_Scirea.jpg/330px-1975%E2%80%9376_Juventus_FC_-_Gaetano_Scirea.jpg"
+    },
+    {
+      "name": "Zoff",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 17,
+      "years": [
+        1974,
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1978": {
+          "apps": 7,
+          "goals": 0
+        },
+        "1982": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Dino",
+      "family": "Zoff"
+    }
   ],
   "france": [
-    { "name": "Fontaine", "pos": "FW", "goals": 13, "apps": 6, "years": [1958] },
-    { "name": "Mbappé", "pos": "FW", "goals": 12, "apps": 14, "years": [2018, 2022] },
-    { "name": "Henry", "pos": "FW", "goals": 6, "apps": 17, "years": [1998, 2002, 2006, 2010] },
-    { "name": "Giroud", "pos": "FW", "goals": 5, "apps": 18, "years": [2014, 2018, 2022] },
-    { "name": "Platini", "pos": "MF", "goals": 5, "apps": 8, "years": [1978, 1982, 1986] },
-    { "name": "Zidane", "pos": "MF", "goals": 5, "apps": 12, "years": [1998, 2002, 2006] },
-    { "name": "Griezmann", "pos": "FW", "goals": 4, "apps": 19, "years": [2014, 2018, 2022] },
-    { "name": "Lloris", "pos": "GK", "goals": 0, "apps": 20, "years": [2010, 2014, 2018, 2022] },
-    { "name": "Varane", "pos": "DF", "goals": 1, "apps": 18, "years": [2014, 2018, 2022] }
+    {
+      "name": "Fontaine",
+      "pos": "FW",
+      "goals": 13,
+      "apps": 6,
+      "years": [
+        1958
+      ]
+    },
+    {
+      "name": "Mbappé",
+      "pos": "FW",
+      "goals": 12,
+      "apps": 14,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 7,
+          "goals": 4
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 8
+        }
+      },
+      "given": "Kylian",
+      "family": "Mbappé",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg/330px-Picture_with_Mbapp%C3%A9_%28cropped_and_rotated%29.jpg"
+    },
+    {
+      "name": "Henry",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 17,
+      "years": [
+        1998,
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 6,
+          "goals": 3
+        },
+        "2002": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 7,
+          "goals": 3
+        },
+        "2010": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Thierry",
+      "family": "Henry",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Thierry_Henry_%2851649035951%29_%28cropped%29.jpg/330px-Thierry_Henry_%2851649035951%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Giroud",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 18,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 6,
+          "goals": 4
+        }
+      },
+      "given": "Olivier",
+      "family": "Giroud",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Olivier_Giroud_December_2024.png"
+    },
+    {
+      "name": "Platini",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 8,
+      "years": [
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 3,
+          "goals": 1
+        },
+        "1982": {
+          "apps": 5,
+          "goals": 2
+        },
+        "1986": {
+          "apps": 6,
+          "goals": 2
+        }
+      },
+      "given": "Michel",
+      "family": "Platini",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/66/Michel_Platini_2010_%28cropped%29.jpg"
+    },
+    {
+      "name": "Zidane",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 12,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 5,
+          "goals": 2
+        },
+        "2002": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 6,
+          "goals": 3
+        }
+      },
+      "given": "Zinedine",
+      "family": "Zidane",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg/330px-Zinedine_Zidane_by_Tasnim_03.jpg"
+    },
+    {
+      "name": "Griezmann",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 19,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 7,
+          "goals": 4
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Antoine",
+      "family": "Griezmann",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/FRA-ARG_%2810%29_%28cropped%29.jpg/330px-FRA-ARG_%2810%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Lloris",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 20,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 6,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 6,
+          "goals": 0
+        }
+      },
+      "given": "Hugo",
+      "family": "Lloris",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lloris_2018_%28cropped%29.jpg/330px-Lloris_2018_%28cropped%29.jpg"
+    },
+    {
+      "name": "Varane",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 18,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 7,
+          "goals": 1
+        },
+        "2022": {
+          "apps": 6,
+          "goals": 0
+        }
+      },
+      "given": "Raphaël",
+      "family": "Varane",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Rapha%C3%ABl_Varane_2018_%28cropped%29.jpg"
+    }
   ],
   "spain": [
-    { "name": "Villa", "pos": "FW", "goals": 9, "apps": 12, "years": [2006, 2010, 2014] },
-    { "name": "Butragueño", "pos": "FW", "goals": 5, "apps": 9, "years": [1986, 1990] },
-    { "name": "Morientes", "pos": "FW", "goals": 5, "apps": 9, "years": [1998, 2002] },
-    { "name": "Raúl", "pos": "FW", "goals": 5, "apps": 10, "years": [1998, 2002, 2006] },
-    { "name": "Torres", "pos": "FW", "goals": 4, "apps": 14, "years": [2006, 2010, 2014] },
-    { "name": "Casillas", "pos": "GK", "goals": 0, "apps": 17, "years": [2002, 2006, 2010, 2014] },
-    { "name": "Ramos", "pos": "DF", "goals": 2, "apps": 17, "years": [2006, 2010, 2014, 2018] },
-    { "name": "Zubizarreta", "pos": "GK", "goals": 0, "apps": 16, "years": [1986, 1990, 1994, 1998] },
-    { "name": "Busquets", "pos": "MF", "goals": 0, "apps": 16, "years": [2010, 2014, 2018, 2022] },
-    { "name": "Xavi", "pos": "MF", "goals": 1, "apps": 15, "years": [2002, 2006, 2010, 2014] },
-    { "name": "Iniesta", "pos": "MF", "goals": 2, "apps": 14, "years": [2006, 2010, 2014, 2018] }
+    {
+      "name": "Villa",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 12,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 3
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 5
+        },
+        "2014": {
+          "apps": 1,
+          "goals": 1
+        }
+      },
+      "given": "David",
+      "family": "Villa",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Spain-Tahiti%2C_Confederations_Cup_2013_%2802%29_%28Villa_crop%29.jpg/330px-Spain-Tahiti%2C_Confederations_Cup_2013_%2802%29_%28Villa_crop%29.jpg"
+    },
+    {
+      "name": "Butragueño",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 9,
+      "years": [
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 5,
+          "goals": 5
+        },
+        "1990": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Emilio",
+      "family": "Butragueño",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Emilio_Butrague%C3%B1o_-_240422_191751-2_%28cropped%29.jpg/330px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Emilio_Butrague%C3%B1o_-_240422_191751-2_%28cropped%29.jpg"
+    },
+    {
+      "name": "Morientes",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 9,
+      "years": [
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 2,
+          "goals": 2
+        },
+        "2002": {
+          "apps": 5,
+          "goals": 3
+        }
+      },
+      "given": "Fernando",
+      "family": "Morientes",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Fernando_Morientes_-_53822470816.jpg/330px-Fernando_Morientes_-_53822470816.jpg"
+    },
+    {
+      "name": "Raúl",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 10,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 3
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "not applicable",
+      "family": "Raúl",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/25th_Laureus_World_Sports_Awards_-_Ra%C3%BAl_-_240422_132916-2_%28cropped%29.jpg/330px-25th_Laureus_World_Sports_Awards_-_Ra%C3%BAl_-_240422_132916-2_%28cropped%29.jpg"
+    },
+    {
+      "name": "Torres",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 3
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Fernando",
+      "family": "Torres",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/57/Fernando_Torres_2017.jpg"
+    },
+    {
+      "name": "Casillas",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 17,
+      "years": [
+        2002,
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Iker",
+      "family": "Casillas",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Iker-Casillas-SportsTrade-2021-cropped.jpg/330px-Iker-Casillas-SportsTrade-2021-cropped.jpg"
+    },
+    {
+      "name": "Ramos",
+      "pos": "DF",
+      "goals": 2,
+      "apps": 17,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Sergio",
+      "family": "Ramos",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Sergio_Ramos_Interview_2021_%28cropped%29.jpg/330px-Sergio_Ramos_Interview_2021_%28cropped%29.jpg"
+    },
+    {
+      "name": "Zubizarreta",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 16,
+      "years": [
+        1986,
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1990": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Andoni",
+      "family": "Zubizarreta",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Andoni_Zubizarreta_en_2013-03_-_versi%C3%B3n_ampliada_%28cropped%29.JPG/330px-Andoni_Zubizarreta_en_2013-03_-_versi%C3%B3n_ampliada_%28cropped%29.JPG"
+    },
+    {
+      "name": "Busquets",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 16,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Sergio",
+      "family": "Busquets",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sergio_Busquets_NYCFC_Miami_24_Sep_2025-020_%28cropped%29.jpg/330px-Sergio_Busquets_NYCFC_Miami_24_Sep_2025-020_%28cropped%29.jpg"
+    },
+    {
+      "name": "Xavi",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 15,
+      "years": [
+        2002,
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "not applicable",
+      "family": "Xavi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Xavi%2C_Persepolis_vs._Al_Sadd%2C_20190520_02_%28cropped%29.jpg/330px-Xavi%2C_Persepolis_vs._Al_Sadd%2C_20190520_02_%28cropped%29.jpg"
+    },
+    {
+      "name": "Iniesta",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 14,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 6,
+          "goals": 2
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Andrés",
+      "family": "Iniesta",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Andr%C3%A9s_Iniesta_2019.jpg/330px-Andr%C3%A9s_Iniesta_2019.jpg"
+    }
   ],
   "england": [
-    { "name": "Lineker", "pos": "FW", "goals": 10, "apps": 12, "years": [1986, 1990] },
-    { "name": "Kane", "pos": "FW", "goals": 8, "apps": 12, "years": [2018, 2022] },
-    { "name": "Hurst", "pos": "FW", "goals": 5, "apps": 8, "years": [1966, 1970] },
-    { "name": "Charlton", "pos": "MF", "goals": 4, "apps": 14, "years": [1962, 1966, 1970] },
-    { "name": "Owen", "pos": "FW", "goals": 4, "apps": 12, "years": [1998, 2002, 2006] },
-    { "name": "Shilton", "pos": "GK", "goals": 0, "apps": 17, "years": [1982, 1986, 1990] },
-    { "name": "Butcher", "pos": "DF", "goals": 0, "apps": 14, "years": [1982, 1986, 1990] },
-    { "name": "Moore", "pos": "DF", "goals": 0, "apps": 14, "years": [1962, 1966, 1970] },
-    { "name": "Beckham", "pos": "MF", "goals": 3, "apps": 13, "years": [1998, 2002, 2006] }
+    {
+      "name": "Lineker",
+      "pos": "FW",
+      "goals": 10,
+      "apps": 12,
+      "years": [
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 5,
+          "goals": 6
+        },
+        "1990": {
+          "apps": 7,
+          "goals": 4
+        }
+      },
+      "given": "Gary",
+      "family": "Lineker",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Prime_Minister_Keir_Starmer_hosts_St_George%27s_Day_Reception_%2854470857860%29_%28cropped%29.jpg/330px-Prime_Minister_Keir_Starmer_hosts_St_George%27s_Day_Reception_%2854470857860%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Kane",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 12,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 6,
+          "goals": 6
+        },
+        "2022": {
+          "apps": 5,
+          "goals": 2
+        }
+      },
+      "given": "Harry",
+      "family": "Kane",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Harry_Kane_on_October_10%2C_2023.jpg/330px-Harry_Kane_on_October_10%2C_2023.jpg"
+    },
+    {
+      "name": "Hurst",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 8,
+      "years": [
+        1966,
+        1970
+      ],
+      "byYear": {
+        "1966": {
+          "apps": 0,
+          "goals": 4
+        },
+        "1970": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Geoff",
+      "family": "Hurst",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Geoff_Hurst_%282%29.jpg/330px-Geoff_Hurst_%282%29.jpg"
+    },
+    {
+      "name": "Charlton",
+      "pos": "MF",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        1962,
+        1966,
+        1970
+      ],
+      "byYear": {
+        "1962": {
+          "apps": 0,
+          "goals": 1
+        },
+        "1966": {
+          "apps": 0,
+          "goals": 3
+        },
+        "1970": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Bobby",
+      "family": "Charlton",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LondonHouseAmsterdam1966_Bobby_Charlton.jpg/330px-LondonHouseAmsterdam1966_Bobby_Charlton.jpg"
+    },
+    {
+      "name": "Owen",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 12,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 4,
+          "goals": 2
+        },
+        "2002": {
+          "apps": 5,
+          "goals": 2
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Michael",
+      "family": "Owen",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Michael_Owen.jpg/330px-Michael_Owen.jpg"
+    },
+    {
+      "name": "Shilton",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 17,
+      "years": [
+        1982,
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1986": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1990": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Peter",
+      "family": "Shilton"
+    },
+    {
+      "name": "Butcher",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 14,
+      "years": [
+        1982,
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1986": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1990": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Terry",
+      "family": "Butcher",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/TerryButcherMay2010.jpg/330px-TerryButcherMay2010.jpg"
+    },
+    {
+      "name": "Moore",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 14,
+      "years": [
+        1962,
+        1966,
+        1970
+      ],
+      "byYear": {
+        "1970": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Bobby",
+      "family": "Moore",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Bobby_moore_elgrafico_1970.jpg/330px-Bobby_moore_elgrafico_1970.jpg"
+    },
+    {
+      "name": "Beckham",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 13,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 5,
+          "goals": 1
+        },
+        "2006": {
+          "apps": 5,
+          "goals": 1
+        }
+      },
+      "given": "David",
+      "family": "Beckham",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/David_Beckham_UNICEF_%28cropped2%29.jpg/330px-David_Beckham_UNICEF_%28cropped2%29.jpg"
+    }
   ],
   "netherlands": [
-    { "name": "Rep", "pos": "FW", "goals": 7, "apps": 14, "years": [1974, 1978] },
-    { "name": "Rensenbrink", "pos": "FW", "goals": 6, "apps": 13, "years": [1974, 1978] },
-    { "name": "Bergkamp", "pos": "FW", "goals": 6, "apps": 12, "years": [1994, 1998] },
-    { "name": "Robben", "pos": "FW", "goals": 6, "apps": 14, "years": [2006, 2010, 2014] },
-    { "name": "van Persie", "pos": "FW", "goals": 6, "apps": 16, "years": [2006, 2010, 2014] },
-    { "name": "Sneijder", "pos": "MF", "goals": 6, "apps": 17, "years": [2006, 2010, 2014] },
-    { "name": "Neeskens", "pos": "MF", "goals": 5, "apps": 12, "years": [1974, 1978] },
-    { "name": "Cruyff", "pos": "FW", "goals": 3, "apps": 9, "years": [1974] },
-    { "name": "van der Sar", "pos": "GK", "goals": 0, "apps": 14, "years": [1994, 1998, 2006] }
+    {
+      "name": "Rep",
+      "pos": "FW",
+      "goals": 7,
+      "apps": 14,
+      "years": [
+        1974,
+        1978
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 7,
+          "goals": 4
+        },
+        "1978": {
+          "apps": 7,
+          "goals": 3
+        }
+      },
+      "given": "Johnny",
+      "family": "Rep",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Johnny_Rep_1974.jpg/330px-Johnny_Rep_1974.jpg"
+    },
+    {
+      "name": "Rensenbrink",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 13,
+      "years": [
+        1974,
+        1978
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 6,
+          "goals": 1
+        },
+        "1978": {
+          "apps": 7,
+          "goals": 5
+        }
+      },
+      "given": "Rob",
+      "family": "Rensenbrink",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Rob_Rensenbrink_%281978%29.jpg/330px-Rob_Rensenbrink_%281978%29.jpg"
+    },
+    {
+      "name": "Bergkamp",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 12,
+      "years": [
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 5,
+          "goals": 3
+        },
+        "1998": {
+          "apps": 7,
+          "goals": 3
+        }
+      },
+      "given": "Dennis",
+      "family": "Bergkamp",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dennis_Bergkamp_2014_%28cropped%29.jpg"
+    },
+    {
+      "name": "Robben",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 14,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 5,
+          "goals": 2
+        },
+        "2014": {
+          "apps": 7,
+          "goals": 3
+        }
+      },
+      "given": "Arjen",
+      "family": "Robben",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Arjen_Robben_v_Shakhtar_2015_%28cropped%29.jpg/330px-Arjen_Robben_v_Shakhtar_2015_%28cropped%29.jpg"
+    },
+    {
+      "name": "van Persie",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 16,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 6,
+          "goals": 4
+        }
+      },
+      "given": "Robin",
+      "family": "van Persie",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Loco-Fener_%2810%29.jpg/330px-Loco-Fener_%2810%29.jpg"
+    },
+    {
+      "name": "Sneijder",
+      "pos": "MF",
+      "goals": 6,
+      "apps": 17,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 7,
+          "goals": 5
+        },
+        "2014": {
+          "apps": 6,
+          "goals": 1
+        }
+      },
+      "given": "Wesley",
+      "family": "Sneijder",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Wesley_Sneijder_%2815487233555%29_%28cropped%29.jpg/330px-Wesley_Sneijder_%2815487233555%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Neeskens",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 12,
+      "years": [
+        1974,
+        1978
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 7,
+          "goals": 5
+        },
+        "1978": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Johan",
+      "family": "Neeskens"
+    },
+    {
+      "name": "Cruyff",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 9,
+      "years": [
+        1974
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 7,
+          "goals": 3
+        }
+      },
+      "given": "Johan",
+      "family": "Cruyff",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Johan_Cruijff_%281974%29.jpg/330px-Johan_Cruijff_%281974%29.jpg"
+    },
+    {
+      "name": "van der Sar",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 14,
+      "years": [
+        1994,
+        1998,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Edwin",
+      "family": "van der Sar",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Edwin_van_der_Sar_2015.jpg/330px-Edwin_van_der_Sar_2015.jpg"
+    }
   ],
   "portugal": [
-    { "name": "Eusébio", "pos": "FW", "goals": 9, "apps": 6, "years": [1966] },
-    { "name": "Ronaldo", "pos": "FW", "goals": 8, "apps": 22, "years": [2006, 2010, 2014, 2018, 2022] },
-    { "name": "Pauleta", "pos": "FW", "goals": 4, "apps": 9, "years": [2002, 2006] },
-    { "name": "G. Ramos", "pos": "FW", "goals": 3, "apps": 5, "years": [2022] },
-    { "name": "Figo", "pos": "MF", "goals": 1, "apps": 13, "years": [1998, 2002, 2006] },
-    { "name": "Pepe", "pos": "DF", "goals": 2, "apps": 11, "years": [2010, 2014, 2018, 2022] }
+    {
+      "name": "Eusébio",
+      "pos": "FW",
+      "goals": 9,
+      "apps": 6,
+      "years": [
+        1966
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Eusebio_en_1973.jpg/330px-Eusebio_en_1973.jpg"
+    },
+    {
+      "name": "Ronaldo",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 22,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 6,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 4
+        },
+        "2022": {
+          "apps": 5,
+          "goals": 1
+        }
+      },
+      "given": "Cristiano",
+      "family": "Ronaldo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/President_Donald_Trump_meets_with_Cristiano_Ronaldo_in_the_Oval_Office_%2854933344262%29_%28cropped_and_rotated%29.jpg/330px-President_Donald_Trump_meets_with_Cristiano_Ronaldo_in_the_Oval_Office_%2854933344262%29_%28cropped_and_rotated%29.jpg"
+    },
+    {
+      "name": "Pauleta",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 9,
+      "years": [
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 3,
+          "goals": 3
+        },
+        "2006": {
+          "apps": 6,
+          "goals": 1
+        }
+      },
+      "given": "not applicable",
+      "family": "Pauleta",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Pedro_Pauleta_2012.jpg"
+    },
+    {
+      "name": "G. Ramos",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 5,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 4,
+          "goals": 3
+        }
+      },
+      "given": "Gonçalo",
+      "family": "Ramos",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Gon%C3%A7alo_Ramos_USMNT_v_Portugal_Mar_31_2026-32_%28cropped%29.jpg/330px-Gon%C3%A7alo_Ramos_USMNT_v_Portugal_Mar_31_2026-32_%28cropped%29.jpg"
+    },
+    {
+      "name": "Figo",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 13,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Luís",
+      "family": "Figo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Luis_Figo_2023.jpg/330px-Luis_Figo_2023.jpg"
+    },
+    {
+      "name": "Pepe",
+      "pos": "DF",
+      "goals": 2,
+      "apps": 11,
+      "years": [
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2022": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "not applicable",
+      "family": "Pepe"
+    }
   ],
   "belgium": [
-    { "name": "Wilmots", "pos": "FW", "goals": 5, "apps": 17, "years": [1990, 1994, 1998, 2002] },
-    { "name": "Lukaku", "pos": "FW", "goals": 5, "apps": 13, "years": [2014, 2018, 2022] },
-    { "name": "Ceulemans", "pos": "MF", "goals": 4, "apps": 16, "years": [1982, 1986, 1990] },
-    { "name": "Scifo", "pos": "MF", "goals": 3, "apps": 17, "years": [1986, 1990, 1994, 1998] },
-    { "name": "Hazard", "pos": "MF", "goals": 3, "apps": 14, "years": [2014, 2018, 2022] },
-    { "name": "Courtois", "pos": "GK", "goals": 0, "apps": 15, "years": [2014, 2018, 2022] },
-    { "name": "Kompany", "pos": "DF", "goals": 0, "apps": 10, "years": [2014, 2018] }
+    {
+      "name": "Wilmots",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 17,
+      "years": [
+        1990,
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 1,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 2
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 3
+        }
+      },
+      "given": "Marc",
+      "family": "Wilmots",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Marc_Wilmots_20190913_%28cropped%29.jpg/330px-Marc_Wilmots_20190913_%28cropped%29.jpg"
+    },
+    {
+      "name": "Lukaku",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 13,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 6,
+          "goals": 4
+        },
+        "2022": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Romelu",
+      "family": "Lukaku",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Romelu_Lukaku_2021.jpg/330px-Romelu_Lukaku_2021.jpg"
+    },
+    {
+      "name": "Ceulemans",
+      "pos": "MF",
+      "goals": 4,
+      "apps": 16,
+      "years": [
+        1982,
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1986": {
+          "apps": 7,
+          "goals": 3
+        },
+        "1990": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Jan",
+      "family": "Ceulemans",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Jan_Ceulemans.jpg/330px-Jan_Ceulemans.jpg"
+    },
+    {
+      "name": "Scifo",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 17,
+      "years": [
+        1986,
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 7,
+          "goals": 2
+        },
+        "1990": {
+          "apps": 4,
+          "goals": 1
+        },
+        "1994": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Enzo",
+      "family": "Scifo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Enzo_Scifo-Torino.jpg/330px-Enzo_Scifo-Torino.jpg"
+    },
+    {
+      "name": "Hazard",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 14,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 6,
+          "goals": 3
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Eden",
+      "family": "Hazard",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/GHS-pictogram-flamme.svg/330px-GHS-pictogram-flamme.svg.png"
+    },
+    {
+      "name": "Courtois",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 15,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 5,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 7,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Thibaut",
+      "family": "Courtois",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Courtois_2018_%28cropped%29.jpg/330px-Courtois_2018_%28cropped%29.jpg"
+    },
+    {
+      "name": "Kompany",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 10,
+      "years": [
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Vincent",
+      "family": "Kompany",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Kompany_Bayern_Munich_%28cropped%29.jpg/330px-Vincent_Kompany_Bayern_Munich_%28cropped%29.jpg"
+    }
   ],
   "sweden": [
-    { "name": "Zlatan Ibrahimović", "pos": "FW", "goals": 4, "apps": 15, "years": [2002, 2006, 2018] },
-    { "name": "Larsson", "pos": "FW", "goals": 5, "apps": 14, "years": [1994, 2002, 2006] },
-    { "name": "Nordahl", "pos": "FW", "goals": 6, "apps": 7, "years": [1950] },
-    { "name": "Allbäck", "pos": "FW", "goals": 4, "apps": 9, "years": [2002, 2006] },
-    { "name": "Mellberg", "pos": "DF", "goals": 1, "apps": 11, "years": [2002, 2006] }
+    {
+      "name": "Zlatan Ibrahimović",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 15,
+      "years": [
+        2002,
+        2006,
+        2018
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Zlatan",
+      "family": "Ibrahimović",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Zlatan_Ibrahimovi%C4%87_June_2018.jpg/330px-Zlatan_Ibrahimovi%C4%87_June_2018.jpg"
+    },
+    {
+      "name": "Larsson",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 14,
+      "years": [
+        1994,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 5,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 3
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Henrik",
+      "family": "Larsson"
+    },
+    {
+      "name": "Nordahl",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 7,
+      "years": [
+        1950
+      ]
+    },
+    {
+      "name": "Allbäck",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 9,
+      "years": [
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Marcus",
+      "family": "Allbäck",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Marcus_Allb%C3%A4ck_p%C3%A5_Idrottsgalan_2013.jpg/330px-Marcus_Allb%C3%A4ck_p%C3%A5_Idrottsgalan_2013.jpg"
+    },
+    {
+      "name": "Mellberg",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 11,
+      "years": [
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Olof",
+      "family": "Mellberg",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Olof_Mellberg%2713.JPG/330px-Olof_Mellberg%2713.JPG"
+    }
   ],
   "poland": [
-    { "name": "Lato", "pos": "FW", "goals": 10, "apps": 20, "years": [1974, 1978, 1982, 1986] },
-    { "name": "Szarmach", "pos": "FW", "goals": 7, "apps": 12, "years": [1974, 1978, 1982] },
-    { "name": "Lubański", "pos": "FW", "goals": 6, "apps": 13, "years": [1974, 1978, 1982, 1986] },
-    { "name": "Lewandowski", "pos": "FW", "goals": 5, "apps": 10, "years": [2018, 2022] },
-    { "name": "Boniek", "pos": "MF", "goals": 4, "apps": 14, "years": [1978, 1982, 1986] }
+    {
+      "name": "Lato",
+      "pos": "FW",
+      "goals": 10,
+      "apps": 20,
+      "years": [
+        1974,
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 7,
+          "goals": 7
+        },
+        "1978": {
+          "apps": 6,
+          "goals": 2
+        },
+        "1982": {
+          "apps": 7,
+          "goals": 1
+        }
+      },
+      "given": "Grzegorz",
+      "family": "Lato",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lato_-_Agora.jpg/330px-Lato_-_Agora.jpg"
+    },
+    {
+      "name": "Szarmach",
+      "pos": "FW",
+      "goals": 7,
+      "apps": 12,
+      "years": [
+        1974,
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 6,
+          "goals": 5
+        },
+        "1978": {
+          "apps": 5,
+          "goals": 1
+        },
+        "1982": {
+          "apps": 2,
+          "goals": 1
+        }
+      },
+      "given": "Andrzej",
+      "family": "Szarmach",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Andrzej_Szarmach_2017.jpg/330px-Andrzej_Szarmach_2017.jpg"
+    },
+    {
+      "name": "Lubański",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 13,
+      "years": [
+        1974,
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Włodzimierz",
+      "family": "Lubański",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/W%C5%82odzimierz_Luba%C5%84ski.jpg/330px-W%C5%82odzimierz_Luba%C5%84ski.jpg"
+    },
+    {
+      "name": "Lewandowski",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 10,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 4,
+          "goals": 2
+        }
+      },
+      "given": "Robert",
+      "family": "Lewandowski",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/2019147183134_2019-05-27_Fussball_1.FC_Kaiserslautern_vs_FC_Bayern_M%C3%BCnchen_-_Sven_-_1D_X_MK_II_-_0228_-_B70I8527_%28cropped%29.jpg/330px-2019147183134_2019-05-27_Fussball_1.FC_Kaiserslautern_vs_FC_Bayern_M%C3%BCnchen_-_Sven_-_1D_X_MK_II_-_0228_-_B70I8527_%28cropped%29.jpg"
+    },
+    {
+      "name": "Boniek",
+      "pos": "MF",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        1978,
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 6,
+          "goals": 2
+        },
+        "1982": {
+          "apps": 6,
+          "goals": 4
+        },
+        "1986": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Zbigniew",
+      "family": "Boniek",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Zbigniew_Boniek_2015.jpg/330px-Zbigniew_Boniek_2015.jpg"
+    }
   ],
   "croatia": [
-    { "name": "Davor Šuker", "pos": "FW", "goals": 6, "apps": 7, "years": [1998] },
-    { "name": "Modrić", "pos": "MF", "goals": 3, "apps": 21, "years": [2006, 2014, 2018, 2022] },
-    { "name": "Mandžukić", "pos": "FW", "goals": 3, "apps": 14, "years": [2014, 2018] },
-    { "name": "Perišić", "pos": "MF", "goals": 3, "apps": 19, "years": [2014, 2018, 2022] },
-    { "name": "Subašić", "pos": "GK", "goals": 0, "apps": 10, "years": [2018] }
+    {
+      "name": "Davor Šuker",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 7,
+      "years": [
+        1998
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 7,
+          "goals": 6
+        }
+      },
+      "given": "Davor",
+      "family": "Šuker",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/a/af/XVIII_%D0%9A%D0%BE%D0%BD%D0%B3%D1%80%D0%B5%D1%81%D1%81_%D0%A4%D0%A4%D0%A3._11_%D0%BC%D0%B0%D1%80%D1%82%D0%B0_2016_%D0%B3%D0%BE%D0%B4%D0%B0_%E2%80%94_672209_%28cropped%29.jpg"
+    },
+    {
+      "name": "Modrić",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 21,
+      "years": [
+        2006,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 2,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 7,
+          "goals": 2
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Luka",
+      "family": "Modrić",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ofrenda_de_la_Liga_y_la_Champions-57-L.Mill%C3%A1n_%2852109310843%29_%28Luka_Modri%C4%87%29.jpg/330px-Ofrenda_de_la_Liga_y_la_Champions-57-L.Mill%C3%A1n_%2852109310843%29_%28Luka_Modri%C4%87%29.jpg"
+    },
+    {
+      "name": "Mandžukić",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 14,
+      "years": [
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 2,
+          "goals": 2
+        },
+        "2018": {
+          "apps": 6,
+          "goals": 3
+        }
+      },
+      "given": "Mario",
+      "family": "Mandžukić",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mario_Mand%C5%BEuki%C4%87_in_2018.jpg/330px-Mario_Mand%C5%BEuki%C4%87_in_2018.jpg"
+    },
+    {
+      "name": "Perišić",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 19,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 3,
+          "goals": 2
+        },
+        "2018": {
+          "apps": 7,
+          "goals": 3
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 1
+        }
+      },
+      "given": "Ivan",
+      "family": "Perišić",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/85/Ivan_Peri%C5%A1i%C4%87_%28cropped%29.jpg"
+    },
+    {
+      "name": "Subašić",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 10,
+      "years": [
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 6,
+          "goals": 0
+        }
+      },
+      "given": "Danijel",
+      "family": "Subašić",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Danijel_Suba%C5%A1i%C4%87_2018_2.jpg/330px-Danijel_Suba%C5%A1i%C4%87_2018_2.jpg"
+    }
   ],
   "russia": [
-    { "name": "Salenko", "pos": "FW", "goals": 6, "apps": 6, "years": [1994] },
-    { "name": "Cheryshev", "pos": "FW", "goals": 4, "apps": 6, "years": [2018] },
-    { "name": "Beschastnykh", "pos": "FW", "goals": 3, "apps": 6, "years": [1994, 2002] },
-    { "name": "Pavlyuchenko", "pos": "FW", "goals": 3, "apps": 6, "years": [2014] },
-    { "name": "Akinfeev", "pos": "GK", "goals": 0, "apps": 9, "years": [2014, 2018] }
+    {
+      "name": "Salenko",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 6,
+      "years": [
+        1994
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 6
+        }
+      },
+      "given": "Oleg",
+      "family": "Salenko",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/O.Salenko.JPG/330px-O.Salenko.JPG"
+    },
+    {
+      "name": "Cheryshev",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 6,
+      "years": [
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 5,
+          "goals": 4
+        }
+      },
+      "given": "Denis",
+      "family": "Cheryshev",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Denis_Cheryshev_2019.jpg/330px-Denis_Cheryshev_2019.jpg"
+    },
+    {
+      "name": "Beschastnykh",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 6,
+      "years": [
+        1994,
+        2002
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Vladimir",
+      "family": "Beschastnykh",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Vladimir_Beschastnykh_2022.jpg/330px-Vladimir_Beschastnykh_2022.jpg"
+    },
+    {
+      "name": "Pavlyuchenko",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 6,
+      "years": [
+        2014
+      ]
+    },
+    {
+      "name": "Akinfeev",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 9,
+      "years": [
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "Igor",
+      "family": "Akinfeev",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Igor_Akinfeev_2020.jpg/330px-Igor_Akinfeev_2020.jpg"
+    }
   ],
   "denmark": [
-    { "name": "Elkjær", "pos": "FW", "goals": 5, "apps": 9, "years": [1986] },
-    { "name": "Laudrup M.", "pos": "FW", "goals": 4, "apps": 14, "years": [1986, 1998, 2002] },
-    { "name": "Laudrup B.", "pos": "FW", "goals": 4, "apps": 9, "years": [1986, 1998] },
-    { "name": "Eriksen", "pos": "MF", "goals": 4, "apps": 14, "years": [2010, 2018, 2022] }
+    {
+      "name": "Elkjær",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 9,
+      "years": [
+        1986
+      ]
+    },
+    {
+      "name": "Laudrup M.",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        1986,
+        1998,
+        2002
+      ]
+    },
+    {
+      "name": "Laudrup B.",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 9,
+      "years": [
+        1986,
+        1998
+      ]
+    },
+    {
+      "name": "Eriksen",
+      "pos": "MF",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        2010,
+        2018,
+        2022
+      ]
+    }
   ],
   "switzerland": [
-    { "name": "Shaqiri", "pos": "FW", "goals": 5, "apps": 16, "years": [2014, 2018, 2022] },
-    { "name": "Seferovic", "pos": "FW", "goals": 3, "apps": 10, "years": [2014, 2018, 2022] },
-    { "name": "Xhaka", "pos": "MF", "goals": 2, "apps": 16, "years": [2014, 2018, 2022] },
-    { "name": "Senderos", "pos": "DF", "goals": 0, "apps": 9, "years": [2006, 2010, 2014] },
-    { "name": "Sommer", "pos": "GK", "goals": 0, "apps": 12, "years": [2014, 2018, 2022] }
+    {
+      "name": "Shaqiri",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 16,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 4,
+          "goals": 3
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Xherdan",
+      "family": "Shaqiri",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Xherdan_Shaqiri_2018.jpg/330px-Xherdan_Shaqiri_2018.jpg"
+    },
+    {
+      "name": "Seferovic",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 10,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Haris",
+      "family": "Seferovic",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Haris_Seferovi%C4%87_2018_%28cropped%29.jpg"
+    },
+    {
+      "name": "Xhaka",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 16,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2022": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Granit",
+      "family": "Xhaka",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Granit_Xhaka_%28cropped%29.jpg/330px-Granit_Xhaka_%28cropped%29.jpg"
+    },
+    {
+      "name": "Senderos",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 9,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Philippe",
+      "family": "Senderos",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Senderos061115-02.jpg/330px-Senderos061115-02.jpg"
+    },
+    {
+      "name": "Sommer",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 12,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Yann",
+      "family": "Sommer",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/FC_Salzburg_gegen_Inter_Mailand_%28Testspiel_2023-08-09%29_69.jpg/330px-FC_Salzburg_gegen_Inter_Mailand_%28Testspiel_2023-08-09%29_69.jpg"
+    }
   ],
   "austria": [
-    { "name": "Krankl", "pos": "FW", "goals": 8, "apps": 8, "years": [1978, 1982] },
-    { "name": "Binder", "pos": "FW", "goals": 4, "apps": 4, "years": [1954] },
-    { "name": "Stielike", "pos": "MF", "goals": 2, "apps": 8, "years": [1978, 1982] }
+    {
+      "name": "Krankl",
+      "pos": "FW",
+      "goals": 8,
+      "apps": 8,
+      "years": [
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1978": {
+          "apps": 6,
+          "goals": 4
+        },
+        "1982": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Hans",
+      "family": "Krankl",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/FC_Red_Bull_Salzburg_vs._SK_Rapid_Wien_%282022-09-18%29_17a.jpg/330px-FC_Red_Bull_Salzburg_vs._SK_Rapid_Wien_%282022-09-18%29_17a.jpg"
+    },
+    {
+      "name": "Binder",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 4,
+      "years": [
+        1954
+      ]
+    },
+    {
+      "name": "Stielike",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 8,
+      "years": [
+        1978,
+        1982
+      ]
+    }
   ],
   "hungary": [
-    { "name": "Kocsis", "pos": "FW", "goals": 11, "apps": 8, "years": [1954] },
-    { "name": "Tichy", "pos": "FW", "goals": 7, "apps": 7, "years": [1958, 1962, 1966] },
-    { "name": "Puskas", "pos": "FW", "goals": 5, "apps": 10, "years": [1954, 1958, 1962] },
-    { "name": "Albert", "pos": "FW", "goals": 4, "apps": 7, "years": [1958, 1962, 1966] }
+    {
+      "name": "Kocsis",
+      "pos": "FW",
+      "goals": 11,
+      "apps": 8,
+      "years": [
+        1954
+      ]
+    },
+    {
+      "name": "Tichy",
+      "pos": "FW",
+      "goals": 7,
+      "apps": 7,
+      "years": [
+        1958,
+        1962,
+        1966
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Mairie_de_Tichy.jpg/330px-Mairie_de_Tichy.jpg"
+    },
+    {
+      "name": "Puskas",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 10,
+      "years": [
+        1954,
+        1958,
+        1962
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/9/93/Ferenc_Puskas_en_1965.jpg"
+    },
+    {
+      "name": "Albert",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 7,
+      "years": [
+        1958,
+        1962,
+        1966
+      ]
+    }
   ],
   "czech-republic": [
-    { "name": "Koller", "pos": "FW", "goals": 4, "apps": 11, "years": [1994, 1998, 2006] },
-    { "name": "Nedvěd", "pos": "MF", "goals": 3, "apps": 12, "years": [1994, 1998, 2006] },
-    { "name": "Poborský", "pos": "MF", "goals": 2, "apps": 9, "years": [1990, 1994, 1998, 2006] }
+    {
+      "name": "Koller",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 11,
+      "years": [
+        1994,
+        1998,
+        2006
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 1,
+          "goals": 1
+        }
+      },
+      "given": "Jan",
+      "family": "Koller",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Jan_Koller_2019.jpg/330px-Jan_Koller_2019.jpg"
+    },
+    {
+      "name": "Nedvěd",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 12,
+      "years": [
+        1994,
+        1998,
+        2006
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Pavel",
+      "family": "Nedvěd",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pavel_Nedv%C4%9Bd.jpg/330px-Pavel_Nedv%C4%9Bd.jpg"
+    },
+    {
+      "name": "Poborský",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        1990,
+        1994,
+        1998,
+        2006
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Karel",
+      "family": "Poborský",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Karel_Poborsk%C3%BD_%282012%29.jpg/330px-Karel_Poborsk%C3%BD_%282012%29.jpg"
+    }
   ],
   "romania": [
-    { "name": "Dumitrescu", "pos": "FW", "goals": 4, "apps": 9, "years": [1994, 1998] },
-    { "name": "Raducioiu", "pos": "FW", "goals": 4, "apps": 8, "years": [1990, 1994] },
-    { "name": "Hagi", "pos": "MF", "goals": 3, "apps": 19, "years": [1990, 1994, 1998] }
+    {
+      "name": "Dumitrescu",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 9,
+      "years": [
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 5,
+          "goals": 2
+        },
+        "1998": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Ilie",
+      "family": "Dumitrescu",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ilie_Dumitrescu_-_16_June_2018_%28cropped%29.jpg/330px-Ilie_Dumitrescu_-_16_June_2018_%28cropped%29.jpg"
+    },
+    {
+      "name": "Raducioiu",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 8,
+      "years": [
+        1990,
+        1994
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 4,
+          "goals": 4
+        }
+      },
+      "given": "Florin",
+      "family": "Răducioiu",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Florin_Raducioiu_-_16_June_2018_%28cropped%29.jpg/330px-Florin_Raducioiu_-_16_June_2018_%28cropped%29.jpg"
+    },
+    {
+      "name": "Hagi",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 19,
+      "years": [
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 5,
+          "goals": 3
+        },
+        "1998": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Gheorghe",
+      "family": "Hagi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Lansarea_candidaturii_Gabrielei_Szabo_pentru_Camera_Deputatilor%2C_Voluntari_-_04.05_%2848%29_%2814270956179%29_%28cropped%29.jpg/330px-Lansarea_candidaturii_Gabrielei_Szabo_pentru_Camera_Deputatilor%2C_Voluntari_-_04.05_%2848%29_%2814270956179%29_%28cropped%29.jpg"
+    }
   ],
   "turkey": [
-    { "name": "Mansız", "pos": "FW", "goals": 5, "apps": 6, "years": [2002] },
-    { "name": "Şükür", "pos": "FW", "goals": 3, "apps": 10, "years": [1998, 2002] },
-    { "name": "Basturk", "pos": "MF", "goals": 1, "apps": 6, "years": [2002] }
+    {
+      "name": "Mansız",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 6,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 7,
+          "goals": 3
+        }
+      },
+      "given": "İlhan",
+      "family": "Mansız",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2013_Nebelhorn_Trophy_Ilhan_MANSIZ_IMG_5900_%28cropped%29.JPG/330px-2013_Nebelhorn_Trophy_Ilhan_MANSIZ_IMG_5900_%28cropped%29.JPG"
+    },
+    {
+      "name": "Şükür",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 10,
+      "years": [
+        1998,
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 7,
+          "goals": 1
+        }
+      },
+      "given": "Hakan",
+      "family": "Şükür",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Hakan.jpg/330px-Hakan.jpg"
+    },
+    {
+      "name": "Basturk",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 6,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Yıldıray",
+      "family": "Baştürk"
+    }
   ],
   "greece": [
-    { "name": "Samaras", "pos": "FW", "goals": 1, "apps": 6, "years": [2010, 2014] },
-    { "name": "Karagounis", "pos": "MF", "goals": 0, "apps": 6, "years": [2010, 2014] }
+    {
+      "name": "Samaras",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 6,
+      "years": [
+        2010,
+        2014
+      ]
+    },
+    {
+      "name": "Karagounis",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 6,
+      "years": [
+        2010,
+        2014
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Georgios_Karagounis_2010.jpg/330px-Georgios_Karagounis_2010.jpg"
+    }
   ],
   "norway": [
-    { "name": "Flo", "pos": "FW", "goals": 2, "apps": 7, "years": [1994, 1998] },
-    { "name": "Rekdal", "pos": "MF", "goals": 2, "apps": 7, "years": [1994, 1998] },
-    { "name": "Solskjaer", "pos": "FW", "goals": 1, "apps": 7, "years": [1994, 1998] }
+    {
+      "name": "Flo",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Jostein",
+      "family": "Flo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Gianluca_Pagliuca_makes_the_save_against_Norway_%28Jostein_Flo%29_in_the_1994_World_Cup_%28cropped%29.jpg/330px-Gianluca_Pagliuca_makes_the_save_against_Norway_%28Jostein_Flo%29_in_the_1994_World_Cup_%28cropped%29.jpg"
+    },
+    {
+      "name": "Rekdal",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 1
+        },
+        "1998": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Kjetil",
+      "family": "Rekdal",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kjetil_Rekdal_2006-06-06.jpg/330px-Kjetil_Rekdal_2006-06-06.jpg"
+    },
+    {
+      "name": "Solskjaer",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 7,
+      "years": [
+        1994,
+        1998
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ole_Gunnar_Solskjaer_Trondheim2011-1_crop.jpg/330px-Ole_Gunnar_Solskjaer_Trondheim2011-1_crop.jpg"
+    }
   ],
   "scotland": [
-    { "name": "Jordan", "pos": "FW", "goals": 4, "apps": 7, "years": [1974, 1978, 1982] },
-    { "name": "Macari", "pos": "FW", "goals": 1, "apps": 3, "years": [1974] }
+    {
+      "name": "Jordan",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 7,
+      "years": [
+        1974,
+        1978,
+        1982
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 3,
+          "goals": 2
+        },
+        "1978": {
+          "apps": 3,
+          "goals": 1
+        },
+        "1982": {
+          "apps": 1,
+          "goals": 1
+        }
+      },
+      "given": "Joe",
+      "family": "Jordan",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/330px-Flag_of_Jordan.svg.png"
+    },
+    {
+      "name": "Macari",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        1974
+      ]
+    }
   ],
   "ireland": [
-    { "name": "Keane R.", "pos": "FW", "goals": 3, "apps": 8, "years": [1994, 2002] },
-    { "name": "Aldridge", "pos": "FW", "goals": 2, "apps": 7, "years": [1990, 1994] },
-    { "name": "Cascarino", "pos": "FW", "goals": 1, "apps": 8, "years": [1990, 1994] }
+    {
+      "name": "Keane R.",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 8,
+      "years": [
+        1994,
+        2002
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Roy",
+      "family": "Keane",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Roy_keane_2014.jpg/330px-Roy_keane_2014.jpg"
+    },
+    {
+      "name": "Aldridge",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1990,
+        1994
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "John",
+      "family": "Aldridge",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/St._Mary_The_Virgin%2C_Aldridge_-_geograph.org.uk_-_1393895.jpg/330px-St._Mary_The_Virgin%2C_Aldridge_-_geograph.org.uk_-_1393895.jpg"
+    },
+    {
+      "name": "Cascarino",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 8,
+      "years": [
+        1990,
+        1994
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Tony",
+      "family": "Cascarino",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/1/13/Tony_Cascarino.jpg"
+    }
   ],
   "wales": [
-    { "name": "Allchurch", "pos": "MF", "goals": 2, "apps": 5, "years": [1958] },
-    { "name": "Charles", "pos": "FW", "goals": 0, "apps": 5, "years": [1958] },
-    { "name": "Bale", "pos": "FW", "goals": 1, "apps": 4, "years": [2022] }
+    {
+      "name": "Allchurch",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 5,
+      "years": [
+        1958
+      ]
+    },
+    {
+      "name": "Charles",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 5,
+      "years": [
+        1958
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Charlemagne_and_Pope_Adrian_I.jpg/330px-Charlemagne_and_Pope_Adrian_I.jpg"
+    },
+    {
+      "name": "Bale",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Gareth",
+      "family": "Bale",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2832%29_%28cropped%29.jpg/330px-2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2832%29_%28cropped%29.jpg"
+    }
   ],
   "serbia": [
-    { "name": "Milosević", "pos": "FW", "goals": 4, "apps": 6, "years": [1998] },
-    { "name": "Tadić", "pos": "FW", "goals": 2, "apps": 7, "years": [2018, 2022] },
-    { "name": "Šavić", "pos": "DF", "goals": 1, "apps": 10, "years": [2010, 2018, 2022] }
+    {
+      "name": "Milosević",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 6,
+      "years": [
+        1998
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Stevan_Kragujevi%C4%87%2C_Slobodan_Milo%C5%A1evi%C4%87%2C_portret_%28cropped%29.jpg/330px-Stevan_Kragujevi%C4%87%2C_Slobodan_Milo%C5%A1evi%C4%87%2C_portret_%28cropped%29.jpg"
+    },
+    {
+      "name": "Tadić",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Dušan",
+      "family": "Tadić",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Dusan_Tadic_EURO2024.png/330px-Dusan_Tadic_EURO2024.png"
+    },
+    {
+      "name": "Šavić",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 10,
+      "years": [
+        2010,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Sergej",
+      "family": "Milinković-Savić",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Milinkovi%C4%87-Savi%C4%87_2018.jpg/330px-Milinkovi%C4%87-Savi%C4%87_2018.jpg"
+    }
   ],
   "ukraine": [
-    { "name": "Shevchenko", "pos": "FW", "goals": 4, "apps": 7, "years": [2006] },
-    { "name": "Voronin", "pos": "FW", "goals": 1, "apps": 5, "years": [2006] },
-    { "name": "Rebrov", "pos": "FW", "goals": 0, "apps": 5, "years": [2006] }
+    {
+      "name": "Shevchenko",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 7,
+      "years": [
+        2006
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 5,
+          "goals": 2
+        }
+      },
+      "given": "Andriy",
+      "family": "Shevchenko",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_2024_%28cropped%29.png/330px-%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_2024_%28cropped%29.png"
+    },
+    {
+      "name": "Voronin",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 5,
+      "years": [
+        2006
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Andriy",
+      "family": "Voronin",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Andriy_Voronin_2019.jpg/330px-Andriy_Voronin_2019.jpg"
+    },
+    {
+      "name": "Rebrov",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 5,
+      "years": [
+        2006
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Serhii",
+      "family": "Rebrov",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/%D0%9C%D0%B0%D1%82%D1%87_%C2%AB%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE%C2%BB_-_%C2%AB%D0%A4%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B2%D0%B0%D1%80%D0%BE%D1%88%C2%BB_1-0._8_%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8F_2020_%D0%B3%D0%BE%D0%B4%D0%B0_%E2%80%94_1173732_%28%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%A0%D0%B5%D0%B1%D1%80%D0%BE%D0%B2%29.jpg/330px-%D0%9C%D0%B0%D1%82%D1%87_%C2%AB%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE%C2%BB_-_%C2%AB%D0%A4%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B2%D0%B0%D1%80%D0%BE%D1%88%C2%BB_1-0._8_%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8F_2020_%D0%B3%D0%BE%D0%B4%D0%B0_%E2%80%94_1173732_%28%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%A0%D0%B5%D0%B1%D1%80%D0%BE%D0%B2%29.jpg"
+    }
   ],
   "slovakia": [
-    { "name": "Vittek", "pos": "FW", "goals": 4, "apps": 4, "years": [2010] },
-    { "name": "Hamšík", "pos": "MF", "goals": 1, "apps": 4, "years": [2010] }
+    {
+      "name": "Vittek",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 4,
+      "years": [
+        2010
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 4,
+          "goals": 4
+        }
+      },
+      "given": "Róbert",
+      "family": "Vittek",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Robert_Vittek_2008.jpg/330px-Robert_Vittek_2008.jpg"
+    },
+    {
+      "name": "Hamšík",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2010
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Marek",
+      "family": "Hamšík",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hamsik_2016.jpg/330px-Hamsik_2016.jpg"
+    }
   ],
   "slovenia": [
-    { "name": "Zahović", "pos": "MF", "goals": 2, "apps": 3, "years": [2002] },
-    { "name": "Handanović", "pos": "GK", "goals": 0, "apps": 3, "years": [2010] }
+    {
+      "name": "Zahović",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Zlatko",
+      "family": "Zahovič"
+    },
+    {
+      "name": "Handanović",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 3,
+      "years": [
+        2010
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Samir",
+      "family": "Handanović",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Samir_Handanovi%C4%87_Slovenia.jpg/330px-Samir_Handanovi%C4%87_Slovenia.jpg"
+    }
   ],
   "bosnia": [
-    { "name": "Džeko", "pos": "FW", "goals": 3, "apps": 4, "years": [2014] },
-    { "name": "Ibišević", "pos": "FW", "goals": 1, "apps": 3, "years": [2014] }
+    {
+      "name": "Džeko",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 4,
+      "years": [
+        2014
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Edin",
+      "family": "Džeko",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/20150331_2026_AUT_BIH_2177_Edin_D%C5%BEeko_%28cropped%29.jpg/330px-20150331_2026_AUT_BIH_2177_Edin_D%C5%BEeko_%28cropped%29.jpg"
+    },
+    {
+      "name": "Ibišević",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2014
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Vedad",
+      "family": "Ibišević",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Vedad_Ibi%C5%A1evi%C4%87%2C_Hertha_BSC_vs._West_Ham_United_20190731_%28077%29.jpg/330px-Vedad_Ibi%C5%A1evi%C4%87%2C_Hertha_BSC_vs._West_Ham_United_20190731_%28077%29.jpg"
+    }
   ],
   "iceland": [
-    { "name": "Sigurdsson", "pos": "MF", "goals": 1, "apps": 4, "years": [2018] },
-    { "name": "Finnbogason", "pos": "FW", "goals": 1, "apps": 4, "years": [2018] }
+    {
+      "name": "Sigurdsson",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2018
+      ]
+    },
+    {
+      "name": "Finnbogason",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Alfreð",
+      "family": "Finnbogason",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/80/Alfre%C3%B0_Finnbogason_2018_%28cropped%29.jpg"
+    }
   ],
   "north-ireland": [
-    { "name": "Armstrong", "pos": "FW", "goals": 2, "apps": 7, "years": [1982, 1986] },
-    { "name": "McIlroy", "pos": "MF", "goals": 1, "apps": 7, "years": [1982, 1986] }
+    {
+      "name": "Armstrong",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 5,
+          "goals": 3
+        },
+        "1986": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Gerry",
+      "family": "Armstrong"
+    },
+    {
+      "name": "McIlroy",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 7,
+      "years": [
+        1982,
+        1986
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 5,
+          "goals": 0
+        },
+        "1986": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Sammy",
+      "family": "McIlroy",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/53/McIlroy%2C_Sammy.jpg"
+    }
   ],
   "bulgaria": [
-    { "name": "Stoichkov", "pos": "FW", "goals": 6, "apps": 11, "years": [1994, 1998] },
-    { "name": "Kostadinov", "pos": "FW", "goals": 3, "apps": 11, "years": [1986, 1994, 1998] },
-    { "name": "Balakov", "pos": "MF", "goals": 2, "apps": 7, "years": [1994, 1998] }
+    {
+      "name": "Stoichkov",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 11,
+      "years": [
+        1994,
+        1998
+      ]
+    },
+    {
+      "name": "Kostadinov",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 11,
+      "years": [
+        1986,
+        1994,
+        1998
+      ]
+    },
+    {
+      "name": "Balakov",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1994,
+        1998
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Krasimir_Balakov_2015_%28cropped%29.JPG/330px-Krasimir_Balakov_2015_%28cropped%29.JPG"
+    }
   ],
   "east-germany": [
-    { "name": "Sparwasser", "pos": "FW", "goals": 1, "apps": 4, "years": [1974] },
-    { "name": "Streich", "pos": "FW", "goals": 1, "apps": 4, "years": [1974] }
+    {
+      "name": "Sparwasser",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        1974
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 6,
+          "goals": 1
+        }
+      },
+      "given": "Jürgen",
+      "family": "Sparwasser",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bundesarchiv_Bild_183-P1017-0317%2C_J%C3%BCrgen_Sparwasser.jpg/330px-Bundesarchiv_Bild_183-P1017-0317%2C_J%C3%BCrgen_Sparwasser.jpg"
+    },
+    {
+      "name": "Streich",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        1974
+      ],
+      "byYear": {
+        "1974": {
+          "apps": 4,
+          "goals": 2
+        }
+      },
+      "given": "Joachim",
+      "family": "Streich",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Joachim_Streich_1974.gif"
+    }
   ],
   "israel": [
-    { "name": "Spiegel", "pos": "FW", "goals": 1, "apps": 3, "years": [1970] }
+    {
+      "name": "Spiegel",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        1970
+      ],
+      "byYear": {
+        "1970": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Giora",
+      "family": "Spiegel",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Giora_Spiegel_2.jpg"
+    }
   ],
   "mexico": [
-    { "name": "Márquez", "pos": "DF", "goals": 3, "apps": 19, "years": [2002, 2006, 2010, 2014, 2018] },
-    { "name": "L. Hernández", "pos": "FW", "goals": 4, "apps": 7, "years": [1998] },
-    { "name": "J. Hernández", "pos": "FW", "goals": 4, "apps": 12, "years": [2010, 2014, 2018] },
-    { "name": "Blanco", "pos": "MF", "goals": 3, "apps": 11, "years": [1998, 2002, 2010] },
-    { "name": "Guardado", "pos": "MF", "goals": 1, "apps": 13, "years": [2006, 2010, 2014, 2018, 2022] },
-    { "name": "Sanchez G.", "pos": "GK", "goals": 0, "apps": 13, "years": [2006, 2010, 2014, 2018] }
+    {
+      "name": "Márquez",
+      "pos": "DF",
+      "goals": 3,
+      "apps": 19,
+      "years": [
+        2002,
+        2006,
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Rafael",
+      "family": "Márquez",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Rafael_M%C3%A1rquez_2014.jpg/330px-Rafael_M%C3%A1rquez_2014.jpg"
+    },
+    {
+      "name": "L. Hernández",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 7,
+      "years": [
+        1998
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 4,
+          "goals": 4
+        }
+      },
+      "given": "Luis",
+      "family": "Hernández"
+    },
+    {
+      "name": "J. Hernández",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 12,
+      "years": [
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 4,
+          "goals": 2
+        },
+        "2014": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Javier",
+      "family": "Hernández",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Javier_Hern%C3%A1ndez_Paley_Center_Fox_Sports_Soccer-12.jpg/330px-Javier_Hern%C3%A1ndez_Paley_Center_Fox_Sports_Soccer-12.jpg"
+    },
+    {
+      "name": "Blanco",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 11,
+      "years": [
+        1998,
+        2002,
+        2010
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Cuauhtémoc",
+      "family": "Blanco",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Cuauht%C3%A9moc_Blanco_MORELOS_%28cropped%29.jpg/330px-Cuauht%C3%A9moc_Blanco_MORELOS_%28cropped%29.jpg"
+    },
+    {
+      "name": "Guardado",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 13,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Andrés",
+      "family": "Guardado",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mex-Kor_%2825%29_%28cropped%29.jpg/330px-Mex-Kor_%2825%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Sanchez G.",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 13,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Oswaldo",
+      "family": "Sánchez",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Spanish_surnames_by_province_of_residence.png/330px-Spanish_surnames_by_province_of_residence.png"
+    }
   ],
   "usa": [
-    { "name": "McBride", "pos": "FW", "goals": 5, "apps": 19, "years": [1994, 1998, 2002, 2006] },
-    { "name": "Donovan", "pos": "MF", "goals": 5, "apps": 19, "years": [2002, 2006, 2010] },
-    { "name": "Dempsey", "pos": "MF", "goals": 5, "apps": 14, "years": [2006, 2010, 2014] },
-    { "name": "Stewart", "pos": "DF", "goals": 0, "apps": 11, "years": [1990, 1994, 1998] },
-    { "name": "Pulisic", "pos": "FW", "goals": 1, "apps": 4, "years": [2022] }
+    {
+      "name": "McBride",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 19,
+      "years": [
+        1994,
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 2,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 5,
+          "goals": 2
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Brian",
+      "family": "McBride",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mcbride_headshot.jpg/330px-Mcbride_headshot.jpg"
+    },
+    {
+      "name": "Donovan",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 19,
+      "years": [
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 5,
+          "goals": 2
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 4,
+          "goals": 3
+        }
+      },
+      "given": "Landon",
+      "family": "Donovan",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NC_Courage_vs_SD_Wave_%28Oct_2024%29_045.jpg/330px-NC_Courage_vs_SD_Wave_%28Oct_2024%29_045.jpg"
+    },
+    {
+      "name": "Dempsey",
+      "pos": "MF",
+      "goals": 5,
+      "apps": 14,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 2,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 4,
+          "goals": 2
+        }
+      },
+      "given": "Clint",
+      "family": "Dempsey",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Clint_Dempsey_%2826347615912%29_%28cropped%29.jpg/330px-Clint_Dempsey_%2826347615912%29_%28cropped%29.jpg"
+    },
+    {
+      "name": "Stewart",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 11,
+      "years": [
+        1990,
+        1994,
+        1998
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 4,
+          "goals": 1
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Earnie",
+      "family": "Stewart",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Earnest_stewart-1772637669.JPG/330px-Earnest_stewart-1772637669.JPG"
+    },
+    {
+      "name": "Pulisic",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Christian",
+      "family": "Pulisic",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Christian_Pulisic_USMNT_v_Belgium_Mar_28_2026-73_%28cropped%29.jpg/330px-Christian_Pulisic_USMNT_v_Belgium_Mar_28_2026-73_%28cropped%29.jpg"
+    }
   ],
   "costa-rica": [
-    { "name": "Campbell", "pos": "FW", "goals": 4, "apps": 12, "years": [2014, 2018, 2022] },
-    { "name": "Gómez", "pos": "MF", "goals": 2, "apps": 12, "years": [1990, 2002, 2006, 2014] },
-    { "name": "Navas", "pos": "GK", "goals": 0, "apps": 13, "years": [2014, 2018, 2022] }
+    {
+      "name": "Campbell",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 12,
+      "years": [
+        2014,
+        2018,
+        2022
+      ]
+    },
+    {
+      "name": "Gómez",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 12,
+      "years": [
+        1990,
+        2002,
+        2006,
+        2014
+      ]
+    },
+    {
+      "name": "Navas",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 13,
+      "years": [
+        2014,
+        2018,
+        2022
+      ]
+    }
   ],
   "honduras": [
-    { "name": "Pavón", "pos": "FW", "goals": 2, "apps": 3, "years": [1982] },
-    { "name": "Costly", "pos": "FW", "goals": 1, "apps": 6, "years": [2010, 2014] }
+    {
+      "name": "Pavón",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1982
+      ]
+    },
+    {
+      "name": "Costly",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 6,
+      "years": [
+        2010,
+        2014
+      ]
+    }
   ],
   "trinidad": [
-    { "name": "Yorke", "pos": "FW", "goals": 0, "apps": 3, "years": [2006] },
-    { "name": "Stern John", "pos": "FW", "goals": 0, "apps": 3, "years": [2006] }
+    {
+      "name": "Yorke",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 3,
+      "years": [
+        2006
+      ]
+    },
+    {
+      "name": "Stern John",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 3,
+      "years": [
+        2006
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Stern_John_Central_FC_2018.jpg/330px-Stern_John_Central_FC_2018.jpg"
+    }
   ],
   "jamaica": [
-    { "name": "Earle", "pos": "MF", "goals": 2, "apps": 3, "years": [1998] },
-    { "name": "Burton", "pos": "FW", "goals": 2, "apps": 3, "years": [1998] }
+    {
+      "name": "Earle",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1998
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Robbie",
+      "family": "Earle"
+    },
+    {
+      "name": "Burton",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1998
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Deon",
+      "family": "Burton",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Deon-Burton-SWFC.jpg/330px-Deon-Burton-SWFC.jpg"
+    }
   ],
   "el-salvador": [
-    { "name": "Cabezas", "pos": "FW", "goals": 1, "apps": 3, "years": [1970] }
+    {
+      "name": "Cabezas",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        1970
+      ],
+      "byYear": {
+        "1970": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Salvador",
+      "family": "Cabezas"
+    }
   ],
   "haiti": [
-    { "name": "Sanon", "pos": "FW", "goals": 2, "apps": 4, "years": [1974] }
+    {
+      "name": "Sanon",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 4,
+      "years": [
+        1974
+      ]
+    }
   ],
   "cuba": [
-    { "name": "Socorro", "pos": "FW", "goals": 2, "apps": 4, "years": [1938] }
+    {
+      "name": "Socorro",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 4,
+      "years": [
+        1938
+      ]
+    }
   ],
   "canada": [
-    { "name": "David", "pos": "FW", "goals": 1, "apps": 3, "years": [2022] },
-    { "name": "Davies", "pos": "MF", "goals": 1, "apps": 3, "years": [2022] }
+    {
+      "name": "David",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Jonathan",
+      "family": "David",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Jonathan_David_asse_losc_2425_%28cropped%29.jpg/330px-Jonathan_David_asse_losc_2425_%28cropped%29.jpg"
+    },
+    {
+      "name": "Davies",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Alphonso",
+      "family": "Davies",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Alphonso_Davies_in_2022.jpg/330px-Alphonso_Davies_in_2022.jpg"
+    }
   ],
   "panama": [
-    { "name": "Baloy", "pos": "DF", "goals": 1, "apps": 3, "years": [2018] }
+    {
+      "name": "Baloy",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 1,
+          "goals": 1
+        }
+      },
+      "given": "Felipe",
+      "family": "Baloy",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Felipe_Baloy.jpg/330px-Felipe_Baloy.jpg"
+    }
   ],
   "morocco": [
-    { "name": "En-Nesyri", "pos": "FW", "goals": 5, "apps": 7, "years": [2018, 2022] },
-    { "name": "Hakimi", "pos": "DF", "goals": 1, "apps": 7, "years": [2018, 2022] },
-    { "name": "Belhanda", "pos": "MF", "goals": 1, "apps": 7, "years": [2018, 2022] },
-    { "name": "Boufal", "pos": "FW", "goals": 1, "apps": 7, "years": [2018, 2022] }
+    {
+      "name": "En-Nesyri",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 1,
+          "goals": 1
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 2
+        }
+      },
+      "given": "Youssef",
+      "family": "En-Nesyri",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ennesyri.jpg/330px-Ennesyri.jpg"
+    },
+    {
+      "name": "Hakimi",
+      "pos": "DF",
+      "goals": 1,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Achraf",
+      "family": "Hakimi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Achraf_Hakimi_%28cropped2%29.jpg/330px-Achraf_Hakimi_%28cropped2%29.jpg"
+    },
+    {
+      "name": "Belhanda",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Younès",
+      "family": "Belhanda",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Adana_Demirspor_vs_Antalyaspor_20220225_4_%28cropped%29.jpg/330px-Adana_Demirspor_vs_Antalyaspor_20220225_4_%28cropped%29.jpg"
+    },
+    {
+      "name": "Boufal",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Sofiane",
+      "family": "Boufal",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sofiane_Boufal_v_Augsburg_2017.jpg/330px-Sofiane_Boufal_v_Augsburg_2017.jpg"
+    }
   ],
   "nigeria": [
-    { "name": "Musa", "pos": "FW", "goals": 4, "apps": 10, "years": [2010, 2014, 2018] },
-    { "name": "Yekini", "pos": "FW", "goals": 3, "apps": 6, "years": [1994] },
-    { "name": "Okocha", "pos": "MF", "goals": 2, "apps": 9, "years": [1994, 1998, 2002] },
-    { "name": "Amokachi", "pos": "FW", "goals": 2, "apps": 7, "years": [1994, 1998] }
+    {
+      "name": "Musa",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 10,
+      "years": [
+        2010,
+        2014,
+        2018
+      ]
+    },
+    {
+      "name": "Yekini",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 6,
+      "years": [
+        1994
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Rashidi_Yekini.jpg/330px-Rashidi_Yekini.jpg"
+    },
+    {
+      "name": "Okocha",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        1994,
+        1998,
+        2002
+      ]
+    },
+    {
+      "name": "Amokachi",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        1994,
+        1998
+      ]
+    }
   ],
   "cameroon": [
-    { "name": "Milla", "pos": "FW", "goals": 5, "apps": 14, "years": [1982, 1990, 1994] },
-    { "name": "Eto'o", "pos": "FW", "goals": 4, "apps": 14, "years": [1998, 2002, 2010, 2014] },
-    { "name": "Mboma", "pos": "FW", "goals": 3, "apps": 6, "years": [1998] },
-    { "name": "Song R.", "pos": "MF", "goals": 0, "apps": 14, "years": [2002, 2010, 2014] }
+    {
+      "name": "Milla",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 14,
+      "years": [
+        1982,
+        1990,
+        1994
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1990": {
+          "apps": 5,
+          "goals": 4
+        },
+        "1994": {
+          "apps": 2,
+          "goals": 1
+        }
+      },
+      "given": "Roger",
+      "family": "Milla",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Milla2008cropped.jpg/330px-Milla2008cropped.jpg"
+    },
+    {
+      "name": "Eto'o",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        1998,
+        2002,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 2
+        },
+        "2014": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Samuel",
+      "family": "Eto'o",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Samuel_2011.jpg/330px-Samuel_2011.jpg"
+    },
+    {
+      "name": "Mboma",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 6,
+      "years": [
+        1998
+      ]
+    },
+    {
+      "name": "Song R.",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 14,
+      "years": [
+        2002,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Rigobert",
+      "family": "Song",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Billie_Holiday%2C_Downbeat%2C_New_York%2C_N.Y.%2C_ca._Feb._1947_%28William_P._Gottlieb_04251%29.jpg/330px-Billie_Holiday%2C_Downbeat%2C_New_York%2C_N.Y.%2C_ca._Feb._1947_%28William_P._Gottlieb_04251%29.jpg"
+    }
   ],
   "ghana": [
-    { "name": "A. Gyan", "pos": "FW", "goals": 6, "apps": 13, "years": [2006, 2010, 2014] },
-    { "name": "A. Ayew", "pos": "FW", "goals": 2, "apps": 9, "years": [2010, 2014, 2022] },
-    { "name": "Essien", "pos": "MF", "goals": 1, "apps": 9, "years": [2006, 2010, 2014] }
+    {
+      "name": "A. Gyan",
+      "pos": "FW",
+      "goals": 6,
+      "apps": 13,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 5,
+          "goals": 3
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 2
+        }
+      },
+      "given": "Asamoah",
+      "family": "Gyan",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Asamoah_Gyan_%282014%29.jpg/330px-Asamoah_Gyan_%282014%29.jpg"
+    },
+    {
+      "name": "A. Ayew",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        2010,
+        2014,
+        2022
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 2
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "André",
+      "family": "Ayew",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/20150331_Mali_vs_Ghana_170.jpg/330px-20150331_Mali_vs_Ghana_170.jpg"
+    },
+    {
+      "name": "Essien",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 9,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Michael",
+      "family": "Essien",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Chelsea_Legends_1_Inter_Forever_4_%2828453496098%29_%28cropped%29.jpg/330px-Chelsea_Legends_1_Inter_Forever_4_%2828453496098%29_%28cropped%29.jpg"
+    }
   ],
   "senegal": [
-    { "name": "Diop", "pos": "DF", "goals": 3, "apps": 5, "years": [2002] },
-    { "name": "El Hadji Diouf", "pos": "FW", "goals": 1, "apps": 5, "years": [2002] },
-    { "name": "Mané", "pos": "FW", "goals": 1, "apps": 3, "years": [2022] },
-    { "name": "Kouyaté", "pos": "MF", "goals": 0, "apps": 7, "years": [2018, 2022] }
+    {
+      "name": "Diop",
+      "pos": "DF",
+      "goals": 3,
+      "apps": 5,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 5,
+          "goals": 3
+        }
+      },
+      "given": "Papa Bouba",
+      "family": "Diop",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Papa_Bouba_Diop_en_mai_2014.JPG/330px-Papa_Bouba_Diop_en_mai_2014.JPG"
+    },
+    {
+      "name": "El Hadji Diouf",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 5,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 5,
+          "goals": 0
+        }
+      },
+      "given": "El Hadji",
+      "family": "Diouf",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/El_Hadji_Diouf.jpg/330px-El_Hadji_Diouf.jpg"
+    },
+    {
+      "name": "Mané",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2022
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Getafe_CF_-_Jose_Manuel_%22Man%C3%A9%22.jpg/330px-Getafe_CF_-_Jose_Manuel_%22Man%C3%A9%22.jpg"
+    },
+    {
+      "name": "Kouyaté",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Cheikhou",
+      "family": "Kouyaté",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/West_Ham_United_Vs_Manchester_City_%2824642418901%29_%28cropped%29.jpg/330px-West_Ham_United_Vs_Manchester_City_%2824642418901%29_%28cropped%29.jpg"
+    }
   ],
   "ivory-coast": [
-    { "name": "Kalou", "pos": "FW", "goals": 3, "apps": 9, "years": [2006, 2010, 2014] },
-    { "name": "Drogba", "pos": "FW", "goals": 2, "apps": 9, "years": [2006, 2010, 2014] },
-    { "name": "Yaya Touré", "pos": "MF", "goals": 2, "apps": 9, "years": [2006, 2010, 2014] }
+    {
+      "name": "Kalou",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 9,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Salomon",
+      "family": "Kalou",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Hertha_BSC_vs._West_Ham_United_20190731_%28044%29.jpg/330px-Hertha_BSC_vs._West_Ham_United_20190731_%28044%29.jpg"
+    },
+    {
+      "name": "Drogba",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 2,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Didier",
+      "family": "Drogba",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Didier_Drogba_%282019%29_%28cropped2%29.jpg/330px-Didier_Drogba_%282019%29_%28cropped2%29.jpg"
+    },
+    {
+      "name": "Yaya Touré",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Yaya",
+      "family": "Touré",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Yaya_Tour%C3%A9_%28cropped%29.jpg/330px-Yaya_Tour%C3%A9_%28cropped%29.jpg"
+    }
   ],
   "south-africa": [
-    { "name": "Tshabalala", "pos": "FW", "goals": 1, "apps": 3, "years": [2010] },
-    { "name": "Mphela", "pos": "FW", "goals": 1, "apps": 3, "years": [2010] },
-    { "name": "Pienaar", "pos": "MF", "goals": 0, "apps": 3, "years": [2010] }
+    {
+      "name": "Tshabalala",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2010
+      ]
+    },
+    {
+      "name": "Mphela",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2010
+      ]
+    },
+    {
+      "name": "Pienaar",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 3,
+      "years": [
+        2010
+      ]
+    }
   ],
   "algeria": [
-    { "name": "Assad", "pos": "FW", "goals": 3, "apps": 3, "years": [1982] },
-    { "name": "Slimani", "pos": "FW", "goals": 3, "apps": 8, "years": [2010, 2014, 2022] },
-    { "name": "Brahimi", "pos": "MF", "goals": 1, "apps": 4, "years": [2014] },
-    { "name": "Lacen", "pos": "MF", "goals": 0, "apps": 5, "years": [2010, 2014] }
+    {
+      "name": "Assad",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 3,
+      "years": [
+        1982
+      ]
+    },
+    {
+      "name": "Slimani",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 8,
+      "years": [
+        2010,
+        2014,
+        2022
+      ]
+    },
+    {
+      "name": "Brahimi",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2014
+      ]
+    },
+    {
+      "name": "Lacen",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 5,
+      "years": [
+        2010,
+        2014
+      ]
+    }
   ],
   "tunisia": [
-    { "name": "Badra", "pos": "FW", "goals": 3, "apps": 3, "years": [1978] },
-    { "name": "Khazri", "pos": "MF", "goals": 3, "apps": 8, "years": [2018, 2022] },
-    { "name": "Skhiri", "pos": "MF", "goals": 1, "apps": 8, "years": [2018, 2022] }
+    {
+      "name": "Badra",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 3,
+      "years": [
+        1978
+      ]
+    },
+    {
+      "name": "Khazri",
+      "pos": "MF",
+      "goals": 3,
+      "apps": 8,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 2
+        },
+        "2022": {
+          "apps": 2,
+          "goals": 1
+        }
+      },
+      "given": "Wahbi",
+      "family": "Khazri",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/86/Wahbi_Khazri.jpg"
+    },
+    {
+      "name": "Skhiri",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 8,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Ellyes",
+      "family": "Skhiri",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/2021-08-08_FC_Carl_Zeiss_Jena_gegen_1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93182_%28cropped2%29.jpg/330px-2021-08-08_FC_Carl_Zeiss_Jena_gegen_1._FC_K%C3%B6ln_%28DFB-Pokal%29_by_Sandro_Halank%E2%80%93182_%28cropped2%29.jpg"
+    }
   ],
   "egypt": [
-    { "name": "Hassan", "pos": "MF", "goals": 2, "apps": 3, "years": [1934] },
-    { "name": "Salah", "pos": "FW", "goals": 2, "apps": 3, "years": [2018] }
+    {
+      "name": "Hassan",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1934
+      ]
+    },
+    {
+      "name": "Salah",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        2018
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 2,
+          "goals": 2
+        }
+      },
+      "given": "Mohamed",
+      "family": "Salah",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mohamed_Salah_2018.jpg/330px-Mohamed_Salah_2018.jpg"
+    }
   ],
   "angola": [
-    { "name": "Flávio", "pos": "FW", "goals": 1, "apps": 3, "years": [2006] }
+    {
+      "name": "Flávio",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2006
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/George_Frideric_Handel_by_Balthasar_Denner.jpg/330px-George_Frideric_Handel_by_Balthasar_Denner.jpg"
+    }
   ],
   "togo": [
-    { "name": "Adebayor", "pos": "FW", "goals": 1, "apps": 3, "years": [2006] }
+    {
+      "name": "Adebayor",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2006
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Emmanuel_Adebayor_-_Lech_-_Manchester_026.jpg/330px-Emmanuel_Adebayor_-_Lech_-_Manchester_026.jpg"
+    }
   ],
   "zaire": [
-    { "name": "Kembo Uba", "pos": "FW", "goals": 0, "apps": 3, "years": [1974] }
+    {
+      "name": "Kembo Uba",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 3,
+      "years": [
+        1974
+      ]
+    }
   ],
   "japan": [
-    { "name": "Kamamoto", "pos": "FW", "goals": 4, "apps": 6, "years": [1966, 1970] },
-    { "name": "Nakata", "pos": "MF", "goals": 2, "apps": 9, "years": [1998, 2002, 2006] },
-    { "name": "Inamoto", "pos": "MF", "goals": 2, "apps": 7, "years": [2002, 2006] },
-    { "name": "Nakamura", "pos": "MF", "goals": 2, "apps": 10, "years": [1998, 2002, 2006, 2010] },
-    { "name": "Hasebe", "pos": "MF", "goals": 0, "apps": 13, "years": [2006, 2010, 2014, 2018, 2022] },
-    { "name": "Doan", "pos": "FW", "goals": 2, "apps": 4, "years": [2022] }
+    {
+      "name": "Kamamoto",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 6,
+      "years": [
+        1966,
+        1970
+      ]
+    },
+    {
+      "name": "Nakata",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 9,
+      "years": [
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 4,
+          "goals": 1
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Hidetoshi",
+      "family": "Nakata",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Hidetoshi_Nakata_in_Okinawa.jpg/330px-Hidetoshi_Nakata_in_Okinawa.jpg"
+    },
+    {
+      "name": "Inamoto",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        2002,
+        2006
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 4,
+          "goals": 2
+        },
+        "2006": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Junichi",
+      "family": "Inamoto",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Junichi_Inamoto.jpg/330px-Junichi_Inamoto.jpg"
+    },
+    {
+      "name": "Nakamura",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 10,
+      "years": [
+        1998,
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Shunsuke",
+      "family": "Nakamura",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Shunsuke2_20080622.png/330px-Shunsuke2_20080622.png"
+    },
+    {
+      "name": "Hasebe",
+      "pos": "MF",
+      "goals": 0,
+      "apps": 13,
+      "years": [
+        2006,
+        2010,
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 4,
+          "goals": 0
+        },
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Makoto",
+      "family": "Hasebe",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/2022128173751_2022-05-08_Fussball_Eintracht_Frankfurt_vs_Borussia_M%C3%B6nchengladbach_-_Sven_-_1D_X_MK_II_-_0713_-_AK8I7448_%28Makoto_Hasebe_cropped%29.jpg/330px-2022128173751_2022-05-08_Fussball_Eintracht_Frankfurt_vs_Borussia_M%C3%B6nchengladbach_-_Sven_-_1D_X_MK_II_-_0713_-_AK8I7448_%28Makoto_Hasebe_cropped%29.jpg"
+    },
+    {
+      "name": "Doan",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 4,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 4,
+          "goals": 2
+        }
+      },
+      "given": "Ritsu",
+      "family": "Dōan",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ritsu_Doan%2C_2019_AFC_Asian_Cup_1.jpg/330px-Ritsu_Doan%2C_2019_AFC_Asian_Cup_1.jpg"
+    }
   ],
   "south-korea": [
-    { "name": "Hwang Sun-hong", "pos": "FW", "goals": 5, "apps": 13, "years": [1990, 1994, 1998, 2002] },
-    { "name": "Son Heung-min", "pos": "FW", "goals": 4, "apps": 14, "years": [2014, 2018, 2022] },
-    { "name": "Cha Bum-kun", "pos": "FW", "goals": 2, "apps": 8, "years": [1986, 1990] },
-    { "name": "Ahn Jung-hwan", "pos": "FW", "goals": 2, "apps": 7, "years": [2002] },
-    { "name": "Park Ji-sung", "pos": "MF", "goals": 2, "apps": 18, "years": [2002, 2006, 2010] },
-    { "name": "Hong Myung-bo", "pos": "DF", "goals": 0, "apps": 18, "years": [1990, 1994, 1998, 2002] }
+    {
+      "name": "Hwang Sun-hong",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 13,
+      "years": [
+        1990,
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 2,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 5,
+          "goals": 1
+        }
+      },
+      "given": "Sun-hong",
+      "family": "Hwang",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/FC%EC%84%9C%EC%9A%B8_%ED%99%A9%EC%84%A0%ED%99%8D_%EA%B0%90%EB%8F%85_%EC%B7%A8%EC%9E%84_%EA%B8%B0%EC%9E%90%ED%9A%8C%EA%B2%AC_2.23_minutes_Scene.jpg/330px-FC%EC%84%9C%EC%9A%B8_%ED%99%A9%EC%84%A0%ED%99%8D_%EA%B0%90%EB%8F%85_%EC%B7%A8%EC%9E%84_%EA%B8%B0%EC%9E%90%ED%9A%8C%EA%B2%AC_2.23_minutes_Scene.jpg"
+    },
+    {
+      "name": "Son Heung-min",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 14,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 2
+        },
+        "2022": {
+          "apps": 4,
+          "goals": 0
+        }
+      },
+      "given": "Heung-min",
+      "family": "Son",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg/330px-BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg"
+    },
+    {
+      "name": "Cha Bum-kun",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 8,
+      "years": [
+        1986,
+        1990
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Bum-kun",
+      "family": "Cha"
+    },
+    {
+      "name": "Ahn Jung-hwan",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 7,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 7,
+          "goals": 2
+        }
+      },
+      "given": "Jung-hwan",
+      "family": "Ahn",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ahn_Jung-hwan_in_November_2021.png/330px-Ahn_Jung-hwan_in_November_2021.png"
+    },
+    {
+      "name": "Park Ji-sung",
+      "pos": "MF",
+      "goals": 2,
+      "apps": 18,
+      "years": [
+        2002,
+        2006,
+        2010
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 7,
+          "goals": 1
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Ji-sung",
+      "family": "Park",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Halleyparknovember_b_%28cropped%29.jpg/330px-Halleyparknovember_b_%28cropped%29.jpg"
+    },
+    {
+      "name": "Hong Myung-bo",
+      "pos": "DF",
+      "goals": 0,
+      "apps": 18,
+      "years": [
+        1990,
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1990": {
+          "apps": 3,
+          "goals": 0
+        },
+        "1994": {
+          "apps": 3,
+          "goals": 2
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 7,
+          "goals": 0
+        }
+      },
+      "given": "Myung-bo",
+      "family": "Hong",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Hong_Myung-Bo.jpg/330px-Hong_Myung-Bo.jpg"
+    }
   ],
   "iran": [
-    { "name": "Taremi", "pos": "FW", "goals": 4, "apps": 7, "years": [2018, 2022] },
-    { "name": "Daei", "pos": "FW", "goals": 3, "apps": 8, "years": [1998, 2006] },
-    { "name": "Madanchi", "pos": "FW", "goals": 2, "apps": 3, "years": [1978] }
+    {
+      "name": "Taremi",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 7,
+      "years": [
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 3,
+          "goals": 2
+        }
+      },
+      "given": "Mehdi",
+      "family": "Taremi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/7/74/Iran_-_Japan%2C_AFC_Asian_Cup_2019_42_%28cropped%29.jpg"
+    },
+    {
+      "name": "Daei",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 8,
+      "years": [
+        1998,
+        2006
+      ],
+      "byYear": {
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Ali",
+      "family": "Daei",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ali_Daei%2C_Saipa_vs._Al-Rayyan_pre-match_conference.jpg/330px-Ali_Daei%2C_Saipa_vs._Al-Rayyan_pre-match_conference.jpg"
+    },
+    {
+      "name": "Madanchi",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1978
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/0/03/Mehrzad_Madanchi_%28cropped%29.jpg"
+    }
   ],
   "saudi-arabia": [
-    { "name": "Al-Jaber", "pos": "FW", "goals": 4, "apps": 17, "years": [1994, 1998, 2002, 2006] },
-    { "name": "Saleh Al-Dawoud", "pos": "FW", "goals": 2, "apps": 3, "years": [1994] },
-    { "name": "Al-Deayea", "pos": "GK", "goals": 0, "apps": 13, "years": [1994, 1998, 2002] }
+    {
+      "name": "Al-Jaber",
+      "pos": "FW",
+      "goals": 4,
+      "apps": 17,
+      "years": [
+        1994,
+        1998,
+        2002,
+        2006
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 2,
+          "goals": 1
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2002": {
+          "apps": 1,
+          "goals": 0
+        },
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Sami",
+      "family": "Al-Jaber",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Sami09.JPG/330px-Sami09.JPG"
+    },
+    {
+      "name": "Saleh Al-Dawoud",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1994
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Hamzah",
+      "family": "Saleh"
+    },
+    {
+      "name": "Al-Deayea",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 13,
+      "years": [
+        1994,
+        1998,
+        2002
+      ],
+      "byYear": {
+        "1994": {
+          "apps": 4,
+          "goals": 0
+        },
+        "1998": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2002": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Mohamed",
+      "family": "Al-Deayea"
+    }
   ],
   "australia": [
-    { "name": "Cahill", "pos": "FW", "goals": 5, "apps": 11, "years": [2006, 2010, 2014] },
-    { "name": "Kewell", "pos": "FW", "goals": 3, "apps": 10, "years": [2006, 2010] },
-    { "name": "Leckie", "pos": "FW", "goals": 2, "apps": 10, "years": [2014, 2018, 2022] },
-    { "name": "Schwarzer", "pos": "GK", "goals": 0, "apps": 10, "years": [2006, 2010, 2014] }
+    {
+      "name": "Cahill",
+      "pos": "FW",
+      "goals": 5,
+      "apps": 11,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 4,
+          "goals": 2
+        },
+        "2010": {
+          "apps": 2,
+          "goals": 1
+        },
+        "2014": {
+          "apps": 2,
+          "goals": 2
+        }
+      },
+      "given": "Tim",
+      "family": "Cahill",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Tim_Cahill_%2853557484101%29.jpg/330px-Tim_Cahill_%2853557484101%29.jpg"
+    },
+    {
+      "name": "Kewell",
+      "pos": "FW",
+      "goals": 3,
+      "apps": 10,
+      "years": [
+        2006,
+        2010
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 1
+        },
+        "2010": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Harry",
+      "family": "Kewell",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/HarryKewell.jpg/330px-HarryKewell.jpg"
+    },
+    {
+      "name": "Leckie",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 10,
+      "years": [
+        2014,
+        2018,
+        2022
+      ],
+      "byYear": {
+        "2014": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2018": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2022": {
+          "apps": 4,
+          "goals": 1
+        }
+      },
+      "given": "Mathew",
+      "family": "Leckie",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Hertha_BSC_vs._West_Ham_United_20190731_%28054%29.jpg/330px-Hertha_BSC_vs._West_Ham_United_20190731_%28054%29.jpg"
+    },
+    {
+      "name": "Schwarzer",
+      "pos": "GK",
+      "goals": 0,
+      "apps": 10,
+      "years": [
+        2006,
+        2010,
+        2014
+      ],
+      "byYear": {
+        "2006": {
+          "apps": 3,
+          "goals": 0
+        },
+        "2010": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Mark",
+      "family": "Schwarzer",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Mark_Schwarzer.jpg/330px-Mark_Schwarzer.jpg"
+    }
   ],
   "north-korea": [
-    { "name": "Pak Doo-ik", "pos": "MF", "goals": 1, "apps": 4, "years": [1966] },
-    { "name": "Ji Yun-nam", "pos": "FW", "goals": 1, "apps": 4, "years": [2010] }
+    {
+      "name": "Pak Doo-ik",
+      "pos": "MF",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        1966
+      ]
+    },
+    {
+      "name": "Ji Yun-nam",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 4,
+      "years": [
+        2010
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Yun-nam",
+      "family": "Ji",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Chi_Jun_Nam%2C_North_Korean_soccer_player_at_FIFA_2010_World_Cup_vs._Brasil_team._15_June_2010.png/330px-Chi_Jun_Nam%2C_North_Korean_soccer_player_at_FIFA_2010_World_Cup_vs._Brasil_team._15_June_2010.png"
+    }
   ],
   "iraq": [
-    { "name": "Radhi", "pos": "FW", "goals": 1, "apps": 3, "years": [1986] }
+    {
+      "name": "Radhi",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        1986
+      ],
+      "byYear": {
+        "1986": {
+          "apps": 3,
+          "goals": 1
+        }
+      },
+      "given": "Ahmed",
+      "family": "Radhi",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%D8%A7%D8%AD%D9%85%D8%AF_%D8%B1%D8%A7%D8%B6%D9%8A.jpg/330px-%D8%A7%D8%AD%D9%85%D8%AF_%D8%B1%D8%A7%D8%B6%D9%8A.jpg"
+    }
   ],
   "china": [
-    { "name": "Yang Chen", "pos": "FW", "goals": 0, "apps": 3, "years": [2002] }
+    {
+      "name": "Yang Chen",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 3,
+      "years": [
+        2002
+      ],
+      "byYear": {
+        "2002": {
+          "apps": 2,
+          "goals": 0
+        }
+      },
+      "given": "Chen",
+      "family": "Yang"
+    }
   ],
   "uae": [
-    { "name": "Jameel", "pos": "FW", "goals": 2, "apps": 3, "years": [1990] }
+    {
+      "name": "Jameel",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 3,
+      "years": [
+        1990
+      ]
+    }
   ],
   "kuwait": [
-    { "name": "Al-Anbari", "pos": "FW", "goals": 1, "apps": 3, "years": [1982] }
+    {
+      "name": "Al-Anbari",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        1982
+      ]
+    }
   ],
   "qatar": [
-    { "name": "Al Moez Ali", "pos": "FW", "goals": 1, "apps": 3, "years": [2022] }
+    {
+      "name": "Al Moez Ali",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2022
+      ],
+      "byYear": {
+        "2022": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Almoez",
+      "family": "Ali",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/80/Moez_Ali_at_Qatar_v_Japan_%E2%80%93_AFC_Asian_Cup_2019_final_32_%282%29.jpg"
+    }
   ],
   "dutch-east-indies": [
-    { "name": "Sommers", "pos": "FW", "goals": 0, "apps": 1, "years": [1938] }
+    {
+      "name": "Sommers",
+      "pos": "FW",
+      "goals": 0,
+      "apps": 1,
+      "years": [
+        1938
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/P522somer.jpg/330px-P522somer.jpg"
+    }
   ],
   "new-zealand": [
-    { "name": "Turner", "pos": "FW", "goals": 2, "apps": 4, "years": [1982] },
-    { "name": "Fallon", "pos": "FW", "goals": 1, "apps": 3, "years": [2010] }
+    {
+      "name": "Turner",
+      "pos": "FW",
+      "goals": 2,
+      "apps": 4,
+      "years": [
+        1982
+      ],
+      "byYear": {
+        "1982": {
+          "apps": 1,
+          "goals": 0
+        }
+      },
+      "given": "Brian",
+      "family": "Turner"
+    },
+    {
+      "name": "Fallon",
+      "pos": "FW",
+      "goals": 1,
+      "apps": 3,
+      "years": [
+        2010
+      ],
+      "byYear": {
+        "2010": {
+          "apps": 3,
+          "goals": 0
+        }
+      },
+      "given": "Rory",
+      "family": "Fallon",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Rory_Fallon.jpg/330px-Rory_Fallon.jpg"
+    }
   ]
 }

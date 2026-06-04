@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lucaburgio/iconoir@main/css/iconoir.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
@@ -20,12 +21,13 @@
     <!-- Top Navigation -->
     <nav class="top-nav">
       <div class="nav-right">
-        <a href="index.html" class="back-btn"><i class="iconoir-nav-arrow-left"></i> Back</a>
+        <a href="index.html" class="back-btn"><span class="material-symbols-outlined"
+            aria-hidden="true">arrow_back</span> Back</a>
         <label class="select-wrap">
           <select id="team-select">
             <!-- populated by team-view.js -->
           </select>
-          <i class="iconoir-nav-arrow-down" aria-hidden="true"></i>
+          <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
         </label>
       </div>
     </nav>
@@ -43,24 +45,24 @@
       <!-- Tabs -->
       <div class="tabs">
         <button class="tab active" data-tab="timeline">
-          <i class="iconoir-graph-up"></i>
+          <span class="material-symbols-outlined" aria-hidden="true">query_stats</span>
           Timeline
         </button>
         <button class="tab" data-tab="players">
-          <i class="iconoir-user"></i>
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
           Players
         </button>
         <button class="tab" data-tab="all-players">
-          <i class="iconoir-community"></i>
+          <span class="material-symbols-outlined" aria-hidden="true">groups</span>
           All Players
         </button>
         <button class="tab" data-tab="head-to-head">
-          <i class="iconoir-group"></i>
+          <span class="material-symbols-outlined" aria-hidden="true">handshake</span>
           Head-to-Head
         </button>
         <span class="tabs-divider" aria-hidden="true"></span>
         <button class="tab" data-tab="compare">
-          <i class="iconoir-stats-up-square"></i>
+          <span class="material-symbols-outlined" aria-hidden="true">leaderboard</span>
           Compare
         </button>
       </div>
@@ -174,7 +176,7 @@
       <div class="tab-panel" data-panel="players">
         <div class="players-controls">
           <div class="pos-filters">
-            <!-- <span class="control-label"><i class="iconoir-filter-list"></i></span> -->
+            <!-- <span class="control-label"><span class="material-symbols-outlined" aria-hidden="true">filter_list</span></span> -->
             <button class="pos-filter active" data-pos="all">All</button>
             <button class="pos-filter" data-pos="FW">FW</button>
             <button class="pos-filter" data-pos="MF">MF</button>
@@ -182,9 +184,11 @@
             <button class="pos-filter" data-pos="GK">GK</button>
           </div>
           <div class="sort-controls">
-            <!-- <span class="control-label"><i class="iconoir-sort-down"></i></span> -->
-            <button class="sort-btn active" data-sort="goals"><i class="iconoir-football"></i> Goals</button>
-            <button class="sort-btn" data-sort="apps"><i class="iconoir-user"></i> Apps</button>
+            <!-- <span class="control-label"><span class="material-symbols-outlined" aria-hidden="true">swap_vert</span></span> -->
+            <button class="sort-btn active" data-sort="goals"><span class="material-symbols-outlined"
+                aria-hidden="true">sports_soccer</span> Goals</button>
+            <button class="sort-btn" data-sort="apps"><span class="material-symbols-outlined"
+                aria-hidden="true">person</span> Apps</button>
           </div>
         </div>
         <div id="players-chart"></div>
@@ -193,12 +197,13 @@
       <div class="tab-panel" data-panel="all-players">
         <div class="all-players-controls">
           <div class="all-players-search-wrap">
-            <i class="iconoir-search all-players-search-icon"></i>
+            <span class="material-symbols-outlined all-players-search-icon" aria-hidden="true">search</span>
             <input id="all-players-search" class="all-players-search" type="search" placeholder="Search player or team…"
               autocomplete="off" />
           </div>
           <div class="all-players-filters">
-            <span class="control-label"><i class="iconoir-filter-list"></i></span>
+            <span class="control-label"><span class="material-symbols-outlined"
+                aria-hidden="true">filter_list</span></span>
             <button class="ap-filter active" data-ap-pos="all">All</button>
             <button class="ap-filter" data-ap-pos="FW">FW</button>
             <button class="ap-filter" data-ap-pos="MF">MF</button>
@@ -206,10 +211,14 @@
             <button class="ap-filter" data-ap-pos="GK">GK</button>
           </div>
           <div class="sort-controls">
-            <span class="control-label"><i class="iconoir-sort-down"></i></span>
-            <button class="ap-sort active" data-ap-sort="goals"><i class="iconoir-football"></i> Goals</button>
-            <button class="ap-sort" data-ap-sort="apps"><i class="iconoir-user"></i> Apps</button>
-            <button class="ap-sort" data-ap-sort="name"><i class="iconoir-sort-alphabetically"></i> A–Z</button>
+            <span class="control-label"><span class="material-symbols-outlined"
+                aria-hidden="true">swap_vert</span></span>
+            <button class="ap-sort active" data-ap-sort="goals"><span class="material-symbols-outlined"
+                aria-hidden="true">sports_soccer</span> Goals</button>
+            <button class="ap-sort" data-ap-sort="apps"><span class="material-symbols-outlined"
+                aria-hidden="true">person</span> Apps</button>
+            <button class="ap-sort" data-ap-sort="name"><span class="material-symbols-outlined"
+                aria-hidden="true">sort_by_alpha</span> A–Z</button>
           </div>
         </div>
         <div id="all-players-list"></div>
@@ -228,7 +237,7 @@
               <select id="h2h-select">
                 <!-- populated by team-view.js -->
               </select>
-              <i class="iconoir-nav-arrow-down" aria-hidden="true"></i>
+              <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
             </label>
           </div>
         </div>
@@ -252,7 +261,7 @@
   <div class="tooltip" id="tt"></div>
 
   <script src="utils.js"></script>
-  <script src="team-view.js"></script>
+  <script src="team-view.js?v=2"></script>
 </body>
 
 </html>

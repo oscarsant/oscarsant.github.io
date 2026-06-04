@@ -1,17 +1,17 @@
 (() => {
-  const PASSWORD = "cholosimeone";
-  const AUTH_KEY = "ngd3_review_gate_ok";
+	const PASSWORD = "cholosimeone";
+	const AUTH_KEY = "ngd3_review_gate_ok";
 
-  const isAuthed = () => localStorage.getItem(AUTH_KEY) === "1";
+	const isAuthed = () => localStorage.getItem(AUTH_KEY) === "1";
 
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("logout") === "1") {
-    localStorage.removeItem(AUTH_KEY);
-  }
+	const params = new URLSearchParams(window.location.search);
+	if (params.get("logout") === "1") {
+		localStorage.removeItem(AUTH_KEY);
+	}
 
-  if (isAuthed()) return;
+	if (isAuthed()) return;
 
-  const styles = `
+	const styles = `
     .review-gate-overlay {
       position: fixed;
       inset: 0;
@@ -99,14 +99,14 @@
     }
   `;
 
-  const mount = () => {
-    const styleTag = document.createElement("style");
-    styleTag.textContent = styles;
-    document.head.appendChild(styleTag);
+	const mount = () => {
+		const styleTag = document.createElement("style");
+		styleTag.textContent = styles;
+		document.head.appendChild(styleTag);
 
-    const overlay = document.createElement("div");
-    overlay.className = "review-gate-overlay";
-    overlay.innerHTML = `
+		const overlay = document.createElement("div");
+		overlay.className = "review-gate-overlay";
+		overlay.innerHTML = `
       <div class="review-gate-card" role="dialog" aria-modal="true" aria-labelledby="review-gate-title">
         <h1 id="review-gate-title" class="review-gate-title">Review Access</h1>
         <p class="review-gate-copy">This preview is password protected while in review mode.</p>
@@ -125,29 +125,29 @@
       </div>
     `;
 
-    const form = overlay.querySelector(".review-gate-form");
-    const input = overlay.querySelector(".review-gate-input");
-    const error = overlay.querySelector(".review-gate-error");
+		const form = overlay.querySelector(".review-gate-form");
+		const input = overlay.querySelector(".review-gate-input");
+		const error = overlay.querySelector(".review-gate-error");
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const value = (input.value || "").trim();
-      if (value === PASSWORD) {
-        localStorage.setItem(AUTH_KEY, "1");
-        overlay.remove();
-        return;
-      }
-      error.textContent = "Wrong password. Try again.";
-      input.select();
-    });
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			const value = (input.value || "").trim();
+			if (value === PASSWORD) {
+				localStorage.setItem(AUTH_KEY, "1");
+				overlay.remove();
+				return;
+			}
+			error.textContent = "Wrong password. Try again.";
+			input.select();
+		});
 
-    document.body.appendChild(overlay);
-    input.focus();
-  };
+		document.body.appendChild(overlay);
+		input.focus();
+	};
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", mount, { once: true });
-  } else {
-    mount();
-  }
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", mount, { once: true });
+	} else {
+		mount();
+	}
 })();

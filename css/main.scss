@@ -507,6 +507,12 @@ header {
 			url('../images/numbers-thumb.png') center top / cover no-repeat;
 	}
 
+	&--worldcup .personal-project-thumb-media {
+		background:
+			linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 60%),
+			url('../images/WC-thumb-opt.jpg') center top / cover no-repeat;
+	}
+
 	&--placeholder .personal-project-thumb-media {
 		background: linear-gradient(130deg, #adb7c4 0%, #8b96a5 100%);
 	}
