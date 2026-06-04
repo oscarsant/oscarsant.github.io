@@ -77,8 +77,9 @@
 	const renderTeamGrid = () => {
 		const grid = document.getElementById("team-grid");
 		if (!grid) return;
-		const visible =
-			confFilter === "ALL" ? teams : teams.filter((t) => t.conf === confFilter);
+		const visible = (confFilter === "ALL" ? teams : teams.filter((t) => t.conf === confFilter))
+			.slice()
+			.sort((a, b) => a.name.localeCompare(b.name));
 		grid.innerHTML = visible.map(buildTeamCard).join("");
 	};
 
@@ -159,15 +160,17 @@
 		});
 	});
 
-	// ── Filter list ───────────────────────────────────────────────────────────
+	// ── Filter list (dropdown ordered by performance) ────────────────────────
 	const filter = () => {
 		const q = input.value.toLowerCase();
-		filtered = teams.filter((o) => {
-			const matchConf = confFilter === "ALL" || o.conf === confFilter;
-			const matchText =
-				o.name.toLowerCase().includes(q) || o.abbr.toLowerCase().includes(q);
-			return matchConf && matchText;
-		});
+		filtered = teams
+			.filter((o) => {
+				const matchConf = confFilter === "ALL" || o.conf === confFilter;
+				const matchText =
+					o.name.toLowerCase().includes(q) || o.abbr.toLowerCase().includes(q);
+				return matchConf && matchText;
+			})
+			.sort((a, b) => (a.rank || 9999) - (b.rank || 9999));
 		active = -1;
 		render();
 	};

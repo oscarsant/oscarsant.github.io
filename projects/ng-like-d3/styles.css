@@ -2193,25 +2193,27 @@ svg {
 }
 
 .conf-chip {
-  padding: 0.25rem 0.625rem;
+  padding: 0.3125rem 0.75rem;
   border-radius: 100px;
-  border: 1px solid #374151;
+  border: 1px solid var(--line);
   background: transparent;
-  color: #9ca3af;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.4px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  transition: all 0.15s ease;
 }
 .conf-chip:hover {
-  border-color: #6b7280;
-  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 .conf-chip.active {
-  background: #1d4ed8;
-  border-color: #1d4ed8;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 @keyframes shimmer {
