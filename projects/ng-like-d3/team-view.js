@@ -161,10 +161,6 @@
 		});
 	});
 
-	if (VALID_TABS.has(initialTabParam) && initialTabParam !== "timeline") {
-		activateTab(initialTabParam, false);
-	}
-
 	// Render D3 visualization
 	const container = d3.select("#timeline-container");
 	container.html(""); // clear skeleton
@@ -692,251 +688,306 @@
 		}
 	}
 
-	function renderPlayersChart(allPlayers) {
+	// ── Shared player-card utilities ─────────────────────────────────────────
+	const CHART_MAX_UNITS = 10;
+	const ALL_WC_EDITIONS = Object.keys(TOURNAMENT_FORMATS)
+		.map((y) => Number(y))
+		.filter(Number.isFinite)
+		.sort((a, b) => a - b);
+	const CHART_SLOTS = Math.max(1, ALL_WC_EDITIONS.length);
+	const posColors = { FW: "#fca5a5", MF: "#93c5fd", DF: "#86efac", GK: "#fde68a" };
+
+	const parseNonNegative = (v) => {
+		const n = Number(v);
+		return Number.isFinite(n) && n >= 0 ? n : null;
+	};
+
+	const editionMaxGames = (year) => {
+		if (!Number.isFinite(Number(year))) return 0;
+		const y = Number(year);
+		if (y >= 1986) return 7;
+		if (y === 1982) return 7;
+		if (y === 1974 || y === 1978) return 7;
+		if (y >= 1958 && y <= 1970) return 6;
+		if (y === 1954) return 5;
+		if (y === 1950) return 6;
+		if (y === 1934 || y === 1938) return 4;
+		if (y === 1930) return 5;
+		return 0;
+	};
+
+	const allocateByWeights = (total, weights) => {
+		const safeTotal = Math.max(0, Number(total) || 0);
+		const safeWeights = weights.map((w) => Math.max(0, Number(w) || 0));
+		const sumW = safeWeights.reduce((a, b) => a + b, 0) || 1;
+		const raw = safeWeights.map((w) => (safeTotal * w) / sumW);
+		const base = raw.map((v) => Math.floor(v));
+		let rem = safeTotal - base.reduce((a, b) => a + b, 0);
+		const order = raw
+			.map((v, i) => ({ i, frac: v - Math.floor(v) }))
+			.sort((a, b) => b.frac - a.frac)
+			.map((d) => d.i);
+		let ptr = 0;
+		while (rem > 0) {
+			base[order[ptr % order.length]] += 1;
+			rem -= 1;
+			ptr += 1;
+		}
+		return base;
+	};
+
+	const allocateWithCaps = (total, weights, caps) => {
+		const safeCaps = caps.map((c) => Math.max(0, Math.floor(Number(c) || 0)));
+		const capSum = safeCaps.reduce((a, b) => a + b, 0);
+		let remaining = Math.min(Math.max(0, Math.floor(Number(total) || 0)), capSum);
+		const out = Array.from({ length: safeCaps.length }, () => 0);
+		while (remaining > 0) {
+			const available = safeCaps
+				.map((cap, i) => ({ i, left: cap - out[i], w: Math.max(0, Number(weights[i]) || 0) }))
+				.filter((d) => d.left > 0);
+			if (!available.length) break;
+			const baseWeights = available.map((d) => d.w || 1);
+			const chunk = allocateByWeights(remaining, baseWeights);
+			let placed = 0;
+			available.forEach((d, j) => {
+				if (remaining <= 0) return;
+				const add = Math.min(chunk[j] || 0, d.left, remaining);
+				if (add > 0) {
+					out[d.i] += add;
+					remaining -= add;
+					placed += add;
+				}
+			});
+			if (placed === 0) {
+				const idx = available[0].i;
+				out[idx] += 1;
+				remaining -= 1;
+			}
+		}
+		return out;
+	};
+
+	const buildSeries = (p) => {
+		const years = [...(p.years || [])].sort((a, b) => a - b);
+		if (years.length === 0) return { years: [], apps: [], goals: [], capacities: [] };
+		const byYear = p.byYear && typeof p.byYear === "object" ? p.byYear : null;
+		const explicitApps = years.map((year) => parseNonNegative(byYear?.[year]?.apps));
+		const explicitGoals = years.map((year) => parseNonNegative(byYear?.[year]?.goals));
+		const capacities = years.map((year, i) => {
+			const explicitMax = parseNonNegative(byYear?.[year]?.maxApps);
+			if (explicitMax !== null) return Math.min(CHART_MAX_UNITS, explicitMax);
+			const editionCap = editionMaxGames(year);
+			if (editionCap > 0) return Math.min(CHART_MAX_UNITS, editionCap);
+			const explicitApp = parseNonNegative(explicitApps[i]);
+			if (explicitApp !== null) return Math.min(CHART_MAX_UNITS, explicitApp);
+			return 0;
+		});
+		const apps = Array.from({ length: years.length }, (_, i) => {
+			const v = explicitApps[i];
+			const g = explicitGoals[i];
+			if (v === null) return null;
+			if (v === 0 && g !== null && g > 0) return null;
+			return Math.min(v, capacities[i]);
+		});
+		const knownAppsSum = apps.reduce((sum, v) => sum + (v === null ? 0 : v), 0);
+		const appUnknownIdx = apps.map((v, i) => (v === null ? i : -1)).filter((i) => i >= 0);
+		const appRemainder = Math.max(0, (Number(p.apps) || 0) - knownAppsSum);
+		const appCapsLeft = appUnknownIdx.map((i) => capacities[i]);
+		const appWeights = appUnknownIdx.map((i) => Math.max(1, capacities[i]));
+		const appDistributed = allocateWithCaps(appRemainder, appWeights, appCapsLeft);
+		appUnknownIdx.forEach((i, j) => { apps[i] = appDistributed[j] || 0; });
+		const goals = Array.from({ length: years.length }, (_, i) => {
+			const v = explicitGoals[i];
+			if (v === null) return null;
+			return v;
+		});
+		const knownGoalsSum = goals.reduce((sum, v) => sum + (v === null ? 0 : v), 0);
+		const goalUnknownIdx = goals.map((v, i) => (v === null ? i : -1)).filter((i) => i >= 0);
+		const goalRemainder = Math.max(0, (Number(p.goals) || 0) - knownGoalsSum);
+		const goalCapsLeft = goalUnknownIdx.map((i) => Math.max(0, apps[i] || 0));
+		const goalWeights = goalUnknownIdx.map((i) => Math.max(1, apps[i] || 0));
+		const goalDistributed = allocateWithCaps(goalRemainder, goalWeights, goalCapsLeft);
+		goalUnknownIdx.forEach((i, j) => { goals[i] = goalDistributed[j] || 0; });
+		return { years, apps, goals, capacities };
+	};
+
+	const buildMiniChart = (series, lineColor) => {
+		const n = series.years.length;
+		if (!n) return "";
+		const editions = ALL_WC_EDITIONS;
+		const yearToSlot = new Map(editions.map((y, i) => [y, i]));
+		const maxUnits = CHART_MAX_UNITS;
+		const slots = CHART_SLOTS;
+		const width = Math.max(280, slots * 30);
+		const totalApps = series.apps.reduce((sum, v) => sum + (Number(v) || 0), 0);
+		const totalGoals = series.goals.reduce((sum, v) => sum + (Number(v) || 0), 0);
+		const goalPoints = series.years
+			.map((year, i) => {
+				const slotIndex = yearToSlot.get(Number(year));
+				if (slotIndex === undefined) return null;
+				const g = Math.max(0, series.goals[i] || 0);
+				const safeGoal = Math.min(g, maxUnits);
+				const yPct = (1 - safeGoal / maxUnits) * 100;
+				return {
+					x: (width / slots) * (slotIndex + 0.5),
+					y: (yPct / 100) * 110,
+					xPct: ((slotIndex + 0.5) / slots) * 100,
+					yPct,
+					isZero: g === 0,
+				};
+			})
+			.filter((p) => p !== null && Number.isFinite(p.x) && Number.isFinite(p.y));
+		const points = goalPoints.map((p) => `${p.x.toFixed(2)},${p.y.toFixed(2)}`).join(" ");
+		const gridLines = Array.from({ length: maxUnits - 1 }, (_, i) => {
+			const level = i + 1;
+			const y = ((1 - level / maxUnits) * 110).toFixed(2);
+			return `<line x1="0" y1="${y}" x2="${width}" y2="${y}" class="ap-goal-grid-line"/>`;
+		}).join("");
+		const dots = goalPoints
+			.filter((p) => !p.isZero)
+			.map((p) => `<span class="ap-goal-dot" style="--goal-line:${lineColor};left:${p.xPct.toFixed(3)}%;top:${p.yPct.toFixed(3)}%;"></span>`)
+			.join("");
+		const appsByYear = new Map(
+			series.years.map((year, i) => [Number(year), Math.max(0, Number(series.apps[i]) || 0)]),
+		);
+		const cols = editions
+			.map((year, i) => {
+				const apps = Math.min(maxUnits, appsByYear.get(year) || 0);
+				const cap = editionMaxGames(year) || maxUnits;
+				const appDots = Array.from({ length: cap }, (_, j) => {
+					const topPct = (1 - (j + 1) / maxUnits) * 100;
+					return `<span class="ap-app-dot${j < apps ? " is-played" : " is-cap"}" style="top:${topPct.toFixed(2)}%"></span>`;
+				}).join("");
+				const isOdd = i % 2 === 1;
+				const isKeyYear = i === 0 || i === Math.round((slots - 1) / 2) || i === slots - 1;
+				const label = `'${String(year).slice(2)}`;
+				return `<div class="ap-chart-col${isOdd ? " is-odd" : ""}${apps === 0 ? " no-apps" : ""}${isKeyYear ? " is-key-year" : ""}"><div class="ap-app-stack">${appDots}</div><div class="ap-year">${label}</div></div>`;
+			})
+			.join("");
+		return `
+			<div class="ap-chart" style="--ap-units:${maxUnits};--ap-cols:${slots}">
+				<div class="ap-plot">
+					<div class="ap-chart-cols">${cols}</div>
+					<svg class="ap-goal-line" viewBox="0 0 ${width} 110" preserveAspectRatio="none" aria-hidden="true">
+						${gridLines}
+						<polyline class="ap-goal-poly" points="${points}" style="--goal-line:${lineColor};"></polyline>
+					</svg>
+					<div class="ap-goal-dots" aria-hidden="true">${dots}</div>
+				</div>
+				<div class="ap-numbers" aria-label="By the numbers">
+					<div class="ap-number-row">
+						<span class="ap-number-key">A</span>
+						<span class="ap-number-val">${totalApps}</span>
+					</div>
+					<div class="ap-number-row">
+						<span class="ap-number-key">G</span>
+						<span class="ap-number-val">${totalGoals}</span>
+					</div>
+				</div>
+			</div>`;
+	};
+
+	const buildNameHtml = (p) => {
+		const given = p.given && p.given !== "not applicable" ? p.given.trim() : null;
+		const family = p.family ? p.family.trim() : null;
+		if (given && family) {
+			return `<span class="ap-name-given">${given}</span> <strong class="ap-name-family">${family}</strong>`;
+		}
+		if (family) return `<strong class="ap-name-family">${family}</strong>`;
+		return `<strong class="ap-name-family">${p.name}</strong>`;
+	};
+
+	const buildAvatar = (p, lineColor) => {
+		const initials = (() => {
+			const given = p.given && p.given !== "not applicable" ? p.given.trim() : null;
+			const family = p.family ? p.family.trim() : null;
+			if (given && family) return given[0] + family[0];
+			const parts = (family || p.name).split(" ").filter(Boolean);
+			return parts.length >= 2 ? parts[0][0] + parts[parts.length - 1][0] : (parts[0] || "?")[0];
+		})();
+		if (p.img) {
+			return `<div class="ap-avatar"><img class="ap-avatar-img" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentElement.dataset.noimg='1';this.remove()"></div>`;
+		}
+		return `<div class="ap-avatar ap-avatar--initials" style="--av-color:${lineColor}">${initials.toUpperCase()}</div>`;
+	};
+
+	/**
+	 * Render player cards into a container element.
+	 * Single source of truth — both the "Players" tab and the "All Players" tab use this.
+	 * @param {Array}   list                    enriched player objects
+	 * @param {Element} container               DOM element whose innerHTML will be replaced
+	 * @param {Object}  [opts]
+	 * @param {boolean} [opts.showTeamChip=true] show flag+code badge (set false in single-team view)
+	 */
+	function renderPlayerCards(list, container, { showTeamChip = true } = {}) {
+		if (list.length === 0) {
+			container.innerHTML = `<p class="ap-empty">No players found.</p>`;
+			return;
+		}
+		const html = list
+			.map((p, i) => {
+				const flagCode = getCountryCode(p.abbr);
+				const rank = i + 1;
+				const series = buildSeries(p);
+				const lineColor = posColors[p.pos] || "#7fb0ff";
+				const lastYear = p.years ? Math.max(...p.years) : 0;
+				const isActive = lastYear >= 2022;
+				return `
+				<div class="ap-card">
+					<div class="ap-num">${rank}</div>
+					<div class="ap-main">
+						<div class="ap-top-row">
+							<div class="ap-header">
+								${buildAvatar(p, lineColor)}
+								<div class="ap-name-block">
+									<div class="ap-name">${buildNameHtml(p)}</div>
+									<div class="ap-badges-row">
+										<span class="ap-pos" style="color:${posColors[p.pos] || "#aaa"};background:${posColors[p.pos] || "#aaa"}18">${p.pos}</span>
+										<span class="ap-status ${isActive ? "ap-status--active" : "ap-status--retired"}">${isActive ? "Active" : "Retired"}</span>
+									</div>
+								</div>
+							</div>
+							${showTeamChip ? `<div class="ap-team-chip"><span class="ap-team-code">${p.abbr}</span><span class="fi fi-${flagCode} ap-team-flag"></span></div>` : ""}
+						</div>
+						${buildMiniChart(series, lineColor)}
+					</div>
+				</div>`;
+			})
+			.join("");
+		container.innerHTML = html;
+	}
+
+	// All shared card utilities are now initialized — safe to activate non-timeline tabs
+	if (VALID_TABS.has(initialTabParam) && initialTabParam !== "timeline") {
+		activateTab(initialTabParam, false);
+	}
+
+	function renderPlayersChart(teamPlayers) {
 		let currentPos = "all";
 		let currentSort = "goals";
+		// Ensure each player has the current team's abbr (it may already be set in players.json)
+		const enriched = teamPlayers.map((p) => ({ abbr: team.abbr, ...p }));
+		const container = document.getElementById("players-chart");
+
+		function getFiltered() {
+			return enriched
+				.filter((p) => currentPos === "all" || p.pos === currentPos)
+				.sort((a, b) => {
+					if (currentSort === "name") return a.name.localeCompare(b.name);
+					return b[currentSort] - a[currentSort];
+				});
+		}
 
 		function draw() {
-			const container = d3.select("#players-chart");
-			container.selectAll("*").remove();
-
-			const filtered =
-				currentPos === "all"
-					? allPlayers
-					: allPlayers.filter((p) => p.pos === currentPos);
-
-			const sorted = [...filtered].sort(
-				(a, b) => b[currentSort] - a[currentSort],
-			);
-
-			const W = container.node().clientWidth || 900;
-			const isMobile = W < 480;
-			const isNarrow = W < 640;
-			const nameCol = isMobile ? 130 : isNarrow ? 160 : 200;
-			const margin = {
-				top: 24,
-				right: isNarrow ? 16 : 60,
-				bottom: 16,
-				left: nameCol,
-			};
-			const rowH = isMobile ? 32 : 38;
-			const H = sorted.length * rowH + margin.top + margin.bottom;
-			const w = W - margin.left - margin.right;
-			const showYears = !isMobile;
-
-			const maxVal = d3.max(allPlayers, (d) => d[currentSort]) || 1;
-			const barRatio = showYears ? 0.55 : 0.85;
-			const x = d3
-				.scaleLinear()
-				.domain([0, maxVal])
-				.range([0, w * barRatio]);
-
-			const playerYears = [...new Set(allPlayers.flatMap((p) => p.years))].sort(
-				d3.ascending,
-			);
-			const xYear = d3
-				.scalePoint()
-				.domain(playerYears)
-				.range([w * 0.6, w])
-				.padding(0.5);
-
-			const posColors = {
-				FW: "#fca5a5",
-				MF: "#93c5fd",
-				DF: "#86efac",
-				GK: "#fde68a",
-			};
-
-			const svg = container.append("svg").attr("width", W).attr("height", H);
-
-			const g = svg
-				.append("g")
-				.attr("transform", `translate(${margin.left},${margin.top})`);
-
-			// Column headers
-			g.append("text")
-				.attr("x", 0)
-				.attr("y", -8)
-				.attr("fill", "rgba(255,255,255,0.2)")
-				.attr("font-size", 9)
-				.attr("font-weight", 700)
-				.attr("letter-spacing", "0.8px")
-				.text(currentSort.toUpperCase());
-
-			if (showYears) {
-				playerYears.forEach((year) => {
-					g.append("text")
-						.attr("x", xYear(year))
-						.attr("y", -8)
-						.attr("text-anchor", "middle")
-						.attr("fill", "rgba(255,255,255,0.2)")
-						.attr("font-size", 8)
-						.attr("font-weight", 600)
-						.text(`'${String(year).slice(2)}`);
-				});
-			}
-
-			// Rows
-			const rows = g
-				.selectAll(".player-row")
-				.data(sorted)
-				.join("g")
-				.attr("class", "player-row")
-				.attr("transform", (d, i) => `translate(0,${i * rowH})`);
-
-			// Alternating row backgrounds
-			rows
-				.append("rect")
-				.attr("x", -margin.left)
-				.attr("width", W)
-				.attr("height", rowH)
-				.attr("fill", (d, i) =>
-					i % 2 === 0 ? "rgba(255,255,255,0.015)" : "none",
-				);
-
-			// Position pill background
-			rows
-				.append("rect")
-				.attr("x", -margin.left + 6)
-				.attr("y", rowH / 2 - 9)
-				.attr("width", 26)
-				.attr("height", 18)
-				.attr("rx", 3)
-				.attr("fill", (d) => (posColors[d.pos] || "#aaa") + "20");
-
-			// Position pill text
-			rows
-				.append("text")
-				.attr("x", -margin.left + 19)
-				.attr("y", rowH / 2)
-				.attr("dy", "0.35em")
-				.attr("text-anchor", "middle")
-				.attr("fill", (d) => posColors[d.pos] || "#aaa")
-				.attr("font-size", 9)
-				.attr("font-weight", 700)
-				.text((d) => d.pos);
-
-			// Player name
-			const nameFontSize = isMobile ? 10 : 12;
-			const nameX = isMobile ? -margin.left + 34 : -margin.left + 40;
-			const maxNameChars = isMobile ? 14 : isNarrow ? 18 : 99;
-			rows
-				.append("text")
-				.attr("x", nameX)
-				.attr("y", rowH / 2)
-				.attr("dy", "0.35em")
-				.attr("fill", "rgba(255,255,255,0.85)")
-				.attr("font-size", nameFontSize)
-				.attr("font-weight", 500)
-				.text((d) =>
-					d.name.length > maxNameChars
-						? d.name.slice(0, maxNameChars - 1) + "…"
-						: d.name,
-				);
-
-			// Subtle vertical grid lines
-			d3.ticks(0, maxVal, 5).forEach((v) => {
-				g.append("line")
-					.attr("x1", x(v))
-					.attr("x2", x(v))
-					.attr("y1", 0)
-					.attr("y2", sorted.length * rowH)
-					.attr("stroke", "rgba(255,255,255,0.04)")
-					.attr("stroke-width", 1);
-			});
-
-			// Lollipop stem
-			rows
-				.append("line")
-				.attr("x1", 0)
-				.attr("x2", (d) => x(d[currentSort]))
-				.attr("y1", rowH / 2)
-				.attr("y2", rowH / 2)
-				.attr("stroke", (d) => (posColors[d.pos] || "#aaa") + "40")
-				.attr("stroke-width", 2);
-
-			// Lollipop dot
-			rows
-				.append("circle")
-				.attr("cx", (d) => x(d[currentSort]))
-				.attr("cy", rowH / 2)
-				.attr("r", 6)
-				.attr("fill", (d) => posColors[d.pos] || "#aaa")
-				.attr("opacity", 0.85);
-
-			// Value + secondary metric label
-			rows
-				.append("text")
-				.attr("x", (d) => x(d[currentSort]) + 13)
-				.attr("y", rowH / 2)
-				.attr("dy", "0.35em")
-				.attr("fill", "rgba(255,255,255,0.45)")
-				.attr("font-size", 10)
-				.text((d) => {
-					const sec = currentSort === "goals" ? "apps" : "goals";
-					return `${d[currentSort]}${currentSort === "goals" ? "g" : "a"}  ${d[sec]}${sec === "apps" ? "a" : "g"}`;
-				});
-
-			// WC year dots (hidden on mobile)
-			if (showYears) {
-				rows.each(function (d) {
-					const row = d3.select(this);
-					playerYears.forEach((year) => {
-						const played = d.years.includes(year);
-						row
-							.append("circle")
-							.attr("cx", xYear(year))
-							.attr("cy", rowH / 2)
-							.attr("r", played ? 3.5 : 2)
-							.attr(
-								"fill",
-								played
-									? posColors[d.pos] || "rgba(255,255,255,0.65)"
-									: "rgba(255,255,255,0.08)",
-							)
-							.attr("opacity", played ? 0.75 : 1);
-					});
-				});
-			}
-
-			// Row hover tooltip
-			rows
-				.style("cursor", "default")
-				.on("mousemove", function (event, d) {
-					const yearsStr = d.years
-						.map((y) => `'${String(y).slice(2)}`)
-						.join(", ");
-					d3.select("#tt")
-						.style("opacity", 1)
-						.style("left", event.clientX + "px")
-						.style("top", event.clientY + "px")
-						.html(
-							`<div style="font-weight:600">${d.name}</div>` +
-								`<div class="tt-sub">${d.pos} · ${d.goals}g · ${d.apps} apps</div>` +
-								`<div style="margin-top:6px;color:rgba(255,255,255,0.45);font-size:11px">WCs: ${yearsStr}</div>`,
-						);
-				})
-				.on("mouseleave", function () {
-					d3.select("#tt").style("opacity", 0);
-				});
+			renderPlayerCards(getFiltered(), container, { showTeamChip: false });
 		}
 
 		draw();
 
-		// Redraw on resize
-		const _chartEl = document.getElementById("players-chart");
-		let _resizeTimer;
-		new ResizeObserver(() => {
-			clearTimeout(_resizeTimer);
-			_resizeTimer = setTimeout(draw, 80);
-		}).observe(_chartEl);
-
 		// Position filter controls
 		document.querySelectorAll(".pos-filter").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document
-					.querySelectorAll(".pos-filter")
-					.forEach((b) => b.classList.remove("active"));
+				document.querySelectorAll(".pos-filter").forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentPos = btn.dataset.pos;
 				draw();
@@ -946,9 +997,7 @@
 		// Sort controls
 		document.querySelectorAll(".sort-btn").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document
-					.querySelectorAll(".sort-btn")
-					.forEach((b) => b.classList.remove("active"));
+				document.querySelectorAll(".sort-btn").forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentSort = btn.dataset.sort;
 				draw();
@@ -1092,8 +1141,9 @@
 				new RegExp(`\\b${escapeRegex(code)}\\b`).test(upper),
 			);
 			if (codeMatch) return true;
-			return [...opponentNames].some((name) =>
-				name && new RegExp(`\\b${escapeRegex(name)}\\b`).test(normalized),
+			return [...opponentNames].some(
+				(name) =>
+					name && new RegExp(`\\b${escapeRegex(name)}\\b`).test(normalized),
 			);
 		};
 
@@ -1155,7 +1205,10 @@
 				}
 				return acc;
 			}, [])
-			.sort((a, b) => (b.year - a.year) || String(b.date).localeCompare(String(a.date)));
+			.sort(
+				(a, b) =>
+					b.year - a.year || String(b.date).localeCompare(String(a.date)),
+			);
 
 		// Common years: both teams participated
 		const commonYears = [...yearsA.keys()]
@@ -1260,8 +1313,7 @@
 		container.appendChild(statsEl);
 	}
 
-	function renderAllPlayersTab(playersData) {
-		// Flatten all players across all teams, add team info
+	async function renderAllPlayersTab(playersData) {
 		const confColors = {
 			CONMEBOL: "#a7f3d0",
 			UEFA: "#93c5fd",
@@ -1276,19 +1328,13 @@
 				{ label: t.name, abbr: t.abbr, color: confColors[t.conf] || "#aaa" },
 			]),
 		);
-
-		const posColors = {
-			FW: "#fca5a5",
-			MF: "#93c5fd",
-			DF: "#86efac",
-			GK: "#fde68a",
-		};
-
 		const allPlayers = Object.entries(playersData).flatMap(([key, arr]) =>
 			arr.map((p) => ({ ...p, team: key, ...teamMeta[key] })),
 		);
 
 		const container = document.getElementById("all-players-list");
+		container.innerHTML = `<p class="ap-empty">Loading player cards…</p>`;
+
 		let currentPos = "all";
 		let currentSort = "goals";
 		let query = "";
@@ -1311,77 +1357,21 @@
 		}
 
 		function draw() {
-			const list = getFiltered();
-			const maxGoals = d3.max(allPlayers, (d) => d.goals) || 1;
-			const maxApps = d3.max(allPlayers, (d) => d.apps) || 1;
-
-			if (list.length === 0) {
-				container.innerHTML = `<p class="ap-empty">No players match your search.</p>`;
-				return;
-			}
-
-			const html = list
-				.map((p, i) => {
-					const goalPct = (p.goals / maxGoals) * 100;
-					const appsPct = (p.apps / maxApps) * 100;
-					const flagCode = getCountryCode(p.abbr);
-					const yearsStr = p.years
-						.map((y) => `'${String(y).slice(2)}`)
-						.join(" · ");
-					const rank = i + 1;
-					return `
-					<div class="ap-card">
-						<div class="ap-rank">${rank}</div>
-						<div class="ap-main">
-							<div class="ap-header">
-								<span class="ap-name">${p.name}</span>
-								<span class="ap-pos" style="color:${posColors[p.pos] || "#aaa"};background:${posColors[p.pos] || "#aaa"}18">${p.pos}</span>
-							</div>
-							<div class="ap-team">
-								<span class="fi fi-${flagCode} ap-team-flag"></span>
-								<span class="ap-team-name" style="color:${p.color}">${p.label}</span>
-								<span class="ap-years">${yearsStr}</span>
-							</div>
-							<div class="ap-bars">
-								<div class="ap-bar-row">
-									<span class="ap-bar-label">Goals</span>
-									<div class="ap-bar-track">
-										<div class="ap-bar-fill" style="width:${goalPct}%;background:${posColors[p.pos] || "#aaa"}"></div>
-									</div>
-									<span class="ap-bar-val">${p.goals}</span>
-								</div>
-								<div class="ap-bar-row">
-									<span class="ap-bar-label">Apps</span>
-									<div class="ap-bar-track">
-										<div class="ap-bar-fill" style="width:${appsPct}%;background:${p.color}60"></div>
-									</div>
-									<span class="ap-bar-val">${p.apps}</span>
-								</div>
-							</div>
-						</div>
-					</div>`;
-				})
-				.join("");
-
-			container.innerHTML = html;
+			renderPlayerCards(getFiltered(), container, { showTeamChip: true });
 		}
 
 		draw();
 
 		// Search
-		document
-			.getElementById("all-players-search")
-			.addEventListener("input", (e) => {
-				query = e.target.value.trim();
-				draw();
-			});
+		document.getElementById("all-players-search").addEventListener("input", (e) => {
+			query = e.target.value.trim();
+			draw();
+		});
 
 		// Position filter
 		document.querySelectorAll(".ap-filter").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document
-					.querySelectorAll(".ap-filter")
-					.forEach((b) => b.classList.remove("active"));
+				document.querySelectorAll(".ap-filter").forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentPos = btn.dataset.apPos;
 				draw();
@@ -1391,15 +1381,33 @@
 		// Sort
 		document.querySelectorAll(".ap-sort").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document
-					.querySelectorAll(".ap-sort")
-					.forEach((b) => b.classList.remove("active"));
+				document.querySelectorAll(".ap-sort").forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentSort = btn.dataset.apSort;
 				draw();
 			});
 		});
 	}
+
+
+
+		function getFiltered() {
+			return allPlayers
+				.filter((p) => currentPos === "all" || p.pos === currentPos)
+				.filter((p) => {
+					if (!query) return true;
+					const q = query.toLowerCase();
+					return (
+						p.name.toLowerCase().includes(q) ||
+						p.label.toLowerCase().includes(q)
+					);
+				})
+				.sort((a, b) => {
+					if (currentSort === "name") return a.name.localeCompare(b.name);
+					return b[currentSort] - a[currentSort];
+				});
+		}
+
 
 	// ── Compare Tab ──────────────────────────────────────────────────────────
 	async function renderCompareTab(currentKey) {
@@ -1561,6 +1569,11 @@
 		}
 
 		function render() {
+			if (!selectedComparable) {
+				container.innerHTML = `<div class="cmp-unavailable"><strong>${selectedTeamName}</strong> is not part of the current WC2026 comparison set, so it cannot be compared in this tab. Pick a qualified team from the selector to use Compare.</div>`;
+				return;
+			}
+
 			const ranked = [...values]
 				.sort((a, b) => {
 					if (activeMetric === "avgAge") return a.avgAge - b.avgAge;
@@ -1582,11 +1595,6 @@
 					</div>
 					<span class="cmp-rank-badge">#${rank} of ${values.length}</span>
 				</div>
-				${
-					!selectedComparable
-						? `<div class="cmp-unavailable"><strong>${selectedTeamName}</strong> is not part of the current WC2026 comparison set, so it cannot be compared in this tab. Pick a qualified team from the selector to use Compare.</div>`
-						: ""
-				}
 				<div class="cmp-table-scroll">
 					<div class="cmp-table">
 						<div class="cmp-col-headers">
