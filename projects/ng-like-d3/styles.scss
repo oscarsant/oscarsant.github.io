@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+// Prevent text selection and input-triggered zoom on mobile
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Allow selection inside text inputs/textareas
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+  // iOS zooms in when font-size < 16px — lock it to prevent that
+  font-size: max(16px, 1em) !important;
+}
+
+// Selects also trigger zoom if small
+select {
+  font-size: max(16px, 1em) !important;
+}
+
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
   font-weight: normal;

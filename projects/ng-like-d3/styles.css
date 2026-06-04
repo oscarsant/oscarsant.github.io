@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+  font-size: max(16px, 1em) !important;
+}
+
+select {
+  font-size: max(16px, 1em) !important;
+}
+
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
   font-weight: normal;
