@@ -1594,6 +1594,13 @@ svg {
   margin: 1.5rem 0 1rem;
 }
 
+.all-players-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
 .all-players-search-wrap {
   position: relative;
   width: 100%;

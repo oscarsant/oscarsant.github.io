@@ -1785,8 +1785,15 @@ svg {
 .all-players-controls {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; // 12px
-  margin: 1.5rem 0 1rem; // 24px 0 16px
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.all-players-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; // 20px
+  flex-wrap: wrap;
 }
 
 .all-players-search-wrap {
