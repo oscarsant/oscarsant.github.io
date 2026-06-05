@@ -144,7 +144,6 @@ $space-legacy-14px: 0.875rem;
 // ─── Type Scale ──────────────────────────────────────────────────────────────
 // All sizes in rem. px values shown at 16px base (mobile).
 // At 20px base (desktop) multiply by 1.25×.
-$text-3xs: 0.4rem; //  9px — micro labels: pos badge, year, status chip
 $text-2xs: 0.5rem; // 10px — all-caps labels: section titles, filter pills
 $text-xs: 0.6rem; // 11px — muted secondary: breadcrumb, footer, legend
 $text-sm: 0.7rem; // 12px — tab labels, captions, tooltip sub-text
@@ -159,7 +158,7 @@ $text-hero: 3.5rem; // 56px — hero display title
 
 // ─── Font Weights ─────────────────────────────────────────────────────────────
 $weight-thin: 200;
-$weight-normal: 300;
+$weight-normal: 400;
 $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 700;
@@ -302,8 +301,12 @@ body.landing-body::before {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: url("https://img.goodfon.ru/original/3584x2240/6/a0/la-copa-del-mundo-espana-el.jpg") center top / cover no-repeat;
-  filter: grayscale(1) contrast(1.15) brightness(0.42);
+  background: url("intro-pele.webp") center top / cover no-repeat;
+  filter: grayscale(1) contrast(1.1) brightness(0.55);
+
+  @media (max-width: 640px) {
+    filter: grayscale(1) contrast(1.05) brightness(0.65);
+  }
 }
 
 body.landing-body::after {
@@ -847,7 +850,7 @@ body.landing-body::after {
 
   .stat-label {
     @include ts-label;
-    font-size: $text-3xs; // override: smaller than label default
+    font-size: $text-2xs; // override: smaller than label default
     color: var(--muted);
   }
 }
@@ -857,7 +860,7 @@ body.landing-body::after {
 
   .form-label {
     @include ts-label;
-    font-size: $text-3xs; // override
+    font-size: $text-2xs; // override
     color: var(--muted);
     margin-bottom: 0.5rem; // 8px
   }
@@ -1104,7 +1107,6 @@ svg {
 .stats-section-title {
   margin: 0;
   @include ts-label;
-  font-weight: $weight-medium;
   color: var(--muted);
 }
 
@@ -1334,7 +1336,7 @@ svg {
   border: none;
   border-bottom: 0.125rem solid transparent; // 2px
   color: var(--muted);
-  @include ts-caption;
+  font-size: 0.7rem;
   font-weight: $weight-medium;
   font-family: inherit;
   cursor: pointer;
@@ -1407,7 +1409,7 @@ svg {
 
   .stat-label {
     @include ts-heading-sm;
-    font-size: $text-3xs;
+    font-size: $text-2xs;
     color: #6b7280;
   }
 }
@@ -1540,7 +1542,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 0.5rem; // 8px
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .legend-dot {
@@ -2022,7 +2024,7 @@ svg {
 
 .ap-pos {
   @include ts-label;
-  font-size: $text-3xs; // override: smaller
+  font-size: $text-2xs; // override: smaller
   font-weight: $weight-bold;
   padding: 0.125rem 0.375rem; // 2px 6px
   border-radius: 3px;
@@ -2140,7 +2142,7 @@ svg {
   left: 0;
   right: 0;
   @include ts-label;
-  font-size: $text-3xs; // override: smaller
+  font-size: $text-2xs; // override: smaller
   color: rgba(255, 255, 255, 0.45);
   min-height: 0.7rem;
   text-align: center;
@@ -2538,11 +2540,10 @@ svg {
 
 .cmp-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
   margin-bottom: 1.25rem;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 
   @media (max-width: 640px) {
     .pos-filters {
