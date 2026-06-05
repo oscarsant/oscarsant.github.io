@@ -695,7 +695,12 @@
 		.filter(Number.isFinite)
 		.sort((a, b) => a - b);
 	const CHART_SLOTS = Math.max(1, ALL_WC_EDITIONS.length);
-	const posColors = { FW: "#fca5a5", MF: "#93c5fd", DF: "#86efac", GK: "#fde68a" };
+	const posColors = {
+		FW: "#fca5a5",
+		MF: "#93c5fd",
+		DF: "#86efac",
+		GK: "#fde68a",
+	};
 
 	const parseNonNegative = (v) => {
 		const n = Number(v);
@@ -739,11 +744,18 @@
 	const allocateWithCaps = (total, weights, caps) => {
 		const safeCaps = caps.map((c) => Math.max(0, Math.floor(Number(c) || 0)));
 		const capSum = safeCaps.reduce((a, b) => a + b, 0);
-		let remaining = Math.min(Math.max(0, Math.floor(Number(total) || 0)), capSum);
+		let remaining = Math.min(
+			Math.max(0, Math.floor(Number(total) || 0)),
+			capSum,
+		);
 		const out = Array.from({ length: safeCaps.length }, () => 0);
 		while (remaining > 0) {
 			const available = safeCaps
-				.map((cap, i) => ({ i, left: cap - out[i], w: Math.max(0, Number(weights[i]) || 0) }))
+				.map((cap, i) => ({
+					i,
+					left: cap - out[i],
+					w: Math.max(0, Number(weights[i]) || 0),
+				}))
 				.filter((d) => d.left > 0);
 			if (!available.length) break;
 			const baseWeights = available.map((d) => d.w || 1);
@@ -769,10 +781,15 @@
 
 	const buildSeries = (p) => {
 		const years = [...(p.years || [])].sort((a, b) => a - b);
-		if (years.length === 0) return { years: [], apps: [], goals: [], capacities: [] };
+		if (years.length === 0)
+			return { years: [], apps: [], goals: [], capacities: [] };
 		const byYear = p.byYear && typeof p.byYear === "object" ? p.byYear : null;
-		const explicitApps = years.map((year) => parseNonNegative(byYear?.[year]?.apps));
-		const explicitGoals = years.map((year) => parseNonNegative(byYear?.[year]?.goals));
+		const explicitApps = years.map((year) =>
+			parseNonNegative(byYear?.[year]?.apps),
+		);
+		const explicitGoals = years.map((year) =>
+			parseNonNegative(byYear?.[year]?.goals),
+		);
 		const capacities = years.map((year, i) => {
 			const explicitMax = parseNonNegative(byYear?.[year]?.maxApps);
 			if (explicitMax !== null) return Math.min(CHART_MAX_UNITS, explicitMax);
@@ -790,24 +807,43 @@
 			return Math.min(v, capacities[i]);
 		});
 		const knownAppsSum = apps.reduce((sum, v) => sum + (v === null ? 0 : v), 0);
-		const appUnknownIdx = apps.map((v, i) => (v === null ? i : -1)).filter((i) => i >= 0);
+		const appUnknownIdx = apps
+			.map((v, i) => (v === null ? i : -1))
+			.filter((i) => i >= 0);
 		const appRemainder = Math.max(0, (Number(p.apps) || 0) - knownAppsSum);
 		const appCapsLeft = appUnknownIdx.map((i) => capacities[i]);
 		const appWeights = appUnknownIdx.map((i) => Math.max(1, capacities[i]));
-		const appDistributed = allocateWithCaps(appRemainder, appWeights, appCapsLeft);
-		appUnknownIdx.forEach((i, j) => { apps[i] = appDistributed[j] || 0; });
+		const appDistributed = allocateWithCaps(
+			appRemainder,
+			appWeights,
+			appCapsLeft,
+		);
+		appUnknownIdx.forEach((i, j) => {
+			apps[i] = appDistributed[j] || 0;
+		});
 		const goals = Array.from({ length: years.length }, (_, i) => {
 			const v = explicitGoals[i];
 			if (v === null) return null;
 			return v;
 		});
-		const knownGoalsSum = goals.reduce((sum, v) => sum + (v === null ? 0 : v), 0);
-		const goalUnknownIdx = goals.map((v, i) => (v === null ? i : -1)).filter((i) => i >= 0);
+		const knownGoalsSum = goals.reduce(
+			(sum, v) => sum + (v === null ? 0 : v),
+			0,
+		);
+		const goalUnknownIdx = goals
+			.map((v, i) => (v === null ? i : -1))
+			.filter((i) => i >= 0);
 		const goalRemainder = Math.max(0, (Number(p.goals) || 0) - knownGoalsSum);
 		const goalCapsLeft = goalUnknownIdx.map((i) => Math.max(0, apps[i] || 0));
 		const goalWeights = goalUnknownIdx.map((i) => Math.max(1, apps[i] || 0));
-		const goalDistributed = allocateWithCaps(goalRemainder, goalWeights, goalCapsLeft);
-		goalUnknownIdx.forEach((i, j) => { goals[i] = goalDistributed[j] || 0; });
+		const goalDistributed = allocateWithCaps(
+			goalRemainder,
+			goalWeights,
+			goalCapsLeft,
+		);
+		goalUnknownIdx.forEach((i, j) => {
+			goals[i] = goalDistributed[j] || 0;
+		});
 		return { years, apps, goals, capacities };
 	};
 
@@ -820,7 +856,10 @@
 		const slots = CHART_SLOTS;
 		const width = Math.max(280, slots * 30);
 		const totalApps = series.apps.reduce((sum, v) => sum + (Number(v) || 0), 0);
-		const totalGoals = series.goals.reduce((sum, v) => sum + (Number(v) || 0), 0);
+		const totalGoals = series.goals.reduce(
+			(sum, v) => sum + (Number(v) || 0),
+			0,
+		);
 		const goalPoints = series.years
 			.map((year, i) => {
 				const slotIndex = yearToSlot.get(Number(year));
@@ -836,8 +875,12 @@
 					isZero: g === 0,
 				};
 			})
-			.filter((p) => p !== null && Number.isFinite(p.x) && Number.isFinite(p.y));
-		const points = goalPoints.map((p) => `${p.x.toFixed(2)},${p.y.toFixed(2)}`).join(" ");
+			.filter(
+				(p) => p !== null && Number.isFinite(p.x) && Number.isFinite(p.y),
+			);
+		const points = goalPoints
+			.map((p) => `${p.x.toFixed(2)},${p.y.toFixed(2)}`)
+			.join(" ");
 		const gridLines = Array.from({ length: maxUnits - 1 }, (_, i) => {
 			const level = i + 1;
 			const y = ((1 - level / maxUnits) * 110).toFixed(2);
@@ -845,10 +888,16 @@
 		}).join("");
 		const dots = goalPoints
 			.filter((p) => !p.isZero)
-			.map((p) => `<span class="ap-goal-dot" style="--goal-line:${lineColor};left:${p.xPct.toFixed(3)}%;top:${p.yPct.toFixed(3)}%;"></span>`)
+			.map(
+				(p) =>
+					`<span class="ap-goal-dot" style="--goal-line:${lineColor};left:${p.xPct.toFixed(3)}%;top:${p.yPct.toFixed(3)}%;"></span>`,
+			)
 			.join("");
 		const appsByYear = new Map(
-			series.years.map((year, i) => [Number(year), Math.max(0, Number(series.apps[i]) || 0)]),
+			series.years.map((year, i) => [
+				Number(year),
+				Math.max(0, Number(series.apps[i]) || 0),
+			]),
 		);
 		const cols = editions
 			.map((year, i) => {
@@ -859,7 +908,8 @@
 					return `<span class="ap-app-dot${j < apps ? " is-played" : " is-cap"}" style="top:${topPct.toFixed(2)}%"></span>`;
 				}).join("");
 				const isOdd = i % 2 === 1;
-				const isKeyYear = i === 0 || i === Math.round((slots - 1) / 2) || i === slots - 1;
+				const isKeyYear =
+					i === 0 || i === Math.round((slots - 1) / 2) || i === slots - 1;
 				const label = `'${String(year).slice(2)}`;
 				return `<div class="ap-chart-col${isOdd ? " is-odd" : ""}${apps === 0 ? " no-apps" : ""}${isKeyYear ? " is-key-year" : ""}"><div class="ap-app-stack">${appDots}</div><div class="ap-year">${label}</div></div>`;
 			})
@@ -888,7 +938,8 @@
 	};
 
 	const buildNameHtml = (p) => {
-		const given = p.given && p.given !== "not applicable" ? p.given.trim() : null;
+		const given =
+			p.given && p.given !== "not applicable" ? p.given.trim() : null;
 		const family = p.family ? p.family.trim() : null;
 		if (given && family) {
 			return `<span class="ap-name-given">${given}</span> <strong class="ap-name-family">${family}</strong>`;
@@ -899,11 +950,14 @@
 
 	const buildAvatar = (p, lineColor) => {
 		const initials = (() => {
-			const given = p.given && p.given !== "not applicable" ? p.given.trim() : null;
+			const given =
+				p.given && p.given !== "not applicable" ? p.given.trim() : null;
 			const family = p.family ? p.family.trim() : null;
 			if (given && family) return given[0] + family[0];
 			const parts = (family || p.name).split(" ").filter(Boolean);
-			return parts.length >= 2 ? parts[0][0] + parts[parts.length - 1][0] : (parts[0] || "?")[0];
+			return parts.length >= 2
+				? parts[0][0] + parts[parts.length - 1][0]
+				: (parts[0] || "?")[0];
 		})();
 		if (p.img) {
 			return `<div class="ap-avatar"><img class="ap-avatar-img" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentElement.dataset.noimg='1';this.remove()"></div>`;
@@ -974,7 +1028,7 @@
 				.filter((p) => currentPos === "all" || p.pos === currentPos)
 				.sort((a, b) => {
 					if (currentSort === "name") return a.name.localeCompare(b.name);
-					return b[currentSort] - a[currentSort];
+					return (b[currentSort] || 0) - (a[currentSort] || 0);
 				});
 		}
 
@@ -987,7 +1041,9 @@
 		// Position filter controls
 		document.querySelectorAll(".pos-filter").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document.querySelectorAll(".pos-filter").forEach((b) => b.classList.remove("active"));
+				document
+					.querySelectorAll(".pos-filter")
+					.forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentPos = btn.dataset.pos;
 				draw();
@@ -997,7 +1053,9 @@
 		// Sort controls
 		document.querySelectorAll(".sort-btn").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document.querySelectorAll(".sort-btn").forEach((b) => b.classList.remove("active"));
+				document
+					.querySelectorAll(".sort-btn")
+					.forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentSort = btn.dataset.sort;
 				draw();
@@ -1352,7 +1410,7 @@
 				})
 				.sort((a, b) => {
 					if (currentSort === "name") return a.name.localeCompare(b.name);
-					return b[currentSort] - a[currentSort];
+					return (b[currentSort] || 0) - (a[currentSort] || 0);
 				});
 		}
 
@@ -1363,15 +1421,19 @@
 		draw();
 
 		// Search
-		document.getElementById("all-players-search").addEventListener("input", (e) => {
-			query = e.target.value.trim();
-			draw();
-		});
+		document
+			.getElementById("all-players-search")
+			.addEventListener("input", (e) => {
+				query = e.target.value.trim();
+				draw();
+			});
 
 		// Position filter
 		document.querySelectorAll(".ap-filter").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document.querySelectorAll(".ap-filter").forEach((b) => b.classList.remove("active"));
+				document
+					.querySelectorAll(".ap-filter")
+					.forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentPos = btn.dataset.apPos;
 				draw();
@@ -1381,7 +1443,9 @@
 		// Sort
 		document.querySelectorAll(".ap-sort").forEach((btn) => {
 			btn.addEventListener("click", () => {
-				document.querySelectorAll(".ap-sort").forEach((b) => b.classList.remove("active"));
+				document
+					.querySelectorAll(".ap-sort")
+					.forEach((b) => b.classList.remove("active"));
 				btn.classList.add("active");
 				currentSort = btn.dataset.apSort;
 				draw();
@@ -1389,25 +1453,21 @@
 		});
 	}
 
-
-
-		function getFiltered() {
-			return allPlayers
-				.filter((p) => currentPos === "all" || p.pos === currentPos)
-				.filter((p) => {
-					if (!query) return true;
-					const q = query.toLowerCase();
-					return (
-						p.name.toLowerCase().includes(q) ||
-						p.label.toLowerCase().includes(q)
-					);
-				})
-				.sort((a, b) => {
-					if (currentSort === "name") return a.name.localeCompare(b.name);
-					return b[currentSort] - a[currentSort];
-				});
-		}
-
+	function getFiltered() {
+		return allPlayers
+			.filter((p) => currentPos === "all" || p.pos === currentPos)
+			.filter((p) => {
+				if (!query) return true;
+				const q = query.toLowerCase();
+				return (
+					p.name.toLowerCase().includes(q) || p.label.toLowerCase().includes(q)
+				);
+			})
+			.sort((a, b) => {
+				if (currentSort === "name") return a.name.localeCompare(b.name);
+				return b[currentSort] - a[currentSort];
+			});
+	}
 
 	// ── Compare Tab ──────────────────────────────────────────────────────────
 	async function renderCompareTab(currentKey) {
