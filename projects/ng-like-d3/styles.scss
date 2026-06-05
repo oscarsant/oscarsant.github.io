@@ -144,10 +144,10 @@ $space-legacy-14px: 0.875rem;
 // ─── Type Scale ──────────────────────────────────────────────────────────────
 // All sizes in rem. px values shown at 16px base (mobile).
 // At 20px base (desktop) multiply by 1.25×.
-$text-3xs: 0.5rem; //  9px — micro labels: pos badge, year, status chip
-$text-2xs: 0.6rem; // 10px — all-caps labels: section titles, filter pills
-$text-xs: 0.7rem; // 11px — muted secondary: breadcrumb, footer, legend
-$text-sm: 0.8rem; // 12px — tab labels, captions, tooltip sub-text
+$text-3xs: 0.4rem; //  9px — micro labels: pos badge, year, status chip
+$text-2xs: 0.5rem; // 10px — all-caps labels: section titles, filter pills
+$text-xs: 0.6rem; // 11px — muted secondary: breadcrumb, footer, legend
+$text-sm: 0.7rem; // 12px — tab labels, captions, tooltip sub-text
 $text-md: 0.9rem; // 13px — secondary body: tooltips, table rows, selects
 $text-base: 1rem; // 14px — default body, inputs, search, card text
 $text-lg: 1.1rem; // 16px — names, headings-sm, prominent labels
@@ -164,26 +164,12 @@ $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 700;
 
-// ─── Text Style Mixins ────────────────────────────────────────────────────────
-// Each mixin bundles size + weight + line-height + letter-spacing.
-// Override any property after the include if needed.
-//
-//  @include ts-label      → caps utility label      (pill text, filters)
-//  @include ts-caption    → small caption            (legend, breadcrumb)
-//  @include ts-body-sm    → secondary body           (tooltips, table, selects)
-//  @include ts-body       → default body             (inputs, cards, search)
-//  @include ts-name       → player / team name       (prominent label)
-//  @include ts-heading-sm → small section heading    (h3, stat label heading)
-//  @include ts-heading    → section heading          (h2)
-//  @include ts-page       → page-level heading       (h1, team name)
-//  @include ts-display    → large stat number        (goals, apps counter)
-//  @include ts-hero       → hero display title       (landing hero)
 
 @mixin ts-label {
   font-size: $text-2xs;
   font-weight: $weight-normal;
   line-height: 1;
-  letter-spacing: 0.08em;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -279,7 +265,7 @@ $weight-bold: 700;
 
   @media (max-width: 640px) {
     --flag-size-dropdown: 20px;
-    --base-font-size: 17px;
+    --base-font-size: 18px;
     --flag-size-team: 32px;
 
 
@@ -1309,32 +1295,6 @@ svg {
   padding: $space-4;
   box-sizing: border-box;
   --tab-content-max-width: 1200px;
-}
-
-// Breadcrumb
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: $space-legacy-6px;
-  @include ts-label;
-  font-weight: $weight-medium;
-  color: var(--muted);
-  margin-bottom: $space-5;
-
-  .breadcrumb-separator {
-    color: var(--line);
-    margin: 0 0.125rem; // 0 2px
-  }
-
-  .team-rank-badge {
-    background: rgba(255, 255, 255, .04);
-    border: 1px solid var(--line);
-    padding: 0.1875rem 0.5rem;
-    border-radius: 0.25rem;
-    @include ts-label;
-    font-size: $text-3xs;
-    margin-left: 0.375rem;
-  }
 }
 
 // Tabs

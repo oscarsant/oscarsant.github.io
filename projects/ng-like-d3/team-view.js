@@ -38,9 +38,7 @@
 
 	// Update page elements
 	document.title = `${team.name} — World Cup History`;
-	document.getElementById("team-name-breadcrumb").textContent = team.name;
 	document.getElementById("team-name-title").textContent = team.name;
-	document.getElementById("rank-badge").textContent = `Rank #${team.rank}`;
 	document.getElementById("team-rank").textContent = team.rank;
 	document.getElementById("team-points").textContent = team.points;
 	document.getElementById("team-appearances").textContent = team.appearances;
@@ -926,11 +924,11 @@
 				</div>
 				<div class="ap-numbers" aria-label="By the numbers">
 					<div class="ap-number-row">
-						<span class="ap-number-key">A</span>
+						<span class="ap-number-key">Aps</span>
 						<span class="ap-number-val">${totalApps}</span>
 					</div>
 					<div class="ap-number-row">
-						<span class="ap-number-key">G</span>
+						<span class="ap-number-key">Gls</span>
 						<span class="ap-number-val">${totalGoals}</span>
 					</div>
 				</div>
@@ -988,7 +986,6 @@
 				const isActive = lastYear >= 2022;
 				return `
 				<div class="ap-card">
-					<div class="ap-num">${rank}</div>
 					<div class="ap-main">
 						<div class="ap-top-row">
 							<div class="ap-header">
@@ -1030,9 +1027,10 @@
 					if (currentSort === "name") return a.name.localeCompare(b.name);
 					const primary = (b[currentSort] || 0) - (a[currentSort] || 0);
 					if (primary !== 0) return primary;
-					const secondary = currentSort === "goals"
-						? (b.apps || 0) - (a.apps || 0)
-						: (b.goals || 0) - (a.goals || 0);
+					const secondary =
+						currentSort === "goals"
+							? (b.apps || 0) - (a.apps || 0)
+							: (b.goals || 0) - (a.goals || 0);
 					if (secondary !== 0) return secondary;
 					return a.name.localeCompare(b.name);
 				});
@@ -1418,9 +1416,10 @@
 					if (currentSort === "name") return a.name.localeCompare(b.name);
 					const primary = (b[currentSort] || 0) - (a[currentSort] || 0);
 					if (primary !== 0) return primary;
-					const secondary = currentSort === "goals"
-						? (b.apps || 0) - (a.apps || 0)
-						: (b.goals || 0) - (a.goals || 0);
+					const secondary =
+						currentSort === "goals"
+							? (b.apps || 0) - (a.apps || 0)
+							: (b.goals || 0) - (a.goals || 0);
 					if (secondary !== 0) return secondary;
 					return a.name.localeCompare(b.name);
 				});
