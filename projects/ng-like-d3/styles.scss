@@ -159,7 +159,7 @@ $text-hero: 3.5rem; // 56px — hero display title
 
 // ─── Font Weights ─────────────────────────────────────────────────────────────
 $weight-thin: 200;
-$weight-normal: 400;
+$weight-normal: 300;
 $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 700;
@@ -177,7 +177,7 @@ $weight-bold: 700;
   font-size: $text-xs;
   font-weight: $weight-normal;
   line-height: 1.4;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.6px;
 }
 
 @mixin ts-body-sm {
@@ -1098,7 +1098,7 @@ svg {
 .stats-section-wrapper {
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
 }
 
 .stats-section-title {
@@ -2032,7 +2032,6 @@ svg {
 
 .ap-status {
   @include ts-label;
-  font-size: $text-3xs;
   padding: 0.125rem 0.3125rem;
   border-radius: 3px;
   flex-shrink: 0;
