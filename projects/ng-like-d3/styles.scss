@@ -144,16 +144,16 @@ $space-legacy-14px: 0.875rem;
 // ─── Type Scale ──────────────────────────────────────────────────────────────
 // All sizes in rem. px values shown at 16px base (mobile).
 // At 20px base (desktop) multiply by 1.25×.
-$text-3xs: 0.5625rem; //  9px — micro labels: pos badge, year, status chip
-$text-2xs: 0.625rem; // 10px — all-caps labels: section titles, filter pills
-$text-xs: 0.6875rem; // 11px — muted secondary: breadcrumb, footer, legend
-$text-sm: 0.75rem; // 12px — tab labels, captions, tooltip sub-text
-$text-md: 0.8125rem; // 13px — secondary body: tooltips, table rows, selects
-$text-base: 0.875rem; // 14px — default body, inputs, search, card text
+$text-3xs: 0.5rem; //  9px — micro labels: pos badge, year, status chip
+$text-2xs: 0.6rem; // 10px — all-caps labels: section titles, filter pills
+$text-xs: 0.6rem; // 11px — muted secondary: breadcrumb, footer, legend
+$text-sm: 0.7rem; // 12px — tab labels, captions, tooltip sub-text
+$text-md: 0.8rem; // 13px — secondary body: tooltips, table rows, selects
+$text-base: 0.8rem; // 14px — default body, inputs, search, card text
 $text-lg: 1rem; // 16px — names, headings-sm, prominent labels
-$text-xl: 1.25rem; // 20px — stat values, flag icon sizing
-$text-2xl: 1.375rem; // 22px — section headings (h2)
-$text-3xl: 1.75rem; // 28px — page headings (h1)
+$text-xl: 1.2rem; // 20px — stat values, flag icon sizing
+$text-2xl: 1.3rem; // 22px — section headings (h2)
+$text-3xl: 1.7rem; // 28px — page headings (h1)
 $text-4xl: 2rem; // 32px — display stat numbers
 $text-hero: 3.5rem; // 56px — hero display title
 
@@ -598,8 +598,7 @@ body.landing-body::after {
   color: var(--muted);
   border: none;
   border-radius: 0;
-  font-size: $text-lg; // 15px
-  font-weight: 400;
+  @include ts-body;
   cursor: pointer;
   transition: color 0.2s ease;
   font-family: inherit;
@@ -633,9 +632,8 @@ body.landing-body::after {
     position: relative;
     background: var(--bg);
     padding: 0 1rem; // 0 16px
-    font-size: $text-xs; // 11px
+    @include ts-caption;
     color: var(--muted);
-    letter-spacing: 1px;
   }
 }
 
@@ -713,8 +711,8 @@ body.landing-body::after {
   border-radius: 0.5rem; // 8px
   color: var(--fg);
   text-decoration: none;
-  font-size: $text-xs; // 11px
-  font-weight: 600;
+  @include ts-label;
+  font-weight: $weight-semibold;
   transition: all 0.3s ease;
 
   &:hover {
@@ -919,7 +917,7 @@ body.landing-body::after {
 }
 
 .team-meta {
-  font-size: $text-sm; // 12px
+  @include ts-caption;
   color: var(--muted);
 }
 
@@ -978,9 +976,9 @@ body.landing-body::after {
   background: rgba(255, 255, 255, .03);
   border-radius: 0.5rem; // 8px
   padding: 0.375rem 0.75rem; // 6px 12px
-  font-size: $text-md; // 13px
+  @include ts-body-sm;
+  font-weight: $weight-medium;
   color: var(--muted);
-  font-weight: 500;
 
   b {
     color: var(--fg);
@@ -996,9 +994,8 @@ body.landing-body::after {
   border: 1px solid var(--line);
   display: grid;
   place-items: center;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-size: $text-md; // 13px
+  @include ts-body-sm;
+  font-weight: $weight-bold;
 }
 
 .viz {
@@ -1018,18 +1015,19 @@ body.landing-body::after {
   box-shadow: 0 0 0.75rem rgba(0, 0, 0, .8); // 0 12px 40px
   backdrop-filter: blur(12px);
   max-width: 17.5rem; // 280px
-  font-size: $text-md; // 13px
+  @include ts-body-sm;
   z-index: 1000;
 }
 
 .tt-title {
-  font-weight: 600;
-  margin-bottom: 0.25rem; // 4px
+  @include ts-body-sm;
+  font-weight: $weight-semibold;
+  margin-bottom: 0.25rem;
 }
 
 .tt-sub {
+  @include ts-caption;
   color: var(--muted);
-  font-size: $text-sm; // 12px
 }
 
 svg {
@@ -1051,9 +1049,9 @@ svg {
   gap: 1rem; // 16px
   flex-wrap: wrap;
   color: var(--muted);
-  font-size: $text-md; // 13px
+  @include ts-body-sm;
+  font-weight: $weight-medium;
   justify-content: center;
-  font-weight: 500;
 }
 
 .key {
@@ -1090,8 +1088,8 @@ svg {
     background: transparent;
     border: 0.09375rem solid rgba(255, 255, 255, .4); // 1.5px
     padding: 0.125rem 0.375rem; // 2px 6px
-    font-size: $text-xs; // 11px
-    font-weight: 600;
+    @include ts-caption;
+    font-weight: $weight-semibold;
     color: rgba(255, 255, 255, .6);
     display: inline-flex;
     align-items: center;
@@ -1176,16 +1174,18 @@ svg {
   }
 }
 
-.stat-number {
-  @include ts-display;
-  font-weight: $weight-semibold; // override: heavier than display default
-  letter-spacing: -1px; // override: tighter than display default
-  color: #ffffff;
-}
+.stat-item {
+  .stat-number {
+    @include ts-display;
+    font-weight: $weight-semibold;
+    letter-spacing: -1px;
+    color: #ffffff;
+  }
 
-.stat-label {
-  @include ts-label;
-  color: var(--muted);
+  .stat-label {
+    @include ts-label;
+    color: var(--muted);
+  }
 }
 
 // Team View Specific Styles
@@ -1274,9 +1274,9 @@ svg {
     border: none;
     outline: none;
     color: var(--fg);
-    font-size: $text-md;
+    @include ts-body-sm;
+    font-weight: $weight-medium;
     font-family: inherit;
-    font-weight: 500;
     cursor: pointer;
     min-width: 0;
     padding: 0;
@@ -1331,11 +1331,11 @@ svg {
   .team-rank-badge {
     background: rgba(255, 255, 255, .04);
     border: 1px solid var(--line);
-    padding: 0.1875rem 0.5rem; // 3px 8px
-    border-radius: 0.25rem; // 4px
-    font-size: $text-3xs; // 9px
-    margin-left: 0.375rem; // 6px
-    letter-spacing: 0.5px;
+    padding: 0.1875rem 0.5rem;
+    border-radius: 0.25rem;
+    @include ts-label;
+    font-size: $text-3xs;
+    margin-left: 0.375rem;
   }
 }
 
@@ -1441,15 +1441,17 @@ svg {
   filter: grayscale(0.3);
 }
 
-.stat-number {
-  @include ts-display;
-  color: #ffffff;
-}
+.stat-card {
+  .stat-number {
+    @include ts-display;
+    color: #ffffff;
+  }
 
-.stat-label {
-  @include ts-heading-sm;
-  font-size: $text-3xs; // override: smaller than heading-sm default
-  color: #6b7280;
+  .stat-label {
+    @include ts-heading-sm;
+    font-size: $text-3xs;
+    color: #6b7280;
+  }
 }
 
 // Team Info Header
@@ -1496,21 +1498,20 @@ svg {
   .team-meta-row {
     display: flex;
     gap: 1.25rem; // 20px
-    font-size: $text-xs; // 11px
+    @include ts-caption;
     color: var(--muted);
 
     .meta-item {
       strong {
-        font-weight: 300;
+        @include ts-label;
+        font-weight: $weight-normal;
         margin-right: 0.4rem;
-        font-size: $text-2xs;
-        letter-spacing: 1px;
       }
 
       span {
+        @include ts-caption;
+        font-weight: $weight-medium;
         color: var(--fg);
-        font-size: $text-sm; // 12px
-        font-weight: 500;
       }
     }
   }
@@ -1525,9 +1526,8 @@ svg {
     border: 1px solid var(--line);
     display: grid;
     place-items: center;
-    font-weight: 600;
-    font-size: $text-lg; // 16px
-    letter-spacing: 1px;
+    @include ts-name;
+    font-weight: $weight-semibold;
     color: var(--muted);
   }
 
@@ -1668,7 +1668,7 @@ svg {
 .timeline-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: $text-md; // 13px
+  @include ts-body-sm;
 
   thead {
     tr {
@@ -1678,10 +1678,8 @@ svg {
     th {
       padding: 0.75rem 1rem; // 12px 16px
       text-align: left;
-      font-size: $text-xs; // 11px
-      font-weight: 600;
+      @include ts-heading-sm;
       color: var(--muted);
-      letter-spacing: 0.5px;
       text-align: center;
 
       &:first-child {
@@ -1772,15 +1770,14 @@ svg {
 
 // Footer
 .team-footer {
-  padding: 2rem; // 32px
+  padding: 2rem;
   border-top: 1px solid var(--line);
   text-align: center;
 
   p {
     margin: 0;
-    font-size: $text-xs; // 11px
+    @include ts-caption;
     color: var(--muted);
-    line-height: 1.6;
   }
 }
 
@@ -1816,11 +1813,10 @@ svg {
 }
 
 .sort-label {
-  font-size: $text-xs; // 11px
-  font-weight: 600;
-  letter-spacing: 0.6px;
+  @include ts-caption;
+  font-weight: $weight-semibold;
   color: rgba(255, 255, 255, 0.25);
-  margin-right: 0.25rem; // 4px
+  margin-right: 0.25rem;
 }
 
 .pos-filter,
@@ -1949,8 +1945,8 @@ svg {
   grid-column: 1 / -1;
   text-align: center;
   color: var(--muted);
-  font-size: $text-base; // 14px
-  padding: 3rem 0; // 48px
+  @include ts-body;
+  padding: 3rem 0;
 }
 
 .ap-card {
@@ -2032,9 +2028,8 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: $text-md; // 13px
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  @include ts-body-sm;
+  font-weight: $weight-bold;
   color: var(--av-color, rgba(255, 255, 255, 0.7));
   background: color-mix(in srgb, var(--av-color, rgba(255, 255, 255, 0.5)) 18%, transparent);
 }
@@ -2048,12 +2043,11 @@ svg {
 }
 
 .ap-name {
-  font-size: $text-lg; // 15px
+  @include ts-name;
   color: rgba(255, 255, 255, 0.9);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.2;
 }
 
 .ap-name-given {
@@ -2084,9 +2078,8 @@ svg {
 }
 
 .ap-status {
-  font-size: $text-3xs; // 8px
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  @include ts-label;
+  font-size: $text-3xs;
   padding: 0.125rem 0.3125rem;
   border-radius: 3px;
   flex-shrink: 0;
@@ -2120,9 +2113,8 @@ svg {
 }
 
 .ap-team-code {
-  font-size: $text-base; // 14px
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  @include ts-body;
+  font-weight: $weight-semibold;
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -2321,8 +2313,8 @@ svg {
 }
 
 .h2h-team-label {
-  font-size: $text-base; // 14px
-  font-weight: 600;
+  @include ts-body;
+  font-weight: $weight-semibold;
   color: rgba(255, 255, 255, 0.7);
   min-width: 0;
   text-align: right;
@@ -2331,9 +2323,8 @@ svg {
 }
 
 .h2h-vs {
-  font-size: $text-xs; // 11px
-  font-weight: 700;
-  letter-spacing: 1px;
+  @include ts-label;
+  font-weight: $weight-bold;
   color: rgba(255, 255, 255, 0.2);
 }
 
@@ -2372,8 +2363,8 @@ svg {
 }
 
 .h2h-stat-val {
-  font-size: $text-base;
-  font-weight: 600;
+  @include ts-body;
+  font-weight: $weight-semibold;
   color: var(--muted);
 
   &:first-child {
@@ -2390,12 +2381,11 @@ svg {
 }
 
 .h2h-stat-label {
-  font-size: $text-xs;
-  font-weight: 500;
+  @include ts-caption;
+  font-weight: $weight-medium;
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
   white-space: nowrap;
-  letter-spacing: 0.02em;
 }
 
 // Common World Cups section
@@ -2420,10 +2410,10 @@ svg {
   background: rgba(255, 255, 255, 0.08);
   color: var(--fg);
   border-radius: 100px;
-  font-size: $text-2xs;
-  font-weight: 700;
-  padding: 0.1rem 0.45rem;
+  @include ts-label;
+  font-weight: $weight-bold;
   letter-spacing: 0;
+  padding: 0.1rem 0.45rem;
 }
 
 .h2h-common-grid {
@@ -2444,8 +2434,8 @@ svg {
 }
 
 .h2h-common-year {
-  font-size: $text-md;
-  font-weight: 700;
+  @include ts-body-sm;
+  font-weight: $weight-bold;
   color: rgba(255, 255, 255, 0.45);
   min-width: 2.5rem;
 }
@@ -2455,7 +2445,7 @@ svg {
   align-items: center;
   gap: 0.5rem;
   flex: 1;
-  font-size: $text-sm;
+  @include ts-caption;
 }
 
 .h2h-common-sep {
@@ -2486,8 +2476,7 @@ svg {
 
   p {
     margin: 0;
-    font-size: $text-lg;
-    letter-spacing: 0.01em;
+    @include ts-name;
   }
 }
 
@@ -2582,7 +2571,7 @@ svg {
   color: rgba(255, 255, 255, .5);
   text-align: center;
   padding: 3rem 0;
-  font-size: $text-base;
+  @include ts-body;
 }
 
 .cmp-unavailable {
@@ -2592,8 +2581,7 @@ svg {
   border: 1px solid rgba(245, 158, 11, .28);
   background: rgba(245, 158, 11, .08);
   color: rgba(255, 255, 255, .75);
-  font-size: $text-sm;
-  line-height: 1.45;
+  @include ts-caption;
 }
 
 .cmp-header {
@@ -2630,8 +2618,8 @@ svg {
   color: rgba(255, 255, 255, .55);
   border-radius: 20px;
   padding: .2rem .65rem;
-  font-size: $text-sm;
-  font-weight: 600;
+  @include ts-caption;
+  font-weight: $weight-semibold;
 }
 
 .cmp-table-scroll {
@@ -2680,11 +2668,8 @@ svg {
 }
 
 .cmp-col-header-team {
-  font-size: $text-2xs;
-  font-weight: 600;
-  letter-spacing: .5px;
+  @include ts-label;
   color: rgba(255, 255, 255, .25);
-  text-transform: uppercase;
 }
 
 .cmp-col-header-spacer {
@@ -2695,11 +2680,8 @@ svg {
   appearance: none;
   border: 0;
   background: transparent;
-  font-size: $text-2xs;
-  font-weight: 600;
-  letter-spacing: .5px;
+  @include ts-label;
   color: rgba(255, 255, 255, .25);
-  text-transform: uppercase;
   text-align: center;
   padding: 0;
   cursor: pointer;
@@ -2766,15 +2748,14 @@ svg {
 }
 
 .cmp-bar-flag {
-  font-size: $text-sm;
+  @include ts-caption;
   line-height: 1;
   flex: 0 0 auto;
 }
 
 .cmp-bar-abbr {
-  font-size: $text-2xs;
-  font-weight: 700;
-  letter-spacing: .6px;
+  @include ts-label;
+  font-weight: $weight-bold;
   color: rgba(255, 255, 255, .82);
   line-height: 1;
 }
@@ -2820,7 +2801,7 @@ svg {
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, .2);
-  font-size: $text-lg;
+  font-size: $text-lg; // icon sizing, not text typography
   line-height: 1;
   transition: transform .2s ease, color .15s;
   transform: rotate(0deg);
