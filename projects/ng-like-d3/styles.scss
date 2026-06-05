@@ -164,6 +164,93 @@ $weight-medium:   500;
 $weight-semibold: 600;
 $weight-bold:     700;
 
+// ─── Text Style Mixins ────────────────────────────────────────────────────────
+// Each mixin bundles size + weight + line-height + letter-spacing.
+// Override any property after the include if needed.
+//
+//  @include ts-label      → caps utility label      (pill text, filters)
+//  @include ts-caption    → small caption            (legend, breadcrumb)
+//  @include ts-body-sm    → secondary body           (tooltips, table, selects)
+//  @include ts-body       → default body             (inputs, cards, search)
+//  @include ts-name       → player / team name       (prominent label)
+//  @include ts-heading-sm → small section heading    (h3, stat label heading)
+//  @include ts-heading    → section heading          (h2)
+//  @include ts-page       → page-level heading       (h1, team name)
+//  @include ts-display    → large stat number        (goals, apps counter)
+//  @include ts-hero       → hero display title       (landing hero)
+
+@mixin ts-label {
+  font-size: $text-2xs;
+  font-weight: $weight-semibold;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@mixin ts-caption {
+  font-size: $text-xs;
+  font-weight: $weight-medium;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+@mixin ts-body-sm {
+  font-size: $text-md;
+  font-weight: $weight-normal;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@mixin ts-body {
+  font-size: $text-base;
+  font-weight: $weight-normal;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+@mixin ts-name {
+  font-size: $text-lg;
+  font-weight: $weight-semibold;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+@mixin ts-heading-sm {
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@mixin ts-heading {
+  font-size: $text-2xl;
+  font-weight: $weight-semibold;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@mixin ts-page {
+  font-size: $text-3xl;
+  font-weight: $weight-medium;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+@mixin ts-display {
+  font-size: $text-4xl;
+  font-weight: $weight-thin;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+@mixin ts-hero {
+  font-size: $text-hero;
+  font-weight: $weight-normal;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
 :root {
 
   --base-font-size: 20px;
