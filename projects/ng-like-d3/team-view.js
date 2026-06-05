@@ -1028,7 +1028,13 @@
 				.filter((p) => currentPos === "all" || p.pos === currentPos)
 				.sort((a, b) => {
 					if (currentSort === "name") return a.name.localeCompare(b.name);
-					return (b[currentSort] || 0) - (a[currentSort] || 0);
+					const primary = (b[currentSort] || 0) - (a[currentSort] || 0);
+					if (primary !== 0) return primary;
+					const secondary = currentSort === "goals"
+						? (b.apps || 0) - (a.apps || 0)
+						: (b.goals || 0) - (a.goals || 0);
+					if (secondary !== 0) return secondary;
+					return a.name.localeCompare(b.name);
 				});
 		}
 
@@ -1410,7 +1416,13 @@
 				})
 				.sort((a, b) => {
 					if (currentSort === "name") return a.name.localeCompare(b.name);
-					return (b[currentSort] || 0) - (a[currentSort] || 0);
+					const primary = (b[currentSort] || 0) - (a[currentSort] || 0);
+					if (primary !== 0) return primary;
+					const secondary = currentSort === "goals"
+						? (b.apps || 0) - (a.apps || 0)
+						: (b.goals || 0) - (a.goals || 0);
+					if (secondary !== 0) return secondary;
+					return a.name.localeCompare(b.name);
 				});
 		}
 
@@ -1451,22 +1463,6 @@
 				draw();
 			});
 		});
-	}
-
-	function getFiltered() {
-		return allPlayers
-			.filter((p) => currentPos === "all" || p.pos === currentPos)
-			.filter((p) => {
-				if (!query) return true;
-				const q = query.toLowerCase();
-				return (
-					p.name.toLowerCase().includes(q) || p.label.toLowerCase().includes(q)
-				);
-			})
-			.sort((a, b) => {
-				if (currentSort === "name") return a.name.localeCompare(b.name);
-				return b[currentSort] - a[currentSort];
-			});
 	}
 
 	// ── Compare Tab ──────────────────────────────────────────────────────────
