@@ -1,0 +1,22 @@
+{
+  "name": "mobile-app-wireframe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dev static server for mobile_app_wireframe",
+  "main": "server.js",
+  "dependencies": {
+    "iconly": "^2.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.77.6"
+  },
+  "scripts": {
+    "build-css": "sass css/log-meeting.scss css/log-meeting.css --source-map",
+    "watch-css": "sass --watch css/log-meeting.scss:css/log-meeting.css --source-map",
+    "build-version": "node build-version.js",
+    "start": "node server.js",
+    "watch-styles": "sass --watch styles.scss:styles.css --source-map",
+    "build-styles": "sass styles.scss styles.css --source-map",
+    "watch-sass": "sass --watch styles.scss:styles.css css/log-meeting.scss:css/log-meeting.css css/newsletters.scss:css/newsletters.css --source-map"
+  }
+}

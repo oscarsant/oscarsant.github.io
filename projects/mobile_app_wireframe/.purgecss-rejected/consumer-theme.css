@@ -1,0 +1,50 @@
+[data-theme="consumer"] .app-header,
+.theme-consumer .app-header {
+  background: var(--consumer-primary) !important;
+  color: var(--consumer-secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+[data-theme="consumer"] .app-header .logo-pro,
+.theme-consumer .app-header .logo-pro {
+  display: none !important;
+}
+
+[data-theme="consumer"] .app-header .logo-default,
+.theme-consumer .app-header .logo-default {
+  display: block !important;
+}
+
+/* Hide PRO pills for consumer */
+
+/* Article Header for Consumer */
+[data-theme="consumer"] .article-header,
+.theme-consumer .article-header {
+  background: var(--consumer-primary) !important;
+  color: var(--consumer-secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+[data-theme="consumer"] .article-header .icon-tools,
+.theme-consumer .article-header .icon-tools {
+  color: var(--consumer-secondary) !important;
+}
+
+[data-theme="consumer"] .article-header-btn,
+.theme-consumer .article-header-btn {
+  color: var(--consumer-secondary) !important;
+}
+
+/* Navigation active state for Consumer */
+[data-theme="consumer"] .app-nav button.active,
+.theme-consumer .app-nav button.active {
+  color: var(--consumer-secondary) !important;
+}
+
+/* Buttons */
+[data-theme="consumer"] .btn-primary,
+.theme-consumer .btn-primary {
+  background: var(--consumer-secondary) !important;
+  color: white !important;
+  width: 100%;
+}

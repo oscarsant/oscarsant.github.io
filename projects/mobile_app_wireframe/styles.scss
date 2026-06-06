@@ -1,0 +1,4098 @@
+@use "sass:math";
+
+@mixin hide-scrollbar {
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE and Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+}
+
+// Color variables
+$color-bg: #e4e7ee;
+$color-card: #FAFAFA; // updated from #fff for card backgrounds
+$color-primary: #1a1f29;
+$color-header-bg: #ffffff;
+$color-header-text: #fff;
+$color-box-bg: #ecf0f3;
+$color-box-border: #aaa;
+$color-nav-bg: #fff;
+$color-nav-border: #ccc;
+$color-nav-inactive: #a4afc5;
+$color-nav-icon: #666;
+$color-nav-active: #000000;
+$color-overlay-bg: #fff;
+$color-overlay-shadow: rgba(0, 0, 0, 0.2);
+$color-grey-light: #e5e7eb;
+
+// Border radius variables
+$border-radius-xs: 4px;
+$border-radius-sm: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px; // Fixed: removed the hyphen
+$border-radius-xl: 24px;
+
+// Spacing variables
+$padding-xs: 8px;
+$padding-sm: 12px;
+$padding-md: 16px;
+$padding-lg: 24px;
+$padding-xl: 32px;
+
+// Font size variables
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+
+$shadow-card: 0px 4px 8px 0px rgba(0, 0, 0, 0.04); // unified card shadow
+
+html {
+  background-color: black;
+}
+
+/* iOS PWA Safe Area Support */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: $color-bg;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+  max-width: 428px;
+  margin: auto;
+}
+
+// Textarea: hide native resize handle on desktop, keep mobile behavior
+@media (min-width: 768px) {
+  textarea {
+    resize: none; // desktop: no native handle; JS will auto-grow
+  }
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  font-size: $font-size-sm;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 414px;
+  margin: auto;
+}
+
+// Passwordless confirmation screen (after sending secure link)
+.passwordless-confirm-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1700;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  margin: auto;
+
+  // Match the static login background treatment
+  background: #E4E7EE;
+  background-image: var(--login-bg-overlay), var(--login-bg-static);
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat, no-repeat;
+  background-color: black;
+
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .passwordless-back {
+    display: inline-flex;
+    gap: 4px;
+    height: auto;
+    justify-content: flex-start;
+    margin-bottom: auto;
+    align-items: flex-end;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url("img/chevron-left - 20x20.svg") no-repeat center / contain;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .login-logo {
+    margin: 0 auto 28px;
+  }
+
+  .login-form-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin-bottom: auto;
+  }
+
+  .passwordless-actions {
+
+    .btn-secondary {
+      background: #ffffff;
+      border: none;
+      height: 56px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: #1a1f29;
+    }
+  }
+
+  .auth-legal {
+    margin-top: auto;
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  .passwordless-confirm-check,
+  .checkmark,
+  .checkmark-circle,
+  .checkmark-check,
+  .magic-mail,
+  .magic-mail-icon,
+  .magic-mail-arrow {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .passwordless-confirm-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0 20px;
+
+    lottie-player {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .passwordless-link-expiry {
+    @extend .auth-secondary-text;
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.85;
+  }
+}
+
+// Passwordless login screen (magic link)
+.passwordless-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1650; // above login
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+  margin: auto;
+
+  // Use Brussels background for passwordless
+  background: #E4E7EE;
+  background-image: var(--login-bg-overlay), url("login-img/brussels.png");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat, no-repeat;
+  background-color: black;
+
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Back button: left aligned, uses the existing chevron asset
+  .passwordless-back {
+
+    display: inline-flex;
+    gap: 4px;
+    height: auto;
+    padding: 0;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-end;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url("img/chevron-left - 20x20.svg") no-repeat center / contain;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  // Fix text colors inside the reusable login-info-text block
+  .passwordless-info {
+    h2 {
+      color: inherit !important;
+    }
+
+    // No overrides needed here; shared .auth-secondary-text styling applies via .login-info-text
+  }
+
+  .passwordless-actions {
+    margin-top: 0;
+
+    .btn-secondary {
+      background: #ffffff;
+      border: none;
+      height: 56px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: #1a1f29;
+    }
+  }
+
+  .passwordless-create {
+    margin-top: 1.25rem;
+
+    .create-account-link {
+      color: #ffffff;
+      font-size: $font-size-md;
+    }
+  }
+
+  // Use the same input styling as login/account
+  .input-with-icon {
+    @extend .auth-input;
+
+    .input-icon {
+      @extend .auth-input-icon;
+    }
+  }
+
+  .auth-legal {
+    margin-top: auto;
+    font-size: 12px;
+  }
+}
+
+// Respect reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+  .passwordless-confirm-screen {
+
+    .magic-mail,
+    .magic-mail-arrow {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}
+
+// Login background slideshow defaults (override via :root if needed)
+:root {
+  --login-bg-1: url("login-img/DC.png");
+  --login-bg-2: url("login-img/brussels.png");
+  --login-bg-3: url("login-img/BigBen.png");
+  --login-bg-overlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+  --color-text-secondary: #5f6c85;
+  --color-icon-secondary: #5f6c85;
+
+  // NEW: allow screens to use an explicit static intro bg
+  --login-bg-static: var(--login-bg-3);
+}
+
+.login-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1600;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  justify-content: center;
+  margin: auto;
+  background: #E4E7EE;
+  overflow: hidden; // ensure background layers don't overflow
+  // Base image layer (gradient + bg-1)
+  background-image: var(--login-bg-overlay), var(--login-bg-1);
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat, no-repeat;
+  background-color: black;
+
+  // Re-enable slideshow layers (:before=bg-2, :after=bg-3)
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::before {
+    background-image: var(--login-bg-overlay), var(--login-bg-2);
+    opacity: 0;
+    animation: loginBgCycle2 9s infinite;
+  }
+
+  &::after {
+    background-image: var(--login-bg-overlay), var(--login-bg-3);
+    opacity: 0;
+    animation: loginBgCycle3 9s infinite;
+  }
+
+  // Put content above background layers
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-form-group {
+    margin-bottom: 16px;
+
+    // Legacy label/input styling removed: login inputs are wrapped in .input-with-icon
+    // and inherit shared styles from .auth-input.
+  }
+
+  // Apply shared auth input styling to the login wrappers
+  .input-with-icon {
+    @extend .auth-input;
+
+    .input-icon {
+      @extend .auth-input-icon;
+    }
+  }
+}
+
+// Basic auth error style for login/passwordless
+.auth-error {
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: #ffb4b4;
+  line-height: 1.3;
+}
+
+.input-error {
+  outline: 2px solid rgba(255, 100, 100, 0.55);
+  outline-offset: 2px;
+}
+
+// 9s total: each image visible for 3s, with 1.5s crossfade overlap
+// Timeline: 0-4.5s: bg-1 (solo 0-1.5, fade-out 1.5-3)
+//           1.5-6s: bg-2 (fade-in 1.5-3, solo 3-4.5, fade-out 4.5-6)
+//           4.5-9s: bg-3 (fade-in 4.5-6, solo 6-7.5, fade-out 7.5-9)
+@keyframes loginBgCycle2 {
+
+  0%,
+  16.66% {
+    opacity: 0;
+  }
+
+  // hidden while bg-1 shows (0-1.5s)
+  33.33% {
+    opacity: 1;
+  }
+
+  // fade-in complete (3s mark)
+  50% {
+    opacity: 1;
+  }
+
+  // hold visible (4.5s mark)
+  66.66% {
+    opacity: 0;
+  }
+
+  // fade-out complete (6s mark)
+  100% {
+    opacity: 0;
+  }
+
+  // stay hidden
+}
+
+@keyframes loginBgCycle3 {
+
+  0%,
+  50% {
+    opacity: 0;
+  }
+
+  // hidden while bg-1 and bg-2 show (0-4.5s)
+  66.66% {
+    opacity: 1;
+  }
+
+  // fade-in complete (6s mark)
+  83.33% {
+    opacity: 1;
+  }
+
+  // hold visible (7.5s mark)
+  100% {
+    opacity: 0;
+  }
+
+  // fade-out to loop back to bg-1 (9s mark)
+}
+
+// Respect reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+
+  .login-screen::before,
+  .login-screen::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .login-screen {
+    background-image: var(--login-bg-1) !important;
+  }
+}
+
+.login-logo {
+  display: flex;
+  justify-content: center;
+  margin: auto auto 40px;
+
+  img {
+    height: 28px; // match header height
+    display: block;
+  }
+}
+
+.login-info-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.login-form-content {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+
+  .btn-secondary,
+  .btn-primary {
+    width: 100%;
+    height: 48px;
+    font-size: $font-size-md;
+    font-weight: 500;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-secondary {
+    background: #fefefe;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+}
+
+.login-no-password-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: $font-size-md;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+
+}
+
+.login-create-account {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #8D8D8D;
+  gap: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-last-update {
+  text-align: center;
+  font-size: 10px;
+  color: #9ca3af;
+  font-weight: 400;
+  opacity: .2;
+}
+
+.create-account-link {
+  background: none;
+  border: none;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.login-or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 1.5rem 0 1.5rem 0;
+  width: 100%;
+}
+
+.login-or-line {
+  flex: 1;
+  height: 1px;
+  background: #494949;
+  border-radius: 1px;
+}
+
+.login-or-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0 12px;
+  letter-spacing: 1px;
+  color: #8D8D8D;
+}
+
+// Mobile responsive - match account creation breakpoints
+@media (max-width: 480px) {
+  .login-screen {
+    padding: 1.5rem 1rem;
+  }
+
+  .login-info-text {
+    margin-bottom: 20px;
+  }
+
+  .login-form-group {
+    margin-bottom: 1.25rem;
+
+    input {
+      padding: 0.875rem;
+    }
+  }
+
+  .login-actions {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh; // This is OK for the main container
+  min-height: 0;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  padding: calc(env(safe-area-inset-top) + 16px);
+  background-color: $color-header-bg;
+  color: $color-header-text;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: auto;
+
+  img {
+    height: 16px;
+  }
+}
+
+.app-main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+
+}
+
+.wireframe-box {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: $padding-md;
+  padding-top: 72px;
+  padding-bottom: 64px;
+}
+
+.app-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0 calc(env(safe-area-inset-bottom) + 16px) 0;
+  background-color: $color-nav-bg;
+  border-top: 1px solid $color-nav-border;
+  margin: auto;
+}
+
+.app-nav button {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  color: $color-nav-inactive;
+  gap: 4px;
+}
+
+.app-nav button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto; // Center horizontally
+  align-self: center; // Center in flex column
+  justify-self: center; // Extra safety for grid/flex
+  fill: $color-nav-icon;
+}
+
+.app-nav button.active {
+  color: $color-nav-active;
+  font-weight: 600;
+}
+
+.app-nav button.active svg {
+  fill: $color-nav-active;
+}
+
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: $color-overlay-bg;
+  box-shadow: 0 -2px 10px $color-overlay-shadow;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.overlay.visible {
+  height: 98%;
+  background-color: #E4E7EE;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: $padding-lg $padding-md $padding-lg $padding-md;
+  min-height: 60vh;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: $padding-sm $padding-md;
+  font-size: 16px; // Ensure at least 16px
+  margin-bottom: 1rem;
+  border: 1px solid $color-nav-border;
+  border-radius: 30px;
+}
+
+.icon-placeholder,
+.icon-placeholder-sm,
+.icon-placeholder-lg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  border: solid 1px #aaa;
+  border-radius: 50%;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 32px;
+  height: 32px;
+  font-size: $font-size-sm;
+  background-color: $color-grey-light;
+}
+
+.icon-placeholder-sm {
+  width: 20px;
+  height: 20px;
+  font-size: $font-size-xs;
+  background-color: $color-grey-light;
+}
+
+.icon-placeholder-lg {
+  width: 48px;
+  height: 48px;
+  font-size: $font-size-lg;
+  background-color: $color-grey-light;
+}
+
+.tool-description {
+  font-size: $font-size-xs;
+  color: #5f6c85;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+  opacity: 1;
+
+  &.text-secondary {
+    color: #5f6c85 !important;
+  }
+}
+
+// --- TEXT & ICON SECONDARY UTILITY (deduped) ---
+.text-secondary {
+  color: #5f6c85 !important;
+}
+
+.icon-secondary {
+  color: #5f6c85 !important;
+
+  svg {
+    color: #5f6c85 !important;
+    fill: currentColor;
+  }
+}
+
+.flex-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $padding-md; // small padding as gap
+  align-items: stretch;
+  width: 100%;
+}
+
+.flex-item {
+  border-radius: 8px;
+  padding: $padding-lg; // small padding
+  min-width: 0;
+  text-align: center;
+  font-size: $font-size-md;
+  flex: 1 1 calc(50% - #{$padding-md} / 2);
+  max-width: calc(50% - #{$padding-md} / 2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-card;
+  gap: $padding-xs;
+
+  h4 {
+    font-size: $font-size-md;
+  }
+
+  p {
+    font-size: $font-size-xs;
+    color: $color-primary;
+  }
+}
+
+.tools-header {
+  width: 100%;
+  text-align: left;
+  padding-bottom: $padding-md;
+  gap: $padding-xs;
+
+  p {
+    margin: 0;
+    font-size: $font-size-sm;
+    color: $color-nav-inactive;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-md;
+    color: $color-nav-inactive;
+  }
+}
+
+.side-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
+  background: $color-card;
+  z-index: 3333;
+  transform: translateX(100%);
+  // transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.side-overlay.visible {
+  transform: translateX(0);
+}
+
+.side-overlay-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $padding-md;
+  padding: 16px 16px 100px 16px;
+  position: relative;
+  background-color: white;
+  overflow-y: auto; // Only vertical scroll if needed
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  svg {
+    display: block;
+  }
+}
+
+.side-overlay-content h3,
+.side-overlay-content p {
+  margin-left: 44px; // To avoid overlap with the icon
+}
+
+.side-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-md;
+  background: $color-card;
+  flex-direction: row; // change from column to row for horizontal layout
+
+  .close-btn,
+  .search-btn {
+    background: none;
+    border: none;
+    padding: $padding-xs;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-md {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .side-overlay-title {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: $font-size-md;
+    font-weight: 600;
+    color: $color-nav-active;
+  }
+}
+
+.side-overlay-title {
+  flex: 1;
+  text-align: center;
+  font-size: $font-size-md;
+  margin: 0;
+  color: $color-nav-active;
+  font-weight: 600;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  gap: $padding-xs;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  min-height: 120px;
+  @include hide-scrollbar;
+  max-height: 150px; // Prevents it from getting too tall on large screens
+  margin-bottom: 16px;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 160px;
+  /* Remove height if you want auto height */
+  // height: 80px;
+  background: $color-card;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-md;
+  color: $color-nav-inactive;
+  scroll-snap-align: start;
+  box-shadow: $shadow-card;
+}
+
+.carousel-headline {
+  font-size: $font-size-md;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: left;
+}
+
+.bio-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
+  min-height: 0;
+  background: $color-card;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  z-index: 99999;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-overlay.visible {
+  display: block;
+  transform: translateX(0);
+}
+
+.bio-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-md;
+  border-bottom: 1px solid $color-nav-border;
+  background: $color-card;
+  flex-direction: column; // change from column to row for horizontal layout
+}
+
+.bio-close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.bio-header-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bio-back-btn {
+  background: none;
+  border: none;
+  padding: $padding-xs;
+  cursor: pointer;
+  color: $color-nav-inactive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bio-header-actions {
+  display: flex;
+  gap: $padding-xs;
+  align-items: center;
+  margin-left: auto; // push actions to the right
+
+  .bio-header-action-btn {
+    background: none;
+    border: none;
+    color: gold;
+  }
+}
+
+.bio-action-btn {
+  background: none;
+  border: none;
+  padding: $padding-xs;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-header-action-icon {
+  width: 32px;
+  height: 32px;
+  background: $color-grey-light;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-nav-inactive;
+  font-size: 20px;
+}
+
+.show-filters-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $padding-md;
+  padding: $padding-md $padding-md;
+  background: $color-card;
+  color: $color-primary;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: $shadow-card;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+
+  .show-filters-content {
+    display: flex;
+    align-items: center;
+    gap: $padding-xs;
+
+    .show-filters-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .show-filters-label {
+      font-size: $font-size-sm;
+      font-weight: 500;
+      color: #5f6c85;
+    }
+  }
+
+  .show-filters-arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
+
+.show-filters-group {
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+}
+
+.bio-menu {
+  display: flex;
+  overflow-x: auto;
+  gap: $padding-xs;
+  padding: $padding-xs $padding-md;
+  background: $color-card;
+  border-bottom: 1px solid $color-nav-border;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.bio-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.bio-menu-item {
+  flex: 0 0 auto;
+  padding: 0.5em 1.2em;
+  font-size: $font-size-sm;
+  background: none;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  color: $color-nav-inactive;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  position: relative;
+  scroll-snap-align: center;
+
+  &.active,
+  &:focus {
+    color: $color-nav-active;
+    outline: none;
+  }
+
+  &.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: -9px;
+    height: 3px;
+    border-radius: 2px;
+    background: $color-nav-active;
+  }
+}
+
+// --- 3. Typography Polish ---
+
+// Section titles (e.g., .section-headline, .bio-menu-item)
+.section-headline,
+.bio-menu-item {
+  font-size: $font-size-md;
+  font-weight: bold;
+  color: $color-nav-active;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+
+// Bio overlay name/title
+.bio-profile-info h4,
+#bioName {
+  font-size: $font-size-sm;
+  font-weight: 700;
+  color: $color-nav-active;
+  margin: 0;
+}
+
+// Bio overlay role
+.bio-profile-role {
+  font-size: $font-size-sm;
+  color: $color-nav-inactive;
+  font-weight: 500;
+}
+
+// General headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-nav-active;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.bio-overlay-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: $padding-md;
+  background: $color-bg;
+  overflow: hidden;
+  height: 100%;
+}
+
+.bio-sections-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  touch-action: pan-x;
+  cursor: grab;
+}
+
+.bio-section {
+  min-width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  padding: $padding-md;
+  box-sizing: border-box;
+  @include hide-scrollbar;
+  padding-bottom: 85px;
+  overflow-y: auto; // Add this to enable vertical scrolling
+  // Remove display: flex and align/justify if you want content to flow naturally
+}
+
+.bio-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.bio-profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: math.div($padding-xs, 2);
+
+  h4 {
+    font-size: $font-size-md;
+    font-weight: 600;
+    color: $color-nav-active;
+    margin: 0;
+  }
+}
+
+.bio-profile-role {
+  font-size: $font-size-sm;
+  color: $color-nav-inactive;
+  font-weight: 500;
+}
+
+.bio-profile-meta {
+  font-size: $font-size-xs;
+  color: $color-nav-inactive;
+  margin: 0;
+}
+
+.bio-profile-image {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-header-text;
+  font-size: $font-size-md;
+
+  &::after {
+    content: "👤";
+  }
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: $padding-md;
+  width: 100%;
+}
+
+.contact-card {
+  width: 100%;
+  background: $color-card;
+  border-radius: 12px;
+  padding: $padding-md;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: $padding-md;
+  box-shadow: $shadow-card;
+
+  .contact-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $color-nav-inactive;
+      display: block;
+    }
+  }
+
+  .contact-info {
+    flex: 1;
+    text-align: left;
+
+    h5 {
+      margin: 0;
+      font-size: $font-size-sm;
+      color: $color-nav-inactive;
+    }
+
+    p {
+      margin: 0;
+      font-size: $font-size-sm;
+      color: $color-nav-active;
+      font-weight: 500;
+    }
+  }
+}
+
+.body-no-scroll {
+  overflow: hidden !important;
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
+  touch-action: none;
+}
+
+.filter-section-group {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: $padding-xs;
+
+  // Optional: hide scrollbar for a cleaner look
+  scrollbar-width: none; // Firefox
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+}
+
+.filter-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-nav-inactive;
+  font-size: 20px;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  // gap: 4px;
+}
+
+.filter-label {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  color: $color-nav-active;
+  padding-bottom: 12px;
+}
+
+.filter-chips {
+  display: flex;
+  flex-direction: row;
+  transition: all 1s ease;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.filter-chip {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: 1s ease;
+  will-change: width, padding, margin;
+  width: max-content;
+  opacity: 1;
+  background: none;
+  flex-shrink: 1;
+  flex-grow: 0;
+  margin-right: 4px;
+
+  &.active {
+    background: $color-primary;
+    color: $color-header-text;
+    margin: 0;
+  }
+}
+
+.filter-chip.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-chip-back {
+  background: none;
+  border: none;
+  color: #9cabc2;
+  padding: 0;
+  font-size: 0.75rem;
+  cursor: pointer;
+  visibility: hidden;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  margin: 0;
+  transition: width 1s;
+
+  &::before {
+    content: "✕";
+    font-size: 14px;
+  }
+
+  &.visible {
+    visibility: visible;
+    pointer-events: auto;
+    width: auto;
+    margin-right: 8px;
+  }
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: $font-size-sm;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    accent-color: $color-primary;
+  }
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid $color-nav-border;
+  font-size: $font-size-sm;
+  background: $color-card;
+  color: $color-nav-active;
+}
+
+.filter-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-card;
+  display: flex;
+  gap: $padding-md;
+  justify-content: space-between;
+  padding: $padding-md 0 0 0;
+  z-index: 1;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: $font-size-md;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.person-suggestion {
+  display: flex;
+  flex-direction: row; // photo left, text right
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative; // Add this so the X can be absolutely positioned
+
+  .person-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .person-avatar.committee-icon {
+    background: none !important;
+    object-fit: contain;
+    border-radius: 50%;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .person-avatar.agency-icon {
+    background: none !important;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background-color: transparent !important;
+  }
+
+  .person-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto; // Take up available space
+
+    .person-name {
+      font-weight: 600;
+      font-size: $font-size-sm;
+      color: $color-nav-active;
+    }
+
+    .person-role {
+      font-size: $font-size-xs;
+      color: #5F6C85;
+    }
+  }
+
+  .remove-recent-btn {
+    /* position: absolute; */
+    right: 0;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    /* padding: 0 16px; */
+    z-index: 1;
+    line-height: 1;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.filter-chip-dropdown {
+  position: relative;
+  display: inline-block;
+
+  .filter-chip {
+    position: relative;
+    z-index: 2;
+  }
+
+  .chip-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 120px;
+    background: $color-card;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 4px 0;
+    z-index: 10;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid $color-nav-border;
+  }
+
+  &.open .chip-dropdown-menu {
+    display: flex;
+  }
+
+  .chip-dropdown-item {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
+    font-size: $font-size-sm;
+    color: $color-nav-active;
+    cursor: pointer;
+    border-radius: 0;
+
+  }
+}
+
+.filter-option-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 100000;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.filter-option-overlay.visible {
+  display: flex;
+}
+
+.filter-option-sheet {
+  background: $color-card;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: $padding-lg $padding-md $padding-md $padding-md;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.12);
+  animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.filter-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: $padding-xs;
+}
+
+.filter-option-list button {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: $font-size-md;
+  padding: $padding-xs 0;
+  color: $color-nav-active;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+
+  &.active {
+    background: $color-grey-light;
+  }
+}
+
+.filter-option-cancel {
+  width: 100%;
+  background: $color-grey-light;
+  border: none;
+  border-radius: 8px;
+  padding: $padding-md 0;
+  font-size: $font-size-md;
+  color: $color-nav-active;
+  margin-top: $padding-xs;
+  cursor: pointer;
+}
+
+.search-btn {
+  border: solid 1px;
+  padding: 8px;
+  border-radius: 40px;
+  color: #aaa;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn.search-cta-btn {
+  border: solid 1px;
+  padding: 12px 20px;
+  border-radius: 40px;
+  background: none;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.side-overlay-search-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px 0;
+}
+
+.search-cta-text {
+  font-size: 1rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.skip-btn {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: $color-nav-inactive;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline;
+  width: auto;
+  padding: 0;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-card;
+  border-radius: 16px;
+  box-shadow: $shadow-card;
+  padding: $padding-md;
+  cursor: pointer;
+  border: 1px solid var(--Border-Subtle);
+  gap: 8px;
+}
+
+.favorite-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
+.favorite-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.favorite-name {
+  font-weight: 600;
+  font-size: $font-size-sm;
+  color: $color-nav-active;
+  display: flex;
+  flex-direction: column;
+}
+
+.favorite-role {
+  font-size: 12px;
+  color: #5F6C85;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+.side-overlay-section-header {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 16px;
+  color: #000000;
+}
+
+.news-feed {
+  display: flex;
+
+  h3 {
+    margin: 16px 0 8px;
+    font-size: $font-size-md;
+  }
+}
+
+.news-card {
+  background: $color-card; // was #fff
+  border-radius: 12px;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card-image {
+  position: relative;
+}
+
+.news-card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card-time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: firebrick;
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: $font-size-xs;
+  font-weight: 500;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(30, 32, 38, 0.1);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.news-card-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.news-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #222b45;
+}
+
+.news-card-summary {
+  font-size: 0.98rem;
+  color: #5f6c85;
+  margin: 0;
+}
+
+.news-card-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.news-card-tag {
+  background: #1a1f29;
+  color: #fff;
+  border-radius: 12px;
+  font-size: $font-size-xs;
+  padding: 2px 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+// Horizontal card (image left, text right)
+.news-card-horizontal {
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 120px;
+
+  .news-card-image-horizontal {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .news-card-content {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.news-feed-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.news-card-half-width {
+  width: calc(50% - 4px); // Always 2 per row, even on mobile
+  min-width: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $color-card; // was #fff
+  border-radius: 12px;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+  margin-bottom: 0;
+
+  img {
+    height: 120px;
+  }
+}
+
+/* Remove or comment out any mobile override that sets width: 100% for .news-card-half-width */
+@media (max-width: 700px) {
+  // .news-card-half-width {
+  //   width: 100%;
+  //   min-width: 0;
+  // }
+}
+
+.event-card-header {
+  display: flex;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #5f6c85;
+  margin-bottom: 8px;
+}
+
+.event-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.event-summary {
+  font-size: 0.98rem;
+  color: #5f6c85;
+  margin: 0;
+}
+
+.quote-card blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 0 0 8px 0;
+  color: #3a4256;
+}
+
+.quote-author {
+  font-size: 0.98rem;
+  color: #5f6c85;
+}
+
+.alert-card {
+  background: #fff8e1;
+  border-left: 4px solid #ffc107;
+  padding: 16px;
+}
+
+.alert-title {
+  font-weight: 600;
+  color: #b26a00;
+  margin-bottom: 4px;
+}
+
+.alert-content {
+  color: #7c5a00;
+}
+
+.logo-dark {
+  display: none;
+}
+
+.app-header-dark .logo-dark {
+  display: inline;
+}
+
+.app-header-dark .logo-light {
+  display: none;
+}
+
+.btn-primary {
+  background: $color-primary;
+  color: #fff;
+  border: 1px solid $color-primary;
+  border-radius: 32px;
+  padding: 0.5rem 1.5rem;
+  font-size: $font-size-md;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 48px;
+
+  &:focus {
+    background: darken($color-primary, 8%);
+  }
+}
+
+.btn-secondary {
+  background: none;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: 32px;
+  padding: 0.5rem 1.5rem;
+  font-size: $font-size-md;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  height: 48px;
+
+  &:focus {
+    background: $color-primary;
+    color: #fff;
+  }
+}
+
+.login-success-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // White background for all success cases
+  background: #ffffff;
+  background-image: none;
+  overflow: hidden;
+
+  // Add safe-area padding so the logo isn't clipped
+  padding-top: calc(env(safe-area-inset-top) + 20px);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+
+  // Ensure content sits above background
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Logo stays at top (reuse existing .login-logo markup)
+  .login-logo {
+    margin: 0 auto 24px;
+
+    img {
+      filter: none;
+    }
+  }
+
+  // Center the animation block in the remaining space
+  .login-success-content {
+    width: 100%;
+    max-width: 400px;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Keep content centered in available height below safe area padding
+    justify-content: space-between; // top logo + centered group + bottom spacer
+  }
+
+  .login-logo {
+    flex: 0 0 auto;
+  }
+
+  .login-success-animation {
+    flex: 0 0 auto; // don't push dots to the very bottom
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: #1a1f29 !important;
+  }
+
+  .login-success-dots {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 0;
+    margin-bottom: auto;
+
+    .dots-loader {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5f6c85;
+      opacity: 0.9;
+      animation: loginDotPulse 1.1s infinite ease-in-out;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+// Override the previous bouncing animation with a simple fade pulse
+@keyframes loginDotPulse {
+
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+  }
+
+  30% {
+    opacity: 0.95;
+  }
+}
+
+// Ensure success screen stays white (override any theme/background bleed)
+#login-success.login-success-screen {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+// Login success animation (GIF)
+.login-success-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    width: min(240px, 70vw);
+    height: auto;
+    display: block;
+  }
+}
+
+// If any legacy checkmark markup remains, keep it hidden
+.login-success-check,
+.checkmark {
+  display: none !important;
+}
+
+.login-success-content {
+  text-align: center;
+
+  h2 {
+    color: #1a1f29 !important;
+  }
+
+  p,
+  .login-success-message {
+    @extend .auth-secondary-text;
+  }
+}
+
+.btn-tertiary {
+  background: none;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
+
+}
+
+.news-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  padding: 2px;
+  margin-bottom: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 1px 4px rgba(95, 108, 133, 0.06);
+  gap: 0;
+  background: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 40px;
+}
+
+.news-toggle-btn {
+  background: transparent;
+  color: $color-primary;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.5rem;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  &.active {
+    background: #fff;
+    color: #000000;
+  }
+}
+
+.news-pills {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  margin-bottom: 0px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 0 8px 0;
+  scrollbar-width: none;
+}
+
+.news-pills::-webkit-scrollbar {
+  display: none; // Chrome, Safari, Opera
+}
+
+.news-pill {
+  color: $color-primary;
+  background: none;
+  border: 1px solid $color-primary;
+  border-radius: 16px;
+  padding: 6px 16px; // vertical padding
+  font-size: $font-size-xs;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  width: max-content;
+  opacity: 1;
+  flex-shrink: 0;
+  line-height: 1.3; // ensures text is vertically centered
+
+  &.active,
+  &:focus {
+    background: $color-primary;
+    color: $color-header-text;
+  }
+}
+
+.notification-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(30, 32, 38, 0.32);
+  z-index: 3000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.notification-sheet {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: $color-card; // was #fff
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: $shadow-card;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  animation: slideUpSheet 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+
+  p {
+    margin-top: 12px;
+    color: #5f6c85;
+  }
+}
+
+.notification-icon {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 8px rgba(26, 31, 41, 0.12);
+}
+
+.notification-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.notification-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #5f6c85;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-toggle input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: auto;
+  /* Align toggle to the right */
+}
+
+.notification-toggle input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s;
+}
+
+.notification-toggle input[type="checkbox"]:checked {
+  background: #4caf50;
+}
+
+.notification-toggle input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+.notification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@keyframes slideUpSheet {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.news-card-byline {
+  color: #5F6C85;
+  font-size: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(var(--vh, 1vh) * 100); // Add this line
+  height: 100dvh;
+  background: rgba(30, 32, 38, 0.96);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  animation: slideDownOverlay 1s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+
+  // Add exit animation class
+  &.closing {
+    animation: slideUpOverlay 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+}
+
+@keyframes slideDownOverlay {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+// New exit animation - slides up (bottom to top)
+@keyframes slideUpOverlay {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.article-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 60px;
+  background: $color-card; // was #fff
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  .article-header-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon-tools {
+      color: #1a1f29;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .article-header-actions {
+    display: none !important;
+  }
+}
+
+.article-header-btn {
+  background: none;
+  border: none;
+  color: #1a1f29;
+  padding: 0.5rem;
+  cursor: pointer;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.article-content {
+  background: $color-card; // was #fff
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 1.5rem 2rem 1.5rem;
+  // Leave room for the bottom FAB so it doesn't cover the last lines
+  padding-bottom: calc(2rem + 84px);
+}
+
+.article-image img {
+  width: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.article-headline {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #1a1f29;
+}
+
+.article-deck {
+  font-size: 1.15rem;
+  color: #5f6c85;
+  margin-bottom: 1.2rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #a4afc5;
+  margin-bottom: 1.5rem;
+}
+
+.article-dot {
+  font-size: 1.2em;
+  color: #a4afc5;
+}
+
+.article-body {
+  font-size: 1.08rem;
+  color: #222b45;
+  line-height: 1.7;
+  font-family: Georgia, serif; // Keep Georgia only here for long-form text
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+// Article FAB: bottom floating action buttons (share + bookmark)
+.article-fab {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom) + 18px);
+  z-index: 100000; // above overlay content
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 12px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.article-fab-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+
+  border: none;
+  background: #ffffff;
+  color: #1a1f29;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(26, 31, 41, 0.18);
+  cursor: pointer;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.skip-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  display: flex;
+  align-items: flex-end;
+  animation: slideUpSkipOverlay 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUpSkipOverlay {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.skip-overlay-content {
+  background: $color-card; // was #fff
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  box-shadow: $shadow-card;
+  animation: slideUpContent 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUpContent {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.skip-overlay-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .skip-overlay-icon {
+    background: #e8f4fd;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+
+    svg {
+      color: #3b82f6;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1f29;
+    margin: 0 0 0.5rem 0;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #5f6c85;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.skip-overlay-benefits {
+  margin-bottom: 2rem;
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+
+    .benefit-icon {
+      font-size: 1.25rem;
+      width: 32px;
+      text-align: center;
+    }
+
+    .benefit-text {
+      color: #1a1f29;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.skip-overlay-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 1rem;
+    font-weight: 600;
+  }
+
+  .skip-dismiss-btn {
+    background: none;
+    border: none;
+    color: #5f6c85;
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+}
+
+/* Skip Overlay Form Styles */
+.skip-overlay-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: $color-nav-inactive;
+  z-index: 1;
+
+}
+
+.skip-overlay-form {
+  margin: 1.5rem 0 0;
+}
+
+.skip-form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    color: $color-nav-active;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="email"],
+  input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    border-bottom: 2px solid $color-nav-border;
+    font-size: $font-size-md;
+    color: $color-nav-active;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-bottom-color: $color-primary;
+    }
+
+    &::placeholder {
+      color: $color-nav-inactive;
+    }
+  }
+}
+
+.skip-login-section {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: $font-size-sm;
+  color: #5f6c85;
+}
+
+.skip-login-link {
+  background: none;
+  border: none;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+
+  &:active,
+  &:focus {
+    color: darken($color-primary, 10%);
+  }
+}
+
+.skip-dismiss-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+
+}
+
+/* Tools Grid for Pro Users - Matching Figma */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $padding-md;
+  padding: 0 $padding-sm;
+
+  @media (max-width: 480px) {
+    gap: $padding-xs;
+    padding: 0;
+  }
+}
+
+.tool-card {
+  background: $color-card;
+  border-radius: $border-radius-lg; // Now using the fixed variable
+  padding: $padding-md;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  box-shadow: $shadow-card;
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.tool-title {
+  font-size: $font-size-md;
+  font-weight: 600;
+  color: $color-nav-active;
+  margin: 0 0 $padding-xs 0;
+  line-height: 1.3;
+}
+
+/* Update the visibility rules */
+html[data-theme="pro"] .tools-grid,
+body.theme-pro .tools-grid,
+[data-theme="pro"] #tools-grid,
+.theme-pro #tools-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Override any existing flex-demo styles */
+#tools-grid.flex-demo {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $padding-md;
+
+  .flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+/* Update your existing tool icon styles to support secondary variant */
+.tool-icon {
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto $padding-sm;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(26, 31, 41, 0.12);
+
+  // Default primary icons
+  svg {
+    color: #1a1f29;
+    transition: color 0.2s ease;
+    width: 28px;
+    height: 28px;
+    display: block;
+    fill: currentColor;
+  }
+
+  // Secondary variant
+  &.icon-secondary svg {
+    color: #5f6c85;
+  }
+}
+
+/* Secondary text styles */
+
+/* For show-filters buttons and other secondary UI elements */
+.show-filters-btn {
+
+  .show-filters-icon svg,
+  .show-filters-arrow svg {
+    stroke: #5f6c85; // Already using this color - good!
+  }
+
+  .show-filters-label {
+    color: #5f6c85; // Make labels secondary color too
+  }
+}
+
+/* Bio profile meta information */
+.bio-profile-meta {
+  color: #5f6c85 !important;
+}
+
+/* Article meta information */
+.article-time {
+  color: #5f6c85 !important;
+  font-size: 12px;
+}
+
+/* Navigation inactive states */
+.app-nav button:not(.active) {
+  color: #A4AFC5;
+
+  svg {
+    color: #A4AFC5;
+  }
+}
+
+// Pro Upsell Section Styles
+.pro-upsell-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pro-upsell-card {
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pro-upsell-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.pro-upsell-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pro-upsell-icon {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.pro-upsell-marketing {
+  background: $color-card; // was white
+  border-radius: 8px;
+  box-shadow: $shadow-card;
+  padding: 20px;
+}
+
+.pro-upsell-title h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1f29;
+}
+
+.pro-upsell-title button {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.pro-upsell-marketing h4 {
+  margin: 1.25rem 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1f29;
+}
+
+.pro-upsell-marketing p {
+  margin: 12px 0 12px 0;
+  font-size: 16px;
+  color: #5f6c85;
+  line-height: 1.4;
+}
+
+.pro-upsell-marketing button {
+  margin-bottom: 1rem;
+}
+
+.pro-upsell-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pro-upsell-actions .btn-primary,
+.pro-upsell-actions .btn-secondary {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 32px;
+}
+
+// Hide Pro Upsell for Pro users
+.theme-pro .pro-upsell-section,
+[data-theme="pro"] .pro-upsell-section {
+  display: none;
+}
+
+.pro-marketing-close {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  border-radius: 50%;
+
+  i {
+    font-size: 24px;
+  }
+
+}
+
+.create-account-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: $font-size-md;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+
+}
+
+// Account Creation Screen
+.account-creation-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1600;
+  display: flex;
+  /* Enable Flexbox */
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-end;
+  /* Center vertically */
+  align-items: center;
+  /* Center horizontally */
+  padding: 0;
+  overflow-y: auto;
+  background: #E4E7EE;
+
+  // Use Big Ben background for account creation
+  overflow: hidden;
+  background-image: var(--login-bg-overlay), url("login-img/brussels.png");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat, no-repeat;
+  background-color: black;
+
+  // Ensure content is above the background
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Add the same back button styling as passwordless screens
+  .passwordless-back {
+    margin-bottom: auto;
+    display: inline-flex;
+    gap: 4px;
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url("img/chevron-left - 20x20.svg") no-repeat center / contain;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .chk {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .chk+.chk-box {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    border: 1px solid #8D8D8D;
+    border-radius: 3px;
+    background: transparent;
+
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .chk:checked+.chk-box {
+    background: #0073BA;
+    border-color: #0073BA;
+  }
+
+  /* White checkmark */
+  .chk+.chk-box::after {
+    content: "";
+    width: 6px;
+    height: 3px;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transform: rotate(-45deg);
+  }
+
+  .chk:checked+.chk-box::after {
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  /* Optional: keyboard focus */
+  .chk:focus-visible+.chk-box {
+    outline: 2px solid rgba(0, 115, 186, 0.35);
+    outline-offset: 2px;
+  }
+
+  // Ensure the label is transparent and aligns like the reference
+  .account-checkbox-label {
+    background: none;
+    align-items: center;
+    gap: 12px;
+
+    // removed empty input[type="checkbox"] ruleset
+  }
+
+  .auth-legal {
+    padding-top: 24px;
+    font-size: 12px;
+  }
+
+  // Ensure create-account inputs use the same shared auth input pattern as login/passwordless
+  .input-with-icon {
+    @extend .auth-input;
+
+    .input-icon {
+      @extend .auth-input-icon;
+    }
+  }
+}
+
+// Create-account form groups should not restyle the actual input (auth-input handles it)
+.account-form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: #6F6F6F;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  // Avoid overriding .auth-input input styles
+  input {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    transition: none;
+    color: inherit;
+  }
+}
+
+h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.account-back-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #5f6c85;
+  border-radius: 50%;
+
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.account-checkbox-group {
+  margin-bottom: 1.5rem;
+}
+
+.account-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  background: none;
+
+  // removed empty input[type="checkbox"] ruleset
+}
+
+.account-checkbox-text {
+  font-size: 12px;
+  color: #8D8D8D;
+  line-height: 1.4;
+}
+
+.account-link {
+  color: #8D8D8D;
+  text-decoration: none;
+
+}
+
+.icon-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $color-grey-light;
+  /* Default background for initials */
+  color: $color-primary;
+  /* Text color for initials */
+  font-size: $font-size-sm;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  /* Ensure initials are uppercase */
+  cursor: pointer;
+  background-size: cover;
+  /* For the general person icon */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.account-create-btn {
+  width: 100%;
+  /* padding: 1rem; */
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 32px;
+  margin-top: 1rem;
+  height: 48px;
+}
+
+// Mobile responsive
+@media (max-width: 480px) {
+  .account-creation-content {
+    width: 100%;
+  }
+
+  .account-form-group {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.welcome-message {
+  color: #333;
+  padding-bottom: $padding-xl;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-weight: 500;
+
+  button {
+    background: none;
+    border: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+#user-initials {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  font-size: 12px;
+  color: lightgray;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.prototype-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  max-width: 100%;
+  padding: 20px;
+
+
+  @media (min-width: 500px) {
+
+    display: none;
+
+  }
+}
+
+.prototype-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 2rem;
+  background: #1a1f29;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.2);
+}
+
+.prototype-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.prototype-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.prototype-content button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.desktop-warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: yellow;
+  /* Tailwind blue-600 */
+  color: black;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 9999;
+  text-align: center;
+}
+
+.desktop-warning .icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  .desktop-warning {
+    display: none;
+  }
+}
+
+/* Ad Module Styles */
+.ad-module {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ad-module .ad-content .ad-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px dashed #aaa;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.ad-module .ad-content .ad-placeholder.size-300x250 {
+  width: 300px;
+  height: 250px;
+}
+
+.ad-module .ad-content .ad-placeholder.size-728x90 {
+  width: 300px;
+  height: 250px;
+}
+
+.ad-module .ad-content .ad-placeholder.size-160x600 {
+  width: 300px;
+  height: 250px;
+}
+
+// Bio Profile Card Design
+.bio-profile-card {
+  padding: 20px;
+  width: 100%;
+}
+
+.member-designation-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #5f6c85;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+
+.bio-profile-content-layout {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bio-profile-info {
+  flex: 1;
+}
+
+.bio-profile-name-with-district {
+  font-size: 18px;
+  font-weight: 600;
+  color: #21272a;
+  margin: 0 0 4px 0;
+}
+
+.bio-profile-service-details {
+  font-size: 14px;
+  color: #5f6c85;
+  line-height: 20px;
+  margin: 0;
+
+}
+
+.bio-profile-image-with-token {
+  position: relative;
+}
+
+.bio-profile-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: center/cover;
+  border: 2px solid #0073ba;
+}
+
+.party-affiliation-token {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  background: #0073ba;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.directory-card {
+  background: $color-card; // was #fff
+  border-radius: 16px;
+  box-shadow: $shadow-card;
+  padding: 0 0 8px 0;
+  border: 1px solid var(--Border-Subtle);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 16px 16px 16px;
+}
+
+.icon-12 {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1f29;
+}
+
+.divider {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.divider-line {
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.directory-item {
+  padding: 0 16px;
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0 16px 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+}
+
+.item-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.item-text {
+  font-size: 1rem;
+  color: #1a1f29;
+  font-weight: 500;
+}
+
+.icon-20 {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-reset-btn-global {
+  display: none; // hidden by default, shown via .visible class
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 0 8px 0 0;
+  transition: color 0.2s;
+}
+
+.filter-reset-btn-global.visible {
+  display: inline-block;
+}
+
+.state-overlay {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: end;
+  justify-content: center;
+}
+
+.state-overlay.visible {
+  display: flex;
+}
+
+.state-overlay-content {
+  background: $color-card; // was #fff
+  border-radius: 16px;
+  max-height: calc(var(--vh, 1vh) * 80);
+  max-height: 80dvh;
+  width: 100%;
+  padding: 24px 0 24px 0;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.state-list {
+  overflow-y: auto;
+  max-height: calc(var(--vh, 1vh) * 60);
+  max-height: 60dvh;
+  margin: 0;
+  padding: 0 24px;
+  list-style: none;
+}
+
+.state-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #1a1f29;
+  transition: background 0.2s;
+}
+
+.state-list li:last-child {
+  border-bottom: none;
+}
+
+.state-list li.selected {
+  background: #e4e7ee;
+  color: #1b1c1d;
+}
+
+.state-overlay-header {
+  display: flex;
+  align-items: center;
+  padding: 0 24px 12px 24px;
+  gap: 12px;
+}
+
+.state-overlay-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  margin-right: 8px;
+  padding: 0;
+  line-height: 1;
+}
+
+.state-overlay-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1f29;
+  flex: 1;
+  text-align: left;
+}
+
+.state-overlay-handle {
+  width: 40px;
+  height: 5px;
+  background: #e4e7ee;
+  border-radius: 3px;
+  margin: 0 auto 16px auto;
+}
+
+// Shared auth input pattern (login + create-account): left icon in idle, hide on focus/typing
+.auth-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  border: 2px solid #6F6F6F;
+  border-radius: 10px;
+  transition: border-color 0.2s ease;
+  min-height: 52px;
+
+  .auth-input-icon {
+    position: absolute;
+    left: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6F6F6F;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+
+    svg {
+      display: block;
+    }
+  }
+
+  input {
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 44px;
+    font-size: 1rem;
+    background: none;
+    color: #6F6F6F;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #6F6F6F;
+    }
+
+    // Remove autofill background color
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+      -webkit-text-fill-color: #6F6F6F !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &:focus-within {
+    border-color: #ffffff;
+
+    .auth-input-icon {
+      opacity: 0;
+      transform: translateX(-4px);
+    }
+
+    input {
+      padding-left: 1rem;
+      color: lightgrey;
+
+      // Hide placeholder while typing
+      &::placeholder {
+        color: transparent;
+      }
+
+      // Keep autofill styling consistent when focused
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-text-fill-color: lightgrey !important;
+      }
+    }
+  }
+
+  // Has value (not placeholder-shown): icon stays hidden, but border returns to idle color
+  &:has(input:not(:placeholder-shown)) {
+    border-color: #6F6F6F;
+
+    .auth-input-icon {
+      opacity: 0;
+      transform: translateX(-4px);
+    }
+
+    input {
+      padding-left: 1rem;
+      color: lightgrey;
+
+      &::placeholder {
+        color: #6F6F6F;
+      }
+
+      // Autofill with value
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-text-fill-color: lightgrey !important;
+      }
+    }
+  }
+
+  // When focused AND has value, keep active (white) border
+  &:focus-within:has(input:not(:placeholder-shown)) {
+    border-color: #ffffff;
+
+    input::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+// Shared legal/footer links for auth screens (create account + passwordless confirmation)
+.auth-legal {
+  @extend .auth-secondary-text;
+  font-size: 14px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Ensure auth screens can push the legal footer to the bottom *within* their content block
+.passwordless-screen,
+.account-creation-screen {
+  .login-form-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+
+    .auth-legal {
+      margin-top: auto;
+      padding-top: 24px;
+      padding-bottom: 8px;
+      font-size: 12px;
+    }
+  }
+}
+
+// Login-success: keep everything centered, including legal footer
+.login-success-screen {
+  flex-direction: column;
+
+  .login-success-content {
+    text-align: center;
+  }
+
+  .auth-legal {
+    margin-top: 20px;
+    padding-bottom: 16px;
+  }
+}
+
+.login-success-content {
+  .login-success-message {
+    max-width: 320px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.45;
+  }
+
+  #passwordless-confirm-back {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    height: 48px;
+    border-radius: 999px;
+  }
+}
+
+// Shared secondary/helper text style for auth screens
+.auth-secondary-text {
+  color: var(--color-text-invert-secondary, #8D8D8D);
+  text-align: center;
+  font-family: var(--font-family-sansSerif, Söhne);
+  font-size: var(--dimension-typescale-general-m, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+}
+
+// Apply shared secondary text styling to auth screen helper copy
+.login-screen,
+.passwordless-screen,
+.passwordless-confirm-screen,
+.account-creation-screen,
+.login-success-screen {
+  .login-info-text {
+    div {
+      @extend .auth-secondary-text;
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+        color: #8D8D8D;
+      }
+    }
+  }
+
+  // Passwordless confirmation message paragraph
+  .login-success-content {
+    .login-success-message {
+      @extend .auth-secondary-text;
+    }
+  }
+}
+
+// --- Auth screen heading consistency (Login / Create Account / Passwordless) ---
+// Make all auth screen H2 headings use the same size/weight and render in white.
+.login-screen,
+.passwordless-screen,
+.passwordless-confirm-screen,
+.account-creation-screen {
+  .login-info-text {
+    h2 {
+      color: #ffffff !important;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// AUTH SCREENS: MUST NOT inherit app theme styles (consumer/pro/skip)
+// These screens are pre-login and should be visually consistent regardless of
+// html[data-theme] / body.theme-*.
+// -----------------------------------------------------------------------------
+
+// Force auth screens to be self-contained: fixed text colors + safe defaults.
+.login-screen,
+.passwordless-screen,
+.passwordless-confirm-screen,
+.account-creation-screen,
+.login-success-screen {
+  // Prevent theme CSS from leaking into pre-login surfaces
+  color-scheme: light;
+  color: #ffffff;
+  padding: 16px;
+
+  // Ensure all text nodes within use auth colors unless explicitly overridden
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #ffffff;
+  }
+
+  // Make sure utility/theme classes don't accidentally restyle auth screens
+  .text-secondary,
+  .icon-secondary {
+    color: inherit !important;
+  }
+
+}
+
+// Login-success is intentionally on a white surface
+.login-success-screen {
+  color: #1a1f29;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #1a1f29;
+  }
+
+  .auth-secondary-text,
+  .login-info-text div,
+  .auth-legal {
+    color: #5f6c85;
+  }
+
+  a,
+  .account-link {
+    color: #1a1f29;
+    text-decoration: none;
+  }
+}

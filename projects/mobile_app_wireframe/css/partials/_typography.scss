@@ -1,0 +1,11 @@
+// Minimal typography partial
+// The main styles are in /styles.scss. This partial is kept intentionally small.
+
+// No underline anywhere
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}

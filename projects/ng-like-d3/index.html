@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <script>/* block iOS pinch-zoom */['gesturestart','gesturechange','gestureend'].forEach(function(e){document.addEventListener(e,function(ev){ev.preventDefault();},{passive:false});});document.addEventListener('touchmove',function(e){if(e.touches.length>1)e.preventDefault();},{passive:false});</script>
+  <script>/* block iOS pinch-zoom */['gesturestart', 'gesturechange', 'gestureend'].forEach(function (e) { document.addEventListener(e, function (ev) { ev.preventDefault(); }, { passive: false }); }); document.addEventListener('touchmove', function (e) { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });</script>
   <title>World Cup History — Analytics</title>
   <script src="review-gate.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
   <div class="wrap">
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-badge">FIFA WORLD CUP ANALYTICS</div>
+      <!-- <div class="hero-badge">FIFA WORLD CUP ANALYTICS</div> -->
       <h1 class="hero-title">World Cup Atlas</h1>
       <p class="hero-subtitle">Access and explore comprehensive World Cup data from every tournament since 1930.</p>
     </section>
@@ -63,39 +63,39 @@
             <span class="material-symbols-outlined" aria-hidden="true">query_stats</span>
           </div>
           <h3>Team Timelines</h3>
-          <p>Timelines showing tournament results</p>
+          <p>Follow tournament results over time</p>
         </div>
 
         <div class="viz-card" data-target-tab="players">
           <div class="viz-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">emoji_events</span>
+            <span class="material-symbols-outlined" aria-hidden="true">person</span>
           </div>
-          <h3>Top Scorers</h3>
-          <p>All-time leading goal scorers</p>
-        </div>
-
-        <div class="viz-card" data-target-tab="head-to-head">
-          <div class="viz-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">groups</span>
-          </div>
-          <h3>Head-to-Head</h3>
-          <p>Compare team matchups</p>
+          <h3>Team Players</h3>
+          <p>Explore players from a selected team</p>
         </div>
 
         <div class="viz-card" data-target-tab="all-players">
           <div class="viz-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">analytics</span>
+            <span class="material-symbols-outlined" aria-hidden="true">group</span>
           </div>
-          <h3>All-Time Rankings</h3>
-          <p>Historical performance stats</p>
+          <h3>All Players</h3>
+          <p>Compare players across national teams</p>
+        </div>
+
+        <div class="viz-card" data-target-tab="head-to-head">
+          <div class="viz-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">handshake</span>
+          </div>
+          <h3>Head-2-Head</h3>
+          <p>Explore historical rivalry matchups</p>
         </div>
 
         <div class="viz-card" data-target-tab="compare">
           <div class="viz-icon">
-            <span class="material-symbols-outlined" aria-hidden="true">star</span>
+            <span class="material-symbols-outlined" aria-hidden="true">table_chart_view</span>
           </div>
-          <h3>Team Comparison</h3>
-          <p>Side-by-side team head to head</p>
+          <h3>2026 Compare</h3>
+          <p>Compare squad age, value, salary</p>
         </div>
       </div>
     </section>
@@ -103,7 +103,7 @@
     <!-- Browse All Teams Section -->
     <section class="teams-section" id="teams">
       <h2 class="section-title">Browse All Teams</h2>
-      <p class="section-subtitle">All 80 national teams ranked by all-time tournament performance</p>
+      <!-- <p class="section-subtitle">All 80 national teams from A to Z</p> -->
 
       <div id="conf-filters" class="conf-filters" aria-label="Filter by confederation"></div>
 
@@ -112,8 +112,7 @@
     </section>
 
     <footer class="footer">
-      <p>Data sourced from FIFA official tournament records from 1930 to 2022. A project by Kaushik Jadhav. For
-        rankings, style and design credits.</p>
+      <p>A project by Oscar Santamariña</p>
     </footer>
   </div>
 

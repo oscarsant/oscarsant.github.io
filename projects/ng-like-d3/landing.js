@@ -103,9 +103,13 @@
 			if (active === i) d.setAttribute("data-active", "true");
 
 			const countryCode = getCountryCode(team.abbr);
-			const trophies = team.titles > 0
-				? Array.from({ length: team.titles }, () => '<img src="WC-Trophy.svg" class="trophy-icon" alt="" />').join("")
-				: "";
+			const trophies =
+				team.titles > 0
+					? Array.from(
+							{ length: team.titles },
+							() => '<img src="WC-Trophy.svg" class="trophy-icon" alt="" />',
+						).join("")
+					: "";
 			d.innerHTML = `
         <span class="result-crest fi fi-${countryCode}"></span>
         <span class="result-name">${team.name}</span>

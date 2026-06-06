@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="consumer">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile App Wireframe</title>
+
+  <!-- Favicon (inline data URL to avoid /favicon.ico 404) -->
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjEyQv1Y3wAAABh0RVh0Q3JlYXRpb24gVGltZQAwOC8yNy8yMVPpOycAAABYSURBVFhH7Y/BDQAgDAS7/6fZC4mB8Jm4mQ0R8wE3i1qg5xkJ3s1q1g8g6x0oWmW1g3S8l0r2gq8m0r2gq8m0r2gq8m0r2gq8m0r2gq8m0r2gr8H9p8L4w6x8i2C9u2gAAAABJRU5ErkJggg==" />
+  <link rel="shortcut icon" type="image/png"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Fk+0AAAAASUVORK5CYII=" />
+
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="css/base/variables.css" />
+  <link rel="stylesheet" href="css/base/reset.css" />
+  <link rel="stylesheet" href="css/base/typography.css" />
+
+  <!-- Theme Styles -->
+  <link rel="stylesheet" href="css/themes/pro-theme.css" />
+  <link rel="stylesheet" href="css/themes/consumer-theme.css" />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css?v=20251120-155731" />
+  <link rel="stylesheet" href="css/newsletters.css?v=20251120-155731" />
+  <link rel="stylesheet" href="css/log-meeting.css?v=20251120-155731" />
+
+  <!-- Flatpickr (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+
+  <!-- Lottie Player for animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json?v=20251120-155731" />
+  <meta name="theme-color" content="#1A1F29" />
+
+  <!-- iOS PWA Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="POLITICO" />
+</head>
+
+<body class="theme-consumer">
+  <!-- Your entire existing HTML content stays exactly the same -->
+  <!-- prettier-ignore -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <!-- All your existing SVG symbols -->
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none" />
+      <path d="M4 20c0-4 8-4 8-4s8 0 8 4" stroke="currentColor" stroke-width="2" fill="none" />
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" />
+      <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol id="icon-list" viewBox="0 0 21 20">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M10.6666 4.9L11.4666 5C13.5666 5.4 15.1666 7.2 15.1666 9.4H6.16663C6.16663 7.2 7.76663 5.4 9.86663 5L10.6666 4.9ZM11.1666 0H10.1666V1.5L9.66663 3.5V4.1C7.06663 4.5 5.16663 6.8 5.16663 9.5H4.16663V10.5H5.16663V13.5H1.66663V14.5H2.66663V19H0.666626V20H20.6666V19H18.6666V14.5H19.6666V13.5H16.1666V10.5H17.1666V9.5H16.1666C16.1666 6.8 14.2666 4.6 11.6666 4.1V3.5L11.1666 1.5V0ZM13.6666 13.5V10.5H15.1666V13.5H13.6666ZM11.1666 13.5V10.5H12.6666V13.5H11.1666ZM8.66663 13.5V10.5H10.1666V13.5H8.66663ZM6.16663 13.5V10.5H7.66663V13.5H6.16663ZM16.1666 19V14.5H17.6666V19H16.1666ZM13.6666 19V14.5H15.1666V19H13.6666ZM11.1666 19V14.5H12.6666V19H11.1666ZM8.66663 19V14.5H10.1666V19H8.66663ZM6.16663 19V14.5H7.66663V19H6.16663ZM3.66663 19V14.5H5.16663V19H3.66663Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="icon-news" viewBox="0 0 19 20">
+      <path d="M3.5 15V16H15.5V15H3.5Z" fill="currentColor" />
+      <path d="M15.5 12V13H3.5V12H15.5Z" fill="currentColor" />
+      <path d="M15.5 9H11.5V10H15.5V9Z" fill="currentColor" />
+      <path d="M11.5 6H15.5V7H11.5V6Z" fill="currentColor" />
+      <path d="M15.5 3H11.5V4H15.5V3Z" fill="currentColor" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 3V10H3.5V3H9.5ZM4.5 4V9H8.5V4H4.5Z" fill="currentColor" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 0V20H0.5V0H18.5ZM17.5 19V1H1.5V19H17.5Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 21 14">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M0.333374 14H20.3334V0H0.333374V14ZM19.3334 1L10.3334 7L1.33337 1H19.3334ZM1.33337 2L10.3334 8L19.3334 2V13H1.33337L1.329 2.25875L1.33337 2Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="icon-profile" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none" />
+      <path d="M4 20c0-4 8-4 8-4s8 0 8 4" stroke="currentColor" stroke-width="2" fill="none" />
+    </symbol>
+    <symbol id="icon-tools" viewBox="0 0 36 14">
+      <path
+        d="M0 14V0.00574342H5.5548C8.16455 0.00574342 9.85781 1.61362 9.85781 4.04266C9.85781 6.4717 8.16455 8.03938 5.5548 8.03938H1.20149V13.9943H0V14ZM1.20149 6.93109H5.49332C7.54982 6.93109 8.62278 5.78835 8.62278 4.0484C8.62278 2.30845 7.54982 1.11977 5.49332 1.11977H1.20149V6.93109Z"
+        fill="currentColor" />
+      <path
+        d="M11.3443 14V0.00574342H17.0891C19.6988 0.00574342 21.3921 1.53322 21.3921 3.97375C21.3921 6.41427 20.1794 7.42494 18.2235 7.82691L21.7218 14H20.308L16.9494 7.93027H12.5458V14H11.3443ZM12.5458 6.79902H17.0276C19.0841 6.79902 20.1571 5.66776 20.1571 3.97375C20.1571 2.27974 19.0841 1.14274 17.0276 1.14274H12.5458V6.79902Z"
+        fill="currentColor" />
+      <path
+        d="M22.4762 7.06891C22.4762 2.96308 25.3598 0 29.199 0C33.0382 0 36 2.96308 36 7.06891C36 11.1747 33.1052 14 29.199 14C25.2928 14 22.4762 11.146 22.4762 7.06891ZM29.2046 12.8975C32.457 12.8975 34.8264 10.4914 34.8264 7.06891C34.8264 3.64643 32.4682 1.10254 29.2046 1.10254C25.941 1.10254 23.6498 3.60623 23.6498 7.06891C23.6498 10.5316 26.0081 12.8975 29.2046 12.8975Z"
+        fill="currentColor" />
+    </symbol>
+  </svg>
+
+  <div class="loading-screen" id="loading" style="display: none;">
+    <img src="img/politico-logo_legacy.svg" alt="icon" class="icon-md" />
+    <div class="loader"></div>
+  </div>
+
+  <div class="login-screen" id="login">
+    <button class="btn-tertiary" id="skip-btn" type="button">Skip</button>
+    <div class="login-logo">
+      <img src="img/politico-logo_legacy.svg" alt="POLITICO" />
+    </div>
+    <div class="login-info-text">
+      <h2>Do you have an account?</h2>
+      <!-- <div>If you already have an account, sign in now. Otherwise, you can skip this step and create one later.</div> -->
+    </div>
+    <div class="login-form-content">
+      <div class="login-form-group">
+        <div class="input-with-icon" data-icon="mail">
+          <span class="input-icon" aria-hidden="true">
+            <svg class="icon" width="20" height="20" viewBox="0 0 21 14">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+          </span>
+          <input type="email" placeholder="Email *" id="login-email" autocomplete="email" />
+        </div>
+      </div>
+      <div class="login-form-group">
+        <div class="input-with-icon" data-icon="lock">
+          <span class="input-icon" aria-hidden="true">
+            <svg class="icon" width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4"
+                d="M16.8793 9.69875V7.76735C16.8793 5.25435 14.8413 3.21635 12.3283 3.21635C9.8153 3.20535 7.7693 5.23335 7.7583 7.74735V7.76735V9.69875"
+                stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+              <path opacity="0.4" d="M12.1812 14.6689V16.8899" stroke="currentColor" stroke-width="2"
+                stroke-linecap="square" stroke-linejoin="round"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.9306 21.7163L19.9306 9.84277L4.70557 9.84277L4.70557 21.7163L19.9306 21.7163Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <input type="password" placeholder="Password *" id="login-password" />
+        </div>
+      </div>
+      <div class="login-actions">
+        <button class="btn-primary" id="login-btn" type="button">Log In</button>
+      </div>
+      <div class="login-or-divider">
+        <span class="login-or-line"></span>
+        <span class="login-or-text">OR</span>
+        <span class="login-or-line"></span>
+      </div>
+      <button class="login-no-password-btn" type="button">
+        Email me a link
+      </button>
+      <div class="login-create-account">
+        <span>Don't have an account? </span>
+        <button class="create-account-link" id="create-account-btn">Create one</button>
+      </div>
+      <div class="login-last-update">Last updated: <span id="login-build-timestamp">January 9, 2026 11:12AM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Passwordless Login Screen -->
+  <div class="passwordless-screen" id="passwordless" style="display: none;">
+    <button class="btn-tertiary passwordless-back" id="passwordless-back-btn" type="button">Back</button>
+
+    <div class="login-logo">
+      <img src="img/politico-logo_legacy.svg" alt="POLITICO" />
+    </div>
+
+    <div class="login-info-text passwordless-info">
+      <h2>Log in without a password</h2>
+      <div>We’ll send a quick link to your email.</div>
+    </div>
+
+    <div class="login-form-content">
+      <div class="login-form-group">
+        <div class="input-with-icon" data-icon="mail">
+          <span class="input-icon" aria-hidden="true">
+            <svg class="icon" width="20" height="20" viewBox="0 0 21 14">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+          </span>
+          <input type="email" placeholder="Email" id="passwordless-email" autocomplete="email" />
+        </div>
+        <div class="auth-error" id="passwordless-error" aria-live="polite" style="display:none;"></div>
+      </div>
+
+      <div class="login-actions passwordless-actions">
+        <button class="btn-secondary" id="passwordless-send-btn" type="button">Send secure log in link</button>
+      </div>
+
+      <div class="login-create-account passwordless-create">
+        <span>Don't have an account yet? </span>
+        <button class="create-account-link" id="passwordless-create-account-btn" type="button">Create one</button>
+      </div>
+    </div>
+    <div class="auth-legal">
+      <a href="#" class="account-link">Terms of Service</a> | <a href="#" class="account-link">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Passwordless: confirmation after sending secure link (NOT the loading/GIF screen) -->
+  <div class="passwordless-confirm-screen" id="passwordless-confirm" style="display:none;">
+    <button class="btn-tertiary passwordless-back" id="passwordless-confirm-back-btn" type="button">Back</button>
+
+    <div class="login-info-text passwordless-info">
+      <!-- Lottie animation: success send -->
+      <div class="passwordless-confirm-visual" aria-hidden="true">
+        <lottie-player src="img/success-send.json" background="transparent" speed="1"
+          style="width: 120px; height: 120px;" autoplay>
+        </lottie-player>
+      </div>
+
+      <h2>Check your email</h2>
+      <div id="passwordless-confirm-message">
+        We sent a secure log in link. Follow the secure link to log in without a password.
+      </div>
+    </div>
+
+    <div class="login-form-content">
+      <div class="login-actions passwordless-actions">
+        <button class="btn-secondary" id="passwordless-resend-btn" type="button">Resend link</button>
+      </div>
+
+      <div class="passwordless-link-expiry">
+        This link will be valid for 10 minutes.
+      </div>
+
+    </div>
+  </div>
+
+  <div class="login-success-screen" id="login-success" style="display: none">
+    <div class="login-success-content">
+      <div class="login-logo">
+        <img src="img/politico-logo_legacy.svg" alt="POLITICO" />
+      </div>
+
+      <div class="login-success-animation" aria-hidden="true">
+        <img src="img/IMG_7325.GIF" alt="" />
+      </div>
+
+      <div class="login-success-dots" aria-hidden="true">
+        <div class="dots-loader" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-container" id="app">
+    <header class="app-header">
+      <img src="img/pro-logo_2024.svg" alt="Pro Logo" class="icon-md logo-pro" />
+      <img src="img/politico-logo_legacy.svg" alt="Default Logo" class="icon-md logo-default" />
+      <div id="user-initials"></div>
+      <div class="main-header-icon" id="main-header-icon" style="display: none;">
+        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M15.939 16.75C14.7607 14.5054 12.3698 13 10.057 13C7.609 13 5.371 14.461 4.137 16.818C3.967 16.671 3.796 16.525 3.636 16.364C1.936 14.664 1 12.404 1 10C1 7.596 1.936 5.336 3.636 3.636C5.336 1.936 7.596 1 10 1C12.404 1 14.664 1.936 16.364 3.636C18.064 5.336 19 7.596 19 10C19 12.404 18.064 14.664 16.364 16.364C16.228 16.5 16.082 16.623 15.939 16.75ZM4.82933 17.3869C5.91833 15.2409 7.84571 13.861 10.0447 13.861C12.1808 13.861 14.1267 15.2316 15.171 17.2917C13.636 18.4227 11.943 19 10 19C8.09 19 6.34933 18.4819 4.82933 17.3869ZM0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0C4.477 0 0 4.477 0 10ZM10 5C11.654 5 13 6.346 13 8C13 9.654 11.654 11 10 11C8.346 11 7 9.654 7 8C7 6.346 8.346 5 10 5ZM10 12C12.209 12 14 10.209 14 8C14 5.791 12.209 4 10 4C7.791 4 6 5.791 6 8C6 10.209 7.791 12 10 12Z"
+            fill="#5F6C85" />
+        </svg>
+      </div>
+    </header>
+    <main class="app-main">
+      <div class="wireframe-box" id="news-content">
+        <!-- News Toggle will be injected by JS for PRO users only -->
+        <div class="news-pills" id="news-pills">
+          <button class="news-pill active">All</button>
+          <button class="news-pill">Congress</button>
+          <button class="news-pill">Defense</button>
+          <button class="news-pill">Health care</button>
+          <button class="news-pill">California</button>
+          <button class="news-pill">New York</button>
+        </div>
+        <div class="news-feed news-feed-grid" id="top-news-feed">
+          <!-- Top News: your original cards/order, unchanged -->
+          <h3>Editor's Picks</h3>
+          <div class="news-card" data-tag="PRO">
+            <div class="news-card-image">
+              <img src="https://picsum.photos/seed/news1/600/400" alt="Breaking: Major Policy Announced" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Breaking: Major Policy Announced Affecting Millions Across the
+                Country
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Jane Doe, John Smith & Emily Carter
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-half-width" data-tag="PRO">
+            <div class="news-card-image">
+              <img src="https://picsum.photos/seed/half1/600/400" alt="Half Width" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Lawmakers Reach Historic Bipartisan Agreement on
+                Infrastructure Funding
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Michael Johnson
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-half-width" data-tag="PRO">
+            <div class="news-card-image">
+              <img src="https://picsum.photos/seed/half2/600/400" alt="Half 1" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Education Reform Bill Advances After Heated Debate in Senate
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Sarah Lee & David Patel
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-no-image" data-tag="Consumer">
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Policy Update: New Environmental Standards Announced for 2025
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Olivia Brown
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-no-image" data-tag="Consumer">
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Election Watch: Key Races to Follow This November
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Carlos Rivera, Mia Lewis & Ava Thompson
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-no-image" data-tag="Consumer">
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Local Governments Prepare for Upcoming Budget Hearings
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Emily Carter
+              </p>
+            </div>
+          </div>
+          <div class="ad-module">
+            <div class="ad-content">
+              <div class="ad-placeholder size-300x250">Your Ad Here</div>
+            </div>
+          </div>
+          <h3>White House</h3>
+          <div class="news-card news-card-horizontal" data-tag="PRO">
+            <div class="news-card-image news-card-image-horizontal">
+              <img src="https://picsum.photos/seed/left1/600/400" alt="Image Left, Text Right" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Exclusive: Governor Outlines Vision for State’s Economic
+                Growth
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Jackie Nguyen & William Chen
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-horizontal" data-tag="PRO">
+            <div class="news-card-image news-card-image-horizontal">
+              <img src="https://picsum.photos/seed/left2/600/400" alt="Image Left, Text Right" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Health Officials Issue New Guidance Ahead of Flu Season
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Daniel Young
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-horizontal" data-tag="PRO">
+            <div class="news-card-image news-card-image-horizontal">
+              <img src="https://picsum.photos/seed/left3/600/400" alt="Image Left, Text Right" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                City Council Approves Affordable Housing Initiative
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Grace Evans & Patricia Kim
+              </p>
+            </div>
+          </div>
+          <h3>Podcasts</h3>
+          <div class="news-card" data-tag="PRO">
+            <div class="news-card-image">
+              <img src="https://picsum.photos/seed/news3/600/400" alt="Interview: Senator Jane Doe" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Exclusive Interview: Senator Jane Doe Discusses New
+                Legislative Agenda for 2025
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Michael Johnson
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-no-image" data-tag="Consumer">
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Policy Update: New Environmental Standards Announced for 2025
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Olivia Brown
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-no-image" data-tag="Consumer">
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Election Watch: Key Races to Follow This November
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Carlos Rivera, Mia Lewis & Ava Thompson
+              </p>
+            </div>
+          </div>
+          <div class="news-card news-card-no-image" data-tag="Consumer">
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Local Governments Prepare for Upcoming Budget Hearings
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Emily Carter
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="news-feed news-feed-grid" id="latest-news-feed" style="display: none">
+          <div class="news-card" data-published="2025-06-30T13:40:00Z" data-tag="Consumer">
+            <div class="news-card-image">
+              <span class="news-card-time">5m ago</span>
+              <img src="https://picsum.photos/seed/latest1/600/400" alt="Policy Shakeup" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                White House Announces Sweeping Policy Shakeup for 2025
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Jane Doe & Michael Johnson
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T13:20:00Z" data-tag="Consumer">
+            <div class="news-card-image">
+              <span class="news-card-time">25m ago</span>
+              <img src="https://picsum.photos/seed/latest2/600/400" alt="Senate Bill" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Senate Passes Landmark Bill to Expand Healthcare Access
+                Nationwide
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Emily Carter
+              </p>
+            </div>
+          </div>
+          <div class="ad-module">
+            <div class="ad-content">
+              <div class="ad-placeholder size-160x600">Your Ad Here</div>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T12:55:00Z" data-tag="PRO">
+            <div class="news-card-image">
+              <span class="news-card-time">50m ago</span>
+              <img src="https://picsum.photos/seed/latest3/600/400" alt="Education Reform" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Education Reform Bill Advances After Heated Debate in Senate
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Sarah Lee & David Patel
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T12:30:00Z" data-tag="PRO">
+            <div class="news-card-image">
+              <span class="news-card-time">1h 15m ago</span>
+              <img src="https://picsum.photos/seed/latest4/600/400" alt="Climate Action" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Climate Action: New Standards Set for Emissions Reduction
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Olivia Brown
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T12:00:00Z" data-tag="PRO">
+            <div class="news-card-image">
+              <span class="news-card-time">1h 45m ago</span>
+              <img src="https://picsum.photos/seed/latest5/600/400" alt="Infrastructure" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Infrastructure Funding: Lawmakers Reach Historic Bipartisan
+                Agreement
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Michael Johnson
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T11:30:00Z" data-tag="Consumer">
+            <div class="news-card-image">
+              <span class="news-card-time">2h 15m ago</span>
+              <img src="https://picsum.photos/seed/latest6/600/400" alt="Elections" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Election Watch: Key Races to Follow This November
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Carlos Rivera, Mia Lewis & Ava Thompson
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T11:00:00Z" data-tag="PRO">
+            <div class="news-card-image">
+              <span class="news-card-time">3h ago</span>
+              <img src="https://picsum.photos/seed/latest7/600/400" alt="Governor Interview" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Exclusive: Governor Outlines Vision for State’s Economic
+                Growth
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Jackie Nguyen & William Chen
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T10:30:00Z" data-tag="PRO">
+            <div class="news-card-image">
+              <span class="news-card-time">3h 30m ago</span>
+              <img src="https://picsum.photos/seed/latest8/600/400" alt="Affordable Housing" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                City Council Approves Affordable Housing Initiative
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Grace Evans & Patricia Kim
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T10:00:00Z" data-tag="PRO">
+            <div class="news-card-image">
+              <span class="news-card-time">4h ago</span>
+              <img src="https://picsum.photos/seed/latest9/600/400" alt="Health Guidance" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Health Officials Issue New Guidance Ahead of Flu Season
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Daniel Young
+              </p>
+            </div>
+          </div>
+          <div class="news-card" data-published="2025-06-30T09:30:00Z" data-tag="Consumer">
+            <div class="news-card-image">
+              <span class="news-card-time">4h 30m ago</span>
+              <img src="https://picsum.photos/seed/latest10/600/400" alt="Budget Hearings" />
+            </div>
+            <div class="news-card-content">
+              <div class="news-card-tags"></div>
+              <h4 class="news-card-title">
+                Local Governments Prepare for Upcoming Budget Hearings
+              </h4>
+              <p class="news-card-summary news-card-byline">
+                By Emily Carter
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wireframe-box" id="newsletter-content" style="display: none">
+        <div class="newsletter-following-page">
+          <!-- Header -->
+          <!-- <header class="newsletter-header">
+            <h1>Newsletters</h1>
+            <p>Manage your subscriptions and discover new newsletters to follow.</p>
+          </header> -->
+
+          <!-- Followed Newsletters -->
+          <section class="followed-newsletters">
+            <div class="subscriptions-header">
+              <h2>Your Subscriptions</h2>
+              <!-- The Edit button will be inserted here by JS -->
+            </div>
+            <div class="empty-followed-message" style="display:none;">
+              Your subscribed newsletters will show here.
+            </div>
+            <ul id="followed-list">
+              <!-- Dynamically populated with followed newsletters -->
+            </ul>
+          </section>
+
+          <!-- Discover Newsletters -->
+          <section class="discover-newsletters">
+            <h2>Discover Newsletters</h2>
+            <p>Subscribe for email and in-app newsletters.</p>
+            <div class="news-pills" id="discover-news-pills">
+              <button class="news-pill active">All</button>
+              <button class="news-pill">Congress</button>
+              <button class="news-pill">Defense</button>
+              <button class="news-pill">Healthcare</button>
+              <button class="news-pill">California</button>
+              <button class="news-pill">New York</button>
+            </div>
+            <ul id="discover-list">
+              <!-- Dynamically populated with available newsletters -->
+            </ul>
+          </section>
+        </div>
+      </div>
+      <!-- Newsletter Overlay -->
+      <div class="newsletter-overlay" id="newsletter-overlay" style="display: none;">
+        <div class="article-header">
+          <button class="article-header-btn" id="newsletter-back-btn" title="Back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <div class="article-header-actions">
+            <button class="article-header-btn" id="newsletter-share-btn" title="Share">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="newsletter-content" id="newsletter-overlay-content">
+          <div class="newsletter-logo">
+            <img src="" alt="Newsletter Logo" id="newsletter-logo" />
+          </div>
+          <h1 class="newsletter-title" id="newsletter-title">Newsletter Title</h1>
+          <h1 class="article-headline">
+            Lorem Ipsum Dolor Sit Amet: Headline Example for Newsletter
+          </h1>
+          <div class="article-meta">
+            <span class="news-card-byline">By Jane Doe & John Smith</span>
+            <span class="article-dot">•</span>
+            <span class="article-time">12m ago</span>
+          </div>
+          <div class="article-body" style="font-family: Georgia, serif">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi
+              consectetur nisi, euismod euismod nisi nisi euismod. Suspendisse
+              potenti. Etiam nec velit nec libero pretium pharetra. Mauris dictum,
+              urna eu cursus dictum, urna urna cursus urna, eu cursus urna urna eu
+              urna.
+            </p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+            <div class="ad-module">
+              <div class="ad-content">
+                <div class="ad-placeholder size-300x250">Your Ad Here</div>
+              </div>
+            </div>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+            <div class="ad-module">
+              <div class="ad-content">
+                <div class="ad-placeholder size-300x250">Your Ad Here</div>
+              </div>
+            </div>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="wireframe-box" id="foryou-content" style="display: none">
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <article class="news-article-card">
+            <div class="hero-image-container">
+              <img src="https://picsum.photos/seed/timeline1/600/400" alt="Congress News" class="hero-image" />
+            </div>
+            <div class="article-content-wrapper">
+              <h1 class="article-headline">Congress Approves Major Climate Bill</h1>
+              <p class="article-subtitle">Historic legislation sets new standards for emissions.</p>
+              <div class="author-and-share-section">
+                <div class="author-byline-container">
+                  <div class="author-information">
+                    By <span class="author-names">Alex Green</span>
+                  </div>
+                  <div class="publication-timestamp">08/14/2025, 9:00am est</div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="white" aria-hidden="true">
+                    <path d="M1 10.5h16.3l-5.4 5.4.6.6 6.5-6.5-6.5-6.5-.7.7 5.5 5.3H1v1z" />
+                  </svg>
+                </button>
+              </div>
+              <p class="image-attribution-credit">Lead Art: Getty Images</p>
+            </div>
+            <div class="breaking-news-label" aria-label="Published 1 minute ago, Long read article">1 MIN AGO</div>
+          </article>
+
+          <!-- Timeline Item 2 -->
+          <div class="news-snippet-container">
+            <div class="breaking-news-timestamp">5 MIN AGO</div>
+            <div class="news-snippet-card">
+              <p class="article-quote-text">A group of the holdouts — like Reps. Roy, Gosar, Miller, Bishop, Luna,
+                Ogles
+                — meeting
+                in Emmer's office right now.</p>
+              <div class="author-and-share-container">
+                <div class="author-profile-section">
+                  <div class="author-profile-image" style="background-image: url('https://i.pravatar.cc/150?img=32');">
+                  </div>
+                  <div class="author-information-block">
+                    <p class="author-name-text">Oliva Beavers</p>
+                    <p class="publication-date-text">02/10/2023, 1:30pm est</p>
+                  </div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                      d="M10 1l4.5 4.5-.7.7-3.4-3.4v12.2h-1V2.6L6 5.9l-.7-.7L10 1zm6.5 7.3h-4v1h3v8.2H4.5V9.3h3v-1H3.5v10h13V9.3h.5v-1z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="ad-module">
+            <div class="ad-content">
+              <div class="ad-placeholder size-728x90">Advertisement Here</div>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <article class="news-article-card">
+            <div class="hero-image-container">
+              <img src="https://picsum.photos/seed/timeline2/600/400" alt="Healthcare Update" class="hero-image" />
+            </div>
+            <div class="article-content-wrapper">
+              <h1 class="article-headline">Healthcare Expansion Bill Signed Into Law</h1>
+              <p class="article-subtitle">Millions to gain access to affordable care.</p>
+              <div class="author-and-share-section">
+                <div class="author-byline-container">
+                  <div class="author-information">By <span class="author-names">Morgan Smith</span></div>
+                  <div class="publication-timestamp">08/14/2025, 10:00am est</div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="white" aria-hidden="true">
+                    <path d="M1 10.5h16.3l-5.4 5.4.6.6 6.5-6.5-6.5-6.5-.7.7 5.5 5.3H1v1z" />
+                  </svg>
+                </button>
+              </div>
+              <p class="image-attribution-credit">Lead Art: Reuters</p>
+            </div>
+            <div class="breaking-news-label" aria-label="Published 1 minute ago, Long read article">1 MIN AGO</div>
+          </article>
+          <!-- Timeline Item 4 -->
+          <div class="news-snippet-container">
+            <div class="breaking-news-timestamp">5 MIN AGO</div>
+            <div class="news-snippet-card">
+              <p class="article-quote-text">"This is a game changer for families across the country," says Rep.
+                Carter.
+              </p>
+              <div class="author-and-share-container">
+                <div class="author-profile-section">
+                  <div class="author-profile-image" style="background-image: url('https://i.pravatar.cc/150?img=33');">
+                  </div>
+                  <div class="author-information-block">
+                    <p class="author-name-text">Nicholas Carter</p>
+                    <p class="publication-date-text">08/14/2025, 10:05am est</p>
+                  </div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                      d="M10 1l4.5 4.5-.7.7-3.4-3.4v12.2h-1V2.6L6 5.9l-.7-.7L10 1zm6.5 7.3h-4v1h3v8.2H4.5V9.3h3v-1H3.5v10h13V9.3h.5v-1z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 5 -->
+          <article class="news-article-card">
+            <div class="hero-image-container">
+              <img src="https://picsum.photos/seed/timeline3/600/400" alt="Education News" class="hero-image" />
+            </div>
+            <div class="article-content-wrapper">
+              <h1 class="article-headline">Education Reform: New Standards Announced</h1>
+              <p class="article-subtitle">Schools to implement new curriculum next year.</p>
+              <div class="author-and-share-section">
+                <div class="author-byline-container">
+                  <div class="author-information">By <span class="author-names">Taylor Kim</span></div>
+                  <div class="publication-timestamp">08/14/2025, 11:00am est</div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="white" aria-hidden="true">
+                    <path d="M1 10.5h16.3l-5.4 5.4.6.6 6.5-6.5-6.5-6.5-.7.7 5.5 5.3H1v1z" />
+                  </svg>
+                </button>
+              </div>
+              <p class="image-attribution-credit">Lead Art: AP Images</p>
+            </div>
+            <div class="breaking-news-label" aria-label="Published 1 minute ago, Long read article">1 MIN AGO</div>
+          </article>
+          <!-- Timeline Item 6 -->
+          <div class="news-snippet-container">
+            <div class="breaking-news-timestamp">5 MIN AGO</div>
+            <div class="news-snippet-card">
+              <p class="article-quote-text">Education leaders praise new standards as "forward-thinking."</p>
+              <div class="author-and-share-container">
+                <div class="author-profile-section">
+                  <div class="author-profile-image" style="background-image: url('https://i.pravatar.cc/150?img=34');">
+                  </div>
+                  <div class="author-information-block">
+                    <p class="author-name-text">Taylor Kim</p>
+                    <p class="publication-date-text">08/14/2025, 11:05am est</p>
+                  </div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                      d="M10 1l4.5 4.5-.7.7-3.4-3.4v12.2h-1V2.6L6 5.9l-.7-.7L10 1zm6.5 7.3h-4v1h3v8.2H4.5V9.3h3v-1H3.5v10h13V9.3h.5v-1z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 7 -->
+          <div class="news-snippet-container">
+            <div class="breaking-news-timestamp">5 MIN AGO</div>
+            <div class="news-snippet-card">
+              <p class="article-quote-text">A group of the holdouts — like Reps. Roy, Gosar, Miller, Bishop, Luna,
+                Ogles
+                — meeting
+                in Emmer's office right now.</p>
+              <div class="author-and-share-container">
+                <div class="author-profile-section">
+                  <div class="author-profile-image"></div>
+                  <div class="author-information-block">
+                    <p class="author-name-text">Oliva Beavers</p>
+                    <p class="publication-date-text">02/10/2023, 1:30pm est</p>
+                  </div>
+                </div>
+                <button class="share-article-button" aria-label="Share article">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                      d="M10 1l4.5 4.5-.7.7-3.4-3.4v12.2h-1V2.6L6 5.9l-.7-.7L10 1zm6.5 7.3h-4v1h3v8.2H4.5V9.3h3v-1H3.5v10h13V9.3h.5v-1z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wireframe-box" id="tools-content" style="display: none">
+
+        <!-- Pro Upsell Section (hidden for pro users) -->
+        <div class="pro-upsell-section" id="pro-upsell-section">
+          <div class="pro-upsell-card">
+            <div class="pro-upsell-marketing">
+              <img src="img/pro-demo-visual.png" alt="POLITICO Pro Demo Visual"
+                style="width:100%;max-width:420px;border-radius:16px;margin-bottom:16px;" />
+              <h3>Not a Pro yet?</h3>
+              <p>POLITICO Pro is a smart, personalized policy intelligence platform that combines in-depth policy
+                reporting and analysis with sophisticated technology to help you stay one step ahead.</p>
+              <div class="pro-upsell-actions">
+                <button class="btn-primary" id="pro-demo-btn">Register for a Free Demo</button>
+              </div>
+              <!-- <h4>Who uses POLITICO Pro?</h4>
+              <p>POLITICO Pro is used by individuals and teams that create, influence or are impacted by policy.
+                POLITICO Pro helps you monitor developments, stay up-to-date on breaking policy news, and manage your
+                policy workflows.</p>
+              <h4>What’s the difference between POLITICO and POLITICO Pro?</h4>
+              <p>POLITICO Pro is a subscription-based policy intelligence platform owned by POLITICO. In addition to
+                policy news, the Pro platform brings together in-depth analysis, data and policy tools that empower
+                professionals on the front lines of policy.</p> -->
+              <div class="login-create-account">
+                <span>Are you a PRO yet? </span>
+                <button class="create-account-link" id="account-login-btn">Log in</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools Grid (shown for pro users) -->
+        <div class="tools-grid" id="tools-grid" style="display: none;">
+          <div class="tool-card" onclick="openTool('directories')">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.041 11.2483C16.553 11.5333 17.132 11.6943 17.758 11.6943C19.721 11.6943 21.314 10.1003 21.314 8.13732C21.314 6.18432 19.721 4.59032 17.758 4.59032C17.369 4.59032 16.999 4.65732 16.648 4.77032C17.16 5.59632 17.454 6.57232 17.454 7.60632C17.454 9.01032 16.932 10.2813 16.041 11.2483Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.24401 11.694C6.87001 11.694 7.44801 11.533 7.96101 11.248C7.06901 10.281 6.54701 9.01001 6.54701 7.60601C6.54701 6.57301 6.84101 5.59601 7.35401 4.77101C7.00301 4.65701 6.63301 4.59001 6.24401 4.59001C4.28101 4.59001 2.68701 6.18401 2.68701 8.13701C2.68701 10.101 4.28101 11.694 6.24401 11.694Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.0007 12.1185C14.4867 12.1185 16.5087 10.0965 16.5087 7.61052C16.5087 5.12552 14.4867 3.10352 12.0007 3.10352C9.51474 3.10352 7.49274 5.12552 7.49274 7.61052C7.49274 10.0965 9.51474 12.1185 12.0007 12.1185Z" />
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M23.0966 16.569C22.3666 14.283 20.4316 12.975 17.7766 12.975H17.7576C16.6756 12.965 15.7086 13.183 14.8926 13.6C17.1696 14.331 18.8576 15.953 19.6346 18.248C20.8676 18.077 21.9396 17.698 22.8876 17.119L23.2006 16.92L23.0966 16.569Z" />
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.06032 13.5816C8.26332 13.1836 7.32432 12.9746 6.26232 12.9746H6.22432C3.56932 12.9746 1.63432 14.2836 0.913316 16.5686L0.799316 16.9196L1.11232 17.1186C2.01332 17.6696 3.07632 18.0386 4.26132 18.2286C5.04832 15.9246 6.76532 14.2926 9.06032 13.5816Z" />
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.966 14.1035C11.95 14.1035 11.935 14.1035 11.92 14.1035C8.506 14.1035 6.017 15.7815 5.091 18.7105L4.979 19.0645L5.296 19.2585C7.104 20.3605 9.264 20.8965 11.899 20.8965H11.984C14.621 20.8965 16.782 20.3605 18.59 19.2585L18.908 19.0645L18.796 18.7105C17.869 15.7815 15.381 14.1035 11.966 14.1035Z" />
+              </svg>
+            </div>
+            <h4 class="tool-title">Directories</h4>
+            <p class="tool-description">Find contact information for officials and staff</p>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 25 25" fill="currentColor">
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.878662 19.9097H16.3587V5.15967H0.878662V19.9097Z" />
+                <path d="M12.4883 10.3696H7.78833V8.86963H12.4883V10.3696Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.6274 9.65043V15.1754L23.6214 19.5194V5.58643L17.6274 9.65043Z" />
+              </svg>
+            </div>
+            <h4 class="tool-title">Log a Meeting</h4>
+            <p class="tool-description">Track your meetings and interactions</p>
+          </div>
+
+          <div class="tool-card" onclick="openTool('legislation')">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 16 22" fill="currentColor">
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.5401 6.341V1.681L15.0101 6.341H10.5401ZM11.0301 0H0.0800781V19.75H16.4201V5.87L11.0301 0Z" />
+                <path d="M11.2468 15.052H4.30276V13.552H11.2468V15.052Z" />
+                <path d="M9.18476 11.269H4.30176V9.76904H9.18476V11.269Z" />
+              </svg>
+            </div>
+            <h4 class="tool-title">Legislation</h4>
+            <p class="tool-description">Track bills and legislative activity</p>
+          </div>
+
+          <div class="tool-card" onclick="openTool('calendar')">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.17505 21.8751H20.825V10.4751H3.17505V21.8751Z" />
+                <path
+                  d="M16.735 2.125V3.845H20.825V8.975H3.17505V3.845H6.76505V6.675H7.76505V2.125H9.26505V3.845H14.235V6.675H15.235V2.125H16.735Z" />
+                <path d="M8.64501 12.5952V14.0952H7.14501L7.13501 12.5952H8.64501Z" />
+                <path d="M8.64501 16.1852V17.6852H7.14501L7.13501 16.1852H8.64501Z" />
+                <path d="M12.755 17.6852V16.1852H11.245L11.255 17.6852H12.755Z" />
+                <path d="M12.755 12.5952V14.0952H11.255L11.245 12.5952H12.755Z" />
+                <path d="M16.865 17.6852V16.1852H15.355L15.365 17.6852H16.865Z" />
+                <path d="M16.865 12.5952V14.0952H15.365L15.355 12.5952H16.865Z" />
+              </svg>
+            </div>
+            <h4 class="tool-title">Calendar</h4>
+            <p class="tool-description">Stay on top of upcoming events and hearings</p>
+          </div>
+
+          <div class="tool-card" onclick="openTool('analytics')">
+            <div class="tool-icon">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2232 5.24146H10.7232C9.08523 5.24146 7.49923 5.72245 6.13723 6.63245C4.77523 7.54245 3.72423 8.82345 3.09723 10.3365C2.47023 11.8495 2.30823 13.4995 2.62823 15.1055C2.94723 16.7135 3.72823 18.1745 4.88723 19.3315C6.04423 20.4895 7.50523 21.2705 9.11223 21.5905C9.64822 21.6975 10.1882 21.7505 10.7272 21.7505C11.8032 21.7505 12.8722 21.5385 13.8812 21.1205C15.3942 20.4935 16.6762 19.4435 17.5852 18.0815C18.4952 16.7195 18.9762 15.1345 18.9762 13.4955V12.9955H11.2232V5.24146Z" />
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M19.6138 4.66676C18.0558 3.10776 15.9828 2.24976 13.7778 2.24976H13.2778V11.0028H22.0318V10.5028C22.0318 8.29876 21.1728 6.22676 19.6138 4.66676Z" />
+              </svg>
+            </div>
+            <h4 class="tool-title">Mock Tool 1</h4>
+            <p class="tool-description">Example placeholder tool for demonstration</p>
+          </div>
+
+          <div class="tool-card" onclick="openTool('settings')">
+            <div class="tool-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.7779 11.147V11.897C18.7779 15.516 15.8489 18.46 12.2489 18.46C8.64992 18.46 5.72192 15.516 5.72192 11.897V11.147H4.22192V11.897C4.22192 16.088 7.42292 19.54 11.4979 19.922V22.731H12.9979V19.922C17.0749 19.541 20.2779 16.089 20.2779 11.897V11.147H18.7779Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.96 10.1771V11.6771H16.44V11.8671C16.44 14.1871 14.56 16.0771 12.25 16.0771C9.93005 16.0771 8.05005 14.1871 8.05005 11.8671V6.69705C8.05005 4.36705 9.93005 2.47705 12.25 2.47705C14.52 2.47705 16.37 4.29705 16.43 6.56705H13.04V8.06705H16.44V10.1771H11.96Z" />
+              </svg>
+
+            </div>
+            <h4 class="tool-title">Mock Tool 2</h4>
+            <p class="tool-description">Another example placeholder for wireframing</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <nav class="app-nav">
+      <button id="news" class="active" onclick="navigate('news')">
+        <svg class="icon icon-news" width="24" height="24">
+          <use xlink:href="#icon-news"></use>
+        </svg>
+        News
+      </button>
+      <button id="newsletter" onclick="navigate('newsletter')">
+        <svg class="icon icon-mail" width="24" height="24">
+          <use xlink:href="#icon-mail"></use>
+        </svg>
+        Newsletter
+      </button>
+      <button id="foryou" onclick="navigate('foryou')">
+        <svg class="icon icon-list" width="24" height="24">
+          <use xlink:href="#icon-list"></use>
+        </svg>
+        Congress
+      </button>
+      <button id="tools" onclick="navigate('tools')">
+        <svg class="icon icon-tools" style="width: 32px;">
+          <use xlink:href="#icon-tools"></use>
+        </svg>
+        Tools
+      </button>
+      <!-- <button id="account" onclick="navigate('account')">
+        <svg class="icon icon-profile" width="24" height="24">
+          <use xlink:href="#icon-profile"></use>
+        </svg>
+        Account
+      </button> -->
+    </nav>
+  </div>
+
+  <div class="overlay" id="filterOverlay">
+    <div class="overlay-content">
+      <div class="filter-search-row">
+        <span class="search-icon">
+          <svg class="icon icon-search" width="24" height="24">
+            <use xlink:href="img/icons.svg#icon-search"></use>
+          </svg>
+        </span>
+        <input type="text" class="search-input" placeholder="Search filters..." />
+        <button class="filter-cancel-btn" onclick="toggleOverlay(false)">
+          Cancel
+        </button>
+      </div>
+
+      <div class="filter-section-group">
+        <div class="filter-section" id="filter-section-1tier">
+          <div class="filter-chips">
+            <button class="filter-chip-back" aria-label="Show all filters"></button>
+            <button class="filter-chip" data-filter="federal">Federal</button>
+            <button class="filter-chip" data-filter="state">State</button>
+            <button class="filter-chip" data-filter="local">Local</button>
+          </div>
+        </div>
+        <div class="filter-section" id="filter-section-2tier">
+          <div class="filter-chips">
+            <button class="filter-chip">Members</button>
+            <button class="filter-chip">Committees</button>
+            <button class="filter-chip">Agencies</button>
+          </div>
+        </div>
+        <div class="filter-section" id="filter-section-3tier" style="display: none;">
+          <div class="filter-chips">
+            <!-- Dynamically populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label" id="recents-label" style="display: none;">Recents</div>
+        <ul class="people-list">
+          <li class="person-suggestion" data-person-id="...">
+            <img src="https://i.pravatar.cc/150?img=23" alt="..." class="person-avatar" />
+            <div class="person-info">
+              <span class="person-name">Jane Doe</span>
+              <span class="person-role">Senator</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-overlay" id="sideOverlay">
+    <div class="side-overlay-header">
+      <button class="close-btn" onclick="backToTools()" aria-label="Back">
+        <img src="img/chevron-left - 20x20.svg" alt="Back" class="icon-md" />
+      </button>
+      <div class="side-overlay-title">Directories</div>
+    </div>
+    <div class="side-overlay-content">
+      <div class="side-overlay-search-area">
+        <img src="img/search - 20x20.svg" alt="Search" class="icon-md" style="flex-shrink: 0" />
+        <button class="search-btn search-cta-btn" aria-label="Search" onclick="toggleOverlay(true)"
+          style="margin-right: 0">
+          Search people, offices, agencies...
+        </button>
+      </div>
+      <div class="side-overlay-section">
+        <div class="side-overlay-section-header">
+          <div class="side-overlay-section-title">My Favorites</div>
+        </div>
+        <div class="carousel">
+          <!-- Favorites will be populated dynamically -->
+        </div>
+      </div>
+      <div class="side-overlay-section">
+        <div class="side-overlay-section-header">
+          <div class="side-overlay-section-title">All Directories</div>
+        </div>
+        <div class="directory-card">
+          <div class="section-header">
+            <div class="icon-12">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_777_8742)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11ZM6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                    fill="#5F6C85" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_777_8742">
+                    <rect width="12" height="12" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </div>
+            <div class="section-title">People</div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">Member Offices</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">Legislator Offices</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">Staffers</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">Executives and Directors</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-overlay-section">
+        <div class="directory-card">
+          <div class="section-header">
+            <div class="icon-12">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_777_8742)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11ZM6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                    fill="#5F6C85" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_777_8742">
+                    <rect width="12" height="12" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </div>
+            <div class="section-title">Agencies</div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">Federal Agencies</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">State Agencies</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-overlay-section">
+        <div class="directory-card">
+          <div class="section-header">
+            <div class="icon-12">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_777_8742)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11ZM6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                    fill="#5F6C85" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_777_8742">
+                    <rect width="12" height="12" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </div>
+            <div class="section-title">Committees/Subcommittees</div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">Federal</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+          <div class="divider">
+            <div class="divider-line"><svg viewBox="0 0 326 2">
+                <path d="M0 1H326" stroke="#E4E7EE" />
+              </svg></div>
+          </div>
+          <div class="directory-item">
+            <div class="item-content" onclick="toggleOverlay(true)">
+              <div class="item-left">
+                <div class="item-text-container">
+                  <div class="item-text">State</div>
+                </div>
+              </div>
+              <div class="icon-20"><svg viewBox="0 0 20 20">
+                  <path d="M8 15L13 10.0068L8 5L7 6L11 10L7 14L8 15Z" fill="#5F6C85" />
+                </svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bio-overlay" id="bioOverlay">
+    <div class="bio-overlay-header">
+      <div class="bio-header-top">
+        <button class="bio-back-btn" onclick="toggleBioOverlay(false)" aria-label="Back">
+          <img src="img/chevron-left - 20x20.svg" alt="Back" class="icon-md" />
+        </button>
+        <div class="bio-header-actions">
+          <button class="bio-header-action-btn" id="bio-favorite-btn" title="Add to favorites"
+            aria-label="Add to favorites">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.62L12 2L9.19 8.62L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
+                stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+          </button>
+          <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M14 2.5C14 1.11929 12.8807 0 11.5 0C10.1193 0 9 1.11929 9 2.5C9 2.68703 9.02054 2.86926 9.05948 3.04456L4.36312 6.33299C3.90536 5.82173 3.24025 5.5 2.5 5.5C1.11929 5.5 0 6.61929 0 8C0 9.38071 1.11929 10.5 2.5 10.5C3.16562 10.5 3.77048 10.2399 4.21847 9.81573L9.05948 13.2054C9.02054 13.3807 9 13.563 9 13.75C9 15.1307 10.1193 16.25 11.5 16.25C12.8807 16.25 14 15.1307 14 13.75C14 12.3693 12.8807 11.25 11.5 11.25C10.6694 11.25 9.93349 11.655 9.47886 12.2783L4.79314 8.99734C4.92621 8.69181 5 8.35452 5 8C5 7.72003 4.95398 7.4508 4.86909 7.19948L9.47886 3.97169C9.93349 4.59499 10.6694 5 11.5 5C12.8807 5 14 3.88071 14 2.5ZM13 2.5C13 1.67157 12.3284 1 11.5 1C10.6716 1 10 1.67157 10 2.5C10 3.32843 10.6716 4 11.5 4C12.3284 4 13 3.32843 13 2.5ZM3.76986 7.20122L3.6864 7.08203C3.41202 6.72794 2.98263 6.5 2.5 6.5C1.67157 6.5 1 7.17157 1 8C1 8.82843 1.67157 9.5 2.5 9.5C3.32843 9.5 4 8.82843 4 8C4 7.7064 3.91565 7.4325 3.76986 7.20122ZM13 13.75C13 14.5784 12.3284 15.25 11.5 15.25C10.6716 15.25 10 14.5784 10 13.75C10 12.9216 10.6716 12.25 11.5 12.25C12.3284 12.25 13 12.9216 13 13.75Z"
+              fill="#5F6C85" />
+          </svg>
+        </div>
+      </div>
+      <div class="bio-profile-card">
+        <div class="member-designation-label" id="bioMemberLabel">MEMBER</div>
+        <div class="bio-profile-content-layout">
+          <div class="bio-profile-info">
+            <h2 class="bio-profile-name-with-district" id="bioNameWithDistrict"></h2>
+            <div class="bio-profile-service-details" id="bioServiceDetails"></div>
+          </div>
+          <div class="bio-profile-image-with-token">
+            <div class="bio-profile-image" id="bioProfileImage"></div>
+            <div class="party-affiliation-token" id="bioPartyToken"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scrollable menu starts here -->
+    <div class="bio-menu" id="bioMenu">
+      <button class="bio-menu-item active" data-section="overview">
+        Contact
+      </button>
+      <button class="bio-menu-item" data-section="activity">Bio</button>
+      <button class="bio-menu-item" data-section="contacts">Activiy</button>
+
+      <button class="bio-menu-item" data-section="files">News</button>
+      <!-- Add more as needed -->
+    </div>
+    <div class="bio-overlay-content">
+      <div class="bio-sections-wrapper">
+        <div class="bio-section" id="bio-overview">
+          Activity content here.
+        </div>
+        <div class="bio-section" id="bio-activity">
+          Activity content here.
+        </div>
+        <div class="bio-section" id="bio-contacts">
+          Contacts content here.
+        </div>
+        <div class="bio-section" id="bio-notes">Notes content here.</div>
+        <div class="bio-section" id="bio-files">Files content here.</div>
+      </div>
+    </div>
+  </div>
+  <!-- Article Overlay -->
+  <div class="article-overlay" id="article-overlay" style="display: none">
+    <div class="article-header">
+      <button class="article-header-btn" id="article-back-btn" title="Back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <div class="article-header-logo">
+      </div>
+
+      <!-- Remove header actions; these are now in the bottom FAB bar -->
+    </div>
+
+    <div class="article-content">
+      <div class="article-image">
+        <img src="https://picsum.photos/seed/article1/800/400" alt="Article Main" />
+      </div>
+      <h1 class="article-headline">
+        Lorem Ipsum Dolor Sit Amet: Headline Example for Article
+      </h1>
+      <div class="article-deck">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+      </div>
+      <div class="article-meta">
+        <span class="news-card-byline">By Jane Doe & John Smith</span>
+        <span class="article-dot">•</span>
+        <span class="article-time">12m ago</span>
+      </div>
+      <div class="article-body" style="font-family: Georgia, serif">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi
+          consectetur nisi, euismod euismod nisi nisi euismod. Suspendisse
+          potenti. Etiam nec velit nec libero pretium pharetra. Mauris dictum,
+          urna eu cursus dictum, urna urna cursus urna, eu cursus urna urna eu
+          urna.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+        <div class="ad-module">
+          <div class="ad-content">
+            <div class="ad-placeholder size-300x250">Your Ad Here</div>
+          </div>
+        </div>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+        <div class="ad-module">
+          <div class="ad-content">
+            <div class="ad-placeholder size-300x250">Your Ad Here</div>
+          </div>
+        </div>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article actions FAB (bottom) -->
+    <div class="article-fab" role="toolbar" aria-label="Article actions">
+      <button class="article-fab-btn" id="article-share-btn" type="button" title="Share" aria-label="Share">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <button class="article-fab-btn" id="article-bookmark-btn" type="button" title="Bookmark" aria-label="Bookmark">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M19 21L12 16L5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21Z" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Notifications Overlay -->
+  <div class="notification-overlay" id="notification-overlay" style="display: none;">
+    <div class="notification-sheet">
+      <div class="notification-icon">
+        <svg width="40" height="40" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.2496 2.88867C8.83222 2.88867 6.06186 5.65903 6.06186 9.07645V13.657L4.44922 15.2917V17.9959H20.05V15.2917L18.4374 13.657V9.07645"
+            stroke="black" stroke-width="1.5" />
+          <path opacity="0.4"
+            d="M15.4173 17.9961V18.2221C15.4173 19.971 13.9996 21.3888 12.2507 21.3888C10.5017 21.3888 9.08398 19.971 9.08398 18.2221V17.9961"
+            stroke="black" stroke-width="1.5" />
+          <circle opacity="0.4" cx="16.5879" cy="4.96313" r="2.34473" stroke="black" stroke-width="1.5" />
+        </svg>
+      </div>
+      <h3>Stay in the Loop!</h3>
+      <p>Enable notifications to get updates, reminders, and important alerts — right when you need them.</p>
+      <div class="notification-toggles">
+        <label class="notification-toggle">
+          Push Notifications
+          <input type="checkbox" id="push-notifications-toggle" class="toggle-switch" checked />
+          <span class="slider"></span>
+        </label>
+        <label class="notification-toggle">
+          Email Notifications
+          <input type="checkbox" id="email-notifications-toggle" class="toggle-switch" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="notification-actions">
+        <button class="btn-primary" id="enable-notifications-btn">Enable</button>
+        <button class="btn-secondary" id="dismiss-notifications-btn">Maybe Later</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="skip-overlay" id="skip-overlay" style="display: none">
+    <div class="skip-overlay-content">
+      <div class="skip-overlay-header">
+        <button class="skip-dismiss-btn" id="skip-dismiss-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" />
+            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+        <div class="notification-icon">
+          <svg width="40" height="40" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.4"
+              d="M16.8793 9.69875V7.76735C16.8793 5.25435 14.8413 3.21635 12.3283 3.21635C9.8153 3.20535 7.7693 5.23335 7.7583 7.74735V7.76735V9.69875"
+              stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+            <path opacity="0.4" d="M12.1812 14.6689V16.8899" stroke="Black" stroke-width="1.5" stroke-linecap="square"
+              stroke-linejoin="round"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M19.9306 21.7163L19.9306 9.84277L4.70557 9.84277L4.70557 21.7163L19.9306 21.7163Z" stroke="Black"
+              stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <h3>Unlock More from POLITICO</h3>
+        <p>
+          Create a free account to unlock POLITICO’s biggest scoops and most impactful reporting.
+        </p>
+      </div>
+      <div class="skip-overlay-form">
+        <div class="skip-form-group">
+          <label for="skip-email">YOUR EMAIL *</label>
+          <input type="email" id="skip-email" placeholder="email@email.com" required />
+        </div>
+        <div class="skip-form-group">
+          <label for="skip-employer">YOUR EMPLOYER *</label>
+          <input type="text" id="skip-employer" placeholder="Your Employer" required />
+        </div>
+        <div class="skip-form-group">
+          <label for="skip-job-title">YOUR JOB TITLE *</label>
+          <input type="text" id="skip-job-title" placeholder="Your Job Title" required />
+        </div>
+        <div class="skip-overlay-actions">
+          <button class="btn-primary" id="skip-signup-btn">Create Account</button>
+          <div class="skip-login-section">
+            <span>Have an account? </span>
+            <button class="skip-login-link" id="skip-login-btn">Log in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Creation Screen -->
+  <div class="account-creation-screen" id="account-creation" style="display: none;">
+    <button class="btn-tertiary passwordless-back" id="account-back-btn" type="button">Back</button>
+
+    <div class="account-creation-content">
+      <div class="login-logo">
+        <img src="img/politico-logo_legacy.svg" alt="POLITICO" />
+      </div>
+
+      <div class="login-info-text">
+        <h2>Create account</h2>
+        <div>Create an account to access POLITICO.</div>
+      </div>
+
+      <div class="account-form-group">
+        <div class="input-with-icon" data-icon="mail">
+          <span class="input-icon" aria-hidden="true">
+            <svg class="icon" width="20" height="20" viewBox="0 0 21 14">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+          </span>
+          <input type="email" id="account-email" placeholder="Email *" required />
+        </div>
+      </div>
+
+      <div class="account-form-group">
+        <div class="input-with-icon" data-icon="org">
+          <span class="input-icon" aria-hidden="true">
+            <svg class="icon" width="20" height="20" viewBox="0 0 21 20">
+              <use xlink:href="#icon-list"></use>
+            </svg>
+          </span>
+          <input type="text" id="account-company" placeholder="Company/Organization" />
+        </div>
+      </div>
+
+      <div class="account-form-group">
+        <div class="input-with-icon" data-icon="job">
+          <span class="input-icon" aria-hidden="true">
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
+              <use xlink:href="#icon-user"></use>
+            </svg>
+          </span>
+          <input type="text" id="account-job-title" placeholder="Job Title" />
+        </div>
+      </div>
+
+      <div class="account-checkbox-group">
+        <label class="account-checkbox-label" for="account-terms">
+          <input type="checkbox" id="account-terms" class="chk" required />
+          <span class="chk-box" aria-hidden="true"></span>
+          <span class="account-checkbox-text">
+            I agree to the <a href="#" class="account-link">Terms of Service</a> and <a href="#"
+              class="account-link">Privacy Policy</a>
+          </span>
+        </label>
+      </div>
+
+      <button class="btn-primary account-create-btn" id="account-create-btn">Create Account</button>
+
+      <!-- Added "Have an account yet? Log in" section -->
+      <div class="login-create-account">
+        <span>Have an account yet? </span>
+        <button class="create-account-link" id="account-login-btn">Log in</button>
+      </div>
+
+    </div>
+    <div class="auth-legal">
+      <a href="#" class="account-link">Terms of Service</a> | <a href="#" class="account-link">Privacy
+        Policy</a>
+    </div>
+  </div>
+
+  <div class="prototype-screen">
+    <div class="prototype-content">
+      <h1>Prototype Disclaimer</h1>
+      <p>This is a prototype. The design is not final, and the code is not intended for production use. Please
+        proceed
+        with this understanding.</p>
+      <button id="enter-btn">Enter</button>
+    </div>
+  </div>
+
+  <div class="desktop-warning">
+    This app is optimized for mobile devices. For the best experience, please view it on a mobile screen size.
+  </div>
+
+  <div class="side-overlay hidden" id="logMeetingOverlay">
+  </div>
+
+  <!-- 3rd-party libs -->
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- App scripts -->
+  <script src="script.js?v=20251120-155731" type="module"></script>
+  <script src="js/newsletters.js?v=20251120-155731"></script>
+  <script src="js/news-content.js?v=20251120-155731"></script>
+  <script src="js/prototype.js?v=20251120-155731"></script>
+  <script src="js/log-meeting.js?v=20251120-155731"></script>
+  <script>
+    // Register service worker for PWA (no-op if unavailable)
+    const BUILD_ID = '20251120-155731'; // injected automatically by build-version.js
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker
+          .register(`sw.js?v=${BUILD_ID}`, { updateViaCache: 'none' })
+          .then(function (registration) {
+            // Prompt an immediate update check
+            if (registration?.update) registration.update();
+          })
+          .catch(function (err) {
+            console.debug('SW registration failed:', err);
+          });
+
+        // Reload when SW activates and signals clients
+        navigator.serviceWorker.addEventListener('message', function (event) {
+          if (event?.data?.type === 'SW_ACTIVATED') {
+            // Ensure the newest assets are loaded
+            window.location.reload();
+          }
+        });
+
+        // Also handle controller changes (new SW took control)
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          window.location.reload();
+        });
+      });
+    }
+  </script>
+
+</body>
+
+</html>

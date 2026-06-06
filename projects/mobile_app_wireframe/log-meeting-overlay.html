@@ -1,0 +1,839 @@
+<div class="side-overlay-header">
+    <button class="close-btn" onclick="backToTools()" aria-label="Back">
+        <img src="img/chevron-left - 20x20.svg" alt="Back" class="icon-md">
+    </button>
+    <div class="side-overlay-title">Log a Meeting</div>
+</div>
+<div class="side-overlay-content">
+    <!-- Search field -->
+    <div class="search-bar" role="search">
+        <div class="search-field">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5" fill="none"></circle>
+                <line x1="20" y1="20" x2="16.5" y2="16.5" stroke="currentColor" stroke-width="1.5"></line>
+            </svg>
+            <input type="search" id="meetingsSearch" placeholder="Search meetings" autocomplete="off"
+                aria-label="Search meetings" />
+            <button type="button" class="clear-btn" aria-label="Clear search" title="Clear">&times;</button>
+        </div>
+    </div>
+    <div class="side-overlay-section">
+        <div class="side-overlay-section-header">
+            <div class="side-overlay-section-title">Pinned Meetings</div>
+        </div>
+        <div class="meeting-logs pinned-meetings">
+            <!-- Pinned meeting cards will be dynamically populated here -->
+            <div class="empty-state" data-scope="pinned" style="display:none;">No pinned meetings yet.</div>
+        </div>
+    </div>
+    <div class="side-overlay-section">
+        <div class="side-overlay-section-header">
+            <div class="side-overlay-section-title">Recent Meetings</div>
+            <!-- <div class="section-actions">
+                <label for="recentSort" class="visually-hidden">Sort recent meetings</label>
+                <select id="recentSort" class="sort-select" aria-label="Sort recent meetings">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="rating">Highest rating</option>
+                </select>
+            </div> -->
+        </div>
+        <div class="meeting-logs recent-meetings">
+            <!-- Recent meeting cards will be dynamically populated here -->
+            <div class="empty-state" data-scope="recent" style="display:none;">No recent meetings yet.</div>
+        </div>
+    </div>
+</div>
+<button class="fab-button" aria-label="Add New Meeting Log">
+    Add
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 9.5H10.5V2H9.5V9.5H2V10.5H9.5V18H10.5V10.5H18V9.5Z"
+            fill="white" />
+    </svg>
+</button>
+
+<div id="addMeetingOverlay" class="side-overlay hidden">
+    <div class="side-overlay-header">
+        <button class="close-btn" aria-label="Close">
+            <img src="img/chevron-left - 20x20.svg" alt="Close" class="icon-md">
+        </button>
+        <div class="side-overlay-title"></div>
+        <div class="header-actions">
+            <button type="button" class="icon-btn success" id="addMeetingSaveBtn" title="Save">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.50176 14.3V1H10.5018V14.3L15.2518 9.495L16.0128 10.289L10.0018 16.3L3.99976 10.254L4.74376 9.495L9.50176 14.3Z"
+                        fill="#5F6C85" />
+                    <path d="M15.9981 19H4.00506V18H15.9981V19Z" fill="#5F6C85" />
+                </svg>
+            </button>
+            <button type="button" class="icon-btn danger" id="addMeetingDeleteBtn" title="Delete">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.0003 16.5H7.0003V7.5H6.0003V16.5Z" fill="#D71920" />
+                    <path d="M10.5003 16.5H9.5003V7.5H10.5003V16.5Z" fill="#D71920" />
+                    <path d="M14.0003 16.5H13.0003V7.5H14.0003V16.5Z" fill="#D71920" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15 3H18.5C19.328 3 20 3.671 20 4.5C20 5.329 19.328 6 18.5 6H18V17C18 18.657 16.658 20 15 20H5C3.344 20 2 18.657 2 17V6H1.5C0.672 6 0 5.329 0 4.5C0 3.671 0.672 3 1.5 3H5V2C5 0.896 5.896 0 7 0H13C14.105 0 15 0.896 15 2V3ZM18.5 4H1.5C1.224 4 1 4.224 1 4.5C1 4.776 1.224 5 1.5 5H18.5C18.776 5 19 4.776 19 4.5C19 4.224 18.776 4 18.5 4ZM15 19C16.103 19 17 18.103 17 17V6H3V17C3 18.103 3.898 19 5 19H15ZM7 1C6.449 1 6 1.449 6 2V3H14V2C14 1.449 13.552 1 13 1H7Z"
+                        fill="#D71920" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="side-overlay-content add-meeting-content">
+        <form id="add-meeting-form">
+            <input type="text" class="title-input" id="meetingTitle" name="meetingTitle" placeholder="Add Title..."
+                maxlength="120" />
+
+            <div class="details-card">
+                <div class="inline-tools" role="button" tabindex="0" aria-label="Edit meeting details">
+                    <!-- Meeting type with value -->
+                    <div class="tool-item" id="toolMeetingType" aria-label="Meeting type">
+                        <!-- Replaced generic icon with 12x12 Virtual icon so JS can swap per type -->
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <g clip-path="url(#clip0_virtual_inline_12)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 9H5.5V11H2V12H10V11H6.5V9H12V0H0V9ZM11 1H1V8H11V1Z" fill="#3C3C43"
+                                    fill-opacity="0.6" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_virtual_inline_12">
+                                    <rect width="12" height="12" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="tool-value" id="meetingTypeValue">Virtual</span>
+                    </div>
+
+                    <!-- Date with value -->
+                    <div class="tool-item" id="toolMeetingDate" aria-label="Meeting date">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.75 6C4.09518 6 4.375 5.72018 4.375 5.375C4.375 5.02982 4.09518 4.75 3.75 4.75C3.40482 4.75 3.125 5.02982 3.125 5.375C3.125 5.72018 3.40482 6 3.75 6Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M6.625 5.375C6.625 5.72018 6.34518 6 6 6C5.65482 6 5.375 5.72018 5.375 5.375C5.375 5.02982 5.65482 4.75 6 4.75C6.34518 4.75 6.625 5.02982 6.625 5.375Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M8.25 6C8.59518 6 8.875 5.72018 8.875 5.375C8.875 5.02982 8.59518 4.75 8.25 4.75C7.90482 4.75 7.625 5.02982 7.625 5.375C7.625 5.72018 7.90482 6 8.25 6Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M4.375 7.875C4.375 8.22018 4.09518 8.5 3.75 8.5C3.40482 8.5 3.125 8.22018 3.125 7.875C3.125 7.52982 3.40482 7.25 3.75 7.25C4.09518 7.25 4.375 7.52982 4.375 7.875Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M6 8.5C6.34518 8.5 6.625 8.22018 6.625 7.875C6.625 7.52982 6.34518 7.25 6 7.25C5.65482 7.25 5.375 7.52982 5.375 7.875C5.375 8.22018 5.65482 8.5 6 8.5Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.5 0H3.5V0.5H1C0.723858 0.5 0.5 0.723858 0.5 1V11C0.5 11.2761 0.723858 11.5 1 11.5H11C11.2761 11.5 11.5 11.2761 11.5 11V1C11.5 0.723858 11.2761 0.5 11 0.5H8.5V0H7.5V0.5H4.5V0ZM7.5 2.5V1.5H4.5V2.5H3.5V1.5H1.5V10.5H10.5V1.5H8.5V2.5H7.5Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+
+                        <span class="tool-value" id="meetingDateValue">Sep 30, 2025</span>
+                    </div>
+
+                    <!-- Time with value (range) -->
+                    <div class="tool-item" id="toolMeetingTime" aria-label="Meeting time">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.19951 6.0858L8.24007 8.12636L7.53296 8.83347L5.19951 6.50001L5.19951 2.75H6.19951V6.0858Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12ZM6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="tool-value" id="meetingTimeValue">10:00 AM</span>
+                    </div>
+
+                    <!-- Location display-only; edit in overlay -->
+                    <div class="tool-item" id="toolMeetingLocation" aria-label="Meeting location">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8 4C8 5.10457 7.10457 6 6 6C4.89543 6 4 5.10457 4 4C4 2.89543 4.89543 2 6 2C7.10457 2 8 2.89543 8 4ZM7 4C7 4.55228 6.55228 5 6 5C5.44772 5 5 4.55228 5 4C5 3.44772 5.44772 3 6 3C6.55228 3 7 3.44772 7 4Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10 4C10 5.66976 7.7148 9.38576 6.59891 11.1008C6.23845 11.6548 6 12 6 12C6 12 5.76155 11.6548 5.40109 11.1008C4.2852 9.38576 2 5.66976 2 4C2 1.79086 3.79086 0 6 0C8.20914 0 10 1.79086 10 4ZM9 4C9 4.32516 8.83137 4.93324 8.45946 5.77975C8.10559 6.5852 7.626 7.48024 7.135 8.32665C6.73526 9.01576 6.33455 9.66136 6 10.1845C5.66546 9.66136 5.26474 9.01576 4.865 8.32665C4.374 7.48024 3.89441 6.5852 3.54054 5.77975C3.16863 4.93324 3 4.32516 3 4C3 2.34315 4.34315 1 6 1C7.65685 1 9 2.34315 9 4Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="tool-value placeholder" id="meetingLocationValue">Add</span>
+                    </div>
+
+                    <!-- Attendees with value -->
+                    <div class="tool-item" id="toolMeetingAttendees" aria-label="Meeting attendees">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 9C12 7.5 11.3 6.2 10.1 5.4C10.7 4.9 11 4.3 11 3.5C11 2.1 9.9 1 8.5 1C7.7 1 6.9 1.4 6.5 2C6.3 2 6.2 2 6 2C5.8 2 5.7 2 5.5 2C5 1.4 4.3 1 3.5 1C2.1 1 1 2.1 1 3.5C1 4.3 1.3 4.9 1.9 5.4C0.7 6.2 0 7.5 0 9H2C1.7 9.6 1.5 10.3 1.5 11H10.5C10.5 10.3 10.3 9.6 10 9H12ZM8.5 2C9.3 2 10 2.7 10 3.5C10 4.1 9.6 4.6 9.1 4.9H9C9 3.8 8.4 2.9 7.5 2.4C7.7 2.2 8.1 2 8.5 2ZM6 3C6.4 3 6.7 3.1 7 3.3C7.6 3.6 8 4.2 8 4.9V5C8 5.3 7.9 5.6 7.8 5.9C7.8 5.9 7.8 5.9 7.8 6C7.6 6.2 7.4 6.5 7.1 6.7C6.8 6.9 6.4 7 6 7C5.6 7 5.2 6.9 4.9 6.7C4.6 6.5 4.4 6.2 4.3 6C4.3 6 4.3 6 4.3 5.9C4.1 5.6 4 5.3 4 5V4.9C4 4.2 4.4 3.6 5 3.3C5.3 3.1 5.6 3 6 3ZM3.5 2C3.9 2 4.3 2.2 4.5 2.4C3.6 2.9 3 3.8 3 4.9H2.9C2.4 4.6 2 4.1 2 3.5C2 2.7 2.7 2 3.5 2ZM1.1 8C1.4 7.1 2 6.3 2.9 5.9C3 5.9 3.1 5.9 3.2 5.9C3.3 6.2 3.5 6.5 3.6 6.7C3.7 6.9 3.8 7 3.8 7.1C3.7 7.2 3.5 7.3 3.3 7.4C3.1 7.6 2.9 7.8 2.7 8H1.1ZM2.6 10C2.7 9.6 2.9 9.3 3.1 9C3.4 8.6 3.7 8.3 4.2 8C4.4 7.9 4.6 7.8 4.8 7.7C5.2 7.9 5.6 8 6 8C6.4 8 6.8 7.9 7.2 7.7C7.4 7.8 7.6 7.9 7.8 8C8.2 8.3 8.6 8.6 8.9 9C9.1 9.3 9.3 9.6 9.4 10H2.6ZM8.7 7.4C8.5 7.3 8.3 7.2 8.2 7.1C8.2 7 8.3 6.9 8.4 6.8C8.6 6.5 8.7 6.3 8.8 6C8.9 6 9 6 9.1 6C9.9 6.4 10.6 7.2 10.9 8.1H9.3C9.1 7.8 8.9 7.6 8.7 7.4Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="tool-value" id="meetingAttendeesValue">Add</span>
+                    </div>
+
+                    <!-- Private toggle status -->
+                    <div class="tool-item" id="toolMeetingPrivate" aria-label="Private">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.4 5V3.5C9.4 1.6 7.9 0 5.9 0C3.9 0 2.4 1.6 2.4 3.5V5H1V12H11V5H9.4ZM3.4 3.5C3.4 2.1 4.6 1 5.9 1C7.2 1 8.4 2.1 8.4 3.5V5H3.4V3.5ZM10 11H2V6H10V11Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M7 8.2C7 7.6 6.6 7.2 6 7.2C5.4 7.2 5 7.6 5 8.2C5 8.5 5.2 8.8 5.5 9V9.8H6.5V9C6.8 8.8 7 8.5 7 8.2Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="tool-value" id="meetingPrivateValue">Off</span>
+                    </div>
+                </div>
+
+                <div class="note-card">
+                    <textarea id="quickNotes" name="quickNotes" placeholder="Add Notes..." data-max="100"
+                        oninput="try{scheduleAutoSave(document.getElementById('logMeetingOverlay'))}catch(e){}"
+                        onblur="try{scheduleAutoSave(document.getElementById('logMeetingOverlay'))}catch(e){}"></textarea>
+                    <div class="char-counter" data-for="quickNotes">100 Characters left</div>
+                </div>
+            </div>
+
+            <!-- Tags first -->
+            <button type="button" class="btn-add btn-add-tags" id="addTagsBtn" aria-label="Add Tags">
+                <span class="btn-icon-left" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.2708 2.2832L1.66421 11.8898L8.02817 18.2538L17.6348 8.64716V2.2832H11.2708ZM10.8566 1.2832L0.25 11.8898L8.02817 19.668L18.6348 9.06138V1.2832H10.8566ZM15.4528 4.46518C16.4291 5.44149 16.4291 7.02441 15.4528 8.00072C14.4765 8.97703 12.8936 8.97703 11.9173 8.00072C10.941 7.02441 10.941 5.44149 11.9173 4.46518C12.8936 3.48887 14.4765 3.48887 15.4528 4.46518ZM14.7457 5.17229C15.3315 5.75808 15.3315 6.70782 14.7457 7.29361C14.1599 7.8794 13.2102 7.8794 12.6244 7.29361C12.0386 6.70782 12.0386 5.75808 12.6244 5.17229C13.2102 4.5865 14.1599 4.5865 14.7457 5.17229Z"
+                            fill="#86817F" />
+                    </svg>
+
+                </span>
+                <span class="btn-label">Add Tags</span>
+                <span class="btn-icon-right" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 0.5C30.7696 0.5 39.5 9.23045 39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5Z"
+                            stroke="#0D0C0C" stroke-opacity="0.15" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.5 19.5V14.5938H19.5V19.5H14.5938V20.5H19.5V25.4062H20.5V20.5H25.4062V19.5H20.5Z"
+                            fill="black" />
+                    </svg>
+                </span>
+            </button>
+            <div class="tags-section" hidden>
+                <div class="section-header">
+                    <span class="section-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.2708 2.2832L1.66421 11.8898L8.02817 18.2538L17.6348 8.64716V2.2832H11.2708ZM10.8566 1.2832L0.25 11.8898L8.02817 19.668L18.6348 9.06138V1.2832H10.8566ZM15.4528 4.46518C16.4291 5.44149 16.4291 7.02441 15.4528 8.00072C14.4765 8.97703 12.8936 8.97703 11.9173 8.00072C10.941 7.02441 10.941 5.44149 11.9173 4.46518C12.8936 3.48887 14.4765 3.48887 15.4528 4.46518ZM14.7457 5.17229C15.3315 5.75808 15.3315 6.70782 14.7457 7.29361C14.1599 7.8794 13.2102 7.8794 12.6244 7.29361C12.0386 6.70782 12.0386 5.75808 12.6244 5.17229C13.2102 4.5865 14.1599 4.5865 14.7457 5.17229Z"
+                                fill="#86817F" />
+                        </svg>
+
+                    </span>
+                    <div class="section-title">Tags</div>
+                    <button type="button" class="btn-secondary" id="editTagsBtn" aria-label="Add Tags">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18 9.5H10.5V2H9.5V9.5H2V10.5H9.5V18H10.5V10.5H18V9.5Z" fill="#5F6C85" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="tagsList" class="tag-list" aria-live="polite"></div>
+            </div>
+
+            <!-- Follow Up second -->
+            <button type="button" class="btn-add btn-add-followup" id="addFollowUpBtn" aria-label="Add Follow Up Item">
+                <span class="btn-icon-left" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 3.06681V20.0668H17V9.06681L16 10.0668V19.0668H1V4.06681H10L11 3.06681H0ZM4.92522 15.1416L8.48068 14.1719L18.7532 3.89938C19.2666 3.24162 19.1681 2.64917 18.2929 1.77392C17.4176 0.898675 16.8252 0.800238 16.1674 1.31359L5.89489 11.5861L4.92522 15.1416ZM5 11.0668L15.5 0.566814C16.6037 -0.329472 17.7704 -0.162805 19 1.06681C20.2296 2.29643 20.3963 3.4631 19.5 4.56681L9 15.0668L3.5 16.5668L5 11.0668Z"
+                            fill="#86817F" />
+                    </svg>
+                </span>
+                <span class="btn-label">Add Follow Up Item</span>
+                <span class="btn-icon-right" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 0.5C30.7696 0.5 39.5 9.23045 39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5Z"
+                            stroke="#0D0C0C" stroke-opacity="0.15" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.5 19.5V14.5938H19.5V19.5H14.5938V20.5H19.5V25.4062H20.5V20.5H25.4062V19.5H20.5Z"
+                            fill="black" />
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Attachments third -->
+            <button type="button" class="btn-add btn-add-attachments" id="addAttachmentsBtn"
+                aria-label="Add Attachments">
+                <span class="btn-icon-left" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.966 3.54013C15.207 2.29912 17.219 2.29912 18.46 3.54013C19.701 4.78114 19.701 6.79321 18.46 8.03422L8.69673 17.7975C6.96553 19.5287 4.15869 19.5287 2.42749 17.7975C0.696288 16.0663 0.696289 13.2595 2.42749 11.5283L10.0606 3.89516L10.7677 4.60227L3.1346 12.2354C1.79392 13.5761 1.79392 15.7497 3.1346 17.0904C4.47528 18.4311 6.64894 18.4311 7.98962 17.0904L17.7529 7.32712C18.6034 6.47663 18.6034 5.09772 17.7529 4.24724C16.9025 3.39675 15.5235 3.39675 14.6731 4.24724L6.38904 12.5313C5.99607 12.9242 5.99607 13.5614 6.38904 13.9543C6.78201 14.3473 7.41914 14.3473 7.81211 13.9543L14.2026 7.5638L14.9097 8.27091L8.51921 14.6614C7.73572 15.4449 6.46542 15.4449 5.68193 14.6614C4.89843 13.8779 4.89843 12.6076 5.68193 11.8242L13.966 3.54013Z"
+                            fill="#86817F" />
+                    </svg>
+                </span>
+                <span class="btn-label">Add Attachments</span>
+                <span class="btn-icon-right" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 0.5C30.7696 0.5 39.5 9.23045 39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5Z"
+                            stroke="#0D0C0C" stroke-opacity="0.15" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.5 19.5V14.5938H19.5V19.5H14.5938V20.5H19.5V25.4062H20.5V20.5H25.4062V19.5H20.5Z"
+                            fill="black" />
+                    </svg>
+                </span>
+            </button>
+            <div class="attachments-section" hidden>
+                <div class="section-header">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.966 3.54013C15.207 2.29912 17.219 2.29912 18.46 3.54013C19.701 4.78114 19.701 6.79321 18.46 8.03422L8.69673 17.7975C6.96553 19.5287 4.15869 19.5287 2.42749 17.7975C0.696288 16.0663 0.696289 13.2595 2.42749 11.5283L10.0606 3.89516L10.7677 4.60227L3.1346 12.2354C1.79392 13.5761 1.79392 15.7497 3.1346 17.0904C4.47528 18.4311 6.64894 18.4311 7.98962 17.0904L17.7529 7.32712C18.6034 6.47663 18.6034 5.09772 17.7529 4.24724C16.9025 3.39675 15.5235 3.39675 14.6731 4.24724L6.38904 12.5313C5.99607 12.9242 5.99607 13.5614 6.38904 13.9543C6.78201 14.3473 7.41914 14.3473 7.81211 13.9543L14.2026 7.5638L14.9097 8.27091L8.51921 14.6614C7.73572 15.4449 6.46542 15.4449 5.68193 14.6614C4.89843 13.8779 4.89843 12.6076 5.68193 11.8242L13.966 3.54013Z"
+                            fill="#86817F" />
+                    </svg>
+                    </span>
+                    <div class="section-title">Attachments</div>
+                    <button type="button" class="btn-secondary" id="editAttachmentsBtn" aria-label="Add Attachments">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18 9.5H10.5V2H9.5V9.5H2V10.5H9.5V18H10.5V10.5H18V9.5Z" fill="#5F6C85" />
+                        </svg>
+                    </button>
+                </div>
+                <ul id="attachmentsList" class="attachments-list" aria-live="polite"></ul>
+            </div>
+
+            <!-- Hidden inputs to store values -->
+            <input type="hidden" id="editTags" name="tags" />
+            <input type="hidden" id="editAttachments" name="attachments" />
+
+            <div class="meta-card" id="followUpCard" hidden>
+                <div class="section-header">
+                    <span class="section-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 3.06681V20.0668H17V9.06681L16 10.0668V19.0668H1V4.06681H10L11 3.06681H0ZM4.92522 15.1416L8.48068 14.1719L18.7532 3.89938C19.2666 3.24162 19.1681 2.64917 18.2929 1.77392C17.4176 0.898675 16.8252 0.800238 16.1674 1.31359L5.89489 11.5861L4.92522 15.1416ZM5 11.0668L15.5 0.566814C16.6037 -0.329472 17.7704 -0.162805 19 1.06681C20.2296 2.29643 20.3963 3.4631 19.5 4.56681L9 15.0668L3.5 16.5668L5 11.0668Z"
+                                fill="#86817F" />
+                        </svg>
+                    </span>
+                    <div class="section-title">Follow Up item</div>
+                    <button type="button" class="tool-btn edit" aria-label="Edit meta">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8L9.99324 13L15 8L14 7L10 11L6 7L5 8Z"
+                                fill="#5F6C85" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="meta-chips">
+                    <button type="button" class="meta-chip" data-meta="priority" aria-label="Priority">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.61149 4.09385H6.38687V7.17692H5.61149V4.09385Z" fill="#3C3C43"
+                                fill-opacity="0.6" />
+                            <path d="M5.58072 8.34H6.41764V7.50308H5.58072V8.34Z" fill="#3C3C43" fill-opacity="0.6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.8456 10.125L5.99997 0L0.154297 10.125H11.8456ZM1.88635 9.125L5.99997 2L10.1136 9.125H1.88635Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="chip-value placeholder">Priority</span>
+                    </button>
+                    <button type="button" class="meta-chip" data-meta="status" aria-label="Status">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.63717 5.66109L5.00409 7.02801L8.36284 3.66925L9.14066 4.44707L5.00409 8.58364L2.85935 6.43891L3.63717 5.66109Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6ZM11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="chip-value placeholder">Status</span>
+                    </button>
+                    <button type="button" class="meta-chip" data-meta="due" aria-label="Due Date">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.75 6C4.09518 6 4.375 5.72018 4.375 5.375C4.375 5.02982 4.09518 4.75 3.75 4.75C3.40482 4.75 3.125 5.02982 3.125 5.375C3.125 5.72018 3.40482 6 3.75 6Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M6.625 5.375C6.625 5.72018 6.34518 6 6 6C5.65482 6 5.375 5.72018 5.375 5.375C5.375 5.02982 5.65482 4.75 6 4.75C6.34518 4.75 6.625 5.02982 6.625 5.375Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M8.25 6C8.59518 6 8.875 5.72018 8.875 5.375C8.875 5.02982 8.59518 4.75 8.25 4.75C7.90482 4.75 7.625 5.02982 7.625 5.375C7.625 5.72018 7.90482 6 8.25 6Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M4.375 7.875C4.375 8.22018 4.09518 8.5 3.75 8.5C3.40482 8.5 3.125 8.22018 3.125 7.875C3.125 7.52982 3.40482 7.25 3.75 7.25C4.09518 7.25 4.375 7.52982 4.375 7.875Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path
+                                d="M6 8.5C6.34518 8.5 6.625 8.22018 6.625 7.875C6.625 7.52982 6.34518 7.25 6 7.25C5.65482 7.25 5.375 7.52982 5.375 7.875C5.375 8.22018 5.65482 8.5 6 8.5Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.5 0H3.5V0.5H1C0.723858 0.5 0.5 0.723858 0.5 1V11C0.5 11.2761 0.723858 11.5 1 11.5H11C11.2761 11.5 11.5 11.2761 11.5 11V1C11.5 0.723858 11.2761 0.5 11 0.5H8.5V0H7.5V0.5H4.5V0ZM7.5 2.5V1.5H4.5V2.5H3.5V1.5H1.5V10.5H10.5V1.5H8.5V2.5H7.5Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="chip-value placeholder">Due</span>
+                    </button>
+                    <button type="button" class="meta-chip" data-meta="assigned" aria-label="Assigned To">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 9C12 7.5 11.3 6.2 10.1 5.4C10.7 4.9 11 4.3 11 3.5C11 2.1 9.9 1 8.5 1C7.7 1 6.9 1.4 6.5 2C6.3 2 6.2 2 6 2C5.8 2 5.7 2 5.5 2C5 1.4 4.3 1 3.5 1C2.1 1 1 2.1 1 3.5C1 4.3 1.3 4.9 1.9 5.4C0.7 6.2 0 7.5 0 9H2C1.7 9.6 1.5 10.3 1.5 11H10.5C10.5 10.3 10.3 9.6 10 9H12ZM8.5 2C9.3 2 10 2.7 10 3.5C10 4.1 9.6 4.6 9.1 4.9H9C9 3.8 8.4 2.9 7.5 2.4C7.7 2.2 8.1 2 8.5 2ZM6 3C6.4 3 6.7 3.1 7 3.3C7.6 3.6 8 4.2 8 4.9V5C8 5.3 7.9 5.6 7.8 5.9C7.8 5.9 7.8 5.9 7.8 6C7.6 6.2 7.4 6.5 7.1 6.7C6.8 6.9 6.4 7 6 7C5.6 7 5.2 6.9 4.9 6.7C4.6 6.5 4.4 6.2 4.3 6C4.3 6 4.3 6 4.3 5.9C4.1 5.6 4 5.3 4 5V4.9C4 4.2 4.4 3.6 5 3.3C5.3 3.1 5.6 3 6 3ZM3.5 2C3.9 2 4.3 2.2 4.5 2.4C3.6 2.9 3 3.8 3 4.9H2.9C2.4 4.6 2 4.1 2 3.5C2 2.7 2.7 2 3.5 2ZM1.1 8C1.4 7.1 2 6.3 2.9 5.9C3 5.9 3.1 5.9 3.2 5.9C3.3 6.2 3.5 6.5 3.6 6.7C3.7 6.9 3.8 7 3.8 7.1C3.7 7.2 3.5 7.3 3.3 7.4C3.1 7.6 2.9 7.8 2.7 8H1.1ZM2.6 10C2.7 9.6 2.9 9.3 3.1 9C3.4 8.6 3.7 8.3 4.2 8C4.4 7.9 4.6 7.8 4.8 7.7C5.2 7.9 5.6 8 6 8C6.4 8 6.8 7.9 7.2 7.7C7.4 7.8 7.6 7.9 7.8 8C8.2 8.3 8.6 8.6 8.9 9C9.1 9.3 9.3 9.6 9.4 10H2.6ZM8.7 7.4C8.5 7.3 8.3 7.2 8.2 7.1C8.2 7 8.3 6.9 8.4 6.8C8.6 6.5 8.7 6.3 8.8 6C8.9 6 9 6 9.1 6C9.9 6.4 10.6 7.2 10.9 8.1H9.3C9.1 7.8 8.9 7.6 8.7 7.4Z"
+                                fill="#3C3C43" fill-opacity="0.6" />
+                        </svg>
+                        <span class="chip-value placeholder">Assigned</span>
+                    </button>
+                    <span class="spacer"></span>
+                </div>
+                <div class="note-card">
+                    <textarea id="detailedNotes" name="meetingNotes" rows="4" placeholder="Add Notes..." data-max="5000"
+                        oninput="try{scheduleAutoSave(document.getElementById('logMeetingOverlay'))}catch(e){}"
+                        onblur="try{scheduleAutoSave(document.getElementById('logMeetingOverlay'))}catch(e){}"></textarea>
+                    <div class="char-counter" data-for="detailedNotes">5000 Characters left</div>
+                </div>
+            </div>
+
+            <!-- Rating section -->
+            <div class="rating-section" aria-labelledby="ratingTitle">
+                <div class="rating-title" id="ratingTitle">How would you score this meeting?</div>
+                <div class="rating-stars" role="radiogroup" aria-label="Meeting rating">
+                    <button type="button" class="rating-star" data-value="1" aria-label="1 out of 5">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21 12 17.27Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button type="button" class="rating-star" data-value="2" aria-label="2 out of 5">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21 12 17.27Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button type="button" class="rating-star" data-value="3" aria-label="3 out of 5">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21 12 17.27Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button type="button" class="rating-star" data-value="4" aria-label="4 out of 5">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21 12 17.27Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <button type="button" class="rating-star" data-value="5" aria-label="5 out of 5">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21 12 17.27Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <input type="hidden" id="meetingRatingValue" name="meetingRating" value="0" />
+                </div>
+                <div class="rating-score"><span id="ratingScoreValue">0</span> <span class="rating-score-denom">/
+                        5</span></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="edit-overlay hidden">
+    <div class="edit-overlay-content">
+        <div class="edit-overlay-header">
+            <h2>Edit Log Meeting</h2>
+            <button class="close-btn" onclick="console.log('Close button clicked');" aria-label="Close">&times;</button>
+        </div>
+        <div class="edit-overlay-body">
+            <form id="edit-log-meeting-form">
+                <input type="hidden" name="type" id="editType" />
+                <input type="hidden" name="date" id="editDate" />
+                <input type="hidden" name="startTime" id="editStart" />
+                <input type="hidden" name="endTime" id="editEnd" />
+                <input type="hidden" name="location" id="editLocation" />
+                <input type="hidden" name="attendees" id="editAttendees" />
+                <div class="edit-overlay-footer sticky-top">
+                    <button type="button" class="btn-secondary" id="cancel-edit-meeting">Cancel</button>
+                    <button type="submit" class="btn-primary" form="edit-log-meeting-form">Save</button>
+                </div>
+                <div class="ios-list">
+                    <div class="ios-list-section">
+                        <button type="button" class="ios-list-item" data-action="pick-type">
+                            <span class="item-label">Type</span>
+                            <span class="item-value" id="editTypeValue">Virtual</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <button type="button" class="ios-list-item" data-action="pick-date"
+                            aria-controls="datePickerRow" aria-expanded="false">
+                            <span class="item-label">Date</span>
+                            <span class="item-value" id="editDateValue">Sep 30, 2025</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="datePickerRow" role="region" aria-label="Pick date" hidden>
+                            <div class="dtp-calendar">
+                                <div class="dtp-month-head">
+                                    <button type="button" class="dtp-nav-btn" id="dtp-prev-month"
+                                        aria-label="Previous month">◀</button>
+                                    <div>
+                                        <div class="dtp-month-title" id="dtp-month-title"></div>
+                                        <div class="dtp-dow">
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                            <div>Sun</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dtp-nav-btn" id="dtp-next-month"
+                                        aria-label="Next month">▶</button>
+                                </div>
+                                <div id="dtp-calendar" class="dtp-grid" role="grid" aria-label="Calendar"></div>
+                            </div>
+                        </div>
+                        <button type="button" class="ios-list-item" data-action="pick-start"
+                            aria-controls="startPickerRow" aria-expanded="false">
+                            <span class="item-label">Time Start</span>
+                            <span class="item-value" id="editStartValue">10:00 AM</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="startPickerRow" role="region" aria-label="Pick start time"
+                            hidden>
+                            <div class="dtp-time" data-target="start">
+                                <div class="dtp-wheels">
+                                    <div class="dtp-wheel" data-wheel="hour">
+                                        <div class="dtp-wheel-list" id="dtp-wheel-hour-start"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-sep">:</div>
+                                    <div class="dtp-wheel" data-wheel="minute">
+                                        <div class="dtp-wheel-list" id="dtp-wheel-minute-start"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-wheel" data-wheel="ampm">
+                                        <div class="dtp-wheel-list" id="dtp-wheel-ampm-start"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="ios-list-item" data-action="pick-end" aria-controls="endPickerRow"
+                            aria-expanded="false">
+                            <span class="item-label">Time End</span>
+                            <span class="item-value" id="editEndValue">11:00 AM</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="endPickerRow" role="region" aria-label="Pick end time"
+                            hidden>
+                            <div class="dtp-time" data-target="end">
+                                <div class="dtp-wheels">
+                                    <div class="dtp-wheel" data-wheel="hour">
+                                        <div class="dtp-wheel-list" id="dtp-wheel-hour-end"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-sep">:</div>
+                                    <div class="dtp-wheel" data-wheel="minute">
+                                        <div class="dtp-wheel-list" id="dtp-wheel-minute-end"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-wheel" data-wheel="ampm">
+                                        <div class="dtp-wheel-list" id="dtp-wheel-ampm-end"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Replace clickable Location button with static label -->
+                        <div class="ios-list-item" style="cursor:default">
+                            <span class="item-label">Location</span>
+                        </div>
+                        <div class="inline-picker-row" id="locationPickerRow" role="region" aria-label="Edit location">
+                            <input type="text" id="editLocationInput" placeholder="Add location" autocomplete="off" />
+                        </div>
+                        <!-- Removed the previous button with data-action=pick-location and its placeholder span -->
+                        <button type="button" class="ios-list-item" data-action="pick-attendees">
+                            <span class="item-label">Attendees</span>
+                            <span class="item-placeholder" id="editAttendeesPlaceholder">Add</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                    </div>
+
+                    <div class="ios-list-section">
+                        <label class="ios-list-item switch-item">
+                            <span class="item-label">Private</span>
+                            <input type="checkbox" id="editPrivate" class="switch-input" />
+                            <span class="switch" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="edit-overlay meta-edit-overlay hidden">
+    <div class="edit-overlay-content">
+        <div class="edit-overlay-header">
+            <h2>Edit Meta</h2>
+            <button class="close-btn" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="edit-overlay-body">
+            <form id="edit-meta-form">
+                <input type="hidden" id="metaPriority" name="priority" />
+                <input type="hidden" id="metaStatus" name="status" />
+                <input type="hidden" id="metaDue" name="due" />
+                <input type="hidden" id="metaAssigned" name="assigned" />
+
+                <div class="ios-list">
+                    <div class="ios-list-section">
+                        <button type="button" class="ios-list-item" data-action="pick-priority">
+                            <span class="item-label">Priority</span>
+                            <span class="item-value" id="metaPriorityValue">Medium</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <button type="button" class="ios-list-item" data-action="pick-status">
+                            <span class="item-label">Status</span>
+                            <span class="item-value" id="metaStatusValue">Open</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <button type="button" class="ios-list-item" data-action="pick-due"
+                            aria-controls="metaDuePickerRow" aria-expanded="false">
+                            <span class="item-label">Due Date</span>
+                            <span class="item-placeholder" id="metaDueValue">Add</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="metaDuePickerRow" role="region" aria-label="Pick due date"
+                            hidden>
+                            <div class="dtp-calendar">
+                                <div class="dtp-month-head">
+                                    <button type="button" class="dtp-nav-btn" id="meta-dtp-prev-month"
+                                        aria-label="Previous month">◀</button>
+                                    <div>
+                                        <div class="dtp-month-title" id="meta-dtp-month-title"></div>
+                                        <div class="dtp-dow">
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                            <div>Sun</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dtp-nav-btn" id="meta-dtp-next-month"
+                                        aria-label="Next month">▶</button>
+                                </div>
+                                <div id="meta-dtp-calendar" class="dtp-grid" role="grid" aria-label="Calendar"></div>
+                            </div>
+                        </div>
+                        <button type="button" class="ios-list-item" data-action="pick-assigned">
+                            <span class="item-label">Assigned To</span>
+                            <span class="item-placeholder" id="metaAssignedValue">Add</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="edit-overlay-footer sticky-top">
+            <button type="button" class="btn-secondary" id="cancel-edit-meta">Cancel</button>
+            <button type="submit" class="btn-primary" form="edit-meta-form">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="edit-overlay tags-overlay hidden">
+    <div class="edit-overlay-content">
+        <div class="edit-overlay-header">
+            <h2>Tags</h2>
+            <button class="close-btn" aria-label="Close">&times;</button>
+        </div>
+        <div class="edit-overlay-footer sticky-top">
+            <button type="button" class="btn-secondary" id="cancel-tags">Cancel</button>
+            <button type="submit" class="btn-primary" form="edit-tags-form">Save</button>
+        </div>
+        <div class="edit-overlay-body">
+            <form id="edit-tags-form">
+                <div class="ios-list">
+                    <div class="ios-list-section">
+                        <div class="inline-picker-row" id="tagsRow"
+                            style="padding:12px 16px; display:flex; gap:8px; align-items:center;">
+                            <input type="text" id="taTagSearch" placeholder="Search or add tag"
+                                aria-label="Search or add tag" style="flex:1;" />
+                        </div>
+
+                        <!-- Recently used section (added) -->
+                        <div class="ios-list-item" style="cursor:default; border-top: 1px solid rgba(0,0,0,0.08);">
+                            <span class="item-label">Recently used</span>
+                        </div>
+                        <div class="inline-picker-row" id="tagsRecentRow" style="padding:12px 16px;">
+                            <div id="taRecentChips" class="tag-list" aria-live="polite" role="listbox"
+                                aria-multiselectable="true"></div>
+                        </div>
+
+                        <!-- All tags section -->
+                        <div class="ios-list-item" style="cursor:default; border-top: 1px solid rgba(0,0,0,0.08);">
+                            <span class="item-label">All tags</span>
+                        </div>
+                        <div class="inline-picker-row" id="tagsOptionsRow" style="padding:12px 16px;">
+                            <div id="taTagsChips" class="tag-list" aria-live="polite" role="listbox"
+                                aria-multiselectable="true"></div>
+                            <div class="helper-text" style="margin-top:8px; font-size:12px; color:rgba(0,0,0,0.6);">Tip:
+                                Click a chip to select it. Press Enter to add a new tag.</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="edit-overlay attachments-overlay hidden">
+    <div class="edit-overlay-content">
+        <div class="edit-overlay-header">
+            <h2>Attachments</h2>
+            <button class="close-btn" aria-label="Close">&times;</button>
+        </div>
+        <div class="edit-overlay-footer sticky-top">
+            <button type="button" class="btn-secondary" id="cancel-attachments">Cancel</button>
+            <button type="submit" class="btn-primary" form="edit-attachments-form">Save</button>
+        </div>
+        <div class="edit-overlay-body">
+            <form id="edit-attachments-form">
+                <div class="ios-list">
+                    <div class="ios-list-section">
+                        <div class="ios-list-item" style="cursor:default">
+                            <span class="item-label">Attachments</span>
+                        </div>
+                        <div class="inline-picker-row" style="padding:12px 16px;" id="attachmentsRow">
+                            <button type="button" id="attAddFilesBtn" class="btn-secondary" aria-label="Add files">Add
+                                files</button>
+                            <input type="file" id="attFileInput" multiple hidden aria-hidden="true" />
+                            <ul id="attFilesList" class="attachments-list" aria-live="polite" style="margin-top:8px;">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Add simplified overlay: Title, Date, Start Time, End Time, and Type -->
+<div id="quickAddOverlay" class="edit-overlay quick-add-overlay hidden">
+    <div class="edit-overlay-content">
+        <div class="edit-overlay-body">
+            <form id="quick-add-form">
+                <input type="text" class="title-input" id="qaTitle" name="qaTitle" placeholder="Add Title..."
+                    maxlength="120" />
+
+                <!-- Hidden values -->
+                <input type="hidden" id="qaDate" name="qaDate" />
+                <input type="hidden" id="qaStart" name="qaStart" />
+                <input type="hidden" id="qaEnd" name="qaEnd" />
+
+                <div class="ios-list">
+                    <div class="ios-list-section">
+                        <!-- Type -->
+                        <button type="button" class="ios-list-item" data-action="qa-pick-type">
+                            <span class="item-label">Type</span>
+                            <span class="item-value" id="qaTypeValue">Virtual</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+
+                        <!-- Date (single) with inline calendar -->
+                        <button type="button" class="ios-list-item" data-action="qa-pick-date" aria-controls="qaDateRow"
+                            aria-expanded="false">
+                            <span class="item-label">Date</span>
+                            <span class="item-value" id="qaDateValue">—</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="qaDateRow" role="region" aria-label="Pick date" hidden>
+                            <div class="dtp-calendar">
+                                <div class="dtp-month-head">
+                                    <button type="button" class="dtp-nav-btn" id="qa-dtp-prev-month"
+                                        aria-label="Previous month">◀</button>
+                                    <div>
+                                        <div class="dtp-month-title" id="qa-dtp-month-title"></div>
+                                        <div class="dtp-dow">
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                            <div>Sun</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dtp-nav-btn" id="qa-dtp-next-month"
+                                        aria-label="Next month">▶</button>
+                                </div>
+                                <div id="qa-dtp-calendar" class="dtp-grid" role="grid" aria-label="Calendar"></div>
+                            </div>
+                        </div>
+
+                        <!-- Start Time with inline time wheels -->
+                        <button type="button" class="ios-list-item" data-action="qa-pick-start"
+                            aria-controls="qaStartPickerRow" aria-expanded="false">
+                            <span class="item-label">Time Start</span>
+                            <span class="item-value" id="qaStartValue">—</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="qaStartPickerRow" role="region" aria-label="Pick start time"
+                            hidden>
+                            <div class="dtp-time" data-target="start">
+                                <div class="dtp-wheels">
+                                    <div class="dtp-wheel" data-wheel="hour">
+                                        <div class="dtp-wheel-list" id="qa-dtp-wheel-hour-start"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-sep">:</div>
+                                    <div class="dtp-wheel" data-wheel="minute">
+                                        <div class="dtp-wheel-list" id="qa-dtp-wheel-minute-start"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-wheel" data-wheel="ampm">
+                                        <div class="dtp-wheel-list" id="qa-dtp-wheel-ampm-start"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- End Time with inline time wheels -->
+                        <button type="button" class="ios-list-item" data-action="qa-pick-end"
+                            aria-controls="qaEndPickerRow" aria-expanded="false">
+                            <span class="item-label">Time End</span>
+                            <span class="item-value" id="qaEndValue">—</span>
+                            <span class="item-accessory">›</span>
+                        </button>
+                        <div class="inline-picker-row" id="qaEndPickerRow" role="region" aria-label="Pick end time"
+                            hidden>
+                            <div class="dtp-time" data-target="end">
+                                <div class="dtp-wheels">
+                                    <div class="dtp-wheel" data-wheel="hour">
+                                        <div class="dtp-wheel-list" id="qa-dtp-wheel-hour-end"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-sep">:</div>
+                                    <div class="dtp-wheel" data-wheel="minute">
+                                        <div class="dtp-wheel-list" id="qa-dtp-wheel-minute-end"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                    <div class="dtp-wheel" data-wheel="ampm">
+                                        <div class="dtp-wheel-list" id="qa-dtp-wheel-ampm-end"></div>
+                                        <div class="dtp-wheel-highlight"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="edit-overlay-footer sticky-top">
+            <button type="submit" class="btn-primary" id="quickAddContinueBtn" form="quick-add-form">Continue</button>
+        </div>
+    </div>
+</div>
+
+<!-- Removed inline <style> block; styles are now in css/log-meeting.css compiled from SCSS -->

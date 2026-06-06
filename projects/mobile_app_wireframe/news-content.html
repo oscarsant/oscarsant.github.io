@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Content</title>
+    <!-- CSS references (copy from index.html) -->
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <link rel="stylesheet" href="css/themes/pro-theme.css" />
+    <link rel="stylesheet" href="css/themes/consumer-theme.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/overlays.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/iconly@1.0.1/index.min.css" />
+    <style>
+        html,
+        body {
+            overflow: hidden !important;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing news content goes here -->
+    <div id="welcome-message" class="welcome-message"></div>
+    <div class="news-toggle">
+        <button id="top-news-btn" class="news-toggle-btn active">
+            Top News
+        </button>
+        <button id="latest-news-btn" class="news-toggle-btn">
+            Latest News
+        </button>
+    </div>
+    <div class="news-pills" id="news-pills">
+        <button class="news-pill active">All</button>
+        <button class="news-pill">Section</button>
+        <button class="news-pill">Section</button>
+        <button class="news-pill">Section</button>
+        <button class="news-pill">Section</button>
+        <button class="news-pill">Section</button>
+    </div>
+    <div class="news-feed news-feed-grid" id="top-news-feed">
+        <!-- Top News: your original cards/order, unchanged -->
+        <h3>Lorem Sectium</h3>
+        <div class="news-card">
+            <div class="news-card-image">
+                <img src="https://picsum.photos/seed/news1/600/400" alt="Breaking: Major Policy Announced" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Breaking: Major Policy Announced Affecting Millions Across the
+                    Country
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Jane Doe, John Smith & Emily Carter
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-half-width">
+            <div class="news-card-image">
+                <img src="https://picsum.photos/seed/half1/600/400" alt="Half Width" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Lawmakers Reach Historic Bipartisan Agreement on
+                    Infrastructure Funding
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Michael Johnson
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-half-width">
+            <div class="news-card-image">
+                <img src="https://picsum.photos/seed/half2/600/400" alt="Half 1" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Education Reform Bill Advances After Heated Debate in Senate
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Sarah Lee & David Patel
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-no-image">
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Policy Update: New Environmental Standards Announced for 2025
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Olivia Brown
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-no-image">
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Election Watch: Key Races to Follow This November
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Carlos Rivera, Mia Lewis & Ava Thompson
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-no-image">
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Local Governments Prepare for Upcoming Budget Hearings
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Emily Carter
+                </p>
+            </div>
+        </div>
+        <h3>Lorem Sectium</h3>
+        <div class="news-card news-card-horizontal">
+            <div class="news-card-image news-card-image-horizontal">
+                <img src="https://picsum.photos/seed/left1/600/400" alt="Image Left, Text Right" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Exclusive: Governor Outlines Vision for State’s Economic
+                    Growth
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Jackie Nguyen & William Chen
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-horizontal">
+            <div class="news-card-image news-card-image-horizontal">
+                <img src="https://picsum.photos/seed/left2/600/400" alt="Image Left, Text Right" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Health Officials Issue New Guidance Ahead of Flu Season
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Daniel Young
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-horizontal">
+            <div class="news-card-image news-card-image-horizontal">
+                <img src="https://picsum.photos/seed/left3/600/400" alt="Image Left, Text Right" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    City Council Approves Affordable Housing Initiative
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Grace Evans & Patricia Kim
+                </p>
+            </div>
+        </div>
+        <h3>Lorem Sectium</h3>
+        <div class="news-card">
+            <div class="news-card-image">
+                <img src="https://picsum.photos/seed/news3/600/400" alt="Interview: Senator Jane Doe" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Exclusive Interview: Senator Jane Doe Discusses New
+                    Legislative Agenda for 2025
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Michael Johnson
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-no-image">
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Policy Update: New Environmental Standards Announced for 2025
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Olivia Brown
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-no-image">
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Election Watch: Key Races to Follow This November
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Carlos Rivera, Mia Lewis & Ava Thompson
+                </p>
+            </div>
+        </div>
+        <div class="news-card news-card-no-image">
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Local Governments Prepare for Upcoming Budget Hearings
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Emily Carter
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="news-feed news-feed-grid" id="latest-news-feed" style="display: none">
+        <div class="news-card" data-published="2025-06-30T13:40:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">5m ago</span>
+                <img src="https://picsum.photos/seed/latest1/600/400" alt="Policy Shakeup" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    White House Announces Sweeping Policy Shakeup for 2025
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Jane Doe & Michael Johnson
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T13:20:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">25m ago</span>
+                <img src="https://picsum.photos/seed/latest2/600/400" alt="Senate Bill" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Senate Passes Landmark Bill to Expand Healthcare Access
+                    Nationwide
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Emily Carter
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T12:55:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">50m ago</span>
+                <img src="https://picsum.photos/seed/latest3/600/400" alt="Education Reform" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Education Reform Bill Advances After Heated Debate in Senate
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Sarah Lee & David Patel
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T12:30:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">1h 15m ago</span>
+                <img src="https://picsum.photos/seed/latest4/600/400" alt="Climate Action" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Climate Action: New Standards Set for Emissions Reduction
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Olivia Brown
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T12:00:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">1h 45m ago</span>
+                <img src="https://picsum.photos/seed/latest5/600/400" alt="Infrastructure" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Infrastructure Funding: Lawmakers Reach Historic Bipartisan
+                    Agreement
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Michael Johnson
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T11:30:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">2h 15m ago</span>
+                <img src="https://picsum.photos/seed/latest6/600/400" alt="Elections" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Election Watch: Key Races to Follow This November
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Carlos Rivera, Mia Lewis & Ava Thompson
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T11:00:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">3h ago</span>
+                <img src="https://picsum.photos/seed/latest7/600/400" alt="Governor Interview" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Exclusive: Governor Outlines Vision for State’s Economic
+                    Growth
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Jackie Nguyen & William Chen
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T10:30:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">3h 30m ago</span>
+                <img src="https://picsum.photos/seed/latest8/600/400" alt="Affordable Housing" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    City Council Approves Affordable Housing Initiative
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Grace Evans & Patricia Kim
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T10:00:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">4h ago</span>
+                <img src="https://picsum.photos/seed/latest9/600/400" alt="Health Guidance" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Health Officials Issue New Guidance Ahead of Flu Season
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Daniel Young
+                </p>
+            </div>
+        </div>
+        <div class="news-card" data-published="2025-06-30T09:30:00Z">
+            <div class="news-card-image">
+                <span class="news-card-time">4h 30m ago</span>
+                <img src="https://picsum.photos/seed/latest10/600/400" alt="Budget Hearings" />
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-tags"></div>
+                <h4 class="news-card-title">
+                    Local Governments Prepare for Upcoming Budget Hearings
+                </h4>
+                <p class="news-card-summary news-card-byline">
+                    By Emily Carter
+                </p>
+            </div>
+        </div>
+    </div>
+    <button id="change-images-btn" style="margin-bottom: 16px; width: 100%">
+        Change News Images
+    </button>
+    <!-- Article Overlay -->
+    <div class="article-overlay" id="article-overlay" style="display: none">
+        <div class="article-header">
+            <button class="article-header-btn" id="article-back-btn" title="Back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="article-header-logo">
+                <svg class="icon icon-tools" width="24" height="24">
+                    <use xlink:href="#icon-tools"></use>
+                </svg>
+            </div>
+
+            <!-- Remove header actions; these are now in the bottom FAB bar -->
+        </div>
+        <div class="article-content">
+            <div class="article-image">
+                <img src="https://picsum.photos/seed/article1/800/400" alt="Article Main" />
+            </div>
+            <h1 class="article-headline">
+                Lorem Ipsum Dolor Sit Amet: Headline Example for Article Overlay
+            </h1>
+            <div class="article-deck">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+            <div class="article-meta">
+                <span class="news-card-byline">By Jane Doe & John Smith</span>
+                <span class="article-dot">•</span>
+                <span class="article-time">12m ago</span>
+            </div>
+            <div class="article-body" style="font-family: Georgia, serif">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi
+                    consectetur nisi, euismod euismod nisi nisi euismod. Suspendisse
+                    potenti. Etiam nec velit nec libero pretium pharetra. Mauris dictum,
+                    urna eu cursus dictum, urna urna cursus urna, eu cursus urna urna eu
+                    urna.
+                </p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                    quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo.
+                </p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                    quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo.
+                </p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                    quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo.
+                </p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                    quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Article actions FAB (bottom) -->
+        <div class="article-fab" role="toolbar" aria-label="Article actions">
+            <button class="article-fab-btn" id="article-share-btn" type="button" title="Share" aria-label="Share">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="article-fab-btn" id="article-bookmark-btn" type="button" title="Bookmark"
+                aria-label="Bookmark">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 21L12 16L5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- If you need JS for interactivity, add it here -->
+    <script src="js/news-content.js"></script>
+    <script>
+        // window.addEventListener("DOMContentLoaded", function () {
+        //     window.parent.postMessage({
+        //         type: "resize-iframe",
+        //         height: document.body.scrollHeight
+        //     }, "*");
+        // });
+    </script>
+</body>
+
+</html>

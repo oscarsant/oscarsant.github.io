@@ -1,0 +1,12 @@
+/* Typography overrides for themes - minimal to avoid conflicts */
+
+[data-theme="pro"] h1,
+[data-theme="pro"] h2,
+[data-theme="pro"] h3,
+.theme-pro h1,
+.theme-pro h2,
+.theme-pro h3 {
+  color: inherit;
+}
+
+/* Keep minimal to avoid conflicts with existing styles */

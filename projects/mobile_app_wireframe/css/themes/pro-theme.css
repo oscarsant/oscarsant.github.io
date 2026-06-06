@@ -1,0 +1,104 @@
+/* Pro Header - Using the correct pro blue */
+[data-theme="pro"] .app-header,
+.theme-pro .app-header {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+}
+
+[data-theme="pro"] .app-header .logo-default,
+.theme-pro .app-header .logo-default {
+  display: none !important;
+}
+
+[data-theme="pro"] .app-header .logo-pro,
+.theme-pro .app-header .logo-pro {
+  display: block !important;
+}
+
+/* Article Header for Pro - Using pro blue */
+[data-theme="pro"] .article-header,
+.theme-pro .article-header {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+}
+
+[data-theme="pro"] .article-header .icon-tools,
+.theme-pro .article-header .icon-tools {
+  color: var(--pro-text-on-dark) !important;
+}
+
+[data-theme="pro"] .article-header-btn,
+.theme-pro .article-header-btn {
+  color: var(--pro-text-on-dark) !important;
+}
+
+/* Navigation active state for Pro - Using pro blue */
+[data-theme="pro"] .app-nav button.active,
+.theme-pro .app-nav button.active {
+  color: var(--pro-primary) !important;
+}
+
+/* PRO pills - Using pro blue */
+[data-theme="pro"] .news-card-tag,
+.theme-pro .news-card-tag {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+  display: inline-block !important;
+}
+
+/* Buttons - Using pro blue */
+[data-theme="pro"] .btn-primary,
+.theme-pro .btn-primary {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+  border: none !important;
+  border-radius: 32px !important;
+}
+
+/* Skip overlay buttons in pro theme */
+[data-theme="pro"] .skip-overlay .btn-primary,
+.theme-pro .skip-overlay .btn-primary {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+}
+
+/* Notification overlay buttons in pro theme */
+[data-theme="pro"] .notification-overlay .btn-primary,
+.theme-pro .notification-overlay .btn-primary {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+}
+
+/* Login success screen in pro theme */
+[data-theme="pro"] .login-success-screen,
+.theme-pro .login-success-screen {
+  background: var(--pro-primary) !important;
+}
+
+[data-theme="pro"] .login-success-screen,
+.theme-pro .login-success-screen h2 {
+  color: var(--pro-text-on-dark) !important;
+}
+
+[data-theme="pro"] .checkmark-circle,
+.theme-pro .checkmark-circle {
+  stroke: green !important;
+}
+
+[data-theme="pro"] .checkmark-check,
+.theme-pro .checkmark-check {
+  stroke: green !important;
+}
+
+/* Pro theme accent colors for interactive elements */
+[data-theme="pro"] .news-toggle-btn.active,
+.theme-pro .news-toggle-btn.active {
+  color: var(--pro-primary) !important;
+  border-bottom-color: var(--pro-primary) !important;
+}
+
+[data-theme="pro"] .news-pill.active,
+.theme-pro .news-pill.active {
+  background: var(--pro-primary) !important;
+  color: var(--pro-text-on-dark) !important;
+}

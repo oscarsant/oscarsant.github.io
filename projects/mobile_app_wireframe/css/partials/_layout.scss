@@ -1,0 +1,332 @@
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+    color: #5f6c85;
+    color: #5f6c85;
+    transition: border-color 0.2s;
+      color: #9ca3af;
+  display: flex;
+  flex-direction: row;
+  color: #5f6c85;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; // This is OK for the main container
+  display: flex;
+  flex-direction: row;
+.app-main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: center; // Center in flex column
+  justify-self: center; // Extra safety for grid/flex
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  color: #aaa;
+  display: flex;
+    color: #1a1f29;
+    transition: color 0.2s ease;
+    color: #5f6c85 !important;
+  color: #5f6c85;
+    color: #5f6c85 !important;
+  color: #5f6c85 !important;
+  color: #5f6c85 !important;
+    color: #5f6c85 !important;
+.flex-demo {
+  display: flex;
+  flex-wrap: wrap;
+.flex-item {
+  flex: 1 1 calc(50% - #{$padding-md} / 2);
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  display: flex;
+  flex-direction: row; // <-- change from column to row for horizontal layout
+    display: flex;
+    flex: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column; // <-- change from column to row for horizontal layout
+  display: flex;
+  display: flex;
+  display: flex;
+  display: flex;
+  display: flex;
+  display: flex;
+  display: flex;
+  display: flex;
+    display: flex;
+      display: flex;
+  .show-filters-arrow {
+    display: flex;
+    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex: 0 0 auto;
+  transition: background 0.2s, color 0.2s;
+// Section titles (e.g., .section-headline, .bio-menu-item)
+.section-headline,
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+.bio-sections-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+.bio-section {
+  flex-shrink: 0;
+  // Remove display: flex and align/justify if you want content to flow naturally
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  display: flex;
+  display: flex;
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  // Remove padding to prevent double-padding with .bio-section
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; // Change from center to allow content to align naturally
+    flex-shrink: 0;
+    flex: 1;
+.filter-section-group {
+  display: flex;
+  flex-direction: row;
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  flex-grow: 0;
+  color: #9cabc2;
+  display: flex;
+  display: flex;
+  flex: 1;
+  transition: background 0.2s, color 0.2s;
+.filter-search-row {
+  display: flex;
+    display: flex;
+    flex: 1;
+    transition: color 0.2s;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row; // photo left, text right
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    display: flex;
+  align-items: flex-end;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  color: #aaa;
+  display: flex;
+  display: inline-flex;
+  justify-content: flex-start;
+  display: flex;
+  color: #aaa;
+  display: flex;
+  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  color: #222b45;
+  color: #5f6c85;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  flex-direction: row;
+    display: flex;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+.news-feed-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(50% - 4px); // Always 2 per row, even on mobile
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  display: flex;
+  color: #5f6c85;
+  color: #5f6c85;
+  color: #3a4256;
+  color: #5f6c85;
+  color: #b26a00;
+  color: #7c5a00;
+  color: #fff;
+  transition: background 0.2s, color 0.2s;
+    color: #fff;
+  display: flex;
+  color: #5f6c85;
+  display: flex;
+  transition: color 0.2s;
+  display: flex;
+  transition: background 0.2s, color 0.2s;
+    color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #5f6c85;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+    flex: 1;
+    display: flex;
+      color: #1a1f29;
+    display: flex;
+  color: #1a1f29;
+  display: flex;
+  color: #1a1f29;
+  color: #5f6c85;
+  display: flex;
+  color: #a4afc5;
+  color: #a4afc5;
+  color: #222b45;
+  display: flex;
+  align-items: flex-end;
+    display: flex;
+      color: #3b82f6;
+    color: #1a1f29;
+    color: #5f6c85;
+    display: flex;
+      color: #1a1f29;
+  display: flex;
+  flex-direction: column;
+    color: #5f6c85;
+    transition: border-color 0.2s ease;
+.skip-login-section {
+  color: #5f6c85;
+  color: #666;
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+    color: #1a1f29;
+    transition: color 0.2s ease;
+    color: #5f6c85 !important;
+  color: #5f6c85;
+    color: #5f6c85;
+html[data-theme="pro"] .tools-grid,
+body.theme-pro .tools-grid,
+[data-theme="pro"] #tools-grid,
+.theme-pro #tools-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+/* Override any existing flex-demo styles */
+#tools-grid.flex-demo {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  .flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+/* Add this near your other color variables (around the top of the file) */
+  --color-text-secondary: #5f6c85;
+  --color-icon-secondary: #5f6c85;
+  color: #5f6c85 !important;
+  color: #5f6c85 !important;
+    color: #5f6c85 !important;
+  display: flex;
+    color: #1a1f29;
+    transition: color 0.2s ease;
+    color: #5f6c85;
+    color: #5f6c85;
+  .show-filters-arrow svg {
+    stroke: #5f6c85; // Already using this color - good!
+    color: #5f6c85; // Make labels secondary color too
+  color: #5f6c85 !important;
+  color: #5f6c85 !important;
+  color: #5f6c85 !important;
+  color: #A4AFC5;
+    color: #A4AFC5;
+.pro-upsell-section {
+  display: flex;
+  display: flex;
+  flex-shrink: 0;
+  flex: 1;
+    color: #1a1f29;
+    color: #5f6c85;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  display: flex;
+  flex-shrink: 0;
+  flex: 1;
+    color: #1a1f29;
+    color: #5f6c85;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+.theme-pro .pro-upsell-section,
+[data-theme="pro"] .pro-upsell-section {
+  color: #666;
+  color: #5f6c85;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  color: #1a1f29;
+  color: #5f6c85;
+  flex: 0;
+    color: #5f6c85;
+    transition: border-color 0.2s;
+      color: #9ca3af;
+  display: flex;
+  align-items: flex-start;
+    flex-shrink: 0;
+  color: #5f6c85;
+  /* Text color for initials */
+  display: flex;
+  color: #333;
+  color: #1e3a8a;
+  color: white;
