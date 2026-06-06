@@ -1209,7 +1209,12 @@
 			);
 		};
 
-		const collectMeetings = (detailed, opponentCodes, opponentNames, teamName) => {
+		const collectMeetings = (
+			detailed,
+			opponentCodes,
+			opponentNames,
+			teamName,
+		) => {
 			if (!Array.isArray(detailed)) return [];
 			const out = [];
 			detailed.forEach((entry) => {
@@ -1257,7 +1262,12 @@
 		const fromA = collectMeetings(detailedA, codesB, namesB, teamA.name);
 		const fromB = collectMeetings(detailedB, codesA, namesA, metaB.name);
 
-		const normStageKey = s => s === "W" || s === "RU" ? "FINAL" : s === "3P" || s === "4P" ? "THIRD" : (s || "");
+		const normStageKey = (s) =>
+			s === "W" || s === "RU" || s === "F" || s === "FINAL"
+				? "FINAL"
+				: s === "3P" || s === "4P"
+					? "THIRD"
+					: s || "";
 		const meetings = [...fromA, ...fromB]
 			.reduce((acc, m) => {
 				// Deduplicate: W and RU are the same final; 3P and 4P are the same third-place game
@@ -1293,9 +1303,10 @@
 			const grid = document.createElement("div");
 			grid.className = "h2h-common-grid";
 			meetings.forEach((m) => {
-				const scoreDisplay = m.score && m.opponentName
-					? `<span class="h2h-match-team">${m.teamName}</span><span class="h2h-match-score">${m.score}</span><span class="h2h-match-team">${m.opponentName}</span>`
-					: `<span class="h2h-match-team h2h-match-team--full">${m.result || m.opponentName}</span>`;
+				const scoreDisplay =
+					m.score && m.opponentName
+						? `<span class="h2h-match-team">${m.teamName}</span><span class="h2h-match-score">${m.score}</span><span class="h2h-match-team">${m.opponentName}</span>`
+						: `<span class="h2h-match-team h2h-match-team--full">${m.result || m.opponentName}</span>`;
 				grid.innerHTML += `
 					<div class="h2h-common-card">
 						<div class="h2h-common-stages">
