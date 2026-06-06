@@ -1257,12 +1257,9 @@
 
 		const meetings = [...fromA, ...fromB]
 			.reduce((acc, m) => {
-				const k = `${m.year}|${m.stage}|${m.result}|${m.date || ""}`;
-				if (
-					!acc.some(
-						(x) => `${x.year}|${x.stage}|${x.result}|${x.date || ""}` === k,
-					)
-				) {
+				// Deduplicate by year+stage: same two teams can only meet once per stage per tournament
+				const k = `${m.year}|${m.stage}`;
+				if (!acc.some((x) => `${x.year}|${x.stage}` === k)) {
 					acc.push(m);
 				}
 				return acc;
@@ -1295,12 +1292,12 @@
 			meetings.forEach((m) => {
 				grid.innerHTML += `
 					<div class="h2h-common-card">
-						<div class="h2h-common-year">${m.year}</div>
 						<div class="h2h-common-stages">
-							<span class="h2h-common-stage">${stageLabel(m.stage)}</span>
+							<span class="h2h-common-year">${m.year}</span>
 							<span class="h2h-common-sep">·</span>
-							<span class="h2h-common-stage">${m.result}</span>
+							<span class="h2h-common-stage">${stageLabel(m.stage)}</span>
 						</div>
+						<div class="h2h-match-result">${m.result}</div>
 					</div>`;
 			});
 			meetingsEl.appendChild(grid);
@@ -1324,9 +1321,10 @@
 				const bAdvanced = (stageRank[stB] || 0) > (stageRank[stA] || 0);
 				grid.innerHTML += `
 					<div class="h2h-common-card">
-						<div class="h2h-common-year">${year}</div>
 						<div class="h2h-common-stages">
 							<span class="h2h-common-stage${aAdvanced ? " h2h-common-stage--better" : ""}" style="${aAdvanced ? `color:${colorA}` : ""}">${stageLabel(stA)}</span>
+							<span class="h2h-common-sep">·</span>
+							<span class="h2h-common-year">${year}</span>
 							<span class="h2h-common-sep">·</span>
 							<span class="h2h-common-stage${bAdvanced ? " h2h-common-stage--better" : ""}" style="${bAdvanced ? `color:${colorB}` : ""}">${stageLabel(stB)}</span>
 						</div>
@@ -1347,7 +1345,6 @@
 			{ label: "Goals scored", a: teamA.gs, b: metaB.gs },
 			{ label: "Goals against", a: teamA.ga, b: metaB.ga },
 			{ label: "Win %", a: teamA.winPct + "%", b: metaB.winPct + "%" },
-			{ label: "Ranking points", a: teamA.points, b: metaB.points },
 		];
 
 		const statsEl = document.createElement("div");
@@ -1643,7 +1640,6 @@
 			container.innerHTML = `
 				<div class="cmp-header">
 					<div class="pos-filters">
-						<span class="sort-label">SORT BY</span>
 						<button class="cmp-metric-btn${activeMetric === "marketValue" ? " active" : ""}" data-metric="marketValue">Market Value</button>
 						<button class="cmp-metric-btn${activeMetric === "salaryBudget" ? " active" : ""}" data-metric="salaryBudget">Wage Bill</button>
 						<button class="cmp-metric-btn${activeMetric === "avgAge" ? " active" : ""}" data-metric="avgAge">Avg Age</button>

@@ -207,7 +207,6 @@ body.landing-body::after {
   border-radius: 1.25rem;
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -226,9 +225,9 @@ body.landing-body::after {
 .hero-subtitle {
   margin: 0;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   color: var(--muted);
 }
 
@@ -240,21 +239,20 @@ body.landing-body::after {
 
 .section-title {
   margin: 0 0 1rem;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: 2px;
+  line-height: 1.4;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-weight: 500;
   color: var(--muted);
 }
 
 .section-subtitle {
   margin: 0 0 2rem;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   color: var(--muted);
 }
 
@@ -271,11 +269,11 @@ body.landing-body::after {
 .search-input-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
-  border-radius: 0.875rem;
-  padding: 0.25rem 1rem;
+  border-radius: 0.6rem;
+  padding: 12px 16px;
   transition: all 0.3s ease;
 }
 .search-input-wrapper:focus-within {
@@ -302,9 +300,9 @@ body.landing-body::after {
   outline: none;
   color: var(--fg);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-family: inherit;
 }
 .search-input::placeholder {
@@ -312,8 +310,6 @@ body.landing-body::after {
 }
 
 .toggle-btn {
-  width: 2.5rem;
-  height: 2.5rem;
   border: none;
   background: none;
   color: var(--fg);
@@ -326,9 +322,9 @@ body.landing-body::after {
   padding: 0;
 }
 .toggle-btn .material-symbols-outlined {
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
   transition: transform 0.3s ease;
 }
 .toggle-btn.open .material-symbols-outlined {
@@ -399,17 +395,16 @@ body.landing-body::after {
 }
 .search-result-item .result-name {
   flex: 1;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 200;
   line-height: 1.2;
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  letter-spacing: 0.4px;
 }
 .search-result-item .result-meta {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--muted);
   font-weight: 400;
   white-space: nowrap;
@@ -431,9 +426,9 @@ body.landing-body::after {
   text-align: center;
   color: var(--muted);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
 }
 
 .sr-only {
@@ -455,9 +450,9 @@ body.landing-body::after {
   border: none;
   border-radius: 0;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   cursor: pointer;
   transition: color 0.2s ease;
   font-family: inherit;
@@ -492,7 +487,8 @@ body.landing-body::after {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -520,12 +516,16 @@ body.landing-body::after {
 }
 
 .viz-card {
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  background: linear-gradient(345deg, rgba(196, 181, 253, 0.09), transparent);
   border: 1px solid var(--line);
   border-radius: 0.75rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .viz-card:hover {
   background: rgba(255, 255, 255, 0.05);
@@ -541,21 +541,22 @@ body.landing-body::after {
   font-size: 24px;
   width: 24px;
   height: 24px;
+  color: var(--pastel-accent);
 }
 .viz-card h3 {
-  margin: 0 0 0.375rem;
+  margin: 0 0 0.4rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 500;
 }
 .viz-card p {
   margin: 0;
-  font-size: 0.6rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
   color: var(--muted);
 }
 
@@ -573,7 +574,6 @@ body.landing-body::after {
   text-decoration: none;
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
@@ -589,7 +589,6 @@ body.landing-body::after {
   margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, rgba(9, 9, 9, 0.75) 0%, rgba(9, 9, 9, 0.93) 28%, #090909 56%);
 }
 .teams-section .section-title {
   text-align: center;
@@ -673,10 +672,10 @@ body.landing-body::after {
 }
 .team-card-header h3 {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 200;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.4px;
   font-family: "Michroma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   white-space: nowrap;
   overflow: hidden;
@@ -726,7 +725,6 @@ body.landing-body::after {
 .stat-col .stat-label {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.5rem;
@@ -739,7 +737,6 @@ body.landing-body::after {
 .recent-form .form-label {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.5rem;
@@ -778,10 +775,10 @@ body.landing-body::after {
 }
 
 .team-meta {
-  font-size: 0.6rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
   color: var(--muted);
 }
 
@@ -795,7 +792,8 @@ body.landing-body::after {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -840,10 +838,10 @@ body.landing-body::after {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 0.5rem;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 500;
   color: var(--muted);
 }
@@ -860,10 +858,10 @@ body.landing-body::after {
   border: 1px solid var(--line);
   display: grid;
   place-items: center;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 700;
 }
 
@@ -884,18 +882,18 @@ body.landing-body::after {
   box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(12px);
   max-width: 17.5rem;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   z-index: 1000;
 }
 
 .tt-title {
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
@@ -904,7 +902,8 @@ body.landing-body::after {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -927,10 +926,10 @@ svg {
   gap: 1rem;
   flex-wrap: wrap;
   color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 500;
   justify-content: center;
 }
@@ -971,7 +970,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.6);
   display: inline-flex;
@@ -1001,7 +1001,6 @@ svg {
   margin: 0;
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -1062,7 +1061,6 @@ svg {
 .stat-item .stat-label {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -1098,10 +1096,10 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 500;
   color: var(--muted);
   text-decoration: none;
@@ -1149,11 +1147,11 @@ svg {
   border: none;
   outline: none;
   color: var(--fg);
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
-  font-weight: 500;
+  letter-spacing: 0.4px;
+  font-weight: 300;
   font-family: inherit;
   cursor: pointer;
   min-width: 0;
@@ -1342,13 +1340,13 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--muted);
 }
 .team-info-left .team-meta-row .meta-item strong {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 400;
@@ -1358,7 +1356,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 500;
   color: var(--fg);
 }
@@ -1371,10 +1370,10 @@ svg {
   border: 1px solid var(--line);
   display: grid;
   place-items: center;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 200;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--muted);
 }
@@ -1412,10 +1411,10 @@ svg {
   padding: 0.75rem 0;
   background: transparent;
   border: none;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--muted);
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1425,7 +1424,6 @@ svg {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 300;
 }
 
 .legend-dot {
@@ -1445,13 +1443,13 @@ svg {
 }
 
 .legend-label {
-  padding: 0.0625rem 0.375rem;
+  padding: 4px 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.1875rem;
-  font-size: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.4rem;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -1497,10 +1495,10 @@ svg {
 .timeline-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
 }
 .timeline-table thead tr {
   border-bottom: 1px solid var(--line);
@@ -1585,11 +1583,12 @@ svg {
 }
 .team-footer p {
   margin: 0;
-  font-size: 0.6rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
   color: var(--muted);
+  font-size: 0.5rem;
 }
 
 .tab-panel {
@@ -1625,7 +1624,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.25);
   margin-right: 0.25rem;
@@ -1643,7 +1643,6 @@ svg {
   color: rgba(255, 255, 255, 0.4);
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 500;
@@ -1684,7 +1683,7 @@ svg {
 .all-players-controls {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   margin: 1.5rem 0 1rem;
 }
 
@@ -1707,21 +1706,21 @@ svg {
   font-size: 20px;
   width: 20px;
   height: 20px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.2);
   pointer-events: none;
 }
 
 .all-players-search {
   width: 100%;
   padding: 0.625rem 1rem 0.625rem 2.5rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: none;
   border: 1px solid var(--line);
   border-radius: 0.625rem;
   color: var(--fg);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
@@ -1765,10 +1764,10 @@ svg {
   grid-column: 1/-1;
   text-align: center;
   color: var(--muted);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0;
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
   padding: 3rem 0;
 }
 
@@ -1787,7 +1786,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.22);
   font-variant-numeric: tabular-nums;
@@ -1847,10 +1847,10 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 700;
   color: var(--av-color, rgba(255, 255, 255, 0.7));
   background: color-mix(in srgb, var(--av-color, rgba(255, 255, 255, 0.5)) 18%, transparent);
@@ -1864,10 +1864,10 @@ svg {
 }
 
 .ap-name {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 200;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.4px;
   color: rgba(255, 255, 255, 0.9);
   white-space: nowrap;
   overflow: hidden;
@@ -1894,24 +1894,19 @@ svg {
 .ap-pos {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 0.5rem;
-  font-weight: 700;
-  padding: 0.125rem 0.375rem;
+  padding: 2px 4px;
   border-radius: 3px;
   flex-shrink: 0;
-  width: fit-content;
 }
 
 .ap-status {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 0.125rem 0.3125rem;
+  padding: 2px 4px;
   border-radius: 3px;
   flex-shrink: 0;
 }
@@ -1943,9 +1938,9 @@ svg {
 
 .ap-team-code {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.82);
 }
@@ -2019,7 +2014,6 @@ svg {
   right: 0;
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.5rem;
@@ -2095,7 +2089,6 @@ svg {
 .ap-number-key {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 700;
@@ -2103,10 +2096,10 @@ svg {
 }
 
 .ap-number-val {
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -2148,12 +2141,11 @@ svg {
 }
 
 .h2h-team-label {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  font-size: 16px;
   min-width: 0;
   text-align: right;
   white-space: normal;
@@ -2163,15 +2155,12 @@ svg {
 .h2h-vs {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.2);
 }
 
 .h2h-team-b .select-wrap {
-  width: 100%;
   max-width: 100%;
 }
 
@@ -2204,9 +2193,9 @@ svg {
 
 .h2h-stat-val {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--muted);
 }
@@ -2224,7 +2213,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
@@ -2236,12 +2226,11 @@ svg {
 }
 
 .h2h-common-title {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 400;
-  line-height: 1.3;
-  letter-spacing: 0.06em;
+  line-height: 1.4;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-weight: 700;
   color: var(--muted);
   margin: 0 0 0.875rem;
   display: flex;
@@ -2258,7 +2247,6 @@ svg {
   border-radius: 100px;
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 700;
@@ -2284,10 +2272,10 @@ svg {
 }
 
 .h2h-common-year {
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.45);
   min-width: 2.5rem;
@@ -2301,11 +2289,23 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .h2h-common-sep {
   color: rgba(255, 255, 255, 0.2);
+}
+
+.h2h-match-result {
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  text-align: left;
 }
 
 .h2h-common-stage {
@@ -2330,10 +2330,10 @@ svg {
 }
 .tbd-message p {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 200;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.4px;
 }
 
 .control-label {
@@ -2351,17 +2351,17 @@ svg {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: 0.75rem;
+  justify-content: center;
 }
 
 .conf-chip {
-  padding: 0.3125rem 0.75rem;
+  padding: 8px 12px;
   border-radius: 100px;
   border: 1px solid var(--line);
   background: transparent;
   color: rgba(255, 255, 255, 0.4);
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 500;
@@ -2412,9 +2412,9 @@ svg {
   text-align: center;
   padding: 3rem 0;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.6;
-  letter-spacing: 0;
+  letter-spacing: 0.4px;
 }
 
 .cmp-unavailable {
@@ -2424,10 +2424,10 @@ svg {
   border: 1px solid rgba(245, 158, 11, 0.28);
   background: rgba(245, 158, 11, 0.08);
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.6rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.6px;
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
 }
 
 .cmp-header {
@@ -2464,7 +2464,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 600;
 }
 
@@ -2511,7 +2512,6 @@ svg {
 .cmp-col-header-team {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.25);
@@ -2527,7 +2527,6 @@ svg {
   background: transparent;
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.25);
@@ -2596,7 +2595,8 @@ svg {
   font-size: 0.6rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0.6px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   line-height: 1;
   flex: 0 0 auto;
 }
@@ -2604,7 +2604,6 @@ svg {
 .cmp-bar-abbr {
   font-size: 0.5rem;
   font-weight: 400;
-  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 700;
