@@ -1226,13 +1226,12 @@
 							: false;
 						if (!byCode && !byName) return;
 
-						const resultText = m.score
-							? `${m.score} vs ${m.opponent_full || m.opponent}`
-							: m.opponent_full || m.opponent || entry.result;
 						out.push({
 							year: entry.year,
 							stage: m.stage || entry.stage,
-							result: resultText,
+							score: m.score || null,
+							teamName: teamName,
+							opponentName: m.opponent_full || m.opponent || "",
 							date: m.date || "",
 						});
 					});
