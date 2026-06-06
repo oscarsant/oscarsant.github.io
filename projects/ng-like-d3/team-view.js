@@ -1209,7 +1209,7 @@
 			);
 		};
 
-		const collectMeetings = (detailed, opponentCodes, opponentNames) => {
+		const collectMeetings = (detailed, opponentCodes, opponentNames, teamName) => {
 			if (!Array.isArray(detailed)) return [];
 			const out = [];
 			detailed.forEach((entry) => {
@@ -1245,6 +1245,9 @@
 				out.push({
 					year: entry.year,
 					stage: entry.stage,
+					score: null,
+					teamName: teamName,
+					opponentName: "",
 					result: entry.result,
 					date: "",
 				});
@@ -1252,14 +1255,15 @@
 			return out;
 		};
 
-		const fromA = collectMeetings(detailedA, codesB, namesB);
-		const fromB = collectMeetings(detailedB, codesA, namesA);
+		const fromA = collectMeetings(detailedA, codesB, namesB, teamA.name);
+		const fromB = collectMeetings(detailedB, codesA, namesA, metaB.name);
 
+		const normStageKey = s => s === "W" || s === "RU" ? "FINAL" : s === "3P" || s === "4P" ? "THIRD" : (s || "");
 		const meetings = [...fromA, ...fromB]
 			.reduce((acc, m) => {
-				// Deduplicate by year+stage: same two teams can only meet once per stage per tournament
-				const k = `${m.year}|${m.stage}`;
-				if (!acc.some((x) => `${x.year}|${x.stage}` === k)) {
+				// Deduplicate: W and RU are the same final; 3P and 4P are the same third-place game
+				const k = `${m.year}|${normStageKey(m.stage)}`;
+				if (!acc.some((x) => `${x.year}|${normStageKey(x.stage)}` === k)) {
 					acc.push(m);
 				}
 				return acc;
@@ -1290,6 +1294,9 @@
 			const grid = document.createElement("div");
 			grid.className = "h2h-common-grid";
 			meetings.forEach((m) => {
+				const scoreDisplay = m.score && m.opponentName
+					? `<span class="h2h-match-team">${m.teamName}</span><span class="h2h-match-score">${m.score}</span><span class="h2h-match-team">${m.opponentName}</span>`
+					: `<span class="h2h-match-team h2h-match-team--full">${m.result || m.opponentName}</span>`;
 				grid.innerHTML += `
 					<div class="h2h-common-card">
 						<div class="h2h-common-stages">
@@ -1297,7 +1304,7 @@
 							<span class="h2h-common-sep">·</span>
 							<span class="h2h-common-stage">${stageLabel(m.stage)}</span>
 						</div>
-						<div class="h2h-match-result">${m.result}</div>
+						<div class="h2h-match-result">${scoreDisplay}</div>
 					</div>`;
 			});
 			meetingsEl.appendChild(grid);
@@ -1321,11 +1328,9 @@
 				const bAdvanced = (stageRank[stB] || 0) > (stageRank[stA] || 0);
 				grid.innerHTML += `
 					<div class="h2h-common-card">
-						<div class="h2h-common-stages">
+						<div class="h2h-common-stages h2h-common-stages--centered">
 							<span class="h2h-common-stage${aAdvanced ? " h2h-common-stage--better" : ""}" style="${aAdvanced ? `color:${colorA}` : ""}">${stageLabel(stA)}</span>
-							<span class="h2h-common-sep">·</span>
 							<span class="h2h-common-year">${year}</span>
-							<span class="h2h-common-sep">·</span>
 							<span class="h2h-common-stage${bAdvanced ? " h2h-common-stage--better" : ""}" style="${bAdvanced ? `color:${colorB}` : ""}">${stageLabel(stB)}</span>
 						</div>
 					</div>`;

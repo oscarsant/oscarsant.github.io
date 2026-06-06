@@ -2379,25 +2379,23 @@ svg {
 .h2h-common-grid {
   display: flex;
   flex-direction: column;
-  gap: 0.375rem;
+  gap: 8px;
+  border: 1px solid var(--line);
+  padding: 16px;
+  border-radius: 12px;
 }
 
 .h2h-common-card {
   display: flex;
-  align-items: center;
-  gap: .6rem;
-  padding: 0.5rem 0.75rem;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
+  gap: 4px;
   flex-direction: column;
+  align-items: center;
 }
 
 .h2h-common-year {
   @include ts-body-sm;
   font-weight: $weight-bold;
   color: rgba(255, 255, 255, 0.45);
-  min-width: 2.5rem;
 }
 
 .h2h-common-stages {
@@ -2406,6 +2404,16 @@ svg {
   gap: 0.5rem;
   flex: 1;
   @include ts-caption;
+
+  &--centered {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.5rem;
+    width: 100%;
+
+    > :first-child { text-align: right; }
+    > :last-child { text-align: left; }
+  }
 }
 
 .h2h-common-sep {
@@ -2413,11 +2421,36 @@ svg {
 }
 
 .h2h-match-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  @include ts-body-sm;
+}
+
+.h2h-match-team {
   @include ts-body-sm;
   font-weight: $weight-medium;
-  color: rgba(255, 255, 255, 0.75);
-  width: 100%;
-  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+
+  &:first-child { text-align: right; }
+  &:last-child { text-align: left; }
+
+  &--full {
+    flex: unset;
+    text-align: center;
+  }
+}
+
+.h2h-match-score {
+  @include ts-body-sm;
+  font-weight: $weight-bold;
+  color: rgba(255, 255, 255, 0.95);
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
 }
 
 .h2h-common-stage {
