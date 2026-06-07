@@ -246,7 +246,7 @@ $weight-bold: 700;
   --panel: #111111;
   --panel-light: #1a1a1a;
   --fg: #f2f2f2;
-  --muted: #bdbdbd;
+  --muted: #9E9E9E;
   --line: #2a2a2a;
   --line2: rgba(255, 255, 255, .04);
   --accent: #ffd400;
@@ -840,6 +840,7 @@ body.landing-body::after {
   align-items: center;
   gap: 0.2rem;
   min-width: 0;
+  color: var(--muted);
 
   .stat-value {
     @include ts-display;
@@ -1565,6 +1566,27 @@ svg {
   }
 }
 
+.legend-dot-pen {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.35);
+  outline: 1.5px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 3px;
+}
+
+.legend-dot-pen {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 0.35);
+  outline: 1.5px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 3px;
+}
+
 .legend-label {
   padding: 4px 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -2245,7 +2267,7 @@ svg {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  gap: 1rem;
+  gap: .4rem;
   margin: 1.5rem 0 1.75rem;
   width: 100%;
 }
@@ -2311,11 +2333,11 @@ svg {
 
 .h2h-stat-row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  padding: 12px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.025);
 
   &:nth-child(even) {
@@ -2324,16 +2346,16 @@ svg {
 }
 
 .h2h-stat-val {
-  @include ts-body;
+  @include ts-name;
   font-weight: $weight-semibold;
   color: var(--muted);
 
   &:first-child {
-    text-align: left;
+    text-align: right;
   }
 
   &:last-child {
-    text-align: right;
+    text-align: left;
   }
 
   &.h2h-stat-leader {
@@ -2360,7 +2382,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  justify-content: center;
+  justify-content: left;
 }
 
 .h2h-common-count {
@@ -2389,13 +2411,16 @@ svg {
   flex-direction: column;
   align-items: center;
   background: rgba(255, 255, 255, 0.04);
-  padding: 16px;
+  padding: 12px;
   border-radius: 8px;
 }
 
 .h2h-common-year {
   color: var(--muted);
   @include ts-caption;
+  color: rgba(255, 255, 255, 0.3);
+
+
 }
 
 .h2h-common-stages {
@@ -2403,7 +2428,7 @@ svg {
   align-items: center;
   gap: 0.4rem;
   flex: 1;
-  @include ts-label;
+  @include ts-name;
 
   &--centered {
     display: grid;

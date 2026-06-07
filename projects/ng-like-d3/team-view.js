@@ -461,9 +461,7 @@
 							if (tournament.matches && tournament.matches.length > 0) {
 								let stageMatches = [];
 
-								if (stg.code === "W") {
-									stageMatches = [];
-								} else if (stg.code === "RU") {
+								if (stg.code === "W" || stg.code === "RU") {
 									stageMatches = tournament.matches.filter(
 										(m) => m.stage === "F",
 									);
@@ -540,10 +538,19 @@
 							)} • Did not reach</div>`;
 						}
 
-						tt.style("opacity", 1)
-							.style("left", ev.clientX + "px")
-							.style("top", ev.clientY + "px")
-							.html(tooltipContent);
+						tt.style("opacity", 1).html(tooltipContent);
+							const ttNode = tt.node();
+							const ttW = ttNode.offsetWidth || 200;
+							const ttH = ttNode.offsetHeight || 80;
+							const vw = window.innerWidth;
+							const vh = window.innerHeight;
+							const offset = 14;
+							const onRightHalf = ev.clientX > vw / 2;
+							let ttLeft = onRightHalf ? ev.clientX - ttW - offset : ev.clientX + offset;
+							let ttTop = ev.clientY + offset;
+							ttLeft = Math.max(8, Math.min(ttLeft, vw - ttW - 8));
+							ttTop = Math.max(8, Math.min(ttTop, vh - ttH - 8));
+							tt.style("left", ttLeft + "px").style("top", ttTop + "px");
 					})
 					.on("mouseleave", function (ev) {
 						ev.stopPropagation();
