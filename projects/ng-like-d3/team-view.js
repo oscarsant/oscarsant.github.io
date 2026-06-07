@@ -49,7 +49,7 @@
 		titlesEl.innerHTML = champYears
 			.map(
 				() =>
-					`<span class="material-symbols-outlined team-title-icon" aria-hidden="true">emoji_events</span>`,
+					`<img src="WC-Trophy.svg" class="team-title-icon" alt="" />`,
 			)
 			.join("");
 		titlesEl.title = champYears.join(", ");
@@ -1060,7 +1060,7 @@
 				.sort((a, b) => a - b);
 			const trophyHtml =
 				playerChampYears.length > 0
-					? `<span class="ap-trophy"><span class="material-symbols-outlined ap-trophy-icon" aria-hidden="true">emoji_events</span>${playerChampYears.map((y) => `'${String(y).slice(2)}`).join(" ")}</span>`
+					? `<span class="ap-trophy">${playerChampYears.map((y) => `<img src="WC-Trophy.svg" class="ap-trophy-icon" alt="" />`).join("")}<span class="ap-trophy-years">${playerChampYears.map((y) => `'${String(y).slice(2)}`).join(" ")}</span></span>`
 					: "";
 			return `
 			<div class="ap-card">
