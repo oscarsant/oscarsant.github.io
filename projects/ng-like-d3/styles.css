@@ -6,8 +6,7 @@
 
 body {
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: pan-x pan-y;
 }
@@ -16,8 +15,7 @@ input,
 textarea,
 [contenteditable] {
   -webkit-user-select: text;
-  -moz-user-select: text;
-       user-select: text;
+  user-select: text;
   font-size: 16px !important;
   font-weight: 400;
 }
@@ -306,9 +304,6 @@ body.landing-body::after {
   line-height: 1.6;
   letter-spacing: 0.4px;
   font-family: inherit;
-}
-.search-input::-moz-placeholder {
-  color: var(--muted);
 }
 .search-input::placeholder {
   color: var(--muted);
@@ -652,8 +647,7 @@ body.landing-body::after {
   right: 1rem;
   width: 2rem;
   height: 2rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   opacity: 0.9;
   transition: all 0.3s ease;
 }
@@ -1143,9 +1137,7 @@ svg {
   outline: none;
 }
 .select-wrap select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: transparent;
   border: none;
   outline: none;
@@ -1383,8 +1375,7 @@ svg {
 .team-info-right .team-badge-img {
   width: 3.5rem;
   height: 3.5rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 0.5rem;
   animation: fadeInBadge 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1737,9 +1728,6 @@ svg {
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
-.all-players-search::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.2);
-}
 .all-players-search::placeholder {
   color: rgba(255, 255, 255, 0.2);
 }
@@ -1783,6 +1771,12 @@ svg {
   line-height: 1.5;
   letter-spacing: 0.4px;
   padding: 3rem 0;
+}
+
+.ap-load-sentinel {
+  grid-column: 1/-1;
+  height: 1px;
+  pointer-events: none;
 }
 
 .ap-card {
@@ -1852,10 +1846,8 @@ svg {
 .ap-avatar-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
@@ -2393,9 +2385,7 @@ svg {
   font-size: 1.1rem;
   margin-right: 0.25rem;
   pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .conf-filters {
@@ -2574,9 +2564,7 @@ svg {
 }
 
 .cmp-col-header {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: 0;
   background: transparent;
   font-size: 0.5rem;
@@ -2816,8 +2804,7 @@ svg {
   display: grid;
   grid-template-columns: 80px 1fr;
   row-gap: 0.15rem;
-  -moz-column-gap: 0.6rem;
-       column-gap: 0.6rem;
+  column-gap: 0.6rem;
   align-items: center;
 }
 
@@ -2932,7 +2919,6 @@ svg {
 @media (max-width: 640px) {
   .cmp-table {
     min-width: 0;
-    width: -moz-max-content;
     width: max-content;
   }
   .cmp-expand-panel--inline {
@@ -3010,4 +2996,4 @@ svg {
     transform: translateY(0);
     opacity: 1;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

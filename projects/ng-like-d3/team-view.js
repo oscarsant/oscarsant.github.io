@@ -987,38 +987,74 @@
 			container.innerHTML = `<p class="ap-empty">No players found.</p>`;
 			return;
 		}
-		const html = list
-			.map((p, i) => {
-				const flagCode = getCountryCode(p.abbr);
-				const rank = i + 1;
-				const series = buildSeries(p);
-				const lineColor = posColors[p.pos] || "#7fb0ff";
-				const lastYear = p.years ? Math.max(...p.years) : 0;
-				const isActive = lastYear >= 2022;
-				return `
-				<div class="ap-card">
-					<div class="ap-main">
-						<div class="ap-top-row">
-							<div class="ap-header">
-								${buildAvatar(p, lineColor)}
-								<div class="ap-name-block">
-									<div class="ap-name">${buildNameHtml(p)}</div>
-									<div class="ap-badges-row">
-										<span class="ap-pos" style="color:${posColors[p.pos] || "#aaa"};background:${posColors[p.pos] || "#aaa"}18">${p.pos}</span>
-										<span class="ap-status ${isActive ? "ap-status--active" : "ap-status--retired"}">${isActive ? "Active" : "Retired"}</span>
-									</div>
+
+		const PAGE_SIZE = 24;
+		let rendered = 0;
+		if (renderPlayerCards._observer) {
+			renderPlayerCards._observer.disconnect();
+			renderPlayerCards._observer = null;
+		}
+
+		function buildCard(p) {
+			const flagCode = getCountryCode(p.abbr);
+			const series = buildSeries(p);
+			const lineColor = posColors[p.pos] || "#7fb0ff";
+			const lastYear = p.years ? Math.max(...p.years) : 0;
+			const isActive = lastYear >= 2022;
+			return `
+			<div class="ap-card">
+				<div class="ap-main">
+					<div class="ap-top-row">
+						<div class="ap-header">
+							${buildAvatar(p, lineColor)}
+							<div class="ap-name-block">
+								<div class="ap-name">${buildNameHtml(p)}</div>
+								<div class="ap-badges-row">
+									<span class="ap-pos" style="color:${posColors[p.pos] || "#aaa"};background:${posColors[p.pos] || "#aaa"}18">${p.pos}</span>
+									<span class="ap-status ${isActive ? "ap-status--active" : "ap-status--retired"}">${isActive ? "Active" : "Retired"}</span>
 								</div>
 							</div>
-							${showTeamChip ? `<div class="ap-team-chip"><span class="ap-team-code">${p.abbr}</span><span class="fi fi-${flagCode} ap-team-flag"></span></div>` : ""}
 						</div>
-						${buildMiniChart(series, lineColor)}
+						${showTeamChip ? `<div class="ap-team-chip"><span class="ap-team-code">${p.abbr}</span><span class="fi fi-${flagCode} ap-team-flag"></span></div>` : ""}
 					</div>
-				</div>`;
-			})
-			.join("");
-		container.innerHTML = html;
-	}
+					${buildMiniChart(series, lineColor)}
+				</div>
+			</div>`;
+		}
 
+		function renderBatch() {
+			const batch = list.slice(rendered, rendered + PAGE_SIZE);
+			if (!batch.length) return false;
+			const sentinel = container.querySelector('.ap-load-sentinel');
+			if (sentinel) sentinel.remove();
+			container.insertAdjacentHTML('beforeend', batch.map(buildCard).join(''));
+			rendered += batch.length;
+			if (rendered < list.length) {
+				container.insertAdjacentHTML('beforeend', '<div class="ap-load-sentinel" aria-hidden="true"></div>');
+				return true;
+			}
+			return false;
+		}
+
+		container.innerHTML = '';
+		const hasMore = renderBatch();
+		if (hasMore) {
+			const sentinel = container.querySelector('.ap-load-sentinel');
+			const obs = new IntersectionObserver((entries) => {
+				if (entries[0].isIntersecting) {
+					const more = renderBatch();
+					if (!more) { obs.disconnect(); renderPlayerCards._observer = null; }
+					else {
+						obs.unobserve(entries[0].target);
+						const next = container.querySelector('.ap-load-sentinel');
+						if (next) obs.observe(next);
+					}
+				}
+			}, { rootMargin: '400px' });
+			obs.observe(sentinel);
+			renderPlayerCards._observer = obs;
+		}
+	}
 	// All shared card utilities are now initialized — safe to activate non-timeline tabs
 	if (VALID_TABS.has(initialTabParam) && initialTabParam !== "timeline") {
 		activateTab(initialTabParam, false);
@@ -1048,6 +1084,10 @@
 		}
 
 		function draw() {
+			if (renderPlayerCards._observer) {
+				renderPlayerCards._observer.disconnect();
+				renderPlayerCards._observer = null;
+			}
 			renderPlayerCards(getFiltered(), container, { showTeamChip: false });
 		}
 
@@ -1414,7 +1454,6 @@
 		);
 
 		const container = document.getElementById("all-players-list");
-		container.innerHTML = `<p class="ap-empty">Loading player cards…</p>`;
 
 		let currentPos = "all";
 		let currentSort = "goals";
@@ -1445,7 +1484,13 @@
 		}
 
 		function draw() {
-			renderPlayerCards(getFiltered(), container, { showTeamChip: true });
+			if (renderPlayerCards._observer) {
+				renderPlayerCards._observer.disconnect();
+				renderPlayerCards._observer = null;
+			}
+			const filtered = getFiltered();
+			container.innerHTML = '';
+			renderPlayerCards(filtered, container, { showTeamChip: true });
 		}
 
 		draw();
