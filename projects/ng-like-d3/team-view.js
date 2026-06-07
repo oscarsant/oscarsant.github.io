@@ -169,11 +169,19 @@
 	const isMobile = window.innerWidth < 768;
 	const svg = container
 		.append("svg")
-		.attr("height", isMobile ? 700 : 600)
+		.attr("height", isMobile ? 700 : 700)
 		.attr("role", "img")
 		.attr("aria-label", `${team.name} World Cup timeline`);
 
 	renderChart(svg, team);
+
+	// Dismiss tooltip on touch outside a dot or on scroll (mobile)
+	document.addEventListener("touchstart", function (ev) {
+		if (!ev.target.closest("circle")) tt.style("opacity", 0);
+	}, { passive: true });
+	document.addEventListener("scroll", function () {
+		tt.style("opacity", 0);
+	}, { passive: true, capture: true });
 
 	function renderChart(svg, team) {
 		const margin = { top: 40, right: 10, bottom: 20, left: 30 };
@@ -559,6 +567,13 @@
 					.on("mouseleave", function (ev) {
 						ev.stopPropagation();
 						tt.style("opacity", 0);
+					})
+					.on("touchstart", function (ev) {
+						ev.stopPropagation();
+						const touch = ev.touches[0];
+						const syntheticEv = { clientX: touch.clientX, clientY: touch.clientY, stopPropagation: () => {} };
+						const mouseHandler = d3.select(this).on("mousemove");
+						if (mouseHandler) mouseHandler.call(this, syntheticEv);
 					});
 
 				// Add star for champions
