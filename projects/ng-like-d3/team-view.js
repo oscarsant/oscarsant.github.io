@@ -39,6 +39,21 @@
 	// Update page elements
 	document.title = `${team.name} — World Cup History`;
 	document.getElementById("team-name-title").textContent = team.name;
+	// Render championship trophies
+	const titlesEl = document.getElementById("team-titles");
+	if (titlesEl && team.titles > 0) {
+		const champYears = team.tournaments
+			.filter((t) => t.stage === "W")
+			.map((t) => t.year)
+			.sort((a, b) => a - b);
+		titlesEl.innerHTML = champYears
+			.map(
+				() =>
+					`<span class="material-symbols-outlined team-title-icon" aria-hidden="true">emoji_events</span>`,
+			)
+			.join("");
+		titlesEl.title = champYears.join(", ");
+	}
 	document.getElementById("team-rank").textContent = team.rank;
 	document.getElementById("team-points").textContent = team.points;
 	document.getElementById("team-appearances").textContent = team.appearances;
@@ -176,12 +191,20 @@
 	renderChart(svg, team);
 
 	// Dismiss tooltip on touch outside a dot or on scroll (mobile)
-	document.addEventListener("touchstart", function (ev) {
-		if (!ev.target.closest("circle")) tt.style("opacity", 0);
-	}, { passive: true });
-	document.addEventListener("scroll", function () {
-		tt.style("opacity", 0);
-	}, { passive: true, capture: true });
+	document.addEventListener(
+		"touchstart",
+		function (ev) {
+			if (!ev.target.closest("circle")) tt.style("opacity", 0);
+		},
+		{ passive: true },
+	);
+	document.addEventListener(
+		"scroll",
+		function () {
+			tt.style("opacity", 0);
+		},
+		{ passive: true, capture: true },
+	);
 
 	function renderChart(svg, team) {
 		const margin = { top: 40, right: 10, bottom: 20, left: 30 };
@@ -528,7 +551,7 @@
 												: match.result === "L"
 													? "#f87171"
 													: "#fbbf24";
-										tooltipContent += `<div style="font-size: 13px; margin: 3px 0; color: rgba(255,255,255,0.7);">`;
+										tooltipContent += `<div style="font-size: 13px; margin: 8px 0; color:">`;
 										tooltipContent += `<span style="color: ${resultColor};">${resultIcon}</span> `;
 										tooltipContent += `${match.score} vs ${match.opponent}`;
 										if (match.penalties) {
@@ -571,7 +594,11 @@
 					.on("touchstart", function (ev) {
 						ev.stopPropagation();
 						const touch = ev.touches[0];
-						const syntheticEv = { clientX: touch.clientX, clientY: touch.clientY, stopPropagation: () => {} };
+						const syntheticEv = {
+							clientX: touch.clientX,
+							clientY: touch.clientY,
+							stopPropagation: () => {},
+						};
 						const mouseHandler = d3.select(this).on("mousemove");
 						if (mouseHandler) mouseHandler.call(this, syntheticEv);
 					});
@@ -724,6 +751,16 @@
 		MF: "#93c5fd",
 		DF: "#86efac",
 		GK: "#fde68a",
+	};
+	const TEAM_CHAMPIONSHIP_YEARS = {
+		brazil: [1958, 1962, 1970, 1994, 2002],
+		germany: [1954, 1974, 1990, 2014],
+		italy: [1934, 1938, 1982, 2006],
+		argentina: [1978, 1986, 2022],
+		france: [1998, 2018],
+		uruguay: [1930, 1950],
+		england: [1966],
+		spain: [2010],
 	};
 
 	const parseNonNegative = (v) => {
@@ -1016,6 +1053,15 @@
 			const lineColor = posColors[p.pos] || "#7fb0ff";
 			const lastYear = p.years ? Math.max(...p.years) : 0;
 			const isActive = lastYear >= 2022;
+			const teamKey = p.team || teamParam;
+			const champYearsForTeam = TEAM_CHAMPIONSHIP_YEARS[teamKey] || [];
+			const playerChampYears = (p.years || [])
+				.filter((y) => champYearsForTeam.includes(y))
+				.sort((a, b) => a - b);
+			const trophyHtml =
+				playerChampYears.length > 0
+					? `<span class="ap-trophy"><span class="material-symbols-outlined ap-trophy-icon" aria-hidden="true">emoji_events</span>${playerChampYears.map((y) => `'${String(y).slice(2)}`).join(" ")}</span>`
+					: "";
 			return `
 			<div class="ap-card">
 				<div class="ap-main">
@@ -1027,6 +1073,7 @@
 								<div class="ap-badges-row">
 									<span class="ap-pos" style="color:${posColors[p.pos] || "#aaa"};background:${posColors[p.pos] || "#aaa"}18">${p.pos}</span>
 									<span class="ap-status ${isActive ? "ap-status--active" : "ap-status--retired"}">${isActive ? "Active" : "Retired"}</span>
+									${trophyHtml}
 								</div>
 							</div>
 						</div>
@@ -1040,32 +1087,40 @@
 		function renderBatch() {
 			const batch = list.slice(rendered, rendered + PAGE_SIZE);
 			if (!batch.length) return false;
-			const sentinel = container.querySelector('.ap-load-sentinel');
+			const sentinel = container.querySelector(".ap-load-sentinel");
 			if (sentinel) sentinel.remove();
-			container.insertAdjacentHTML('beforeend', batch.map(buildCard).join(''));
+			container.insertAdjacentHTML("beforeend", batch.map(buildCard).join(""));
 			rendered += batch.length;
 			if (rendered < list.length) {
-				container.insertAdjacentHTML('beforeend', '<div class="ap-load-sentinel" aria-hidden="true"></div>');
+				container.insertAdjacentHTML(
+					"beforeend",
+					'<div class="ap-load-sentinel" aria-hidden="true"></div>',
+				);
 				return true;
 			}
 			return false;
 		}
 
-		container.innerHTML = '';
+		container.innerHTML = "";
 		const hasMore = renderBatch();
 		if (hasMore) {
-			const sentinel = container.querySelector('.ap-load-sentinel');
-			const obs = new IntersectionObserver((entries) => {
-				if (entries[0].isIntersecting) {
-					const more = renderBatch();
-					if (!more) { obs.disconnect(); renderPlayerCards._observer = null; }
-					else {
-						obs.unobserve(entries[0].target);
-						const next = container.querySelector('.ap-load-sentinel');
-						if (next) obs.observe(next);
+			const sentinel = container.querySelector(".ap-load-sentinel");
+			const obs = new IntersectionObserver(
+				(entries) => {
+					if (entries[0].isIntersecting) {
+						const more = renderBatch();
+						if (!more) {
+							obs.disconnect();
+							renderPlayerCards._observer = null;
+						} else {
+							obs.unobserve(entries[0].target);
+							const next = container.querySelector(".ap-load-sentinel");
+							if (next) obs.observe(next);
+						}
 					}
-				}
-			}, { rootMargin: '400px' });
+				},
+				{ rootMargin: "400px" },
+			);
 			obs.observe(sentinel);
 			renderPlayerCards._observer = obs;
 		}
@@ -1165,7 +1220,13 @@
 			const oppMeta = teamFiles[oppKey];
 			flagBEl.innerHTML = `<span class="fi fi-${getCountryCode(oppMeta.abbr)}"></span>`;
 			const oppTournaments = await d3.json(`data/${oppKey}.json`);
-			renderH2H(team, oppMeta, oppTournaments, team.tournaments, oppTournaments);
+			renderH2H(
+				team,
+				oppMeta,
+				oppTournaments,
+				team.tournaments,
+				oppTournaments,
+			);
 		});
 	}
 
@@ -1504,7 +1565,7 @@
 				renderPlayerCards._observer = null;
 			}
 			const filtered = getFiltered();
-			container.innerHTML = '';
+			container.innerHTML = "";
 			renderPlayerCards(filtered, container, { showTeamChip: true });
 		}
 

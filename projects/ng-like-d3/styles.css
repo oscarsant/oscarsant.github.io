@@ -185,7 +185,7 @@ body.landing-body::after {
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3.75rem 1rem 5rem;
+  padding: 6rem 1rem 1rem;
 }
 @media (min-width: 640px) {
   .wrap {
@@ -1329,6 +1329,16 @@ svg {
   letter-spacing: -0.03em;
   font-family: "Michroma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
+.team-info-left .team-titles {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+.team-info-left .team-titles .team-title-icon {
+  font-size: 1.35rem;
+  color: #fde68a;
+  filter: drop-shadow(0 0 4px rgba(253, 230, 138, 0.4));
+}
 .team-info-left .team-meta-row {
   display: flex;
   gap: 1.25rem;
@@ -1925,6 +1935,24 @@ svg {
 .ap-status--retired {
   color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.ap-trophy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #fde68a;
+  background: rgba(253, 230, 138, 0.1);
+  padding: 2px 5px 2px 3px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.ap-trophy .ap-trophy-icon {
+  font-size: 0.7rem;
+  line-height: 1;
 }
 
 .ap-team-chip {
