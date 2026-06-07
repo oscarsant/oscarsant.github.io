@@ -65,7 +65,49 @@
   },
   {
     "year": 2002,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-05-31",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-06",
+        "opponent": "DNK",
+        "opponent_full": "Denmark",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-11",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "3-3",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "2002-06-16",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "2002-06-22",
+        "opponent": "TUR",
+        "opponent_full": "Turkey",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,
@@ -81,10 +123,70 @@
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-19",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-24",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-28",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2022,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-21",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-25",
+        "opponent": "QAT",
+        "opponent_full": "Qatar",
+        "score": "3-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-29",
+        "opponent": "ECU",
+        "opponent_full": "Ecuador",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2022-12-04",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   }
 ]

@@ -17,7 +17,33 @@
   },
   {
     "year": 1954,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1954-06-17",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "1-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1954-06-20",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "7-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1954-06-23",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "2-7",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1958,
@@ -65,7 +91,65 @@
   },
   {
     "year": 2002,
-    "stage": "3P"
+    "stage": "3P",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-03",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-09",
+        "opponent": "CRI",
+        "opponent_full": "Costa Rica",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-13",
+        "opponent": "CHN",
+        "opponent_full": "China",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2002-06-18",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "2002-06-22",
+        "opponent": "SEN",
+        "opponent_full": "Senegal",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "SF",
+        "date": "2002-06-26",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "3P",
+        "date": "2002-06-29",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "3-2",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2006,

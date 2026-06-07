@@ -29,7 +29,41 @@
   },
   {
     "year": 1966,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1966-07-12",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1966-07-15",
+        "opponent": "CHL",
+        "opponent_full": "Chile",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1966-07-19",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "1966-07-23",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "3-5",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1970,
@@ -73,7 +107,33 @@
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-15",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-21",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "0-7",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-25",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2014,

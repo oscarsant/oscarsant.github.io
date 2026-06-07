@@ -65,7 +65,33 @@
   },
   {
     "year": 2002,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-04",
+        "opponent": "CRI",
+        "opponent_full": "Costa Rica",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-08",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-13",
+        "opponent": "TUR",
+        "opponent_full": "Turkey",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,

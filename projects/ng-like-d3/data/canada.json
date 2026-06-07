@@ -49,7 +49,33 @@
   },
   {
     "year": 1986,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1986-06-01",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-06",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-09",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1990,
@@ -85,6 +111,32 @@
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-23",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-27",
+        "opponent": "HRV",
+        "opponent_full": "Croatia",
+        "score": "1-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-12-01",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   }
 ]

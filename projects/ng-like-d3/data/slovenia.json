@@ -65,7 +65,33 @@
   },
   {
     "year": 2002,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-02",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-08",
+        "opponent": "ZAF",
+        "opponent_full": "South Africa",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-12",
+        "opponent": "PRY",
+        "opponent_full": "Paraguay",
+        "score": "1-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,
@@ -73,7 +99,33 @@
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-13",
+        "opponent": "DZA",
+        "opponent_full": "Algeria",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-18",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-23",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2014,

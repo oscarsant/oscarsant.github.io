@@ -73,7 +73,41 @@
   },
   {
     "year": 2010,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-15",
+        "opponent": "NZL",
+        "opponent_full": "New Zealand",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-20",
+        "opponent": "PRY",
+        "opponent_full": "Paraguay",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-24",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "3-2",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2010-06-28",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2014,

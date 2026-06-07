@@ -33,7 +33,33 @@
   },
   {
     "year": 1970,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1970-06-02",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-07",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-11",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-0",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1974,

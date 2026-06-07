@@ -69,15 +69,93 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-10",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-16",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-21",
+        "opponent": "SCG",
+        "opponent_full": "Serbia and Montenegro",
+        "score": "3-2",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-15",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-20",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-25",
+        "opponent": "PRK",
+        "opponent_full": "North Korea",
+        "score": "3-0",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2014,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-14",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-19",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-24",
+        "opponent": "GRC",
+        "opponent_full": "Greece",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2018,

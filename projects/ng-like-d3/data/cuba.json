@@ -9,7 +9,33 @@
   },
   {
     "year": 1938,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1938-06-05",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "3-3",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1938-06-09",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "1938-06-12",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "0-8",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1950,

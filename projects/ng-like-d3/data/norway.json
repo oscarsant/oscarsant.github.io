@@ -9,7 +9,17 @@
   },
   {
     "year": 1938,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1938-06-05",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1950,
@@ -57,11 +67,71 @@
   },
   {
     "year": 1994,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-19",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-23",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-28",
+        "opponent": "IRL",
+        "opponent_full": "Republic of Ireland",
+        "score": "0-0",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1998,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-10",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-16",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-23",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "1998-06-27",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2002,

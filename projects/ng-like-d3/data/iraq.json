@@ -49,7 +49,33 @@
   },
   {
     "year": 1986,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1986-06-04",
+        "opponent": "PRY",
+        "opponent_full": "Paraguay",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-08",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-11",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1990,

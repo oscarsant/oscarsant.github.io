@@ -65,11 +65,71 @@
   },
   {
     "year": 2002,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-03",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-09",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-13",
+        "opponent": "HRV",
+        "opponent_full": "Croatia",
+        "score": "1-0",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2006,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-09",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-15",
+        "opponent": "CRI",
+        "opponent_full": "Costa Rica",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-20",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "R16",
+        "date": "2006-06-25",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,
@@ -77,7 +137,33 @@
   },
   {
     "year": 2014,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-15",
+        "opponent": "CHE",
+        "opponent_full": "Switzerland",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-20",
+        "opponent": "HND",
+        "opponent_full": "Honduras",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-25",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-0",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2018,
@@ -85,6 +171,32 @@
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-20",
+        "opponent": "QAT",
+        "opponent_full": "Qatar",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-25",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-29",
+        "opponent": "SEN",
+        "opponent_full": "Senegal",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   }
 ]

@@ -69,7 +69,33 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-12",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-17",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-22",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,

@@ -81,7 +81,33 @@
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-18",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-24",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-6",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-28",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2022,

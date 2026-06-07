@@ -69,7 +69,50 @@
   },
   {
     "year": 2006,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-14",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "0-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-19",
+        "opponent": "SAU",
+        "opponent_full": "Saudi Arabia",
+        "score": "4-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-23",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2006-06-26",
+        "opponent": "CHE",
+        "opponent_full": "Switzerland",
+        "score": "0-0",
+        "result": "W",
+        "penalties": "3-0"
+      },
+      {
+        "stage": "QF",
+        "date": "2006-06-30",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,

@@ -37,7 +37,57 @@
   },
   {
     "year": 1974,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1974-06-14",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1974-06-18",
+        "opponent": "CHL",
+        "opponent_full": "Chile",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1974-06-22",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "2GS",
+        "date": "1974-06-26",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1974-06-30",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1974-07-03",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "1-1",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1978,

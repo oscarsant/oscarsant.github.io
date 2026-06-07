@@ -33,7 +33,33 @@
   },
   {
     "year": 1970,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1970-06-03",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-06",
+        "opponent": "PER",
+        "opponent_full": "Peru",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-11",
+        "opponent": "BGR",
+        "opponent_full": "Bulgaria",
+        "score": "1-1",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1974,
@@ -49,7 +75,41 @@
   },
   {
     "year": 1986,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1986-06-02",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-06",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1986-06-11",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "3-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "1986-06-17",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1990,
@@ -57,11 +117,63 @@
   },
   {
     "year": 1994,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-19",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-25",
+        "opponent": "SAU",
+        "opponent_full": "Saudi Arabia",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-29",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-10",
+        "opponent": "NOR",
+        "opponent_full": "Norway",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-16",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-23",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "3-0",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2002,
@@ -81,10 +193,95 @@
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-15",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-20",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-25",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "2-2",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2022,
-    "stage": "SF"
+    "stage": "SF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-23",
+        "opponent": "HRV",
+        "opponent_full": "Croatia",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-27",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-12-01",
+        "opponent": "CAN",
+        "opponent_full": "Canada",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2022-12-06",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "0-0",
+        "result": "W",
+        "penalties": "3-0"
+      },
+      {
+        "stage": "QF",
+        "date": "2022-12-10",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "SF",
+        "date": "2022-12-14",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "3P",
+        "date": "2022-12-17",
+        "opponent": "HRV",
+        "opponent_full": "Croatia",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   }
 ]

@@ -41,7 +41,33 @@
   },
   {
     "year": 1978,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1978-06-03",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-07",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-11",
+        "opponent": "PER",
+        "opponent_full": "Peru",
+        "score": "1-4",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1982,
@@ -61,7 +87,33 @@
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-14",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-21",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-25",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2002,
@@ -69,7 +121,33 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-11",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-17",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-21",
+        "opponent": "AGO",
+        "opponent_full": "Angola",
+        "score": "1-1",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2010,
@@ -77,14 +155,92 @@
   },
   {
     "year": 2014,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-16",
+        "opponent": "NGA",
+        "opponent_full": "Nigeria",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-21",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-25",
+        "opponent": "BIH",
+        "opponent_full": "Bosnia and Herzegovina",
+        "score": "1-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-15",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-20",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-25",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "1-1",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-21",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "2-6",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-25",
+        "opponent": "WAL",
+        "opponent_full": "Wales",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-29",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   }
 ]

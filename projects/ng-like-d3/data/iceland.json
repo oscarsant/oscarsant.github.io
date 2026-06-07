@@ -81,7 +81,33 @@
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-16",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-22",
+        "opponent": "NGA",
+        "opponent_full": "Nigeria",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-26",
+        "opponent": "HRV",
+        "opponent_full": "Croatia",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2022,

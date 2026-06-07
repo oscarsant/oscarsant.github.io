@@ -41,7 +41,33 @@
   },
   {
     "year": 1978,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1978-06-02",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "3-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-06",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-10",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "0-0",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1982,
@@ -61,15 +87,93 @@
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-15",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-22",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-26",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "1-1",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2002,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-05",
+        "opponent": "RUS",
+        "opponent_full": "Russia",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-10",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-14",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-14",
+        "opponent": "SAU",
+        "opponent_full": "Saudi Arabia",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-19",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-23",
+        "opponent": "UKR",
+        "opponent_full": "Ukraine",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,
@@ -81,10 +185,62 @@
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-18",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-23",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "2-5",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-28",
+        "opponent": "PAN",
+        "opponent_full": "Panama",
+        "score": "2-1",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-22",
+        "opponent": "DNK",
+        "opponent_full": "Denmark",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-26",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-30",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "1-0",
+        "result": "W"
+      }
+    ]
   }
 ]

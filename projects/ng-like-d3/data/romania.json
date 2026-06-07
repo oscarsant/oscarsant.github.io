@@ -1,15 +1,61 @@
 [
   {
     "year": 1930,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1930-07-14",
+        "opponent": "PER",
+        "opponent_full": "Peru",
+        "score": "3-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1930-07-21",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "0-4",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1934,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1934-05-27",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1938,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1938-06-05",
+        "opponent": "CUB",
+        "opponent_full": "Cuba",
+        "score": "3-3",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1938-06-09",
+        "opponent": "CUB",
+        "opponent_full": "Cuba",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1950,
@@ -33,7 +79,33 @@
   },
   {
     "year": 1970,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1970-06-02",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-06",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-10",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "2-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1974,
@@ -53,15 +125,127 @@
   },
   {
     "year": 1990,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-09",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-14",
+        "opponent": "CMR",
+        "opponent_full": "Cameroon",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-18",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1990-06-25",
+        "opponent": "IRL",
+        "opponent_full": "Republic of Ireland",
+        "score": "0-0",
+        "result": "L",
+        "penalties": "4-5"
+      }
+    ]
   },
   {
     "year": 1994,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-18",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "3-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-22",
+        "opponent": "CHE",
+        "opponent_full": "Switzerland",
+        "score": "1-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-26",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "1994-07-03",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "3-2",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "1994-07-10",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "2-2",
+        "result": "L",
+        "penalties": "4-5"
+      }
+    ]
   },
   {
     "year": 1998,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-15",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-22",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-26",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1998-06-30",
+        "opponent": "HRV",
+        "opponent_full": "Croatia",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2002,

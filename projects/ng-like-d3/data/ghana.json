@@ -69,15 +69,118 @@
   },
   {
     "year": 2006,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-12",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-17",
+        "opponent": "CZE",
+        "opponent_full": "Czech Republic",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-22",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2006-06-27",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-13",
+        "opponent": "SRB",
+        "opponent_full": "Serbia",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-19",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-23",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "R16",
+        "date": "2010-06-26",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "2010-07-02",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "1-1",
+        "result": "L",
+        "penalties": "2-4"
+      }
+    ]
   },
   {
     "year": 2014,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-16",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-21",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-26",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2018,
@@ -85,6 +188,32 @@
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-24",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "2-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-28",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "3-2",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-12-02",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   }
 ]

@@ -33,7 +33,33 @@
   },
   {
     "year": 1970,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1970-06-03",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-07",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "0-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1970-06-10",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1974,
@@ -45,7 +71,33 @@
   },
   {
     "year": 1982,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1982-06-15",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "1-10",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-19",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-23",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1986,

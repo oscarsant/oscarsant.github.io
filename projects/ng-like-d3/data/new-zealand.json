@@ -45,7 +45,33 @@
   },
   {
     "year": 1982,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1982-06-15",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "2-5",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-19",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-23",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-4",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1986,
@@ -73,7 +99,33 @@
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-15",
+        "opponent": "SVK",
+        "opponent_full": "Slovakia",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-20",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-24",
+        "opponent": "PRY",
+        "opponent_full": "Paraguay",
+        "score": "0-0",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2014,

@@ -21,7 +21,49 @@
   },
   {
     "year": 1958,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1958-06-08",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-11",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-15",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-17",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "1958-06-19",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1962,
@@ -85,6 +127,32 @@
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-21",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-25",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-29",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   }
 ]

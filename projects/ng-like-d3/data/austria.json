@@ -5,7 +5,41 @@
   },
   {
     "year": 1934,
-    "stage": "SF"
+    "stage": "SF",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1934-05-27",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "3-2",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "1934-05-31",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "SF",
+        "date": "1934-06-03",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "3P",
+        "date": "1934-06-07",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "2-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1938,
@@ -17,11 +51,79 @@
   },
   {
     "year": 1954,
-    "stage": "3P"
+    "stage": "3P",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1954-06-16",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1954-06-19",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "5-0",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "1954-06-26",
+        "opponent": "CHE",
+        "opponent_full": "Switzerland",
+        "score": "7-5",
+        "result": "W"
+      },
+      {
+        "stage": "SF",
+        "date": "1954-06-30",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "1-6",
+        "result": "L"
+      },
+      {
+        "stage": "3P",
+        "date": "1954-07-03",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "3-1",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 1958,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1958-06-08",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-11",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1958-06-15",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "2-2",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1962,
@@ -41,11 +143,103 @@
   },
   {
     "year": 1978,
-    "stage": "2GS"
+    "stage": "2GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1978-06-03",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-07",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1978-06-11",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1978-06-14",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-5",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1978-06-18",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1978-06-21",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "3-2",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 1982,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1982-06-17",
+        "opponent": "CHL",
+        "opponent_full": "Chile",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-21",
+        "opponent": "DZA",
+        "opponent_full": "Algeria",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-25",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1982-06-28",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "2GS",
+        "date": "1982-07-01",
+        "opponent": "NIR",
+        "opponent_full": "Northern Ireland",
+        "score": "2-2",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 1986,
@@ -53,7 +247,33 @@
   },
   {
     "year": 1990,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-09",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-15",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-19",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "2-1",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 1994,
@@ -61,7 +281,33 @@
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-11",
+        "opponent": "CMR",
+        "opponent_full": "Cameroon",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-17",
+        "opponent": "CHL",
+        "opponent_full": "Chile",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-23",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2002,

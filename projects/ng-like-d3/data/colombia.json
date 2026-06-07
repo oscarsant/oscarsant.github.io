@@ -25,7 +25,33 @@
   },
   {
     "year": 1962,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1962-05-30",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1962-06-03",
+        "opponent": "SUN",
+        "opponent_full": "Soviet Union",
+        "score": "4-4",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1962-06-07",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "0-5",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1966,
@@ -53,15 +79,101 @@
   },
   {
     "year": 1990,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-09",
+        "opponent": "ARE",
+        "opponent_full": "United Arab Emirates",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-14",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-19",
+        "opponent": "DEU",
+        "opponent_full": "West Germany",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1990-06-23",
+        "opponent": "CMR",
+        "opponent_full": "Cameroon",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1994,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-18",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-22",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-26",
+        "opponent": "CHE",
+        "opponent_full": "Switzerland",
+        "score": "2-0",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-15",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-22",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-26",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2002,
@@ -77,11 +189,88 @@
   },
   {
     "year": 2014,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-14",
+        "opponent": "GRC",
+        "opponent_full": "Greece",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-19",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-24",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "4-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2014-06-28",
+        "opponent": "URY",
+        "opponent_full": "Uruguay",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "2014-07-04",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2018,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-19",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-24",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-28",
+        "opponent": "SEN",
+        "opponent_full": "Senegal",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2018-07-03",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-1",
+        "result": "L",
+        "penalties": "3-4"
+      }
+    ]
   },
   {
     "year": 2022,

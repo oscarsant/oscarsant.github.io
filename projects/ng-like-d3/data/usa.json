@@ -1,11 +1,47 @@
 [
   {
     "year": 1930,
-    "stage": "SF"
+    "stage": "SF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1930-07-13",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1930-07-17",
+        "opponent": "PRY",
+        "opponent_full": "Paraguay",
+        "score": "3-0",
+        "result": "W"
+      },
+      {
+        "stage": "SF",
+        "date": "1930-07-26",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "1-6",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1934,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1934-05-27",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-7",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1938,
@@ -13,7 +49,33 @@
   },
   {
     "year": 1950,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1950-06-25",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1950-06-29",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1950-07-02",
+        "opponent": "CHL",
+        "opponent_full": "Chile",
+        "score": "2-5",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1954,
@@ -53,31 +115,253 @@
   },
   {
     "year": 1990,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-10",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "1-5",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-14",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-19",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1994,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-18",
+        "opponent": "CHE",
+        "opponent_full": "Switzerland",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-22",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-26",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "R16",
+        "date": "1994-07-04",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-15",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-21",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-25",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2002,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-05",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "3-2",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-10",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-14",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "1-3",
+        "result": "L"
+      },
+      {
+        "stage": "R16",
+        "date": "2002-06-17",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "QF",
+        "date": "2002-06-21",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-12",
+        "opponent": "CZE",
+        "opponent_full": "Czech Republic",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-17",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-22",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-12",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-18",
+        "opponent": "SVN",
+        "opponent_full": "Slovenia",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-23",
+        "opponent": "DZA",
+        "opponent_full": "Algeria",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2010-06-26",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2014,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-16",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-22",
+        "opponent": "PRT",
+        "opponent_full": "Portugal",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-26",
+        "opponent": "DEU",
+        "opponent_full": "Germany",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "R16",
+        "date": "2014-07-01",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2018,
@@ -85,6 +369,40 @@
   },
   {
     "year": 2022,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-21",
+        "opponent": "WAL",
+        "opponent_full": "Wales",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-25",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-29",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "2022-12-03",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-3",
+        "result": "L"
+      }
+    ]
   }
 ]

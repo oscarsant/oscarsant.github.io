@@ -45,7 +45,33 @@
   },
   {
     "year": 1982,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1982-06-17",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-21",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "1-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-25",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1986,

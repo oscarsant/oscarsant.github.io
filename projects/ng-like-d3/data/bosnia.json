@@ -77,7 +77,33 @@
   },
   {
     "year": 2014,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-15",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-21",
+        "opponent": "NGA",
+        "opponent_full": "Nigeria",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-25",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "3-1",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2018,

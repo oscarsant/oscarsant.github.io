@@ -53,11 +53,88 @@
   },
   {
     "year": 1990,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-11",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-17",
+        "opponent": "EGY",
+        "opponent_full": "Egypt",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-21",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1990-06-25",
+        "opponent": "ROU",
+        "opponent_full": "Romania",
+        "score": "0-0",
+        "result": "W",
+        "penalties": "5-4"
+      },
+      {
+        "stage": "QF",
+        "date": "1990-06-30",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1994,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-18",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-24",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-28",
+        "opponent": "NOR",
+        "opponent_full": "Norway",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "1994-07-04",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1998,

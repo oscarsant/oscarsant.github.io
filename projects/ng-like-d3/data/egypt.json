@@ -5,7 +5,17 @@
   },
   {
     "year": 1934,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1934-05-27",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "2-4",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1938,
@@ -53,7 +63,33 @@
   },
   {
     "year": 1990,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-12",
+        "opponent": "NLD",
+        "opponent_full": "Netherlands",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-17",
+        "opponent": "IRL",
+        "opponent_full": "Republic of Ireland",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-21",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1994,
