@@ -166,16 +166,17 @@
 	const tt = d3.select("#tt");
 
 	// Render chart
+	const isMobile = window.innerWidth < 768;
 	const svg = container
 		.append("svg")
-		.attr("height", 600)
+		.attr("height", isMobile ? 700 : 600)
 		.attr("role", "img")
 		.attr("aria-label", `${team.name} World Cup timeline`);
 
 	renderChart(svg, team);
 
 	function renderChart(svg, team) {
-		const margin = { top: 40, right: 20, bottom: 20, left: 45 };
+		const margin = { top: 40, right: 10, bottom: 20, left: 38 };
 		const W = svg.node().clientWidth || 1200;
 		const H = +svg.attr("height");
 		const w = W - margin.left - margin.right;
@@ -189,7 +190,7 @@
 
 		const tournamentFormats = TOURNAMENT_FORMATS;
 		const stageValues = STAGE_VALUES;
-		const x = d3.scaleLinear().domain([0.8, 6.2]).range([0, w]);
+		const x = d3.scaleLinear().domain([1, 6]).range([5, w]);
 		const y = d3.scaleBand().domain(years).range([0, h]).padding(0.1);
 
 		const g = svg
@@ -222,7 +223,7 @@
 			.attr("fill", "rgba(255,255,255,.5)")
 			.attr("font-size", 11)
 			.attr("font-weight", 500)
-			.text((d) => d);
+			.text((d) => (isMobile ? "'" + String(d).slice(2) : d));
 
 		// Add host nation rectangles
 		g.append("g")
@@ -545,7 +546,7 @@
 						const ttH = ttNode.offsetHeight || 80;
 						const vw = window.innerWidth;
 						const vh = window.innerHeight;
-						const offset = 14;
+						const offset = 1;
 						const onRightHalf = ev.clientX > vw / 2;
 						let ttLeft = onRightHalf
 							? ev.clientX - ttW - offset
