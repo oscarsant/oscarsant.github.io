@@ -61,11 +61,63 @@
   },
   {
     "year": 1998,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1998-06-12",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-18",
+        "opponent": "DEN",
+        "opponent_full": "Denmark",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1998-06-24",
+        "opponent": "KSA",
+        "opponent_full": "Saudi Arabia",
+        "score": "2-2",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2002,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-02",
+        "opponent": "PAR",
+        "opponent_full": "Paraguay",
+        "score": "2-2",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-08",
+        "opponent": "SVN",
+        "opponent_full": "Slovenia",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-12",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "2-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,
@@ -73,7 +125,33 @@
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-11",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-16",
+        "opponent": "URU",
+        "opponent_full": "Uruguay",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-22",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "2-1",
+        "result": "W"
+      }
+    ]
   },
   {
     "year": 2014,

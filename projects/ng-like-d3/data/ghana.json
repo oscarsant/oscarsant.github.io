@@ -128,7 +128,7 @@
       {
         "stage": "GS",
         "date": "2010-06-23",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "0-1",
         "result": "L"
@@ -144,7 +144,7 @@
       {
         "stage": "QF",
         "date": "2010-07-02",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "1-1",
         "result": "L",
@@ -167,7 +167,7 @@
       {
         "stage": "GS",
         "date": "2014-06-21",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "2-2",
         "result": "D"
@@ -175,7 +175,7 @@
       {
         "stage": "GS",
         "date": "2014-06-26",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "1-2",
         "result": "L"
@@ -193,7 +193,7 @@
       {
         "stage": "GS",
         "date": "2022-11-24",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "2-3",
         "result": "L"
@@ -209,7 +209,7 @@
       {
         "stage": "GS",
         "date": "2022-12-02",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-2",
         "result": "L"

@@ -69,7 +69,33 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-13",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-19",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-23",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,

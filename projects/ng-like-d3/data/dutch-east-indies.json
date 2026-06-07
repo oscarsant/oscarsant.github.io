@@ -9,7 +9,17 @@
   },
   {
     "year": 1938,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "R16",
+        "date": "1938-06-05",
+        "opponent": "HUN",
+        "opponent_full": "Hungary",
+        "score": "0-6",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1950,

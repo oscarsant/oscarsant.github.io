@@ -14,7 +14,7 @@
       {
         "stage": "GS",
         "date": "1930-07-20",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "0-1",
         "result": "L"
@@ -28,7 +28,7 @@
       {
         "stage": "R16",
         "date": "1934-05-27",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "2-5",
         "result": "L"
@@ -194,7 +194,7 @@
       {
         "stage": "GS",
         "date": "1986-06-11",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "2-2",
         "result": "D"
@@ -249,7 +249,7 @@
       {
         "stage": "GS",
         "date": "1990-06-17",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "3-1",
         "result": "W"
@@ -287,7 +287,7 @@
       {
         "stage": "GS",
         "date": "1994-06-25",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "1-0",
         "result": "W"
@@ -295,7 +295,7 @@
       {
         "stage": "GS",
         "date": "1994-06-29",
-        "opponent": "SAU",
+        "opponent": "KSA",
         "opponent_full": "Saudi Arabia",
         "score": "0-1",
         "result": "L"
@@ -303,7 +303,7 @@
       {
         "stage": "R16",
         "date": "1994-07-02",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "2-3",
         "result": "L"
@@ -317,7 +317,7 @@
       {
         "stage": "GS",
         "date": "1998-06-13",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "0-0",
         "result": "D"
@@ -380,11 +380,11 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "DNQ"
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "DNQ"
   },
   {
     "year": 2014,
@@ -393,7 +393,7 @@
       {
         "stage": "GS",
         "date": "2014-06-17",
-        "opponent": "DZA",
+        "opponent": "ALG",
         "opponent_full": "Algeria",
         "score": "2-1",
         "result": "W"
@@ -517,7 +517,7 @@
       {
         "stage": "GS",
         "date": "2022-12-01",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "0-0",
         "result": "D"

@@ -45,7 +45,33 @@
   },
   {
     "year": 1982,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1982-06-16",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-21",
+        "opponent": "NIR",
+        "opponent_full": "Northern Ireland",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "1982-06-24",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "0-1",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1986,
@@ -73,11 +99,63 @@
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-16",
+        "opponent": "CHI",
+        "opponent_full": "Chile",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-21",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-25",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "0-0",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2014,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-15",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-20",
+        "opponent": "ECU",
+        "opponent_full": "Ecuador",
+        "score": "1-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-25",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "0-3",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2018,

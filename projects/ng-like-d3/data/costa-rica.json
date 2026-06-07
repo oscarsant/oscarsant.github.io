@@ -53,7 +53,41 @@
   },
   {
     "year": 1990,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-11",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-16",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-20",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "R16",
+        "date": "1990-06-23",
+        "opponent": "CSK",
+        "opponent_full": "Czechoslovakia",
+        "score": "1-4",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1994,
@@ -65,11 +99,63 @@
   },
   {
     "year": 2002,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2002-06-04",
+        "opponent": "CHN",
+        "opponent_full": "China",
+        "score": "2-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-09",
+        "opponent": "TUR",
+        "opponent_full": "Turkey",
+        "score": "1-1",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2002-06-13",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "2-5",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-09",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "2-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-15",
+        "opponent": "ECU",
+        "opponent_full": "Ecuador",
+        "score": "0-3",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-20",
+        "opponent": "POL",
+        "opponent_full": "Poland",
+        "score": "1-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,
@@ -77,14 +163,110 @@
   },
   {
     "year": 2014,
-    "stage": "QF"
+    "stage": "QF",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2014-06-14",
+        "opponent": "URU",
+        "opponent_full": "Uruguay",
+        "score": "3-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-20",
+        "opponent": "ITA",
+        "opponent_full": "Italy",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2014-06-24",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "R16",
+        "date": "2014-06-29",
+        "opponent": "GRE",
+        "opponent_full": "Greece",
+        "score": "1-1",
+        "result": "W",
+        "penalties": "5-3"
+      },
+      {
+        "stage": "QF",
+        "date": "2014-07-05",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "0-0",
+        "result": "L",
+        "penalties": "3-4"
+      }
+    ]
   },
   {
     "year": 2018,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2018-06-17",
+        "opponent": "SRB",
+        "opponent_full": "Serbia",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-22",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2018-06-27",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "2-2",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2022,
-    "stage": "R16"
+    "stage": "R16",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2022-11-23",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "0-7",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-11-27",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "1-0",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2022-12-01",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "2-4",
+        "result": "L"
+      }
+    ]
   }
 ]

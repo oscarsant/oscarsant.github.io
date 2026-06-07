@@ -69,7 +69,33 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-11",
+        "opponent": "POR",
+        "opponent_full": "Portugal",
+        "score": "0-1",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-16",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-21",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "1-1",
+        "result": "D"
+      }
+    ]
   },
   {
     "year": 2010,

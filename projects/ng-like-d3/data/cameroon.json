@@ -176,7 +176,7 @@
       {
         "stage": "GS",
         "date": "1998-06-23",
-        "opponent": "CHL",
+        "opponent": "CHI",
         "opponent_full": "Chile",
         "score": "1-1",
         "result": "D"
@@ -198,7 +198,7 @@
       {
         "stage": "GS",
         "date": "2002-06-06",
-        "opponent": "SAU",
+        "opponent": "KSA",
         "opponent_full": "Saudi Arabia",
         "score": "1-0",
         "result": "W"
@@ -206,7 +206,7 @@
       {
         "stage": "GS",
         "date": "2002-06-11",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "0-2",
         "result": "L"
@@ -232,7 +232,7 @@
       {
         "stage": "GS",
         "date": "2010-06-19",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "1-2",
         "result": "L"
@@ -240,7 +240,7 @@
       {
         "stage": "GS",
         "date": "2010-06-24",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "1-2",
         "result": "L"
@@ -262,7 +262,7 @@
       {
         "stage": "GS",
         "date": "2014-06-18",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "0-4",
         "result": "L"
@@ -288,7 +288,7 @@
       {
         "stage": "GS",
         "date": "2022-11-24",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "0-1",
         "result": "L"

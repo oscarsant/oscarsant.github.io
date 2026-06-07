@@ -30,7 +30,7 @@
       {
         "stage": "GS",
         "date": "1962-05-30",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "1-2",
         "result": "L"
@@ -84,7 +84,7 @@
       {
         "stage": "GS",
         "date": "1990-06-09",
-        "opponent": "ARE",
+        "opponent": "UAE",
         "opponent_full": "United Arab Emirates",
         "score": "2-0",
         "result": "W"
@@ -100,7 +100,7 @@
       {
         "stage": "GS",
         "date": "1990-06-19",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "1-1",
         "result": "D"
@@ -138,7 +138,7 @@
       {
         "stage": "GS",
         "date": "1994-06-26",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "2-0",
         "result": "W"
@@ -194,7 +194,7 @@
       {
         "stage": "GS",
         "date": "2014-06-14",
-        "opponent": "GRC",
+        "opponent": "GRE",
         "opponent_full": "Greece",
         "score": "3-0",
         "result": "W"
@@ -218,7 +218,7 @@
       {
         "stage": "R16",
         "date": "2014-06-28",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "2-0",
         "result": "W"
@@ -274,6 +274,6 @@
   },
   {
     "year": 2022,
-    "stage": "GS"
+    "stage": "DNQ"
   }
 ]

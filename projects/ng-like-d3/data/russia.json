@@ -150,7 +150,7 @@
       {
         "stage": "GS",
         "date": "2014-06-26",
-        "opponent": "DZA",
+        "opponent": "ALG",
         "opponent_full": "Algeria",
         "score": "1-1",
         "result": "D"
@@ -164,7 +164,7 @@
       {
         "stage": "GS",
         "date": "2018-06-14",
-        "opponent": "SAU",
+        "opponent": "KSA",
         "opponent_full": "Saudi Arabia",
         "score": "5-0",
         "result": "W"
@@ -180,7 +180,7 @@
       {
         "stage": "GS",
         "date": "2018-06-25",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-3",
         "result": "L"
@@ -197,7 +197,7 @@
       {
         "stage": "QF",
         "date": "2018-07-07",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "2-2",
         "result": "L",

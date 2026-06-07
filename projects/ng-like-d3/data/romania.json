@@ -14,7 +14,7 @@
       {
         "stage": "GS",
         "date": "1930-07-21",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-4",
         "result": "L"
@@ -109,7 +109,7 @@
   },
   {
     "year": 1974,
-    "stage": "GS"
+    "stage": "DNQ"
   },
   {
     "year": 1978,
@@ -177,7 +177,7 @@
       {
         "stage": "GS",
         "date": "1994-06-22",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "1-4",
         "result": "L"
@@ -240,7 +240,7 @@
       {
         "stage": "R16",
         "date": "1998-06-30",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "0-1",
         "result": "L"

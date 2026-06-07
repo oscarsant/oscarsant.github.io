@@ -999,15 +999,13 @@ body.landing-body::after {
   position: fixed;
   pointer-events: none;
   opacity: 0;
-  transform: translate(0.75rem, 0.75rem); // 12px 12px
-  background: rgba(26, 26, 26, .98);
+  background: rgba(26, 26, 26, 0.98);
   border: 1px solid var(--line);
-  border-radius: 0.75rem; // 12px
-  padding: 0.75rem 0.875rem; // 12px 14px
-  box-shadow: 0 0 0.75rem rgba(0, 0, 0, .8); // 0 12px 40px
+  border-radius: 0.8rem;
+  padding: 0.8rem 0.8rem;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(12px);
-  max-width: 17.5rem; // 280px
-  @include ts-body-sm;
+  width: 220px;
   z-index: 1000;
 }
 
@@ -1018,7 +1016,7 @@ body.landing-body::after {
 }
 
 .tt-sub {
-  @include ts-caption;
+  @include ts-label;
   color: var(--muted);
 }
 
@@ -1141,7 +1139,7 @@ svg {
   }
 
   &.stat-scored .stat-number {
-    color: var(--pastel-info);
+    color: var(--pastel-success);
   }
 
   &.stat-against .stat-number {
@@ -1531,8 +1529,8 @@ svg {
 // Timeline Legend
 .timeline-legend {
   display: flex;
-  gap: 1.5rem; // 24px
-  padding: 0.75rem 0; // 12px 0
+  gap: 1rem;
+  padding: 0.5rem 0; // 12px 0
   background: transparent;
   border: none;
   @include ts-label;
@@ -1571,20 +1569,9 @@ svg {
   height: 0.5rem;
   border-radius: 50%;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.35);
-  outline: 1.5px solid rgba(255, 255, 255, 0.4);
-  outline-offset: 3px;
-}
-
-.legend-dot-pen {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 0.35);
-  outline: 1.5px solid rgba(255, 255, 255, 0.35);
-  outline-offset: 3px;
+  background: none;
+  outline: 1px solid #fca5a5;
+  outline-offset: 2px;
 }
 
 .legend-label {
@@ -1622,12 +1609,7 @@ svg {
   // Year labels styling
   .bar text {
     font-family: inherit;
-    letter-spacing: 0px;
-  }
-
-  // Grid lines
-  .grid line {
-    stroke: rgba(255, 255, 255, .02);
+    letter-spacing: 1px;
   }
 
   // Host nation boxes
@@ -2327,7 +2309,7 @@ svg {
 .h2h-stats {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 2px;
   margin-bottom: 2rem;
 }
 
@@ -2376,11 +2358,11 @@ svg {
 }
 
 .h2h-common-title {
-  @include ts-caption;
+  @include ts-label;
   color: var(--muted);
   margin: 0 0 0.875rem;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.5rem;
   justify-content: left;
 }
@@ -2389,13 +2371,12 @@ svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
   color: var(--fg);
-  border-radius: 100px;
-  @include ts-label;
-  font-weight: $weight-bold;
-  letter-spacing: 0;
-  padding: 0.1rem 0.45rem;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+
 }
 
 .h2h-common-grid {
@@ -2428,7 +2409,9 @@ svg {
   align-items: center;
   gap: 0.4rem;
   flex: 1;
-  @include ts-name;
+  @include ts-body-sm;
+  align-items: baseline;
+  color: rgba(255, 255, 255, 0.3);
 
   &--centered {
     display: grid;
@@ -2447,10 +2430,6 @@ svg {
 
     }
   }
-}
-
-.h2h-common-sep {
-  color: rgba(255, 255, 255, 0.2);
 }
 
 .h2h-match-result {
@@ -2594,7 +2573,7 @@ svg {
 
 // ── DNQ / non-participation row label ─────────────────────────────────────
 .dnq-label {
-  fill: rgba(255, 255, 255, .22) !important;
+  fill: rgba(255, 255, 255, .3) !important;
   font-style: italic;
 }
 

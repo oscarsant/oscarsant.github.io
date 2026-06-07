@@ -22,7 +22,7 @@
       {
         "stage": "SF",
         "date": "1930-07-27",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "1-6",
         "result": "L"
@@ -44,7 +44,7 @@
       {
         "stage": "GS",
         "date": "1950-06-25",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "3-0",
         "result": "W"
@@ -90,7 +90,7 @@
       {
         "stage": "QF",
         "date": "1954-06-27",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-2",
         "result": "L"
@@ -120,7 +120,7 @@
       {
         "stage": "GS",
         "date": "1958-06-15",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "3-3",
         "result": "D"
@@ -128,7 +128,7 @@
       {
         "stage": "QF",
         "date": "1958-06-19",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-1",
         "result": "L"
@@ -150,7 +150,7 @@
       {
         "stage": "GS",
         "date": "1962-06-02",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "3-1",
         "result": "W"
@@ -166,7 +166,7 @@
       {
         "stage": "QF",
         "date": "1962-06-10",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "1-0",
         "result": "W"
@@ -182,7 +182,7 @@
       {
         "stage": "3P",
         "date": "1962-06-16",
-        "opponent": "CHL",
+        "opponent": "CHI",
         "opponent_full": "Chile",
         "score": "0-1",
         "result": "L"
@@ -228,7 +228,7 @@
       {
         "stage": "2GS",
         "date": "1974-06-26",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-2",
         "result": "L"
@@ -278,7 +278,7 @@
       {
         "stage": "GS",
         "date": "1982-06-24",
-        "opponent": "HND",
+        "opponent": "HON",
         "opponent_full": "Honduras",
         "score": "1-0",
         "result": "W"
@@ -312,7 +312,7 @@
       {
         "stage": "GS",
         "date": "2006-06-11",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "0-1",
         "result": "L"
@@ -350,7 +350,7 @@
       {
         "stage": "GS",
         "date": "2010-06-18",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "1-0",
         "result": "W"
@@ -376,7 +376,7 @@
       {
         "stage": "GS",
         "date": "2018-06-17",
-        "opponent": "CRI",
+        "opponent": "CRC",
         "opponent_full": "Costa Rica",
         "score": "1-0",
         "result": "W"
@@ -384,7 +384,7 @@
       {
         "stage": "GS",
         "date": "2018-06-22",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "1-2",
         "result": "L"
@@ -422,7 +422,7 @@
       {
         "stage": "GS",
         "date": "2022-12-02",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "2-3",
         "result": "L"

@@ -5,7 +5,7 @@
   },
   {
     "year": 1934,
-    "stage": "R16"
+    "stage": "WD"
   },
   {
     "year": 1938,
@@ -60,7 +60,7 @@
       {
         "stage": "GS",
         "date": "1974-06-19",
-        "opponent": "HTI",
+        "opponent": "HAI",
         "opponent_full": "Haiti",
         "score": "7-0",
         "result": "W"
@@ -92,7 +92,7 @@
       {
         "stage": "2GS",
         "date": "1974-07-03",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-1",
         "result": "L"
@@ -114,7 +114,7 @@
       {
         "stage": "GS",
         "date": "1978-06-01",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-0",
         "result": "D"
@@ -238,7 +238,7 @@
       {
         "stage": "GS",
         "date": "1986-06-07",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "1-0",
         "result": "W"
@@ -288,7 +288,7 @@
       {
         "stage": "GS",
         "date": "2002-06-10",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "0-4",
         "result": "L"
@@ -318,7 +318,7 @@
       {
         "stage": "GS",
         "date": "2006-06-14",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "0-1",
         "result": "L"
@@ -326,7 +326,7 @@
       {
         "stage": "GS",
         "date": "2006-06-20",
-        "opponent": "CRI",
+        "opponent": "CRC",
         "opponent_full": "Costa Rica",
         "score": "2-1",
         "result": "W"
@@ -386,7 +386,7 @@
       {
         "stage": "GS",
         "date": "2022-11-26",
-        "opponent": "SAU",
+        "opponent": "KSA",
         "opponent_full": "Saudi Arabia",
         "score": "2-0",
         "result": "W"

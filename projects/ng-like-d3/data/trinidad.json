@@ -69,7 +69,33 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2006-06-10",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "0-0",
+        "result": "D"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-15",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2006-06-20",
+        "opponent": "PAR",
+        "opponent_full": "Paraguay",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2010,

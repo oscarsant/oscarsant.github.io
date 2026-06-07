@@ -53,7 +53,33 @@
   },
   {
     "year": 1990,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1990-06-09",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-15",
+        "opponent": "GER",
+        "opponent_full": "West Germany",
+        "score": "1-5",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1990-06-19",
+        "opponent": "YUG",
+        "opponent_full": "Yugoslavia",
+        "score": "1-4",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1994,

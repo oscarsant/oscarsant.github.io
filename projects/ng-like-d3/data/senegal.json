@@ -78,7 +78,7 @@
       {
         "stage": "GS",
         "date": "2002-06-06",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "1-1",
         "result": "D"
@@ -86,7 +86,7 @@
       {
         "stage": "GS",
         "date": "2002-06-11",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "3-3",
         "result": "D"
@@ -158,7 +158,7 @@
       {
         "stage": "GS",
         "date": "2022-11-21",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "0-2",
         "result": "L"

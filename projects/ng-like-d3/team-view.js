@@ -176,7 +176,7 @@
 	renderChart(svg, team);
 
 	function renderChart(svg, team) {
-		const margin = { top: 40, right: 10, bottom: 20, left: 38 };
+		const margin = { top: 40, right: 10, bottom: 20, left: 30 };
 		const W = svg.node().clientWidth || 1200;
 		const H = +svg.attr("height");
 		const w = W - margin.left - margin.right;
@@ -190,7 +190,7 @@
 
 		const tournamentFormats = TOURNAMENT_FORMATS;
 		const stageValues = STAGE_VALUES;
-		const x = d3.scaleLinear().domain([1, 6]).range([5, w]);
+		const x = d3.scaleLinear().domain([0.98, 6]).range([5, w]);
 		const y = d3.scaleBand().domain(years).range([0, h]).padding(0.1);
 
 		const g = svg
@@ -250,7 +250,7 @@
 			.attr("text-anchor", "middle")
 			.attr("fill", "rgba(255,255,255,.4)")
 			.attr("font-size", 10)
-			.attr("font-weight", 600)
+			.attr("font-weight", 500)
 			.text((d) => d);
 
 		// Draw tournament bars
@@ -379,8 +379,8 @@
 						.attr("r", dotRadius + 4)
 						.attr("fill", "none")
 						.attr("stroke", dotColor)
-						.attr("stroke-width", 1.5)
-						.attr("opacity", 0.6)
+						.attr("stroke-width", 1)
+						.attr("opacity", 1)
 						.style("pointer-events", "none");
 				}
 
@@ -1109,12 +1109,8 @@
 			}
 			const oppMeta = teamFiles[oppKey];
 			flagBEl.innerHTML = `<span class="fi fi-${getCountryCode(oppMeta.abbr)}"></span>`;
-			const [oppTournaments, detailedA, detailedB] = await Promise.all([
-				d3.json(`data/${oppKey}.json`),
-				d3.json(`${teamParam}.json`).catch(() => null),
-				d3.json(`${oppKey}.json`).catch(() => null),
-			]);
-			renderH2H(team, oppMeta, oppTournaments, detailedA, detailedB);
+			const oppTournaments = await d3.json(`data/${oppKey}.json`);
+			renderH2H(team, oppMeta, oppTournaments, team.tournaments, oppTournaments);
 		});
 	}
 
@@ -1322,7 +1318,7 @@
 					<div class="h2h-common-card">
 						<div class="h2h-common-stages">
 							<span class="h2h-common-year">${m.year}</span>
-							<span class="h2h-common-sep">·</span>
+							<span class="h2h-common-sep">|</span>
 							<span class="h2h-common-stage">${stageLabel(m.stage)}</span>
 						</div>
 						<div class="h2h-match-result">${scoreDisplay}</div>

@@ -57,7 +57,33 @@
   },
   {
     "year": 1994,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "1994-06-21",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-26",
+        "opponent": "BUL",
+        "opponent_full": "Bulgaria",
+        "score": "0-4",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "1994-06-30",
+        "opponent": "NGR",
+        "opponent_full": "Nigeria",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 1998,
@@ -73,7 +99,33 @@
   },
   {
     "year": 2010,
-    "stage": "GS"
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2010-06-12",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "0-2",
+        "result": "L"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-17",
+        "opponent": "NGR",
+        "opponent_full": "Nigeria",
+        "score": "2-1",
+        "result": "W"
+      },
+      {
+        "stage": "GS",
+        "date": "2010-06-22",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-2",
+        "result": "L"
+      }
+    ]
   },
   {
     "year": 2014,

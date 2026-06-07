@@ -46,7 +46,7 @@
       {
         "stage": "GS",
         "date": "1978-06-03",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "0-3",
         "result": "L"
@@ -108,7 +108,7 @@
       {
         "stage": "GS",
         "date": "1998-06-25",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "0-2",
         "result": "L"
@@ -134,7 +134,7 @@
       {
         "stage": "GS",
         "date": "2006-06-17",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "0-2",
         "result": "L"
@@ -142,7 +142,7 @@
       {
         "stage": "GS",
         "date": "2006-06-21",
-        "opponent": "AGO",
+        "opponent": "ANG",
         "opponent_full": "Angola",
         "score": "1-1",
         "result": "D"
@@ -160,7 +160,7 @@
       {
         "stage": "GS",
         "date": "2014-06-16",
-        "opponent": "NGA",
+        "opponent": "NGR",
         "opponent_full": "Nigeria",
         "score": "0-0",
         "result": "D"
@@ -206,7 +206,7 @@
       {
         "stage": "GS",
         "date": "2018-06-25",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "1-1",
         "result": "D"

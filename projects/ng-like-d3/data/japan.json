@@ -74,7 +74,7 @@
       {
         "stage": "GS",
         "date": "1998-06-20",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "0-1",
         "result": "L"
@@ -142,7 +142,7 @@
       {
         "stage": "GS",
         "date": "2006-06-18",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "0-0",
         "result": "D"
@@ -172,7 +172,7 @@
       {
         "stage": "GS",
         "date": "2010-06-19",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "0-1",
         "result": "L"
@@ -180,7 +180,7 @@
       {
         "stage": "GS",
         "date": "2010-06-24",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "3-1",
         "result": "W"
@@ -188,7 +188,7 @@
       {
         "stage": "R16",
         "date": "2010-06-29",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "0-0",
         "result": "L",
@@ -211,7 +211,7 @@
       {
         "stage": "GS",
         "date": "2014-06-19",
-        "opponent": "GRC",
+        "opponent": "GRE",
         "opponent_full": "Greece",
         "score": "0-0",
         "result": "D"
@@ -271,7 +271,7 @@
       {
         "stage": "GS",
         "date": "2022-11-23",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "2-1",
         "result": "W"
@@ -279,7 +279,7 @@
       {
         "stage": "GS",
         "date": "2022-11-27",
-        "opponent": "CRI",
+        "opponent": "CRC",
         "opponent_full": "Costa Rica",
         "score": "0-1",
         "result": "L"
@@ -295,7 +295,7 @@
       {
         "stage": "R16",
         "date": "2022-12-05",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "1-1",
         "result": "L",

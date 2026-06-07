@@ -30,7 +30,7 @@
       {
         "stage": "GS",
         "date": "1954-06-19",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-7",
         "result": "L"
@@ -52,7 +52,7 @@
       {
         "stage": "GS",
         "date": "1958-06-11",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "2-3",
         "result": "L"
@@ -132,7 +132,7 @@
       {
         "stage": "GS",
         "date": "1978-06-11",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "3-2",
         "result": "W"
@@ -176,7 +176,7 @@
       {
         "stage": "GS",
         "date": "1986-06-04",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "0-1",
         "result": "L"
@@ -184,7 +184,7 @@
       {
         "stage": "GS",
         "date": "1986-06-08",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "1-2",
         "result": "L"
@@ -192,7 +192,7 @@
       {
         "stage": "GS",
         "date": "1986-06-13",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-0",
         "result": "D"
@@ -206,7 +206,7 @@
       {
         "stage": "GS",
         "date": "1990-06-11",
-        "opponent": "CRI",
+        "opponent": "CRC",
         "opponent_full": "Costa Rica",
         "score": "0-1",
         "result": "L"

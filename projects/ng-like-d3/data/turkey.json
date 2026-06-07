@@ -22,7 +22,7 @@
       {
         "stage": "GS",
         "date": "1954-06-17",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "1-4",
         "result": "L"
@@ -38,7 +38,7 @@
       {
         "stage": "GS",
         "date": "1954-06-23",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "2-7",
         "result": "L"
@@ -104,7 +104,7 @@
       {
         "stage": "GS",
         "date": "2002-06-09",
-        "opponent": "CRI",
+        "opponent": "CRC",
         "opponent_full": "Costa Rica",
         "score": "1-1",
         "result": "D"

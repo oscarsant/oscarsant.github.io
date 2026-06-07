@@ -22,7 +22,7 @@
       {
         "stage": "GS",
         "date": "1930-07-19",
-        "opponent": "CHL",
+        "opponent": "CHI",
         "opponent_full": "Chile",
         "score": "0-1",
         "result": "L"
@@ -98,7 +98,7 @@
       {
         "stage": "GS",
         "date": "1958-06-08",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "7-3",
         "result": "W"
@@ -138,7 +138,7 @@
       {
         "stage": "3P",
         "date": "1958-06-28",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "6-3",
         "result": "W"
@@ -147,7 +147,7 @@
   },
   {
     "year": 1962,
-    "stage": "GS"
+    "stage": "DNQ"
   },
   {
     "year": 1966,
@@ -164,7 +164,7 @@
       {
         "stage": "GS",
         "date": "1966-07-15",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "1-2",
         "result": "L"
@@ -264,7 +264,7 @@
       {
         "stage": "SF",
         "date": "1982-07-08",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "3-3",
         "result": "L",
@@ -328,7 +328,7 @@
       {
         "stage": "SF",
         "date": "1986-06-25",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-2",
         "result": "L"
@@ -358,7 +358,7 @@
       {
         "stage": "GS",
         "date": "1998-06-12",
-        "opponent": "ZAF",
+        "opponent": "RSA",
         "opponent_full": "South Africa",
         "score": "3-0",
         "result": "W"
@@ -366,7 +366,7 @@
       {
         "stage": "GS",
         "date": "1998-06-18",
-        "opponent": "SAU",
+        "opponent": "KSA",
         "opponent_full": "Saudi Arabia",
         "score": "4-0",
         "result": "W"
@@ -374,7 +374,7 @@
       {
         "stage": "GS",
         "date": "1998-06-24",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "2-1",
         "result": "W"
@@ -382,7 +382,7 @@
       {
         "stage": "R16",
         "date": "1998-06-28",
-        "opponent": "PRY",
+        "opponent": "PAR",
         "opponent_full": "Paraguay",
         "score": "1-0",
         "result": "W"
@@ -399,7 +399,7 @@
       {
         "stage": "SF",
         "date": "1998-07-08",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "2-1",
         "result": "W"
@@ -429,7 +429,7 @@
       {
         "stage": "GS",
         "date": "2002-06-06",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-0",
         "result": "D"
@@ -437,7 +437,7 @@
       {
         "stage": "GS",
         "date": "2002-06-11",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "0-2",
         "result": "L"
@@ -451,7 +451,7 @@
       {
         "stage": "GS",
         "date": "2006-06-13",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "0-0",
         "result": "D"
@@ -467,7 +467,7 @@
       {
         "stage": "GS",
         "date": "2006-06-23",
-        "opponent": "TGO",
+        "opponent": "TOG",
         "opponent_full": "Togo",
         "score": "2-0",
         "result": "W"
@@ -491,7 +491,7 @@
       {
         "stage": "SF",
         "date": "2006-07-05",
-        "opponent": "PRT",
+        "opponent": "POR",
         "opponent_full": "Portugal",
         "score": "1-0",
         "result": "W"
@@ -514,7 +514,7 @@
       {
         "stage": "GS",
         "date": "2010-06-11",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "0-0",
         "result": "D"
@@ -530,7 +530,7 @@
       {
         "stage": "GS",
         "date": "2010-06-22",
-        "opponent": "ZAF",
+        "opponent": "RSA",
         "opponent_full": "South Africa",
         "score": "1-2",
         "result": "L"
@@ -544,7 +544,7 @@
       {
         "stage": "GS",
         "date": "2014-06-15",
-        "opponent": "HND",
+        "opponent": "HON",
         "opponent_full": "Honduras",
         "score": "3-0",
         "result": "W"
@@ -552,7 +552,7 @@
       {
         "stage": "GS",
         "date": "2014-06-20",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "5-2",
         "result": "W"
@@ -568,7 +568,7 @@
       {
         "stage": "R16",
         "date": "2014-06-30",
-        "opponent": "NGA",
+        "opponent": "NGR",
         "opponent_full": "Nigeria",
         "score": "2-0",
         "result": "W"
@@ -576,7 +576,7 @@
       {
         "stage": "QF",
         "date": "2014-07-04",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "0-1",
         "result": "L"
@@ -606,7 +606,7 @@
       {
         "stage": "GS",
         "date": "2018-06-26",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "0-0",
         "result": "D"
@@ -622,7 +622,7 @@
       {
         "stage": "QF",
         "date": "2018-07-06",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "2-0",
         "result": "W"
@@ -638,7 +638,7 @@
       {
         "stage": "F",
         "date": "2018-07-15",
-        "opponent": "HRV",
+        "opponent": "CRO",
         "opponent_full": "Croatia",
         "score": "4-2",
         "result": "W"
@@ -660,7 +660,7 @@
       {
         "stage": "GS",
         "date": "2022-11-26",
-        "opponent": "DNK",
+        "opponent": "DEN",
         "opponent_full": "Denmark",
         "score": "2-1",
         "result": "W"

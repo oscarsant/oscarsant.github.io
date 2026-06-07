@@ -50,7 +50,7 @@
       {
         "stage": "GS",
         "date": "1974-06-18",
-        "opponent": "CHL",
+        "opponent": "CHI",
         "opponent_full": "Chile",
         "score": "1-1",
         "result": "D"
@@ -58,7 +58,7 @@
       {
         "stage": "GS",
         "date": "1974-06-22",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "1-0",
         "result": "W"
@@ -74,7 +74,7 @@
       {
         "stage": "2GS",
         "date": "1974-06-30",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "0-2",
         "result": "L"

@@ -34,7 +34,7 @@
       {
         "stage": "3P",
         "date": "1934-06-07",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "Germany",
         "score": "2-3",
         "result": "L"
@@ -72,7 +72,7 @@
       {
         "stage": "QF",
         "date": "1954-06-26",
-        "opponent": "CHE",
+        "opponent": "SUI",
         "opponent_full": "Switzerland",
         "score": "7-5",
         "result": "W"
@@ -80,7 +80,7 @@
       {
         "stage": "SF",
         "date": "1954-06-30",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "1-6",
         "result": "L"
@@ -88,7 +88,7 @@
       {
         "stage": "3P",
         "date": "1954-07-03",
-        "opponent": "URY",
+        "opponent": "URU",
         "opponent_full": "Uruguay",
         "score": "3-1",
         "result": "W"
@@ -172,7 +172,7 @@
       {
         "stage": "2GS",
         "date": "1978-06-14",
-        "opponent": "NLD",
+        "opponent": "NED",
         "opponent_full": "Netherlands",
         "score": "1-5",
         "result": "L"
@@ -188,7 +188,7 @@
       {
         "stage": "2GS",
         "date": "1978-06-21",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "3-2",
         "result": "W"
@@ -202,7 +202,7 @@
       {
         "stage": "GS",
         "date": "1982-06-17",
-        "opponent": "CHL",
+        "opponent": "CHI",
         "opponent_full": "Chile",
         "score": "1-0",
         "result": "W"
@@ -210,7 +210,7 @@
       {
         "stage": "GS",
         "date": "1982-06-21",
-        "opponent": "DZA",
+        "opponent": "ALG",
         "opponent_full": "Algeria",
         "score": "2-0",
         "result": "W"
@@ -218,7 +218,7 @@
       {
         "stage": "GS",
         "date": "1982-06-25",
-        "opponent": "DEU",
+        "opponent": "GER",
         "opponent_full": "West Germany",
         "score": "0-1",
         "result": "L"
@@ -294,7 +294,7 @@
       {
         "stage": "GS",
         "date": "1998-06-17",
-        "opponent": "CHL",
+        "opponent": "CHI",
         "opponent_full": "Chile",
         "score": "1-1",
         "result": "D"
@@ -315,7 +315,7 @@
   },
   {
     "year": 2006,
-    "stage": "GS"
+    "stage": "DNQ"
   },
   {
     "year": 2010,
