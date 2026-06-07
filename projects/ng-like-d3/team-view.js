@@ -58,8 +58,9 @@
 	document.getElementById("stat-l").textContent = team.l;
 	document.getElementById("stat-gs").textContent = team.gs;
 	document.getElementById("stat-ga").textContent = team.ga;
-	document.getElementById("stat-gd").textContent =
-		team.gd >= 0 ? `+${team.gd}` : team.gd;
+	const gdEl = document.getElementById("stat-gd");
+	gdEl.textContent = team.gd >= 0 ? `+${team.gd}` : team.gd;
+	gdEl.style.color = team.gd < 0 ? "#fca5a5" : "";
 
 	// Create Games bar chart
 	createGamesChart(team);
@@ -518,7 +519,7 @@
 												: match.result === "L"
 													? "#f87171"
 													: "#fbbf24";
-										tooltipContent += `<div style="font-size: 11px; margin: 3px 0; color: rgba(255,255,255,0.7);">`;
+										tooltipContent += `<div style="font-size: 13px; margin: 3px 0; color: rgba(255,255,255,0.7);">`;
 										tooltipContent += `<span style="color: ${resultColor};">${resultIcon}</span> `;
 										tooltipContent += `${match.score} vs ${match.opponent}`;
 										if (match.penalties) {
@@ -539,18 +540,20 @@
 						}
 
 						tt.style("opacity", 1).html(tooltipContent);
-							const ttNode = tt.node();
-							const ttW = ttNode.offsetWidth || 200;
-							const ttH = ttNode.offsetHeight || 80;
-							const vw = window.innerWidth;
-							const vh = window.innerHeight;
-							const offset = 14;
-							const onRightHalf = ev.clientX > vw / 2;
-							let ttLeft = onRightHalf ? ev.clientX - ttW - offset : ev.clientX + offset;
-							let ttTop = ev.clientY + offset;
-							ttLeft = Math.max(8, Math.min(ttLeft, vw - ttW - 8));
-							ttTop = Math.max(8, Math.min(ttTop, vh - ttH - 8));
-							tt.style("left", ttLeft + "px").style("top", ttTop + "px");
+						const ttNode = tt.node();
+						const ttW = ttNode.offsetWidth || 200;
+						const ttH = ttNode.offsetHeight || 80;
+						const vw = window.innerWidth;
+						const vh = window.innerHeight;
+						const offset = 14;
+						const onRightHalf = ev.clientX > vw / 2;
+						let ttLeft = onRightHalf
+							? ev.clientX - ttW - offset
+							: ev.clientX + offset;
+						let ttTop = ev.clientY + offset;
+						ttLeft = Math.max(8, Math.min(ttLeft, vw - ttW - 8));
+						ttTop = Math.max(8, Math.min(ttTop, vh - ttH - 8));
+						tt.style("left", ttLeft + "px").style("top", ttTop + "px");
 					})
 					.on("mouseleave", function (ev) {
 						ev.stopPropagation();
@@ -650,7 +653,7 @@
 			.attr("y", 0)
 			.attr("width", 0)
 			.attr("height", height)
-			.attr("fill", "#93c5fd")
+			.attr("fill", "#a7f3d0")
 			.attr("rx", 3)
 			.transition()
 			.duration(1000)
