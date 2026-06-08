@@ -1677,7 +1677,7 @@ svg {
   gap: 8px;
   display: flex;
   align-items: center;
-  height: -webkit-fill-available;
+  height: 28px;
 }
 .pos-filter:hover,
 .sort-btn:hover,
