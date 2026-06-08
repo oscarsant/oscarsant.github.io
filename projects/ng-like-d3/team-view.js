@@ -47,10 +47,7 @@
 			.map((t) => t.year)
 			.sort((a, b) => a - b);
 		titlesEl.innerHTML = champYears
-			.map(
-				() =>
-					`<img src="WC-Trophy.svg" class="team-title-icon" alt="" />`,
-			)
+			.map(() => `<img src="WC-Trophy.svg" class="team-title-icon" alt="" />`)
 			.join("");
 		titlesEl.title = champYears.join(", ");
 	}
