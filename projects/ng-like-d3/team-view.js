@@ -185,6 +185,27 @@
 		.attr("role", "img")
 		.attr("aria-label", `${team.name} World Cup timeline`);
 
+	const HOST_NATIONS = {
+		uruguay: [1930],
+		italy: [1934, 1990],
+		france: [1938, 1998],
+		brazil: [1950, 2014],
+		switzerland: [1954],
+		sweden: [1958],
+		chile: [1962],
+		england: [1966],
+		mexico: [1970, 1986],
+		germany: [1974, 2006],
+		argentina: [1978],
+		spain: [1982],
+		"united-states": [1994],
+		"south-korea": [2002],
+		japan: [2002],
+		"south-africa": [2010],
+		russia: [2018],
+		qatar: [2022],
+	};
+
 	renderChart(svg, team);
 
 	// Dismiss tooltip on touch outside a dot or on scroll (mobile)
@@ -254,18 +275,19 @@
 			.text((d) => (isMobile ? "'" + String(d).slice(2) : d));
 
 		// Add host nation rectangles
+		const hostYears = new Set(HOST_NATIONS[teamParam] || []);
 		g.append("g")
 			.selectAll("rect")
-			.data(years.filter((year) => tournamentMap.get(year)?.host))
+			.data(years.filter((year) => hostYears.has(year)))
 			.join("rect")
-			.attr("x", -36)
-			.attr("y", (d) => y(d) + y.bandwidth() / 2 - 11)
-			.attr("width", 34)
-			.attr("height", 22)
+			.attr("x", isMobile ? -22 : -32)
+			.attr("y", (d) => y(d) + y.bandwidth() / 2 - 10)
+			.attr("width", isMobile ? 19 : 30)
+			.attr("height", 20)
 			.attr("fill", "none")
-			.attr("stroke", "rgba(255,255,255,.6)")
-			.attr("stroke-width", 1.5)
-			.attr("rx", 3);
+			.attr("stroke", "rgba(246, 20, 20, 0.2)")
+			.attr("stroke-width", 1)
+			.attr("rx", 4);
 
 		// Add stage labels
 		const stageLabelsShort = ["GS", "R16", "QF", "SF", "F", "W"];
@@ -302,6 +324,9 @@
 				(year === 1974 || year === 1978)
 			) {
 				stageValue = 1.5;
+			} else if ((stage === "3P" || stage === "4P") && year === 1950) {
+				// All 4 Final Round teams reached the same stage — show at RU dot
+				stageValue = 5;
 			} else {
 				stageValue = stageValues[stage] || 0;
 			}
@@ -421,67 +446,34 @@
 					.attr("fill", reached ? dotColor : "none")
 					.attr("stroke", reached ? dotColor : "rgba(255,255,255,.4)")
 					.attr("stroke-width", 1.5)
-					.style("cursor", "pointer");
+					.style(
+						"cursor",
+						!reached || (isCurrent && stg.code === "W") ? "default" : "pointer",
+					)
+					.classed(
+						"dot--interactive",
+						reached && !(isCurrent && stg.code === "W"),
+					);
 
 				// Tooltip
 				dot
 					.on("mousemove", function (ev) {
 						ev.stopPropagation();
+						// No tooltip for champion star or not-reached dots
+						if (isCurrent && stg.code === "W") return;
+						if (!reached) return;
 						let tooltipContent = "";
 
 						if (reached) {
 							tooltipContent += `<div class="tt-sub">${stageLabel(stg.code)}`;
 
 							if (isCurrent) {
-								if (stg.code === "W") {
-									const championshipsUpToThisYear = team.tournaments.filter(
-										(t) => t.year <= year && t.stage === "W",
-									).length;
-									const suffix =
-										championshipsUpToThisYear === 1
-											? "st"
-											: championshipsUpToThisYear === 2
-												? "nd"
-												: championshipsUpToThisYear === 3
-													? "rd"
-													: "th";
-									tooltipContent += ` • ${championshipsUpToThisYear}${suffix} Title`;
-								} else if (stg.code === "RU") {
+								if (stg.code === "RU") {
 									tooltipContent += ` • Runners-up`;
 								} else if (stg.code === "3P") {
-									tooltipContent += ` • Won 3rd Place`;
+									tooltipContent += ` • 3rd Place`;
 								} else if (stg.code === "4P") {
-									tooltipContent += ` • Lost 3rd Place`;
-								} else if (stg.code === "GS" || stg.code === "2GS") {
-									tooltipContent += ` • Eliminated`;
-								} else {
-									tooltipContent += ` • Eliminated`;
-								}
-
-								if (
-									tournament.position &&
-									stg.code !== "W" &&
-									stg.code !== "RU" &&
-									stg.code !== "GS" &&
-									stg.code !== "2GS"
-								) {
-									const positionSuffix =
-										tournament.position === 1
-											? "st"
-											: tournament.position === 2
-												? "nd"
-												: tournament.position === 3
-													? "rd"
-													: "th";
-									tooltipContent += `<br><span style="color: rgba(255,255,255,0.5);">${tournament.position}${positionSuffix} overall</span>`;
-								}
-							} else {
-								if (stg.code === "GS" || stg.code === "2GS") {
-									tooltipContent += ` • Advanced`;
-								} else if (stg.code === "RU") {
-									tooltipContent += ` • Won`;
-								} else {
-									tooltipContent += ` • Advanced`;
+									tooltipContent += ` • 4th Place`;
 								}
 							}
 
@@ -536,21 +528,20 @@
 								if (stageMatches.length > 0) {
 									tooltipContent += `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">`;
 									stageMatches.forEach((match) => {
-										const resultIcon =
+										const iconName =
 											match.result === "W"
-												? "✓"
+												? "check"
 												: match.result === "L"
-													? "✗"
-													: "−";
-										const resultColor =
+													? "close"
+													: "remove";
+										const iconColor =
 											match.result === "W"
 												? "#4ade80"
 												: match.result === "L"
 													? "#f87171"
 													: "#fbbf24";
-										tooltipContent += `<div style="font-size: 13px; margin: 8px 0; color:">`;
-										tooltipContent += `<span style="color: ${resultColor};">${resultIcon}</span> `;
-										tooltipContent += `${match.score} vs ${match.opponent}`;
+										const resultIcon = `<span class="material-symbols-outlined" style="font-size:14px;width:14px;height:14px;color:${iconColor};flex-shrink:0">${iconName}</span>`;
+										tooltipContent += `<div style="font-size:13px;margin:6px 0;display:flex;align-items:center;gap:5px;">${resultIcon}${match.score} vs ${match.opponent}`;
 										if (match.penalties) {
 											tooltipContent += ` (${match.penalties} pen)`;
 										}
@@ -562,10 +553,6 @@
 									tooltipContent += `</div>`;
 								}
 							}
-						} else {
-							tooltipContent += `<div class="tt-sub">${stageLabel(
-								stg.code,
-							)} • Did not reach</div>`;
 						}
 
 						tt.style("opacity", 1).html(tooltipContent);
@@ -966,8 +953,7 @@
 					return `<span class="ap-app-dot${j < apps ? " is-played" : " is-cap"}" style="top:${topPct.toFixed(2)}%"></span>`;
 				}).join("");
 				const isOdd = i % 2 === 1;
-				const isKeyYear =
-					i === 0 || i === Math.round((slots - 1) / 2) || i === slots - 1;
+				const isKeyYear = (slots - 1 - i) % 2 === 0;
 				const label = `'${String(year).slice(2)}`;
 				return `<div class="ap-chart-col${isOdd ? " is-odd" : ""}${apps === 0 ? " no-apps" : ""}${isKeyYear ? " is-key-year" : ""}"><div class="ap-app-stack">${appDots}</div><div class="ap-year">${label}</div></div>`;
 			})
@@ -1658,17 +1644,17 @@
 			return `
 				<div class="cmp-expand-panel ${extraClass}">
 					<div class="cmp-expand-stats">
-						<div class="cmp-expand-stat">
+						<div class="cmp-expand-stat cmp-expand-stat--mv">
 							<span class="cmp-expand-stat-val">${d.marketValue.toLocaleString()}<span class="cmp-expand-stat-unit"> M€</span></span>
 							<span class="cmp-expand-stat-label">Market Value</span>
 							<span class="cmp-expand-stat-rank">#${mvRank} of ${values.length}</span>
 						</div>
-						<div class="cmp-expand-stat">
+						<div class="cmp-expand-stat cmp-expand-stat--sal">
 							<span class="cmp-expand-stat-val">${d.salaryBudget.toLocaleString()}<span class="cmp-expand-stat-unit"> M€</span></span>
 							<span class="cmp-expand-stat-label">Wage Bill</span>
 							<span class="cmp-expand-stat-rank">#${salRank} of ${values.length}</span>
 						</div>
-						<div class="cmp-expand-stat">
+						<div class="cmp-expand-stat cmp-expand-stat--age">
 							<span class="cmp-expand-stat-val">${d.avgAge}<span class="cmp-expand-stat-unit"> yrs</span></span>
 							<span class="cmp-expand-stat-label">Avg Age</span>
 							<span class="cmp-expand-stat-rank">#${ageRank} youngest</span>

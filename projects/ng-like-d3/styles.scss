@@ -367,6 +367,7 @@ body.landing-body::after {
   margin: 0;
   @include ts-body;
   color: var(--muted);
+  font-size: .8rem;
 }
 
 // Choose Your Team Section
@@ -458,6 +459,7 @@ body.landing-body::after {
     width: 22px;
     height: 22px;
     transition: transform 0.3s ease;
+    color: var(--muted);
   }
 
   &.open .material-symbols-outlined {
@@ -1006,7 +1008,7 @@ body.landing-body::after {
   padding: 0.8rem 0.8rem;
   box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(12px);
-  width: 220px;
+  width: 250px;
   z-index: 1000;
 }
 
@@ -1606,7 +1608,7 @@ svg {
   background: transparent;
   border: none;
   padding: 0;
-  overflow-x: auto;
+  overflow-x: visible;
   width: 100%;
   max-width: 100%;
 
@@ -1615,6 +1617,7 @@ svg {
     width: 100%;
     max-width: 100%;
     font-family: inherit;
+    overflow: visible;
   }
 
   // Stage column headers
@@ -1631,7 +1634,7 @@ svg {
   // Host nation boxes
   rect {
     stroke: rgba(255, 255, 255, .4);
-    stroke-width: 0.09375rem; // 1.5px
+    stroke-width: 1px; // 1.5px
   }
 
   // Tournament lines
@@ -1641,12 +1644,11 @@ svg {
 
   // Stage dots
   circle {
-    transition: all 0.15s ease;
+    transition: filter 0.15s ease;
+  }
 
-    &:hover {
-      r: 6.5;
-      filter: brightness(1.15);
-    }
+  circle.dot--interactive:hover {
+    filter: brightness(1.25);
   }
 }
 
@@ -1782,14 +1784,20 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 12px;
   margin: 32px 0 16px;
   flex-direction: row-reverse;
+  scrollbar-width: none;
+  -ms-overflow-style: none; // IE and Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
 
   @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-end;
   }
 }
 
@@ -1826,6 +1834,7 @@ svg {
   display: flex;
   align-items: center;
   height: 28px;
+  width: max-content;
 
   &:hover {
     background: rgba(255, 255, 255, 0.06);
@@ -1853,7 +1862,7 @@ svg {
 .all-players-controls {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   margin: 1rem 0 16px;
 }
 
@@ -1861,9 +1870,20 @@ svg {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row-reverse;
+  scrollbar-width: none;
+  -ms-overflow-style: none; // IE and Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+
+  @media (max-width: 480px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-end;
+  }
 }
 
 .all-players-search-wrap {
@@ -1878,7 +1898,7 @@ svg {
     font-size: 20px;
     width: 20px;
     height: 20px;
-    color: rgba(255, 255, 255, 0.2);
+    color: #404040;
     pointer-events: none;
   }
 }
@@ -1913,7 +1933,6 @@ svg {
 .all-players-filters {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 // Cards grid
@@ -2210,9 +2229,15 @@ svg {
   text-align: center;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+
+  @media (max-width: 640px) {
+    left: -3px;
+    letter-spacing: 1px;
+
+  }
 }
 
-// On mobile, hide year labels for non-key columns (only show first/mid/last)
+// On mobile, show every other year label (even-indexed columns only)
 @media (max-width: 640px) {
   .ap-chart-col:not(.is-key-year) .ap-year {
     opacity: 0;
@@ -2650,14 +2675,14 @@ svg {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.25rem;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   @media (max-width: 640px) {
     .pos-filters {
       display: none;
     }
-
   }
 }
 
@@ -2674,13 +2699,15 @@ svg {
 }
 
 .cmp-rank-badge {
-  background: #93c5fd3d;
-  // border: 1px solid var(--pastel-info);
-  color: var(--pastel-info);
-  border-radius: 4px;
-  padding: 4px 8px;
-  @include ts-display-lg;
-  font-size: $text-md;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .75);
+  border-radius: 6px;
+  padding: 3px 10px;
+  @include ts-label;
+  font-weight: $weight-medium;
+  white-space: nowrap;
+  align-self: center;
 }
 
 .cmp-table-scroll {
@@ -2932,9 +2959,10 @@ svg {
   border-radius: 6px;
   border-left: 3px solid rgba(255, 255, 255, .1);
 
-  &--player {
-    border-left-color: rgba(245, 158, 11, .4);
-  }
+  &--mv  { border-left-color: rgba(52, 211, 153, .5); }   // market value green
+  &--sal { border-left-color: rgba(245, 158, 11, .5); }  // wage bill amber
+  &--age { border-left-color: rgba(96, 165, 250, .5); }  // avg age blue
+  &--player { border-left-color: rgba(245, 158, 11, .4); }
 }
 
 .cmp-expand-stat-val {
