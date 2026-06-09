@@ -198,7 +198,7 @@
 		germany: [1974, 2006],
 		argentina: [1978],
 		spain: [1982],
-		"united-states": [1994],
+		usa: [1994, 2026],
 		"south-korea": [2002],
 		japan: [2002],
 		"south-africa": [2010],
@@ -1803,12 +1803,6 @@
 				</div>`
 						: ""
 				}
-				<div class="cmp-legend">
-					<span class="cmp-legend-item"><span class="cmp-legend-dot" style="background:${metricColor.marketValue}"></span>Market Value</span>
-					<span class="cmp-legend-item"><span class="cmp-legend-dot" style="background:${metricColor.salaryBudget}"></span>Wage Bill</span>
-					<span class="cmp-legend-item"><span class="cmp-legend-dot" style="background:${metricColor.avgAge}"></span>Avg Age</span>
-					<span class="cmp-legend-item"><span class="cmp-legend-dot cmp-legend-dot--current"></span>This team row</span>
-				</div>
 				<p class="cmp-note">Market values estimated from Transfermarkt (June 2026). Gray marker on detail lines shows field average.</p>
 			`;
 
