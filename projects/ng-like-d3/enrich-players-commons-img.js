@@ -201,12 +201,44 @@ async function main() {
 	let already = 0;
 	let sinceLastSave = 0;
 
-	const allPlayers = Object.entries(playersJson).flatMap(([team, players]) =>
+	// ── Priority ordering ────────────────────────────────────────────────────────
+	// Score = goals * 2 + apps (goals weighted slightly more than appearances)
+	const score = (p) => (p.goals || 0) * 2 + (p.apps || 0);
+
+	// Top 200 globally by score
+	const globalRanked = Object.entries(playersJson)
+		.flatMap(([team, players]) => players.map((p) => ({ p, team })))
+		.sort((a, b) => score(b.p) - score(a.p));
+	const top200Set = new Set(globalRanked.slice(0, 200).map(({ p }) => p));
+
+	// Top 20 per country by score
+	const top20PerCountry = new Set(
+		Object.entries(playersJson).flatMap(([team, players]) =>
+			[...players]
+				.sort((a, b) => score(b) - score(a))
+				.slice(0, 20)
+				.map((p) => p),
+		),
+	);
+
+	// Priority set: union of top200 global + top20 per country
+	const prioritySet = new Set([...top200Set, ...top20PerCountry]);
+
+	// Build ordered list: priority players first (sorted by score), then the rest
+	const allEntries = Object.entries(playersJson).flatMap(([team, players]) =>
 		players.map((p) => ({ p, team })),
 	);
+	const priority = allEntries
+		.filter(({ p }) => prioritySet.has(p))
+		.sort((a, b) => score(b.p) - score(a.p));
+	const rest = allEntries.filter(({ p }) => !prioritySet.has(p));
+	const allPlayers = [...priority, ...rest];
 
 	console.log(
 		`\nFetching Wikimedia Commons images for ${allPlayers.length} players…`,
+	);
+	console.log(
+		`  Priority queue: ${priority.length} players (top-200 global + top-20 per country)`,
 	);
 	if (force) console.log("(--force: re-fetching all including existing img)");
 	if (dry) console.log("(--dry: no changes will be written)");
