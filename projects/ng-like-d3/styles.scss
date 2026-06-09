@@ -361,6 +361,12 @@ body.landing-body::after {
   margin: 0 0 $space-5;
   @include ts-hero;
   font-family: "Michroma", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-size: 5vw;
+  color: rgb(242 242 242 / 57%);
+
+  @media (max-width: 640px) {
+    font-size: 14vw;
+  }
 }
 
 .hero-subtitle {
@@ -668,7 +674,7 @@ body.landing-body::after {
   }
 
   .viz-icon {
-    margin-bottom: 1rem; // 16px
+    margin-bottom: 12px; // 16px
     color: var(--fg);
     opacity: 0.7;
 
@@ -681,8 +687,9 @@ body.landing-body::after {
   }
 
   h3 {
-    margin: 0 0 0.4rem; // 0 0 6px
+    margin: 0 0 8px;
     @include ts-body;
+    line-height: 1.2;
     font-weight: $weight-medium;
   }
 
@@ -690,6 +697,10 @@ body.landing-body::after {
     margin: 0;
     @include ts-body-sm;
     color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    padding: 12px;
   }
 }
 
@@ -766,7 +777,7 @@ body.landing-body::after {
   overflow: hidden;
 
   @media (max-width: 640px) {
-    padding: 0.75rem 0.625rem;
+    padding: 12px;
   }
 
   &:hover {
@@ -2905,7 +2916,7 @@ svg {
 
 // ── Expand panel ────────────────────────────────────────────────────────────
 .cmp-expand-panel {
-  padding: .75rem .5rem .8rem 2.25rem;
+  padding: 40px;
   background: rgba(255, 255, 255, .03);
   border-radius: 0 0 5px 5px;
   border-top: 1px solid rgba(255, 255, 255, .06);
@@ -2952,17 +2963,29 @@ svg {
 
 .cmp-expand-stat {
   display: flex;
+  gap: 4px;
+  padding: 12px;
   flex-direction: column;
-  gap: .1rem;
-  padding: .45rem .5rem;
-  background: rgba(255, 255, 255, .04);
-  border-radius: 6px;
-  border-left: 3px solid rgba(255, 255, 255, .1);
+  align-items: center;
 
-  &--mv  { border-left-color: rgba(52, 211, 153, .5); }   // market value green
-  &--sal { border-left-color: rgba(245, 158, 11, .5); }  // wage bill amber
-  &--age { border-left-color: rgba(96, 165, 250, .5); }  // avg age blue
-  &--player { border-left-color: rgba(245, 158, 11, .4); }
+  &--mv {
+    border-left-color: rgba(52, 211, 153, .5);
+  }
+
+  // market value green
+  &--sal {
+    border-left-color: rgba(245, 158, 11, .5);
+  }
+
+  // wage bill amber
+  &--age {
+    border-left-color: rgba(96, 165, 250, .5);
+  }
+
+  // avg age blue
+  &--player {
+    border-left-color: rgba(245, 158, 11, .4);
+  }
 }
 
 .cmp-expand-stat-val {
