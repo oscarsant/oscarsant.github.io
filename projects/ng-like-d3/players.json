@@ -31,7 +31,11 @@
           "goals": 3
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ronaldo_2002_cropped.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ronaldo.jpeg?width=300",
+      "imgFocusY": 33,
+      "imgScale": 1.5,
+      "imgFocusX": 46,
+      "imgAspect": 0.862
     },
     {
       "name": "Pelé",
@@ -64,7 +68,11 @@
           "goals": 4
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Panini_pele_photo_only.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pele_con_brasil_(cropped).jpg?width=300",
+      "imgFocusY": 27,
+      "imgScale": 1.9,
+      "imgFocusX": 34,
+      "imgAspect": 0.737
     },
     {
       "name": "Jairzinho",
@@ -92,7 +100,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jairzinho_1970s.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jairzinho_1970s.jpg?width=300",
+      "imgFocusY": 29,
+      "imgScale": 2.1,
+      "imgFocusX": 53,
+      "imgAspect": 0.693
     },
     {
       "name": "Vavá",
@@ -115,8 +127,11 @@
           "goals": 4
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vavá_en_1962.jpg?width=300"
-
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vav%C3%A1_en_1962.jpg?width=300",
+      "imgFocusY": 40,
+      "imgScale": 1.5,
+      "imgFocusX": 48,
+      "imgAspect": 0.7
     },
     {
       "name": "Ademir",
@@ -134,7 +149,11 @@
           "goals": 9
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ademir_Marques_de_Menezes.png?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ademir_de_Menezes.jpg?width=300",
+      "imgFocusY": 25,
+      "imgScale": 1.7,
+      "imgFocusX": 48,
+      "imgAspect": 0.694
     },
     {
       "name": "Rivaldo",
@@ -157,7 +176,11 @@
           "goals": 5
         }
       },
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_-fc9fVM9x7CfNnqRU7u8mgrdHazzxw5b8g&s?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rivaldo.jpg?width=300",
+      "imgFocusY": 80,
+      "imgScale": 2.7,
+      "imgFocusX": 52,
+      "imgAspect": 0.763
     },
     {
       "name": "Neymar",
@@ -185,7 +208,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Neymar_850_1705.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Neymar_850_1705.jpg?width=300",
+      "imgFocusY": 38,
+      "imgScale": 1.7,
+      "imgFocusX": 52,
+      "imgAspect": 0.667
     },
     {
       "name": "Leônidas",
@@ -208,7 +235,11 @@
           "goals": 7
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonidas_dasilva.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonidas_dasilva.jpg?width=300",
+      "imgFocusY": 23,
+      "imgScale": 3,
+      "imgFocusX": 55,
+      "imgAspect": 0.708
     },
     {
       "name": "Careca",
@@ -231,7 +262,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_de_Oliveira_Filho_(Careca)_01.jpg?width=300"
+      "img": "https://i.pinimg.com/236x/90/f2/2c/90f22c1e6f5ed96919cc23f1c575c76e.jpg?width=300",
+      "imgFocusY": 31,
+      "imgScale": 2.7,
+      "imgFocusX": 50,
+      "imgAspect": 0.667
     },
     {
       "name": "Bebeto",
@@ -259,7 +294,11 @@
           "goals": 3
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bebeto_brazil_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bebeto_brazil.jpg?width=300",
+      "imgFocusY": 37,
+      "imgScale": 1,
+      "imgFocusX": 50,
+      "imgAspect": 0.742
     },
     {
       "name": "Rivellino",
@@ -287,7 +326,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rivelino_brasil_figurita.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rivellino_1970.jpg?width=300",
+      "imgFocusY": 37,
+      "imgFocusX": 48,
+      "imgAspect": 0.693,
+      "imgScale": 2.2
     },
     {
       "name": "Garrincha",
@@ -315,7 +358,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Manoel_Francisco_dos_Santos-Garrincha.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Manoel_Francisco_dos_Santos-Garrincha.jpg?width=300",
+      "imgFocusY": 17,
+      "imgFocusX": 55,
+      "imgAspect": 0.758,
+      "imgScale": 3
     },
     {
       "name": "Zico",
@@ -343,7 +390,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zico_2012.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zico_panini_card_79.jpg?width=300"
     },
     {
       "name": "Romário",
@@ -365,8 +412,7 @@
           "apps": 7,
           "goals": 5
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Senadores_da_57%C2%AA_Legislatura_(52689451805).jpg?width=300"
+      }
     },
     {
       "name": "Sócrates",
@@ -389,7 +435,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Socrates87660.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Socrates_elgrafico_1983.jpg?width=300",
+      "imgFocusY": 50,
+      "imgFocusX": 50,
+      "imgAspect": 1.004,
+      "imgScale": 1
     },
     {
       "name": "Chico",
@@ -406,8 +456,7 @@
           "apps": 6,
           "goals": 4
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/ChicoSquare.jpg?width=300"
+      }
     },
     {
       "name": "Didi",
@@ -435,7 +484,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Waldir_Pereira_1958.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Didi_en_1958.jpg?width=300"
     },
     {
       "name": "Dirceu",
@@ -463,7 +512,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Avellino_1986-87_-_Dirceu_(cropped).jpg?width=300"
+      "img": "https://s.hs-data.com/gfx/person/l/41652.jpg?fallback=male?width=300",
+      "imgFocusY": 29,
+      "imgFocusX": 51,
+      "imgAspect": 0.8,
+      "imgScale": 1.7
     },
     {
       "name": "Baltazar",
@@ -485,8 +538,7 @@
           "apps": 3,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Baltazar_Morais.jpg?width=300"
+      }
     },
     {
       "name": "Tostão",
@@ -508,8 +560,7 @@
           "apps": 6,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Tost%C3%A3o_(Eduardo_Gon%C3%A7alves_de_Andrade%2C_1970).jpg?width=300"
+      }
     },
     {
       "name": "Falcão",
@@ -531,7 +582,12 @@
           "apps": 2,
           "goals": 0
         }
-      }
+      },
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Paulo_Roberto_Falcão,_Roma_1983-84.jpg?width=300",
+      "imgFocusY": 31,
+      "imgFocusX": 47,
+      "imgAspect": 0.676,
+      "imgScale": 2.1
     },
     {
       "name": "Amarildo",
@@ -566,7 +622,11 @@
           "goals": 3
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cesar-Sampaio-Palmeiras-2018.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cesar-Sampaio-Palmeiras-2018.jpg?width=300",
+      "imgFocusY": 34,
+      "imgFocusX": 48,
+      "imgAspect": 0.751,
+      "imgScale": 1.9
     },
     {
       "name": "Luís Fabiano",
@@ -583,8 +643,7 @@
           "apps": 5,
           "goals": 3
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/JSP_0799_(cropped).JPG?width=300"
+      }
     },
     {
       "name": "Perácio",
@@ -623,8 +682,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Roberto_Dinamite.jpg?width=300"
+      }
     },
     {
       "name": "Romeu",
@@ -641,8 +699,7 @@
           "apps": 5,
           "goals": 3
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Palestra_Italia_8x0_Corinthians.jpg?width=300"
+      }
     },
     {
       "name": "Richarlison",
@@ -659,8 +716,7 @@
           "apps": 4,
           "goals": 3
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Richarlison_%C3%A9_homenageado_na_ALES_(10.July.2019)_08_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Preguinho",
@@ -677,8 +733,7 @@
           "apps": 2,
           "goals": 3
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ef_preguinho.jpg?width=300"
+      }
     },
     {
       "name": "Thiago Silva",
@@ -711,7 +766,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Thiago_Silva_850_1582.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Thiago_Silva_850_1582.jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 52,
+      "imgAspect": 0.667,
+      "imgScale": 2.1
     },
     {
       "name": "Mário Zagallo",
@@ -734,7 +793,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A1rio_Zagallo_1974.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A1rio_Zagallo_1974.jpg?width=300",
+      "imgFocusY": 47,
+      "imgFocusX": 44,
+      "imgAspect": 0.729,
+      "imgScale": 1.3
     },
     {
       "name": "Müller",
@@ -761,8 +824,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%B6rrach_-_M%C3%BCller-Markt.jpg?width=300"
+      }
     },
     {
       "name": "Ronaldinho",
@@ -785,7 +847,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ronaldinho_in_2019.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ronaldinho061115.jpg?width=300",
+      "imgFocusY": 42,
+      "imgFocusX": 53,
+      "imgAspect": 0.751,
+      "imgScale": 1.4
     },
     {
       "name": "Robinho",
@@ -807,8 +873,7 @@
           "apps": 4,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Robinho061115-2_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "David Luiz",
@@ -826,7 +891,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Luiz_at_Baku_before_2019_UEFA_Europe_League_Final.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Luiz_at_Baku_before_2019_UEFA_Europe_League_Final.jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 44,
+      "imgAspect": 0.94,
+      "imgScale": 1.6
     },
     {
       "name": "Fred",
@@ -848,8 +917,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Fred_Silver_Boot%2C_Confederations_Cup_2013.jpg?width=300"
+      }
     },
     {
       "name": "Nelinho",
@@ -872,7 +940,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nelinho_2014.jpg?width=300"
+      "img": "https://i.namu.wiki/i/KAnwg46CPKkl1biw4-nfe01W8Byaw7MeaR0QhABQfJcYo9ibcGUCFJohoUQjI7Lrm5VTmtOVzsQnfyIx5-m2Ng.webp?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 48,
+      "imgAspect": 0.786,
+      "imgScale": 1.7
     },
     {
       "name": "Oscar",
@@ -889,8 +961,7 @@
           "apps": 7,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20141118_AUTBRA_5023.jpg?width=300"
+      }
     },
     {
       "name": "Jair",
@@ -907,8 +978,7 @@
           "apps": 6,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jair_Rosa_Pinto_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "José Altafini",
@@ -925,8 +995,7 @@
           "apps": 6,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Altafini_(1974).jpg?width=300"
+      }
     },
     {
       "name": "Zizinho",
@@ -943,8 +1012,7 @@
           "apps": 6,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zizinho%2C_Fundo_Correio_da_Manh%C3%A3_-_2.tif?width=300"
+      }
     },
     {
       "name": "Éder",
@@ -961,8 +1029,7 @@
           "apps": 5,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Eder_2020.jpg?width=300"
+      }
     },
     {
       "name": "Philippe Coutinho",
@@ -980,7 +1047,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Coutinho_2018.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Philippe_Coutinho_850_1692.jpg?width=300",
+      "imgFocusY": 36,
+      "imgFocusX": 50,
+      "imgAspect": 0.667,
+      "imgScale": 1.7
     },
     {
       "name": "Serginho",
@@ -997,8 +1068,7 @@
           "apps": 5,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Serginho_chulapa.jpg?width=300"
+      }
     },
     {
       "name": "Adriano",
@@ -1015,8 +1085,7 @@
           "apps": 4,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Adriano_%22Imperador%22_(3511839448)_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Josimar",
@@ -1034,7 +1103,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Josimar.jpg?width=300"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVeptY5CPRlfSQdOzwQt2o_FUM1ZZn53__g&s?width=300",
+      "imgFocusY": 26,
+      "imgFocusX": 44,
+      "imgAspect": 1,
+      "imgScale": 1.7
     },
     {
       "name": "Julinho",
@@ -1051,8 +1124,7 @@
           "apps": 3,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%BAlio_Botelho_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Pinga",
@@ -1086,8 +1158,7 @@
           "apps": 2,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Elano_blumer.jpg?width=300"
+      }
     },
     {
       "name": "Moderato",
@@ -1104,8 +1175,7 @@
           "apps": 2,
           "goals": 2
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Moderato_Wisintainer_-_1931.jpg?width=300"
+      }
     },
     {
       "name": "Nílton Santos",
@@ -1138,7 +1208,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Djalma_Santos,_Gilmar_Dos_Santos_Neves_y_Nilton_Santos_(Brasil)_-_El_Gráfico_2062_(cropped)_-_3.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nilton_Santos_1_(1956).tif?width=300",
+      "imgFocusY": 23,
+      "imgFocusX": 27,
+      "imgAspect": 0.563,
+      "imgScale": 2.6
     },
     {
       "name": "Djalma Santos",
@@ -1171,7 +1245,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Djalma_Santos.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Djalma_santos_panini_card.jpg?width=300",
+      "imgFocusY": 29,
+      "imgFocusX": 55,
+      "imgAspect": 0.88,
+      "imgScale": 1.6
     },
     {
       "name": "Roberto Carlos",
@@ -1199,7 +1277,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/LS3_1288_(53332367864)_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/LS3_1288_(53332367864)_(cropped).jpg?width=300",
+      "imgFocusY": 33,
+      "imgFocusX": 51,
+      "imgAspect": 0.751,
+      "imgScale": 1.4
     },
     {
       "name": "Zito",
@@ -1254,7 +1336,12 @@
           "apps": 3,
           "goals": 1
         }
-      }
+      },
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Branco_-_Brescia_Calcio_1986-87.jpg?width=300",
+      "imgFocusY": 24,
+      "imgFocusX": 46,
+      "imgAspect": 0.66,
+      "imgScale": 2.8
     },
     {
       "name": "Oscar",
@@ -1281,8 +1368,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20141118_AUTBRA_5023.jpg?width=300"
+      }
     },
     {
       "name": "Paulinho",
@@ -1305,7 +1391,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Paulinho_850_1696.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Paulinho_850_1696.jpg?width=300",
+      "imgFocusY": 39,
+      "imgFocusX": 51,
+      "imgAspect": 0.667,
+      "imgScale": 1.6
     },
     {
       "name": "Fernandinho",
@@ -1327,8 +1417,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20141118_AUTBRA_5080.jpg?width=300"
+      }
     },
     {
       "name": "Juan",
@@ -1372,8 +1461,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ken_Griffey%2C_Jr._June_2009_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Kaká",
@@ -1400,8 +1488,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ricardo_Izecson_dos_Santos_Leite_(Kak%C3%A1)_01.jpg?width=300"
+      }
     },
     {
       "name": "Edinho",
@@ -1450,8 +1537,7 @@
           "apps": 4,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Casemiro_850_1575.jpg?width=300"
+      }
     },
     {
       "name": "Maicon",
@@ -1473,8 +1559,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Maicon_Douglas_Sisenando_-_Inter_Mailand_(2).jpg?width=300"
+      }
     },
     {
       "name": "Gérson",
@@ -1496,8 +1581,7 @@
           "apps": 4,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%A9rson_1970_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Márcio Santos",
@@ -1531,8 +1615,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Di_stefano_argentina_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Carlos Alberto",
@@ -1549,8 +1632,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_alberto_cosmos.jpg?width=300"
+      }
     },
     {
       "name": "Clodoaldo",
@@ -1567,8 +1649,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Clodoaldo_Tavares_de_Santana.jpg?width=300"
+      }
     },
     {
       "name": "Edmílson",
@@ -1585,8 +1666,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Edm%C3%ADlson_-_001.jpg?width=300"
+      }
     },
     {
       "name": "Friaça",
@@ -1603,8 +1683,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Fria%C3%A7a_c.1949.png?width=300"
+      }
     },
     {
       "name": "Maneca",
@@ -1638,8 +1717,7 @@
           "apps": 6,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Valdomiro_Vaz_Franco_1974.jpg?width=300"
+      }
     },
     {
       "name": "Zé Roberto",
@@ -1661,8 +1739,7 @@
           "apps": 5,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/ZE_ROBERTO-PALMEIRAS_(34911500143)_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Raí",
@@ -1679,8 +1756,7 @@
           "apps": 5,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2025-04-30_Lan%C3%A7amento_Fundo_de_Investimento_em_Participa%C3%A7%C3%B5es_Nordeste_Capital_Semente%2C_017_(Ra%C3%AD_Souza).jpg?width=300"
+      }
     },
     {
       "name": "Roberto",
@@ -1714,8 +1790,7 @@
           "apps": 4,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lucas_Paquet%C3%A1_of_West_Ham_(cropped).jpeg?width=300"
+      }
     },
     {
       "name": "Roberto Firmino",
@@ -1749,8 +1824,7 @@
           "apps": 4,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vinicius_Jr_2021.jpg?width=300"
+      }
     },
     {
       "name": "Gilberto",
@@ -1789,8 +1863,7 @@
           "apps": 3,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Juninho_Pernambucano.JPG?width=300"
+      }
     },
     {
       "name": "Reinaldo",
@@ -1807,8 +1880,7 @@
           "apps": 3,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Reinaldo_com_a_camisa_do_Inter_de_Lages.jpeg?width=300"
+      }
     },
     {
       "name": "Renato Augusto",
@@ -1825,8 +1897,7 @@
           "apps": 3,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Renato_Augusto_-_Rio_2016.jpg?width=300"
+      }
     },
     {
       "name": "Rildo",
@@ -1843,8 +1914,7 @@
           "apps": 3,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rildo.JPG?width=300"
+      }
     },
     {
       "name": "Júnior",
@@ -1861,8 +1931,7 @@
           "apps": 1,
           "goals": 1
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ken_Griffey%2C_Jr._June_2009_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Carlos José Castilho",
@@ -1895,7 +1964,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Castilho%2C_1956.tif?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Castilho%2C_1956.tif?width=300",
+      "imgFocusY": 24,
+      "imgFocusX": 48,
+      "imgAspect": 0.694,
+      "imgScale": 3
     },
     {
       "name": "Cafu",
@@ -1956,7 +2029,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Taffarel_2018.png?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Tafarel_playing_for_Internacional_in_the_1980s.jpg?width=300",
+      "imgFocusY": 19,
+      "imgFocusX": 52,
+      "imgAspect": 1.42,
+      "imgScale": 2.1
     },
     {
       "name": "Dunga",
@@ -1984,7 +2061,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunga061115.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Aecio_Neves_e_Dunga_-_17-06-2008_(8368243127)_(cropped).jpg?width=300",
+      "imgFocusY": 27,
+      "imgFocusX": 39,
+      "imgAspect": 0.859,
+      "imgScale": 1.7
     },
     {
       "name": "Lúcio",
@@ -2012,7 +2093,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lucio_2019_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lucio_2019_(cropped).jpg?width=300",
+      "imgFocusY": 34,
+      "imgFocusX": 47,
+      "imgAspect": 0.716,
+      "imgScale": 1.5
     },
     {
       "name": "Gilberto Silva",
@@ -2040,7 +2125,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_-_Press_conferences_SM7_0168_(51649502936)_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_-_Press_conferences_SM7_0168_(51649502936)_(cropped).jpg?width=300",
+      "imgFocusY": 45,
+      "imgFocusX": 42,
+      "imgAspect": 0.749,
+      "imgScale": 1.4
     },
     {
       "name": "Gilmar",
@@ -2068,7 +2157,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/GILMAR_-_Gylmar_dos_Santos_Neve_-_1958.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Djalma_Santos,_Gilmar_Dos_Santos_Neves_y_Nilton_Santos_(Brasil)_-_El_Gráfico_2062_(cropped)_-_2.jpg?width=300",
+      "imgFocusY": 47,
+      "imgFocusX": 45,
+      "imgAspect": 0.789,
+      "imgScale": 1.3
     },
     {
       "name": "Hilderaldo Bellini",
@@ -2096,7 +2189,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hilderaldo_Bellini.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hilderaldo_Luís_Bellini_en_1966.jpg?width=300"
     },
     {
       "name": "Mauro Ramos",
@@ -2124,7 +2217,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauro_Ramos_en_1962.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauro_Ramos_en_1962.jpg?width=300",
+      "imgFocusY": 46,
+      "imgFocusX": 54,
+      "imgAspect": 0.696,
+      "imgScale": 1.1
     },
     {
       "name": "Leão",
@@ -2157,7 +2254,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/LeaoBG.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Émerson_Leão.jpg?width=300",
+      "imgFocusY": 28,
+      "imgFocusX": 71,
+      "imgAspect": 0.693,
+      "imgScale": 1.7
     },
     {
       "name": "Aldair",
@@ -2185,7 +2286,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Aldair.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/HenriGarcin-StudioHarcourt-1956.png?width=300",
+      "imgFocusY": 45,
+      "imgFocusX": 62,
+      "imgAspect": 0.749,
+      "imgScale": 1.4
     },
     {
       "name": "Denílson",
@@ -2236,7 +2341,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%BAlio_C%C3%A9sar_FC_Internazionale.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%BAlio_C%C3%A9sar_FC_Internazionale.jpg?width=300",
+      "imgFocusY": 24,
+      "imgFocusX": 46,
+      "imgAspect": 0.693,
+      "imgScale": 1.6
     },
     {
       "name": "Pepe",
@@ -2258,8 +2367,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Russia-Portugal_CC2017_(11_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Zózimo",
@@ -2281,8 +2389,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%B3zimo_Alves_Calaz%C3%A3es_en_1962.jpg?width=300"
+      }
     },
     {
       "name": "Dani Alves",
@@ -2309,8 +2416,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/07_07_2019_Final_da_Copa_Am%C3%A9rica_2019_(48226649586)_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Jorginho",
@@ -2332,8 +2438,7 @@
           "apps": 7,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_FIFA_Club_World_Cup_Final_-_01_(Jorginho_com_a_medalha_do_Mundial_de_Clubes).jpg?width=300"
+      }
     },
     {
       "name": "Leonardo",
@@ -2356,7 +2461,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Melzi_-_Portrait_of_Leonardo.png?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/LEOSALVA.jpg?width=300"
     },
     {
       "name": "Ramires",
@@ -2379,7 +2484,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramires_santos_do_nascimento.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramires_santos_do_nascimento.jpg?width=300",
+      "imgFocusY": 33,
+      "imgFocusX": 50,
+      "imgAspect": 0.667,
+      "imgScale": 1
     },
     {
       "name": "Marcelo",
@@ -2401,8 +2510,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Marcelo_850_1622.jpg?width=300"
+      }
     },
     {
       "name": "Toninho Cerezo",
@@ -2424,8 +2532,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Toninho_cerezo_in_1982.jpg?width=300"
+      }
     },
     {
       "name": "Willian",
@@ -2447,8 +2554,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bra-Cos_(21)_(cropped_2).jpg?width=300"
+      }
     },
     {
       "name": "Alemão",
@@ -2492,7 +2598,12 @@
           "apps": 4,
           "goals": 0
         }
-      }
+      },
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_850_1625.jpg?width=300",
+      "imgFocusY": 34,
+      "imgFocusX": 52,
+      "imgAspect": 0.694,
+      "imgScale": 1.8
     },
     {
       "name": "Altair",
@@ -2514,8 +2625,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Altair1.jpg?width=300"
+      }
     },
     {
       "name": "Bauer",
@@ -2537,8 +2647,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Carlos_Bauer%2C_Estadio%2C_1950-08-05_(377).jpg?width=300"
+      }
     },
     {
       "name": "Brito",
@@ -2560,8 +2669,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Brito1.JPG?width=300"
+      }
     },
     {
       "name": "Caju",
@@ -2583,8 +2691,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Santos_vs_Sport_-_Caju.png?width=300"
+      }
     },
     {
       "name": "Ely",
@@ -2606,8 +2713,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ely-071.jpg?width=300"
+      }
     },
     {
       "name": "Orlando",
@@ -2629,8 +2735,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Orlando%2C_9_Feb_2017.jpg?width=300"
+      }
     },
     {
       "name": "Piazza",
@@ -2652,8 +2757,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Peter's_Square%2C_Vatican_City_-_April_2007.jpg?width=300"
+      }
     },
     {
       "name": "Rodrigues",
@@ -2675,8 +2779,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rodrigues_CalcareniticShore.jpg?width=300"
+      }
     },
     {
       "name": "Batista",
@@ -2720,8 +2823,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Gabriel_Jesus_850_1688.jpg?width=300"
+      }
     },
     {
       "name": "Amaral",
@@ -2755,8 +2857,7 @@
           "apps": 7,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Passu_Cones%2C_Gilgit_Baltistan.jpg?width=300"
+      }
     },
     {
       "name": "Júnior Baiano",
@@ -2773,8 +2874,7 @@
           "apps": 7,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Junior-Baiano-2008.jpg?width=300"
+      }
     },
     {
       "name": "Marcos",
@@ -2792,7 +2892,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marcos-history-channel-3_(cropped).png?width=300"
+      "img": "https://dailycannon.com/static/uploads/1/2019/09/019095d95ef136dc2ec1ab0846a940c7.jpg?width=300",
+      "imgFocusY": 36,
+      "imgFocusX": 45,
+      "imgAspect": 0.651,
+      "imgScale": 1.7
     },
     {
       "name": "Marinho Chagas",
@@ -2809,8 +2913,7 @@
           "apps": 7,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marinho_chagas_america_(2).jpg?width=300"
+      }
     },
     {
       "name": "Marinho Peres",
@@ -2827,8 +2930,7 @@
           "apps": 7,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Inter-marinho.webp?width=300"
+      }
     },
     {
       "name": "Mauro Silva",
@@ -2845,8 +2947,7 @@
           "apps": 7,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurosilva.png?width=300"
+      }
     },
     {
       "name": "Zinho",
@@ -2931,8 +3032,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jo%C3%A3o_Ferreira_-_Bigode.png?width=300"
+      }
     },
     {
       "name": "Carpegiani",
@@ -2966,8 +3066,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Coutinho_panini_card.jpg?width=300"
+      }
     },
     {
       "name": "Danilo",
@@ -2984,8 +3083,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Danilo_Luiz_850_1591_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "De Sordi",
@@ -3002,8 +3100,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%ADlton_De_Sordi_01.jpg?width=300"
+      }
     },
     {
       "name": "Dida",
@@ -3020,8 +3117,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dida-wikipedia_(cropped_2).png?width=300"
+      }
     },
     {
       "name": "Dino Sani",
@@ -3038,8 +3134,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dino_Sani_01.jpg?width=300"
+      }
     },
     {
       "name": "Félix",
@@ -3056,8 +3151,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/LopedeVega.jpg?width=300"
+      }
     },
     {
       "name": "Hulk",
@@ -3074,8 +3168,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bayer-04_-_Zenit_(14).jpg?width=300"
+      }
     },
     {
       "name": "Jair da Costa",
@@ -3109,8 +3202,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jair_Marinho_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Joel Antônio Martins",
@@ -3200,8 +3292,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_Kleberson.JPG?width=300"
+      }
     },
     {
       "name": "Luís Pereira",
@@ -3218,8 +3309,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Pereira_1974.jpg?width=300"
+      }
     },
     {
       "name": "Luisinho",
@@ -3258,8 +3348,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Gustavo_Dias.jpg?width=300"
+      }
     },
     {
       "name": "Marquinhos",
@@ -3281,8 +3370,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/FC_Salzburg_gegen_Paris_Saint-Germain_UEFA_Champions_League_49_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Mazinho",
@@ -3389,8 +3477,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Time_do_Internacional%2C_1953_(Oreco).jpg?width=300"
+      }
     },
     {
       "name": "Patesko",
@@ -3412,8 +3499,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rodolfo_Patesco_(Brasil)_-_El_Gr%C3%A1fico_917.jpg?width=300"
+      }
     },
     {
       "name": "Roque Júnior",
@@ -3430,8 +3516,7 @@
           "apps": 6,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Roque_J%C3%BAnior_em_2002.jpg?width=300"
+      }
     },
     {
       "name": "Rui",
@@ -3533,7 +3618,12 @@
           "apps": 5,
           "goals": 0
         }
-      }
+      },
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD4OOMhwXs08gyHurVup2hNKFfNOI7GZ_nRg&s?width=300",
+      "imgFocusY": 32,
+      "imgFocusX": 47,
+      "imgAspect": 1,
+      "imgScale": 1.8
     },
     {
       "name": "Brandão",
@@ -3550,8 +3640,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Brand%C3%A3o_5377.jpg?width=300"
+      }
     },
     {
       "name": "Britto",
@@ -3568,8 +3657,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nathaniel_Lord_Britton.jpg?width=300"
+      }
     },
     {
       "name": "Carlos",
@@ -3596,8 +3684,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_2007_cropped.jpg?width=300"
+      }
     },
     {
       "name": "Dida",
@@ -3624,8 +3711,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dida-wikipedia_(cropped_2).png?width=300"
+      }
     },
     {
       "name": "Domingos da Guia",
@@ -3642,8 +3728,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Domingos_da_Guia.JPG?width=300"
+      }
     },
     {
       "name": "Edu",
@@ -3670,8 +3755,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Edu.jpg?width=300"
+      }
     },
     {
       "name": "Elzo",
@@ -3710,8 +3794,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Emerson_2005.jpg?width=300"
+      }
     },
     {
       "name": "Everaldo",
@@ -3745,8 +3828,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A8rcules_CF_(Alginet%2C_Pa%C3%ADs_Valenci%C3%A0%2C_1985).jpg?width=300"
+      }
     },
     {
       "name": "Jaú",
@@ -3780,8 +3862,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%BAlio_C%C3%A9sar_FC_Internazionale.jpg?width=300"
+      }
     },
     {
       "name": "Juninho Paulista",
@@ -3849,8 +3930,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Polegar.jpg?width=300"
+      }
     },
     {
       "name": "Machado",
@@ -3901,8 +3981,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Michel_Bastos.jpg?width=300"
+      }
     },
     {
       "name": "Miranda",
@@ -3953,8 +4032,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nin%C3%A3o%2Cniginho%2Cbengala.jpg?width=300"
+      }
     },
     {
       "name": "Paulo Silas",
@@ -3976,8 +4054,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Paulo_Silas.jpg?width=300"
+      }
     },
     {
       "name": "Raphinha",
@@ -3994,8 +4071,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Raphael_Dias_Belloli_2023.jpg?width=300"
+      }
     },
     {
       "name": "Ricardinho",
@@ -4017,8 +4093,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ricardinho.JPG?width=300"
+      }
     },
     {
       "name": "Rodrygo",
@@ -4035,8 +4110,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rodrygo_2023_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Tim",
@@ -4053,8 +4127,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Time_Magazine_-_first_cover.jpg?width=300"
+      }
     },
     {
       "name": "Waldir Peres",
@@ -4081,8 +4154,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Waldir_peres_in_1982.jpg?width=300"
+      }
     },
     {
       "name": "Walter",
@@ -4099,8 +4171,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Walt_Disney_1946.JPG?width=300"
+      }
     },
     {
       "name": "Zezé Procópio",
@@ -4117,8 +4188,7 @@
           "apps": 5,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zez%C3%A9_Proc%C3%B3pio.png?width=300"
+      }
     },
     {
       "name": "Antony",
@@ -4135,8 +4205,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Antony_2022.jpg?width=300"
+      }
     },
     {
       "name": "Danilo",
@@ -4158,8 +4227,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Danilo_Luiz_850_1591_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Éder Militão",
@@ -4176,8 +4244,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Eder_Militao_2021.jpg?width=300"
+      }
     },
     {
       "name": "Edílson",
@@ -4211,8 +4278,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bra-Cos_(20)_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Felipe Melo",
@@ -4229,8 +4295,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Felipe_Melo_Vicente_de_Carvalho.jpg?width=300"
+      }
     },
     {
       "name": "Fred",
@@ -4252,8 +4317,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Fred_Silver_Boot%2C_Confederations_Cup_2013.jpg?width=300"
+      }
     },
     {
       "name": "Mauro Galvão",
@@ -4275,8 +4339,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauro_Galv%C3%A3o_2025_TV_ALERJ.jpg?width=300"
+      }
     },
     {
       "name": "Mirandinha",
@@ -4310,8 +4373,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nilmar_playing_for_Brazil.jpg?width=300"
+      }
     },
     {
       "name": "Paulo Isidoro",
@@ -4345,8 +4407,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Raymundo_Ricardo_Gomes.jpg?width=300"
+      }
     },
     {
       "name": "Rodrigues Neto",
@@ -4363,8 +4424,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rodrigues_Neto.jpg?width=300"
+      }
     },
     {
       "name": "Valdo",
@@ -4386,8 +4446,7 @@
           "apps": 4,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Valdo_C%C3%A2ndido_Oliveira_Filho.jpg?width=300"
+      }
     },
     {
       "name": "Zé Maria",
@@ -4443,8 +4502,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/FC_Zenit_Saint_Petersburg_vs._Juventus%2C_20_October_2021_28_-_Alex_Sandro_(cropped2).jpg?width=300"
+      }
     },
     {
       "name": "Alfredo",
@@ -4461,8 +4519,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Di_stefano_argentina_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Bernard",
@@ -4479,8 +4536,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernard_2014.jpg?width=300"
+      }
     },
     {
       "name": "Brandãozinho",
@@ -4497,8 +4553,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Brand%C3%A3ozinho_(sem_data).tiff?width=300"
+      }
     },
     {
       "name": "Cabeção",
@@ -4515,8 +4570,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabe%C3%A7%C3%A3o_(sem_data).tiff?width=300"
+      }
     },
     {
       "name": "Carvalho Leite",
@@ -4538,8 +4592,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carvalho_Leite.jpg?width=300"
+      }
     },
     {
       "name": "Casagrande",
@@ -4590,8 +4643,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Den%C3%ADlson_Pereira_Neves_01.jpg?width=300"
+      }
     },
     {
       "name": "Dequinha",
@@ -4608,8 +4660,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dequinha%2C_sem_data.tif?width=300"
+      }
     },
     {
       "name": "Fidélis",
@@ -4643,8 +4694,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/1_Gabriel_Martinelli_arsenal_2025_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Hernanes",
@@ -4661,8 +4711,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hernanes_(2010).JPG?width=300"
+      }
     },
     {
       "name": "Humberto",
@@ -4679,8 +4728,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Coelho_2012.JPG?width=300"
+      }
     },
     {
       "name": "Índio",
@@ -4697,8 +4745,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Correio_da_Manh%C3%A3_AN_417.jpg?width=300"
+      }
     },
     {
       "name": "Jô",
@@ -4715,8 +4762,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/17_Dead_Sea_(13)_(13252089754).jpg?width=300"
+      }
     },
     {
       "name": "Leivinha",
@@ -4733,8 +4779,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leivinha.jpg?width=300"
+      }
     },
     {
       "name": "Lima",
@@ -4751,8 +4796,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS023-E-27953_-_View_of_Peru.jpg?width=300"
+      }
     },
     {
       "name": "Manga",
@@ -4769,8 +4813,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Japan_Bookstore.jpg?width=300"
+      }
     },
     {
       "name": "Maurinho",
@@ -4787,8 +4830,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauro_Raphael_Maurinho_(Boca)_-_El_Gr%C3%A1fico_2185.jpg?width=300"
+      }
     },
     {
       "name": "Pamplona",
@@ -4827,8 +4869,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/PicoParana2006.jpg?width=300"
+      }
     },
     {
       "name": "Paulinho",
@@ -4845,8 +4886,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Paulinho_850_1696.jpg?width=300"
+      }
     },
     {
       "name": "Paulo Henrique",
@@ -4919,8 +4959,7 @@
           "apps": 3,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Stock_Car_2013_Etapa_Bahia_Fotos_Max_Ag_Haack_Bahia_Noticias_(7)_(8756442927)_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Silva",
@@ -4971,8 +5010,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Alex_Telles_2018.jpg?width=300"
+      }
     },
     {
       "name": "Ânderson Polga",
@@ -5006,8 +5044,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Araken_Patusca_(1933).jpg?width=300"
+      }
     },
     {
       "name": "Benedicto",
@@ -5058,8 +5095,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Germany_bremen_stadium.jpg?width=300"
+      }
     },
     {
       "name": "Brilhante",
@@ -5076,8 +5112,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Brasil_-_Mundial_-_1930.jpg?width=300"
+      }
     },
     {
       "name": "Bruno Guimarães",
@@ -5094,8 +5129,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bruno_Guimar%C3%A3es.png?width=300"
+      }
     },
     {
       "name": "Carlos Mozer",
@@ -5112,8 +5146,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_Mozer.jpg?width=300"
+      }
     },
     {
       "name": "Cicinho",
@@ -5130,8 +5163,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cicinho.JPG?width=300"
+      }
     },
     {
       "name": "Doca",
@@ -5148,8 +5180,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Alfredo_de_Almeida_Rego_or_Doca.jpg?width=300"
+      }
     },
     {
       "name": "Douglas Costa",
@@ -5166,8 +5197,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Douglas_Costa_(BRA)_850_1486_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Edmundo",
@@ -5184,8 +5214,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Edmundo.jpg?width=300"
+      }
     },
     {
       "name": "Édson",
@@ -5202,8 +5231,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pele_con_brasil_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Fausto",
@@ -5220,8 +5248,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portada_del_Fausto_de_Estanislao_del_Campo.jpg?width=300"
+      }
     },
     {
       "name": "Fernando",
@@ -5238,8 +5265,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Fernando_Henrique_Cardoso_(1999).jpg?width=300"
+      }
     },
     {
       "name": "Filipe Luís",
@@ -5256,8 +5282,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Filipe_Lu%C3%ADs_2018.jpg?width=300"
+      }
     },
     {
       "name": "Fortes",
@@ -5291,8 +5316,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Goncalves_ou_Marcelo_Gon%C3%A7alves_Costa_Lopes.jpg?width=300"
+      }
     },
     {
       "name": "Hermógenes",
@@ -5326,8 +5350,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Norway_Italy_-_June_2025_A_50.jpg?width=300"
+      }
     },
     {
       "name": "Ivan Mariz",
@@ -5485,8 +5508,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bar%C3%A7a_-_Napoli_-_20140806_-_Pedro_Rodriguez_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Poly",
@@ -5537,8 +5559,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Russinho_(DdN%2C_19350524-6).jpg?width=300"
+      }
     },
     {
       "name": "Teóphilo",
@@ -5555,8 +5576,7 @@
           "apps": 2,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jaksic_Mihajlovic_Theophilo.jpg?width=300"
+      }
     },
     {
       "name": "Velloso",
@@ -5607,8 +5627,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ademir_da_Guia_(1974).jpg?width=300"
+      }
     },
     {
       "name": "Alfredo",
@@ -5625,8 +5644,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Di_stefano_argentina_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Almeida",
@@ -5643,8 +5661,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Porta_Fortifica%C3%A7%C3%A3o_Almeida.jpg?width=300"
+      }
     },
     {
       "name": "Ariel",
@@ -5661,8 +5678,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ariel_-_Revista_de_Cultura_Musical%2C_anno_I%2C_n%C2%BA_8_(capa)%2C_Instituto_de_Estudos_Brasileiros.pdf?width=300"
+      }
     },
     {
       "name": "Armandinho",
@@ -5679,8 +5695,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/ArmandinhoAT.jpg?width=300"
+      }
     },
     {
       "name": "Áttila",
@@ -5697,8 +5712,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Attila_Hunnorum_Rex_Flagellum_Dei_Aquilejae_Eversor_Utini_Instaurator.jpg?width=300"
+      }
     },
     {
       "name": "Canalli",
@@ -5732,8 +5746,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dante_asse_ogcn_2425.png?width=300"
+      }
     },
     {
       "name": "Doriva",
@@ -5772,8 +5785,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ederson_(cropped).png?width=300"
+      }
     },
     {
       "name": "Edevaldo",
@@ -5790,8 +5802,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Edevaldo_Cavalo.jpg?width=300"
+      }
     },
     {
       "name": "Éverton Ribeiro",
@@ -5808,8 +5819,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/EvertonRibeiroFlamengo2018.jpg?width=300"
+      }
     },
     {
       "name": "Fabinho",
@@ -5826,8 +5836,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Fabinho_(43934382122)_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Fontana",
@@ -5861,8 +5870,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Germano_de_Figueiredo_(cropped).png?width=300"
+      }
     },
     {
       "name": "Giovanni",
@@ -5896,8 +5904,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Grafite_beim_Training.jpg?width=300"
+      }
     },
     {
       "name": "Henrique",
@@ -5914,8 +5921,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Henrique2013.jpg?width=300"
+      }
     },
     {
       "name": "Josué",
@@ -5932,8 +5938,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/JosueUCL.jpg?width=300"
+      }
     },
     {
       "name": "Juliano Belletti",
@@ -5950,8 +5955,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Belletti_2018.jpg?width=300"
+      }
     },
     {
       "name": "Júlio Baptista",
@@ -5968,8 +5972,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Julio_Baptista.jpg?width=300"
+      }
     },
     {
       "name": "Luiz Luz",
@@ -5986,8 +5989,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luizluz1934sel.jpg?width=300"
+      }
     },
     {
       "name": "Martim",
@@ -6021,8 +6023,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sherrer_Maxwell_(PSG).JPG?width=300"
+      }
     },
     {
       "name": "Octacílio",
@@ -6073,8 +6074,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Renato_gaucho.jpg?width=300"
+      }
     },
     {
       "name": "Rogério Ceni",
@@ -6096,8 +6096,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Rog%C3%A9rio_Ceni.jpg?width=300"
+      }
     },
     {
       "name": "Sylvio Hoffmann",
@@ -6148,8 +6147,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vampeta_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Viola",
@@ -6166,8 +6164,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_reichenbachiana_001.jpg?width=300"
+      }
     },
     {
       "name": "Waldemar de Brito",
@@ -6184,8 +6181,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/El_brasile%C3%B1o_Waldemar_(San_Lorenzo)_-_El_Gr%C3%A1fico_818.jpg?width=300"
+      }
     },
     {
       "name": "Waldyr",
@@ -6202,8 +6198,7 @@
           "apps": 1,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Waldir_Pereira_1958.jpg?width=300"
+      }
     },
     {
       "name": "Weverton",
@@ -6254,8 +6249,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Okra_Aug_25_2012.JPG?width=300"
+      }
     },
     {
       "name": "Acácio",
@@ -6323,8 +6317,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Baldocchi_(1970).jpg?width=300"
+      }
     },
     {
       "name": "Bismarck",
@@ -6375,8 +6368,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/CassiopeiaCC.jpg?width=300"
+      }
     },
     {
       "name": "César",
@@ -6410,8 +6402,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Cristiano_Ronaldo_(cropped).jpg?width=300"
+      }
     },
     {
       "name": "Dario",
@@ -6428,8 +6419,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Dario_%C5%A0imi%C4%87.jpg?width=300"
+      }
     },
     {
       "name": "Doni",
@@ -6446,8 +6436,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Doni_2011.jpg?width=300"
+      }
     },
     {
       "name": "Edivaldo",
@@ -6481,8 +6470,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gilmar_Rinaldi_CBF.jpg?width=300"
+      }
     },
     {
       "name": "Heurelho Gomes",
@@ -6499,8 +6487,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Watford_v_Norwich_(2).jpg?width=300"
+      }
     },
     {
       "name": "Jefferson",
@@ -6517,8 +6504,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jefferson_Oliveira_Galvao.jpg?width=300"
+      }
     },
     {
       "name": "Joel",
@@ -6552,8 +6538,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Juninho_Pernambucano.JPG?width=300"
+      }
     },
     {
       "name": "Luisão",
@@ -6575,8 +6560,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luisao061115.jpg?width=300"
+      }
     },
     {
       "name": "Mineiro",
@@ -6661,8 +6645,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedro_Tonon_Geromel_-_Gr%C3%AAmio_(cropped).png?width=300"
+      }
     },
     {
       "name": "Polozzi",
@@ -6747,8 +6730,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Freda_Taison.jpg?width=300"
+      }
     },
     {
       "name": "Tita",
@@ -6816,8 +6798,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%A9_S%C3%A9rgio_(Ex_ponta_esquerda_da_sele%C3%A7%C3%A3o).jpg?width=300"
+      }
     },
     {
       "name": "Zetti",
@@ -6834,8 +6815,7 @@
           "apps": 0,
           "goals": 0
         }
-      },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Armelino_Donizetti_Quagliato_(Zetti)_02_cropped.jpg?width=300"
+      }
     }
   ],
   "argentina": [
@@ -6875,7 +6855,11 @@
           "goals": 7
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lionel_Messi_20180626_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lionel_Messi_20180626_(cropped).jpg?width=300",
+      "imgFocusY": 38,
+      "imgFocusX": 46,
+      "imgAspect": 0.67,
+      "imgScale": 1.6
     },
     {
       "name": "Gabriel Batistuta",
@@ -6903,7 +6887,11 @@
           "goals": 1
         }
       },
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYLGleCDr5Bn0FjqlfghiH_TwkhGYPrJqAw&s?width=300"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYLGleCDr5Bn0FjqlfghiH_TwkhGYPrJqAw&s?width=300",
+      "imgFocusY": 31,
+      "imgFocusX": 48,
+      "imgAspect": 0.665,
+      "imgScale": 2.1
     },
     {
       "name": "Diego Maradona",
@@ -6936,7 +6924,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_celebrando_copa_(cropped)_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_celebrando_copa_(cropped)_(cropped).jpg?width=300",
+      "imgFocusY": 40,
+      "imgFocusX": 62,
+      "imgAspect": 0.803,
+      "imgScale": 1.1
     },
     {
       "name": "Guillermo Stábile",
@@ -6954,7 +6946,11 @@
           "goals": 8
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Stabile_hurac_1926.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Stabile_hurac_1926.jpg?width=300",
+      "imgFocusY": 48,
+      "imgFocusX": 47,
+      "imgAspect": 0.755,
+      "imgScale": 1.2
     },
     {
       "name": "Mario Kempes",
@@ -6982,7 +6978,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kempes_Valencia_CF.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kempes_Valencia_CF.jpg?width=300",
+      "imgFocusY": 36,
+      "imgFocusX": 55,
+      "imgAspect": 0.746,
+      "imgScale": 1.8
     },
     {
       "name": "Gonzalo Higuaín",
@@ -8233,7 +8233,6 @@
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Mascherano_-_2011.jpg?width=300"
-
     },
     {
       "name": "Nicolás Otamendi",
@@ -29481,7 +29480,6 @@
         }
       },
       "img": "https://cdn-img.staticzz.com/img/jogadores/new/57/58/5758_lothar_matthaus_20250330135310.jpg?width=300"
-
     },
     {
       "name": "Helmut Haller",
@@ -29715,7 +29713,7 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang_Overath_1971_Ajman_stamp.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolfgang_Overath_(1970).jpg?width=300"
     },
     {
       "name": "Pierre Littbarski",
@@ -29743,7 +29741,7 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pierre_Littbarski_2006_(cropped).jpg?width=300"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh7Uf91OL6svFlpQBrVsmD-lMoY9-RDJfwaA&s?width=300"
     },
     {
       "name": "Toni Kroos",
@@ -31035,7 +31033,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Team_Germany_850_0740.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Manuel_Neuer_850_0723.jpg#/media/File:20180602_FIFA_Friendly_Match_Austria_vs._Germany_Manuel_Neuer_850_0723.jpg?width=300"
     },
     {
       "name": "Per Mertesacker",
@@ -41758,7 +41756,6 @@
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Lloris_Euro_2012_v2.jpg?width=300"
-
     },
     {
       "name": "Fabien Barthez",
@@ -72510,7 +72507,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luka_Modric_Interview_2021_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/ISL-HRV_(7)_(cropped)_(cropped).jpg?width=300"
     },
     {
       "name": "Ivica Olić",
@@ -111807,7 +111804,7 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Mex-Kor_(51).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/RafaelMarquezAlvarez.jpg?width=300"
     },
     {
       "name": "Cuauhtémoc Blanco",

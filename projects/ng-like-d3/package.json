@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "smartcrop-sharp": "^2.0.8"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "@vladmandic/face-api": "^1.7.15",
+    "canvas": "^3.2.3"
+  }
+}

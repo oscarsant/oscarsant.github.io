@@ -1004,7 +1004,41 @@
 				: (parts[0] || "?")[0];
 		})();
 		if (p.img) {
-			return `<div class="ap-avatar"><img class="ap-avatar-img" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentElement.dataset.noimg='1';this.remove()"></div>`;
+			if (p.imgFocusY != null && p.imgScale && p.imgScale > 1) {
+				// bgY: CSS bg-position % to center the face vertically.
+				// Formula: bgY = (focusY * scale - 50) / (scale - 1)
+				const bgY = Math.min(
+					100,
+					Math.max(
+						0,
+						Math.round((p.imgFocusY * p.imgScale - 50) / (p.imgScale - 1)),
+					),
+				);
+				// bgX: same formula but horizontal. Rendered width = imgAspect * scale.
+				// If rendered image is wider than container, we can scroll horizontally.
+				const focusX = p.imgFocusX ?? 50;
+				const renderedWScale = (p.imgAspect ?? 1) * p.imgScale;
+				const bgX =
+					renderedWScale > 1
+						? Math.min(
+								100,
+								Math.max(
+									0,
+									Math.round(
+										(focusX * renderedWScale - 50) / (renderedWScale - 1),
+									),
+								),
+							)
+						: 50;
+				const sizePct = Math.round(p.imgScale * 100);
+				const bgStyle = `background:url('${p.img}') ${bgX}% ${bgY}% / auto ${sizePct}% no-repeat`;
+				return `<div class="ap-avatar" style="${bgStyle}"><img src="${p.img}" style="display:none" loading="lazy" onerror="this.parentElement.removeAttribute('style');this.parentElement.dataset.noimg='1'"></div>`;
+			}
+			const focusStyle =
+				p.imgFocusY != null
+					? ` style="object-position:center ${p.imgFocusY}%"`
+					: "";
+			return `<div class="ap-avatar"><img class="ap-avatar-img" src="${p.img}" alt="${p.name}" loading="lazy"${focusStyle} onerror="this.parentElement.dataset.noimg='1';this.remove()"></div>`;
 		}
 		return `<div class="ap-avatar ap-avatar--initials" style="--av-color:${lineColor}">${initials.toUpperCase()}</div>`;
 	};

@@ -165,7 +165,7 @@ body.landing-body::before {
   pointer-events: none;
   z-index: 0;
   background: url("Brazil_v_italia_1970_04.jpg") top left/cover no-repeat;
-  filter: grayscale(1) contrast(1.1) brightness(0.55);
+  filter: grayscale(1) contrast(1.1) brightness(0.2);
   background-position: 20% 0;
 }
 @media (max-width: 640px) {
@@ -181,7 +181,7 @@ body.landing-body::after {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.58) 0%, rgba(6, 6, 6, 0.74) 36%, rgba(8, 8, 8, 0.95) 64%, #090909 82%, #090909 100%), radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 35%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.58) 0%, rgba(6, 6, 6, 0.74) 36%, rgba(8, 8, 8, 0.95) 85%, #090909 100%, #090909 100%), radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .wrap {
@@ -189,7 +189,7 @@ body.landing-body::after {
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 6rem 1rem 1rem;
+  padding: 10rem 1rem 1rem;
 }
 @media (min-width: 640px) {
   .wrap {
@@ -1235,7 +1235,7 @@ svg {
   padding: 12px 20px;
   background: transparent;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   color: var(--muted);
   font-size: 0.7rem;
   font-weight: 500;
@@ -1630,9 +1630,9 @@ svg {
   font-size: 0.7rem;
   font-weight: 200;
   line-height: 1.5;
-  letter-spacing: 0.4px;
-  color: var(--muted);
-  font-size: 0.5rem;
+  letter-spacing: 0.5px;
+  color: rgba(158, 158, 158, 0.7803921569);
+  font-size: 0.6rem;
 }
 
 .tab-panel {
@@ -2701,15 +2701,10 @@ svg {
   border-radius: 5px;
 }
 .cmp-bar-row:hover > .cmp-bar-main {
-  background: rgba(255, 255, 255, 0.04);
+  border-left: 1px solid var(--muted);
 }
 .cmp-bar-row.cmp-bar-row--current > .cmp-bar-main {
-  border-right: 2px solid var(--accent);
   border-left: 2px solid var(--accent);
-}
-.cmp-bar-row.cmp-bar-row--expanded > .cmp-bar-main {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 5px 5px 0 0;
 }
 
 .cmp-bar-main {
@@ -2787,7 +2782,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--muted);
   font-size: 1.1rem;
   line-height: 1;
   transition: transform 0.2s ease, color 0.15s;
