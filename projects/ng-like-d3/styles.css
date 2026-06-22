@@ -170,7 +170,6 @@ body.landing-body::before {
 }
 @media (max-width: 640px) {
   body.landing-body::before {
-    filter: grayscale(1) contrast(1.05) brightness(0.65);
     background-size: 2040px;
   }
 }
