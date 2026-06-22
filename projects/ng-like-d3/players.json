@@ -484,7 +484,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Didi_en_1958.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Didi_en_1958.jpg?width=300",
+      "imgFocusY": 33,
+      "imgFocusX": 38,
+      "imgAspect": 0.776,
+      "imgScale": 1.5
     },
     {
       "name": "Dirceu",
@@ -2255,10 +2259,10 @@
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Émerson_Leão.jpg?width=300",
-      "imgFocusY": 28,
-      "imgFocusX": 71,
-      "imgAspect": 0.693,
-      "imgScale": 1.7
+      "imgFocusY": 22,
+      "imgFocusX": 44,
+      "imgAspect": 0.667,
+      "imgScale": 3
     },
     {
       "name": "Aldair",
@@ -7010,7 +7014,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Higua%C3%ADn_20180626.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Higua%C3%ADn_20180626.jpg?width=300",
+      "imgFocusY": 25,
+      "imgFocusX": 50,
+      "imgAspect": 0.7,
+      "imgScale": 2.2
     },
     {
       "name": "René Houseman",
@@ -7033,7 +7041,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-N0619-0034%2C_Fu%C3%9Fball-WM%2C_Argentinien_-_Italien_1-1.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-N0619-0034%2C_Fu%C3%9Fball-WM%2C_Argentinien_-_Italien_1-1.jpg?width=300",
+      "imgFocusY": 50,
+      "imgFocusX": 50,
+      "imgAspect": 1.232,
+      "imgScale": 1
     },
     {
       "name": "Daniel Bertoni",
@@ -7056,7 +7068,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Bertoni_2006.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Bertoni_2006.jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 54,
+      "imgAspect": 0.735,
+      "imgScale": 1.6
     },
     {
       "name": "Claudio Caniggia",
@@ -7084,7 +7100,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Caniggia_sonriente_1988.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Caniggia_sonriente_1988.jpg?width=300",
+      "imgFocusY": 31,
+      "imgFocusX": 50,
+      "imgAspect": 0.653,
+      "imgScale": 2.1
     },
     {
       "name": "Jorge Valdano",
@@ -7107,7 +7127,11 @@
           "goals": 4
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Valdano.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Valdano.jpg?width=300",
+      "imgFocusY": 20,
+      "imgFocusX": 46,
+      "imgAspect": 0.663,
+      "imgScale": 3
     },
     {
       "name": "Hernán Crespo",
@@ -7135,7 +7159,11 @@
           "goals": 3
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hern%C3%A1n_Crespo.png?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hern%C3%A1n_Crespo.png?width=300",
+      "imgFocusY": 20,
+      "imgFocusX": 54,
+      "imgAspect": 0.559,
+      "imgScale": 2.5
     },
     {
       "name": "Julián Álvarez",
@@ -7153,7 +7181,11 @@
           "goals": 4
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Juli%C3%A1n_%C3%81lvarez_(footballer)_2023.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Juli%C3%A1n_%C3%81lvarez_(footballer)_2023.jpg?width=300",
+      "imgFocusY": 22,
+      "imgFocusX": 53,
+      "imgAspect": 0.685,
+      "imgScale": 2.9
     },
     {
       "name": "Leopoldo Luque",
@@ -7171,7 +7203,11 @@
           "goals": 4
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leopoldo_Luque_1978.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leopoldo_Luque_1978.jpg?width=300",
+      "imgFocusY": 15,
+      "imgFocusX": 49,
+      "imgAspect": 0.663,
+      "imgScale": 3
     },
     {
       "name": "Ángel Di María",
@@ -7204,7 +7240,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/NIG-ARG_(5).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/NIG-ARG_(5).jpg?width=300",
+      "imgFocusY": 28,
+      "imgFocusX": 43,
+      "imgAspect": 0.698,
+      "imgScale": 1.5
     },
     {
       "name": "Jorge Burruchaga",
@@ -7255,7 +7295,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_passarella_en_1985.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_passarella_en_1985.jpg?width=300",
+      "imgFocusY": 26,
+      "imgFocusX": 42,
+      "imgAspect": 0.616,
+      "imgScale": 2.7
     },
     {
       "name": "Maxi Rodríguez",
@@ -7283,7 +7327,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Suisse_vs_Argentine_-_Maximiliano_Rodriguez_(cropped2).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Suisse_vs_Argentine_-_Maximiliano_Rodriguez_(cropped2).jpg?width=300",
+      "imgFocusY": 33,
+      "imgFocusX": 50,
+      "imgAspect": 0.667,
+      "imgScale": 1
     },
     {
       "name": "Carlos Tevez",
@@ -7306,7 +7354,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_Tevez_with_Argentina_November_2014_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_Tevez_with_Argentina_November_2014_(cropped).jpg?width=300",
+      "imgFocusY": 18,
+      "imgFocusX": 46,
+      "imgAspect": 0.653,
+      "imgScale": 3
     },
     {
       "name": "Carlos Peucelle",
@@ -7324,7 +7376,11 @@
           "goals": 3
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Peucelle_1929.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Peucelle_1929.jpg?width=300",
+      "imgFocusY": 47,
+      "imgFocusX": 46,
+      "imgAspect": 0.859,
+      "imgScale": 1.3
     },
     {
       "name": "Luis Artime",
@@ -7360,7 +7416,11 @@
           "goals": 3
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Orestes_Omar_Corbatta_(Racing)_-_El_Gr%C3%A1fico_1932.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Orestes_Omar_Corbatta_(Racing)_-_El_Gr%C3%A1fico_1932.jpg?width=300",
+      "imgFocusY": 31,
+      "imgFocusX": 54,
+      "imgAspect": 0.735,
+      "imgScale": 1.9
     },
     {
       "name": "Sergio Agüero",
@@ -7388,7 +7448,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ag%C3%BCero_in_2018.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ag%C3%BCero_in_2018.jpg?width=300",
+      "imgFocusY": 34,
+      "imgFocusX": 52,
+      "imgAspect": 0.667,
+      "imgScale": 1.5
     },
     {
       "name": "Ariel Ortega",
@@ -7416,7 +7480,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ariel_Ortega_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ariel_Ortega_(cropped).jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 46,
+      "imgAspect": 0.751,
+      "imgScale": 1.6
     },
     {
       "name": "Marcos Rojo",
@@ -7439,7 +7507,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marcos_Rojo_2018.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marcos_Rojo_2018.jpg?width=300",
+      "imgFocusY": 34,
+      "imgFocusX": 43,
+      "imgAspect": 0.856,
+      "imgScale": 1.6
     },
     {
       "name": "Adolfo Zumelzú",
@@ -7475,7 +7547,11 @@
           "goals": 2
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Monti_1934.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Monti_1934.jpg?width=300",
+      "imgFocusY": 32,
+      "imgFocusX": 54,
+      "imgAspect": 0.809,
+      "imgScale": 1.6
     },
     {
       "name": "Héctor Yazalde",
@@ -7521,7 +7597,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruggeri_debut_boca.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruggeri_debut_boca.jpg?width=300",
+      "imgFocusY": 25,
+      "imgFocusX": 46,
+      "imgAspect": 0.674,
+      "imgScale": 3
     },
     {
       "name": "Alberto Tarantini",
@@ -7544,7 +7624,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarantini_argentina.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarantini_argentina.jpg?width=300",
+      "imgFocusY": 20,
+      "imgFocusX": 51,
+      "imgAspect": 0.546,
+      "imgScale": 3
     },
     {
       "name": "Osvaldo Ardiles",
@@ -7567,7 +7651,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Osvaldo_Ardiles_(1981).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Osvaldo_Ardiles_(1981).jpg?width=300",
+      "imgFocusY": 24,
+      "imgFocusX": 51,
+      "imgAspect": 0.696,
+      "imgScale": 3
     },
     {
       "name": "Roberto Ayala",
@@ -7595,7 +7683,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/018_Summer_Youth_Olympics_(30382602628)_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/018_Summer_Youth_Olympics_(30382602628)_(cropped).jpg?width=300",
+      "imgFocusY": 38,
+      "imgFocusX": 51,
+      "imgAspect": 0.789,
+      "imgScale": 1.5
     },
     {
       "name": "Claudio López",
@@ -7618,7 +7710,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Claudio_L%C3%B3pez.png?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Claudio_L%C3%B3pez.png?width=300",
+      "imgFocusY": 24,
+      "imgFocusX": 46,
+      "imgAspect": 0.799,
+      "imgScale": 2.2
     },
     {
       "name": "Gabriel Heinze",
@@ -7641,7 +7737,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Heinze_en_Newell's_Old_Boys_(2022).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Heinze_en_Newell's_Old_Boys_(2022).jpg?width=300",
+      "imgFocusY": 29,
+      "imgFocusX": 47,
+      "imgAspect": 0.929,
+      "imgScale": 2.1
     },
     {
       "name": "Javier Zanetti",
@@ -7664,7 +7764,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Adelmar_Zanetti.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Adelmar_Zanetti.jpg?width=300",
+      "imgFocusY": 13,
+      "imgFocusX": 15,
+      "imgAspect": 0.729,
+      "imgScale": 3
     },
     {
       "name": "Martín Demichelis",
@@ -7687,7 +7791,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Demichelis_Man_City_1.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Demichelis_Man_City_1.jpg?width=300",
+      "imgFocusY": 19,
+      "imgFocusX": 56,
+      "imgAspect": 0.602,
+      "imgScale": 3
     },
     {
       "name": "Abel Balbo",
@@ -7715,7 +7823,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Abel_Balbo_-_AS_Roma_(recorte).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Abel_Balbo_-_AS_Roma_(recorte).jpg?width=300",
+      "imgFocusY": 43,
+      "imgFocusX": 51,
+      "imgAspect": 0.801,
+      "imgScale": 1.4
     },
     {
       "name": "Enzo Fernández",
@@ -7733,7 +7845,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Enzo_Fern%C3%A1ndez_2025_FIFA_Club_World_Cup_Final.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Enzo_Fern%C3%A1ndez_2025_FIFA_Club_World_Cup_Final.jpg?width=300",
+      "imgFocusY": 22,
+      "imgFocusX": 70,
+      "imgAspect": 0.685,
+      "imgScale": 2.3
     },
     {
       "name": "José Luis Brown",
@@ -7769,7 +7885,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nahuel_Molina_WC2022.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nahuel_Molina_WC2022.jpg?width=300",
+      "imgFocusY": 37,
+      "imgFocusX": 50,
+      "imgAspect": 0.749,
+      "imgScale": 1
     },
     {
       "name": "Alexis Mac Allister",
@@ -7787,7 +7907,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexis_Mac_Allister_WC_2022.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexis_Mac_Allister_WC_2022.jpg?width=300",
+      "imgFocusY": 29,
+      "imgFocusX": 50,
+      "imgAspect": 0.59,
+      "imgScale": 1.1
     },
     {
       "name": "José Sanfilippo",
@@ -7810,7 +7934,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Sanfilippo_1962.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Sanfilippo_1962.jpg?width=300",
+      "imgFocusY": 27,
+      "imgFocusX": 52,
+      "imgAspect": 0.532,
+      "imgScale": 2.9
     },
     {
       "name": "Pedro Troglio",
@@ -7863,7 +7991,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/WK_voetbal_1974_Argentijnen_in_trainingskamp%2C_Ayala_(kop)%2C_Bestanddeelnr_927-2805.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/WK_voetbal_1974_Argentijnen_in_trainingskamp%2C_Ayala_(kop)%2C_Bestanddeelnr_927-2805.jpg?width=300",
+      "imgFocusY": 47,
+      "imgFocusX": 39,
+      "imgAspect": 0.663,
+      "imgScale": 2
     },
     {
       "name": "Alejandro Scopelli",
@@ -7933,7 +8065,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Varallo_boca_portrait.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Varallo_boca_portrait.jpg?width=300",
+      "imgFocusY": 23,
+      "imgFocusX": 50,
+      "imgAspect": 0.817,
+      "imgScale": 2.4
     },
     {
       "name": "Mario Evaristo",
@@ -7951,7 +8087,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentinesquad1929.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentinesquad1929.jpg?width=300",
+      "imgFocusY": 50,
+      "imgFocusX": 50,
+      "imgAspect": 1.506,
+      "imgScale": 1
     },
     {
       "name": "Ermindo Onega",
@@ -8004,7 +8144,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ram%C3%B3n_D%C3%ADaz_(25383125054)_(2)_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ram%C3%B3n_D%C3%ADaz_(25383125054)_(2)_(cropped).jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 54,
+      "imgAspect": 1.168,
+      "imgScale": 1.3
     },
     {
       "name": "Gabriel Mercado",
@@ -8058,7 +8202,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Saviola_-_S.L._Benfica_player.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Saviola_-_S.L._Benfica_player.jpg?width=300",
+      "imgFocusY": 44,
+      "imgFocusX": 48,
+      "imgAspect": 0.859,
+      "imgScale": 1.2
     },
     {
       "name": "Ludovico Avio",
@@ -8146,7 +8294,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedro_Pasculli.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedro_Pasculli.jpg?width=300",
+      "imgFocusY": 40,
+      "imgFocusX": 47,
+      "imgAspect": 0.674,
+      "imgScale": 1.7
     },
     {
       "name": "Alberto Galateo",
@@ -8199,7 +8351,11 @@
           "goals": 1
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_palermo_fkm08.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_palermo_fkm08.jpg?width=300",
+      "imgFocusY": 25,
+      "imgFocusX": 37,
+      "imgAspect": 0.653,
+      "imgScale": 2.8
     },
     {
       "name": "Javier Mascherano",
@@ -8232,7 +8388,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Mascherano_-_2011.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Mascherano_-_2011.jpg?width=300",
+      "imgFocusY": 47,
+      "imgFocusX": 45,
+      "imgAspect": 0.751,
+      "imgScale": 1.3
     },
     {
       "name": "Nicolás Otamendi",
@@ -8260,7 +8420,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_team_in_St._Petersburg_(cropped)_Otamendi.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_team_in_St._Petersburg_(cropped)_Otamendi.jpg?width=300",
+      "imgFocusY": 26,
+      "imgFocusX": 37,
+      "imgAspect": 0.685,
+      "imgScale": 2.4
     },
     {
       "name": "Ubaldo Fillol",
@@ -8361,7 +8525,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_galvan_panini_cropped.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_galvan_panini_cropped.jpg?width=300",
+      "imgFocusY": 37,
+      "imgFocusX": 51,
+      "imgAspect": 0.794,
+      "imgScale": 1.4
     },
     {
       "name": "Sergio Romero",
@@ -8434,7 +8602,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Diego_Simeone.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Diego_Simeone.jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 42,
+      "imgAspect": 0.667,
+      "imgScale": 1.6
     },
     {
       "name": "Juan Sebastián Verón",
@@ -8508,7 +8680,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentine_-_Portugal_-_Sergio_Batista.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentine_-_Portugal_-_Sergio_Batista.jpg?width=300",
+      "imgFocusY": 34,
+      "imgFocusX": 49,
+      "imgAspect": 0.667,
+      "imgScale": 2.4
     },
     {
       "name": "Nicolás Tagliafico",
@@ -8531,7 +8707,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_team_in_St._Petersburg_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_team_in_St._Petersburg_(cropped).jpg?width=300",
+      "imgFocusY": 26,
+      "imgFocusX": 31,
+      "imgAspect": 0.623,
+      "imgScale": 1.8
     },
     {
       "name": "Gabriel Calderón",
@@ -8582,7 +8762,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Chamot.JPG?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_Chamot.JPG?width=300",
+      "imgFocusY": 21,
+      "imgFocusX": 47,
+      "imgAspect": 0.804,
+      "imgScale": 2.7
     },
     {
       "name": "Nery Pumpido",
@@ -8677,7 +8861,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marcos_Rojo_(L)%2C_Nicol%C3%A1s_Burdisso_(M)%2C_Angel_di_Maria_(R)_%E2%80%93_Portugal_vs._Argentina%2C_9th_February_2011_(cropped).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marcos_Rojo_(L)%2C_Nicol%C3%A1s_Burdisso_(M)%2C_Angel_di_Maria_(R)_%E2%80%93_Portugal_vs._Argentina%2C_9th_February_2011_(cropped).jpg?width=300",
+      "imgFocusY": 41,
+      "imgFocusX": 37,
+      "imgAspect": 0.689,
+      "imgScale": 1.4
     },
     {
       "name": "Roberto Néstor Sensini",
@@ -8705,7 +8893,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A9stor_Sensini_-_Parma_AC_(recorte).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A9stor_Sensini_-_Parma_AC_(recorte).jpg?width=300",
+      "imgFocusY": 47,
+      "imgFocusX": 52,
+      "imgAspect": 0.69,
+      "imgScale": 1.3
     },
     {
       "name": "Roberto Perfumo",
@@ -8836,7 +9028,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristian_Romero_WC2022.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristian_Romero_WC2022.jpg?width=300",
+      "imgFocusY": 26,
+      "imgFocusX": 50,
+      "imgAspect": 0.631,
+      "imgScale": 2.3
     },
     {
       "name": "Emiliano Martínez",
@@ -8854,7 +9050,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Louis_City_vs_Aston_Villa_(Jul_2025)_14_(Emiliano_Mart%C3%ADnez).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Louis_City_vs_Aston_Villa_(Jul_2025)_14_(Emiliano_Mart%C3%ADnez).jpg?width=300",
+      "imgFocusY": 15,
+      "imgFocusX": 49,
+      "imgAspect": 0.635,
+      "imgScale": 3
     },
     {
       "name": "Ezequiel Garay",
@@ -8872,7 +9072,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zenit-KS_(7).jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zenit-KS_(7).jpg?width=300",
+      "imgFocusY": 35,
+      "imgFocusX": 50,
+      "imgAspect": 0.696,
+      "imgScale": 1
     },
     {
       "name": "José Varacka",
@@ -8918,7 +9122,11 @@
           "goals": 0
         }
       },
-      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Juan_Pablo_Sor%C3%ADn.jpg?width=300"
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Juan_Pablo_Sor%C3%ADn.jpg?width=300",
+      "imgFocusY": 30,
+      "imgFocusX": 50,
+      "imgAspect": 0.592,
+      "imgScale": 1.1
     },
     {
       "name": "Juan Simón",

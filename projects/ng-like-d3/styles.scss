@@ -2688,12 +2688,6 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: 640px) {
-    .pos-filters {
-      display: none;
-    }
-  }
 }
 
 .cmp-metric-toggle {
@@ -2758,7 +2752,7 @@ svg {
 
 .cmp-col-headers {
   display: grid;
-  grid-template-columns: 20px 64px minmax(110px, 1fr) minmax(110px, 1fr) minmax(90px, 1fr);
+  grid-template-columns: 64px minmax(140px, 1fr) 140px;
   gap: .5rem;
   padding: .2rem .25rem .35rem;
   border-bottom: 1px solid rgba(255, 255, 255, .08);
@@ -2768,6 +2762,7 @@ svg {
 .cmp-col-header-team {
   @include ts-label;
   color: rgba(255, 255, 255, .25);
+  text-align: center;
 }
 
 .cmp-col-header-spacer {
@@ -2782,35 +2777,62 @@ svg {
   color: rgba(255, 255, 255, .25);
   text-align: center;
   padding: 0;
-  cursor: pointer;
   white-space: nowrap;
 
   &--active {
     color: rgba(255, 255, 255, .7);
   }
+
+  // Pair container: stacks two sub-buttons vertically
+  &--pair {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    justify-content: space-evenly;
+  }
 }
 
-.cmp-sticky-col {
-  position: sticky;
-  z-index: 2;
-  background: #0b0b0b;
+.cmp-col-header-sub {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  @include ts-label;
+  color: rgba(255, 255, 255, .25);
+  text-align: left;
+  padding: 0;
+  white-space: nowrap;
+  display: block;
+
+  &.cmp-col-header--active {
+    color: rgba(255, 255, 255, .7);
+  }
 }
+
+// .cmp-sticky-col {
+//   position: sticky;
+//   z-index: 2;
+//   background: #0b0b0b;
+// }
 
 .cmp-sticky-col--chevron {
   left: 0;
 }
 
-.cmp-sticky-col--team {
-  left: 18px;
-  box-shadow: 10px 0 14px -14px rgba(0, 0, 0, .9);
-}
+// .cmp-sticky-col--team {
+//   left: 18px;
+//   box-shadow: 10px 0 14px -14px rgba(0, 0, 0, .9);
+// }
 
 .cmp-bar-row {
   border-radius: 5px;
 
-  &:hover>.cmp-bar-main {
-    border-left: 1px solid var(--muted);
-  }
+  // &:hover>.cmp-bar-main {
+  //   border-left: 1px solid var(--muted);
+  // }
 
   &.cmp-bar-row--current>.cmp-bar-main {
     border-left: 2px solid var(--accent);
@@ -2819,9 +2841,8 @@ svg {
 
 .cmp-bar-main {
   display: grid;
-  grid-template-columns: 32px 64px minmax(110px, 1fr) minmax(110px, 1fr) minmax(90px, 1fr);
+  grid-template-columns: 64px minmax(140px, 1fr) 140px;
   align-items: center;
-  cursor: pointer;
 }
 
 // .cmp-bar-main>.cmp-sticky-col {
@@ -2852,6 +2873,7 @@ svg {
 .cmp-inline-line {
   position: relative;
   margin-right: 12px;
+  height: 12px;
 }
 
 .cmp-inline-line-base {
@@ -2869,7 +2891,7 @@ svg {
   position: absolute;
   left: 0;
   top: 50%;
-  height: 2px;
+  height: 3px;
   transform: translateY(-50%);
   border-radius: 999px;
   transition: width .35s ease, background .2s ease;
@@ -2883,6 +2905,73 @@ svg {
   border-radius: 999px;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 1px rgba(11, 11, 11, .9);
+}
+
+// ── Table row: stacked value pair cell ─────────────────────────────────
+.cmp-row-vpair {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  padding: .45rem 0 .45rem 0;
+  min-width: 0;
+
+  .cmp-row-vbar {
+    padding: 0;
+  }
+}
+
+// ── Table row: value + range bar cell ────────────────────────────────────
+.cmp-row-vbar {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  min-width: 0;
+
+  .cmp-inline-line {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.cmp-row-vbar-num {
+  font-weight: 200;
+  line-height: 1;
+  font-family: "Sora", sans-serif;
+  font-size: 0.7rem;
+  color: var(--fg);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.cmp-row-vbar-u {
+  font-weight: 400;
+  font-size: $text-2xs;
+  color: rgba(255, 255, 255, .35);
+}
+
+// ── Table row: mini age donut cell ────────────────────────────────────────
+.cmp-row-age-donut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+}
+
+.cmp-row-age-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+
+  .cmp-donut-num {
+    font-size: 6px;
+    font-weight: 200;
+    line-height: 1;
+    font-family: "Sora", sans-serif;
+    color: var(--fg);
+  }
 }
 
 .cmp-bar-chevron {
@@ -3009,8 +3098,190 @@ svg {
 // bullet charts
 .cmp-expand-charts {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1.25rem;
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// ── Age donut chart ────────────────────────────────────────────────────
+.cmp-age-donut {
+  display: flex;
   flex-direction: column;
-  gap: .6rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.cmp-age-donut-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  .cmp-donut-num {
+    font-size: 8px;
+  }
+
+  .cmp-donut-sub {
+    font-size: 7px;
+  }
+}
+
+.cmp-age-donut-rank {
+  font-size: $text-2xs;
+  color: rgba(255, 255, 255, .3);
+  margin-top: .15rem;
+  text-align: center;
+}
+
+// ── Market value / salary range charts ────────────────────────────────
+.cmp-expand-money-charts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  min-width: 0;
+}
+
+.cmp-range-chart {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.cmp-range-chart-label {
+  font-size: $text-2xs;
+  font-weight: 600;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .3);
+}
+
+.cmp-range-chart-total {
+  font-size: $text-lg;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  margin-bottom: .2rem;
+}
+
+.cmp-range-chart-unit {
+  font-size: $text-sm;
+  font-weight: 400;
+  color: rgba(255, 255, 255, .4);
+}
+
+.cmp-range-track-outer {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  overflow: visible;
+}
+
+.cmp-range-track-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, .14);
+  border-radius: 999px;
+}
+
+.cmp-range-track-fill {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  transition: width .4s ease;
+}
+
+.cmp-range-track-dot {
+  position: absolute;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1.5px rgba(11, 11, 11, .9);
+}
+
+.cmp-range-extremes {
+  display: flex;
+  justify-content: space-between;
+  font-size: $text-2xs;
+  color: rgba(255, 255, 255, .25);
+  padding: .1rem .1rem 0;
+}
+
+.cmp-range-extreme {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.cmp-range-extreme-team {
+  font-weight: 600;
+  letter-spacing: .3px;
+  color: rgba(255, 255, 255, .38);
+}
+
+// ── Stat extremes grid ─────────────────────────────────────────────────
+.cmp-stat-extremes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  padding-top: .75rem;
+  border-top: 1px solid rgba(255, 255, 255, .07);
+
+  @media (max-width: 520px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cmp-stat-extreme-card {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .55rem .65rem;
+  background: rgba(255, 255, 255, .04);
+  border-radius: 8px;
+}
+
+.cmp-stat-extreme-label {
+  font-size: $text-2xs;
+  font-weight: 600;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .28);
+}
+
+.cmp-stat-extreme-team {
+  font-size: $text-sm;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmp-stat-extreme-sub {
+  font-size: $text-2xs;
+  color: rgba(255, 255, 255, .38);
+  font-variant-numeric: tabular-nums;
 }
 
 .cmp-bullet-row {
@@ -3133,7 +3404,7 @@ svg {
 @media (max-width: 640px) {
   .cmp-table {
     min-width: 0;
-    width: max-content;
+    width: 100%;
   }
 
   .cmp-expand-panel--inline {

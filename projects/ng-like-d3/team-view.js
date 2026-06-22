@@ -1639,9 +1639,24 @@
 		const maxVal = d3.max(values, (d) => d.marketValue);
 		const maxSal = d3.max(values, (d) => d.salaryBudget);
 		const maxAge = d3.max(values, (d) => d.avgAge);
+		const minVal = d3.min(values, (d) => d.marketValue);
+		const minSal = d3.min(values, (d) => d.salaryBudget);
+		const minAge = d3.min(values, (d) => d.avgAge);
 		const avgVal = d3.mean(values, (d) => d.marketValue);
 		const avgSal = d3.mean(values, (d) => d.salaryBudget);
 		const avgAge = d3.mean(values, (d) => d.avgAge);
+		const minValEntry = values.reduce((a, b) =>
+			a.marketValue < b.marketValue ? a : b,
+		);
+		const maxValEntry = values.reduce((a, b) =>
+			a.marketValue > b.marketValue ? a : b,
+		);
+		const minSalEntry = values.reduce((a, b) =>
+			a.salaryBudget < b.salaryBudget ? a : b,
+		);
+		const maxSalEntry = values.reduce((a, b) =>
+			a.salaryBudget > b.salaryBudget ? a : b,
+		);
 
 		const metricColor = {
 			marketValue: "#34d399",
@@ -1650,133 +1665,201 @@
 		};
 
 		let activeMetric = "marketValue";
-		let expandedKey = null;
+		let sortDir = "desc"; // "desc" = high→low (default), "asc" = low→high
 		const selectedComparable = values.some((d) => d.key === currentKey);
 		const selectedTeamName = teamFiles[currentKey]?.name || "This team";
 
-		function isMobileCompare() {
-			return window.matchMedia("(max-width: 640px)").matches;
+		function inlineValuePair(mv, sal) {
+			const pctMv = +((mv / Math.max(1, maxVal)) * 100).toFixed(1);
+			const pctSal = +((sal / Math.max(1, maxSal)) * 100).toFixed(1);
+			const mvBar = `<div class="cmp-inline-line"><div class="cmp-inline-line-base"></div><div class="cmp-inline-line-fill" style="width:${pctMv}%;background:${metricColor.marketValue}"></div></div>`;
+			const salBar = `<div class="cmp-inline-line"><div class="cmp-inline-line-base"></div><div class="cmp-inline-line-fill" style="width:${pctSal}%;background:${metricColor.salaryBudget}"></div></div>`;
+			return `<div class="cmp-row-vpair">
+				<div class="cmp-row-vbar">
+					<span class="cmp-row-vbar-num">${mv.toLocaleString()}<span class="cmp-row-vbar-u"> M€</span></span>
+					${mvBar}
+				</div>
+				<div class="cmp-row-vbar">
+					<span class="cmp-row-vbar-num">${sal.toLocaleString()}<span class="cmp-row-vbar-u"> M€</span></span>
+					${salBar}
+				</div>
+			</div>`;
 		}
 
-		function toggleExpanded(key) {
-			expandedKey = expandedKey === key ? null : key;
-			render();
+		// ── Age gauge helpers ──────────────────────────────────────────────────
+		const DONUT_COLOR = "#60a5fa";
+
+		function ageGaugeSvg(avgAge, cx, cy, r, sw, numFontClass, subFontClass) {
+			const SA = 135,
+				SWEEP = 270;
+			const AGE_MIN = 18,
+				AGE_MAX = 40;
+			const agePct = Math.max(
+				0.02,
+				Math.min(0.98, (avgAge - AGE_MIN) / (AGE_MAX - AGE_MIN)),
+			);
+			const toRad = (deg) => (deg * Math.PI) / 180;
+			const pt = (deg) => ({
+				x: +(cx + r * Math.cos(toRad(deg))).toFixed(3),
+				y: +(cy + r * Math.sin(toRad(deg))).toFixed(3),
+			});
+			const markerAngle = SA + agePct * SWEEP;
+			const bgStart = pt(SA),
+				bgEnd = pt(SA + SWEEP);
+			const fillEnd = pt(markerAngle);
+			const bgLarge = SWEEP > 180 ? 1 : 0;
+			const fillLarge = agePct * SWEEP > 180 ? 1 : 0;
+			return [
+				`<path d="M ${bgStart.x} ${bgStart.y} A ${r} ${r} 0 ${bgLarge} 1 ${bgEnd.x} ${bgEnd.y}" fill="none" stroke="${DONUT_COLOR}" stroke-width="${sw}" stroke-linecap="round" opacity="0.18" vector-effect="non-scaling-stroke"/>`,
+				`<path d="M ${bgStart.x} ${bgStart.y} A ${r} ${r} 0 ${fillLarge} 1 ${fillEnd.x} ${fillEnd.y}" fill="none" stroke="${DONUT_COLOR}" stroke-width="${sw}" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`,
+				`<line x1="${bgStart.x}" y1="${bgStart.y}" x2="${bgEnd.x}" y2="${bgEnd.y}" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" stroke-dasharray="2 3" vector-effect="non-scaling-stroke"/>`,
+			].join("");
 		}
 
-		function inlineLine(value, max, color) {
-			const pct = (value / max) * 100;
-			return `<div class="cmp-inline-line"><div class="cmp-inline-line-base"></div><div class="cmp-inline-line-fill" style="width:${pct.toFixed(1)}%;background:${color}"></div><div class="cmp-inline-line-dot" style="left:${pct.toFixed(1)}%;background:${color}"></div></div>`;
+		function inlineAgeDonut(d) {
+			const CX = 20,
+				CY = 20,
+				R = 14,
+				SW = 3;
+			const inner = ageGaugeSvg(d.avgAge, CX, CY, R, SW);
+			return `<div class="cmp-row-age-donut"><svg viewBox="0 4 40 28" class="cmp-row-age-svg" aria-label="Age ${d.avgAge}">${inner}<text x="${CX}" y="${CY + 3}" text-anchor="middle" font-weight="700" fill="#fff" class="cmp-donut-num">${d.avgAge}</text></svg></div>`;
 		}
 
 		function detailPanelMarkup(d, ranked, extraClass = "") {
-			const mvRank =
-				ranked.filter((v) => v.marketValue > d.marketValue).length + 1;
-			const salRank =
-				ranked.filter((v) => v.salaryBudget > d.salaryBudget).length + 1;
 			const ageRank = ranked.filter((v) => v.avgAge < d.avgAge).length + 1;
+			const minAgeEntry = ranked.reduce((a, b) =>
+				a.avgAge <= b.avgAge ? a : b,
+			);
+			const maxAgeEntry = ranked.reduce((a, b) =>
+				a.avgAge >= b.avgAge ? a : b,
+			);
+
+			// ── Age gauge SVG ─────────────────────────────────────────────────────
+			const CX = 60,
+				CY = 60,
+				R = 44,
+				SW = 4;
+			const inner = ageGaugeSvg(d.avgAge, CX, CY, R, SW);
+			const ageSvg = `
+				<div class="cmp-age-donut">
+					<svg viewBox="0 0 120 120" class="cmp-age-donut-svg" aria-label="Avg age ${d.avgAge}">
+						${inner}
+						<text x="15" y="108" text-anchor="middle" fill="rgba(255,255,255,0.35)">Young</text>
+						<text x="105" y="108" text-anchor="middle" fill="rgba(255,255,255,0.35)">Old</text>
+						<text x="${CX}" y="${CY + 5}" text-anchor="middle" font-weight="700" fill="#fff" class="cmp-donut-num">${d.avgAge}</text>
+						<text x="${CX}" y="${CY + 17}" text-anchor="middle" fill="rgba(255,255,255,0.35)" letter-spacing="0.6" class="cmp-donut-sub">YRS AVG</text>
+					</svg>
+					<div class="cmp-age-donut-rank">#${ageRank} youngest</div>
+				</div>`;
+
+			// ── Range chart helper ──────────────────────────────────────────────
+			function rangeChart(val, metricKey, label, minEntry, maxEntry, color) {
+				const maxV = maxEntry[metricKey];
+				const pct = +((val / Math.max(1, maxV)) * 100).toFixed(1);
+				return `
+					<div class="cmp-range-chart">
+						<div class="cmp-range-chart-label">${label}</div>
+						<div class="cmp-range-chart-total">${val.toLocaleString()}<span class="cmp-range-chart-unit"> M€</span></div>
+						<div class="cmp-range-track-outer">
+							<div class="cmp-range-track-bg"></div>
+							<div class="cmp-range-track-fill" style="width:${pct}%;background:${color}"></div>
+						</div>
+						<div class="cmp-range-extremes">
+							<span class="cmp-range-extreme">0M</span>
+							<span class="cmp-range-extreme cmp-range-extreme--right">${maxV}M <span class="cmp-range-extreme-team">${maxEntry.abbr}</span></span>
+						</div>
+					</div>`;
+			}
+
+			const mvChart = rangeChart(
+				d.marketValue,
+				"marketValue",
+				"Market Value",
+				minValEntry,
+				maxValEntry,
+				metricColor.marketValue,
+			);
+			const salChart = rangeChart(
+				d.salaryBudget,
+				"salaryBudget",
+				"Wage Bill",
+				minSalEntry,
+				maxSalEntry,
+				metricColor.salaryBudget,
+			);
+
+			const extremes = [
+				{
+					label: "Youngest Squad",
+					team: minAgeEntry.name,
+					sub: `${minAgeEntry.avgAge} yrs avg`,
+				},
+				{
+					label: "Oldest Squad",
+					team: maxAgeEntry.name,
+					sub: `${maxAgeEntry.avgAge} yrs avg`,
+				},
+				{
+					label: "Most Valuable",
+					team: maxValEntry.name,
+					sub: `${maxValEntry.marketValue.toLocaleString()}M€`,
+				},
+				{
+					label: "Least Valuable",
+					team: minValEntry.name,
+					sub: `${minValEntry.marketValue.toLocaleString()}M€`,
+				},
+				{
+					label: "Best Paid",
+					team: maxSalEntry.name,
+					sub: `${maxSalEntry.salaryBudget.toLocaleString()}M€`,
+				},
+				{
+					label: "Worst Paid",
+					team: minSalEntry.name,
+					sub: `${minSalEntry.salaryBudget.toLocaleString()}M€`,
+				},
+			]
+				.map(
+					({ label, team, sub }) => `
+				<div class="cmp-stat-extreme-card">
+					<span class="cmp-stat-extreme-label">${label}</span>
+					<span class="cmp-stat-extreme-team">${team}</span>
+					<span class="cmp-stat-extreme-sub">${sub}</span>
+				</div>`,
+				)
+				.join("");
 
 			return `
 				<div class="cmp-expand-panel ${extraClass}">
-					<div class="cmp-expand-stats">
-						<div class="cmp-expand-stat cmp-expand-stat--mv">
-							<span class="cmp-expand-stat-val">${d.marketValue.toLocaleString()}<span class="cmp-expand-stat-unit"> M€</span></span>
-							<span class="cmp-expand-stat-label">Market Value</span>
-							<span class="cmp-expand-stat-rank">#${mvRank} of ${values.length}</span>
-						</div>
-						<div class="cmp-expand-stat cmp-expand-stat--sal">
-							<span class="cmp-expand-stat-val">${d.salaryBudget.toLocaleString()}<span class="cmp-expand-stat-unit"> M€</span></span>
-							<span class="cmp-expand-stat-label">Wage Bill</span>
-							<span class="cmp-expand-stat-rank">#${salRank} of ${values.length}</span>
-						</div>
-						<div class="cmp-expand-stat cmp-expand-stat--age">
-							<span class="cmp-expand-stat-val">${d.avgAge}<span class="cmp-expand-stat-unit"> yrs</span></span>
-							<span class="cmp-expand-stat-label">Avg Age</span>
-							<span class="cmp-expand-stat-rank">#${ageRank} youngest</span>
-						</div>
-						<div class="cmp-expand-stat cmp-expand-stat--player">
-							<span class="cmp-expand-stat-val">${d.topValue}<span class="cmp-expand-stat-unit"> M€</span></span>
-							<span class="cmp-expand-stat-label">Top Player</span>
-							<span class="cmp-expand-stat-rank">${d.topPlayer}</span>
+					<div class="cmp-expand-charts">
+						${ageSvg}
+						<div class="cmp-expand-money-charts">
+							${mvChart}
+							${salChart}
 						</div>
 					</div>
-					<div class="cmp-expand-charts">
-						<div class="cmp-bullet-row">
-							<span class="cmp-bullet-label">Market Value</span>
-							<div class="cmp-bullet-track">
-								<div class="cmp-bullet-base"></div>
-								<div class="cmp-bullet-fill" style="width:${((d.marketValue / maxVal) * 100).toFixed(1)}%;background:${metricColor.marketValue}"></div>
-								<div class="cmp-bullet-dot" style="left:${((d.marketValue / maxVal) * 100).toFixed(1)}%;background:${metricColor.marketValue}"></div>
-								<div class="cmp-bullet-avg-line" style="left:${((avgVal / maxVal) * 100).toFixed(1)}%"></div>
-							</div>
-							<div class="cmp-bullet-scale">
-								<span>0</span><span>${Math.round(avgVal)}M avg</span><span>${maxVal}M</span>
-							</div>
-						</div>
-						<div class="cmp-bullet-row">
-							<span class="cmp-bullet-label">Wage Bill</span>
-							<div class="cmp-bullet-track">
-								<div class="cmp-bullet-base"></div>
-								<div class="cmp-bullet-fill" style="width:${((d.salaryBudget / maxSal) * 100).toFixed(1)}%;background:${metricColor.salaryBudget}"></div>
-								<div class="cmp-bullet-dot" style="left:${((d.salaryBudget / maxSal) * 100).toFixed(1)}%;background:${metricColor.salaryBudget}"></div>
-								<div class="cmp-bullet-avg-line" style="left:${((avgSal / maxSal) * 100).toFixed(1)}%"></div>
-							</div>
-							<div class="cmp-bullet-scale">
-								<span>0</span><span>${Math.round(avgSal)}M avg</span><span>${maxSal}M</span>
-							</div>
-						</div>
-						<div class="cmp-bullet-row">
-							<span class="cmp-bullet-label">Avg Age</span>
-							<div class="cmp-bullet-track">
-								<div class="cmp-bullet-base"></div>
-								<div class="cmp-bullet-fill" style="width:${((d.avgAge / maxAge) * 100).toFixed(1)}%;background:${metricColor.avgAge}"></div>
-								<div class="cmp-bullet-dot" style="left:${((d.avgAge / maxAge) * 100).toFixed(1)}%;background:${metricColor.avgAge}"></div>
-								<div class="cmp-bullet-avg-line" style="left:${((avgAge / maxAge) * 100).toFixed(1)}%"></div>
-							</div>
-							<div class="cmp-bullet-scale">
-								<span>youngest</span><span>${avgAge.toFixed(1)} avg</span><span>oldest</span>
-							</div>
-						</div>
+					<div class="cmp-stat-extremes">${extremes}
 					</div>
 				</div>`;
 		}
 
 		function buildRow(d, ranked) {
 			const isCurrent = d.key === currentKey;
-			const isExpanded = d.key === expandedKey;
 			const countryCode = getCountryCode(d.abbr);
-
-			const expandPanel = isExpanded
-				? detailPanelMarkup(d, ranked, "cmp-expand-panel--inline")
-				: "";
-
 			const row = document.createElement("div");
-			row.className = `cmp-bar-row${isCurrent ? " cmp-bar-row--current" : ""}${isExpanded ? " cmp-bar-row--expanded" : ""}`;
+			row.className = `cmp-bar-row${isCurrent ? " cmp-bar-row--current" : ""}`;
 			row.dataset.key = d.key;
 			row.innerHTML = `
 				<div class="cmp-bar-main">
-					<button class="cmp-bar-chevron cmp-sticky-col cmp-sticky-col--chevron${isExpanded ? " cmp-bar-chevron--open" : ""}" type="button" aria-label="Open ${d.name} details">›</button>
 					<div class="cmp-bar-team cmp-sticky-col cmp-sticky-col--team" title="${d.name}">
 						<span class="fi fi-${countryCode} cmp-bar-flag" aria-hidden="true"></span>
 						<span class="cmp-bar-abbr">${d.abbr}</span>
 					</div>
-					${inlineLine(d.marketValue, maxVal, metricColor.marketValue)}
-					${inlineLine(d.salaryBudget, maxSal, metricColor.salaryBudget)}
-					${inlineLine(d.avgAge, maxAge, metricColor.avgAge)}
+					${inlineValuePair(d.marketValue, d.salaryBudget)}
+					${inlineAgeDonut(d)}
 				</div>
-				${expandPanel}
 			`;
-			const mainEl = row.querySelector(".cmp-bar-main");
-			const chevronEl = row.querySelector(".cmp-bar-chevron");
-			if (isMobileCompare()) {
-				chevronEl.addEventListener("click", (event) => {
-					event.stopPropagation();
-					toggleExpanded(d.key);
-				});
-			} else {
-				mainEl.addEventListener("click", () => {
-					toggleExpanded(d.key);
-				});
-			}
 			return row;
 		}
 
@@ -1788,56 +1871,43 @@
 
 			const ranked = [...values]
 				.sort((a, b) => {
-					if (activeMetric === "avgAge") return a.avgAge - b.avgAge;
-					return b[activeMetric] - a[activeMetric];
+					const valA = a[activeMetric];
+					const valB = b[activeMetric];
+					return sortDir === "asc" ? valA - valB : valB - valA;
 				})
 				.map((d, i) => ({ ...d, rank: i + 1 }));
 
 			const teamEntry = ranked.find((d) => d.key === currentKey);
 			const rank = selectedComparable && teamEntry ? teamEntry.rank : "N/A";
-			const expandedTeam = ranked.find((d) => d.key === expandedKey);
+
+			const dirIcon = (metric) =>
+				activeMetric === metric ? (sortDir === "asc" ? " ↑" : " ↓") : "";
 
 			container.innerHTML = `
 				<div class="cmp-header">
 					<div class="pos-filters">
-						<button class="cmp-metric-btn${activeMetric === "marketValue" ? " active" : ""}" data-metric="marketValue">Market Value</button>
-						<button class="cmp-metric-btn${activeMetric === "salaryBudget" ? " active" : ""}" data-metric="salaryBudget">Wage Bill</button>
-						<button class="cmp-metric-btn${activeMetric === "avgAge" ? " active" : ""}" data-metric="avgAge">Avg Age</button>
+						<button class="cmp-metric-btn${activeMetric === "marketValue" ? " active" : ""}" data-metric="marketValue">Market Value${dirIcon("marketValue")}</button>
+						<button class="cmp-metric-btn${activeMetric === "salaryBudget" ? " active" : ""}" data-metric="salaryBudget">Wage Bill${dirIcon("salaryBudget")}</button>
+						<button class="cmp-metric-btn${activeMetric === "avgAge" ? " active" : ""}" data-metric="avgAge">Avg Age${dirIcon("avgAge")}</button>
 					</div>
 					<span class="cmp-rank-badge">#${rank} of ${values.length}</span>
 				</div>
 				<div class="cmp-table-scroll">
 					<div class="cmp-table">
 						<div class="cmp-col-headers">
-							<div class="cmp-col-header-spacer cmp-sticky-col cmp-sticky-col--chevron"></div>
 							<div class="cmp-col-header-team cmp-sticky-col cmp-sticky-col--team">CTY</div>
-							<button class="cmp-col-header${activeMetric === "marketValue" ? " cmp-col-header--active" : ""}" data-metric="marketValue" type="button">Mkt Value</button>
-							<button class="cmp-col-header${activeMetric === "salaryBudget" ? " cmp-col-header--active" : ""}" data-metric="salaryBudget" type="button">Wage Bill</button>
-							<button class="cmp-col-header${activeMetric === "avgAge" ? " cmp-col-header--active" : ""}" data-metric="avgAge" type="button">Avg Age</button>
+							<div class="cmp-col-header cmp-col-header--pair">
+								<span class="cmp-col-header-sub${activeMetric === "marketValue" ? " cmp-col-header--active" : ""}">Market Value</span>
+								<span class="cmp-col-header-sub${activeMetric === "salaryBudget" ? " cmp-col-header--active" : ""}">Wage</span>
+							</div>
+							<div class="cmp-col-header${activeMetric === "avgAge" ? " cmp-col-header--active" : ""}">Avg Age</div>
 						</div>
 						<div class="cmp-chart-wrap">
 							<div class="cmp-bars" id="cmp-bars"></div>
 						</div>
 					</div>
 				</div>
-				${
-					expandedTeam
-						? `<div class="cmp-sheet-backdrop${isMobileCompare() ? " is-open" : ""}" id="cmp-sheet-backdrop">
-					<div class="cmp-expand-panel cmp-expand-panel--sheet" role="dialog" aria-modal="true" aria-label="${expandedTeam.name} details">
-						<div class="cmp-sheet-handle"></div>
-						<div class="cmp-sheet-head">
-							<div>
-								<div class="cmp-sheet-title">${expandedTeam.name}</div>
-								<div class="cmp-sheet-subtitle">${expandedTeam.abbr} comparison details</div>
-							</div>
-							<button class="cmp-sheet-close" id="cmp-sheet-close" type="button" aria-label="Close details">×</button>
-						</div>
-						${detailPanelMarkup(expandedTeam, ranked, "cmp-expand-panel--sheet-body")}
-					</div>
-				</div>`
-						: ""
-				}
-				<p class="cmp-note">Market values estimated from Transfermarkt (June 2026). Gray marker on detail lines shows field average.</p>
+				<p class="cmp-note">Market values estimated from Transfermarkt (June 2026).</p>
 			`;
 
 			const barsEl = document.getElementById("cmp-bars");
@@ -1845,37 +1915,15 @@
 
 			container.querySelectorAll(".cmp-metric-btn").forEach((btn) => {
 				btn.addEventListener("click", () => {
-					activeMetric = btn.dataset.metric;
+					if (btn.dataset.metric === activeMetric) {
+						sortDir = sortDir === "desc" ? "asc" : "desc";
+					} else {
+						activeMetric = btn.dataset.metric;
+						sortDir = "desc";
+					}
 					render();
 				});
 			});
-
-			container
-				.querySelectorAll(".cmp-col-header[data-metric]")
-				.forEach((btn) => {
-					btn.addEventListener("click", () => {
-						activeMetric = btn.dataset.metric;
-						render();
-					});
-				});
-
-			const sheetClose = container.querySelector("#cmp-sheet-close");
-			if (sheetClose) {
-				sheetClose.addEventListener("click", () => {
-					expandedKey = null;
-					render();
-				});
-			}
-
-			const sheetBackdrop = container.querySelector("#cmp-sheet-backdrop");
-			if (sheetBackdrop) {
-				sheetBackdrop.addEventListener("click", (event) => {
-					if (event.target === sheetBackdrop) {
-						expandedKey = null;
-						render();
-					}
-				});
-			}
 		}
 
 		render();
