@@ -97,7 +97,9 @@ async function fetchBuffer(url, attempt = 0) {
 						if (attempt >= 5)
 							return reject(new Error(`HTTP 429 (rate limited) for ${url}`));
 						const wait = RETRY_DELAY_MS * (attempt + 1);
-						process.stdout.write(`\n  ⏳ 429 — pausing ${wait/1000}s before retry…\n`);
+						process.stdout.write(
+							`\n  ⏳ 429 — pausing ${wait / 1000}s before retry…\n`,
+						);
 						await sleep(wait);
 						return fetchBuffer(url, attempt + 1)
 							.then(resolve)
@@ -235,12 +237,16 @@ async function main() {
 		const topNames = namesFilter
 			? null
 			: new Set(
-				[...players]
-					.filter((p) => p.img) // only consider players that have an image
-					.sort((a, b) => (b.apps ?? 0) - (a.apps ?? 0) || (b.goals ?? 0) - (a.goals ?? 0))
-					.slice(0, TOP_PER_COUNTRY)
-					.map((p) => p.name),
-			  );
+					[...players]
+						.filter((p) => p.img) // only consider players that have an image
+						.sort(
+							(a, b) =>
+								(b.apps ?? 0) - (a.apps ?? 0) ||
+								(b.goals ?? 0) - (a.goals ?? 0),
+						)
+						.slice(0, TOP_PER_COUNTRY)
+						.map((p) => p.name),
+				);
 
 		for (const p of players) {
 			if (!p.img) continue;
@@ -289,7 +295,9 @@ async function main() {
 
 		try {
 			const thumbUrl = p.img.replace(/\?width=\d+/, "?width=200");
-			const cached = fs.existsSync(path.join(IMG_CACHE_DIR, cacheKey(thumbUrl)));
+			const cached = fs.existsSync(
+				path.join(IMG_CACHE_DIR, cacheKey(thumbUrl)),
+			);
 			const data = await getFocusData(p.img);
 			if (data != null) {
 				p.imgFocusY = data.focusY;

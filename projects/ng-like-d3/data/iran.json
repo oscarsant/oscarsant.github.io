@@ -242,5 +242,29 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-16",
+        "opponent": "NZL",
+        "opponent_full": "New Zealand",
+        "score": "2-2",
+        "result": "D",
+        "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "0-0",
+        "result": "D",
+        "venue": "SoFi Stadium"
+      }
+    ]
   }
 ]

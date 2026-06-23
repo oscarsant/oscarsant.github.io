@@ -208,5 +208,10 @@
   {
     "year": 2022,
     "stage": "BAN"
+  },
+  {
+    "year": 2026,
+    "stage": "DNQ",
+    "matches": []
   }
 ]

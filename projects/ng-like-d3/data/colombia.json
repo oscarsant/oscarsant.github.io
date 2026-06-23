@@ -275,5 +275,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-18",
+        "opponent": "UZB",
+        "opponent_full": "Uzbekistan",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Estadio Banorte"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "COD",
+        "opponent_full": "Congo DR",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Akron"
+      }
+    ]
   }
 ]

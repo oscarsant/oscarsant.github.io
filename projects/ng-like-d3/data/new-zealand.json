@@ -138,5 +138,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-16",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "2-2",
+        "result": "D",
+        "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-22",
+        "opponent": "EGY",
+        "opponent_full": "Egypt",
+        "score": "1-3",
+        "result": "L",
+        "venue": "BC Place"
+      }
+    ]
   }
 ]

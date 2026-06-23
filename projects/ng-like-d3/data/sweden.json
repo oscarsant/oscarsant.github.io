@@ -291,7 +291,7 @@
   },
   {
     "year": 1990,
-    "stage": "R16",
+    "stage": "GS",
     "matches": [
       {
         "stage": "GS",
@@ -519,5 +519,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-15",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "5-1",
+        "result": "W",
+        "venue": "Estadio BBVA"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "1-5",
+        "result": "L",
+        "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
+      }
+    ]
   }
 ]

@@ -1026,5 +1026,38 @@
         "result": "W"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "CUR",
+        "opponent_full": "Curaçao",
+        "score": "7-1",
+        "result": "W",
+        "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "2-1",
+        "result": "W",
+        "venue": "BMO Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "ECU",
+        "opponent_full": "Ecuador",
+        "score": "TBD",
+        "result": "?",
+        "venue": "MetLife Stadium"
+      }
+    ]
   }
 ]

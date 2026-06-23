@@ -283,5 +283,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-13",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "1-1",
+        "result": "D",
+        "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-19",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "HAI",
+        "opponent_full": "Haiti",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Mercedes-Benz Stadium"
+      }
+    ]
   }
 ]

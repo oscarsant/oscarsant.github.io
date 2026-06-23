@@ -188,12 +188,14 @@ const TOURNAMENT_FORMATS = {
 	2014: ["GS", "R16", "QF", "SF", "RU", "W"],
 	2018: ["GS", "R16", "QF", "SF", "RU", "W"],
 	2022: ["GS", "R16", "QF", "SF", "RU", "W"],
+	2026: ["GS", "R32", "R16", "QF", "SF", "RU", "W"], // 48-team format
 };
 
 // Maps each stage code to a numeric x-axis position used by the D3 timeline.
 // Stages with value 0 are non-participations and are rendered as text labels.
 const STAGE_VALUES = {
 	GS: 1,
+	R32: 1.5, // WC2026 round of 32 (between GS and R16)
 	R16: 2,
 	"2GS": 1.5, // Between GS and R16
 	QF: 3,

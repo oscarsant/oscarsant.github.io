@@ -112,5 +112,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "0-1",
+        "result": "L",
+        "venue": "BMO Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BMO Field"
+      }
+    ]
   }
 ]

@@ -122,5 +122,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-15",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Lumen Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-22",
+        "opponent": "NZL",
+        "opponent_full": "New Zealand",
+        "score": "3-1",
+        "result": "W",
+        "venue": "BC Place"
+      }
+    ]
   }
 ]

@@ -164,5 +164,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-11",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "0-2",
+        "result": "L",
+        "venue": "Estadio Banorte"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-18",
+        "opponent": "CZE",
+        "opponent_full": "Czechia",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio BBVA"
+      }
+    ]
   }
 ]

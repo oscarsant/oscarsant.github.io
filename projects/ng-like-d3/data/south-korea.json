@@ -413,5 +413,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-12",
+        "opponent": "CZE",
+        "opponent_full": "Czechia",
+        "score": "2-1",
+        "result": "W",
+        "venue": "Estadio Akron"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-19",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Estadio Akron"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "RSA",
+        "opponent_full": "South Africa",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio BBVA"
+      }
+    ]
   }
 ]

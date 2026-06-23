@@ -242,5 +242,38 @@
         "result": "W"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-15",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "1-5",
+        "result": "L",
+        "venue": "Estadio BBVA"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "0-4",
+        "result": "L",
+        "venue": "Estadio BBVA"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
+      }
+    ]
   }
 ]

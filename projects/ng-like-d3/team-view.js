@@ -28,7 +28,7 @@
 	// All team data files are now in data/ subfolder
 	const [tournaments, playersData] = await Promise.all([
 		d3.json(`data/${teamParam}.json`),
-		d3.json("players.json"),
+		d3.json("players.json?v=20260623c"),
 	]);
 	const team = {
 		...teamInfo,
@@ -755,6 +755,7 @@
 	const editionMaxGames = (year) => {
 		if (!Number.isFinite(Number(year))) return 0;
 		const y = Number(year);
+		if (y === 2026) return 8; // 48-team format: GS(3) + R32 + R16 + QF + SF + Final
 		if (y >= 1986) return 7;
 		if (y === 1982) return 7;
 		if (y === 1974 || y === 1978) return 7;
@@ -977,6 +978,10 @@
 						<span class="ap-number-key">Gls</span>
 						<span class="ap-number-val">${totalGoals}</span>
 					</div>
+					<div class="ap-number-row">
+						<span class="ap-number-key">G/G</span>
+						<span class="ap-number-val">${totalApps > 0 ? (totalGoals / totalApps).toFixed(2) : "—"}</span>
+					</div>
 				</div>
 			</div>`;
 	};
@@ -1151,11 +1156,21 @@
 		let currentPos = "all";
 		let currentSort = "goals";
 		// Ensure each player has the current team's abbr (it may already be set in players.json)
-		const enriched = teamPlayers.map((p) => ({ abbr: team.abbr, ...p }));
+		// Add live 2026 totals so sort reflects current-tournament activity
+		const enriched = teamPlayers.map((p) => {
+			const live = p.byYear?.["2026"];
+			return {
+				abbr: team.abbr,
+				...p,
+				goals: (p.goals || 0) + (live?.goals || 0),
+				apps: (p.apps || 0) + (live?.apps || 0),
+			};
+		});
 		const container = document.getElementById("players-chart");
 
 		function getFiltered() {
 			return enriched
+				.filter((p) => (p.apps || 0) >= 1)
 				.filter((p) => currentPos === "all" || p.pos === currentPos)
 				.sort((a, b) => {
 					if (currentSort === "name") return a.name.localeCompare(b.name);
@@ -1543,7 +1558,16 @@
 			]),
 		);
 		const allPlayers = Object.entries(playersData).flatMap(([key, arr]) =>
-			arr.map((p) => ({ ...p, team: key, ...teamMeta[key] })),
+			arr.map((p) => {
+				const live = p.byYear?.["2026"];
+				return {
+					...p,
+					team: key,
+					...teamMeta[key],
+					goals: (p.goals || 0) + (live?.goals || 0),
+					apps: (p.apps || 0) + (live?.apps || 0),
+				};
+			}),
 		);
 
 		const container = document.getElementById("all-players-list");
@@ -1554,6 +1578,7 @@
 
 		function getFiltered() {
 			return allPlayers
+				.filter((p) => (p.apps || 0) >= 1)
 				.filter((p) => currentPos === "all" || p.pos === currentPos)
 				.filter((p) => {
 					if (!query) return true;

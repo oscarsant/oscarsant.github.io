@@ -258,5 +258,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "TUR",
+        "opponent_full": "Türkiye",
+        "score": "2-0",
+        "result": "W",
+        "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-19",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "0-2",
+        "result": "L",
+        "venue": "Lumen Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "PAR",
+        "opponent_full": "Paraguay",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Levi's Stadium"
+      }
+    ]
   }
 ]

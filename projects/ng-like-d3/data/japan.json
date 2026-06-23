@@ -266,7 +266,7 @@
   },
   {
     "year": 2022,
-    "stage": "QF",
+    "stage": "R16",
     "matches": [
       {
         "stage": "GS",
@@ -300,6 +300,39 @@
         "score": "1-1",
         "result": "L",
         "penalties": "1-3"
+      }
+    ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "NED",
+        "opponent_full": "Netherlands",
+        "score": "2-2",
+        "result": "D",
+        "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Estadio BBVA"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }

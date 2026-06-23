@@ -714,5 +714,29 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "4-2",
+        "result": "W",
+        "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Gillette Stadium"
+      }
+    ]
   }
 ]

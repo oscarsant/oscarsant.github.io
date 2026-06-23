@@ -112,5 +112,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "0-3",
+        "result": "L",
+        "venue": "Lincoln Financial Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Mercedes-Benz Stadium"
+      }
+    ]
   }
 ]

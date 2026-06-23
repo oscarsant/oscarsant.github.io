@@ -1,0 +1,136 @@
+[
+  {
+    "year": 1930,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1934,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1938,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1950,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1954,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1958,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1962,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1966,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1970,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1974,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1978,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1982,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1986,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1990,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1994,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 1998,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2002,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2006,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2010,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2014,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2018,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2022,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "1-3",
+        "result": "L",
+        "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "ALG",
+        "opponent_full": "Algeria",
+        "score": "1-2",
+        "result": "L",
+        "venue": "Levi's Stadium"
+      }
+    ]
+  }
+]

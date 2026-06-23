@@ -164,5 +164,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "ECU",
+        "opponent_full": "Ecuador",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Lincoln Financial Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "1-2",
+        "result": "L",
+        "venue": "BMO Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "CUR",
+        "opponent_full": "Curaçao",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lincoln Financial Field"
+      }
+    ]
   }
 ]

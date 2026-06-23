@@ -319,5 +319,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-13",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "1-4",
+        "result": "L",
+        "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "TUR",
+        "opponent_full": "Türkiye",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Levi's Stadium"
+      }
+    ]
   }
 ]

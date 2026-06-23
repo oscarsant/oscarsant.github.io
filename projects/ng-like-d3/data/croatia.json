@@ -342,5 +342,29 @@
         "result": "W"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "2-4",
+        "result": "L",
+        "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "PAN",
+        "opponent_full": "Panama",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BMO Field"
+      }
+    ]
   }
 ]

@@ -99,7 +99,7 @@
   },
   {
     "year": 1986,
-    "stage": "QF",
+    "stage": "GS",
     "matches": [
       {
         "stage": "GS",
@@ -302,7 +302,7 @@
   },
   {
     "year": 2018,
-    "stage": "QF",
+    "stage": "R16",
     "matches": [
       {
         "stage": "GS",
@@ -340,7 +340,7 @@
   },
   {
     "year": 2022,
-    "stage": "SF",
+    "stage": "QF",
     "matches": [
       {
         "stage": "GS",
@@ -381,6 +381,30 @@
         "opponent_full": "Morocco",
         "score": "0-1",
         "result": "L"
+      }
+    ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "COD",
+        "opponent_full": "Congo DR",
+        "score": "1-1",
+        "result": "D",
+        "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "UZB",
+        "opponent_full": "Uzbekistan",
+        "score": "5-0",
+        "result": "W",
+        "venue": "NRG Stadium"
       }
     ]
   }

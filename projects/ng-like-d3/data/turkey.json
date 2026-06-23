@@ -170,5 +170,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "0-2",
+        "result": "L",
+        "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "PAR",
+        "opponent_full": "Paraguay",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "TBD",
+        "result": "?",
+        "venue": "SoFi Stadium"
+      }
+    ]
   }
 ]

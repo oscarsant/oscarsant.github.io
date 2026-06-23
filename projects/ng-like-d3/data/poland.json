@@ -9,7 +9,7 @@
   },
   {
     "year": 1938,
-    "stage": "QF",
+    "stage": "R16",
     "matches": [
       {
         "stage": "R16",
@@ -408,5 +408,10 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "DNQ",
+    "matches": []
   }
 ]

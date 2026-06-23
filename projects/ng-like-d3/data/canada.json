@@ -138,5 +138,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-12",
+        "opponent": "BOS",
+        "opponent_full": "Bosnia-Herzegovina",
+        "score": "1-1",
+        "result": "D",
+        "venue": "BMO Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-18",
+        "opponent": "QAT",
+        "opponent_full": "Qatar",
+        "score": "6-0",
+        "result": "W",
+        "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BC Place"
+      }
+    ]
   }
 ]

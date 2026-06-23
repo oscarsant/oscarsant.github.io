@@ -198,5 +198,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Lincoln Financial Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "CUR",
+        "opponent_full": "Curaçao",
+        "score": "0-0",
+        "result": "D",
+        "venue": "GEHA Field at Arrowhead Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "TBD",
+        "result": "?",
+        "venue": "MetLife Stadium"
+      }
+    ]
   }
 ]

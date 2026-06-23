@@ -1,0 +1,47 @@
+name: Fetch WC2026 Live Data
+
+on:
+  schedule:
+    # Every 10 minutes — fast enough for live match updates, polite on the free API
+    - cron: "*/10 * * * *"
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    # Only run during the tournament window (June–July 2026)
+    # Remove or extend this if you want it to keep running
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (startsWith(github.ref, 'refs/heads/') && true)
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch WC2026 data
+        working-directory: projects/ng-like-d3
+        run: node fetch-wc2026.js
+        # Script uses only Node built-ins (https, fs, path) — no npm install needed
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add projects/ng-like-d3/data/ \
+                  projects/ng-like-d3/players.json \
+                  projects/ng-like-d3/.espn-cache.json
+          # Only commit if something actually changed
+          git diff --staged --quiet && echo "No changes" || (
+            git commit -m "chore: auto-update WC2026 data [skip ci]" &&
+            git push
+          )

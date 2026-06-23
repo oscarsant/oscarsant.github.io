@@ -602,5 +602,38 @@
         "result": "W"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-11",
+        "opponent": "RSA",
+        "opponent_full": "South Africa",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Estadio Banorte"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-19",
+        "opponent": "KOR",
+        "opponent_full": "South Korea",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Estadio Akron"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "CZE",
+        "opponent_full": "Czechia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Banorte"
+      }
+    ]
   }
 ]

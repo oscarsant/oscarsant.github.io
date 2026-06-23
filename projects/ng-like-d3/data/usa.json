@@ -404,5 +404,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-13",
+        "opponent": "PAR",
+        "opponent_full": "Paraguay",
+        "score": "4-1",
+        "result": "W",
+        "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-19",
+        "opponent": "AUS",
+        "opponent_full": "Australia",
+        "score": "2-0",
+        "result": "W",
+        "venue": "Lumen Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "TUR",
+        "opponent_full": "Türkiye",
+        "score": "TBD",
+        "result": "?",
+        "venue": "SoFi Stadium"
+      }
+    ]
   }
 ]

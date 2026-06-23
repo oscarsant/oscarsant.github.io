@@ -523,5 +523,29 @@
         "result": "D"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-15",
+        "opponent": "EGY",
+        "opponent_full": "Egypt",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Lumen Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "0-0",
+        "result": "D",
+        "venue": "SoFi Stadium"
+      }
+    ]
   }
 ]

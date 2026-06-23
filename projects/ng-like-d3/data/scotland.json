@@ -286,5 +286,38 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "HAI",
+        "opponent_full": "Haiti",
+        "score": "1-0",
+        "result": "W",
+        "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-19",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "0-1",
+        "result": "L",
+        "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "BRA",
+        "opponent_full": "Brazil",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Hard Rock Stadium"
+      }
+    ]
   }
 ]

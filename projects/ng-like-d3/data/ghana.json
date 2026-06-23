@@ -215,5 +215,29 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "PAN",
+        "opponent_full": "Panama",
+        "score": "1-0",
+        "result": "W",
+        "venue": "BMO Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Gillette Stadium"
+      }
+    ]
   }
 ]

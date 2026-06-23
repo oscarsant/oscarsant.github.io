@@ -833,5 +833,29 @@
         "penalties": "4-2"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "ALG",
+        "opponent_full": "Algeria",
+        "score": "3-0",
+        "result": "W",
+        "venue": "GEHA Field at Arrowhead Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-22",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "2-0",
+        "result": "W",
+        "venue": "AT&T Stadium"
+      }
+    ]
   }
 ]

@@ -552,5 +552,38 @@
         "penalties": "3-4"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "JPN",
+        "opponent_full": "Japan",
+        "score": "2-2",
+        "result": "D",
+        "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "SWE",
+        "opponent_full": "Sweden",
+        "score": "5-1",
+        "result": "W",
+        "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "TUN",
+        "opponent_full": "Tunisia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
+      }
+    ]
   }
 ]

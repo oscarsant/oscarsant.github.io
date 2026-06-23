@@ -67,7 +67,7 @@
   },
   {
     "year": 1994,
-    "stage": "R16",
+    "stage": "GS",
     "matches": [
       {
         "stage": "GS",
@@ -156,5 +156,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-16",
+        "opponent": "IRQ",
+        "opponent_full": "Iraq",
+        "score": "4-1",
+        "result": "W",
+        "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-23",
+        "opponent": "SEN",
+        "opponent_full": "Senegal",
+        "score": "3-2",
+        "result": "W",
+        "venue": "MetLife Stadium"
+      }
+    ]
   }
 ]

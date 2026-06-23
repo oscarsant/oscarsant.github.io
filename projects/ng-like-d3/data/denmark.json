@@ -256,7 +256,7 @@
   },
   {
     "year": 2022,
-    "stage": "R16",
+    "stage": "GS",
     "matches": [
       {
         "stage": "GS",
@@ -283,5 +283,10 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "DNQ",
+    "matches": []
   }
 ]

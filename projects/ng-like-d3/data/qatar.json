@@ -112,5 +112,38 @@
         "result": "L"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-13",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-18",
+        "opponent": "CAN",
+        "opponent_full": "Canada",
+        "score": "0-6",
+        "result": "L",
+        "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "BOS",
+        "opponent_full": "Bosnia-Herzegovina",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lumen Field"
+      }
+    ]
   }
 ]

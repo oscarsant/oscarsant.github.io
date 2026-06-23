@@ -1,0 +1,145 @@
+[
+  {
+    "year": 1930,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1934,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1938,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1950,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1954,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1958,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1962,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1966,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1970,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1974,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1978,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1982,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1986,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1990,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1994,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 1998,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 2002,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 2006,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 2010,
+    "stage": "DNE",
+    "matches": []
+  },
+  {
+    "year": 2014,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2018,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2022,
+    "stage": "DNQ",
+    "matches": []
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-14",
+        "opponent": "GER",
+        "opponent_full": "Germany",
+        "score": "1-7",
+        "result": "L",
+        "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "ECU",
+        "opponent_full": "Ecuador",
+        "score": "0-0",
+        "result": "D",
+        "venue": "GEHA Field at Arrowhead Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-25",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lincoln Financial Field"
+      }
+    ]
+  }
+]

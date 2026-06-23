@@ -112,5 +112,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-16",
+        "opponent": "NOR",
+        "opponent_full": "Norway",
+        "score": "1-4",
+        "result": "L",
+        "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-22",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "0-3",
+        "result": "L",
+        "venue": "Lincoln Financial Field"
+      }
+    ]
   }
 ]

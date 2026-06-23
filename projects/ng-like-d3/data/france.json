@@ -707,5 +707,29 @@
         "penalties": "2-4"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-16",
+        "opponent": "SEN",
+        "opponent_full": "Senegal",
+        "score": "3-1",
+        "result": "W",
+        "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-22",
+        "opponent": "IRQ",
+        "opponent_full": "Iraq",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Lincoln Financial Field"
+      }
+    ]
   }
 ]

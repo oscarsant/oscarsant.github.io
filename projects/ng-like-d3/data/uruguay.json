@@ -560,7 +560,7 @@
   },
   {
     "year": 2022,
-    "stage": "R16",
+    "stage": "GS",
     "matches": [
       {
         "stage": "GS",
@@ -585,6 +585,30 @@
         "opponent_full": "Ghana",
         "score": "2-0",
         "result": "W"
+      }
+    ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-15",
+        "opponent": "KSA",
+        "opponent_full": "Saudi Arabia",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Hard Rock Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "CPV",
+        "opponent_full": "Cape Verde",
+        "score": "2-2",
+        "result": "D",
+        "venue": "Hard Rock Stadium"
       }
     ]
   }

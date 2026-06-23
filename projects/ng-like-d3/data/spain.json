@@ -659,5 +659,29 @@
         "penalties": "0-3"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-15",
+        "opponent": "CPV",
+        "opponent_full": "Cape Verde",
+        "score": "0-0",
+        "result": "D",
+        "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-21",
+        "opponent": "KSA",
+        "opponent_full": "Saudi Arabia",
+        "score": "4-0",
+        "result": "W",
+        "venue": "Mercedes-Benz Stadium"
+      }
+    ]
   }
 ]

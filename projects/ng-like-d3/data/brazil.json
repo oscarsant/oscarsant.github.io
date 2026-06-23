@@ -1047,5 +1047,38 @@
         "penalties": "2-4"
       }
     ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-13",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "1-1",
+        "result": "D",
+        "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-20",
+        "opponent": "HAI",
+        "opponent_full": "Haiti",
+        "score": "3-0",
+        "result": "W",
+        "venue": "Lincoln Financial Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "SCO",
+        "opponent_full": "Scotland",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Hard Rock Stadium"
+      }
+    ]
   }
 ]

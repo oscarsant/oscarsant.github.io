@@ -298,7 +298,7 @@
   },
   {
     "year": 2010,
-    "stage": "R16",
+    "stage": "GS",
     "matches": [
       {
         "stage": "GS",
@@ -437,6 +437,39 @@
         "opponent_full": "Portugal",
         "score": "1-6",
         "result": "L"
+      }
+    ]
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-13",
+        "opponent": "QAT",
+        "opponent_full": "Qatar",
+        "score": "1-1",
+        "result": "D",
+        "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-18",
+        "opponent": "BOS",
+        "opponent_full": "Bosnia-Herzegovina",
+        "score": "4-1",
+        "result": "W",
+        "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "CAN",
+        "opponent_full": "Canada",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BC Place"
       }
     ]
   }

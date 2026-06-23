@@ -332,5 +332,29 @@
   {
     "year": 2022,
     "stage": "DNQ"
+  },
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "JOR",
+        "opponent_full": "Jordan",
+        "score": "3-1",
+        "result": "W",
+        "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-22",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "0-2",
+        "result": "L",
+        "venue": "AT&T Stadium"
+      }
+    ]
   }
 ]
