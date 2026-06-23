@@ -49,10 +49,29 @@ async function ensureModels() {
 }
 
 const PLAYERS_PATH = path.join(__dirname, "players.json");
+const IMG_CACHE_DIR = path.join(__dirname, ".img-cache");
 const CROP_SIZE = 200;
 const SAVE_EVERY = 30;
 const DELAY_MS = 2000; // Wikimedia CDN needs breathing room to avoid 429
 const RETRY_DELAY_MS = 20000;
+
+// Ensure cache directory exists
+if (!fs.existsSync(IMG_CACHE_DIR)) fs.mkdirSync(IMG_CACHE_DIR);
+
+/** Stable filename from URL */
+function cacheKey(url) {
+	const crypto = require("crypto");
+	return crypto.createHash("md5").update(url).digest("hex") + ".jpg";
+}
+
+/** Return buffer from local cache, or download + cache it */
+async function fetchBufferCached(url) {
+	const file = path.join(IMG_CACHE_DIR, cacheKey(url));
+	if (fs.existsSync(file)) return fs.readFileSync(file);
+	const buf = await fetchBuffer(url);
+	fs.writeFileSync(file, buf);
+	return buf;
+}
 
 function sleep(ms) {
 	return new Promise((r) => setTimeout(r, ms));
@@ -101,9 +120,9 @@ async function fetchBuffer(url, attempt = 0) {
 async function getFocusData(imgUrl) {
 	await ensureModels();
 
-	// Fetch a 200px-wide thumbnail — large enough for face-api, small enough to be fast
+	// Fetch a 200px-wide thumbnail — use local cache to avoid Wikimedia rate limits
 	const thumbUrl = imgUrl.replace(/\?width=\d+/, "?width=200");
-	const buf = await fetchBuffer(thumbUrl);
+	const buf = await fetchBufferCached(thumbUrl);
 
 	// Get image dimensions
 	const sharp = require(path.join(__dirname, "node_modules", "sharp"));
@@ -204,14 +223,30 @@ async function main() {
 
 	const playersJson = JSON.parse(fs.readFileSync(PLAYERS_PATH, "utf8"));
 
+	// Top-N players per country to process (by total apps, then goals as tiebreak)
+	const TOP_PER_COUNTRY = 20;
+
 	// Collect players to process
 	const toProcess = [];
 	for (const [team, players] of Object.entries(playersJson)) {
 		if (countryFilter && team !== countryFilter) continue;
+
+		// Determine the top-N players for this country (only applies when no --names filter)
+		const topNames = namesFilter
+			? null
+			: new Set(
+				[...players]
+					.filter((p) => p.img) // only consider players that have an image
+					.sort((a, b) => (b.apps ?? 0) - (a.apps ?? 0) || (b.goals ?? 0) - (a.goals ?? 0))
+					.slice(0, TOP_PER_COUNTRY)
+					.map((p) => p.name),
+			  );
+
 		for (const p of players) {
 			if (!p.img) continue;
 			if (p.imgLocked) continue; // imgLocked: true → never overwrite focus data
 			if (namesFilter && !namesFilter.includes(p.name)) continue;
+			if (topNames && !topNames.has(p.name)) continue; // skip outside top-N
 			if (p.imgFocusY != null && !force) continue;
 			toProcess.push({ p, team });
 		}
@@ -253,6 +288,8 @@ async function main() {
 		const prefix = `[${String(i + 1).padStart(5)}/${total}]`;
 
 		try {
+			const thumbUrl = p.img.replace(/\?width=\d+/, "?width=200");
+			const cached = fs.existsSync(path.join(IMG_CACHE_DIR, cacheKey(thumbUrl)));
 			const data = await getFocusData(p.img);
 			if (data != null) {
 				p.imgFocusY = data.focusY;
@@ -278,7 +315,13 @@ async function main() {
 			);
 		}
 
-		await sleep(DELAY_MS);
+		// Only wait between requests when image wasn't cached (avoids Wikimedia 429)
+		{
+			const thumbUrl = p.img.replace(/\?width=\d+/, "?width=200");
+			if (!fs.existsSync(path.join(IMG_CACHE_DIR, cacheKey(thumbUrl)))) {
+				await sleep(DELAY_MS);
+			}
+		}
 
 		if (sinceLastSave >= SAVE_EVERY) {
 			saveProgress();
