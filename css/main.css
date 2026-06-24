@@ -1726,7 +1726,7 @@ header {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 60%), url("../images/numbers-thumb.png") center top/cover no-repeat;
 }
 .personal-project-thumb--worldcup .personal-project-thumb-media {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 60%), url("../images/WC-thumb-opt.jpg") center top/cover no-repeat;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 60%), url("../images/WC-product.jpg") center top/cover no-repeat;
 }
 .personal-project-thumb--placeholder .personal-project-thumb-media {
   background: linear-gradient(130deg, #adb7c4 0%, #8b96a5 100%);
