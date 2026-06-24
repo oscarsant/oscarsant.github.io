@@ -522,9 +522,7 @@ async function main() {
 		// ── Update existing players ──────────────────────────────────────────
 		for (const player of teamPlayers) {
 			const live =
-				aggPlayers[player.name] ||
-				aggPlayers[normalize(player.name)] ||
-				null;
+				aggPlayers[player.name] || aggPlayers[normalize(player.name)] || null;
 			if (!live) continue;
 			if (!player.byYear) player.byYear = {};
 			player.byYear["2026"] = { apps: live.apps, goals: live.goals };
