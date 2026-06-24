@@ -2299,7 +2299,7 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-around;
 }
 
@@ -2308,6 +2308,7 @@ svg {
   gap: 0.2rem;
   line-height: 1;
   flex-direction: column-reverse;
+  align-items: flex-end;
 }
 
 .ap-number-key {

@@ -6,7 +6,8 @@
 
 body {
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: pan-x pan-y;
 }
@@ -15,7 +16,8 @@ input,
 textarea,
 [contenteditable] {
   -webkit-user-select: text;
-  user-select: text;
+  -moz-user-select: text;
+       user-select: text;
   font-size: 16px !important;
   font-weight: 400;
 }
@@ -313,6 +315,9 @@ body.landing-body::after {
   line-height: 1.6;
   letter-spacing: 0.4px;
   font-family: inherit;
+}
+.search-input::-moz-placeholder {
+  color: var(--muted);
 }
 .search-input::placeholder {
   color: var(--muted);
@@ -661,7 +666,8 @@ body.landing-body::after {
   right: 1rem;
   width: 2rem;
   height: 2rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   opacity: 0.9;
   transition: all 0.3s ease;
 }
@@ -1150,7 +1156,9 @@ svg {
   outline: none;
 }
 .select-wrap select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent;
   border: none;
   outline: none;
@@ -1402,7 +1410,8 @@ svg {
 .team-info-right .team-badge-img {
   width: 3rem;
   height: 3rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   animation: fadeInBadge 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 @media (max-width: 480px) {
@@ -1693,6 +1702,7 @@ svg {
   display: flex;
   align-items: center;
   height: 28px;
+  width: -moz-max-content;
   width: max-content;
 }
 .pos-filter:hover,
@@ -1780,6 +1790,9 @@ svg {
   outline: none;
   transition: border-color 0.2s;
   box-sizing: border-box;
+}
+.all-players-search::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.2);
 }
 .all-players-search::placeholder {
   color: rgba(255, 255, 255, 0.2);
@@ -1898,8 +1911,10 @@ svg {
 .ap-avatar-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
   display: block;
 }
 
@@ -2160,7 +2175,7 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-around;
 }
 
@@ -2169,6 +2184,7 @@ svg {
   gap: 0.2rem;
   line-height: 1;
   flex-direction: column-reverse;
+  align-items: flex-end;
 }
 
 .ap-number-key {
@@ -2463,7 +2479,9 @@ svg {
   font-size: 1.1rem;
   margin-right: 0.25rem;
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .conf-filters {
@@ -2646,7 +2664,9 @@ svg {
 }
 
 .cmp-col-header {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 0;
   background: transparent;
   font-size: 0.5rem;
@@ -2673,7 +2693,9 @@ svg {
 }
 
 .cmp-col-header-sub {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 0;
   background: transparent;
   font-size: 0.5rem;
@@ -3134,7 +3156,8 @@ svg {
   display: grid;
   grid-template-columns: 80px 1fr;
   row-gap: 0.15rem;
-  column-gap: 0.6rem;
+  -moz-column-gap: 0.6rem;
+       column-gap: 0.6rem;
   align-items: center;
 }
 
@@ -3443,4 +3466,4 @@ svg {
 
 .live-next-date {
   margin-left: auto;
-}
+}/*# sourceMappingURL=styles.css.map */
