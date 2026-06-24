@@ -508,29 +508,22 @@ async function main() {
 		if (!playersJson[key]) playersJson[key] = [];
 		const teamPlayers = playersJson[key];
 		const existingNames = new Set(teamPlayers.map((p) => p.name));
-		// Family-name lookup with diacritic normalization
-		const familyLookup = new Map();
+		// Full-name lookup with diacritic normalization
+		// Keyed by normalize(fullName) so "Thomas Muller" → "Thomas Müller" works
+		// but "Gerd Müller" and "Thomas Müller" stay separate
+		const normNameLookup = new Map();
 		teamPlayers.forEach((p) => {
-			if (p.family && p.family !== "not applicable") {
-				familyLookup.set(normalize(p.family), p);
-				familyLookup.set(p.family, p);
-			}
+			normNameLookup.set(normalize(p.name), p);
 		});
-		// lookup helper: try raw then normalized
-		const lookupFamily = (name) => {
-			const parts = name.split(" ");
-			const last = parts[parts.length - 1];
-			return familyLookup.get(last) || familyLookup.get(normalize(last)) || null;
-		};
+		const lookupPlayer = (name) =>
+			normNameLookup.get(name) || normNameLookup.get(normalize(name)) || null;
 
 		let playerHits = 0;
 		// ── Update existing players ──────────────────────────────────────────
 		for (const player of teamPlayers) {
 			const live =
 				aggPlayers[player.name] ||
-				(player.family && player.family !== "not applicable"
-					? aggPlayers[player.family]
-					: null) ||
+				aggPlayers[normalize(player.name)] ||
 				null;
 			if (!live) continue;
 			if (!player.byYear) player.byYear = {};
@@ -543,10 +536,10 @@ async function main() {
 
 		// ── Add new players seen in ESPN lineups but not in our data ─────────
 		for (const [name, live] of Object.entries(aggPlayers)) {
-			if (live.apps === 0) continue; // didn't actually play
-			// Skip if already matched above (exact or family)
+			if (live.apps === 0) continue;
+			// Skip if already matched above by exact or normalized full name
 			if (existingNames.has(name)) continue;
-			if (lookupFamily(name)) continue;
+			if (lookupPlayer(name)) continue;
 			// Build minimal player entry
 			const nameParts = name.trim().split(/\s+/);
 			const given =
@@ -579,18 +572,18 @@ async function main() {
 		);
 	}
 
-	// ── Step 4: Merge duplicates caused by diacritic mismatch ───────────────
-	// e.g. ESPN "Ivan Perisic" vs existing "Ivan Perišić"
+	// ── Step 4: Merge duplicates — only exact normalized full-name matches ───
+	// e.g. ESPN "Ivan Perisic" vs existing "Ivan Perišić" → same person
+	// Gerd Müller and Thomas Müller are NOT merged (different full names)
 	for (const key of allKeys) {
 		if (!playersJson[key]) continue;
 		const arr = playersJson[key];
-		const seenNorm = new Map();
+		const seenNormFull = new Map(); // normalizedFullName → index
 		const toRemove = new Set();
 		arr.forEach((p, i) => {
-			if (!p.family || p.family === "not applicable") return;
-			const nf = normalize(p.family);
-			if (seenNorm.has(nf)) {
-				const j = seenNorm.get(nf);
+			const nf = normalize(p.name);
+			if (seenNormFull.has(nf)) {
+				const j = seenNormFull.get(nf);
 				const other = arr[j];
 				const keepIdx = (other.apps || 0) >= (p.apps || 0) ? j : i;
 				const dropIdx = keepIdx === j ? i : j;
@@ -608,9 +601,9 @@ async function main() {
 					].sort((a, b) => a - b);
 				}
 				toRemove.add(dropIdx);
-				seenNorm.set(nf, keepIdx);
+				seenNormFull.set(nf, keepIdx);
 			} else {
-				seenNorm.set(nf, i);
+				seenNormFull.set(nf, i);
 			}
 		});
 		if (toRemove.size > 0) {

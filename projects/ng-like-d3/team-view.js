@@ -28,7 +28,7 @@
 	// All team data files are now in data/ subfolder
 	const [tournaments, playersData] = await Promise.all([
 		d3.json(`data/${teamParam}.json`),
-		d3.json("players.json?v=20260623e"),
+		d3.json("players.json?v=20260623f"),
 	]);
 	const team = {
 		...teamInfo,
