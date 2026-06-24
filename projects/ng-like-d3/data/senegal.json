@@ -210,6 +210,15 @@
         "score": "2-3",
         "result": "L",
         "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "IRQ",
+        "opponent_full": "Iraq",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BMO Field"
       }
     ]
   }

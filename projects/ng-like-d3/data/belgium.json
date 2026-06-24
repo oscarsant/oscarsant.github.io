@@ -545,6 +545,15 @@
         "score": "0-0",
         "result": "D",
         "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "NZL",
+        "opponent_full": "New Zealand",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BC Place"
       }
     ]
   }

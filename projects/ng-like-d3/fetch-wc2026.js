@@ -366,6 +366,12 @@ function writeTeamData(key, matches, force) {
 
 // ── Main ──────────────────────────────────────────────────────────────────
 async function main() {
+	// ── Normalize helper for diacritic-insensitive name matching ─────────
+	const normalize = (s) =>
+		s
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "")
+			.toLowerCase();
 	const args = process.argv.slice(2);
 	const dryRun = args.includes("--dry-run");
 	const force = args.includes("--force");
@@ -502,12 +508,20 @@ async function main() {
 		if (!playersJson[key]) playersJson[key] = [];
 		const teamPlayers = playersJson[key];
 		const existingNames = new Set(teamPlayers.map((p) => p.name));
-		// Also build a family-name lookup for fuzzy matching
+		// Family-name lookup with diacritic normalization
 		const familyLookup = new Map();
 		teamPlayers.forEach((p) => {
-			if (p.family && p.family !== "not applicable")
+			if (p.family && p.family !== "not applicable") {
+				familyLookup.set(normalize(p.family), p);
 				familyLookup.set(p.family, p);
+			}
 		});
+		// lookup helper: try raw then normalized
+		const lookupFamily = (name) => {
+			const parts = name.split(" ");
+			const last = parts[parts.length - 1];
+			return familyLookup.get(last) || familyLookup.get(normalize(last)) || null;
+		};
 
 		let playerHits = 0;
 		// ── Update existing players ──────────────────────────────────────────
@@ -532,7 +546,7 @@ async function main() {
 			if (live.apps === 0) continue; // didn't actually play
 			// Skip if already matched above (exact or family)
 			if (existingNames.has(name)) continue;
-			if (familyLookup.has(name)) continue;
+			if (lookupFamily(name)) continue;
 			// Build minimal player entry
 			const nameParts = name.trim().split(/\s+/);
 			const given =
@@ -565,7 +579,47 @@ async function main() {
 		);
 	}
 
-	// ── Step 4: Save players.json ─────────────────────────────────────────
+	// ── Step 4: Merge duplicates caused by diacritic mismatch ───────────────
+	// e.g. ESPN "Ivan Perisic" vs existing "Ivan Perišić"
+	for (const key of allKeys) {
+		if (!playersJson[key]) continue;
+		const arr = playersJson[key];
+		const seenNorm = new Map();
+		const toRemove = new Set();
+		arr.forEach((p, i) => {
+			if (!p.family || p.family === "not applicable") return;
+			const nf = normalize(p.family);
+			if (seenNorm.has(nf)) {
+				const j = seenNorm.get(nf);
+				const other = arr[j];
+				const keepIdx = (other.apps || 0) >= (p.apps || 0) ? j : i;
+				const dropIdx = keepIdx === j ? i : j;
+				const keep = arr[keepIdx];
+				const drop = arr[dropIdx];
+				if (drop.byYear) {
+					keep.byYear = keep.byYear || {};
+					Object.entries(drop.byYear).forEach(([yr, v]) => {
+						if (!keep.byYear[yr]) keep.byYear[yr] = v;
+					});
+				}
+				if (drop.years) {
+					keep.years = [
+						...new Set([...(keep.years || []), ...drop.years]),
+					].sort((a, b) => a - b);
+				}
+				toRemove.add(dropIdx);
+				seenNorm.set(nf, keepIdx);
+			} else {
+				seenNorm.set(nf, i);
+			}
+		});
+		if (toRemove.size > 0) {
+			playersJson[key] = arr.filter((_, i) => !toRemove.has(i));
+			console.log(`  Merged ${toRemove.size} duplicate(s) for ${key}`);
+		}
+	}
+
+	// ── Step 5: Save players.json ─────────────────────────────────────────
 	if (!dryRun && updatedPlayers > 0) {
 		fs.writeFileSync(
 			playersPath,

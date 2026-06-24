@@ -130,6 +130,15 @@
         "score": "2-2",
         "result": "D",
         "venue": "Hard Rock Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "KSA",
+        "opponent_full": "Saudi Arabia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "NRG Stadium"
       }
     ]
   }

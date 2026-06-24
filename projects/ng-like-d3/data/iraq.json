@@ -134,6 +134,15 @@
         "score": "0-3",
         "result": "L",
         "venue": "Lincoln Financial Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "SEN",
+        "opponent_full": "Senegal",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BMO Field"
       }
     ]
   }

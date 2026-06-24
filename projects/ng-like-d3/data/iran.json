@@ -264,6 +264,15 @@
         "score": "0-0",
         "result": "D",
         "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "EGY",
+        "opponent_full": "Egypt",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lumen Field"
       }
     ]
   }

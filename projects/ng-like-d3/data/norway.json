@@ -178,6 +178,15 @@
         "score": "3-2",
         "result": "W",
         "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-26",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Gillette Stadium"
       }
     ]
   }

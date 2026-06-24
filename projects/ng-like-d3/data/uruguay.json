@@ -609,6 +609,15 @@
         "score": "2-2",
         "result": "D",
         "venue": "Hard Rock Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Akron"
       }
     ]
   }

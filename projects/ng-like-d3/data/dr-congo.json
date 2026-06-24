@@ -1,0 +1,26 @@
+[
+  {
+    "year": 2026,
+    "stage": "GS",
+    "matches": [
+      {
+        "stage": "GS",
+        "date": "2026-06-17",
+        "opponent": "POR",
+        "opponent_full": "Portugal",
+        "score": "1-1",
+        "result": "D",
+        "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-24",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Akron"
+      }
+    ]
+  }
+]

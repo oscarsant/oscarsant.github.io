@@ -144,6 +144,15 @@
         "score": "3-1",
         "result": "W",
         "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "IRN",
+        "opponent_full": "Iran",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lumen Field"
       }
     ]
   }

@@ -160,6 +160,15 @@
         "score": "1-3",
         "result": "L",
         "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BC Place"
       }
     ]
   }

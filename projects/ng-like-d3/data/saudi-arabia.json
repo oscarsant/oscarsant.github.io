@@ -272,6 +272,15 @@
         "score": "0-4",
         "result": "L",
         "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "CPV",
+        "opponent_full": "Cape Verde",
+        "score": "TBD",
+        "result": "?",
+        "venue": "NRG Stadium"
       }
     ]
   }

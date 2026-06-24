@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-06-25",
+  "lastSweepDate": "2026-06-26",
   "events": {
     "760414": {
       "id": "760414",
@@ -578,9 +578,9 @@
       "date": "2026-06-23",
       "homeTeam": "England",
       "awayTeam": "Ghana",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -780,6 +780,84 @@
       "stage": "GS",
       "group": null,
       "venue": "Lincoln Financial Field"
+    },
+    "760474": {
+      "id": "760474",
+      "date": "2026-06-26",
+      "homeTeam": "Senegal",
+      "awayTeam": "Iraq",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "BMO Field"
+    },
+    "760475": {
+      "id": "760475",
+      "date": "2026-06-26",
+      "homeTeam": "Norway",
+      "awayTeam": "France",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Gillette Stadium"
+    },
+    "760476": {
+      "id": "760476",
+      "date": "2026-06-27",
+      "homeTeam": "Egypt",
+      "awayTeam": "Iran",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Lumen Field"
+    },
+    "760477": {
+      "id": "760477",
+      "date": "2026-06-27",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Belgium",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "BC Place"
+    },
+    "760478": {
+      "id": "760478",
+      "date": "2026-06-27",
+      "homeTeam": "Cape Verde",
+      "awayTeam": "Saudi Arabia",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "NRG Stadium"
+    },
+    "760479": {
+      "id": "760479",
+      "date": "2026-06-27",
+      "homeTeam": "Uruguay",
+      "awayTeam": "Spain",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Estadio Akron"
     }
   },
   "processed": {
@@ -7817,6 +7895,167 @@
           "pos": "MF"
         },
         "Aimar Sher": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760458": {
+      "england": {
+        "Jordan Pickford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Marc Guéhi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ezri Konsa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Djed Spence": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Reece James": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jude Bellingham": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Declan Rice": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Elliot Anderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Harry Kane": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Anthony Gordon": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Noni Madueke": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Morgan Rogers": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Eberechi Eze": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marcus Rashford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nico O'Reilly": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bukayo Saka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "ghana": {
+        "Benjamin Asare": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Jerome Opoku": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jonas Adjetey": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Thomas Partey": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gideon Mensah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Marvin Senaya": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Kwasi Sibo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Caleb Yirenkyi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Antoine Semenyo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Iñaki Williams": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jordan Ayew": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Prince Adu": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kojo Peprah Oppong": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Baba Rahman": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fatawu Issahaku": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

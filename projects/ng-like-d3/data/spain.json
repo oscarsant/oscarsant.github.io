@@ -681,6 +681,15 @@
         "score": "4-0",
         "result": "W",
         "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "URU",
+        "opponent_full": "Uruguay",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Akron"
       }
     ]
   }
