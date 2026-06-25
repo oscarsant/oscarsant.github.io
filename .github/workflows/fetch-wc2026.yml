@@ -2,45 +2,52 @@ name: Fetch WC2026 Live Data
 
 on:
   schedule:
-    # Every 10 minutes — fast enough for live match updates, polite on the free API
-    - cron: "*/10 * * * *"
-  # Allow manual trigger from GitHub Actions UI
+    # Once daily at 11:30 PM UTC — after the last games of the day finish
+    # Tournament: June 12 – July 20, 2026
+    - cron: "30 23 * * *"
   workflow_dispatch:
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    # Only run during the tournament window (June–July 2026)
-    # Remove or extend this if you want it to keep running
-    if: |
-      github.event_name == 'workflow_dispatch' ||
-      (startsWith(github.ref, 'refs/heads/') && true)
-
     permissions:
       contents: write
 
     steps:
+      - name: Check if still within tournament window
+        id: check_date
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          if [[ "$TODAY" > "2026-07-20" ]]; then
+            echo "Tournament over ($TODAY > 2026-07-20). Skipping."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout
+        if: steps.check_date.outputs.skip != 'true'
         uses: actions/checkout@v4
 
       - name: Setup Node.js
+        if: steps.check_date.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - name: Fetch WC2026 data
+        if: steps.check_date.outputs.skip != 'true'
         working-directory: projects/ng-like-d3
         run: node fetch-wc2026.js
-        # Script uses only Node built-ins (https, fs, path) — no npm install needed
 
       - name: Commit updated data
+        if: steps.check_date.outputs.skip != 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add projects/ng-like-d3/data/ \
                   projects/ng-like-d3/players.json \
                   projects/ng-like-d3/.espn-cache.json
-          # Only commit if something actually changed
           git diff --staged --quiet && echo "No changes" || (
             git commit -m "chore: auto-update WC2026 data [skip ci]" &&
             git push
