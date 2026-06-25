@@ -354,6 +354,15 @@
         "score": "0-2",
         "result": "L",
         "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-28",
+        "opponent": "ALG",
+        "opponent_full": "Algeria",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
       }
     ]
   }

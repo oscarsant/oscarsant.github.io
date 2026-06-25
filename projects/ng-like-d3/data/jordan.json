@@ -130,6 +130,15 @@
         "score": "1-2",
         "result": "L",
         "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-28",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }

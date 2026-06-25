@@ -855,6 +855,15 @@
         "score": "2-0",
         "result": "W",
         "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-28",
+        "opponent": "JOR",
+        "opponent_full": "Jordan",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }

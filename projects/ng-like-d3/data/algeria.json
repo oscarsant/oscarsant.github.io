@@ -220,6 +220,15 @@
         "score": "2-1",
         "result": "W",
         "venue": "Levi's Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-28",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
       }
     ]
   }
