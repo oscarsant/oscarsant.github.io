@@ -405,6 +405,15 @@
         "score": "5-0",
         "result": "W",
         "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Hard Rock Stadium"
       }
     ]
   }

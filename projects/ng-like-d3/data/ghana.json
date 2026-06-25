@@ -237,6 +237,15 @@
         "score": "0-0",
         "result": "D",
         "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lincoln Financial Field"
       }
     ]
   }

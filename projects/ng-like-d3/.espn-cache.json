@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-06-26",
+  "lastSweepDate": "2026-06-27",
   "events": {
     "760414": {
       "id": "760414",
@@ -858,6 +858,84 @@
       "stage": "GS",
       "group": null,
       "venue": "Estadio Akron"
+    },
+    "760480": {
+      "id": "760480",
+      "date": "2026-06-27",
+      "homeTeam": "Croatia",
+      "awayTeam": "Ghana",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Lincoln Financial Field"
+    },
+    "760481": {
+      "id": "760481",
+      "date": "2026-06-27",
+      "homeTeam": "Colombia",
+      "awayTeam": "Portugal",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Hard Rock Stadium"
+    },
+    "760482": {
+      "id": "760482",
+      "date": "2026-06-27",
+      "homeTeam": "Congo DR",
+      "awayTeam": "Uzbekistan",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Mercedes-Benz Stadium"
+    },
+    "760483": {
+      "id": "760483",
+      "date": "2026-06-28",
+      "homeTeam": "Jordan",
+      "awayTeam": "Argentina",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "AT&T Stadium"
+    },
+    "760484": {
+      "id": "760484",
+      "date": "2026-06-28",
+      "homeTeam": "Algeria",
+      "awayTeam": "Austria",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "GEHA Field at Arrowhead Stadium"
+    },
+    "760485": {
+      "id": "760485",
+      "date": "2026-06-27",
+      "homeTeam": "Panama",
+      "awayTeam": "England",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "MetLife Stadium"
     }
   },
   "processed": {

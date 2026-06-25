@@ -736,6 +736,15 @@
         "score": "0-0",
         "result": "D",
         "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-27",
+        "opponent": "PAN",
+        "opponent_full": "Panama",
+        "score": "TBD",
+        "result": "?",
+        "venue": "MetLife Stadium"
       }
     ]
   }
