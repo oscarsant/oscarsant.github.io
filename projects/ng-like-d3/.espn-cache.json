@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-06-28",
+  "lastSweepDate": "2026-06-29",
   "events": {
     "760414": {
       "id": "760414",
@@ -864,9 +864,9 @@
       "date": "2026-06-27",
       "homeTeam": "Croatia",
       "awayTeam": "Ghana",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -877,10 +877,10 @@
       "date": "2026-06-27",
       "homeTeam": "Colombia",
       "awayTeam": "Portugal",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "completed": false,
-      "inProgress": false,
+      "inProgress": true,
       "stage": "GS",
       "group": null,
       "venue": "Hard Rock Stadium"
@@ -929,9 +929,9 @@
       "date": "2026-06-27",
       "homeTeam": "Panama",
       "awayTeam": "England",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -949,6 +949,45 @@
       "stage": "GS",
       "group": null,
       "venue": "SoFi Stadium"
+    },
+    "760487": {
+      "id": "760487",
+      "date": "2026-06-29",
+      "homeTeam": "Brazil",
+      "awayTeam": "Japan",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "NRG Stadium"
+    },
+    "760488": {
+      "id": "760488",
+      "date": "2026-06-30",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Morocco",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Estadio BBVA"
+    },
+    "760489": {
+      "id": "760489",
+      "date": "2026-06-29",
+      "homeTeam": "Germany",
+      "awayTeam": "Paraguay",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Gillette Stadium"
     }
   },
   "processed": {
@@ -8645,6 +8684,333 @@
           "pos": "MF"
         },
         "Ibrahima Konaté": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760480": {
+      "croatia": {
+        "Dominik Livakovic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Marin Pongracic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Josip Sutalo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ivan Perisic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Josip Stanisic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Petar Sucic": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Mateo Kovacic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Luka Modric": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ante Budimir": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Martin Baturina": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nikola Vlasic": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Mario Pasalic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marco Pasalic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Igor Matanovic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Josko Gvardiol": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "ghana": {
+        "Benjamin Asare": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Derrick Luckassen": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Jonas Adjetey": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Thomas Partey": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gideon Mensah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Marvin Senaya": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Kwasi Sibo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Elisha Owusu": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kamaldeen Sulemana": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Antoine Semenyo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jordan Ayew": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Brandon Thomas-Asante": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Caleb Yirenkyi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fatawu Issahaku": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kojo Peprah Oppong": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ernest Nuamah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760485": {
+      "panama": {
+        "Orlando Mosquera": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "José Córdoba": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Andrés Andrade": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fidel Escobar": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jorge Gutiérrez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Amir Murillo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Édgar Yoel Bárcenas": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Carlos Harvey": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "José Luis Rodríguez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cristian Martínez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Tomás Rodríguez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Ismael Díaz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Alberto Quintero": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Éric Davis": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Azarias Londoño": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "José Fajardo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "england": {
+        "Jordan Pickford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Marc Guéhi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ezri Konsa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Elliot Anderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nico O'Reilly": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jarell Quansah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jude Bellingham": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Morgan Rogers": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marcus Rashford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bukayo Saka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Harry Kane": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "FW"
+        },
+        "Noni Madueke": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Djed Spence": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Eberechi Eze": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ollie Watkins": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jordan Henderson": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

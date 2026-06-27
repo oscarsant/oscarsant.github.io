@@ -51997,8 +51997,8 @@
           "goals": 2
         },
         "2026": {
-          "apps": 2,
-          "goals": 2
+          "apps": 3,
+          "goals": 3
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Harry_Kane_2023.jpg?width=300",
@@ -52184,7 +52184,7 @@
           "goals": 3
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -52250,7 +52250,7 @@
           "goals": 3
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -52565,7 +52565,8 @@
       "years": [
         2014,
         2018,
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2014": {
@@ -52579,6 +52580,10 @@
         "2022": {
           "apps": 4,
           "goals": 1
+        },
+        "2026": {
+          "apps": 1,
+          "goals": 0
         }
       }
     },
@@ -52929,8 +52934,8 @@
           "goals": 1
         },
         "2026": {
-          "apps": 2,
-          "goals": 1
+          "apps": 3,
+          "goals": 2
         }
       }
     },
@@ -53279,7 +53284,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56821,7 +56826,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56838,7 +56843,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56872,7 +56877,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56906,7 +56911,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56923,7 +56928,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56940,7 +56945,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56957,7 +56962,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -56966,6 +56971,40 @@
       "name": "Eberechi Eze",
       "family": "Eze",
       "given": "Eberechi",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Jarell Quansah",
+      "family": "Quansah",
+      "given": "Jarell",
+      "pos": "DF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Ollie Watkins",
+      "family": "Watkins",
+      "given": "Ollie",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -76413,11 +76452,16 @@
       "apps": 2,
       "goals": 0,
       "years": [
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2022": {
           "apps": 2,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       }
@@ -77127,7 +77171,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 1
         }
       }
@@ -77144,8 +77188,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
-          "goals": 0
+          "apps": 2,
+          "goals": 1
         }
       }
     },
@@ -77161,7 +77205,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -77170,6 +77214,23 @@
       "name": "Marco Pasalic",
       "family": "Pasalic",
       "given": "Marco",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Marin Pongracic",
+      "family": "Pongracic",
+      "given": "Marin",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -132586,11 +132647,16 @@
       "apps": 3,
       "goals": 0,
       "years": [
-        2018
+        2018,
+        2026
       ],
       "byYear": {
         "2018": {
           "apps": 3,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       },
@@ -132657,7 +132723,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       },
@@ -132885,7 +132951,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -132971,7 +133037,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -132988,7 +133054,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133005,7 +133071,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133039,7 +133105,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133056,7 +133122,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133090,7 +133156,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133124,7 +133190,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133141,7 +133207,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -133150,6 +133216,74 @@
       "name": "José Fajardo",
       "family": "Fajardo",
       "given": "José",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Jorge Gutiérrez",
+      "family": "Gutiérrez",
+      "given": "Jorge",
+      "pos": "DF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Tomás Rodríguez",
+      "family": "Rodríguez",
+      "given": "Tomás",
+      "pos": "FW",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Alberto Quintero",
+      "family": "Quintero",
+      "given": "Alberto",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Éric Davis",
+      "family": "Davis",
+      "given": "Éric",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -140304,7 +140438,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       },
@@ -140712,7 +140846,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -140768,7 +140902,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -140909,7 +141043,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -141140,7 +141274,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -141247,7 +141381,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -141468,7 +141602,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -141485,7 +141619,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -141502,7 +141636,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -141519,7 +141653,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -141553,7 +141687,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -141570,7 +141704,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -141587,7 +141721,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -141604,7 +141738,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -141621,8 +141755,25 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Derrick Luckassen",
+      "family": "Luckassen",
+      "given": "Derrick",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 1
         }
       }
     }
