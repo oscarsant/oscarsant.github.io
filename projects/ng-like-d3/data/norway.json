@@ -187,6 +187,15 @@
         "score": "1-4",
         "result": "L",
         "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-06-30",
+        "opponent": "CIV",
+        "opponent_full": "Ivory Coast",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-06-29",
+  "lastSweepDate": "2026-06-30",
   "events": {
     "760414": {
       "id": "760414",
@@ -942,9 +942,9 @@
       "date": "2026-06-28",
       "homeTeam": "South Africa",
       "awayTeam": "Canada",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -988,6 +988,45 @@
       "stage": "GS",
       "group": null,
       "venue": "Gillette Stadium"
+    },
+    "760490": {
+      "id": "760490",
+      "date": "2026-06-30",
+      "homeTeam": "Ivory Coast",
+      "awayTeam": "Norway",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "AT&T Stadium"
+    },
+    "760491": {
+      "id": "760491",
+      "date": "2026-07-01",
+      "homeTeam": "Mexico",
+      "awayTeam": "Ecuador",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Estadio Banorte"
+    },
+    "760492": {
+      "id": "760492",
+      "date": "2026-06-30",
+      "homeTeam": "France",
+      "awayTeam": "Sweden",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "MetLife Stadium"
     }
   },
   "processed": {
@@ -9011,6 +9050,162 @@
           "pos": "MF"
         },
         "Jordan Henderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760486": {
+      "south-africa": {
+        "Ronwen Williams": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Mbekezeli Mbokazi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ime Okon": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Aubrey Modiba": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Khuliso Mudau": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Relebohile Mofokeng": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Sphephelo Sithole": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Teboho Mokoena": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Evidence Makgopa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Oswin Appollis": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Thapelo Maseko": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Iqraam Rayners": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Tshepang Moremi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Thalente Mbatha": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "canada": {
+        "Maxime Crépeau": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Derek Cornelius": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Moïse Bombito": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Richie Laryea": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Alistair Johnston": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Stephen Eustáquio": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Nathan Saliba": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Liam Millar": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Tajon Buchanan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Tani Oluwaseyi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jonathan David": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jacob Shaffelburg": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Promise David": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Luc de Fougerolles": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Niko Sigur": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Alphonso Davies": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

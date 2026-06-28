@@ -229,6 +229,15 @@
         "score": "TBD",
         "result": "?",
         "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-01",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Banorte"
       }
     ]
   }
