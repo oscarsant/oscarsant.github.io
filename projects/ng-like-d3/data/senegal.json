@@ -219,6 +219,15 @@
         "score": "5-0",
         "result": "W",
         "venue": "BMO Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-01",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lumen Field"
       }
     ]
   }

@@ -745,6 +745,15 @@
         "score": "2-0",
         "result": "W",
         "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-01",
+        "opponent": "COD",
+        "opponent_full": "Congo DR",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Mercedes-Benz Stadium"
       }
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-06-30",
+  "lastSweepDate": "2026-07-01",
   "events": {
     "760414": {
       "id": "760414",
@@ -955,9 +955,9 @@
       "date": "2026-06-29",
       "homeTeam": "Brazil",
       "awayTeam": "Japan",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -981,9 +981,9 @@
       "date": "2026-06-29",
       "homeTeam": "Germany",
       "awayTeam": "Paraguay",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1027,6 +1027,45 @@
       "stage": "GS",
       "group": null,
       "venue": "MetLife Stadium"
+    },
+    "760493": {
+      "id": "760493",
+      "date": "2026-07-01",
+      "homeTeam": "Belgium",
+      "awayTeam": "Senegal",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Lumen Field"
+    },
+    "760494": {
+      "id": "760494",
+      "date": "2026-07-02",
+      "homeTeam": "United States",
+      "awayTeam": "Bosnia-Herzegovina",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Levi's Stadium"
+    },
+    "760495": {
+      "id": "760495",
+      "date": "2026-07-01",
+      "homeTeam": "England",
+      "awayTeam": "Congo DR",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Mercedes-Benz Stadium"
     }
   },
   "processed": {
@@ -9206,6 +9245,343 @@
           "pos": "MF"
         },
         "Alphonso Davies": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760487": {
+      "brazil": {
+        "Alisson Becker": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Gabriel Magalhães": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marquinhos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Douglas Santos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Danilo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Casemiro": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Lucas Paquetá": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bruno Guimarães": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Matheus Cunha": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Vinícius Júnior": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rayan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gabriel Martinelli": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Danilo Santos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fabinho": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Endrick": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "japan": {
+        "Zion Suzuki": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Shogo Taniguchi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Hiroki Ito": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Takehiro Tomiyasu": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Daichi Kamada": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kaishu Sano": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Keito Nakamura": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ritsu Doan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ayase Ueda": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Daizen Maeda": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Junya Ito": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Koki Ogawa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Shuto Machino": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Yukinari Sugawara": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Junnosuke Suzuki": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ao Tanaka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760489": {
+      "germany": {
+        "Manuel Neuer": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Antonio Rüdiger": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jonathan Tah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nathaniel Brown": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Joshua Kimmich": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Aleksandar Pavlovic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Felix Nmecha": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Florian Wirtz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Leroy Sané": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Deniz Undav": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kai Havertz": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Waldemar Anton": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nadiem Amiri": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jamal Musiala": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Malick Thiaw": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nick Woltemade": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Leon Goretzka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "paraguay": {
+        "Orlando Gil": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "José Canale": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gustavo Gómez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Júnior Alonso": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Juan Jose Cáceres": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Andrés Cubas": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Damián Bobadilla": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Matías Galarza": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Miguel Almirón": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Julio Enciso": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Gabriel Ávalos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Antonio Sanabria": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gustavo Velázquez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Braian Ojeda": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fabián Balbuena": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gustavo Caballero": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Maurício": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"
