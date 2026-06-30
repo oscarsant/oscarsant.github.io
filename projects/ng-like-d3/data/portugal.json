@@ -414,6 +414,15 @@
         "score": "0-0",
         "result": "?",
         "venue": "Hard Rock Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-02",
+        "opponent": "CRO",
+        "opponent_full": "Croatia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "BMO Field"
       }
     ]
   }

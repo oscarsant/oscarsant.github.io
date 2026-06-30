@@ -41757,8 +41757,8 @@
           "goals": 8
         },
         "2026": {
-          "apps": 3,
-          "goals": 4
+          "apps": 4,
+          "goals": 6
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_(cropped).jpg?width=300",
@@ -42601,7 +42601,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -42645,7 +42645,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -43167,7 +43167,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 4
         }
       }
@@ -43758,7 +43758,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -44016,7 +44016,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -46090,7 +46090,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -46355,7 +46355,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -46710,7 +46710,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -46727,7 +46727,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 1
         }
       }
@@ -46744,7 +46744,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -46761,7 +46761,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -46778,8 +46778,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
-          "goals": 1
+          "apps": 4,
+          "goals": 2
         }
       }
     },
@@ -46812,7 +46812,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -46863,7 +46863,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -70215,7 +70215,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -72055,7 +72055,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 1
         }
       }
@@ -72072,7 +72072,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -72089,7 +72089,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -72106,7 +72106,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -72123,7 +72123,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -72157,7 +72157,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -72191,7 +72191,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 2
         }
       }
@@ -72208,7 +72208,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -72225,7 +72225,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -72259,7 +72259,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -72276,7 +72276,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -72293,7 +72293,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -72302,6 +72302,40 @@
       "name": "Besfort Zeneli",
       "family": "Zeneli",
       "given": "Besfort",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Jacob Widell Zetterström",
+      "family": "Zetterström",
+      "given": "Jacob Widell",
+      "pos": "GK",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Gustaf Nilsson",
+      "family": "Nilsson",
+      "given": "Gustaf",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -101177,7 +101211,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101194,7 +101228,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101211,7 +101245,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101228,7 +101262,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101262,7 +101296,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -101279,7 +101313,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101296,8 +101330,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
-          "goals": 0
+          "apps": 4,
+          "goals": 1
         }
       }
     },
@@ -101313,7 +101347,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101330,8 +101364,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
-          "goals": 4
+          "apps": 3,
+          "goals": 5
         }
       }
     },
@@ -101347,7 +101381,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -101364,7 +101398,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -101415,7 +101449,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -101432,7 +101466,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -101449,7 +101483,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -144250,7 +144284,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144267,7 +144301,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144301,7 +144335,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144318,7 +144352,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144352,7 +144386,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -144369,7 +144403,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -144386,7 +144420,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144403,7 +144437,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -144420,7 +144454,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144437,7 +144471,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144454,7 +144488,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144471,7 +144505,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144488,8 +144522,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
-          "goals": 1
+          "apps": 3,
+          "goals": 2
         }
       }
     },
@@ -144505,7 +144539,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -144531,6 +144565,23 @@
       "name": "Evann Guessand",
       "family": "Guessand",
       "given": "Evann",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Oumar Diakité",
+      "family": "Diakité",
+      "given": "Oumar",
       "pos": "MF",
       "apps": 0,
       "goals": 0,

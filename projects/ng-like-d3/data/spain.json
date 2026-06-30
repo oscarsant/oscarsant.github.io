@@ -690,6 +690,15 @@
         "score": "TBD",
         "result": "?",
         "venue": "Estadio Akron"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-02",
+        "opponent": "AUT",
+        "opponent_full": "Austria",
+        "score": "TBD",
+        "result": "?",
+        "venue": "SoFi Stadium"
       }
     ]
   }
