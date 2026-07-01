@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-02",
+  "lastSweepDate": "2026-07-03",
   "events": {
     "760414": {
       "id": "760414",
@@ -1033,9 +1033,9 @@
       "date": "2026-07-01",
       "homeTeam": "Belgium",
       "awayTeam": "Senegal",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1059,9 +1059,9 @@
       "date": "2026-07-01",
       "homeTeam": "England",
       "awayTeam": "Congo DR",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1105,6 +1105,45 @@
       "stage": "GS",
       "group": null,
       "venue": "BC Place"
+    },
+    "760499": {
+      "id": "760499",
+      "date": "2026-07-03",
+      "homeTeam": "Australia",
+      "awayTeam": "Egypt",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "AT&T Stadium"
+    },
+    "760500": {
+      "id": "760500",
+      "date": "2026-07-03",
+      "homeTeam": "Argentina",
+      "awayTeam": "Cape Verde",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Hard Rock Stadium"
+    },
+    "760501": {
+      "id": "760501",
+      "date": "2026-07-04",
+      "homeTeam": "Colombia",
+      "awayTeam": "Ghana",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "GEHA Field at Arrowhead Stadium"
     }
   },
   "processed": {
@@ -9943,6 +9982,343 @@
           "pos": "MF"
         },
         "Mattias Svanberg": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760493": {
+      "belgium": {
+        "Thibaut Courtois": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Arthur Theate": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Brandon Mechele": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Maxim De Cuyper": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Timothy Castagne": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Kevin De Bruyne": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Hans Vanaken": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Youri Tielemans": {
+          "apps": 1,
+          "goals": 2,
+          "pos": "MF"
+        },
+        "Charles De Ketelaere": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Jérémy Doku": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Leandro Trossard": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Dodi Lukébakio": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Thomas Meunier": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Romelu Lukaku": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Amadou Onana": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Diego Moreira": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nicolas Raskin": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "senegal": {
+        "Mory Diaw": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Moussa Niakhaté": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pathé Ciss": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ismail Jakobs": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Krépin Diatta": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Idrissa Gueye": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pape Gueye": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Habib Diarra": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Ismaïla Sarr": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "FW"
+        },
+        "Sadio Mané": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Iliman Ndiaye": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pape Matar Sarr": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "El Hadji Malick Diouf": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nicolas Jackson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ibrahim Mbaye": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Lamine Camara": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bara Sapoko Ndiaye": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760495": {
+      "england": {
+        "Jordan Pickford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Marc Guéhi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ezri Konsa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nico O'Reilly": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Djed Spence": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jude Bellingham": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Declan Rice": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Elliot Anderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Harry Kane": {
+          "apps": 1,
+          "goals": 2,
+          "pos": "FW"
+        },
+        "Marcus Rashford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Noni Madueke": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bukayo Saka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "John Stones": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Anthony Gordon": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Eberechi Eze": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "dr-congo": {
+        "Lionel Mpasi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Axel Tuanzebe": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Chancel Mbemba": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Arthur Masuaku": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Aaron Wan-Bissaka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Samuel Moutoussamy": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Noah Sadiki": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ngal'ayel Mukau": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Yoane Wissa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Brian Cipenga": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Nathanaël Mbuku": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fiston Mayele": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Théo Bongonda": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Edo Kayembe": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Meschack Elia": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Joris Kayembe": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

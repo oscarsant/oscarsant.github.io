@@ -306,6 +306,15 @@
         "score": "0-0",
         "result": "?",
         "venue": "Hard Rock Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-04",
+        "opponent": "GHA",
+        "opponent_full": "Ghana",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
       }
     ]
   }

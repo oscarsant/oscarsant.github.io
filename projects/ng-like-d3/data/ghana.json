@@ -246,6 +246,15 @@
         "score": "1-2",
         "result": "L",
         "venue": "Lincoln Financial Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-04",
+        "opponent": "COL",
+        "opponent_full": "Colombia",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
       }
     ]
   }
