@@ -747,6 +747,15 @@
         "score": "3-0",
         "result": "W",
         "venue": "MetLife Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-04",
+        "opponent": "PAR",
+        "opponent_full": "Paraguay",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lincoln Financial Field"
       }
     ]
   }

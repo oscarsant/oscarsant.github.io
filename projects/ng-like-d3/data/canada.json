@@ -178,6 +178,15 @@
         "score": "1-0",
         "result": "W",
         "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-04",
+        "opponent": "MAR",
+        "opponent_full": "Morocco",
+        "score": "TBD",
+        "result": "?",
+        "venue": "NRG Stadium"
       }
     ]
   }

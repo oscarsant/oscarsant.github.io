@@ -47352,7 +47352,7 @@
           "goals": 2
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -47567,7 +47567,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -47597,12 +47597,17 @@
       "apps": 4,
       "goals": 1,
       "years": [
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2022": {
           "apps": 4,
           "goals": 1
+        },
+        "2026": {
+          "apps": 1,
+          "goals": 0
         }
       }
     },
@@ -49379,11 +49384,16 @@
       "apps": 4,
       "goals": 0,
       "years": [
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2022": {
           "apps": 4,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       }
@@ -49453,7 +49463,8 @@
       "goals": 0,
       "years": [
         1962,
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "1962": {
@@ -49462,6 +49473,10 @@
         },
         "2022": {
           "apps": 4,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       }
@@ -49539,7 +49554,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -49595,7 +49610,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -51856,7 +51871,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -51873,7 +51888,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -51924,7 +51939,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -51941,8 +51956,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
-          "goals": 2
+          "apps": 3,
+          "goals": 4
         }
       }
     },
@@ -51975,7 +51990,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -51992,7 +52007,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -52009,8 +52024,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
-          "goals": 0
+          "apps": 2,
+          "goals": 1
         }
       }
     },
@@ -52018,6 +52033,23 @@
       "name": "Álex Baena",
       "family": "Baena",
       "given": "Álex",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Marc Pubill",
+      "family": "Pubill",
+      "given": "Marc",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -89258,7 +89290,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89275,7 +89307,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89326,7 +89358,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89343,7 +89375,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89360,7 +89392,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89377,7 +89409,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89394,7 +89426,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -89411,7 +89443,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89428,7 +89460,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -89445,7 +89477,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89462,7 +89494,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89479,7 +89511,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -89513,7 +89545,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -89530,7 +89562,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -89556,6 +89588,23 @@
       "name": "Alexander Prass",
       "family": "Prass",
       "given": "Alexander",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Florian Grillitsch",
+      "family": "Grillitsch",
+      "given": "Florian",
       "pos": "MF",
       "apps": 0,
       "goals": 0,

@@ -359,6 +359,15 @@
         "score": "1-1",
         "result": "D",
         "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-04",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lincoln Financial Field"
       }
     ]
   }

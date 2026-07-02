@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-03",
+  "lastSweepDate": "2026-07-04",
   "events": {
     "760414": {
       "id": "760414",
@@ -1085,9 +1085,9 @@
       "date": "2026-07-02",
       "homeTeam": "Spain",
       "awayTeam": "Austria",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1144,6 +1144,32 @@
       "stage": "GS",
       "group": null,
       "venue": "GEHA Field at Arrowhead Stadium"
+    },
+    "760502": {
+      "id": "760502",
+      "date": "2026-07-04",
+      "homeTeam": "Canada",
+      "awayTeam": "Morocco",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "NRG Stadium"
+    },
+    "760503": {
+      "id": "760503",
+      "date": "2026-07-04",
+      "homeTeam": "Paraguay",
+      "awayTeam": "France",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Lincoln Financial Field"
     }
   },
   "processed": {
@@ -10319,6 +10345,172 @@
           "pos": "MF"
         },
         "Joris Kayembe": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760497": {
+      "spain": {
+        "Unai Simón": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Aymeric Laporte": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pau Cubarsí": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marc Cucurella": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Pedro Porro": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "DF"
+        },
+        "Dani Olmo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pedri": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rodri": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mikel Oyarzabal": {
+          "apps": 1,
+          "goals": 2,
+          "pos": "FW"
+        },
+        "Álex Baena": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Lamine Yamal": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mikel Merino": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marc Pubill": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ferran Torres": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fabián Ruiz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gavi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "austria": {
+        "Alexander Schlager": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "David Alaba": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kevin Danso": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Konrad Laimer": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Stefan Posch": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Paul Wanner": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Xaver Schlager": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nicolas Seiwald": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Michael Gregoritsch": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Marcel Sabitzer": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Romano Schmid": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Florian Grillitsch": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marko Arnautovic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Alexander Prass": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Carney Chukwuemeka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Sasa Kalajdzic": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"
