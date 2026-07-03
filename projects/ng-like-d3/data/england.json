@@ -754,6 +754,15 @@
         "score": "2-1",
         "result": "W",
         "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-06",
+        "opponent": "MEX",
+        "opponent_full": "Mexico",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Estadio Banorte"
       }
     ]
   }

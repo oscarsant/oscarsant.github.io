@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-04",
+  "lastSweepDate": "2026-07-05",
   "events": {
     "760414": {
       "id": "760414",
@@ -1111,9 +1111,9 @@
       "date": "2026-07-03",
       "homeTeam": "Australia",
       "awayTeam": "Egypt",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1170,6 +1170,32 @@
       "stage": "GS",
       "group": null,
       "venue": "Lincoln Financial Field"
+    },
+    "760504": {
+      "id": "760504",
+      "date": "2026-07-05",
+      "homeTeam": "Brazil",
+      "awayTeam": "Norway",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "MetLife Stadium"
+    },
+    "760505": {
+      "id": "760505",
+      "date": "2026-07-06",
+      "homeTeam": "Mexico",
+      "awayTeam": "England",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Estadio Banorte"
     }
   },
   "processed": {
@@ -10511,6 +10537,177 @@
           "pos": "MF"
         },
         "Sasa Kalajdzic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760499": {
+      "australia": {
+        "Patrick Beach": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Harry Souttar": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Lucas Herrington": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Alessandro Circati": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Aiden O'Neill": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jackson Irvine": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Aziz Behich": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jordan Bos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nestory Irankunda": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Connor Metcalfe": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cristian Volpato": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ajdin Hrustic": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kai Trewin": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Awer Mabil": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mohamed Toure": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mathew Ryan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Paul Okon-Engstler": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "egypt": {
+        "Mostafa Shoubir": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Ramy Rabia": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Yasser Ibrahim": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Karim Hafez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Mohamed Hany": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Marawan Attia": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Hamdy Fathy": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Omar Marmoush": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Emam Ashour": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Mostafa Zico": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mohamed Salah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Hossam Abdelmaguid": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Haissem Hassan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Hamza Abdelkarim": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mahmoud Saber": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Trézéguet": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

@@ -1087,6 +1087,15 @@
         "score": "2-1",
         "result": "W",
         "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-05",
+        "opponent": "NOR",
+        "opponent_full": "Norway",
+        "score": "TBD",
+        "result": "?",
+        "venue": "MetLife Stadium"
       }
     ]
   }

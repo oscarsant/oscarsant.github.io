@@ -150053,7 +150053,7 @@
           "goals": 2
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       },
@@ -150497,7 +150497,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 1
         }
       }
@@ -151211,7 +151211,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151228,7 +151228,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151245,7 +151245,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151279,7 +151279,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151313,7 +151313,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151330,7 +151330,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151347,8 +151347,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
-          "goals": 1
+          "apps": 3,
+          "goals": 2
         }
       }
     },
@@ -151364,7 +151364,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -151381,7 +151381,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151398,7 +151398,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -151449,7 +151449,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -151475,6 +151475,40 @@
       "name": "Hossam Abdelmaguid",
       "family": "Abdelmaguid",
       "given": "Hossam",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Haissem Hassan",
+      "family": "Hassan",
+      "given": "Haissem",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Mahmoud Saber",
+      "family": "Saber",
+      "given": "Mahmoud",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -163264,7 +163298,8 @@
       "years": [
         2014,
         2018,
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2014": {
@@ -163277,6 +163312,10 @@
         },
         "2022": {
           "apps": 4,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       },
@@ -163355,7 +163394,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       },
@@ -163383,7 +163422,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       },
@@ -163563,7 +163602,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -163737,11 +163776,16 @@
       "apps": 3,
       "goals": 0,
       "years": [
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2022": {
           "apps": 3,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       }
@@ -164218,11 +164262,16 @@
       "apps": 2,
       "goals": 0,
       "years": [
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2022": {
           "apps": 2,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       }
@@ -165051,7 +165100,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -165085,7 +165134,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -165102,7 +165151,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -165136,7 +165185,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -165153,7 +165202,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -165170,7 +165219,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -165187,7 +165236,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -165204,7 +165253,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -165264,6 +165313,40 @@
       "name": "Cristian Volpato",
       "family": "Volpato",
       "given": "Cristian",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Lucas Herrington",
+      "family": "Herrington",
+      "given": "Lucas",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Kai Trewin",
+      "family": "Trewin",
+      "given": "Kai",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
