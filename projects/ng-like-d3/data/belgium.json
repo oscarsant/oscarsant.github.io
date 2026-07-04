@@ -563,6 +563,15 @@
         "score": "3-2",
         "result": "W",
         "venue": "Lumen Field"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-07",
+        "opponent": "USA",
+        "opponent_full": "United States",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Lumen Field"
       }
     ]
   }

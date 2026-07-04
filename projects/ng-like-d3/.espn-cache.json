@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-05",
+  "lastSweepDate": "2026-07-06",
   "events": {
     "760414": {
       "id": "760414",
@@ -1150,9 +1150,9 @@
       "date": "2026-07-04",
       "homeTeam": "Canada",
       "awayTeam": "Morocco",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1163,9 +1163,9 @@
       "date": "2026-07-04",
       "homeTeam": "Paraguay",
       "awayTeam": "France",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1196,6 +1196,32 @@
       "stage": "GS",
       "group": null,
       "venue": "Estadio Banorte"
+    },
+    "760506": {
+      "id": "760506",
+      "date": "2026-07-06",
+      "homeTeam": "Portugal",
+      "awayTeam": "Spain",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "AT&T Stadium"
+    },
+    "760507": {
+      "id": "760507",
+      "date": "2026-07-07",
+      "homeTeam": "United States",
+      "awayTeam": "Belgium",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Lumen Field"
     }
   },
   "processed": {
@@ -10708,6 +10734,318 @@
           "pos": "MF"
         },
         "Trézéguet": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760502": {
+      "canada": {
+        "Maxime Crépeau": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Luc de Fougerolles": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Moïse Bombito": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Richie Laryea": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Alistair Johnston": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Stephen Eustáquio": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Niko Sigur": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ali Ahmed": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Tajon Buchanan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Tani Oluwaseyi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jonathan David": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Promise David": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jonathan Osorio": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cyle Larin": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jacob Shaffelburg": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jayden Nelson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "morocco": {
+        "Yassine Bounou": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Redouane Halhal": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Issa Diop": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Noussair Mazraoui": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Achraf Hakimi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Azzedine Ounahi": {
+          "apps": 1,
+          "goals": 2,
+          "pos": "MF"
+        },
+        "Neil El Aynaoui": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ayyoub Bouaddi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ismael Saibari": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Bilal El Khannouss": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Brahim Díaz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Soufiane Rahimi": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Samir El Mourabet": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Chemsdine Talbi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marwane Saadane": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Sofyan Amrabat": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760503": {
+      "paraguay": {
+        "Orlando Gill": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Gustavo Gómez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Omar Alderete": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gustavo Velázquez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Júnior Alonso": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Juan Jose Cáceres": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Andrés Cubas": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Diego Gómez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Matías Galarza": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Miguel Almirón": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Julio Enciso": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Maurício": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gustavo Caballero": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "José Canale": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gabriel Ávalos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "france": {
+        "Mike Maignan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "William Saliba": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Dayot Upamecano": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Lucas Digne": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jules Koundé": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Michael Olise": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Adrien Rabiot": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Manu Koné": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kylian Mbappé": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "FW"
+        },
+        "Bradley Barcola": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ousmane Dembélé": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Désiré Doué": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rayan Cherki": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

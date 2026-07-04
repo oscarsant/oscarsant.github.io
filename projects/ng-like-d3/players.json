@@ -27074,7 +27074,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -27091,7 +27091,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -27108,7 +27108,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -27125,7 +27125,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -27159,7 +27159,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -27176,7 +27176,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -27193,7 +27193,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -27210,7 +27210,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 1
         }
       }
@@ -27295,7 +27295,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -27312,7 +27312,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -27329,7 +27329,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 1
         }
       }
@@ -27380,7 +27380,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -27397,7 +27397,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -27441,6 +27441,23 @@
       "family": "Caballero",
       "given": "Gustavo",
       "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Orlando Gill",
+      "family": "Gill",
+      "given": "Orlando",
+      "pos": "GK",
       "apps": 0,
       "goals": 0,
       "years": [
@@ -41757,8 +41774,8 @@
           "goals": 8
         },
         "2026": {
-          "apps": 4,
-          "goals": 6
+          "apps": 5,
+          "goals": 7
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_(cropped).jpg?width=300",
@@ -42645,7 +42662,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -43167,7 +43184,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 4
         }
       }
@@ -43758,7 +43775,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -44016,7 +44033,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -46090,7 +46107,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -46355,7 +46372,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -46710,7 +46727,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -46727,7 +46744,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 1
         }
       }
@@ -46744,7 +46761,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -46761,7 +46778,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -46778,7 +46795,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 2
         }
       }
@@ -46795,7 +46812,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -131739,7 +131756,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -131852,7 +131869,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 2
         }
       },
@@ -131936,7 +131953,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 3
         }
       },
@@ -131963,7 +131980,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       },
@@ -132102,7 +132119,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       },
@@ -132163,7 +132180,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -132236,7 +132253,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 1
         }
       }
@@ -132620,7 +132637,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -132637,7 +132654,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -132654,7 +132671,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -132671,7 +132688,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -132688,7 +132705,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -132705,7 +132722,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -132722,7 +132739,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -132739,7 +132756,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -132758,6 +132775,23 @@
         "2026": {
           "apps": 2,
           "goals": 1
+        }
+      }
+    },
+    {
+      "name": "Jayden Nelson",
+      "family": "Nelson",
+      "given": "Jayden",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
         }
       }
     }
@@ -133803,7 +133837,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       },
@@ -133818,7 +133852,8 @@
       "goals": 0,
       "years": [
         2018,
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2018": {
@@ -133827,6 +133862,10 @@
         },
         "2022": {
           "apps": 7,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       },
@@ -133853,8 +133892,8 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
-          "goals": 0
+          "apps": 3,
+          "goals": 2
         }
       }
     },
@@ -133956,7 +133995,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       },
@@ -134044,7 +134083,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135660,7 +135699,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135677,7 +135716,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135694,7 +135733,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135711,7 +135750,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 2
         }
       }
@@ -135728,7 +135767,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135745,7 +135784,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135762,7 +135801,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135779,8 +135818,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
-          "goals": 0
+          "apps": 3,
+          "goals": 1
         }
       }
     },
@@ -135813,7 +135852,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -135822,6 +135861,40 @@
       "name": "Anass Salah-Eddine",
       "family": "Salah-Eddine",
       "given": "Anass",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Redouane Halhal",
+      "family": "Halhal",
+      "given": "Redouane",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Marwane Saadane",
+      "family": "Saadane",
+      "given": "Marwane",
       "pos": "MF",
       "apps": 0,
       "goals": 0,

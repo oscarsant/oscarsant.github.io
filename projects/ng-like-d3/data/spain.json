@@ -699,6 +699,15 @@
         "score": "3-0",
         "result": "W",
         "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-06",
+        "opponent": "POR",
+        "opponent_full": "Portugal",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }
