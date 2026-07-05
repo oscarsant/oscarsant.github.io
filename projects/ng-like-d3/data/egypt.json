@@ -162,6 +162,15 @@
         "score": "1-1",
         "result": "D",
         "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-07",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Mercedes-Benz Stadium"
       }
     ]
   }
