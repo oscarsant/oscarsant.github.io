@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-07",
+  "lastSweepDate": "2026-07-08",
   "events": {
     "760414": {
       "id": "760414",
@@ -1202,9 +1202,9 @@
       "date": "2026-07-06",
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -11228,6 +11228,167 @@
           "pos": "MF"
         },
         "Leo Østigard": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760506": {
+      "portugal": {
+        "Diogo Costa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Renato Veiga": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rúben Dias": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nuno Mendes": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "João Cancelo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Bruno Fernandes": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "João Neves": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Vitinha": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cristiano Ronaldo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "João Félix": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pedro Neto": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Diogo Dalot": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bernardo Silva": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nélson Semedo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Francisco Conceição": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rafael Leão": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "spain": {
+        "Unai Simón": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Aymeric Laporte": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pau Cubarsí": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marc Cucurella": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Pedro Porro": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Dani Olmo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Pedri": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rodri": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mikel Oyarzabal": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Álex Baena": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Lamine Yamal": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mikel Merino": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Borja Iglesias": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ferran Torres": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fabián Ruiz": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"
