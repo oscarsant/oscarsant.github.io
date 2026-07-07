@@ -332,6 +332,15 @@
         "score": "3-0",
         "result": "W",
         "venue": "NRG Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-09",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Gillette Stadium"
       }
     ]
   }

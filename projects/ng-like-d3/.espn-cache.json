@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-08",
+  "lastSweepDate": "2026-07-09",
   "events": {
     "760414": {
       "id": "760414",
@@ -1228,9 +1228,9 @@
       "date": "2026-07-07",
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -1241,13 +1241,26 @@
       "date": "2026-07-07",
       "homeTeam": "Argentina",
       "awayTeam": "Egypt",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Mercedes-Benz Stadium"
+    },
+    "760510": {
+      "id": "760510",
+      "date": "2026-07-09",
+      "homeTeam": "France",
+      "awayTeam": "Morocco",
       "homeScore": null,
       "awayScore": null,
       "completed": false,
       "inProgress": false,
       "stage": "GS",
       "group": null,
-      "venue": "Mercedes-Benz Stadium"
+      "venue": "Gillette Stadium"
     }
   },
   "processed": {
@@ -11389,6 +11402,338 @@
           "pos": "MF"
         },
         "Fabián Ruiz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760508": {
+      "switzerland": {
+        "Gregor Kobel": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Manuel Akanji": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nico Elvedi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ricardo Rodríguez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Denis Zakaria": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Ardon Jashari": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Granit Xhaka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Remo Freuler": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Breel Embolo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Dan Ndoye": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fabian Rieder": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Zeki Amdouni": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Rubén Vargas": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cedric Itten": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Silvan Widmer": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Miro Muheim": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Djibril Sow": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "colombia": {
+        "Camilo Vargas": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Jhon Lucumí": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Davinson Sánchez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Johan Mojica": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Daniel Muñoz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Gustavo Puerta": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jefferson Lerma": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Luis Díaz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jhon Arias": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Luis Suárez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "James Rodríguez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Richard Ríos": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cucho Hernández": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jáminton Campaz": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Juan Fernando Quintero": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Yerry Mina": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760509": {
+      "argentina": {
+        "Lautaro Martínez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Facundo Medina": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Gonzalo Montiel": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nicolás Otamendi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nico González": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Emiliano Martínez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Lisandro Martínez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Cristian Romero": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Leandro Paredes": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Nicolás Tagliafico": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Nahuel Molina": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Alexis Mac Allister": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Enzo Fernández": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Rodrigo De Paul": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Julián Álvarez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Lionel Messi": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        }
+      },
+      "egypt": {
+        "Mostafa Shoubir": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Ramy Rabia": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Yasser Ibrahim": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Karim Hafez": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Mohamed Hany": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Marawan Attia": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mohanad Lashin": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Emam Ashour": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Haissem Hassan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Mostafa Zico": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Mohamed Salah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Trézéguet": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Zizo": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Hamdy Fathy": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Omar Marmoush": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"
