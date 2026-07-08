@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-09",
+  "lastSweepDate": "2026-07-10",
   "events": {
     "760414": {
       "id": "760414",
@@ -1261,6 +1261,19 @@
       "stage": "GS",
       "group": null,
       "venue": "Gillette Stadium"
+    },
+    "760511": {
+      "id": "760511",
+      "date": "2026-07-10",
+      "homeTeam": "Spain",
+      "awayTeam": "Belgium",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "SoFi Stadium"
     }
   },
   "processed": {

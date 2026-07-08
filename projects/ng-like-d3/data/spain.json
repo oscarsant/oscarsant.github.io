@@ -708,6 +708,15 @@
         "score": "1-0",
         "result": "W",
         "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-10",
+        "opponent": "BEL",
+        "opponent_full": "Belgium",
+        "score": "TBD",
+        "result": "?",
+        "venue": "SoFi Stadium"
       }
     ]
   }
