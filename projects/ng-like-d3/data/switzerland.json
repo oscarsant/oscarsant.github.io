@@ -488,6 +488,15 @@
         "score": "0-0",
         "result": "D",
         "venue": "BC Place"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-12",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
       }
     ]
   }

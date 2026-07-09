@@ -882,6 +882,15 @@
         "score": "3-2",
         "result": "W",
         "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-12",
+        "opponent": "SUI",
+        "opponent_full": "Switzerland",
+        "score": "TBD",
+        "result": "?",
+        "venue": "GEHA Field at Arrowhead Stadium"
       }
     ]
   }
