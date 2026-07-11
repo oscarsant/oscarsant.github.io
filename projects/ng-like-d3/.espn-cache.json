@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-12",
+  "lastSweepDate": "2026-07-13",
   "events": {
     "760414": {
       "id": "760414",
@@ -1280,9 +1280,9 @@
       "date": "2026-07-11",
       "homeTeam": "Norway",
       "awayTeam": "England",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -12095,6 +12095,182 @@
           "pos": "MF"
         },
         "Romelu Lukaku": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760512": {
+      "norway": {
+        "Ørjan Nyland": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Torbjørn Heggem": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kristoffer Ajer": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "David Møller Wolfe": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Julian Ryerson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Sander Berge": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Patrick Berg": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Martin Ødegaard": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Erling Haaland": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Andreas Schjelderup": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Alexander Sørloth": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Fredrik Aursnes": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Antonio Nusa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Jørgen Strand Larsen": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Leo Østigard": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Oscar Bobb": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marcus Holmgren Pedersen": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "england": {
+        "Jordan Pickford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Marc Guéhi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "John Stones": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Nico O'Reilly": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Ezri Konsa": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jude Bellingham": {
+          "apps": 1,
+          "goals": 2,
+          "pos": "MF"
+        },
+        "Elliot Anderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Declan Rice": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Harry Kane": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Anthony Gordon": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Noni Madueke": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Morgan Rogers": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Eberechi Eze": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Dan Burn": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Djed Spence": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bukayo Saka": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Reece James": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"
