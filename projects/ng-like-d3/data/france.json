@@ -765,6 +765,15 @@
         "score": "2-0",
         "result": "W",
         "venue": "Gillette Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-14",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }

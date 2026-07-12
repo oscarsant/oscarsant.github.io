@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-13",
+  "lastSweepDate": "2026-07-14",
   "events": {
     "760414": {
       "id": "760414",
@@ -1300,6 +1300,19 @@
       "stage": "GS",
       "group": null,
       "venue": "GEHA Field at Arrowhead Stadium"
+    },
+    "760514": {
+      "id": "760514",
+      "date": "2026-07-14",
+      "homeTeam": "France",
+      "awayTeam": "Spain",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "AT&T Stadium"
     }
   },
   "processed": {

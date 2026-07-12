@@ -717,6 +717,15 @@
         "score": "2-1",
         "result": "W",
         "venue": "SoFi Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-14",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "TBD",
+        "result": "?",
+        "venue": "AT&T Stadium"
       }
     ]
   }
