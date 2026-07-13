@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-14",
+  "lastSweepDate": "2026-07-15",
   "events": {
     "760414": {
       "id": "760414",
@@ -1313,6 +1313,19 @@
       "stage": "GS",
       "group": null,
       "venue": "AT&T Stadium"
+    },
+    "760515": {
+      "id": "760515",
+      "date": "2026-07-15",
+      "homeTeam": "England",
+      "awayTeam": "Argentina",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Mercedes-Benz Stadium"
     }
   },
   "processed": {
