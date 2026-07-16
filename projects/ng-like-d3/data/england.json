@@ -781,6 +781,15 @@
         "score": "1-2",
         "result": "L",
         "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-18",
+        "opponent": "FRA",
+        "opponent_full": "France",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Hard Rock Stadium"
       }
     ]
   }

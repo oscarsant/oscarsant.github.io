@@ -774,6 +774,15 @@
         "score": "0-2",
         "result": "L",
         "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-18",
+        "opponent": "ENG",
+        "opponent_full": "England",
+        "score": "TBD",
+        "result": "?",
+        "venue": "Hard Rock Stadium"
       }
     ]
   }

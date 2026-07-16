@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-17",
+  "lastSweepDate": "2026-07-18",
   "events": {
     "760414": {
       "id": "760414",
@@ -1326,6 +1326,19 @@
       "stage": "GS",
       "group": null,
       "venue": "Mercedes-Benz Stadium"
+    },
+    "760516": {
+      "id": "760516",
+      "date": "2026-07-18",
+      "homeTeam": "France",
+      "awayTeam": "England",
+      "homeScore": null,
+      "awayScore": null,
+      "completed": false,
+      "inProgress": false,
+      "stage": "GS",
+      "group": null,
+      "venue": "Hard Rock Stadium"
     }
   },
   "processed": {
