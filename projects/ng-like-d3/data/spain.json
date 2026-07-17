@@ -726,6 +726,15 @@
         "score": "2-0",
         "result": "W",
         "venue": "AT&T Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-19",
+        "opponent": "ARG",
+        "opponent_full": "Argentina",
+        "score": "TBD",
+        "result": "?",
+        "venue": "MetLife Stadium"
       }
     ]
   }

@@ -900,6 +900,15 @@
         "score": "2-1",
         "result": "W",
         "venue": "Mercedes-Benz Stadium"
+      },
+      {
+        "stage": "GS",
+        "date": "2026-07-19",
+        "opponent": "ESP",
+        "opponent_full": "Spain",
+        "score": "TBD",
+        "result": "?",
+        "venue": "MetLife Stadium"
       }
     ]
   }
