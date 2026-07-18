@@ -1,5 +1,5 @@
 {
-  "lastSweepDate": "2026-07-19",
+  "lastSweepDate": "2026-07-20",
   "events": {
     "760414": {
       "id": "760414",
@@ -1332,9 +1332,9 @@
       "date": "2026-07-18",
       "homeTeam": "France",
       "awayTeam": "England",
-      "homeScore": null,
-      "awayScore": null,
-      "completed": false,
+      "homeScore": 4,
+      "awayScore": 6,
+      "completed": true,
       "inProgress": false,
       "stage": "GS",
       "group": null,
@@ -12655,6 +12655,172 @@
           "pos": "MF"
         },
         "Rodrigo De Paul": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      }
+    },
+    "760516": {
+      "france": {
+        "Mike Maignan": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Maxence Lacroix": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ibrahima Konaté": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Theo Hernández": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Malo Gusto": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Rayan Cherki": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Adrien Rabiot": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Warren Zaïre-Emery": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Kylian Mbappé": {
+          "apps": 1,
+          "goals": 2,
+          "pos": "FW"
+        },
+        "Désiré Doué": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Michael Olise": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bradley Barcola": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Jules Koundé": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Dayot Upamecano": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ousmane Dembélé": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Lucas Digne": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        }
+      },
+      "england": {
+        "Dean Henderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "GK"
+        },
+        "Marc Guéhi": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ezri Konsa": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Declan Rice": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Djed Spence": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Jarell Quansah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "DF"
+        },
+        "Eberechi Eze": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Morgan Rogers": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Marcus Rashford": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Bukayo Saka": {
+          "apps": 1,
+          "goals": 3,
+          "pos": "MF"
+        },
+        "Ivan Toney": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "FW"
+        },
+        "Jude Bellingham": {
+          "apps": 1,
+          "goals": 1,
+          "pos": "MF"
+        },
+        "Trevoh Chalobah": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Elliot Anderson": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Reece James": {
+          "apps": 1,
+          "goals": 0,
+          "pos": "MF"
+        },
+        "Ollie Watkins": {
           "apps": 1,
           "goals": 0,
           "pos": "MF"

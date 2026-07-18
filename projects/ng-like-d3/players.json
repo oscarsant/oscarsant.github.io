@@ -41806,8 +41806,8 @@
           "goals": 8
         },
         "2026": {
-          "apps": 7,
-          "goals": 8
+          "apps": 8,
+          "goals": 10
         }
       },
       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_(cropped).jpg?width=300",
@@ -42694,7 +42694,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -43216,8 +43216,8 @@
           "goals": 0
         },
         "2026": {
-          "apps": 7,
-          "goals": 5
+          "apps": 8,
+          "goals": 6
         }
       }
     },
@@ -43807,7 +43807,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 7,
+          "apps": 8,
           "goals": 0
         }
       }
@@ -44065,7 +44065,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 7,
+          "apps": 8,
           "goals": 0
         }
       }
@@ -44109,7 +44109,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -46139,7 +46139,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 5,
+          "apps": 6,
           "goals": 0
         }
       }
@@ -46759,7 +46759,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 7,
+          "apps": 8,
           "goals": 0
         }
       }
@@ -46776,7 +46776,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 7,
+          "apps": 8,
           "goals": 1
         }
       }
@@ -46793,7 +46793,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 7,
+          "apps": 8,
           "goals": 0
         }
       }
@@ -46810,7 +46810,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -46827,8 +46827,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 7,
-          "goals": 2
+          "apps": 8,
+          "goals": 3
         }
       }
     },
@@ -46861,7 +46861,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -46895,7 +46895,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 2,
+          "apps": 3,
           "goals": 0
         }
       }
@@ -46929,7 +46929,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -52384,7 +52384,7 @@
           "goals": 3
         },
         "2026": {
-          "apps": 5,
+          "apps": 6,
           "goals": 1
         }
       }
@@ -52450,8 +52450,8 @@
           "goals": 3
         },
         "2026": {
-          "apps": 5,
-          "goals": 0
+          "apps": 6,
+          "goals": 3
         }
       }
     },
@@ -53134,8 +53134,8 @@
           "goals": 1
         },
         "2026": {
-          "apps": 6,
-          "goals": 4
+          "apps": 7,
+          "goals": 5
         }
       }
     },
@@ -54522,8 +54522,8 @@
           "goals": 0
         },
         "2026": {
-          "apps": 5,
-          "goals": 0
+          "apps": 6,
+          "goals": 1
         }
       }
     },
@@ -57026,8 +57026,8 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
-          "goals": 0
+          "apps": 7,
+          "goals": 1
         }
       }
     },
@@ -57060,7 +57060,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -57077,7 +57077,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -57128,7 +57128,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 5,
+          "apps": 6,
           "goals": 0
         }
       }
@@ -57145,7 +57145,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -57162,7 +57162,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -57179,7 +57179,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -57196,7 +57196,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -57213,7 +57213,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 1,
+          "apps": 2,
           "goals": 0
         }
       }
@@ -57239,6 +57239,40 @@
       "name": "Ivan Toney",
       "family": "Toney",
       "given": "Ivan",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Dean Henderson",
+      "family": "Henderson",
+      "given": "Dean",
+      "pos": "GK",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Trevoh Chalobah",
+      "family": "Chalobah",
+      "given": "Trevoh",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
