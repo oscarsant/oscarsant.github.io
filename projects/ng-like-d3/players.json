@@ -6819,7 +6819,7 @@
           "goals": 7
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 6
         }
       },
@@ -7134,7 +7134,7 @@
           "goals": 4
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       },
@@ -7758,7 +7758,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 2
         }
       },
@@ -7799,7 +7799,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       },
@@ -7823,7 +7823,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       },
@@ -8306,7 +8306,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       },
@@ -8593,7 +8593,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       },
@@ -8902,7 +8902,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 1
         }
       },
@@ -8926,7 +8926,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       },
@@ -9093,7 +9093,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -9670,7 +9670,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -9692,7 +9692,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -9957,7 +9957,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -12620,7 +12620,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 3,
+          "apps": 4,
           "goals": 0
         }
       }
@@ -12637,7 +12637,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -12663,6 +12663,23 @@
       "name": "Giuliano Simeone",
       "family": "Simeone",
       "given": "Giuliano",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 2,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Marcos Senesi",
+      "family": "Senesi",
+      "given": "Marcos",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
@@ -47418,8 +47435,8 @@
           "goals": 2
         },
         "2026": {
-          "apps": 6,
-          "goals": 0
+          "apps": 7,
+          "goals": 1
         }
       }
     },
@@ -47633,7 +47650,7 @@
           "goals": 1
         },
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -49437,7 +49454,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -49459,7 +49476,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -49542,7 +49559,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 4,
+          "apps": 5,
           "goals": 0
         }
       }
@@ -49620,7 +49637,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -49676,7 +49693,7 @@
           "goals": 0
         },
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -51561,11 +51578,16 @@
       "apps": 0,
       "goals": 0,
       "years": [
-        2022
+        2022,
+        2026
       ],
       "byYear": {
         "2022": {
           "apps": 0,
+          "goals": 0
+        },
+        "2026": {
+          "apps": 1,
           "goals": 0
         }
       }
@@ -51937,7 +51959,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -51954,7 +51976,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 0
         }
       }
@@ -52005,7 +52027,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 1
         }
       }
@@ -52022,7 +52044,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 5
         }
       }
@@ -52056,7 +52078,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 1
         }
       }
@@ -52073,7 +52095,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 6,
+          "apps": 7,
           "goals": 2
         }
       }
@@ -52090,7 +52112,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 5,
+          "apps": 6,
           "goals": 2
         }
       }
@@ -52107,7 +52129,7 @@
       ],
       "byYear": {
         "2026": {
-          "apps": 5,
+          "apps": 6,
           "goals": 0
         }
       }
@@ -52133,6 +52155,23 @@
       "name": "Borja Iglesias",
       "family": "Iglesias",
       "given": "Borja",
+      "pos": "MF",
+      "apps": 0,
+      "goals": 0,
+      "years": [
+        2026
+      ],
+      "byYear": {
+        "2026": {
+          "apps": 1,
+          "goals": 0
+        }
+      }
+    },
+    {
+      "name": "Martín Zubimendi",
+      "family": "Zubimendi",
+      "given": "Martín",
       "pos": "MF",
       "apps": 0,
       "goals": 0,
